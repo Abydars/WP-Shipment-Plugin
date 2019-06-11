@@ -1,0 +1,57 @@
+.right-sidebar h1, .right-sidebar h4, .right-sidebar h2{
+    color: #fff;
+    margin: 10px;
+}
+
+.right-sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #23282d;
+    width: 35%;
+    box-sizing: border-box;
+    transition: 1s left;
+    -webkit-transition: 1s left;
+    padding: 30px 20px;
+    color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.row{
+    width: 100%;
+}
+
+.one-half{
+    width: 50%;
+    float: left;
+}
+
+.one-third{
+    width: 75%;
+    float: left;
+}
+
+.one-fourth{
+    width: 25%;
+    float: left;
+}
+
+.right-sidebar input[type="date"], .right-sidebar input[type="text"]{
+    width: 100%;
+}
+
+.right-sidebar select{
+    width: 100%;
+}
+
+.form-group{
+    padding: 10px;
+}
+
+.right-sidebar input[type="checkbox"]{
+    margin: 10px;
+}
