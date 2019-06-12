@@ -51,6 +51,27 @@ class wpShipment
         <script type="text/javascript">
             jQuery(document).ready(function ($) {
                 $('body').append('<div id="shipment-form"></div>');
+
+                $(document).on('click','.right-sidebar .from-address', function (e) {
+                    e.preventDefault();
+                    $('#fromAddress').show();
+                })
+
+                $(document).on('click','.right-sidebar .close', function (e) {
+                    e.preventDefault();
+                    $('#fromAddress').hide();
+                })
+
+                $(document).on('click','.right-sidebar .to-address', function (e) {
+                    e.preventDefault();
+                    $('#toAddress').show();
+                })
+
+                $(document).on('click','.right-sidebar .close', function (e) {
+                    e.preventDefault();
+                    $('#toAddress').hide();
+                })
+
                 $.ajax({
                     url : wsp_ajax_url,
                     data : {
