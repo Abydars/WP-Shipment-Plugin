@@ -14,7 +14,7 @@ class wpShipment
 
         //Actions
         $wp_shipment_actions = new shipmentActions();
-        add_action('wp', array($wp_shipment_actions, 'save_label'));
+        add_action( 'wp_ajax_save_label', array($wp_shipment_actions, 'save_label') );
     }
 
     public function register_plugin_styles()
@@ -22,9 +22,11 @@ class wpShipment
         wp_register_style('wsp_styles', plugins_url('wp_shipment_plugin/includes/assets/css/custom.css'));
         wp_register_style('data-table-styles', plugins_url('wp_shipment_plugin/includes/assets/css/jquery.dataTables.min.css'));
         wp_register_script('data-table-script', plugins_url('wp_shipment_plugin/includes/assets/js/jquery.dataTables.min.js'));
+        wp_register_script('wsp_scripts', plugins_url('wp_shipment_plugin/includes/assets/js/custom.js'));
         wp_enqueue_style('wsp_styles');
         wp_enqueue_style('data-table-styles');
         wp_enqueue_script('data-table-script');
+        wp_enqueue_script('wsp_scripts');
     }
 
     function setup_shipment_menu()
@@ -56,29 +58,6 @@ class wpShipment
         <script type="text/javascript">
             jQuery(document).ready(function ($) {
                 $('body').append('<div id="shipment-form"></div>');
-
-                $(document).on('click','.right-sidebar .from-address', function (e) {
-                    e.preventDefault();
-                    $('#fromAddress').show();
-                })
-
-                $(document).on('click','.right-sidebar .close', function (e) {
-                    e.preventDefault();
-                    $('#fromAddress').hide();
-                })
-
-                $(document).on('click','.right-sidebar .to-address', function (e) {
-                    e.preventDefault();
-                    $('#toAddress').show();
-                })
-
-                $(document).on('click','.right-sidebar .close', function (e) {
-                    e.preventDefault();
-                    $('#toAddress').hide();
-                })
-
-                $('#listShipments').DataTable();
-
                 $.ajax({
                     url : wsp_ajax_url,
                     data : {
