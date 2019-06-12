@@ -10,4 +10,5 @@ License:
 */
 
 include ('includes/wp_shipment_plugin.php');
+include ('includes/wp_shipment_actions.php');
 $wp_shipment = new wpShipment();

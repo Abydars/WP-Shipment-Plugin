@@ -9,15 +9,23 @@ class wpShipment
         add_action('admin_menu', array($this, 'setup_shipment_menu'));
         add_action('admin_bar_menu', array($this, 'add_toolbar_items'), 100);
         add_action('admin_footer', array($this, 'create_label'));
-        add_action('admin_head', array($this, 'header'));
+        add_action('admin_head', array($this, 'ajax_form_request'));
         add_action( 'wp_ajax_wsp_render_shipment_form', array($this, 'wsp_render_shipment_form') );
-        add_action('wp', array($this, 'create_shipment'));
+
+        //Actions
+        $wp_shipment_actions = new shipmentActions();
+        add_action('wp', array($wp_shipment_actions, 'save_label'));
+
     }
 
     public function register_plugin_styles()
     {
         wp_register_style('wsp_styles', plugins_url('wp_shipment_plugin/includes/assets/css/custom.css'));
+        wp_register_style('data-table-styles', plugins_url('wp_shipment_plugin/includes/assets/css/jquery.dataTables.min.css'));
+        wp_register_script('data-table-script', plugins_url('wp_shipment_plugin/includes/assets/js/jquery.dataTables.min.js'));
         wp_enqueue_style('wsp_styles');
+        wp_enqueue_style('data-table-styles');
+        wp_enqueue_script('data-table-script');
     }
 
     function setup_shipment_menu()
@@ -28,9 +36,7 @@ class wpShipment
 
     function list_shipments()
     {
-        ?>
-        <h1>Shipments</h1>
-        <?php
+        include ('templates/list_shipment.php');
     }
 
     function add_toolbar_items($admin_bar)
@@ -72,6 +78,8 @@ class wpShipment
                     $('#toAddress').hide();
                 })
 
+                $('#listShipments').DataTable();
+
                 $.ajax({
                     url : wsp_ajax_url,
                     data : {
@@ -86,7 +94,7 @@ class wpShipment
         <?php
     }
 
-    function header()
+    function ajax_form_request()
     {
         ?>
         <script>
