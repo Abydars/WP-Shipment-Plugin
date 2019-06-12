@@ -11,10 +11,7 @@ class Usps extends Shipment{
     {
         // TODO: Implement deleteShippment() method.
     }
-    function editShipment($id,$data)
-    {
-        // TODO: Implement editShippment() method.
-    }
+
     function getShipment($id)
     {
         // TODO: Implement getShippment() method.

@@ -8,7 +8,6 @@ abstract class Shipment
     }
     abstract function getShipment($id);
     abstract function createShipment($data);
-    abstract function editShipment($id,$data);
     abstract function deleteShipment($id);
 
 
