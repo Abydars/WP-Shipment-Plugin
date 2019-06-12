@@ -3,12 +3,12 @@
 
 abstract class Shipment
 {
-    function listShippment(){
+    function list_shipment(){
 
     }
-    abstract function getShipment($id);
-    abstract function createShipment($data);
-    abstract function deleteShipment($id);
+    abstract function get_shipment($id);
+    abstract function create_shipment($data);
+    abstract function delete_shipment($id);
 
 
 }

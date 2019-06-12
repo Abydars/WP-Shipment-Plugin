@@ -3,17 +3,19 @@ include "./shipment.php";
 
 class Usps extends Shipment{
 
-    function createShipment($data)
+    function create_shipment($data)
     {
+
         // TODO: Implement createShippment() method.
     }
-    function deleteShipment($id)
+    function delete_shipment($id)
     {
         // TODO: Implement deleteShippment() method.
     }
 
-    function getShipment($id)
+    function get_shipment($id)
     {
         // TODO: Implement getShippment() method.
     }
+
 }

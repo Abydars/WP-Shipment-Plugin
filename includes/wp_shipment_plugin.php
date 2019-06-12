@@ -14,12 +14,9 @@ class wpShipment
 
         //Actions
         $wp_shipment_actions = new shipmentActions();
-<<<<<<< HEAD
         add_action( 'wp_ajax_save_label', array($wp_shipment_actions, 'save_label') );
-=======
-        add_action('wp', array($wp_shipment_actions, 'save_label'));
+        add_action( 'wp_ajax_save_label', array($wp_shipment_actions, 'save_label') );
 
->>>>>>> 780060e97ab108ae284af747dbd129e42ca6e593
     }
 
     public function register_plugin_styles()
