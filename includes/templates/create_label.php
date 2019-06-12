@@ -13,6 +13,18 @@
                 </select>
             </div>
             <div class="form-group">
+                <label>From <a href="#" class="from-address" data-type="from">(New Address)</a></label>
+                <select name="from">
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>To <a href="#" class="to-address" data-type="to">(New Address)</a></label>
+                <select name="to">
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label>Shipping Carrier</label>
                 <select name="shipping_carrier">
                     <option value=""></option>
@@ -76,7 +88,7 @@
                 <div class="row">
                     <input type="checkbox" name="schedule" value="yes"> Schedule Pickup
                 </div>
-                <div class="pickup-schedule">
+                <div class="pickup-schedule" style="display: none">
                     <div class="form-group">
                         <label>Pickup Date</label>
                         <input type="date" name="pickup_date">
@@ -104,7 +116,212 @@
             </div>
         </div>
         <div class="row">
-            
+            <button>Rate Shop & Send</button>
+            <button>+ Add New Package</button>
         </div>
     </form>
+
+    <div id="fromAddress" class="modal">
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add (From) New Address</h2>
+            <form method="POST" action="">
+                <div class="row">
+                    <div class="form-group">
+                        <label>Paste US Address</label>
+                        <br/>
+                        <span>Format: 1005 N Gravenstein Highway Sebastopol, CA 95472</span>
+                        <textarea name="address" placeholder="1005 N Gravenstein Highway Sebastopol, CA 95472"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" name="full_name" id="">
+                        </div>
+                    </div>
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>Company</label>
+                            <input type="text" name="company" id="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>Country</label>
+                            <select name="country">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>City</label>
+                            <input type="text" name="city" id="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>Street 1</label>
+                            <input type="text" name="street_one" id="">
+                        </div>
+                    </div>
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>Street 2</label>
+                            <input type="text" name="street_two" id="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>State</label>
+                            <input type="text" name="state" id="">
+                        </div>
+                    </div>
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>Zip Code</label>
+                            <input type="text" name="zip_code" id="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="number" name="phone" id="">
+                        </div>
+                    </div>
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email" id="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <input type="checkbox" name="verify" id=""> <label>Circle Verification</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="action">
+                        <button>Cancel</button>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div id="toAddress" class="modal">
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add (To) New Address</h2>
+            <form method="POST" action="">
+                <div class="row">
+                    <div class="form-group">
+                        <label>Paste US Address</label>
+                        <br/>
+                        <span>Format: 1005 N Gravenstein Highway Sebastopol, CA 95472</span>
+                        <textarea name="address" placeholder="1005 N Gravenstein Highway Sebastopol, CA 95472"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" name="full_name" id="">
+                        </div>
+                    </div>
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>Company</label>
+                            <input type="text" name="company" id="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>Country</label>
+                            <select name="country">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>City</label>
+                            <input type="text" name="city" id="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>Street 1</label>
+                            <input type="text" name="street_one" id="">
+                        </div>
+                    </div>
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>Street 2</label>
+                            <input type="text" name="street_two" id="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>State</label>
+                            <input type="text" name="state" id="">
+                        </div>
+                    </div>
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>Zip Code</label>
+                            <input type="text" name="zip_code" id="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="number" name="phone" id="">
+                        </div>
+                    </div>
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email" id="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <input type="checkbox" name="verify" id=""> <label>Circle Verification</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="action">
+                        <button>Cancel</button>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
 </div>
