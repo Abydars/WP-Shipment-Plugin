@@ -1,6 +1,6 @@
 <?php
 
-class shipmentActions{
+class ShipmentActions{
 
     function save_label(){
         if ( ! isset( $_POST['create_label_form'] ) || ! wp_verify_nonce( $_POST['create_label_form'], 'create_label' )
@@ -54,5 +54,29 @@ class shipmentActions{
                 'text' => $welcome_text,
             )
         );
+    }
+
+    function save_from_address(){
+        if ( ! isset( $_POST['create_from_address'] ) || ! wp_verify_nonce( $_POST['create_from_address'], 'from_address' )
+        ) {
+            echo 'Sorry, your nonce did not verify.';
+            exit;
+        } else {
+            var_dump($_POST);die;
+        }
+    }
+
+    function save_to_address(){
+        if ( ! isset( $_POST['create_to_address'] ) || ! wp_verify_nonce( $_POST['create_to_address'], 'to_address' )
+        ) {
+            echo 'Sorry, your nonce did not verify.';
+            exit;
+        } else {
+            var_dump($_POST);die;
+        }
+    }
+
+    function shipment_details(){
+        include ('templates/shipment-details.php');
     }
 }
