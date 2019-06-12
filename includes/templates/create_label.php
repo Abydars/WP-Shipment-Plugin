@@ -1,6 +1,6 @@
 <div class="right-sidebar">
     <h1>Create Label</h1>
-    <form method="POST" name="shipmentForm">
+    <form method="POST" name="shipmentForm" >
         <div class="basic-details">
             <div class="form-group">
                 <label>Ticket ID</label>
@@ -115,6 +115,7 @@
                 </div>
             </div>
         </div>
+        <?php wp_nonce_field( 'create_label', 'create_label_form' ); ?>
         <div class="row">
             <button>Rate Shop & Send</button>
             <button>+ Add New Package</button>

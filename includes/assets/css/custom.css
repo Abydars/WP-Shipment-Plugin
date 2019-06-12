@@ -19,6 +19,7 @@
     font-size: 12px;
     overflow-x: hidden;
     overflow-y: scroll;
+    /*left: 100%;*/
 }
 
 .row{
@@ -120,3 +121,8 @@ textarea{
     color: #000!important;
 }
 
+/*List Shipments*/
+
+#list-shipments{
+    padding: 0 10px;
+}
