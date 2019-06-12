@@ -1,0 +1,83 @@
+.wpsp_timer{
+    margin:10 px;
+    padding: 10px;
+}
+
+/*#wpsp_view_log{
+    height: 35%;
+    left:25%;
+    position: fixed;
+    top: 25%;
+    width: 50%;
+    z-index: 100000;
+    border-radius: 5px;
+    background-color:silver;
+    overflow: auto;
+    padding:8px; 
+}*/
+
+#wpsp_front_popup{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1000000;
+}
+
+#wpsp_front_popup_inner{
+    width: 50%;
+    height: 70%;
+    background-color: #ffffff;
+    left: 25%;
+    top: 15%;
+    position: fixed;
+    z-index: 1000001;
+    border-radius: 5px;
+}
+
+#wpsp_front_popup_close_btn{
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    z-index: 1000002;
+    top: 15%;
+    left:75%;
+    margin-left: -15px;
+    margin-top: -15px;
+    cursor: pointer;
+}
+
+#wpsp_front_popup_loading_img{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    z-index: 1000002;
+    top: 50%;
+    left:50%;
+    margin-left: -25px;
+    margin-top: -25px;
+}
+#wpsp_front_popup_blank,#wpsp_front_popup_body{
+    background-color: #fff;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+#wpsp_front_popup_body{
+    height: 100%;
+    color: #616161;
+    padding: 15px;
+    overflow: auto;
+}
+#wpsp_extension_form,#wpsp_view_log,#editcustfield{
+    width: 100%;
+    height: 100%;
+}
+.wpsp_timer_container {
+    background-color: #e3e3e3;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+}

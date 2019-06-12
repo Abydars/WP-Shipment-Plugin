@@ -1,0 +1,13 @@
+
+#wpsp_tbl_pipe_categories,
+#wpsp_tbl_pipe_categories tr,
+#wpsp_tbl_pipe_categories th,
+#wpsp_tbl_pipe_categories td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+.wpsp_ep_save_pipe_connection_loder,.wpsp_ep_save_pipe_connection_msg{
+  margin-top: 20px;
+  display: none;
+}

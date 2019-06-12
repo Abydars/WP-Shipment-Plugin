@@ -1,0 +1,126 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: WP Support Plus Export Ticket Add-On\n"
+"POT-Creation-Date: 2016-08-12 17:37+0530\n"
+"PO-Revision-Date: 2016-08-12 17:37+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: wpsp-export-ticket.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/admin/advanced_setting_header.php:1
+msgid "Export Ticket To Excel"
+msgstr ""
+
+#: includes/admin/getExportTicketToExcel.php:42
+msgid "From Date"
+msgstr ""
+
+#: includes/admin/getExportTicketToExcel.php:44
+#: includes/admin/getExportTicketToExcel.php:49
+msgid "Click here to select date"
+msgstr ""
+
+#: includes/admin/getExportTicketToExcel.php:47
+msgid "To Date"
+msgstr ""
+
+#: includes/admin/getExportTicketToExcel.php:54
+msgid "Export To Ticket"
+msgstr ""
+
+#: includes/admin/setExportTicketToExcel.php:22
+msgid "Sr. No."
+msgstr ""
+
+#: includes/admin/setExportTicketToExcel.php:23
+msgid "Ticket ID"
+msgstr ""
+
+#: includes/admin/setExportTicketToExcel.php:24
+msgid "Status"
+msgstr ""
+
+#: includes/admin/setExportTicketToExcel.php:25
+msgid "Subject"
+msgstr ""
+
+#: includes/admin/setExportTicketToExcel.php:26
+msgid "User Type"
+msgstr ""
+
+#: includes/admin/setExportTicketToExcel.php:27
+msgid "Created by Name"
+msgstr ""
+
+#: includes/admin/setExportTicketToExcel.php:28
+msgid "Created by Email"
+msgstr ""
+
+#: includes/admin/setExportTicketToExcel.php:29
+msgid "Assigned to"
+msgstr ""
+
+#: includes/admin/setExportTicketToExcel.php:30
+msgid "Priority"
+msgstr ""
+
+#: includes/admin/setExportTicketToExcel.php:31
+msgid "Create Time"
+msgstr ""
+
+#: includes/admin/setExportTicketToExcel.php:32
+msgid "Last Updated"
+msgstr ""
+
+#: includes/admin/setExportTicketToExcel.php:33
+msgid "Category"
+msgstr ""
+
+#: includes/admin/setExportTicketToExcel.php:43
+msgid "Guest"
+msgstr ""
+
+#: includes/admin/setExportTicketToExcel.php:43
+msgid "User"
+msgstr ""
+
+#: includes/admin/setExportTicketToExcel.php:58
+msgid "None"
+msgstr ""
+
+#: includes/admin/setExportTicketToExcel.php:77
+msgid "Null"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WP Support Plus Export Ticket Add-On"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.wpsupportplus.com/export-tickets/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Export ticket list to CSV in WP Support Plus"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Pradeep Makone"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://profiles.wordpress.org/pradeepmakone07/"
+msgstr ""

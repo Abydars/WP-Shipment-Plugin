@@ -1,0 +1,45 @@
+.wpsp_support_company_admin_welcome {
+    float: right;
+    margin-top: -19px;
+}
+.panel-title {
+    color: inherit;
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.wpsp_admin_panel{width: 99%; margin-top: 20px;}
+.support_bs .panel-primary {
+     border-color: #428bca;
+}
+.support_bs .panel-primary > .panel-heading {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #428bca;
+}
+#wsp_change_user_modal{
+    height: 50%;
+    left:25%;
+    position: fixed;
+    top: 25%;
+    width: 50%;
+    z-index: 100000;
+    border-radius: 5px;
+    background-color:silver;
+    overflow: auto;
+    padding:8px;
+}
+#selectcompanyusers{
+    border:5px;
+    overflow: auto;
+    padding: 3px;
+    position: relative;
+    line-height: 2.4em;
+    width: 50%;
+    height: 50%;
+    margin: 3px;
+}
+.wpsp_remove_user_from_company_icon{
+    margin-left: 4px;
+    margin-top: -2px;
+}

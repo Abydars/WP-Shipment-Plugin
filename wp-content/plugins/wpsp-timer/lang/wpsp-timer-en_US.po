@@ -1,0 +1,112 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2016-11-14 15:10+0530\n"
+"PO-Revision-Date: 2016-11-14 15:10+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/admin/admin.php:14
+msgid "Please insert Job Label"
+msgstr ""
+
+#: includes/admin/admin.php:15
+msgid "Please insert Field Label"
+msgstr ""
+
+#: includes/admin/admin.php:16
+msgid "Are you sure to enable reply?"
+msgstr ""
+
+#: includes/admin/admin.php:17
+msgid "Please insert disable reply message"
+msgstr ""
+
+#: includes/admin/admin.php:23
+msgid "Timer"
+msgstr ""
+
+#: includes/admin/admin.php:93
+msgid "Stop Timer"
+msgstr ""
+
+#: includes/admin/admin.php:96
+msgid "Start Timer"
+msgstr ""
+
+#: includes/admin/admin.php:104
+msgid "View Log"
+msgstr ""
+
+#: includes/admin/customize-settings.php:12
+msgid "Timer Settings"
+msgstr ""
+
+#: includes/admin/settings-tabs/timer-settings.php:15
+msgid "Timer settings"
+msgstr ""
+
+#: includes/admin/settings-tabs/timer-settings.php:16
+msgid "Timer enable for customer"
+msgstr ""
+
+#: includes/admin/settings-tabs/timer-settings.php:18
+msgid "Timer disable for customer"
+msgstr ""
+
+#: includes/admin/settings-tabs/timer-settings.php:20
+msgid "Submit"
+msgstr ""
+
+#: includes/admin/wpsp_getEditEndTime.php:13
+msgid "Edit End Time"
+msgstr ""
+
+#: includes/admin/wpsp_getEditEndTime.php:14
+msgid "Start Time :"
+msgstr ""
+
+#: includes/admin/wpsp_getEditEndTime.php:15
+msgid "End Time :"
+msgstr ""
+
+#: includes/admin/wpsp_getEditEndTime.php:16
+msgid "Save Changes"
+msgstr ""
+
+#: includes/admin/wpsp_getTimerLog.php:11
+msgid "Activity Log"
+msgstr ""
+
+#: includes/admin/wpsp_getTimerLog.php:14
+msgid "Start Time"
+msgstr ""
+
+#: includes/admin/wpsp_getTimerLog.php:15
+msgid "Stop Time"
+msgstr ""
+
+#: includes/admin/wpsp_getTimerLog.php:16
+msgid "Time Required"
+msgstr ""
+
+#: includes/admin/wpsp_getTimerLog.php:40
+msgid "No log Found"
+msgstr ""
+
+#: includes/admin/wpsp_getTimerLog.php:43
+msgid "Close"
+msgstr ""
+
+#: includes/admin/wpsp_total_time.php:18
+msgid "Total Time:"
+msgstr ""

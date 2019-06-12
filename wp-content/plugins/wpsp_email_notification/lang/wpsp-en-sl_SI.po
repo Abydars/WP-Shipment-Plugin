@@ -1,0 +1,264 @@
+# Translation of WPSP Email Notifications in Slovenian
+# This file is distributed under the same license as the WPSP Email Notifications package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-01-04 10:54+0530\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Language: sl_SI\n"
+"Project-Id-Version: WPSP Email Notifications\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+
+#: includes/admin/add_notification.php:22
+#: includes/admin/edit_notification.php:36 includes/admin/view_settings.php:77
+msgid "Title"
+msgstr "Naslov"
+
+#: includes/admin/add_notification.php:17
+msgid "Add Notification"
+msgstr "Dodaj opozorilo"
+
+#: includes/admin/add_notification.php:29
+#: includes/admin/edit_notification.php:43 includes/admin/view_settings.php:78
+msgid "Type"
+msgstr "Tip"
+
+#: includes/admin/add_notification.php:45
+msgid "Save & Continue"
+msgstr "Shrani & nadaljuj"
+
+#: includes/admin/admin.php:71
+msgid "Create New Ticket"
+msgstr "Ustvaru nov zahtevek"
+
+#: includes/admin/admin.php:52
+msgid "Email Notifications"
+msgstr "E-poštno opozorilo"
+
+#: includes/admin/admin.php:72
+msgid "Reply Ticket"
+msgstr "Odgovor zahtevka"
+
+#: includes/admin/admin.php:75
+msgid "Delete Ticket"
+msgstr "Odstrani zahtevek"
+
+#: includes/admin/admin.php:74
+msgid "Assign Agent"
+msgstr "Dodeli agentu podpore"
+
+#: includes/admin/admin.php:73
+msgid "Change Status"
+msgstr "Spremeni status"
+
+#: includes/admin/admin.php:121 includes/admin/clone_notification.php:10
+#: includes/admin/delete_notification.php:10
+msgid "Cheating huh?"
+msgstr "Goljufija mar ne?"
+
+#: includes/admin/edit_notification.php:31
+msgid "Edit Notification"
+msgstr "Uredi opozorilo"
+
+#: includes/admin/admin.php:125 includes/admin/edit_notification.php:164
+msgid "Select Option"
+msgstr "Izberi možnost"
+
+#: includes/admin/edit_notification.php:59
+msgid "Subject"
+msgstr "Zadeva"
+
+#: includes/admin/edit_notification.php:76
+msgid "Template Tags"
+msgstr "Oznaka predloge"
+
+#: includes/admin/edit_notification.php:66
+msgid "Description"
+msgstr "Opis"
+
+#: includes/admin/edit_notification.php:78
+msgid "Ticket Subject"
+msgstr "Zadeva zahtevka"
+
+#: includes/admin/edit_notification.php:77
+msgid "Ticket ID"
+msgstr "Številka zahtevka"
+
+#: includes/admin/edit_notification.php:79
+msgid "Ticket description given while creating ticket. If used, description attachments(if any) will get attached to mail."
+msgstr "Opis zahtevka podan med ustvarjanjem le tega. Če je uporabljen, opis priloge (če obstaja) bo pripeto k e-pošti."
+
+#: includes/admin/edit_notification.php:82
+msgid "Ticket Priority"
+msgstr "Prioriteta zahtevka"
+
+#: includes/admin/edit_notification.php:81
+msgid "Ticket Category"
+msgstr "Skupina zahtevka"
+
+#: includes/admin/edit_notification.php:80
+msgid "Ticket status"
+msgstr "Status zahtevka"
+
+#: includes/admin/edit_notification.php:83
+msgid "Name of ticket creator"
+msgstr "Ime uporabnika, ki je ustvaril zahtevek"
+
+#: includes/admin/edit_notification.php:84
+msgid "Email of ticket creator"
+msgstr "E-naslov uporabnika, ki je ustvaril zahtevek"
+
+#: includes/admin/edit_notification.php:85
+msgid "Ticket create time"
+msgstr "Ura ustvarjanja zahtevka"
+
+#: includes/admin/edit_notification.php:86
+msgid "Name of the agent who have created ticket on behalf of user. Empty if ticket created by user himself."
+msgstr "Ime agenta podpore, ki je ustvaril zahtevek na zahtevo uporabnika. Pustite prazno, če je zahtevek ustvaril uporabnik sam."
+
+#: includes/admin/edit_notification.php:88
+msgid "Name of user posted last reply."
+msgstr "Ime uporabnika, ki je zadnji dal odgovor."
+
+#: includes/admin/edit_notification.php:87
+msgid "Name(s) of agent assigned to ticket."
+msgstr "Ime(na) agentov podpore, katerim je dodeljen zahtevek."
+
+#: includes/admin/edit_notification.php:89
+msgid "Email of user posted last reply."
+msgstr "E-naslov uporabnika, ki je zadnji postavil odgovor."
+
+#: includes/admin/edit_notification.php:90
+msgid "Last reply description.  If used, reply description attachments(if any) will get attached to mail."
+msgstr "Opis zadnji odgovor. Če je uporabljeno, opis odogovra pripete datoteke (če obstaja) bo pripeta e-pošti."
+
+#: includes/admin/edit_notification.php:91
+msgid "History of communication in ticket."
+msgstr ""
+
+#: includes/admin/edit_notification.php:92
+msgid "Name of user doing current activity."
+msgstr ""
+
+#: includes/admin/edit_notification.php:93
+msgid "URL of the ticket."
+msgstr ""
+
+#: includes/admin/edit_notification.php:102
+msgid "Recipients"
+msgstr ""
+
+#: includes/admin/edit_notification.php:110
+msgid "Enable"
+msgstr ""
+
+#: includes/admin/edit_notification.php:111
+msgid "Role"
+msgstr ""
+
+#: includes/admin/edit_notification.php:127
+msgid "Assigned Agent"
+msgstr ""
+
+#: includes/admin/edit_notification.php:120
+msgid "Customer"
+msgstr ""
+
+#: includes/admin/edit_notification.php:134
+msgid "Supervisor"
+msgstr ""
+
+#: includes/admin/edit_notification.php:141
+msgid "Administrator"
+msgstr ""
+
+#: includes/admin/edit_notification.php:152
+msgid "Conditions"
+msgstr ""
+
+#: includes/admin/edit_notification.php:154 includes/admin/view_settings.php:67
+msgid "Add New"
+msgstr ""
+
+#: includes/admin/edit_notification.php:157
+msgid "Select Field"
+msgstr ""
+
+#: includes/admin/edit_notification.php:166
+msgid "Has Word"
+msgstr ""
+
+#: includes/admin/edit_notification.php:167
+msgid "Add"
+msgstr ""
+
+#: includes/admin/edit_notification.php:184
+msgid "Same condition field match relation"
+msgstr "Isti pogoji polja, ki se ujemajo"
+
+#: includes/admin/edit_notification.php:187
+#: includes/admin/edit_notification.php:198
+msgid "Any one of them"
+msgstr "Katerikoli"
+
+#: includes/admin/edit_notification.php:188
+#: includes/admin/edit_notification.php:197
+msgid "All of them"
+msgstr "Vse"
+
+#: includes/admin/edit_notification.php:194
+msgid "Different condition field match relation"
+msgstr "Različni pogoji polja, ki se ujemajo s povezavo"
+
+#: includes/admin/edit_notification.php:205 includes/admin/view_settings.php:59
+msgid "Save Changes"
+msgstr "Shrani spremembe"
+
+#: includes/admin/view_settings.php:23
+msgid "General Settings"
+msgstr "Splošne nastavitve"
+
+#: includes/admin/view_settings.php:28
+msgid "From Name"
+msgstr "Naziv Od"
+
+#: includes/admin/view_settings.php:35
+msgid "From Email"
+msgstr "E-pošta Od"
+
+#: includes/admin/view_settings.php:49
+msgid "Ignore-emails"
+msgstr "Prezri e-pošto"
+
+#: includes/admin/view_settings.php:42
+msgid "Reply-To"
+msgstr "Odgovori-na"
+
+#: includes/admin/view_settings.php:66
+msgid "Notifications"
+msgstr "Opozorila"
+
+#: includes/admin/view_settings.php:79
+msgid "Actions"
+msgstr "Akcije"
+
+#: includes/admin/view_settings.php:94
+msgid "Edit"
+msgstr "Uredi"
+
+#: includes/admin/view_settings.php:95
+msgid "Clone"
+msgstr "Kopiraj/kloniraj"
+
+#: includes/admin/view_settings.php:105
+msgid "No Notifications Found"
+msgstr "Ne najdem opozoril"
+
+#: includes/admin/view_settings.php:96
+msgid "Delete"
+msgstr "Odstrani"

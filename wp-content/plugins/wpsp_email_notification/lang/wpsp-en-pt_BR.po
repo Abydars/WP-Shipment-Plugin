@@ -1,0 +1,264 @@
+# Translation of WPSP Email Notifications in Portuguese (Brazil)
+# This file is distributed under the same license as the WPSP Email Notifications package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-04-02 12:05+0530\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Language: pt_BR\n"
+"Project-Id-Version: WPSP Email Notifications\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+
+#: includes/admin/view_settings.php:96
+msgid "Delete"
+msgstr "Excluir"
+
+#: includes/admin/view_settings.php:105
+msgid "No Notifications Found"
+msgstr "Não foram encontradas notificações"
+
+#: includes/admin/view_settings.php:95
+msgid "Clone"
+msgstr "Clonar"
+
+#: includes/admin/view_settings.php:94
+msgid "Edit"
+msgstr "Editar"
+
+#: includes/admin/view_settings.php:79
+msgid "Actions"
+msgstr "Ações"
+
+#: includes/admin/view_settings.php:66
+msgid "Notifications"
+msgstr "Notificações"
+
+#: includes/admin/view_settings.php:42
+msgid "Reply-To"
+msgstr "Responder a"
+
+#: includes/admin/view_settings.php:49
+msgid "Ignore-emails"
+msgstr "Ignorar e-mails"
+
+#: includes/admin/view_settings.php:35
+msgid "From Email"
+msgstr "Do e-mail"
+
+#: includes/admin/view_settings.php:28
+msgid "From Name"
+msgstr "Do nome"
+
+#: includes/admin/view_settings.php:23
+msgid "General Settings"
+msgstr "Configurações Gerais"
+
+#: includes/admin/edit_notification.php:205 includes/admin/view_settings.php:59
+msgid "Save Changes"
+msgstr "Salvar Alterações"
+
+#: includes/admin/edit_notification.php:194
+msgid "Different condition field match relation"
+msgstr "Quando encontrar condição diferente da estabelecida no campo"
+
+#: includes/admin/edit_notification.php:188
+#: includes/admin/edit_notification.php:197
+msgid "All of them"
+msgstr "Todos elas"
+
+#: includes/admin/edit_notification.php:187
+#: includes/admin/edit_notification.php:198
+msgid "Any one of them"
+msgstr "Qualquer uma delas"
+
+#: includes/admin/edit_notification.php:184
+msgid "Same condition field match relation"
+msgstr "Quando encontrar a mesma condição estabelecida no campo"
+
+#: includes/admin/edit_notification.php:167
+msgid "Add"
+msgstr "Adicionar"
+
+#: includes/admin/edit_notification.php:166
+msgid "Has Word"
+msgstr "Contém a Palavra"
+
+#: includes/admin/edit_notification.php:157
+msgid "Select Field"
+msgstr "Selecione um Campo"
+
+#: includes/admin/edit_notification.php:154 includes/admin/view_settings.php:67
+msgid "Add New"
+msgstr "Adicionar Novo"
+
+#: includes/admin/edit_notification.php:152
+msgid "Conditions"
+msgstr "Condições"
+
+#: includes/admin/edit_notification.php:141
+msgid "Administrator"
+msgstr "Administrador"
+
+#: includes/admin/edit_notification.php:134
+msgid "Supervisor"
+msgstr "Supervisor"
+
+#: includes/admin/edit_notification.php:120
+msgid "Customer"
+msgstr "Cliente"
+
+#: includes/admin/edit_notification.php:127
+msgid "Assigned Agent"
+msgstr "Agente Atribuído"
+
+#: includes/admin/edit_notification.php:111
+msgid "Role"
+msgstr "Função"
+
+#: includes/admin/edit_notification.php:110
+msgid "Enable"
+msgstr "Habilitar"
+
+#: includes/admin/edit_notification.php:102
+msgid "Recipients"
+msgstr "Destinatários"
+
+#: includes/admin/edit_notification.php:93
+msgid "URL of the ticket."
+msgstr "URL do chamado."
+
+#: includes/admin/edit_notification.php:92
+msgid "Name of user doing current activity."
+msgstr "Nome do usuário da atividade atual."
+
+#: includes/admin/edit_notification.php:91
+msgid "History of communication in ticket."
+msgstr "Histórico da comunicação no chamado."
+
+#: includes/admin/edit_notification.php:90
+msgid "Last reply description.  If used, reply description attachments(if any) will get attached to mail."
+msgstr "Última descrição de resposta. Se usado, os anexos de descrição de resposta (se houver) ficarão anexados ao e-mail."
+
+#: includes/admin/edit_notification.php:89
+msgid "Email of user posted last reply."
+msgstr "E-mail do usuário postou a última resposta."
+
+#: includes/admin/edit_notification.php:87
+msgid "Name(s) of agent assigned to ticket."
+msgstr "Nome(s) do(s) agente(s) atribuído(s) ao chamado."
+
+#: includes/admin/edit_notification.php:88
+msgid "Name of user posted last reply."
+msgstr "Nome do usuário que postou a última resposta."
+
+#: includes/admin/edit_notification.php:86
+msgid "Name of the agent who have created ticket on behalf of user. Empty if ticket created by user himself."
+msgstr "Nome do agente que criou o chamado em nome do usuário. Vazio se o chamado foi criado pelo próprio usuário."
+
+#: includes/admin/edit_notification.php:85
+msgid "Ticket create time"
+msgstr "Tempo de criação do chamado"
+
+#: includes/admin/edit_notification.php:84
+msgid "Email of ticket creator"
+msgstr "E-mail do criador do chamado"
+
+#: includes/admin/edit_notification.php:83
+msgid "Name of ticket creator"
+msgstr "Nome do criador do chamado"
+
+#: includes/admin/edit_notification.php:80
+msgid "Ticket status"
+msgstr "Status do Chamado"
+
+#: includes/admin/edit_notification.php:81
+msgid "Ticket Category"
+msgstr "Categoria do Chamado"
+
+#: includes/admin/edit_notification.php:82
+msgid "Ticket Priority"
+msgstr "Prioridade do Chamado"
+
+#: includes/admin/edit_notification.php:79
+msgid "Ticket description given while creating ticket. If used, description attachments(if any) will get attached to mail."
+msgstr "Descrição do chamado dada ao ser criado. Se usado, os anexos da descrição (se houver) ficarão anexados ao e-mail."
+
+#: includes/admin/edit_notification.php:77
+msgid "Ticket ID"
+msgstr "ID do Chamado"
+
+#: includes/admin/edit_notification.php:78
+msgid "Ticket Subject"
+msgstr "Assunto do Chamado"
+
+#: includes/admin/edit_notification.php:66
+msgid "Description"
+msgstr "Descrição"
+
+#: includes/admin/edit_notification.php:76
+msgid "Template Tags"
+msgstr "Tags de Modelo"
+
+#: includes/admin/edit_notification.php:59
+msgid "Subject"
+msgstr "Assunto"
+
+#: includes/admin/admin.php:125 includes/admin/edit_notification.php:164
+msgid "Select Option"
+msgstr "Selecione uma Opção"
+
+#: includes/admin/edit_notification.php:31
+msgid "Edit Notification"
+msgstr "Editar Notificação"
+
+#: includes/admin/admin.php:121 includes/admin/clone_notification.php:10
+#: includes/admin/delete_notification.php:10
+msgid "Cheating huh?"
+msgstr "Trapaceando, hein?"
+
+#: includes/admin/admin.php:73
+msgid "Change Status"
+msgstr "Mudança de Status"
+
+#: includes/admin/admin.php:74
+msgid "Assign Agent"
+msgstr "Atribuir Agente"
+
+#: includes/admin/admin.php:75
+msgid "Delete Ticket"
+msgstr "Excluir Chamado"
+
+#: includes/admin/admin.php:72
+msgid "Reply Ticket"
+msgstr "Responder Chamado"
+
+#: includes/admin/admin.php:52
+msgid "Email Notifications"
+msgstr "Notificações de E-mail"
+
+#: includes/admin/admin.php:71
+msgid "Create New Ticket"
+msgstr "Criar Novo Chamado"
+
+#: includes/admin/add_notification.php:45
+msgid "Save & Continue"
+msgstr "Salvar e Continuar"
+
+#: includes/admin/add_notification.php:29
+#: includes/admin/edit_notification.php:43 includes/admin/view_settings.php:78
+msgid "Type"
+msgstr "Tipo"
+
+#: includes/admin/add_notification.php:17
+msgid "Add Notification"
+msgstr "Adicionar Notificação"
+
+#: includes/admin/add_notification.php:22
+#: includes/admin/edit_notification.php:36 includes/admin/view_settings.php:77
+msgid "Title"
+msgstr "Título"

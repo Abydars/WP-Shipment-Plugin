@@ -1,0 +1,174 @@
+# Translation of WPSP Email Pipe in Ukrainian
+# This file is distributed under the same license as the WPSP Email Pipe package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-05-15 14:58+0530\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Language: uk_UA\n"
+"Project-Id-Version: WPSP Email Pipe\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+
+#: wpsp_email_pipe.php:92
+msgid "Once every minute"
+msgstr "Щохвилини"
+
+#: includes/class-wpsp-admin.php:43
+msgid "Email Piping"
+msgstr "Канал електронної пошти"
+
+#: includes/ajax/upload_google_app_config.php:36
+msgid "Error: file size exceeded allowed limit!"
+msgstr "Помилка: розмір файлу перевищує встановлений ліміт."
+
+#: includes/ajax/upload_google_app_config.php:29
+msgid "Error: file format not supported!"
+msgstr "Помилка: формат файлу не підтримується!"
+
+#: includes/ajax/set_add_imap.php:34
+msgid "Email account belong to registered user can not be piped."
+msgstr "Обліковий запис, що належить зареєстрованому користувачу не може бути використаний як канал електронної пошти."
+
+#: includes/ajax/set_add_imap.php:25
+msgid "php-imap or php-fileinfo module not enabled for your server. Please contact to your host provider."
+msgstr "Модуль php-imap або php-fileinfo не підключені на Вашому сервері. Будь ласка, зв'яжіться з вашим хостинг-провайдером."
+
+#: includes/ajax/set_add_imap.php:19
+msgid "Connection Successfull!"
+msgstr "Підключення вдале!"
+
+#: includes/ajax/delete_gmail_pipe_connection.php:9
+#: includes/ajax/delete_imap_pipe_connection.php:10
+#: includes/ajax/set_add_imap.php:12
+#: includes/ajax/upload_google_app_config.php:9
+msgid "Cheating huh?"
+msgstr "Обманюєте, ні?"
+
+#: includes/admin/overview.php:182
+msgid "Save Changes"
+msgstr "Зберегти зміни"
+
+#: includes/admin/overview.php:141
+msgid "Email"
+msgstr "Електронна пошта"
+
+#: includes/admin/overview.php:142
+msgid "Category"
+msgstr "Категорія"
+
+#: includes/admin/overview.php:135
+msgid "Assign Categories"
+msgstr "Призначити категорії"
+
+#: includes/admin/overview.php:105
+msgid "You need to create Google Developer app. Please <a href=\"https://developers.google.com/gmail/api/quickstart/php\" target=\"_blank\">follow step 1 here</a> and upload client_secret.json file below."
+msgstr "Вам потрібно створити додаток Google Developer. Будь ласка, <a href=\"https://developers.google.com/gmail/api/quickstart/php\" target=\"_blank\">виконайте перший крок тут</a> та завантажте client_secret.json файл нижче."
+
+#: includes/admin/overview.php:103
+msgid "Client Secret"
+msgstr "Кодове слово замовника"
+
+#: includes/admin/overview.php:98
+msgid "Google Mail"
+msgstr "Пошта Google"
+
+#: includes/admin/overview.php:77
+msgid "Email Account"
+msgstr "Обліковий запис електронної пошти"
+
+#: includes/admin/overview.php:78
+msgid "Action"
+msgstr "Дія"
+
+#: includes/admin/overview.php:69 includes/admin/overview.php:113
+msgid "Pipe Accounts"
+msgstr "Облікові записи каналів електронної пошти"
+
+#: includes/admin/overview.php:72 includes/admin/overview.php:116
+msgid "+ Add New"
+msgstr "+ Додати нове"
+
+#: includes/admin/overview.php:64
+msgid "IMAP"
+msgstr "IMAP"
+
+#: includes/admin/overview.php:57
+msgid "Registered Users Only"
+msgstr "Тільки зареєстровані користувачі"
+
+#: includes/admin/overview.php:56
+msgid "Anyone (includding guest users)"
+msgstr "Будь хто (включаючи гостьових користувачів)"
+
+#: includes/admin/overview.php:52
+msgid "Allowed User Emails"
+msgstr "Дозволені користувацькі адреси електронної пошти"
+
+#: includes/admin/overview.php:45
+msgid "Please add one pattern per line. You can use patterns like abc,xyz,*abc,xyz* etc."
+msgstr "Будь ласка, додавайте один шаблон в рядку. Ви можете використовувати шаблони, такі як abc,xyz,*abc,xyz*, тощо"
+
+#: includes/admin/overview.php:41
+msgid "Ignore emails having these words in subject"
+msgstr "Ігнорувати повідомлення, які містять ці слова в темі"
+
+#: includes/admin/overview.php:35
+msgid "Please insert one email per line. You can insert email pattern like *@paypal.com, admin@*, etc."
+msgstr "Будь ласка, додавайте одну електрону пошту в рядку. Ви можете використовувати шаблони, такі як *@paypal.com, admin@*, тощо."
+
+#: includes/admin/overview.php:31
+msgid "Block Emails"
+msgstr "Блокувати повідомлення"
+
+#: includes/admin/imap/edit_imap.php:25
+msgid "Edit IMAP Connection"
+msgstr "Редагувати IMAP підключення"
+
+#: includes/admin/overview.php:26
+msgid "General"
+msgstr "Загальне"
+
+#: includes/admin/imap/add_imap.php:78 includes/admin/imap/edit_imap.php:84
+msgid "Test & Save Connection"
+msgstr "Перевірити та зберегти підключення"
+
+#: includes/admin/imap/add_imap.php:64 includes/admin/imap/edit_imap.php:70
+msgid "Password"
+msgstr "Пароль"
+
+#: includes/admin/imap/add_imap.php:57 includes/admin/imap/edit_imap.php:63
+msgid "Username"
+msgstr "Ім'я користувача"
+
+#: includes/admin/imap/add_imap.php:47 includes/admin/imap/edit_imap.php:53
+msgid "Incoming Mail Server Port"
+msgstr "Порт поштового сервера отримання"
+
+#: includes/admin/imap/add_imap.php:40 includes/admin/imap/edit_imap.php:46
+msgid "Incoming Mail Server"
+msgstr "Поштовий сервер отримання"
+
+#: includes/admin/imap/add_imap.php:33 includes/admin/imap/edit_imap.php:39
+msgid "None"
+msgstr "Нічого"
+
+#: includes/admin/imap/add_imap.php:34 includes/admin/imap/edit_imap.php:40
+msgid "SSL"
+msgstr "SSL"
+
+#: includes/admin/imap/add_imap.php:30 includes/admin/imap/edit_imap.php:36
+msgid "Encryption"
+msgstr "Шифрування"
+
+#: includes/admin/imap/add_imap.php:23 includes/admin/imap/edit_imap.php:29
+msgid "Email Address"
+msgstr "Адреса електронної пошти"
+
+#: includes/admin/imap/add_imap.php:19
+msgid "Add New IMAP Connection"
+msgstr "Додати нове підключення IMAP"

@@ -1,0 +1,43 @@
+
+#wpsp_en_tbl_notifications{
+  margin-left: -10px;
+}
+
+#wpsp_en_tbl_notifications th, #wpsp_en_tbl_recepients th{
+  padding-left: 10px;
+}
+
+.wpsp_en_delete{
+  color: #a00;
+}
+
+.wpsp_en_header th{
+  padding-bottom: 0px;
+}
+
+.wpsp_en_header h3{
+  margin-bottom: 0px;
+}
+
+.wpsp_en_full_width{
+  width: 100%;
+}
+
+#wpsp_en_tbl_recepients .col_1{
+  width: 15px;
+}
+
+#wpsp_en_condition_add_container{
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+#wpsp_en_condition_add_container, .wpsp_en_conditional_values{
+  display: none;
+}
+
+#wpsp_en_condition_container{
+  margin-top: 20px;
+}

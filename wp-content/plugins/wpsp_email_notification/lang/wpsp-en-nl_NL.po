@@ -1,0 +1,261 @@
+# Translation of WPSP Email Notifications in Dutch
+# This file is distributed under the same license as the WPSP Email Notifications package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-12-15 10:43:29+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: nl\n"
+"Project-Id-Version: WPSP Email Notifications\n"
+
+#: includes/admin/add_notification.php:22
+#: includes/admin/edit_notification.php:36 includes/admin/view_settings.php:77
+msgid "Title"
+msgstr "Titel"
+
+#: includes/admin/add_notification.php:17
+msgid "Add Notification"
+msgstr "Voeg Notificatie toe"
+
+#: includes/admin/add_notification.php:29
+#: includes/admin/edit_notification.php:43 includes/admin/view_settings.php:78
+msgid "Type"
+msgstr "Type"
+
+#: includes/admin/add_notification.php:45
+msgid "Save & Continue"
+msgstr "Opslaan & doorgaan"
+
+#: includes/admin/admin.php:71
+msgid "Create New Ticket"
+msgstr "Maak een nieuw ticket aan"
+
+#: includes/admin/admin.php:52
+msgid "Email Notifications"
+msgstr "E-mail Notificaties"
+
+#: includes/admin/admin.php:72
+msgid "Reply Ticket"
+msgstr "Beantwoord Ticket"
+
+#: includes/admin/admin.php:75
+msgid "Delete Ticket"
+msgstr "Verander status"
+
+#: includes/admin/admin.php:74
+msgid "Assign Agent"
+msgstr "Toewijzen Agent"
+
+#: includes/admin/admin.php:73
+msgid "Change Status"
+msgstr "Verander status"
+
+#: includes/admin/admin.php:121 includes/admin/clone_notification.php:10
+#: includes/admin/delete_notification.php:10
+msgid "Cheating huh?"
+msgstr "Vals aan het spelen ?"
+
+#: includes/admin/edit_notification.php:31
+msgid "Edit Notification"
+msgstr "Bewerk melding"
+
+#: includes/admin/admin.php:125 includes/admin/edit_notification.php:164
+msgid "Select Option"
+msgstr "Selecteer een optie"
+
+#: includes/admin/edit_notification.php:59
+msgid "Subject"
+msgstr "Onderwerp"
+
+#: includes/admin/edit_notification.php:76
+msgid "Template Tags"
+msgstr "Sjabloon Tags"
+
+#: includes/admin/edit_notification.php:66
+msgid "Description"
+msgstr "Omschrijving"
+
+#: includes/admin/edit_notification.php:78
+msgid "Ticket Subject"
+msgstr "Ticket Onderwerp"
+
+#: includes/admin/edit_notification.php:77
+msgid "Ticket ID"
+msgstr "Ticket ID"
+
+#: includes/admin/edit_notification.php:79
+msgid "Ticket description given while creating ticket. If used, description attachments(if any) will get attached to mail."
+msgstr "Ticketbeschrijving gegeven tijdens het maken van het ticket. Indien gebruikt, zullen de bijgevoegde bijlagen bij e-mail worden gevoegd."
+
+#: includes/admin/edit_notification.php:82
+msgid "Ticket Priority"
+msgstr "Ticket Prioriteit"
+
+#: includes/admin/edit_notification.php:81
+msgid "Ticket Category"
+msgstr "Ticket categorie"
+
+#: includes/admin/edit_notification.php:80
+msgid "Ticket status"
+msgstr "Ticket status"
+
+#: includes/admin/edit_notification.php:83
+msgid "Name of ticket creator"
+msgstr "Naam van de maker van het ticket"
+
+#: includes/admin/edit_notification.php:84
+msgid "Email of ticket creator"
+msgstr "E-mail van ticketmaker"
+
+#: includes/admin/edit_notification.php:85
+msgid "Ticket create time"
+msgstr "Ticket aanmaaktijd"
+
+#: includes/admin/edit_notification.php:86
+msgid "Name of the agent who have created ticket on behalf of user. Empty if ticket created by user himself."
+msgstr "Naam van de agent die het ticket heeft gemaakt namens de gebruiker. Laat het leeg als ticket door de gebruiker zelf is aangemaakt."
+
+#: includes/admin/edit_notification.php:88
+msgid "Name of user posted last reply."
+msgstr "Naam van de gebruiker laatste reactie."
+
+#: includes/admin/edit_notification.php:87
+msgid "Name(s) of agent assigned to ticket."
+msgstr "Naam/namen aan ticket toegewezen agent(en)"
+
+#: includes/admin/edit_notification.php:89
+msgid "Email of user posted last reply."
+msgstr "E-mail van de gebruiker laatste reactie."
+
+#: includes/admin/edit_notification.php:90
+msgid "Last reply description.  If used, reply description attachments(if any) will get attached to mail."
+msgstr "Laatste ticketbeschrijving gegeven tijdens het maken van het ticket. Indien gebruikt, zullen de bijlagen bij e-mail worden toevoegt."
+
+#: includes/admin/edit_notification.php:91
+msgid "History of communication in ticket."
+msgstr "Geschiedenis van de communicatie van deze ticket."
+
+#: includes/admin/edit_notification.php:92
+msgid "Name of user doing current activity."
+msgstr "Naam van de gebruiker die de huidige activiteit uitvoert."
+
+#: includes/admin/edit_notification.php:93
+msgid "URL of the ticket."
+msgstr "URL van het ticket."
+
+#: includes/admin/edit_notification.php:102
+msgid "Recipients"
+msgstr "Ontvangers"
+
+#: includes/admin/edit_notification.php:110
+msgid "Enable"
+msgstr "Activeren"
+
+#: includes/admin/edit_notification.php:111
+msgid "Role"
+msgstr "Niveau"
+
+#: includes/admin/edit_notification.php:127
+msgid "Assigned Agent"
+msgstr "Toegewezen agent"
+
+#: includes/admin/edit_notification.php:120
+msgid "Customer"
+msgstr "Klant"
+
+#: includes/admin/edit_notification.php:134
+msgid "Supervisor"
+msgstr "Supervisor"
+
+#: includes/admin/edit_notification.php:141
+msgid "Administrator"
+msgstr "Beheerder"
+
+#: includes/admin/edit_notification.php:152
+msgid "Conditions"
+msgstr "Voorwaarden"
+
+#: includes/admin/edit_notification.php:154 includes/admin/view_settings.php:67
+msgid "Add New"
+msgstr "Nieuwe toevoegen"
+
+#: includes/admin/edit_notification.php:157
+msgid "Select Field"
+msgstr "Selecteer Veld"
+
+#: includes/admin/edit_notification.php:166
+msgid "Has Word"
+msgstr "Heeft woord"
+
+#: includes/admin/edit_notification.php:167
+msgid "Add"
+msgstr "Voeg toe"
+
+#: includes/admin/edit_notification.php:184
+msgid "Same condition field match relation"
+msgstr "Gelijkwaardige voorwaarde veld match relatie"
+
+#: includes/admin/edit_notification.php:187
+#: includes/admin/edit_notification.php:198
+msgid "Any one of them"
+msgstr "Ieder van hen"
+
+#: includes/admin/edit_notification.php:188
+#: includes/admin/edit_notification.php:197
+msgid "All of them"
+msgstr "Allemaal"
+
+#: includes/admin/edit_notification.php:194
+msgid "Different condition field match relation"
+msgstr "Relatie tussen verschillende voorwaarden"
+
+#: includes/admin/edit_notification.php:205 includes/admin/view_settings.php:59
+msgid "Save Changes"
+msgstr "Wijzigingen opslaan"
+
+#: includes/admin/view_settings.php:23
+msgid "General Settings"
+msgstr "Algemene instellingen"
+
+#: includes/admin/view_settings.php:28
+msgid "From Name"
+msgstr "Van naam"
+
+#: includes/admin/view_settings.php:35
+msgid "From Email"
+msgstr "Van e-mail"
+
+#: includes/admin/view_settings.php:49
+msgid "Ignore-emails"
+msgstr "Negeer e-mails"
+
+#: includes/admin/view_settings.php:42
+msgid "Reply-To"
+msgstr "Antwoord aan"
+
+#: includes/admin/view_settings.php:66
+msgid "Notifications"
+msgstr "Notificaties"
+
+#: includes/admin/view_settings.php:79
+msgid "Actions"
+msgstr "Acties"
+
+#: includes/admin/view_settings.php:94
+msgid "Edit"
+msgstr "Bewerk"
+
+#: includes/admin/view_settings.php:95
+msgid "Clone"
+msgstr "Kopiëren"
+
+#: includes/admin/view_settings.php:105
+msgid "No Notifications Found"
+msgstr "Geen meldingen gevonden"
+
+#: includes/admin/view_settings.php:96
+msgid "Delete"
+msgstr "Verwijder"

@@ -1,0 +1,173 @@
+# Translation of WPSP Email Pipe in Italian
+# This file is distributed under the same license as the WPSP Email Pipe package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-12-14 12:13:33+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: it\n"
+"Project-Id-Version: WPSP Email Pipe\n"
+
+#: includes/admin/imap/add_imap.php:19
+msgid "Add New IMAP Connection"
+msgstr "Aggiungi una nuova connessione IMAP"
+
+#: includes/admin/imap/add_imap.php:23 includes/admin/imap/edit_imap.php:29
+msgid "Email Address"
+msgstr "Indirizzo Email"
+
+#: includes/admin/imap/add_imap.php:30 includes/admin/imap/edit_imap.php:36
+msgid "Encryption"
+msgstr "Crittografia"
+
+#: includes/admin/imap/add_imap.php:34 includes/admin/imap/edit_imap.php:40
+msgid "SSL"
+msgstr "SSL"
+
+#: includes/admin/imap/add_imap.php:33 includes/admin/imap/edit_imap.php:39
+msgid "None"
+msgstr "Nessuno/a"
+
+#: includes/admin/imap/add_imap.php:40 includes/admin/imap/edit_imap.php:46
+msgid "Incoming Mail Server"
+msgstr "Server di posta in arrivo"
+
+#: includes/admin/imap/add_imap.php:47 includes/admin/imap/edit_imap.php:53
+msgid "Incoming Mail Server Port"
+msgstr "Porta del server di posta in arrivo"
+
+#: includes/admin/imap/add_imap.php:57 includes/admin/imap/edit_imap.php:63
+msgid "Username"
+msgstr "Nome Utente"
+
+#: includes/admin/imap/add_imap.php:64 includes/admin/imap/edit_imap.php:70
+msgid "Password"
+msgstr "Password"
+
+#: includes/admin/imap/add_imap.php:78 includes/admin/imap/edit_imap.php:84
+msgid "Test & Save Connection"
+msgstr "Verifica e salva la connessione"
+
+#: includes/admin/overview.php:26
+msgid "General"
+msgstr "Generale"
+
+#: includes/admin/imap/edit_imap.php:25
+msgid "Edit IMAP Connection"
+msgstr "Modifica connessione IMAP"
+
+#: includes/admin/overview.php:31
+msgid "Block Emails"
+msgstr "Blocca Email"
+
+#: includes/admin/overview.php:35
+msgid "Please insert one email per line. You can insert email pattern like *@paypal.com, admin@*, etc."
+msgstr "Si prega di inserire una e-mail per riga. Puoi inserire un modello di email come *@paypal.com, admin @ *, ecc."
+
+#: includes/admin/overview.php:41
+msgid "Ignore emails having these words in subject"
+msgstr "Ignora le email contenenti queste parole nell'oggetto"
+
+#: includes/admin/overview.php:45
+msgid "Please add one pattern per line. You can use patterns like abc,xyz,*abc,xyz* etc."
+msgstr "Si prega di aggiungere un modello per riga. Puoi usare modelli come abc, xyz, * abc, xyz * ecc."
+
+#: includes/admin/overview.php:52
+msgid "Allowed User Emails"
+msgstr "Email Utenti Autorizzati"
+
+#: includes/admin/overview.php:56
+msgid "Anyone (includding guest users)"
+msgstr "Chiunque (compresi gli utenti ospiti)"
+
+#: includes/admin/overview.php:57
+msgid "Registered Users Only"
+msgstr "Solo utenti registrati"
+
+#: includes/admin/overview.php:64
+msgid "IMAP"
+msgstr "IMAP"
+
+#: includes/admin/overview.php:72 includes/admin/overview.php:116
+msgid "+ Add New"
+msgstr "+ Aggiungi Nuovo"
+
+#: includes/admin/overview.php:69 includes/admin/overview.php:113
+msgid "Pipe Accounts"
+msgstr "Pipe Accounts"
+
+#: includes/admin/overview.php:78
+msgid "Action"
+msgstr "Azione"
+
+#: includes/admin/overview.php:77
+msgid "Email Account"
+msgstr "Account Email"
+
+#: includes/admin/overview.php:98
+msgid "Google Mail"
+msgstr "Email Google"
+
+#: includes/admin/overview.php:103
+msgid "Client Secret"
+msgstr "Utente Segreto"
+
+#: includes/admin/overview.php:105
+msgid "You need to create Google Developer app. Please <a href=\"https://developers.google.com/gmail/api/quickstart/php\" target=\"_blank\">follow step 1 here</a> and upload client_secret.json file below."
+msgstr ""
+"Devi creare l'app per sviluppatori Google. Prego <a href=\"https://developers.google.com/gmail/api/quickstart/php\" target=\"_blank\">follow step 1 here</a> \n"
+"e carica il file client_secret.json di seguito."
+
+#: includes/admin/overview.php:135
+msgid "Assign Categories"
+msgstr "Assegna Categoria"
+
+#: includes/admin/overview.php:142
+msgid "Category"
+msgstr "Categoria"
+
+#: includes/admin/overview.php:141
+msgid "Email"
+msgstr "Email"
+
+#: includes/admin/overview.php:182
+msgid "Save Changes"
+msgstr "Salva Modifiche"
+
+#: includes/ajax/delete_gmail_pipe_connection.php:9
+#: includes/ajax/delete_imap_pipe_connection.php:10
+#: includes/ajax/set_add_imap.php:12
+#: includes/ajax/upload_google_app_config.php:9
+msgid "Cheating huh?"
+msgstr "Stiamo Scherzando?"
+
+#: includes/ajax/set_add_imap.php:19
+msgid "Connection Successfull!"
+msgstr "Connessione riuscita!"
+
+#: includes/ajax/set_add_imap.php:25
+msgid "php-imap or php-fileinfo module not enabled for your server. Please contact to your host provider."
+msgstr "I moduli Php-imap o php-fileinfo non sono abilitati nel tuo server. Per cortesia contatta il tuo provider."
+
+#: includes/ajax/set_add_imap.php:34
+msgid "Email account belong to registered user can not be piped."
+msgstr "L'indirizzo email dell'account è già associato ad un utente registrato e non può essere reindirizzato."
+
+#: includes/ajax/upload_google_app_config.php:29
+msgid "Error: file format not supported!"
+msgstr "Errore: il formato del file non è supportato!"
+
+#: includes/ajax/upload_google_app_config.php:36
+msgid "Error: file size exceeded allowed limit!"
+msgstr "Errore: la dimensione del file ha superato il limite consentito!"
+
+#: includes/class-wpsp-admin.php:43
+msgid "Email Piping"
+msgstr "Piping di Posta Elettronica"
+
+#: wpsp_email_pipe.php:92
+msgid "Once every minute"
+msgstr "Uno ogni minuto"

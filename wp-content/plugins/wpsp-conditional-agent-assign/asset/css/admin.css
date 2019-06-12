@@ -1,0 +1,40 @@
+#CagentDisplayTableContainer{margin-top: 10px;}
+.wpsp_caa_setting_divs {
+    border: 1px solid #eee;
+    padding: 0 0 10px 15px;
+    margin: 10px 0;
+    width: 97%;
+    font-family: arial;
+}
+.wpsp_caa_select_multi {
+    min-height: 150px;
+    width: 200px;
+}
+#wpsp_condition_container .wait{display: none;} 
+.backtoconditionlist {
+    border-bottom: 1px solid;
+    float: right;
+    font-size: 16px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+#wpsp_caa_tbl th, #wpsp_caa_tbl td{
+    padding: 20px;
+    vertical-align: top;
+    text-align: left;
+}
+#wpsp_caa_tbl input[type="radio"], #wpsp_caa_tbl input[type="checkbox"]{
+    margin: 0px !important;
+}
+.wpsp_caa_option_single{
+    width: 200px;
+    height: 25px;
+    overflow: hidden;
+    float: left;
+    margin: 13px 10px 0 0;
+    font-size: 15px;
+}
+
+#wpsp_caa_description{
+    font-style: italic;
+}

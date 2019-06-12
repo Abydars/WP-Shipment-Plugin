@@ -1,0 +1,19 @@
+.support_bs .table-striped > tbody > tr.wpsp_custom_tr_front:nth-child(2n+1) > td, .support_bs .table-striped > tbody > tr.wpsp_custom_tr_front:nth-child(2n+1) > th {
+   background-color: transparent;
+}
+
+.wpsp_custom_tr_front{
+    background-color: #ffff00;   
+}
+
+.support_bs .table-hover > tbody > tr.wpsp_custom_tr_front:hover > td, .support_bs .table-hover > tbody > tr.wpsp_custom_tr_front:hover > th {
+    background-color: inherit!important;
+}
+
+.wpsp_sticktd img{
+    opacity: 0.2;
+}
+
+.wpsp_sticktd img:hover{
+    opacity: 1;
+}

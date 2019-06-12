@@ -1,0 +1,174 @@
+# Translation of WPSP Email Pipe in Slovenian
+# This file is distributed under the same license as the WPSP Email Pipe package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-01-05 15:08+0530\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Language: sl_SI\n"
+"Project-Id-Version: WPSP Email Pipe\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+
+#: includes/admin/imap/add_imap.php:19
+msgid "Add New IMAP Connection"
+msgstr "Dodaj novo IMAP povezavo"
+
+#: includes/admin/imap/add_imap.php:23 includes/admin/imap/edit_imap.php:29
+msgid "Email Address"
+msgstr "e-naslov"
+
+#: includes/admin/imap/add_imap.php:30 includes/admin/imap/edit_imap.php:36
+msgid "Encryption"
+msgstr "Enkripcija"
+
+#: includes/admin/imap/add_imap.php:34 includes/admin/imap/edit_imap.php:40
+msgid "SSL"
+msgstr "SSL povezava"
+
+#: includes/admin/imap/add_imap.php:33 includes/admin/imap/edit_imap.php:39
+msgid "None"
+msgstr "Nič"
+
+#: includes/admin/imap/add_imap.php:40 includes/admin/imap/edit_imap.php:46
+msgid "Incoming Mail Server"
+msgstr "Dohodni strežnik"
+
+#: includes/admin/imap/add_imap.php:47 includes/admin/imap/edit_imap.php:53
+msgid "Incoming Mail Server Port"
+msgstr "Vrata za dohodni strežnik"
+
+#: includes/admin/imap/add_imap.php:57 includes/admin/imap/edit_imap.php:63
+msgid "Username"
+msgstr "Uporabniško ime"
+
+#: includes/admin/imap/add_imap.php:64 includes/admin/imap/edit_imap.php:70
+msgid "Password"
+msgstr "Geslo"
+
+#: includes/admin/imap/add_imap.php:78 includes/admin/imap/edit_imap.php:84
+msgid "Test & Save Connection"
+msgstr "Testiraj & shrani povezavo"
+
+#: includes/admin/overview.php:26
+msgid "General"
+msgstr "Splošno"
+
+#: includes/admin/imap/edit_imap.php:25
+msgid "Edit IMAP Connection"
+msgstr "Uredi IMAP povezavo"
+
+#: includes/admin/overview.php:31
+msgid "Block Emails"
+msgstr "Blokiraj e-naslove"
+
+#: includes/admin/overview.php:35
+msgid "Please insert one email per line. You can insert email pattern like *@paypal.com, admin@*, etc."
+msgstr "Vnesite en e-naslov v vrstico. Vstavite lahko tudi domeno, npr. '@paypal.com, admin@', itd."
+
+#: includes/admin/overview.php:41
+msgid "Ignore emails having these words in subject"
+msgstr "Prezrite e-pošto, ki vsebujejo nasledenje besede v zadevi"
+
+#: includes/admin/overview.php:45
+msgid "Please add one pattern per line. You can use patterns like abc,xyz,*abc,xyz* etc."
+msgstr "Dodajte en vzorec na vrstico. Uporabite lahko vzorce kot so abc, xyz, \"abc, xyz\" itd."
+
+#: includes/admin/overview.php:52
+msgid "Allowed User Emails"
+msgstr "Dovoljen e-naslov uporabnika"
+
+#: includes/admin/overview.php:56
+msgid "Anyone (includding guest users)"
+msgstr "Vsi (vključno z neregistriranimi uporabniki)"
+
+#: includes/admin/overview.php:57
+msgid "Registered Users Only"
+msgstr "Samo registrirani uporabniki"
+
+#: includes/admin/overview.php:64
+msgid "IMAP"
+msgstr "IMAP"
+
+#: includes/admin/overview.php:72 includes/admin/overview.php:116
+msgid "+ Add New"
+msgstr "+ Dodaj nov"
+
+#: includes/admin/overview.php:69 includes/admin/overview.php:113
+msgid "Pipe Accounts"
+msgstr "Pregleduj račune"
+
+#: includes/admin/overview.php:78
+msgid "Action"
+msgstr "Akcija"
+
+#: includes/admin/overview.php:77
+msgid "Email Account"
+msgstr "e-mail račun"
+
+#: includes/admin/overview.php:98
+msgid "Google Mail"
+msgstr "Google pošta"
+
+#: includes/admin/overview.php:103
+msgid "Client Secret"
+msgstr "Uporabniška skrivnost"
+
+#: includes/admin/overview.php:105
+msgid "You need to create Google Developer app. Please <a href=\"https://developers.google.com/gmail/api/quickstart/php\" target=\"_blank\">follow step 1 here</a> and upload client_secret.json file below."
+msgstr "Ustvariti morate Google developer aplikacijo. Prosimo <a href=\"https://developers.google.com/gmail/api/quickstart/php\" target=\"_blank\">sledite povezvi tukaj</a> in prenesite client_secret.json datoteko spodaj"
+
+#: includes/admin/overview.php:135
+msgid "Assign Categories"
+msgstr "Dodaljeno skupinam"
+
+#: includes/admin/overview.php:142
+msgid "Category"
+msgstr "Skupina"
+
+#: includes/admin/overview.php:141
+msgid "Email"
+msgstr "e-mail"
+
+#: includes/admin/overview.php:182
+msgid "Save Changes"
+msgstr "Shrani spremembe"
+
+#: includes/ajax/delete_gmail_pipe_connection.php:9
+#: includes/ajax/delete_imap_pipe_connection.php:10
+#: includes/ajax/set_add_imap.php:12
+#: includes/ajax/upload_google_app_config.php:9
+msgid "Cheating huh?"
+msgstr "Goljufija mar ne?"
+
+#: includes/ajax/set_add_imap.php:19
+msgid "Connection Successfull!"
+msgstr "Povezava je uspešna!"
+
+#: includes/ajax/set_add_imap.php:25
+msgid "php-imap or php-fileinfo module not enabled for your server. Please contact to your host provider."
+msgstr "php.imap ali php-fileinfo modul ni aktiven za vaš strežnik. Obrnite se na vašega ponudnika gostovanja."
+
+#: includes/ajax/set_add_imap.php:34
+msgid "Email account belong to registered user can not be piped."
+msgstr "E-mail računa pripada registriranemu uporabniku in ne more biti uporabljen za pregled pošte za podporo."
+
+#: includes/ajax/upload_google_app_config.php:29
+msgid "Error: file format not supported!"
+msgstr "NAPAKA: format datoteke ni podprt!"
+
+#: includes/ajax/upload_google_app_config.php:36
+msgid "Error: file size exceeded allowed limit!"
+msgstr "NAPAKA: velikost datoteke je presegla dovoljeno vrednost!"
+
+#: includes/class-wpsp-admin.php:43
+msgid "Email Piping"
+msgstr "Pregledovanje e-naslova"
+
+#: wpsp_email_pipe.php:92
+msgid "Once every minute"
+msgstr "Enkrat na vsako minuto"

@@ -1,0 +1,1 @@
+<li><a href="#settingsExportToExcel" id="tab_export_to_excel_container" data-toggle="tab"><?php _e('Export Ticket To Excel','wpsp_export');?></a></li>

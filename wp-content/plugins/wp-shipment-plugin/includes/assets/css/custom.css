@@ -1,0 +1,150 @@
+#wpsp-shipment-form-container.right-sidebar h1, #wpsp-shipment-form-container.right-sidebar h4, #wpsp-shipment-form-container.right-sidebar h2 {
+    color: #fff;
+    margin: 10px;
+}
+
+#wpsp-shipment-form-container.right-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #23282d;
+    width: 35%;
+    box-sizing: border-box;
+    transition: 1s left;
+    -webkit-transition: 1s left;
+    padding: 30px 20px;
+    color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 5;
+}
+
+.wpsp-clearfix {
+    clear: both;
+}
+
+.wpsp-row {
+    width: 100%;
+}
+
+.wpsp-one-half {
+    width: 50%;
+    float: left;
+}
+
+.wpsp-one-third {
+    width: 75%;
+    float: left;
+}
+
+.wpsp-one-fourth {
+    width: 25%;
+    float: left;
+}
+
+#wpsp-shipment-form-container.right-sidebar input[type="date"], #wpsp-shipment-form-container.right-sidebar input[type="text"], #wpsp-shipment-form-container.right-sidebar input[type="email"], #wpsp-shipment-form-container.right-sidebar input[type="number"] {
+    width: 100%;
+    height: 23px;
+}
+
+#wpsp-shipment-form-container.right-sidebar select {
+    height: 23px;
+    width: 100%;
+    border-radius: 0;
+}
+
+.wpsp-form-group {
+    padding: 10px;
+}
+
+#wpsp-shipment-form-container.right-sidebar input[type="checkbox"] {
+    margin: 10px;
+}
+
+#wpsp-shipment-form-container.right-sidebar button {
+    margin: 10px;
+    color: #fff;
+    background: #0073aa;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+#wpsp-shipment-form-container.right-sidebar .action {
+    float: right;
+}
+
+/*Modal*/
+
+#wpsp-shipment-form-container.right-sidebar .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+#wpsp-shipment-form-container.right-sidebar .modal-content {
+    background-color: #fefefe;
+    margin: 2% auto; /* 15% from the top and centered */
+    padding: 20px 20px 80px 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+#wpsp-shipment-form-container.right-sidebar .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#wpsp-shipment-form-container.right-sidebar .close:hover,
+#wpsp-shipment-form-container.right-sidebar .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content label, .modal-content h2, .modal-content span {
+    color: #000 !important;
+}
+
+.new-package .modal-content .actions {
+    float: right;
+}
+
+.new-package .modal-content {
+    padding: 20px 20px 320px 20px;
+}
+
+/*List Shipments*/
+
+#list-shipments {
+    padding: 0 10px;
+}
+
+/*Shipment Details*/
+
+#shipmentDetails .shipment_detail_actions {
+    float: right;
+}
+
+#shipmentDetails .shipment_detail_actions button {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    padding: 6px 12px;
+    font-size: 14px;
+}

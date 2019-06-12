@@ -1,0 +1,18 @@
+.wpsp_custom_tr{
+    background-color: #ffff00;   
+}
+
+.table-striped > tbody > tr.wpsp_custom_tr:nth-child(2n+1) > td, .table-striped > tbody > tr.wpsp_custom_tr:nth-child(2n+1) > th {
+     background-color: transparent;
+}
+
+.table-hover > tbody > tr.wpsp_custom_tr:hover > td, .table-hover > tbody > tr.wpsp_custom_tr:hover > th {
+    background-color: inherit !important;
+}
+
+.wpsp_sticktd img{
+    opacity: 0.2;
+}
+.wpsp_sticktd img:hover{
+    opacity: 1;
+}

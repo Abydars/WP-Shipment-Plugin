@@ -1,0 +1,11 @@
+<wpml-config>
+	<admin-texts>
+		<key name="wpsp_en_notification">
+			<key name="*">
+				<key name="description"/>
+				<key name="subject"/>
+			</key>
+		</key>
+	</admin-texts>
+</wpml-config>
+

@@ -1,0 +1,4 @@
+wp-config.php
+wp-content/uploads/*
+.idea/*
+.DS_Store
