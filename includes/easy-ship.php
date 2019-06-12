@@ -1,7 +1,7 @@
 <?php
 include './shipment.php';
 
-class EasyShip extends Shipment
+class WPSP_EasyShip extends WPSP
 {
     public function create_shipment($data)
     {
@@ -54,7 +54,6 @@ class EasyShip extends Shipment
 //        $api_response = "";
 
 
-
         if ($api_response->error) {
             $response['status'] = false;
             $response['message'] = $api_response->error;
@@ -75,7 +74,9 @@ class EasyShip extends Shipment
     {
 
     }
-    function get_rate($data){
+
+    function get_rate($data)
+    {
 
         $ch = curl_init();
 

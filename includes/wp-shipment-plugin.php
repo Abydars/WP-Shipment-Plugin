@@ -1,6 +1,6 @@
 <?php
 
-class wpShipment
+class WPSP
 {
     public function __construct()
     {
@@ -13,10 +13,15 @@ class wpShipment
         add_action( 'wp_ajax_wsp_render_shipment_form', array($this, 'wsp_render_shipment_form') );
 
         //Actions
-        $wp_shipment_actions = new shipmentActions();
-        add_action( 'wp_ajax_save_label', array($wp_shipment_actions, 'save_label') );
-        add_action( 'wp_ajax_save_label', array($wp_shipment_actions, 'save_label') );
 
+        $wp_shipment_actions = new WPSP_ShipmentActions();
+        add_action( 'wp_ajax_save_label', array($wp_shipment_actions, 'save_label') );
+        add_action( 'wp_ajax_save_from_address', array($wp_shipment_actions, 'save_from_address') );
+
+        //User Extras
+        $wp_user_extras = new WPSP_UserMeta();
+        add_action( 'show_user_profile', array($wp_user_extras, 'extra_user_profile_fields') );
+        add_action( 'edit_user_profile', array($wp_user_extras, 'extra_user_profile_fields') );
     }
 
     public function register_plugin_styles()

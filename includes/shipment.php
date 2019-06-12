@@ -1,14 +1,15 @@
 <?php
 
-
-abstract class Shipment
+abstract class WPSP_Shipment
 {
-    function list_shipment(){
+    function list_shipment()
+    {
 
     }
+
     abstract function get_shipment($id);
+
     abstract function create_shipment($data);
+
     abstract function delete_shipment($id);
-
-
 }

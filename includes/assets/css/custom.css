@@ -1,9 +1,9 @@
-.right-sidebar h1, .right-sidebar h4, .right-sidebar h2{
+.right-sidebar h1, .right-sidebar h4, .right-sidebar h2 {
     color: #fff;
     margin: 10px;
 }
 
-.right-sidebar{
+.right-sidebar {
     position: fixed;
     top: 0;
     right: 0;
@@ -22,48 +22,48 @@
     /*left: 100%;*/
 }
 
-.row{
+.row {
     width: 100%;
 }
 
-.one-half{
+.one-half {
     width: 50%;
     float: left;
 }
 
-.one-third{
+.one-third {
     width: 75%;
     float: left;
 }
 
-.one-fourth{
+.one-fourth {
     width: 25%;
     float: left;
 }
 
-.right-sidebar input[type="date"], .right-sidebar input[type="text"], .right-sidebar input[type="email"], .right-sidebar input[type="number"]{
+.right-sidebar input[type="date"], .right-sidebar input[type="text"], .right-sidebar input[type="email"], .right-sidebar input[type="number"] {
     width: 100%;
     height: 23px;
 }
 
-textarea{
+textarea {
     width: 100%;
 }
 
-.right-sidebar select{
+.right-sidebar select {
     height: 23px;
     width: 100%;
 }
 
-.form-group{
+.form-group {
     padding: 10px;
 }
 
-.right-sidebar input[type="checkbox"]{
+.right-sidebar input[type="checkbox"] {
     margin: 10px;
 }
 
-.right-sidebar button{
+.right-sidebar button {
     margin: 10px;
     color: #fff;
     background: #0073aa;
@@ -73,7 +73,7 @@ textarea{
     font-size: 16px;
 }
 
-.right-sidebar .action{
+.right-sidebar .action {
     float: right;
 }
 
@@ -89,8 +89,8 @@ textarea{
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
@@ -117,12 +117,34 @@ textarea{
     cursor: pointer;
 }
 
-.modal-content label, .modal-content h2, .modal-content span{
-    color: #000!important;
+.modal-content label, .modal-content h2, .modal-content span {
+    color: #000 !important;
+}
+
+.new-package .modal-content .actions {
+    float: right;
+}
+
+.new-package .modal-content {
+    padding: 20px 20px 320px 20px;
 }
 
 /*List Shipments*/
 
-#list-shipments{
+#list-shipments {
     padding: 0 10px;
+}
+
+/*Shipment Details*/
+
+#shipmentDetails .shipment_detail_actions {
+    float: right;
+}
+
+#shipmentDetails .shipment_detail_actions button {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    padding: 6px 12px;
+    font-size: 14px;
 }

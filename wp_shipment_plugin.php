@@ -9,9 +9,10 @@ Author URI:
 License:
 */
 
-include ('includes/wp_shipment_plugin.php');
-include ('includes/wp_shipment_actions.php');
-include ('includes/shipment.php');
+include('includes/wp-shipment-plugin.php');
+include('includes/shipment-action.php');
+include('includes/shipment.php');
 include('includes/address.php');
+include('includes/user-meta.php');
 
-$wp_shipment = new wpShipment();
+$wp_shipment = new WPSP();

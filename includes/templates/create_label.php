@@ -76,9 +76,33 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="form-group">
-                        <label>Height</label>
-                        <input type="text" name="height">
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>Height</label>
+                            <input type="text" name="height">
+                        </div>
+                    </div>
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>SKU</label>
+                            <input type="text" name="sku">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>Declared Currency</label>
+                            <select name="dec-currency">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="one-half">
+                        <div class="form-group">
+                            <label>Declared Customs Value</label>
+                            <input type="text" name="dec_customs_val">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -115,15 +139,89 @@
                 </div>
             </div>
         </div>
-        <?php wp_nonce_field( 'create_label', 'create_label_form' ); ?>
+        <div class="new-package modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add new Package</h2>
+                <div class="package">
+                    <h4>Package #</h4>
+                    <div class="row">
+                        <div class="one-half">
+                            <div class="form-group">
+                                <label>Weight</label>
+                                <input type="text" name="weight">
+                            </div>
+                        </div>
+                        <div class="one-half">
+                            <div class="form-group">
+                                <label>Weight Unit</label>
+                                <select name="unit">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="one-half">
+                            <div class="form-group">
+                                <label>Length</label>
+                                <input type="text" name="length">
+                            </div>
+                        </div>
+                        <div class="one-half">
+                            <div class="form-group">
+                                <label>Width</label>
+                                <input type="text" name="width">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="one-half">
+                            <div class="form-group">
+                                <label>Height</label>
+                                <input type="text" name="height">
+                            </div>
+                        </div>
+                        <div class="one-half">
+                            <div class="form-group">
+                                <label>SKU</label>
+                                <input type="text" name="sku">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="one-half">
+                            <div class="form-group">
+                                <label>Declared Currency</label>
+                                <select name="dec-currency">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="one-half">
+                            <div class="form-group">
+                                <label>Declared Customs Value</label>
+                                <input type="text" name="dec_customs_val">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <div class="row">
+                            <button class="cancel">Cancel</button>
+                            <button>Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php wp_nonce_field('create_label', 'create_label_form'); ?>
         <div class="row">
             <button>Rate Shop & Send</button>
-            <button>+ Add New Package</button>
+            <button class="add_new_package">+ Add New Package</button>
         </div>
     </form>
 
     <div id="fromAddress" class="modal">
-
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Add (From) New Address</h2>
@@ -133,7 +231,8 @@
                         <label>Paste US Address</label>
                         <br/>
                         <span>Format: 1005 N Gravenstein Highway Sebastopol, CA 95472</span>
-                        <textarea name="address" placeholder="1005 N Gravenstein Highway Sebastopol, CA 95472"></textarea>
+                        <textarea name="address"
+                                  placeholder="1005 N Gravenstein Highway Sebastopol, CA 95472"></textarea>
                     </div>
                 </div>
                 <div class="row">
@@ -213,6 +312,7 @@
                         <input type="checkbox" name="verify" id=""> <label>Circle Verification</label>
                     </div>
                 </div>
+                <?php wp_nonce_field('from_address', 'create_from_address'); ?>
                 <div class="row">
                     <div class="action">
                         <button>Cancel</button>
@@ -234,7 +334,8 @@
                         <label>Paste US Address</label>
                         <br/>
                         <span>Format: 1005 N Gravenstein Highway Sebastopol, CA 95472</span>
-                        <textarea name="address" placeholder="1005 N Gravenstein Highway Sebastopol, CA 95472"></textarea>
+                        <textarea name="address"
+                                  placeholder="1005 N Gravenstein Highway Sebastopol, CA 95472"></textarea>
                     </div>
                 </div>
                 <div class="row">
@@ -314,6 +415,7 @@
                         <input type="checkbox" name="verify" id=""> <label>Circle Verification</label>
                     </div>
                 </div>
+                <?php wp_nonce_field('to_address', 'create_to_address'); ?>
                 <div class="row">
                     <div class="action">
                         <button>Cancel</button>
