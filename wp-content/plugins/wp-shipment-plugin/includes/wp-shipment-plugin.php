@@ -27,6 +27,7 @@ class WPSP
 
 		add_action( 'show_user_profile', array( $wpsp_user_meta, 'extra_user_profile_fields' ) );
 		add_action( 'edit_user_profile', array( $wpsp_user_meta, 'extra_user_profile_fields' ) );
+        add_action( 'edit_user_profile_update', array($wpsp_user_meta, 'save_extra_user_profile_fields'));
 	}
 
 	public function register_plugin_styles()
