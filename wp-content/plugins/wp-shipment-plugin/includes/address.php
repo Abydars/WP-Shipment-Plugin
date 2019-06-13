@@ -81,7 +81,7 @@ class WPSP_Address
 		$address   = $data;
 
 		$row = array(
-			"address_name" => $address["fullName"] . " " . $address["street1"] . " " . $address["street2"] . ", " . $address["city"] . ", " . $address["state"] . ", " . $address["country"] . " " . $address["zipcode"],
+			"address_name" => $address["full_name"] . " " . $address["street_1"] . " " . $address["street_2"] . ", " . $address["city"] . ", " . $address["state"] . ", " . $address["country"] . " " . $address["zip_code"],
 			"customer_id"  => $address["customer"],
 			"data"         => json_encode( $address ),
 			"is_default"   => $is_first,

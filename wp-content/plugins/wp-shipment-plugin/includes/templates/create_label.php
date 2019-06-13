@@ -172,17 +172,23 @@
                     <tr>
                         <td>UPS</td>
                         <td></td>
-                        <td><button value="ups">Select</button></td>
+                        <td>
+                            <button value="ups">Select</button>
+                        </td>
                     </tr>
                     <tr>
                         <td>USPS</td>
                         <td></td>
-                        <td><button value="usps">Select</button></td>
+                        <td>
+                            <button value="usps">Select</button>
+                        </td>
                     </tr>
                     <tr>
                         <td>FEDEX</td>
                         <td></td>
-                        <td><button value="fedex">Select</button></td>
+                        <td>
+                            <button value="fedex">Select</button>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
@@ -326,7 +332,7 @@
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Street 2</label>
-                            <input type="text" name="street_2" id="" required/>
+                            <input type="text" name="street_2" id=""/>
                         </div>
                     </div>
                 </div>

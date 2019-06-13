@@ -92,6 +92,7 @@ class WPSP_USPS
 			$id  = $k + 1;
 			$xml = str_replace( "Package_{$id}", "Package", $xml );
 		}
+		echo $xml;die;
 
 		$url = add_query_arg( [
 			                      'API' => 'RateV4',

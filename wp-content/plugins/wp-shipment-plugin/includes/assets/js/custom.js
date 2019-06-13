@@ -77,6 +77,10 @@ jQuery(function ($) {
         formInit();
     });
 
+    function refreshAddresses() {
+
+    }
+
     function formInit() {
         $('#shipment_form').submit(function (e) {
             e.preventDefault();
@@ -99,7 +103,8 @@ jQuery(function ($) {
         $('#addAddressModal form').submit(function (e) {
             e.preventDefault();
 
-            var form_data = $(this).serializeArray()
+            var form_data = $(this).serializeArray();
+
             form_data.push({
                 'name': 'customer',
                 'value': $('select[name="customer"]').val()
@@ -111,7 +116,13 @@ jQuery(function ($) {
                 data: form_data,
                 url: wsp_ajax_url,
                 success: function (response) {
-                    console.log(response)
+                    $('#addAddressModal').hide();
+
+                    if (response.status) {
+                        refreshAddresses();
+                    } else {
+                        alert(response.message);
+                    }
                 }
             })
         });
