@@ -24,6 +24,7 @@ class WPSP
 		add_action( 'wp_ajax_wpsp_shipment_carrier_levels', array( $wpsp_actions, 'action_carrier_levels' ) );
 		add_action( 'wp_ajax_wpsp_shipment_package_types', array( $wpsp_actions, 'action_package_types' ) );
 		add_action( 'wp_ajax_wpsp_get_rates', array( $wpsp_actions, 'action_get_rates' ) );
+		add_action( 'wp_ajax_wpsp_get_addresses', array( $wpsp_actions, 'action_get_addresses' ) );
 
 		//User Extras
 		$wpsp_user_meta = new WPSP_UserMeta();

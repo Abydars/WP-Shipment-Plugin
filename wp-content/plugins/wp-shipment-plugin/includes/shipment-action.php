@@ -131,6 +131,16 @@ class WPSP_ShipmentActions
 		die;
 	}
 
+	function action_get_addresses()
+	{
+		$customer_id = $_REQUEST['customer_id'];
+		$addresses   = WPSP_Address::get_addresses_by_customer( $customer_id );
+
+		header( 'Content-Type: application/json' );
+		echo json_encode( $addresses );
+		die;
+	}
+
 	function shipment_details()
 	{
 		include( 'templates/shipment-details.php' );
