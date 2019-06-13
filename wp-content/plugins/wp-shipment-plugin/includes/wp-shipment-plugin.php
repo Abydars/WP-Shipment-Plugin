@@ -1,14 +1,19 @@
 <?php
 
+/*
+ * TODO: TASK FOR ARSALAN
+ * - Create shipments listing page and details page with void label button
+ *      -- Void label men ajax request jayegi iss action par "wpsp_void_label" and sath men "id" jayegi shipment ki
+ *
+ * - Create addresses management page
+ *      -- Address ka table hai db men, CRUD operations karane hen usmen
+ */
+
 class WPSP
 {
 	public function __construct()
 	{
-		//Activation Hook
-
-
 		//Functions
-
 		add_action( 'admin_enqueue_scripts', array( $this, 'register_plugin_styles' ) );
 		add_action( 'admin_menu', array( $this, 'setup_shipment_menu' ) );
 		add_action( 'admin_bar_menu', array( $this, 'add_toolbar_items' ), 100 );
@@ -25,6 +30,7 @@ class WPSP
 		add_action( 'wp_ajax_wpsp_shipment_package_types', array( $wpsp_actions, 'action_package_types' ) );
 		add_action( 'wp_ajax_wpsp_get_rates', array( $wpsp_actions, 'action_get_rates' ) );
 		add_action( 'wp_ajax_wpsp_get_addresses', array( $wpsp_actions, 'action_get_addresses' ) );
+		add_action( 'wp_ajax_wpsp_void_label', array( $wpsp_actions, 'action_void_label' ) );
 
 		//User Extras
 		$wpsp_user_meta = new WPSP_UserMeta();
@@ -110,140 +116,69 @@ class WPSP
 	function wpsp_activation()
 	{
 		$this->create_table( 'addresses', "id mediumint(9) NOT NULL AUTO_INCREMENT,
-
 					customer_id int (9) NOT NULL,
-
 					address_id varchar(100) DEFAULT '' NULL,
-
 					address_name varchar(100) DEFAULT '' NOT NULL,
-
 					data longtext DEFAULT '' NOT NULL,
-
 					is_default tinyint DEFAULT 0,
-
 					type varchar(20) DEFAULT 'to',
-
 					is_verified tinyint DEFAULT 1,
-
 					PRIMARY KEY  (id)" );
 		$this->create_table( 'shipments', "id mediumint(9) NOT NULL AUTO_INCREMENT,
-
 					customer_id int (9) NOT NULL,
-
 					creator_id int (9) NOT NULL,
-
 					order_id int (9) DEFAULT 0,
-
 					ticket_id varchar(255) DEFAULT '',
-
 					creation_date varchar(25) NOT NULL,
-
 					shipKey varchar(100) DEFAULT '' NOT NULL,
-
 					status varchar(100) DEFAULT '' NOT NULL,
-
 					toAddress_id int (9) NOT NULL,
-
 					fromAddress_id int (9) NOT NULL,
-
 					server varchar(100) DEFAULT '' NOT NULL,
-
 					serverLevel varchar(100) DEFAULT '' NOT NULL,
-
 					packageType varchar(100) DEFAULT '' NOT NULL,
-
 					dropOffType varchar(100) DEFAULT '' NOT NULL,
-
 					confirmation varchar(100) DEFAULT '' NOT NULL,
-
 					reference varchar(100) DEFAULT '',
-
 					shipmentNo varchar(100) DEFAULT '',
-
 					shipDate varchar(100) DEFAULT '' NOT NULL,
-
 					pickup_date varchar(100),
-
 					rates longtext DEFAULT '',
-
 					markupRate float(25) DEFAULT 0,
-
 					labelRate float(25) DEFAULT 0,
-
 					PRIMARY KEY  (id)" );
 		$this->create_table( 'packages', "id mediumint(9) NOT NULL AUTO_INCREMENT,
-
 					shipment_id mediumint(9) NOT NULL,
-
 					weight varchar(25),
-
 					weightUnit varchar(10),
-
 					length varchar(25),
-
 					width varchar(25),
-
 					height varchar(25),
-
 					sizeUnit varchar(25),
-
 					insurancedeclvalue varchar(25),
-
 					trackingNumber varchar(255),
-
 					toAddress_id int (9) NOT NULL,
-
 					fromAddress_id int (9) NOT NULL,
-
 					PRIMARY KEY  (id)" );
 		$this->create_table( 'labels', "id mediumint(9) NOT NULL AUTO_INCREMENT,
-
 					shipment_id mediumint(9) NOT NULL,
-
 					labels longtext DEFAULT '',
-
 					label_type varchar(25) DEFAULT 'PDF',
-
 					PRIMARY KEY  (id)" );
 		$this->create_table( 'shipment_orders', "id mediumint(9) NOT NULL AUTO_INCREMENT,
-
 					shipment_id mediumint(9) DEFAULT 0,
-
 					amount float(25) DEFAULT 0,
-
 					order_date varchar(25) DEFAULT '',
-
 					user_id mediumint(9),
-
 					meta_data longtext DEFAULT '',
-
 					description varchar(255) DEFAULT '',
-
 					status tinyint(1) DEFAULT 1,
-
 					PRIMARY KEY  (id)" );
 		$this->create_table( 'labels_trackings', "id mediumint(9) NOT NULL AUTO_INCREMENT,
-
 					shipment_id mediumint(9) DEFAULT 0,
-
 					faxid varchar(255) DEFAULT '',
-
 					status tinyint(1) DEFAULT 0,
-
 					PRIMARY KEY  (id)" );
-
-		/*
-		 * TASK FOR ASAD
-		 *
-		 * Yahan 2 tables create kardo, jese upar method use kia hai wese use karke.
-		 * Tables:
-		 * 1. shipments
-		 * 2. addresses
-		 * 3. labels
-		 *
-		 * dono ki fields purane plugin se lelo
-		 *
-		 */
 
 		add_option( 'wpsp_db_version', WPSP_DB_VERSION );
 	}

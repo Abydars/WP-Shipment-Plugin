@@ -1,15 +1,11 @@
 <?php
 
-abstract class WPSP_Shipment
+class WPSP_Shipment
 {
-    function list_shipment()
-    {
+	static function get_shipment( $id )
+	{
+		global $wpdb;
 
-    }
-
-    abstract function get_shipment($id);
-
-    abstract function create_shipment($data);
-
-    abstract function delete_shipment($id);
+		return $wpdb->get_row( "SELECT * FROM {$wpdb->prefix}shipments WHERE id = {$id};" );
+	}
 }
