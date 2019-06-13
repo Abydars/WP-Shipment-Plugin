@@ -86,7 +86,8 @@ class WPSP_ShipmentActions
 			] );
 
 			if ( ! $error ) {
-				$address             = WPSP_Address::store_address( $post_data );
+//			    var_dump('here');die();
+				$address = WPSP_Address::store_address( $post_data );
 				$response['status']  = true;
 				$response['message'] = __( 'Address created successfully', WPSP_LANG );
 				$response['data']    = $address;

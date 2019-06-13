@@ -234,8 +234,8 @@ class WPSP_USPS
                 '_attributes' => [
                     'ID' => 0,
                 ],
-                'Address1' => $data->street_2,
-                'Address2' => $data->street_1,
+                'Address1' => $data->street_1,
+                'Address2' => $data->street_2,
                 'City' => $data->city,
                 'State' => $data->state,
                 'Zip5' => $from_zip5,
@@ -257,8 +257,8 @@ class WPSP_USPS
 //        die();
         $res = $this->request($url);
         $res = ShipmentXmlToArray::convert($res);
-        if (!isset($res['AddressValidateResponse']['Address']['Error'])) {
 
+        if (!isset($res['AddressValidateResponse']['Address']['Error'])) {
             $error = false;
         } else {
             $error = $res['AddressValidateResponse']['Address']['Error']['Description'];

@@ -76,20 +76,22 @@ class WPSP_Address
 	{
 		global $wpdb;
 
-		$addresses = self::get_addresses_by_customer( $data["customer"] );
+//		var_dump($data);die();
+
+		$addresses = self::get_addresses_by_customer( $data->customer );
 		$is_first  = empty( $addresses );
 		$address   = $data;
-
+//        var_dump($data);die();
 		$row = array(
-			"address_name" => $address["full_name"] . " " . $address["street_1"] . " " . $address["street_2"] . ", " . $address["city"] . ", " . $address["state"] . ", " . $address["country"] . " " . $address["zip_code"],
-			"customer_id"  => $address["customer"],
+			"address_name" => $address->full_name . " " . $address->street_1 . " " . $address->street_2 . ", " . $address->city . ", " . $address->state . ", " . $address->country . " " . $address->zip_code,
+			"customer_id"  => $address->customer,
 			"data"         => json_encode( $address ),
 			"is_default"   => $is_first,
 			"type"         => null,
 			"is_verified"  => 0
 		);
-		$wpdb->insert( self::get_table_name(), $row );
-
+		$res = $wpdb->insert( self::get_table_name(), $row );
+//		var_dump($res);
 		return $address;
 	}
 
