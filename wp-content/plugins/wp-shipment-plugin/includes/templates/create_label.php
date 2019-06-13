@@ -50,7 +50,11 @@ Form par validation lagani hai jese old plugin men hai
             <div class="wpsp-form-group">
                 <label>Shipping Method</label>
                 <select name="shipping_method">
-                    <option value=""></option>
+                </select>
+            </div>
+            <div class="wpsp-form-group">
+                <label>Package Type</label>
+                <select name="package_type">
                 </select>
             </div>
             <div class="wpsp-form-group">

@@ -4,7 +4,7 @@ class WPSP
 {
 	public function __construct()
 	{
-	    //Activation Hook
+		//Activation Hook
 
 
 		//Functions
@@ -21,13 +21,16 @@ class WPSP
 
 		add_action( 'wp_ajax_save_label', array( $wpsp_actions, 'action_save_label' ) );
 		add_action( 'wp_ajax_add_address', array( $wpsp_actions, 'action_add_address' ) );
+		add_action( 'wp_ajax_wpsp_shipment_carrier_levels', array( $wpsp_actions, 'action_carrier_levels' ) );
+		add_action( 'wp_ajax_wpsp_shipment_package_types', array( $wpsp_actions, 'action_package_types' ) );
+		add_action( 'wp_ajax_wpsp_get_rates', array( $wpsp_actions, 'action_get_rates' ) );
 
 		//User Extras
 		$wpsp_user_meta = new WPSP_UserMeta();
 
 		add_action( 'show_user_profile', array( $wpsp_user_meta, 'extra_user_profile_fields' ) );
 		add_action( 'edit_user_profile', array( $wpsp_user_meta, 'extra_user_profile_fields' ) );
-        add_action( 'edit_user_profile_update', array($wpsp_user_meta, 'save_extra_user_profile_fields'));
+		add_action( 'edit_user_profile_update', array( $wpsp_user_meta, 'save_extra_user_profile_fields' ) );
 	}
 
 	public function register_plugin_styles()
@@ -104,7 +107,7 @@ class WPSP
 
 	function wpsp_activation()
 	{
-        $this->create_table( 'addresses', "id mediumint(9) NOT NULL AUTO_INCREMENT,
+		$this->create_table( 'addresses', "id mediumint(9) NOT NULL AUTO_INCREMENT,
 
 					customer_id int (9) NOT NULL,
 
@@ -121,7 +124,7 @@ class WPSP
 					is_verified tinyint DEFAULT 1,
 
 					PRIMARY KEY  (id)" );
-        $this->create_table( 'shipments', "id mediumint(9) NOT NULL AUTO_INCREMENT,
+		$this->create_table( 'shipments', "id mediumint(9) NOT NULL AUTO_INCREMENT,
 
 					customer_id int (9) NOT NULL,
 
@@ -166,7 +169,7 @@ class WPSP
 					labelRate float(25) DEFAULT 0,
 
 					PRIMARY KEY  (id)" );
-        $this->create_table( 'packages', "id mediumint(9) NOT NULL AUTO_INCREMENT,
+		$this->create_table( 'packages', "id mediumint(9) NOT NULL AUTO_INCREMENT,
 
 					shipment_id mediumint(9) NOT NULL,
 
@@ -191,7 +194,7 @@ class WPSP
 					fromAddress_id int (9) NOT NULL,
 
 					PRIMARY KEY  (id)" );
-        $this->create_table( 'labels', "id mediumint(9) NOT NULL AUTO_INCREMENT,
+		$this->create_table( 'labels', "id mediumint(9) NOT NULL AUTO_INCREMENT,
 
 					shipment_id mediumint(9) NOT NULL,
 
@@ -200,7 +203,7 @@ class WPSP
 					label_type varchar(25) DEFAULT 'PDF',
 
 					PRIMARY KEY  (id)" );
-        $this->create_table( 'shipment_orders', "id mediumint(9) NOT NULL AUTO_INCREMENT,
+		$this->create_table( 'shipment_orders', "id mediumint(9) NOT NULL AUTO_INCREMENT,
 
 					shipment_id mediumint(9) DEFAULT 0,
 
@@ -217,7 +220,7 @@ class WPSP
 					status tinyint(1) DEFAULT 1,
 
 					PRIMARY KEY  (id)" );
-        $this->create_table( 'labels_trackings', "id mediumint(9) NOT NULL AUTO_INCREMENT,
+		$this->create_table( 'labels_trackings', "id mediumint(9) NOT NULL AUTO_INCREMENT,
 
 					shipment_id mediumint(9) DEFAULT 0,
 
