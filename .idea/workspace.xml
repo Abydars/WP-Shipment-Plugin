@@ -2,131 +2,144 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbc83294-ed53-4d0f-9bce-dba9b79fecef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/s4l.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/plugins/wp-easyship-shipment/wp-easyship-shipment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/templates/user-fields.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/plugins/wp-usps-shipment/wp-usps-shipment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/wp-usps-shipment/includes/class-shipment-array-xml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/wp-usps-shipment/includes/class-shipment-xml-array.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/wp-shippment-plugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wp-shippment-plugin.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/address.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/assets/css/custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/assets/css/jquery.dataTables.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/assets/js/custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/assets/js/jquery.dataTables.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/customer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/easy-ship.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/shipment-action.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/shipment.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/templates/create_label.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/templates/list_shipment.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/templates/shipment-details.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/user-meta.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/usps.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/wp-shipment-plugin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp_shipment_plugin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/address.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/address.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/assets/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/assets/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/shipment-action.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/shipment-action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/templates/create_label.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/templates/create_label.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/wp-shipment-plugin.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/wp-shipment-plugin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/wp_shipment_plugin.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/wp_shipment_plugin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-usps-shipment/wp-usps-shipment.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-usps-shipment/wp-usps-shipment.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="shipment-action.php" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/shipment-action.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="25" column="84" selection-start-line="25" selection-start-column="84" selection-end-line="25" selection-end-column="84" />
+            <state relative-caret-position="306">
+              <caret line="30" column="62" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customer.php" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-usps-shipment/includes/class-shipment-xml-array.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/customer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="61" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user-meta.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/user-meta.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user-fields.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/templates/user-fields.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wp-usps-shipment.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-usps-shipment/wp-usps-shipment.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wp_shipment_plugin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/wp_shipment_plugin.php">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_label.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/templates/create_label.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="120" column="30" lean-forward="true" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#!!top" />
+                <element signature="n#get_alt_email_address#0;n#WPSP_Customer#0;n#!!top" />
+                <element signature="n#get_account_funds#0;n#WPSP_Customer#0;n#!!top" />
+                <element signature="n#deduct_funds#0;n#WPSP_Customer#0;n#!!top" />
+                <element signature="n#get_ups_markup_rate#0;n#WPSP_Customer#0;n#!!top" />
+                <element signature="n#get_usps_markup_rate#0;n#WPSP_Customer#0;n#!!top" />
+                <element signature="n#get_fedex_markup_rate#0;n#WPSP_Customer#0;n#!!top" />
+                <element signature="n#get_fax_number#0;n#WPSP_Customer#0;n#!!top" />
+                <element signature="n#get_customer#0;n#WPSP_Customer#0;n#!!top" />
+                <element signature="n#get_customers#0;n#WPSP_Customer#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/assets/js/custom.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/templates/create_label.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="102">
+              <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wp-shipment-plugin.php" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/assets/js/custom.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="74" column="41" lean-forward="true" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-usps-shipment/wp-usps-shipment.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="362">
+              <caret line="148" column="41" lean-forward="true" selection-start-line="148" selection-start-column="41" selection-end-line="148" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-usps-shipment/includes/class-shipment-array-xml.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/wp-shipment-plugin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="99" column="28" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="28" />
+            <state relative-caret-position="49">
+              <caret line="109" column="55" selection-start-line="109" selection-start-column="55" selection-end-line="109" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/wp_shipment_plugin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="23" column="64" lean-forward="true" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/address.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="52" column="27" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="27" />
+              <folding>
+                <element signature="n#get_table_name#0;n#WPSP_Address#0;n#!!top" />
+                <element signature="n#get_addresses_by_customer#0;n#WPSP_Address#0;n#!!top" />
+                <element signature="n#get_addresses#0;n#WPSP_Address#0;n#!!top" />
+                <element signature="n#getAddressId#0;n#WPSP_Address#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -150,10 +163,12 @@
       <find>#wpsp-shipment-form-container .right-sidebar</find>
       <find>WSPS_PLUGIN_URL</find>
       <find>add_new_package</find>
+      <find>register_activation_hook</find>
+      <find>572SHIP46470</find>
+      <find>WPSP_USPS_USER_ID</find>
     </findStrings>
     <replaceStrings>
       <replace>$value</replace>
-      <replace>$to_address</replace>
       <replace>$data</replace>
       <replace>#wpsp-shipment-form-container .right-sidebar</replace>
       <replace>wpsp-form-group</replace>
@@ -161,6 +176,7 @@
       <replace>wpsp-row</replace>
       <replace>WPSP_PLUGIN_URL</replace>
       <replace>#wpsp-shipment-form-container.right-sidebar</replace>
+      <replace>$to_address</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -195,30 +211,20 @@
         <option value="$PROJECT_DIR$/wp-content/plugins/wp-ups-shipment/wp-ups-shipment.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/assets/css/custom.css" />
         <option value="$PROJECT_DIR$/wp-content/plugins/wp-easyship-shipment/wp-easyship-shipment.php" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/shipment-action.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/templates/user-fields.php" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/address.php" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/wp_shipment_plugin.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/user-meta.php" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/assets/js/custom.js" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/wp-shipment-plugin.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/customer.php" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/templates/create_label.php" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/wp-usps-shipment/wp-usps-shipment.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/wp_shipment_plugin.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/shipment-action.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/assets/js/custom.js" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/templates/create_label.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/address.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/wp-shipment-plugin.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/wp-usps-shipment/includes/class-shipment-array-xml.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/wp-usps-shipment/wp-usps-shipment.php" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/wp-content/themes/twentynineteen/package.json" />
-    </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
@@ -231,34 +237,48 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="s4l" type="b2602c69:ProjectViewProjectNode" />
-              <item name="s4l" type="462c0819:PsiDirectoryNode" />
+              <item name="shippment_plugin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shippment_plugin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="s4l" type="b2602c69:ProjectViewProjectNode" />
-              <item name="s4l" type="462c0819:PsiDirectoryNode" />
+              <item name="shippment_plugin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shippment_plugin" type="462c0819:PsiDirectoryNode" />
               <item name="wp-content" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shippment_plugin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shippment_plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shippment_plugin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shippment_plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-usps-shipment" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/wp-content/plugins/wp-usps-shipment/includes" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\shippment_plugin\wp-content\plugins\wp-usps-shipment\includes" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/wp-content/plugins" />
     </key>
@@ -290,47 +310,41 @@
       <updated>1560331628311</updated>
       <workItem from="1560331629781" duration="22036000" />
       <workItem from="1560364061306" duration="8455000" />
+      <workItem from="1560413008971" duration="2135000" />
+      <workItem from="1560419246357" duration="9277000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30491000" />
+    <option name="totallyTimeSpent" value="41903000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3275218" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18680556" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19352227" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3268206" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32955465" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/includes/wp_shipment_actions.php" />
@@ -365,26 +379,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/usps.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/easy-ship.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="77" column="28" lean-forward="true" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
-          <folding>
-            <element signature="n#create_shipment#0;n#WPSP_EasyShip#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-config.php" />
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/usps.php" />
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/easy-ship.php" />
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/assets/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -392,93 +389,142 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-easyship-shipment/wp-easyship-shipment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/address.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/wp_shipment_plugin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/assets/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/templates/user-fields.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
+        <state relative-caret-position="68">
           <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/user-meta.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/s4l.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/wp-shipment-plugin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="99" column="28" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/shipment-action.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="25" column="84" selection-start-line="25" selection-start-column="84" selection-end-line="25" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/customer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="61" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/templates/create_label.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="120" column="30" lean-forward="true" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-usps-shipment/wp-usps-shipment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        <state relative-caret-position="51">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/shipment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/user-meta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-support-plus-direct/wp-support-plus-direct.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-easyship-shipment/wp-easyship-shipment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/shipment-form/shipment-form/inc/multiship/Carrier.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/shipment-form/shipment-form/templates/form.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/shipment-form/shipment-form/shipment-form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-703" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s4l.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2669">
+          <caret line="130" column="37" selection-end-line="9621" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/assets/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="74" column="41" lean-forward="true" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/templates/create_label.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/customer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+          <folding>
+            <element signature="n#get_alt_email_address#0;n#WPSP_Customer#0;n#!!top" />
+            <element signature="n#get_account_funds#0;n#WPSP_Customer#0;n#!!top" />
+            <element signature="n#deduct_funds#0;n#WPSP_Customer#0;n#!!top" />
+            <element signature="n#get_ups_markup_rate#0;n#WPSP_Customer#0;n#!!top" />
+            <element signature="n#get_usps_markup_rate#0;n#WPSP_Customer#0;n#!!top" />
+            <element signature="n#get_fedex_markup_rate#0;n#WPSP_Customer#0;n#!!top" />
+            <element signature="n#get_fax_number#0;n#WPSP_Customer#0;n#!!top" />
+            <element signature="n#get_customer#0;n#WPSP_Customer#0;n#!!top" />
+            <element signature="n#get_customers#0;n#WPSP_Customer#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/wp-shipment-plugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="109" column="55" selection-start-line="109" selection-start-column="55" selection-end-line="109" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/wp_shipment_plugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="64" lean-forward="true" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/address.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="52" column="27" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="27" />
+          <folding>
+            <element signature="n#get_table_name#0;n#WPSP_Address#0;n#!!top" />
+            <element signature="n#get_addresses_by_customer#0;n#WPSP_Address#0;n#!!top" />
+            <element signature="n#get_addresses#0;n#WPSP_Address#0;n#!!top" />
+            <element signature="n#getAddressId#0;n#WPSP_Address#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-shipment-plugin/includes/shipment-action.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="30" column="62" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-usps-shipment/includes/class-shipment-xml-array.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-usps-shipment/includes/class-shipment-array-xml.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-usps-shipment/wp-usps-shipment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="148" column="41" lean-forward="true" selection-start-line="148" selection-start-column="41" selection-end-line="148" selection-end-column="41" />
         </state>
       </provider>
     </entry>

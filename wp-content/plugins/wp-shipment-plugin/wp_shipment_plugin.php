@@ -21,3 +21,4 @@ include( 'includes/address.php' );
 include( 'includes/user-meta.php' );
 
 $wp_shipment = new WPSP();
+register_activation_hook( __FILE__, array( $wp_shipment, 'wpsp_activation' ) );

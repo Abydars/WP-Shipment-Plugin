@@ -2,11 +2,11 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /s4l/
+RewriteBase /shippment_plugin/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /s4l/index.php [L]
+RewriteRule . /shippment_plugin/index.php [L]
 </IfModule>
 
 # END WordPress

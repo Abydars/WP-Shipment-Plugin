@@ -61,6 +61,10 @@ jQuery(function ($) {
             e.preventDefault();
 
             var form_data = $(this).serializeArray()
+            form_data.push({
+                'name': 'customer',
+                'value': $('select[name="customer"]').val()
+            });
 
             $.ajax({
                 type: 'POST',
