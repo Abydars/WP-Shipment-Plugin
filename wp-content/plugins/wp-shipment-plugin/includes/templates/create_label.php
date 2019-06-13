@@ -4,52 +4,51 @@
         <div class="basic-details">
             <div class="wpsp-form-group">
                 <label>Ticket ID</label>
-                <input type="text" name="id">
+                <input type="text" name="ticket_id">
             </div>
             <div class="wpsp-form-group customers-list">
                 <label>Customer</label>
-                <select name="customer">
+                <select name="customer" required>
                     <option value="">Select Customer</option>
 					<?php foreach ( $customers as $customer ) : ?>
                         <option value="<?= $customer->ID ?>"><?= $customer->display_name ?></option>
 					<?php endforeach; ?>
                 </select>
             </div>
-            <div class="wpsp-form-group">
-                <label>From <a id="btn-new-from-address" href="#" class="from-address" data-type="from">(New
-                        Address)</a></label>
-                <select name="from">
-                    <option value="5">5</option>
-                </select>
-            </div>
-            <div class="wpsp-form-group">
-                <label>To <a id="btn-new-to-address" href="#" class="to-address" data-type="to">(New
-                        Address)</a></label>
-                <select name="to">
-                    <option value="4">4</option>
-                </select>
-            </div>
             <div class="wpsp-form-group shipping-carrier">
                 <label>Shipping Carrier</label>
-                <select name="carrier">
-					<?php foreach ( $carriers as $k => $carrier ) { ?>
+                <select name="carrier" required>
+                    <option value="">Select Shipping Carrier</option>
+                    <?php foreach ( $carriers as $k => $carrier ) { ?>
                         <option value="<?= $k ?>"><?= $carrier ?></option>
-					<?php } ?>
+                    <?php } ?>
+                </select>
+            </div>
+            <div class="wpsp-form-group from-address">
+                <label>From <a id="btn-new-from-address" href="#" class="from-address" data-type="from">(New
+                        Address)</a></label>
+                <select name="from" required>
+                </select>
+            </div>
+            <div class="wpsp-form-group to-address">
+                <label>To <a id="btn-new-to-address" href="#" class="to-address" data-type="to">(New
+                        Address)</a></label>
+                <select name="to" required>
                 </select>
             </div>
             <div class="wpsp-form-group">
                 <label>Shipping Method</label>
-                <select name="shipping_method">
+                <select name="shipping_method" required>
                 </select>
             </div>
             <div class="wpsp-form-group">
                 <label>Package Type</label>
-                <select name="package_type">
+                <select name="package_type" required>
                 </select>
             </div>
             <div class="wpsp-form-group">
                 <label>Shipping Date</label>
-                <input type="date" name="shipping_date" id="">
+                <input type="date" name="shipping_date" id="" required>
             </div>
         </div>
         <div class="packages">
@@ -60,13 +59,13 @@
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Weight</label>
-                            <input type="text" name="packages[0][weight]">
+                            <input type="text" name="packages[0][weight]" required>
                         </div>
                     </div>
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Weight Unit</label>
-                            <select name="packages[0][unit]">
+                            <select name="packages[0][unit]" required>
                                 <option value=""></option>
                             </select>
                         </div>
@@ -76,13 +75,13 @@
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Length</label>
-                            <input type="text" name="packages[0][length]">
+                            <input type="text" name="packages[0][length]" required>
                         </div>
                     </div>
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Width</label>
-                            <input type="text" name="packages[0][width]">
+                            <input type="text" name="packages[0][width]" required>
                         </div>
                     </div>
                 </div>
@@ -90,17 +89,17 @@
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Height</label>
-                            <input type="text" name="packages[0][height]">
+                            <input type="text" name="packages[0][height]" required>
                         </div>
                     </div>
-                    <div class="wpsp-one-half">
+                    <div class="wpsp-one-half" style="display: none">
                         <div class="wpsp-form-group">
                             <label>SKU</label>
-                            <input type="text" name="packages[0][sku]">
+                            <input type="text" name="packages[0][sku]" required>
                         </div>
                     </div>
                 </div>
-                <div class="wpsp-row">
+                <div class="wpsp-row" style="display: none">
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Declared Currency</label>
@@ -118,34 +117,18 @@
                 </div>
             </div>
         </div>
+        <div class="wpsp-clearfix"></div>
         <div class="wpsp-row">
             <div class="pickup">
-                <div class="wpsp-row">
-                    <input type="checkbox" name="schedule" value="yes"> Schedule Pickup
+                <div class="wpsp-row schedule-pickup">
+                    <label>
+                        <input type="checkbox" name="schedule" value="yes"> Schedule Pickup
+                    </label>
                 </div>
                 <div class="pickup-schedule" style="display: none">
                     <div class="wpsp-form-group">
                         <label>Pickup Date</label>
-                        <input type="date" name="pickup_date">
-                    </div>
-                    <div class="wpsp-row">
-                        <div class="one-third">
-                            <div class="wpsp-form-group">
-                                <label>Pickup Time</label>
-                                <select name="pickup_time">
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="one-fourth">
-                            <div class="wpsp-form-group">
-                                <label></label>
-                                <select name="">
-                                    <option value="am">AM</option>
-                                    <option value="pm">PM</option>
-                                </select>
-                            </div>
-                        </div>
+                        <input type="datetime-local" name="pickup_date">
                     </div>
                 </div>
             </div>
