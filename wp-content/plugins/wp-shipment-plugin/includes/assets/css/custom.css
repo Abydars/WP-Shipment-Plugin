@@ -157,3 +157,26 @@
     padding: 6px 12px;
     font-size: 14px;
 }
+
+/*Rate Shop*/
+
+#rateShop table{
+    width: 100%;
+}
+
+#rateShop th{
+    color: #000;
+    text-align: center;
+}
+
+#rateShop td {
+    text-align: center;
+    color: #000;
+    vertical-align: middle;
+    padding: .75rem;
+}
+
+#rateShop th, #rateShop td {
+    font-size: 15px;
+    border: 1px solid #ebebeb;
+}
