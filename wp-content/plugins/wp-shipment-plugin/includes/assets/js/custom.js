@@ -110,6 +110,11 @@ jQuery(function ($) {
                 'value': $('select[name="customer"]').val()
             });
 
+            form_data.push({
+                'name': 'carrier',
+                'value': $('select[name="carrier"]').val()
+            });
+
             $.ajax({
                 type: 'POST',
                 dataType: 'JSON',

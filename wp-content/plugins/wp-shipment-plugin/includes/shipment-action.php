@@ -78,8 +78,8 @@ class WPSP_ShipmentActions
 		if ( isset( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'wpsp_add_address' ) ) {
 
 			$error     = false;
-			$post_data = $_POST;
-
+			$post_data = (object)$_POST;
+//echo "wpsp_verify_address_{$post_data->carrier}";die();
 			do_action_ref_array( "wpsp_verify_address_{$post_data->carrier}", [
 				$post_data,
 				&$error
