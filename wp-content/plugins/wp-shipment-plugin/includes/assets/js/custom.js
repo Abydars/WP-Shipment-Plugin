@@ -40,8 +40,8 @@ jQuery(function ($) {
 
     $(document).on('click', '#btn-new-from-address', function (e) {
         e.preventDefault();
-        if ($('.customers-list select').val() == "") {
-            alert('Please select a customer before adding a new address');
+        if ($('.customers-list select').val() == "" || $('.shipping-carrier select').val() == "") {
+            alert('Please select a customer and shipping carrier before adding a new address');
             $('#addAddressModal').hide()
         } else {
             $('#addAddressModal form').trigger("reset");
@@ -51,8 +51,8 @@ jQuery(function ($) {
 
     $(document).on('click', '#btn-new-to-address', function (e) {
         e.preventDefault();
-        if ($('.customers-list select').val() == "") {
-            alert('Please select a customer before adding a new address');
+        if ($('.customers-list select').val() == "" || $('.shipping-carrier select').val() == "") {
+            alert('Please select a customer and shipping carrier before adding a new address');
             $('#addAddressModal').hide()
         } else {
             $('#addAddressModal form').trigger("reset");
@@ -70,6 +70,14 @@ jQuery(function ($) {
         $(this).parents('.modal').hide();
     })
 
+    $(document).on('change', '.schedule-pickup input[type="checkbox"]', function(){
+        if($(this).prop("checked") == true){
+            $('.pickup-schedule').show()
+        }
+        else if($(this).prop("checked") == false){
+            $('.pickup-schedule').hide()
+        }
+    });
 
     $('#listShipments').DataTable();
 
@@ -78,7 +86,25 @@ jQuery(function ($) {
     });
 
     function refreshAddresses() {
-
+        var customer_id = $('.customers-list select').val();
+        var action = 'wpsp_get_addresses';
+        $.ajax({
+            type: 'POST',
+            dataType: 'JSON',
+            data: {
+                customer_id: customer_id,
+                action: action
+            },
+            url: wsp_ajax_url,
+            success: function (response) {
+                $('.from-address select').empty();
+                $('.to-address select').empty();
+                for (var i = 0; i < response.length; i++) {
+                    $('.from-address select').append('<option value="">' + response[i].address_name + '</option>')
+                    $('.to-address select').append('<option value="">' + response[i].address_name + '</option>')
+                }
+            }
+        })
     }
 
     function formInit() {
@@ -152,6 +178,10 @@ jQuery(function ($) {
                     $('#rateShop').show();
                 }
             })
+        })
+
+        $(document).on('change', '.customers-list select', function () {
+            refreshAddresses()
         })
     }
 
