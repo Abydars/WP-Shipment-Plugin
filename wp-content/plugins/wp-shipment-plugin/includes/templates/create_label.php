@@ -65,7 +65,7 @@
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Weight Unit</label>
-                            <select name="packages[0][unit]" required>
+                            <select name="packages[0][unit]">
                                 <option value=""></option>
                             </select>
                         </div>
@@ -95,7 +95,7 @@
                     <div class="wpsp-one-half" style="display: none">
                         <div class="wpsp-form-group">
                             <label>SKU</label>
-                            <input type="text" name="packages[0][sku]" required>
+                            <input type="text" name="packages[0][sku]">
                         </div>
                     </div>
                 </div>

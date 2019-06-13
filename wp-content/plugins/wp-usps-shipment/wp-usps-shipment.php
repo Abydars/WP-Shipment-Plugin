@@ -27,7 +27,20 @@ class WPSP_USPS
         // Actions
         add_action('wpsp_verify_address_usps', [$this, 'wpsp_verify_address_usps'], 10, 3);
         add_action('wpsp_create_shipment_usps', [$this, 'wpsp_usps_create_shipment'], 10, 3);
-        add_action('wpsp_label_rates_usps', [$this, 'wpsp_label_rates_usps'], 10, 3);
+        add_action('wpsp_label_rates_usps', [$this, 'wpsp_label_rates_usps2'], 10, 3);
+    }
+
+    public static function get_table_name()
+    {
+        global $wpdb;
+
+        return $wpdb->prefix . 'shipments';
+    }
+
+    function wpsp_label_rates_usps2($data, &$error, &$rates)
+    {
+        $rates = 5;
+        $error = false;
     }
 
     function wpsp_label_rates_usps($data, &$error, &$rates)
@@ -88,8 +101,8 @@ class WPSP_USPS
         $res = $this->request($url);
         $res = ShipmentXmlToArray::convert($res);
 
-        var_dump($res);
-        die;
+//        var_dump($res);
+//        die;
 
         if (!isset($res['Error'])) {
             $res = $res['eVSResponse'];
@@ -101,13 +114,18 @@ class WPSP_USPS
 
     function wpsp_usps_create_shipment($data, &$error, &$shipment_id)
     {
+        global $wpdb;
         try {
+//            var_dump($data);
+//            die;
             $from_address = WPSP_Address::getAddress($data->from);
+//            var_dump($from_address);die();
             $to_address = WPSP_Address::getAddress($data->to);
             $from_zip = $from_address['zip_code'];
             $from_zip4 = $from_zip5 = "";
             $response = [];
-
+//            var_dump($to_address);
+//            die();
             list($from_zip4, $from_zip5) = $this->zip4_5($from_zip);
 
             $packages = $data->packages;
@@ -118,8 +136,8 @@ class WPSP_USPS
                     'ImageParameters' => ['ImageParameter' => 'CROP'],
                     'FromName' => $from_address['full_name'],
                     'FromFirm' => $from_address['company'],
-                    'FromAddress1' => $from_address['street_1'],
-                    'FromAddress2' => $from_address['street_2'],
+                    'FromAddress1' => $from_address['street_2'],
+                    'FromAddress2' => $from_address['street_1'],
                     'FromCity' => $from_address['city'],
                     'FromState' => $from_address['state'],
                     'FromZip5' => $from_zip5,
@@ -128,8 +146,8 @@ class WPSP_USPS
                     'AllowNonCleansedOriginAddr' => "false",
                     'ToName' => $to_address['full_name'],
                     'ToFirm' => $to_address['company'],
-                    'ToAddress1' => $to_address['street_1'],
-                    'ToAddress2' => $to_address['street_2'],
+                    'ToAddress1' => $to_address['street_2'],
+                    'ToAddress2' => $to_address['street_1'],
                     'ToCity' => $to_address['city'],
                     'ToState' => $to_address['state'],
                     'ToZip5' => $from_zip5,
@@ -170,6 +188,8 @@ class WPSP_USPS
                 ], "ShippingAPI.dll");
 
                 $res = $this->request($url);
+//                var_dump($res);
+//                die();
                 $res = ShipmentXmlToArray::convert($res);
 
                 if (!isset($res['Error'])) {
@@ -189,6 +209,52 @@ class WPSP_USPS
                             'customerCharge' => $res['Postage']
                         ]
                     ];
+
+                    $row = array(
+
+                        "shipKey" => $response["key"],
+
+                        "ticket_id" => $data->ticket_id,
+
+                        "customer_id" => $data->customer,
+
+                        "creator_id" => get_current_user_id(),
+
+                        "creation_date" => date("Y/m/d"),
+
+                        "status" => $response["status"],
+
+                        "server" => $response["server"],
+
+                        "serverLevel" => $response["serverLevel"],
+
+                        "packageType" => $response["packageType"],
+
+                        "dropOffType" => $response["dropOffType"],
+
+                        "confirmation" => $response["confirmation"],
+
+                        "reference" => !empty($response["reference"]) ? $response["reference"] : "",
+
+                        "shipmentNo" => !empty($response["shipmentNo"]) ? $response["shipmentNo"] : "",
+
+                        "shipDate" => $data->shipping_date,
+
+                        "toAddress_id" => intval($data->to),
+
+                        "fromAddress_id" => intval($data->from),
+
+                        "pickup_date" => !empty($data->pickup_date) ? $data->pickup_date : null,
+
+                        'markupRate' => WPSP_Customer::get_usps_markup_rate($data->customer),
+
+                        'labelRate' => 0
+
+                    );
+                    $inserted = $wpdb->insert(self::get_table_name(), $row);
+
+                    $shipment_id = $wpdb->insert_id;
+
                 } else {
                     $response = [
                         'message' => $res['Error']['Description']
@@ -363,6 +429,11 @@ class WPSP_USPS
             $from_zip4 = $from_zip[1];
         }
         return [$from_zip4, $from_zip5];
+    }
+
+    function wpsp_get_shippment($shippment_id)
+    {
+
     }
 }
 

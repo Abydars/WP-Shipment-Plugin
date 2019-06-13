@@ -45,7 +45,8 @@ class WPSP_Address
 
 		$table   = self::get_table_name();
 		$address = $wpdb->get_row( "SELECT * FROM $table WHERE id = $id" );
-
+//        var_dump($address->data);
+//        die;
 		if ( empty( $address ) || ! json_decode( $address->data, true ) ) {
 			return false;
 		}

@@ -100,8 +100,8 @@ jQuery(function ($) {
                 $('.from-address select').empty();
                 $('.to-address select').empty();
                 for (var i = 0; i < response.length; i++) {
-                    $('.from-address select').append('<option value="">' + response[i].address_name + '</option>')
-                    $('.to-address select').append('<option value="">' + response[i].address_name + '</option>')
+                    $('.from-address select').append('<option value="' + response[i].id + '">' + response[i].address_name + '</option>')
+                    $('.to-address select').append('<option value="' + response[i].id + '">' + response[i].address_name + '</option>')
                 }
             }
         })

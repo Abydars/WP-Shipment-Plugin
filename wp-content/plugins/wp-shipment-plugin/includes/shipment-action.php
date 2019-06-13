@@ -37,7 +37,43 @@ class WPSP_ShipmentActions
 					if ( ! $error && $shipment_id ) {
 
 						// db entry
+                        $row = array(
 
+                            "shipKey" => $shipment["key"],
+
+                            "ticket_id" => $data["ticket_id"],
+
+                            "customer_id" => $data["customer_id"],
+
+                            "creator_id" => $data["creator_id"],
+
+                            "creation_date" => $data["creation_date"],
+
+                            "status" => $shipment["status"],
+
+                            "server" => $shipment["server"],
+
+                            "serverLevel" => $shipment["serverLevel"],
+
+                            "packageType" => $shipment["packageType"],
+
+                            "dropOffType" => $shipment["dropOffType"],
+
+                            "confirmation" => $shipment["confirmation"],
+
+                            "reference" => ! empty( $shipment["reference"] ) ? $shipment["reference"] : "",
+
+                            "shipmentNo" => ! empty( $shipment["shipmentNo"] ) ? $shipment["shipmentNo"] : "",
+
+                            "shipDate" => $data['shipDate'],
+
+                            "toAddress_id" => intval( $data["toAddress_id"] ),
+
+                            "fromAddress_id" => intval( $data["fromAddress_id"] ),
+
+                            "pickup_date" => ! empty( $data["pickup_date"] ) ? $data["pickup_date"] : null
+
+                        );
 						// create label
 						do_action_ref_array( "wpsp_create_label_{$post_data->carrier}", [
 							$post_data,
@@ -70,6 +106,7 @@ class WPSP_ShipmentActions
 		echo json_encode( $response );
 		die;
 	}
+
 
 	function action_add_address()
 	{
