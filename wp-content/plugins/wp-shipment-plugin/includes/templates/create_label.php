@@ -16,9 +16,10 @@ Form par validation lagani hai jese old plugin men hai
                 <label>Ticket ID</label>
                 <input type="text" name="id">
             </div>
-            <div class="wpsp-form-group">
+            <div class="wpsp-form-group customers-list">
                 <label>Customer</label>
                 <select name="customer">
+                    <option value="">Select Customer</option>
 					<?php foreach ( $customers as $customer ) : ?>
                         <option value="<?= $customer->ID ?>"><?= $customer->display_name ?></option>
 					<?php endforeach; ?>

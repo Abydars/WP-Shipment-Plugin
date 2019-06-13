@@ -78,6 +78,15 @@
     float: right;
 }
 
+.package .delete{
+    margin: 10px;
+    color: #fff;
+    background: red;
+    padding: 5px;
+    width: 15%;
+    float: right;
+}
+
 /*Modal*/
 
 #wpsp-shipment-form-container.right-sidebar .modal {
