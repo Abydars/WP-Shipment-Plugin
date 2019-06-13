@@ -84,7 +84,36 @@ jQuery(function ($) {
                 }
             })
         });
+
+        $(document).on('click', '#rateShop button', function (e) {
+            e.preventDefault();
+            var carrier = $(this).val();
+            $('.shipping-carrier select').val(carrier).trigger('change');
+            $('#rateShop').hide();
+        })
+
+        $(document).on('click', '#rate-shop', function (e) {
+            e.preventDefault();
+            var form_data = $('#shipment_form').serializeArray()
+            for(var i =0; i <= form_data.length; i++){
+                if(form_data[i].name == 'action'){
+                    form_data[i].value = 'wpsp_get_rates';
+                    break;
+                }
+            }
+            $.ajax({
+                type: 'POST',
+                dataType: 'JSON',
+                data: form_data,
+                url: wsp_ajax_url,
+                success: function (response) {
+                    $('#rateShop').show();
+                }
+            })
+        })
     }
+
+    $('#rateShop').hide();
 
     $(document).on('click', '#btn-new-package', function (e) {
         e.preventDefault();
@@ -165,5 +194,14 @@ jQuery(function ($) {
     $(document).on('click', '.package .delete', function (e) {
         e.preventDefault;
         $(this).parents('.package').remove();
+    })
+
+    setTimeout(function () {
+        $('div#shipment-form').hide();
+    }, 200)
+
+    $('#wp-admin-bar-create-label').click(function (e) {
+        e.preventDefault();
+        $('div#shipment-form').toggle();
     })
 })

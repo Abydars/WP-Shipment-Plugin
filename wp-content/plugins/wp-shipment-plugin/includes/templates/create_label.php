@@ -1,13 +1,3 @@
-<!-- TASK FOR ARSALAN
-
-Package add par click se form men show nae karaya package?
-Package box delete karne ka option dena
-
-Form par validation lagani hai jese old plugin men hai
-1. Customer select karne ke baad ee New Address ka popup allow karey, warna alert box
-
-!-->
-
 <div id="wpsp-shipment-form-container" class="right-sidebar">
     <h1>Create Label</h1>
     <form method="POST" name="shipmentForm" id="shipment_form">
@@ -39,7 +29,7 @@ Form par validation lagani hai jese old plugin men hai
                     <option value="4">4</option>
                 </select>
             </div>
-            <div class="wpsp-form-group">
+            <div class="wpsp-form-group shipping-carrier">
                 <label>Shipping Carrier</label>
                 <select name="carrier">
 					<?php foreach ( $carriers as $k => $carrier ) { ?>
@@ -160,8 +150,43 @@ Form par validation lagani hai jese old plugin men hai
         <input type="hidden" name="action" value="save_label"/>
 		<?php wp_nonce_field( 'wpsp_save_label' ); ?>
 
+        <div id="rateShop" class="rateShop modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Rate Shop & Send</h2>
+                <br/>
+                <br/>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Shipping Carrier</th>
+                        <th>Rate</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>UPS</td>
+                        <td></td>
+                        <td><button value="ups">Select</button></td>
+                    </tr>
+                    <tr>
+                        <td>USPS</td>
+                        <td></td>
+                        <td><button value="usps">Select</button></td>
+                    </tr>
+                    <tr>
+                        <td>FEDEX</td>
+                        <td></td>
+                        <td><button value="fedex">Select</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
         <div class="wpsp-row">
-            <button>Rate Shop & Send</button>
+            <button id="rate-shop">Rate Shop & Send</button>
             <button id="btn-new-package">+ Add New Package</button>
             <button type="submit">Create Shipment</button>
         </div>
