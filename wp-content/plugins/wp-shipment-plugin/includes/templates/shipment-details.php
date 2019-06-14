@@ -11,6 +11,10 @@ $creator_id = get_userdata($details->creator_id);
 $from_address = $wpdb->get_row("SELECT * FROM $table_address WHERE (id = '". $details->fromAddress_id ."')");
 $to_address = $wpdb->get_row("SELECT * FROM $table_address WHERE (id = '". $details->toAddress_id ."')");
 
+$rate = $details->rates;
+$markupRates = $details->markupRates;
+$labelRates = $details->labelRate;
+$total = $details->markupRates + $details->labelRate;
 ?>
 <div id="shipmentDetails">
     <div class="container">
@@ -54,7 +58,12 @@ $to_address = $wpdb->get_row("SELECT * FROM $table_address WHERE (id = '". $deta
                 </tr>
                 <tr>
                     <th>Address</th>
-                    <td></td>
+                    <td>
+                        From: <?= $from_address->address_name ?>
+                        <br/>
+                        <br/>
+                        To: <?= $to_address->address_name ?>
+                    </td>
                 </tr>
                 <tr>
                     <th>Server</th>
@@ -80,7 +89,7 @@ $to_address = $wpdb->get_row("SELECT * FROM $table_address WHERE (id = '". $deta
             </table>
         </div>
         <div class="row">
-            <div class="one-half">
+            <div class="wpsp-one-half">
                 <h1>Tracking</h1>
                 <table>
                     <tbody>
@@ -97,25 +106,25 @@ $to_address = $wpdb->get_row("SELECT * FROM $table_address WHERE (id = '". $deta
                     </tbody>
                 </table>
             </div>
-            <div class="one-half">
+            <div class="wpsp-one-half">
                 <h1>Rate</h1>
                 <table>
                     <tbody>
                     <tr>
                         <th>Rate</th>
-                        <td></td>
+                        <td>$<?= (!empty($rate) ? $rate : 'Not Applied') ?></td>
                     </tr>
                     <tr>
                         <th>Markup Rate</th>
-                        <td></td>
+                        <td><?= (!empty($markupRates) ? '$'.$markupRates : 'Not Applied') ?></td>
                     </tr>
                     <tr>
                         <th>Label Rate</th>
-                        <td></td>
+                        <td>$<?= (!empty($labelRates) ? $labelRates : 'Not Applied') ?></td>
                     </tr>
                     <tr>
                         <th>Total Rates</th>
-                        <td></td>
+                        <td>$<?= $total ?></td>
                     </tr>
                     </tbody>
                 </table>

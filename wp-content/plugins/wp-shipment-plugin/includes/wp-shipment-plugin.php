@@ -55,8 +55,8 @@ class WPSP
 	{
 		add_menu_page( 'Shipments', 'Shipments', 'manage_options', 'shipments', array( $this, 'list_shipments' ) );
 //		add_submenu_page( 'shipments', 'Create Shipment', 'Create Shipment', 'manage_options', 'create-shipment', '' );
-		add_submenu_page( 'shipments', 'Addresses', 'Addresses', 'manage_options', 'create-shipment', array($this, 'list_addresses') );
-		add_submenu_page( 'shipments', 'Create Address', 'Create Address', 'manage_options', 'create-shipment', array($this, 'create_address') );
+		add_submenu_page( 'shipments', 'Addresses', 'Addresses', 'manage_options', 'list_addresses', array($this, 'list_addresses') );
+		add_submenu_page( 'shipments', 'Create Address', 'Create Address', 'manage_options', 'create_address', array($this, 'create_address') );
 	}
 
 	function list_shipments()
