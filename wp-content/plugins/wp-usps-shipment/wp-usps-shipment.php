@@ -35,10 +35,51 @@ class WPSP_USPS
 
 	function wpsp_void_label_usps( &$error, $shipment_id )
 	{
+	    global $wpdb;
+
+        $error = false;
+	    $shippment = $wpdb->get_row(
+            $wpdb->prepare("SELECT 'shipKey' FROM $wpdb->prefix . 'shipments' WHERE 'id'=%d", $shipment_id)
+        );
+//	    dd($shippment);
+        try {
+            $d = [
+                'BarcodeNumber' => $shippment->shipKey
+            ];
+
+            $xml = ShipmentArrayToXml::convert( $d, [
+                'rootElementName' => 'eVSCancelRequest',
+                '_attributes'     => [
+                    'USERID' => WPSP_USPS_USER_ID,
+                ],
+            ], true, 'UTF-8' );
+
+            $url = add_query_arg( [
+                'API' => 'eVSCancel',
+                'XML' => urlencode( $xml )
+            ], "ShippingAPI.dll" );
+
+            $res = $this->request( $url );
+            $res = ShipmentXmlToArray::convert( $res );
+            $res = $res['eVSCancelResponse'];
+            if ( ! isset( $res['Error'] ) ) {
+                return $error;
+            } else {
+                $error = $res['Error']['Description'];
+            }
+
+
+
+        } catch ( Exception $e ) {
+            //
+            $error = $e->getMessage();
+        }
+
+
 		/*
 		 * TASK FOR ASAD
 		 *
-		 * TODO: VOID LABEL API
+		 * TODO: VOID LABEL API(DONE)
 		 *
 		 * Yahan shipment db se fetch karke, void/cancel label ki API chalado
 		 * agar koi error ata hai tou error k variable men pass kardo simple and agar koi error nae ata tou
@@ -48,7 +89,7 @@ class WPSP_USPS
 		 * so blind code karna hai tumhe, tou dekh karna sab
 		 *
 		 */
-		$error = false;
+//
 	}
 
 	function wpsp_get_markup_rate_usps( $rate, $customer )
@@ -371,6 +412,7 @@ class WPSP_USPS
 	{
 
 	}
+
 }
 
 new WPSP_USPS();
