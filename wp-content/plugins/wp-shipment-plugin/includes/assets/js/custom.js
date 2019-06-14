@@ -49,6 +49,27 @@ jQuery(function ($) {
         }
     })
 
+    $(document).on('click', '#btn-edit-from-address', function (e) {
+        e.preventDefault();
+        $('#editAddressModal').show();
+        var currentTarget = e.currentTarget;
+        var id = $(currentTarget).data('id');
+        var data = $(currentTarget).parent().siblings();
+        $('#editAddressModal input[name="full_name"]').val($($(data)[1]).html());
+        $('#editAddressModal input[name="company"]').val($($(data)[2]).html());
+        $('#editAddressModal input[name="country"]').val($($(data)[3]).html());
+        $('#editAddressModal input[name="city"]').val($($(data)[4]).html());
+        $('#editAddressModal input[name="street_1"]').val($($(data)[5]).html());
+        $('#editAddressModal input[name="street_2"]').val($($(data)[6]).html());
+        $('#editAddressModal input[name="state"]').val($($(data)[7]).html());
+        $('#editAddressModal input[name="zip_code"]').val($($(data)[8]).html());
+        $('#editAddressModal input[name="phone"]').val($($(data)[9]).html());
+        $('#editAddressModal input[name="email"]').val($($(data)[10]).html());
+        $('#editAddressModal input[name="id"]').val(id);
+
+
+    })
+
     $(document).on('click', '#btn-new-to-address', function (e) {
         e.preventDefault();
         if ($('.customers-list select').val() == "" || $('.shipping-carrier select').val() == "") {
@@ -70,11 +91,10 @@ jQuery(function ($) {
         $(this).parents('.modal').hide();
     })
 
-    $(document).on('change', '.schedule-pickup input[type="checkbox"]', function(){
-        if($(this).prop("checked") == true){
+    $(document).on('change', '.schedule-pickup input[type="checkbox"]', function () {
+        if ($(this).prop("checked") == true) {
             $('.pickup-schedule').show()
-        }
-        else if($(this).prop("checked") == false){
+        } else if ($(this).prop("checked") == false) {
             $('.pickup-schedule').hide()
         }
     });
@@ -151,6 +171,28 @@ jQuery(function ($) {
 
                     if (response.status) {
                         refreshAddresses();
+                    } else {
+                        alert(response.message);
+                    }
+                }
+            })
+        });
+
+        $('#editAddressModal form').submit(function (e) {
+            e.preventDefault();
+
+            var form_data = $(this).serializeArray();
+
+            $.ajax({
+                type: 'POST',
+                dataType: 'JSON',
+                data: form_data,
+                url: wsp_ajax_url,
+                success: function (response) {
+                    $('#addAddressModal').hide();
+
+                    if (response.status) {
+                        location.reload();
                     } else {
                         alert(response.message);
                     }
