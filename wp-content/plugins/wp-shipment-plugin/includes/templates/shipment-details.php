@@ -27,8 +27,8 @@ $total = $details->markupRates + $details->labelRate;
             <p>Pickup Schedule at</p>
             <br/>
             <div class="shipment_detail_actions">
-                <button>Void Label</button>
-                <button>Void Label and Refund</button>
+                <button data-shipment-id="<?= $shipment_id ?>" class="void-label">Void Label</button>
+                <button class="void-label-refund">Void Label and Refund</button>
             </div>
             <table>
                 <tbody>
@@ -112,19 +112,19 @@ $total = $details->markupRates + $details->labelRate;
                     <tbody>
                     <tr>
                         <th>Rate</th>
-                        <td>$<?= (!empty($rate) ? $rate : 'Not Applied') ?></td>
+                        <td><?= (!empty($rate) ? '$'.number_format($rate, 2): 'Not Applied') ?></td>
                     </tr>
                     <tr>
                         <th>Markup Rate</th>
-                        <td><?= (!empty($markupRates) ? '$'.$markupRates : 'Not Applied') ?></td>
+                        <td><?= (!empty($markupRates) ? '$'.number_format($markupRates, 2) : 'Not Applied') ?></td>
                     </tr>
                     <tr>
                         <th>Label Rate</th>
-                        <td>$<?= (!empty($labelRates) ? $labelRates : 'Not Applied') ?></td>
+                        <td><?= (!empty($labelRates) ? '$'.number_format($labelRates, 2) : 'Not Applied') ?></td>
                     </tr>
                     <tr>
                         <th>Total Rates</th>
-                        <td>$<?= $total ?></td>
+                        <td>$<?= number_format($total, 2) ?></td>
                     </tr>
                     </tbody>
                 </table>

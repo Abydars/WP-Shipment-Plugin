@@ -45,12 +45,12 @@
     float: left;
 }
 
-#wpsp-shipment-form-container.right-sidebar input[type="date"], #wpsp-shipment-form-container.right-sidebar input[type="text"], #wpsp-shipment-form-container.right-sidebar input[type="email"], #wpsp-shipment-form-container.right-sidebar input[type="number"] {
+#create-address input[type="date"], #create-address input[type="text"], #create-address input[type="email"], #create-address input[type="number"], #wpsp-shipment-form-container.right-sidebar input[type="date"], #wpsp-shipment-form-container.right-sidebar input[type="text"], #wpsp-shipment-form-container.right-sidebar input[type="email"], #wpsp-shipment-form-container.right-sidebar input[type="number"] {
     width: 100%;
     height: 23px;
 }
 
-#wpsp-shipment-form-container.right-sidebar select {
+#wpsp-shipment-form-container.right-sidebar select, #create-address select {
     height: 23px;
     width: 100%;
     border-radius: 0;
@@ -64,7 +64,7 @@
     margin: 10px;
 }
 
-#wpsp-shipment-form-container.right-sidebar button {
+#wpsp-shipment-form-container.right-sidebar button, #create-address button{
     margin: 10px;
     color: #fff;
     background: #0073aa;
@@ -208,3 +208,4 @@
     font-size: 15px;
     border: 1px solid lightgray;
 }
+

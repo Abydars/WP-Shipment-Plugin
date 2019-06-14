@@ -188,6 +188,22 @@ jQuery(function ($) {
         $(document).on('change', '.customers-list select', function () {
             refreshAddresses()
         })
+
+        $('.shipment_detail_actions .void-label').click(function (e) {
+            e.preventDefault();
+            var shipment_id = $(this).attr('data-shipment-id');
+            $.ajax({
+                dataType: 'JSON',
+                url: wsp_ajax_url,
+                data: {
+                    action: 'wpsp_void_label',
+                    shipment_id: shipment_id
+                },
+                success: function (response) {
+                    console.log(response);
+                }
+            })
+        })
     }
 
     $('#rateShop').hide();
