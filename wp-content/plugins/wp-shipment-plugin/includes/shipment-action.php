@@ -2,6 +2,26 @@
 
 class WPSP_ShipmentActions
 {
+    function create_new_address()
+    {
+        if (isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'wpsp_create_address')) {
+            $error = false;
+            $post_data = (object)$_POST;
+            do_action_ref_array("wpsp_verify_address_{$post_data->carrier}", [
+                $post_data,
+                &$error
+            ]);
+
+            if (!$error) {
+                WPSP_Address::store_address($post_data);
+                wp_redirect(admin_url('admin.php?page=list_addresses'));
+            } else {
+                wp_redirect(admin_url('admin.php?page=create_address&error=' . $error));
+            }
+            die;
+        }
+    }
+
     function action_void_label()
     {
         $response = [];
@@ -166,7 +186,6 @@ class WPSP_ShipmentActions
         die;
     }
 
-
     function action_add_address()
     {
         $response = [];
@@ -175,14 +194,13 @@ class WPSP_ShipmentActions
 
             $error = false;
             $post_data = (object)$_POST;
-//echo "wpsp_verify_address_{$post_data->carrier}";die();
+
             do_action_ref_array("wpsp_verify_address_{$post_data->carrier}", [
                 $post_data,
                 &$error
             ]);
 
             if (!$error) {
-//			    var_dump('here');die();
                 $address = WPSP_Address::store_address($post_data);
                 $response['status'] = true;
                 $response['message'] = __('Address created successfully', WPSP_LANG);
@@ -249,20 +267,14 @@ class WPSP_ShipmentActions
 
         if (isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'wpsp_edit_address')) {
 
-
             $error = false;
             $post_data = (object)$_POST;
-//            do_action_ref_array("wpsp_verify_address_{$post_data->carrier}", [
-//                $post_data,
-//                &$error
-//            ]);
 
             if (!$error) {
-//			    var_dump('here');die();
                 $id = $post_data->id;
                 $address = WPSP_Address::edit_address($id, $post_data);
                 $response['status'] = true;
-                $response['message'] = __('Address Edit successfully', WPSP_LANG);
+                $response['message'] = __('Address edited successfully', WPSP_LANG);
                 $response['data'] = $address;
             } else {
                 $response['status'] = false;
@@ -276,27 +288,5 @@ class WPSP_ShipmentActions
         header('Content-Type: application/json');
         echo json_encode($response);
         die;
-    }
-
-    function create_new_address()
-    {
-        $response = [];
-
-        if (isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'wpsp_create_address')) {
-            $error = false;
-            $post_data = (object)$_POST;
-            do_action_ref_array("wpsp_verify_address_{$post_data->carrier}", [
-                $post_data,
-                &$error
-            ]);
-
-            if (!$error) {
-                WPSP_Address::store_address($post_data);
-                wp_redirect(admin_url('admin.php?page=list_addresses'));
-            } else {
-                wp_redirect(admin_url('admin.php?page=create_address&error='.$error));
-            }
-            die;
-        }
     }
 }
