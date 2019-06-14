@@ -32,6 +32,7 @@ class WPSP
 		add_action( 'wp_ajax_wpsp_get_addresses', array( $wpsp_actions, 'action_get_addresses' ) );
 		add_action( 'wp_ajax_wpsp_void_label', array( $wpsp_actions, 'action_void_label' ) );
 		add_action( 'wp_ajax_wpsp_edit_address', array( $wpsp_actions, 'action_edit_address' ) );
+		add_action( 'admin_init', array( $wpsp_actions, 'create_new_address' ) );
 
 		//User Extras
 		$wpsp_user_meta = new WPSP_UserMeta();
@@ -73,6 +74,7 @@ class WPSP
     }
 
     function create_address(){
+        $customers = WPSP_Customer::get_customers();
         include('templates/create_address.php');
     }
 

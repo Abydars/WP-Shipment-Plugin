@@ -2,14 +2,31 @@
     <div class="container">
         <div class="row">
             <h1>Create Address</h1>
-            <form method="POST" action="">
+            <?php if(isset($_GET['error'])) {?>
+                <div class="wpsp-error">
+                    <h3><i class="fa fa-times"></i> <?= $_GET['error'] ?></h3>
+                </div>
+            <?php } ?>
+            <form method="POST">
+                <div class="wpsp-row">
+                    <div class="wpsp-form-group customers-list">
+                        <label>Customer</label>
+                        <select name="customer" required>
+                            <option value="">Select Customer</option>
+                            <?php foreach ($customers as $customer) : ?>
+                                <option value="<?= $customer->ID ?>"><?= $customer->display_name ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
                 <div class="wpsp-row">
                     <div class="wpsp-form-group">
                         <label>Paste US Address</label>
                         <br/>
                         <br/>
                         <span>Format: 1005 N Gravenstein Highway Sebastopol, CA 95472</span>
-                        <textarea name="address" placeholder="1005 N Gravenstein Highway Sebastopol, CA 95472" style="width: 100%;"></textarea>
+                        <textarea name="address" placeholder="1005 N Gravenstein Highway Sebastopol, CA 95472"
+                                  style="width: 100%;"></textarea>
                     </div>
                 </div>
                 <div class="wpsp-row">
@@ -86,12 +103,11 @@
                 <div class="wpsp-clearfix"></div>
 
                 <input type="hidden" name="action" value="add_address"/>
-<!--                --><?php //wp_nonce_field( 'wpsp_add_address' ); ?>
+                <?php wp_nonce_field('wpsp_create_address'); ?>
 
                 <div class="wpsp-row">
                     <div class="action">
-                        <button class="cancel">Cancel</button>
-                        <button type="submit">Add</button>
+                        <button type="submit">Create Address</button>
                     </div>
                 </div>
             </form>

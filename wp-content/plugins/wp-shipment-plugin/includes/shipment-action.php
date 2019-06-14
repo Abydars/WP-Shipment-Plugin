@@ -243,7 +243,8 @@ class WPSP_ShipmentActions
         include('templates/shipment-details.php');
     }
 
-    function action_edit_address(){
+    function action_edit_address()
+    {
         $response = [];
 
         if (isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'wpsp_edit_address')) {
@@ -259,7 +260,7 @@ class WPSP_ShipmentActions
             if (!$error) {
 //			    var_dump('here');die();
                 $id = $post_data->id;
-                $address = WPSP_Address::edit_address($id,$post_data);
+                $address = WPSP_Address::edit_address($id, $post_data);
                 $response['status'] = true;
                 $response['message'] = __('Address Edit successfully', WPSP_LANG);
                 $response['data'] = $address;
@@ -275,5 +276,27 @@ class WPSP_ShipmentActions
         header('Content-Type: application/json');
         echo json_encode($response);
         die;
+    }
+
+    function create_new_address()
+    {
+        $response = [];
+
+        if (isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'wpsp_create_address')) {
+            $error = false;
+            $post_data = (object)$_POST;
+            do_action_ref_array("wpsp_verify_address_{$post_data->carrier}", [
+                $post_data,
+                &$error
+            ]);
+
+            if (!$error) {
+                WPSP_Address::store_address($post_data);
+                wp_redirect(admin_url('admin.php?page=list_addresses'));
+            } else {
+                wp_redirect(admin_url('admin.php?page=create_address&error='.$error));
+            }
+            die;
+        }
     }
 }

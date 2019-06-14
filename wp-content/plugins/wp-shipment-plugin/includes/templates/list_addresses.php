@@ -72,9 +72,7 @@ $addresses = $wpdb->get_results("SELECT * FROM $table_name");
                             <label>Paste US Address</label>
                             <br/>
                             <span>Format: 1005 N Gravenstein Highway Sebastopol, CA 95472</span>
-                            <textarea name="address"
-                                      placeholder="1005 N Gravenstein Highway Sebastopol, CA 95472"
-                                      style="width: 100%;"></textarea>
+                            <textarea name="address" placeholder="1005 N Gravenstein Highway Sebastopol, CA 95472" style="width: 100%;"></textarea>
                         </div>
                     </div>
                     <div class="wpsp-row">
