@@ -27,6 +27,12 @@ class WPSP_Customer
 		update_user_meta( $id, 'account_funds', $value );
 	}
 
+	static function add_funds( $id, $amount )
+	{
+		$value = self::get_account_funds( $id ) + $amount;
+		update_user_meta( $id, 'account_funds', $value );
+	}
+
 	static function get_ups_markup_rate( $id )
 	{
 		$value = get_user_meta( $id, 'ups_rate', true );

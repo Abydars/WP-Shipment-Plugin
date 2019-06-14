@@ -2,291 +2,309 @@
 
 class WPSP_ShipmentActions
 {
-    function create_new_address()
-    {
-        if (isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'wpsp_create_address')) {
-            $error = false;
-            $post_data = (object)$_POST;
-            do_action_ref_array("wpsp_verify_address_{$post_data->carrier}", [
-                $post_data,
-                &$error
-            ]);
+	function filter_wpsp_error( $text )
+	{
+		return '<div class="wpsp-error"' . ( empty( $text ) ? 'style="display: none;"' : '' ) . '><h3><i class="fa fa-frown"></i><p>' . $text . '</p></h3></div>';
+	}
 
-            if (!$error) {
-                WPSP_Address::store_address($post_data);
-                wp_redirect(admin_url('admin.php?page=list_addresses'));
-            } else {
-                wp_redirect(admin_url('admin.php?page=create_address&error=' . $error));
-            }
-            die;
-        }
-    }
+	function filter_wpsp_success( $text )
+	{
+		return '<div class="wpsp-success"' . ( empty( $text ) ? 'style="display: none;"' : '' ) . '><h3><i class="fa fa-smile"></i><p>' . $text . '</p></h3></div>';
+	}
 
-    function action_void_label()
-    {
-        $response = [];
-        $shipment_id = $_REQUEST['id'];
-        $refund = isset($_REQUEST['refund']) && $_REQUEST['refund'] == '1';
-        $shipment = WPSP_Shipment::get_shipment($shipment_id);
-        $carrier = $shipment->carrier;
-        $error = false;
+	function action_create_new_address()
+	{
+		if ( isset( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'wpsp_create_address' ) ) {
+			$error     = false;
+			$post_data = (object) $_POST;
+			do_action_ref_array( "wpsp_verify_address_{$post_data->carrier}", [
+				$post_data,
+				&$error
+			] );
 
-        $response['status'] = true;
-        $response['message'] = __('Label void successfully', WPSP_LANG);
+			if ( ! $error ) {
+				WPSP_Address::store_address( $post_data );
+				wp_redirect( admin_url( 'admin.php?page=list_addresses' ) );
+			} else {
+				wp_redirect( admin_url( 'admin.php?page=create_address&error=' . $error ) );
+			}
+			die;
+		}
+	}
 
-        do_action_ref_array("wpsp_void_label_{$carrier}", [
-            &$error,
-            $shipment_id
-        ]);
+	function action_void_label()
+	{
+		$response    = [];
+		$shipment_id = $_REQUEST['id'];
+		$refund      = isset( $_REQUEST['refund'] ) && $_REQUEST['refund'] == '1';
+		$shipment    = WPSP_Shipment::get_shipment( $shipment_id );
+		$carrier     = $shipment->server;
+		$error       = false;
 
-        if ($refund) {
-            // TODO: add funds again to customer account
-        }
+		$response['status']  = true;
+		$response['message'] = __( 'Label void successfully', WPSP_LANG );
 
-        if ($error) {
-            $response['status'] = false;
-            $response['message'] = $error;
-        }
+		do_action_ref_array( "wpsp_void_label_{$carrier}", [
+			&$error,
+			$shipment_id
+		] );
 
-        header('Content-Type: application/json');
-        echo json_encode($response);
-        die;
-    }
+		if ( ! $error ) {
+			$shipment->status = 'Cancelled';
 
-    function action_save_label()
-    {
-        global $wpdb;
+			WPSP_Shipment::update_shipment( $shipment_id, (array) $shipment );
 
-        $response = [];
+			if ( $refund ) {
+				WPSP_Customer::add_funds( $shipment->customer_id, floatval( $shipment->rates ) );
+			}
+		}
 
-        if (isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'wpsp_save_label')) {
+		if ( $error ) {
+			$response['status']  = false;
+			$response['message'] = $error;
+		}
 
-            $post_data = (object)$_POST;
-            $error = false;
-            $shipment_data = false;
-            $rates = 0;
+		header( 'Content-Type: application/json' );
+		echo json_encode( $response );
+		die;
+	}
 
-            // rates
-            do_action_ref_array("wpsp_label_rates_{$post_data->carrier}", [
-                $post_data,
-                &$error,
-                &$rates
-            ]);
+	function action_save_label()
+	{
+		global $wpdb;
 
-            if (!$error && $rates) {
+		$response = [];
 
-                // check for funds
-                $user_funds = WPSP_Customer::get_account_funds($post_data->customer);
-                $markup_rate = apply_filters("wpsp_get_markup_rate_{$post_data->carrier}", 0, $post_data->customer);
-                $label_rates = $rates;
+		if ( isset( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'wpsp_save_label' ) ) {
 
-                if ($markup_rate > 0) {
-                    $rates += ($rates * ($markup_rate / 100));
-                }
+			$post_data     = (object) $_POST;
+			$error         = false;
+			$shipment_data = false;
+			$rates         = 0;
 
-                if ($user_funds > $rates) {
+			// rates
+			do_action_ref_array( "wpsp_label_rates_{$post_data->carrier}", [
+				$post_data,
+				&$error,
+				&$rates
+			] );
 
-                    // create shipment
-                    do_action_ref_array("wpsp_create_shipment_{$post_data->carrier}", [
-                        $post_data,
-                        &$error,
-                        &$shipment_data
-                    ]);
+			if ( ! $error && $rates ) {
 
-                    if (!$error && !empty($shipment_data)) {
+				// check for funds
+				$user_funds  = WPSP_Customer::get_account_funds( $post_data->customer );
+				$markup_rate = apply_filters( "wpsp_get_markup_rate_{$post_data->carrier}", 0, $post_data->customer );
+				$label_rates = $rates;
 
-                        // db entry
-                        $row = array(
-                            "ticket_id" => $post_data->ticket_id,
-                            "customer_id" => $post_data->customer,
-                            "creator_id" => get_current_user_id(),
-                            "server" => $post_data->carrier,
-                            "status" => "Pending",
-                            "serverLevel" => $post_data->shipping_method,
-                            "packageType" => $post_data->package_type,
-                            "creation_date" => date("Y/m/d"),
-                            "shipDate" => date('Y-m-d', strtotime($post_data->shipping_date)),
-                            "toAddress_id" => intval($post_data->to),
-                            "fromAddress_id" => intval($post_data->from),
-                            "pickup_date" => !empty($post_data->pickup_date) ? date('Y-m-d H:i:s', strtotime($post_data->pickup_date)) : null,
-                            "dropOffType" => "",
-                            "confirmation" => "",
-                            "reference" => "",
-                            "shipmentNo" => "",
-                            "rates" => $rates,
-                            "markupRate" => $markup_rate,
-                            "labelRate" => $label_rates
-                        );
+				if ( $markup_rate > 0 ) {
+					$markup_rate = ( $rates * ( $markup_rate / 100 ) );
+					$rates       += $markup_rate;
+				}
 
-                        $columns = array_keys($row);
-                        $row = array_merge($row, $shipment_data);
-                        $row = array_filter($row, function ($key) use ($columns) {
-                            return in_array($key, $columns);
-                        }, ARRAY_FILTER_USE_KEY);
+				if ( $user_funds > $rates ) {
 
-                        $inserted = $wpdb->insert($wpdb->prefix . 'shipments', $row);
+					// create shipment
+					do_action_ref_array( "wpsp_create_shipment_{$post_data->carrier}", [
+						$post_data,
+						&$error,
+						&$shipment_data
+					] );
 
-                        if ($inserted) {
-                            $shipment_id = $wpdb->insert_id;
-                            $encoded_image = false;
+					if ( ! $error && ! empty( $shipment_data ) ) {
 
-                            // create label
-                            do_action_ref_array("wpsp_create_label_{$post_data->carrier}", [
-                                &$error,
-                                &$encoded_image,
-                                $shipment_data,
-                                $shipment_id,
-                                $post_data,
-                            ]);
+						// db entry
+						$row = array(
+							"shipKey"        => "",
+							"ticket_id"      => $post_data->ticket_id,
+							"customer_id"    => $post_data->customer,
+							"creator_id"     => get_current_user_id(),
+							"server"         => $post_data->carrier,
+							"status"         => "Pending",
+							"serverLevel"    => $post_data->shipping_method,
+							"packageType"    => $post_data->package_type,
+							"creation_date"  => date( "Y/m/d" ),
+							"shipDate"       => date( 'Y-m-d', strtotime( $post_data->shipping_date ) ),
+							"toAddress_id"   => intval( $post_data->to ),
+							"fromAddress_id" => intval( $post_data->from ),
+							"pickup_date"    => ! empty( $post_data->pickup_date ) ? date( 'Y-m-d H:i:s', strtotime( $post_data->pickup_date ) ) : null,
+							"dropOffType"    => "",
+							"confirmation"   => "",
+							"reference"      => "",
+							"shipmentNo"     => "",
+							"rates"          => $rates,
+							"markupRate"     => $markup_rate,
+							"labelRate"      => $label_rates
+						);
 
-                            if (!$error) {
+						$columns = array_keys( $row );
+						$row     = array_merge( $row, $shipment_data );
+						$row     = array_filter( $row, function ( $key ) use ( $columns ) {
+							return in_array( $key, $columns );
+						}, ARRAY_FILTER_USE_KEY );
 
-                                // TODO: generate label
-                                //$file_name = "{$post_data->carrier}-{$shipment_id}.tiff";
-                                //list( $file_path, $file_url ) = WPSP_PdfHelper::generate( $encoded_image, $file_name );
+						$inserted = $wpdb->insert( $wpdb->prefix . 'shipments', $row );
 
-                                //var_dump( $file_url, $file_path );
-                                //die;
+						if ( $inserted ) {
+							$shipment_id   = $wpdb->insert_id;
+							$encoded_image = false;
 
-                                // TODO: send label via email and fax
+							// create label
+							do_action_ref_array( "wpsp_create_label_{$post_data->carrier}", [
+								&$error,
+								&$encoded_image,
+								$shipment_data,
+								$shipment_id,
+								$post_data,
+							] );
 
-                                // funds deduct
-                                WPSP_Customer::deduct_funds($post_data->customer, $rates);
+							if ( ! $error ) {
 
-                                $response['status'] = true;
-                                $response['data'] = [
-                                    'shipment_id' => $shipment_id
-                                ];
-                                $response['message'] = __('Shipment created successfully', WPSP_LANG);
-                            }
+								// TODO: generate label
+								//$file_name = "{$post_data->carrier}-{$shipment_id}.tiff";
+								//list( $file_path, $file_url ) = WPSP_PdfHelper::generate( $encoded_image, $file_name );
 
-                        } else {
-                            $error = __('Failed to add shipment', WPSP_LANG);
-                        }
-                    }
-                } else {
-                    $error = __('No funds available', WPSP_LANG);
-                }
-            } else {
-                $error = __('Rates not found', WPSP_LANG);
-            }
+								//var_dump( $file_url, $file_path );
+								//die;
 
-            if ($error !== false) {
-                $response['status'] = false;
-                $response['message'] = $error;
-            }
+								// TODO: send label via email and fax
 
-        } else {
-            $response['status'] = false;
-            $response['message'] = __('Please try again', WPSP_LANG);
-        }
+								// funds deduct
+								WPSP_Customer::deduct_funds( $post_data->customer, $rates );
 
-        header('Content-Type: application/json');
-        echo json_encode($response);
-        die;
-    }
+								$response['status']  = true;
+								$response['data']    = [
+									'shipment_id' => $shipment_id
+								];
+								$response['message'] = __( 'Shipment created successfully', WPSP_LANG );
+							}
 
-    function action_add_address()
-    {
-        $response = [];
+						} else {
+							$error = __( 'Failed to add shipment', WPSP_LANG );
+						}
+					}
+				} else {
+					$error = __( 'No funds available', WPSP_LANG );
+				}
+			} else {
+				$error = __( 'Rates not found', WPSP_LANG );
+			}
 
-        if (isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'wpsp_add_address')) {
+			if ( $error !== false ) {
+				$response['status']  = false;
+				$response['message'] = $error;
+			}
 
-            $error = false;
-            $post_data = (object)$_POST;
+		} else {
+			$response['status']  = false;
+			$response['message'] = __( 'Please try again', WPSP_LANG );
+		}
 
-            do_action_ref_array("wpsp_verify_address_{$post_data->carrier}", [
-                $post_data,
-                &$error
-            ]);
+		header( 'Content-Type: application/json' );
+		echo json_encode( $response );
+		die;
+	}
 
-            if (!$error) {
-                $address = WPSP_Address::store_address($post_data);
-                $response['status'] = true;
-                $response['message'] = __('Address created successfully', WPSP_LANG);
-                $response['data'] = $address;
-            } else {
-                $response['status'] = false;
-                $response['message'] = $error;
-            }
-        } else {
-            $response['status'] = false;
-            $response['message'] = __('Please try again', WPSP_LANG);
-        }
+	function action_add_address()
+	{
+		$response = [];
 
-        header('Content-Type: application/json');
-        echo json_encode($response);
-        die;
-    }
+		if ( isset( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'wpsp_add_address' ) ) {
 
-    function action_carrier_levels()
-    {
-        $carrier = $_REQUEST['carrier'];
-        $levels = [];
-        $levels = apply_filters("wpsp_shipment_{$carrier}_levels", $levels);
+			$error     = false;
+			$post_data = (object) $_POST;
 
-        header('Content-Type: application/json');
-        echo json_encode($levels);
-        die;
-    }
+			do_action_ref_array( "wpsp_verify_address_{$post_data->carrier}", [
+				$post_data,
+				&$error
+			] );
 
-    function action_package_types()
-    {
-        $carrier = $_REQUEST['carrier'];
-        $types = [];
-        $types = apply_filters("wpsp_shipment_{$carrier}_package_types", $types);
+			if ( ! $error ) {
+				$address             = WPSP_Address::store_address( $post_data );
+				$response['status']  = true;
+				$response['message'] = __( 'Address created successfully', WPSP_LANG );
+				$response['data']    = $address;
+			} else {
+				$response['status']  = false;
+				$response['message'] = $error;
+			}
+		} else {
+			$response['status']  = false;
+			$response['message'] = __( 'Please try again', WPSP_LANG );
+		}
 
-        header('Content-Type: application/json');
-        echo json_encode($types);
-        die;
-    }
+		header( 'Content-Type: application/json' );
+		echo json_encode( $response );
+		die;
+	}
 
-    function action_get_rates()
-    {
-        die;
-    }
+	function action_carrier_levels()
+	{
+		$carrier = $_REQUEST['carrier'];
+		$levels  = [];
+		$levels  = apply_filters( "wpsp_shipment_{$carrier}_levels", $levels );
 
-    function action_get_addresses()
-    {
-        $customer_id = $_REQUEST['customer_id'];
-        $addresses = WPSP_Address::get_addresses_by_customer($customer_id);
+		header( 'Content-Type: application/json' );
+		echo json_encode( $levels );
+		die;
+	}
 
-        header('Content-Type: application/json');
-        echo json_encode($addresses);
-        die;
-    }
+	function action_package_types()
+	{
+		$carrier = $_REQUEST['carrier'];
+		$types   = [];
+		$types   = apply_filters( "wpsp_shipment_{$carrier}_package_types", $types );
 
-    function shipment_details()
-    {
-        include('templates/shipment-details.php');
-    }
+		header( 'Content-Type: application/json' );
+		echo json_encode( $types );
+		die;
+	}
 
-    function action_edit_address()
-    {
-        $response = [];
+	function action_get_rates()
+	{
+		die;
+	}
 
-        if (isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'wpsp_edit_address')) {
+	function action_get_addresses()
+	{
+		$customer_id = $_REQUEST['customer_id'];
+		$addresses   = WPSP_Address::get_addresses_by_customer( $customer_id );
 
-            $error = false;
-            $post_data = (object)$_POST;
+		header( 'Content-Type: application/json' );
+		echo json_encode( $addresses );
+		die;
+	}
 
-            if (!$error) {
-                $id = $post_data->id;
-                $address = WPSP_Address::edit_address($id, $post_data);
-                $response['status'] = true;
-                $response['message'] = __('Address edited successfully', WPSP_LANG);
-                $response['data'] = $address;
-            } else {
-                $response['status'] = false;
-                $response['message'] = $error;
-            }
-        } else {
-            $response['status'] = false;
-            $response['message'] = __('Please try again', WPSP_LANG);
-        }
+	function shipment_details()
+	{
+		include( 'templates/shipment-details.php' );
+	}
 
-        header('Content-Type: application/json');
-        echo json_encode($response);
-        die;
-    }
+	function action_edit_address()
+	{
+		$response = [];
+
+		if ( isset( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'wpsp_edit_address' ) ) {
+
+			$error     = false;
+			$post_data = (object) $_POST;
+
+			if ( ! $error ) {
+				$id                  = $post_data->id;
+				$address             = WPSP_Address::edit_address( $id, $post_data );
+				$response['status']  = true;
+				$response['message'] = __( 'Address edited successfully', WPSP_LANG );
+				$response['data']    = $address;
+			} else {
+				$response['status']  = false;
+				$response['message'] = $error;
+			}
+		} else {
+			$response['status']  = false;
+			$response['message'] = __( 'Please try again', WPSP_LANG );
+		}
+
+		header( 'Content-Type: application/json' );
+		echo json_encode( $response );
+		die;
+	}
 }

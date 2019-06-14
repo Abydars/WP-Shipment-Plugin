@@ -1,34 +1,23 @@
-<?php
-
-global $wpdb;
-$shipment_id = $_GET['id'];
-$table_name = 'wp_shipments';
-$details = $wpdb->get_row("SELECT * FROM $table_name WHERE (id = '". $shipment_id ."')");
-
-$table_address = 'wp_addresses';
-$customer_id = get_userdata($details->customer_id);
-$creator_id = get_userdata($details->creator_id);
-$from_address = $wpdb->get_row("SELECT * FROM $table_address WHERE (id = '". $details->fromAddress_id ."')");
-$to_address = $wpdb->get_row("SELECT * FROM $table_address WHERE (id = '". $details->toAddress_id ."')");
-
-$rate = $details->rates;
-$markupRates = $details->markupRates;
-$labelRates = $details->labelRate;
-$total = $details->markupRates + $details->labelRate;
-?>
 <div id="shipmentDetails">
     <div class="container">
         <div class="row">
             <h1>Shipment #<?= $shipment_id ?></h1>
-            <br/>
-            <br/>
-            <p>Key </p>
-            <br/>
-            <p>Pickup Schedule at</p>
-            <br/>
+            <p>Key: <?= $details->shipKey ?></p>
+			<?php if ( $details->pickup_date ) { ?>
+                <p>Pickup Scheduled at <?= date( 'Y-m-d H:i:s', strtotime( $details->pickup_date ) ) ?></p>
+			<?php } ?>
+
+			<?= apply_filters( 'wpsp_error', '' ) ?>
+			<?= apply_filters( 'wpsp_success', '' ) ?>
+
             <div class="shipment_detail_actions">
-                <button data-shipment-id="<?= $shipment_id ?>" class="void-label">Void Label</button>
-                <button class="void-label-refund">Void Label and Refund</button>
+				<?php if ( strtolower( $details->status ) === 'pending' ) { ?>
+                    <button data-shipment-id="<?= $shipment_id ?>" data-refund="0" class="void-label">Void Label
+                    </button>
+                    <button data-shipment-id="<?= $shipment_id ?>" data-refund="1" class="void-label">Void Label and
+                        Refund
+                    </button>
+				<?php } ?>
             </div>
             <table>
                 <tbody>
@@ -36,7 +25,7 @@ $total = $details->markupRates + $details->labelRate;
                     <th>Status</th>
                     <td><?= $details->status ?></td>
                 </tr>
-                <tr>
+                <tr style="display: none;">
                     <th>Ticket ID</th>
                     <td><?= $details->ticket_id ?></td>
                 </tr>
@@ -59,10 +48,10 @@ $total = $details->markupRates + $details->labelRate;
                 <tr>
                     <th>Address</th>
                     <td>
-                        From: <?= $from_address->address_name ?>
+                        From: <?= $from_address['address_name'] ?>
                         <br/>
                         <br/>
-                        To: <?= $to_address->address_name ?>
+                        To: <?= $to_address['address_name'] ?>
                     </td>
                 </tr>
                 <tr>
@@ -76,10 +65,6 @@ $total = $details->markupRates + $details->labelRate;
                 <tr>
                     <th>Package Type</th>
                     <td><?= $details->packageType ?></td>
-                </tr>
-                <tr>
-                    <th>Packages</th>
-                    <td></td>
                 </tr>
                 <tr>
                     <th>Labels</th>
@@ -111,20 +96,16 @@ $total = $details->markupRates + $details->labelRate;
                 <table>
                     <tbody>
                     <tr>
-                        <th>Rate</th>
-                        <td><?= (!empty($rate) ? '$'.number_format($rate, 2): 'Not Applied') ?></td>
+                        <th>Label Rate</th>
+                        <td><?= ( ! empty( $details->labelRate ) ? '$' . number_format( $details->labelRate, 2 ) : 'Not Applied' ) ?></td>
                     </tr>
                     <tr>
                         <th>Markup Rate</th>
-                        <td><?= (!empty($markupRates) ? '$'.number_format($markupRates, 2) : 'Not Applied') ?></td>
-                    </tr>
-                    <tr>
-                        <th>Label Rate</th>
-                        <td><?= (!empty($labelRates) ? '$'.number_format($labelRates, 2) : 'Not Applied') ?></td>
+                        <td><?= ( ! empty( $details->markupRate ) ? '$' . number_format( $details->markupRate, 2 ) : 'Not Applied' ) ?></td>
                     </tr>
                     <tr>
                         <th>Total Rates</th>
-                        <td>$<?= number_format($total, 2) ?></td>
+                        <td>$<?= number_format( $details->rates, 2 ) ?></td>
                     </tr>
                     </tbody>
                 </table>

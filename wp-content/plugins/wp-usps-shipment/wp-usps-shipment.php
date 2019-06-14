@@ -29,18 +29,14 @@ class WPSP_USPS
 		add_action( 'wpsp_verify_address_usps', [ $this, 'wpsp_verify_address_usps' ], 10, 3 );
 		add_action( 'wpsp_create_shipment_usps', [ $this, 'wpsp_usps_create_shipment' ], 10, 3 );
 		add_action( 'wpsp_create_label_usps', [ $this, 'wpsp_create_label_usps' ], 10, 3 );
-		add_action( 'wpsp_label_rates_usps', [ $this, 'wpsp_label_rates_usps2' ], 10, 3 );
+		add_action( 'wpsp_label_rates_usps', [ $this, 'wpsp_label_rates_usps' ], 10, 3 );
 		add_action( 'wpsp_void_label_usps', [ $this, 'wpsp_void_label_usps' ], 10, 2 );
 	}
 
 	function wpsp_void_label_usps( &$error, $shipment_id )
 	{
-		global $wpdb;
-
 		$error    = false;
-		$shipment = $wpdb->get_row(
-			$wpdb->prepare( "SELECT 'shipKey' FROM $wpdb->prefix . 'shipments' WHERE 'id'=%d", $shipment_id )
-		);
+		$shipment = WPSP_Shipment::get_shipment( $shipment_id );
 
 		try {
 			$d = [
@@ -61,10 +57,15 @@ class WPSP_USPS
 
 			$res = $this->request( $url );
 			$res = ShipmentXmlToArray::convert( $res );
-			$res = $res['eVSCancelResponse'];
 
 			if ( isset( $res['Error'] ) ) {
 				$error = $res['Error']['Description'];
+			} else {
+				$res = $res['eVSCancelResponse'];
+
+				if ( isset( $res['Status'] ) && $res['Status'] != 'Cancelled' ) {
+					$error = $res['Reason'];
+				}
 			}
 
 		} catch ( Exception $e ) {
@@ -93,26 +94,18 @@ class WPSP_USPS
 
 	function wpsp_label_rates_usps( $data, &$error, &$rates )
 	{
+		$error        = false;
 		$from_address = WPSP_Address::getAddress( $data->from );
 		$to_address   = WPSP_Address::getAddress( $data->to );
 		$from_zip     = $from_address['zip_code'];
 		$to_zip       = $to_address['zip_code'];
-
-		$from_zip4 = $from_zip5 = "";
-		$to_zip4   = $to_zip5 = "";
-		$response  = [];
-
-		list( $from_zip4, $from_zip5 ) = $this->zip4_5( $from_zip );
-		list( $to_zip4, $to_zip5 ) = $this->zip4_5( $to_zip );
 
 		$d = [
 			'Revision' => 2,
 		];
 
 		foreach ( $data->packages as $k => $package ) {
-			$id     = $k + 1;
-			$pounds = $package['weight'];
-			$ounces = $package['ounces'];
+			$id = $k + 1;
 
 			$d["Package_{$id}"] = [
 				'_attributes'    => [
@@ -121,9 +114,14 @@ class WPSP_USPS
 				'Service'        => $data->shipping_method,
 				'ZipOrigination' => $from_zip,
 				'ZipDestination' => $to_zip,
-				'Pounds'         => 1,
-				'Ounces'         => 1,
-				'Container'      => $data->package_type
+				'Pounds'         => ( $package['weight'] / 16 ),
+				'Ounces'         => $package['weight'],
+				'Container'      => $data->package_type,
+				'Size'           => 'LARGE',
+				'Width'          => $package['width'],
+				'Length'         => $package['length'],
+				'Height'         => $package['height'],
+				'Girth'          => ( ( $package['width'] + $package['height'] ) * 2 )
 			];
 		}
 
@@ -138,8 +136,6 @@ class WPSP_USPS
 			$id  = $k + 1;
 			$xml = str_replace( "Package_{$id}", "Package", $xml );
 		}
-		echo $xml;
-		die;
 
 		$url = add_query_arg( [
 			                      'API' => 'RateV4',
@@ -150,11 +146,21 @@ class WPSP_USPS
 		$res = ShipmentXmlToArray::convert( $res );
 
 		if ( ! isset( $res['Error'] ) ) {
-			$res = $res['eVSResponse'];
-		}
+			$res   = $res['RateV4Response'];
+			$rates = 0;
 
-		$error = false;
-		$rates = 10;
+			if ( count( $data->packages ) > 1 ) {
+				foreach ( $res['Package'] as $package ) {
+					if ( ! empty( $package['Postage']['Rate'] ) ) {
+						$rates += $package['Postage']['Rate'];
+					}
+				}
+			} else {
+				$rates += $res['Package']['Postage']['Rate'];
+			}
+		} else {
+			$error = $res['Error']['Description'];
+		}
 	}
 
 	function wpsp_create_label_usps( &$error, &$encoded_image, $shipment_data )

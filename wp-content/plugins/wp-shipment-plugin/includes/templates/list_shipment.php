@@ -1,10 +1,3 @@
-<?php
-
-global $wpdb;
-$table_name = 'wp_shipments';
-$shipments = $wpdb->get_results("SELECT * FROM $table_name");
-$table_address = 'wp_addresses';
-?>
 <div id="list-shipments">
     <div class="container">
         <div class="row">
@@ -14,8 +7,7 @@ $table_address = 'wp_addresses';
             <table id="listShipments">
                 <thead>
                 <tr>
-                    <th>ID: Key</th>
-                    <th>Ticket #</th>
+                    <th>ID</th>
                     <th>Customer</th>
                     <th>Creator</th>
                     <th>Carrier</th>
@@ -29,21 +21,20 @@ $table_address = 'wp_addresses';
                 </tr>
                 </thead>
                 <tbody>
-                <?php
-                foreach ($shipments as $shipment) {
-                $customer_id = get_userdata($shipment->customer_id);
-                $creator_id = get_userdata($shipment->creator_id);
-                $from_address = $wpdb->get_row("SELECT * FROM $table_address WHERE (id = '". $shipment->fromAddress_id ."')");
-                $to_address = $wpdb->get_row("SELECT * FROM $table_address WHERE (id = '". $shipment->toAddress_id ."')");
-                ?>
+				<?php
+				foreach ( $shipments as $shipment ) {
+					$customer     = get_userdata( $shipment->customer_id );
+					$creator      = get_userdata( $shipment->creator_id );
+					$from_address = WPSP_Address::getAddress( $shipment->fromAddress_id );
+					$to_address   = WPSP_Address::getAddress( $shipment->toAddress_id );
+					?>
                     <tr style="text-align: left">
-                        <td></td>
-                        <td><?= $shipment->ticket_id ?></td>
-                        <td><?= $customer_id->data->display_name ?></td>
-                        <td><?= $creator_id->data->display_name ?></td>
+                        <td><?= $shipment->id ?></td>
+                        <td><?= $customer->data->display_name ?></td>
+                        <td><?= $creator->data->display_name ?></td>
                         <td><?= $shipment->server ?></td>
-                        <td><?= $from_address->address_name ?></td>
-                        <td><?= $to_address->address_name ?></td>
+                        <td><?= $from_address['address_name'] ?></td>
+                        <td><?= $to_address['address_name'] ?></td>
                         <td></td>
                         <td><?= $shipment->creation_date ?></td>
                         <td><?= $shipment->shipDate ?></td>
@@ -54,7 +45,7 @@ $table_address = 'wp_addresses';
                             </a>
                         </td>
                     </tr>
-                <?php } ?>
+				<?php } ?>
                 </tbody>
             </table>
         </div>

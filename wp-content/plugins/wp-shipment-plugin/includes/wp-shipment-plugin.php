@@ -23,7 +23,9 @@ class WPSP
 		add_action( 'wp_ajax_wpsp_get_addresses', array( $wpsp_actions, 'action_get_addresses' ) );
 		add_action( 'wp_ajax_wpsp_void_label', array( $wpsp_actions, 'action_void_label' ) );
 		add_action( 'wp_ajax_wpsp_edit_address', array( $wpsp_actions, 'action_edit_address' ) );
-		add_action( 'admin_init', array( $wpsp_actions, 'create_new_address' ) );
+		add_action( 'admin_init', array( $wpsp_actions, 'action_create_new_address' ) );
+		add_filter( 'wpsp_error', array( $wpsp_actions, 'filter_wpsp_error' ) );
+		add_filter( 'wpsp_success', array( $wpsp_actions, 'filter_wpsp_success' ) );
 
 		//User Extras
 		$wpsp_user_meta = new WPSP_UserMeta();
@@ -38,8 +40,8 @@ class WPSP
 	{
 		wp_enqueue_style( 'wpsp_styles', WPSP_PLUGIN_URL . '/includes/assets/css/custom.css' );
 		wp_enqueue_style( 'wpsp_font_awesome', WPSP_PLUGIN_URL . '/includes/assets/fontawesome/css/all.css' );
-		wp_enqueue_style( 'wpsp_data-table-styles', WPSP_PLUGIN_URL . '/includes/assets/css/jquery.dataTables.min.css' );
-		wp_enqueue_script( 'wpsp_data-table-script', WPSP_PLUGIN_URL . '/includes/assets/js/jquery.dataTables.min.js' );
+		wp_enqueue_style( 'wpsp_data-table-styles', 'https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css' );
+		wp_enqueue_script( 'wpsp_data-table-script', 'https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js' );
 		wp_enqueue_script( 'wpsp_scripts', WPSP_PLUGIN_URL . '/includes/assets/js/custom.js' );
 	}
 
@@ -62,8 +64,17 @@ class WPSP
 	function list_shipments()
 	{
 		if ( isset( $_GET['id'] ) ) {
+			$shipment_id  = $_GET['id'];
+			$details      = WPSP_Shipment::get_shipment( $shipment_id );
+			$customer_id  = get_userdata( $details->customer_id );
+			$creator_id   = get_userdata( $details->creator_id );
+			$from_address = WPSP_Address::getAddress( $details->fromAddress_id );
+			$to_address   = WPSP_Address::getAddress( $details->toAddress_id );
+
 			include( 'templates/shipment-details.php' );
 		} else {
+			$shipments = WPSP_Shipment::get_shipments( 'desc' );
+
 			include( 'templates/list_shipment.php' );
 		}
 	}
@@ -73,10 +84,11 @@ class WPSP
 		include( 'templates/list_addresses.php' );
 	}
 
-    function create_address(){
-        $customers = WPSP_Customer::get_customers();
-        include('templates/create_address.php');
-    }
+	function create_address()
+	{
+		$customers = WPSP_Customer::get_customers();
+		include( 'templates/create_address.php' );
+	}
 
 	function add_toolbar_items( $admin_bar )
 	{

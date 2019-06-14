@@ -1,8 +1,12 @@
 <div id="wpsp-shipment-form-container" class="right-sidebar">
     <h1>Create Label</h1>
     <form method="POST" name="shipmentForm" id="shipment_form">
+
+		<?= apply_filters( 'wpsp_error', '' ) ?>
+		<?= apply_filters( 'wpsp_success', '' ) ?>
+
         <div class="basic-details">
-            <div class="wpsp-form-group">
+            <div class="wpsp-form-group" style="display: none;">
                 <label>Ticket ID</label>
                 <input type="text" name="ticket_id">
             </div>
@@ -19,9 +23,9 @@
                 <label>Shipping Carrier</label>
                 <select name="carrier" required>
                     <option value="">Select Shipping Carrier</option>
-                    <?php foreach ( $carriers as $k => $carrier ) { ?>
+					<?php foreach ( $carriers as $k => $carrier ) { ?>
                         <option value="<?= $k ?>"><?= $carrier ?></option>
-                    <?php } ?>
+					<?php } ?>
                 </select>
             </div>
             <div class="wpsp-form-group from-address">
@@ -58,40 +62,32 @@
                 <div class="wpsp-row">
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
-                            <label>Weight</label>
+                            <label>Weight (ounces)</label>
                             <input type="text" name="packages[0][weight]" required>
                         </div>
                     </div>
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
-                            <label>Weight Unit</label>
-                            <select name="packages[0][unit]">
-                                <option value=""></option>
-                            </select>
+                            <label>Length (inches)</label>
+                            <input type="number" step="any" name="packages[0][length]" required>
                         </div>
                     </div>
                 </div>
                 <div class="wpsp-row">
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
-                            <label>Length</label>
-                            <input type="text" name="packages[0][length]" required>
+                            <label>Width (inches)</label>
+                            <input type="number" step="any" name="packages[0][width]" required>
                         </div>
                     </div>
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
-                            <label>Width</label>
-                            <input type="text" name="packages[0][width]" required>
+                            <label>Height (inches)</label>
+                            <input type="number" step="any" name="packages[0][height]" required>
                         </div>
                     </div>
                 </div>
                 <div class="wpsp-row">
-                    <div class="wpsp-one-half">
-                        <div class="wpsp-form-group">
-                            <label>Height</label>
-                            <input type="text" name="packages[0][height]" required>
-                        </div>
-                    </div>
                     <div class="wpsp-one-half" style="display: none">
                         <div class="wpsp-form-group">
                             <label>SKU</label>
@@ -194,16 +190,8 @@
                 <div class="wpsp-row">
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
-                            <label>Weight</label>
+                            <label>Weight (OZ)</label>
                             <input type="text" name="weight">
-                        </div>
-                    </div>
-                    <div class="wpsp-one-half">
-                        <div class="wpsp-form-group">
-                            <label>Weight Unit</label>
-                            <select name="unit">
-                                <option value=""></option>
-                            </select>
                         </div>
                     </div>
                 </div>
@@ -261,7 +249,7 @@
             </div>
         </div>
     </div>
-    <div id="addAddressModal" class="modal" >
+    <div id="addAddressModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Add New Address</h2>

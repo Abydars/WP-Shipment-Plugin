@@ -2,20 +2,18 @@
     <div class="container">
         <div class="row">
             <h1>Create Address</h1>
-            <?php if(isset($_GET['error'])) {?>
-                <div class="wpsp-error">
-                    <h3><i class="fa fa-times"></i> <?= $_GET['error'] ?></h3>
-                </div>
-            <?php } ?>
+			<?php if ( isset( $_GET['error'] ) ) { ?>
+				<?= apply_filters( 'wpsp_error', $_GET['error'] ) ?>
+			<?php } ?>
             <form method="POST">
                 <div class="wpsp-row">
                     <div class="wpsp-form-group customers-list">
                         <label>Customer</label>
                         <select name="customer" required>
                             <option value="">Select Customer</option>
-                            <?php foreach ($customers as $customer) : ?>
+							<?php foreach ( $customers as $customer ) : ?>
                                 <option value="<?= $customer->ID ?>"><?= $customer->display_name ?></option>
-                            <?php endforeach; ?>
+							<?php endforeach; ?>
                         </select>
                     </div>
                 </div>
@@ -103,7 +101,7 @@
                 <div class="wpsp-clearfix"></div>
 
                 <input type="hidden" name="action" value="add_address"/>
-                <?php wp_nonce_field('wpsp_create_address'); ?>
+				<?php wp_nonce_field( 'wpsp_create_address' ); ?>
 
                 <div class="wpsp-row">
                     <div class="action">
