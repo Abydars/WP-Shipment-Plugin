@@ -1,7 +1,21 @@
+<?php
+
+global $wpdb;
+$shipment_id = $_GET['id'];
+$table_name = 'wp_shipments';
+$details = $wpdb->get_row("SELECT * FROM $table_name WHERE (id = '". $shipment_id ."')");
+
+$table_address = 'wp_addresses';
+$customer_id = get_userdata($details->customer_id);
+$creator_id = get_userdata($details->creator_id);
+$from_address = $wpdb->get_row("SELECT * FROM $table_address WHERE (id = '". $details->fromAddress_id ."')");
+$to_address = $wpdb->get_row("SELECT * FROM $table_address WHERE (id = '". $details->toAddress_id ."')");
+
+?>
 <div id="shipmentDetails">
     <div class="container">
         <div class="row">
-            <h1>Shipment #</h1>
+            <h1>Shipment #<?= $shipment_id ?></h1>
             <br/>
             <br/>
             <p>Key </p>
@@ -16,51 +30,51 @@
                 <tbody>
                 <tr>
                     <th>Status</th>
-                    <th></th>
+                    <td><?= $details->status ?></td>
                 </tr>
                 <tr>
                     <th>Ticket ID</th>
-                    <th></th>
+                    <td><?= $details->ticket_id ?></td>
                 </tr>
                 <tr>
                     <th>Creation Date</th>
-                    <th></th>
+                    <td><?= $details->creation_date ?></td>
                 </tr>
                 <tr>
                     <th>Creator</th>
-                    <th></th>
+                    <td><?= $creator_id->data->display_name ?></td>
                 </tr>
                 <tr>
                     <th>Customer</th>
-                    <th></th>
+                    <td><?= $customer_id->data->display_name ?></td>
                 </tr>
                 <tr>
                     <th>Shipment Date</th>
-                    <th></th>
+                    <td><?= $details->shipDate ?></td>
                 </tr>
                 <tr>
                     <th>Address</th>
-                    <th></th>
+                    <td></td>
                 </tr>
                 <tr>
                     <th>Server</th>
-                    <th></th>
+                    <td style="text-transform: uppercase"><?= $details->server ?></td>
                 </tr>
                 <tr>
                     <th>Server Level</th>
-                    <th></th>
+                    <td><?= $details->serverLevel ?></td>
                 </tr>
                 <tr>
                     <th>Package Type</th>
-                    <th></th>
+                    <td><?= $details->packageType ?></td>
                 </tr>
                 <tr>
                     <th>Packages</th>
-                    <th></th>
+                    <td></td>
                 </tr>
                 <tr>
                     <th>Labels</th>
-                    <th></th>
+                    <td></td>
                 </tr>
                 </tbody>
             </table>

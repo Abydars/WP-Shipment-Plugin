@@ -144,6 +144,12 @@
     padding: 0 10px;
 }
 
+.view_shipment i{
+    background: #23282d;
+    color: #fff;
+    padding: 6px;
+}
+
 /*Shipment Details*/
 
 #shipmentDetails .shipment_detail_actions {
@@ -156,6 +162,28 @@
     border-color: #d43f3a;
     padding: 6px 12px;
     font-size: 14px;
+}
+
+#shipmentDetails table{
+    width: 100%;
+}
+
+.shipment_detail_actions{
+    margin-bottom: 20px;
+}
+
+#shipmentDetails th{
+    color: #000;
+    text-align: center;
+}
+
+#shipmentDetails th, #shipmentDetails td {
+    color: #000;
+    vertical-align: middle;
+    padding: .75rem;
+    text-align: left;
+    font-size: 15px;
+    border: 1px solid lightgray;
 }
 
 /*Rate Shop*/
@@ -178,5 +206,5 @@
 
 #rateShop th, #rateShop td {
     font-size: 15px;
-    border: 1px solid #ebebeb;
+    border: 1px solid lightgray;
 }

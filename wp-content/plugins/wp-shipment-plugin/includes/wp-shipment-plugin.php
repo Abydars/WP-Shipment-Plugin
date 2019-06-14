@@ -44,6 +44,7 @@ class WPSP
 	public function register_plugin_styles()
 	{
 		wp_enqueue_style( 'wpsp_styles', WPSP_PLUGIN_URL . '/includes/assets/css/custom.css' );
+		wp_enqueue_style( 'wpsp_font_awesome', WPSP_PLUGIN_URL . '/includes/assets/fontawesome/css/all.css' );
 		wp_enqueue_style( 'wpsp_data-table-styles', WPSP_PLUGIN_URL . '/includes/assets/css/jquery.dataTables.min.css' );
 		wp_enqueue_script( 'wpsp_data-table-script', WPSP_PLUGIN_URL . '/includes/assets/js/jquery.dataTables.min.js' );
 		wp_enqueue_script( 'wpsp_scripts', WPSP_PLUGIN_URL . '/includes/assets/js/custom.js' );
@@ -52,13 +53,27 @@ class WPSP
 	function setup_shipment_menu()
 	{
 		add_menu_page( 'Shipments', 'Shipments', 'manage_options', 'shipments', array( $this, 'list_shipments' ) );
-		add_submenu_page( 'shipments', 'Create Shipment', 'Create Shipment', 'manage_options', 'create-shipment', '' );
+//		add_submenu_page( 'shipments', 'Create Shipment', 'Create Shipment', 'manage_options', 'create-shipment', '' );
+		add_submenu_page( 'shipments', 'Addresses', 'Addresses', 'manage_options', 'create-shipment', array($this, 'list_addresses') );
+		add_submenu_page( 'shipments', 'Create Address', 'Create Address', 'manage_options', 'create-shipment', array($this, 'create_address') );
 	}
 
 	function list_shipments()
 	{
-		include( 'templates/list_shipment.php' );
+	    if(isset($_GET['id'])){
+            include( 'templates/shipment-details.php' );
+        }else{
+            include( 'templates/list_shipment.php' );
+        }
 	}
+
+	function list_addresses(){
+        include('templates/list_addresses.php');
+    }
+
+    function create_address(){
+        include('templates/create_address.php');
+    }
 
 	function add_toolbar_items( $admin_bar )
 	{
