@@ -1,14 +1,5 @@
 <?php
 
-/*
- * TODO: TASK FOR ARSALAN
- * - Create shipments listing page and details page with void label button
- *      -- Void label men ajax request jayegi iss action par "wpsp_void_label" and sath men "id" jayegi shipment ki
- *
- * - Create addresses management page
- *      -- Address ka table hai db men, CRUD operations karane hen usmen
- */
-
 class WPSP
 {
 	public function __construct()
@@ -53,28 +44,38 @@ class WPSP
 
 	function setup_shipment_menu()
 	{
-		add_menu_page( 'Shipments', 'Shipments', 'manage_options', 'shipments', array( $this, 'list_shipments' ) );
-//		add_submenu_page( 'shipments', 'Create Shipment', 'Create Shipment', 'manage_options', 'create-shipment', '' );
-		add_submenu_page( 'shipments', 'Addresses', 'Addresses', 'manage_options', 'list_addresses', array($this, 'list_addresses') );
-		add_submenu_page( 'shipments', 'Create Address', 'Create Address', 'manage_options', 'create_address', array($this, 'create_address') );
+		add_menu_page( __( 'Shipments', WPSP_LANG ), __( 'Shipments', WPSP_LANG ), 'manage_options', 'shipments', array(
+			$this,
+			'list_shipments'
+		) );
+		add_submenu_page( 'shipments', __( 'Addresses', WPSP_LANG ), __( 'Addresses', WPSP_LANG ), 'manage_options', 'list_addresses', array(
+			$this,
+			'list_addresses'
+		) );
+		add_submenu_page( 'shipments', __( 'Create Address', WPSP_LANG ), __( 'Create Address', WPSP_LANG ), 'manage_options', 'create_address', array(
+			$this,
+			'create_address'
+		) );
 	}
 
 	function list_shipments()
 	{
-	    if(isset($_GET['id'])){
-            include( 'templates/shipment-details.php' );
-        }else{
-            include( 'templates/list_shipment.php' );
-        }
+		if ( isset( $_GET['id'] ) ) {
+			include( 'templates/shipment-details.php' );
+		} else {
+			include( 'templates/list_shipment.php' );
+		}
 	}
 
-	function list_addresses(){
-        include('templates/list_addresses.php');
-    }
+	function list_addresses()
+	{
+		include( 'templates/list_addresses.php' );
+	}
 
-    function create_address(){
-        include('templates/create_address.php');
-    }
+	function create_address()
+	{
+		include( 'templates/create_address.php' );
+	}
 
 	function add_toolbar_items( $admin_bar )
 	{
