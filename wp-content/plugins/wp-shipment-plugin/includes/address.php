@@ -89,36 +89,41 @@ class WPSP_Address
             "data" => json_encode($address),
             "is_default" => $is_first,
             "type" => null,
-            "is_verified" => 0
+            "is_verified" => 1
         );
         $res = $wpdb->insert(self::get_table_name(), $row);
 //		var_dump($res);
         return $address;
     }
 
-    public static function edit_address($id)
+    public static function edit_address($id,$data)
     {
         global $wpdb;
         $error = false;
 
-        $address = self::getAddress($id);
+        $old_address = self::getAddress($id);
+        $old_address = (object) $old_address;
+//        die;
+        $address = $data;
 
-        $addresses = self::get_addresses_by_customer($address->customer_id);
+        $addresses = self::get_addresses_by_customer($old_address->customer_id);
+
         $is_first = empty($addresses);
         $row = array(
             "address_name" => $address->full_name . " " . $address->street_1 . " " . $address->street_2 . ", " . $address->city . ", " . $address->state . ", " . $address->country . " " . $address->zip_code,
-            "customer_id" => $address->customer,
+            "customer_id" => $old_address->customer_id,
             "data" => json_encode($address),
             "is_default" => $is_first,
             "type" => null,
             "is_verified" => 0
         );
+//        var_dump($row);die;
         $where = array(
             "id" => $id
         );
 
-        $result = wpdb::update( self::get_table_name(), $row, $where);
-
+        $result = $wpdb->update( self::get_table_name(), $row, $where);
+//        var_dump($result);die;
         if ( false === $result ) {
             $error = true;
         } else {

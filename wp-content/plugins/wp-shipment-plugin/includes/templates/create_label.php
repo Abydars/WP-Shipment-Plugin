@@ -261,7 +261,7 @@
             </div>
         </div>
     </div>
-    <div id="addAddressModal" class="modal">
+    <div id="addAddressModal" class="modal" >
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Add New Address</h2>

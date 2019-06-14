@@ -242,4 +242,38 @@ class WPSP_ShipmentActions
     {
         include('templates/shipment-details.php');
     }
+
+    function action_edit_address(){
+        $response = [];
+
+        if (isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'wpsp_edit_address')) {
+
+
+            $error = false;
+            $post_data = (object)$_POST;
+//            do_action_ref_array("wpsp_verify_address_{$post_data->carrier}", [
+//                $post_data,
+//                &$error
+//            ]);
+
+            if (!$error) {
+//			    var_dump('here');die();
+                $id = $post_data->id;
+                $address = WPSP_Address::edit_address($id,$post_data);
+                $response['status'] = true;
+                $response['message'] = __('Address Edit successfully', WPSP_LANG);
+                $response['data'] = $address;
+            } else {
+                $response['status'] = false;
+                $response['message'] = $error;
+            }
+        } else {
+            $response['status'] = false;
+            $response['message'] = __('Please try again', WPSP_LANG);
+        }
+
+        header('Content-Type: application/json');
+        echo json_encode($response);
+        die;
+    }
 }
