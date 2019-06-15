@@ -261,6 +261,42 @@ class WPSP_ShipmentActions
 
 	function action_get_rates()
 	{
+		$all_rates    = [];
+		$response     = [];
+		$error        = false;
+		$post_data    = (object) $_POST;
+		$carrier_keys = [ $post_data->carrier ];
+		$carriers     = apply_filters( 'wpsp_shipment_carriers', [] );
+
+		if ( empty( $post_data->carrier ) ) {
+			$carrier_keys = array_keys( $carriers );
+		}
+
+		foreach ( $carrier_keys as $k => $carrier ) {
+			$rates = [];
+
+			do_action_ref_array( "wpsp_service_rates_{$carrier}", [
+				$post_data,
+				&$error,
+				&$rates
+			] );
+
+			$all_rates[ $carrier ] = [
+				'name'  => $carriers[ $carrier ],
+				'rates' => $rates
+			];
+		}
+
+		$response['status'] = true;
+		$response['data']   = $all_rates;
+
+		if ( $error ) {
+			$response['status']  = true;
+			$response['message'] = $error;
+		}
+
+		header( 'Content-Type: application/json' );
+		echo json_encode( $response );
 		die;
 	}
 

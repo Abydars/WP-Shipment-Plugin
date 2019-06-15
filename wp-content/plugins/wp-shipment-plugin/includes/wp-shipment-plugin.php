@@ -135,7 +135,7 @@ class WPSP
 
 	function wsp_render_shipment_form()
 	{
-		$carriers  = [];
+		$carriers  = [ '' => 'All' ];
 		$carriers  = apply_filters( 'wpsp_shipment_carriers', $carriers );
 		$customers = WPSP_Customer::get_customers();
 

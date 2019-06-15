@@ -31,6 +31,96 @@ class WPSP_USPS
 		add_action( 'wpsp_create_label_usps', [ $this, 'wpsp_create_label_usps' ], 10, 3 );
 		add_action( 'wpsp_label_rates_usps', [ $this, 'wpsp_label_rates_usps' ], 10, 3 );
 		add_action( 'wpsp_void_label_usps', [ $this, 'wpsp_void_label_usps' ], 10, 2 );
+		add_action( 'wpsp_service_rates_usps', [ $this, 'wpsp_service_rates_usps' ], 10, 3 );
+	}
+
+	function wpsp_service_rates_usps( $data, &$error, &$rates )
+	{
+		$rates        = [];
+		$error        = false;
+		$from_address = WPSP_Address::getAddress( $data->from );
+		$to_address   = WPSP_Address::getAddress( $data->to );
+		$from_zip     = $from_address['zip_code'];
+		$to_zip       = $to_address['zip_code'];
+
+		$d = [
+			'Revision' => 2,
+		];
+
+		foreach ( $data->packages as $k => $package ) {
+			$id = $k + 1;
+
+			$d["Package_{$id}"] = [
+				'_attributes'    => [
+					'ID' => $id,
+				],
+				'Service'        => 'All',
+				'ZipOrigination' => $from_zip,
+				'ZipDestination' => $to_zip,
+				'Pounds'         => ( $package['weight'] / 16 ),
+				'Ounces'         => $package['weight'],
+				'Container'      => $data->package_type,
+				'Size'           => 'REGULAR',
+				'Width'          => $package['width'],
+				'Length'         => $package['length'],
+				'Height'         => $package['height'],
+				'Girth'          => ( ( $package['width'] + $package['height'] ) * 2 ),
+				'Machinable'     => 'True'
+			];
+		}
+
+		$xml = ShipmentArrayToXml::convert( $d, [
+			'rootElementName' => 'RateV4Request',
+			'_attributes'     => [
+				'USERID' => WPSP_USPS_USER_ID,
+			],
+		], true, 'UTF-8' );
+
+		foreach ( $data->packages as $k => $package ) {
+			$id  = $k + 1;
+			$xml = str_replace( "Package_{$id}", "Package", $xml );
+		}
+
+		$url = add_query_arg( [
+			                      'API' => 'RateV4',
+			                      'XML' => urlencode( $xml )
+		                      ], "ShippingAPI.dll" );
+
+		$res = $this->request( $url );
+		$res = ShipmentXmlToArray::convert( $res );
+
+		if ( ! isset( $res['Error'] ) ) {
+			$res      = $res['RateV4Response'];
+			$packages = [];
+
+			if ( count( $data->packages ) == 1 ) {
+				$packages[] = $res['Package'];
+			} else {
+				$packages = $res['Package'];
+			}
+
+			foreach ( $packages as $package ) {
+				$postages = [];
+
+				if ( ! empty( $package['Postage']['_attributes'] ) ) {
+					$postages[] = $package['Postage'];
+				} else {
+					$postages = $package['Postage'];
+				}
+
+				foreach ( $postages as $postage ) {
+					$rates[] = [
+						'name'         => $postage['MailService'],
+						'rate'         => $postage['Rate'],
+						'level'        => null,
+						'package_type' => null
+					];
+				}
+			}
+
+		} else {
+			$error = $res['Error']['Description'];
+		}
 	}
 
 	function wpsp_void_label_usps( &$error, $shipment_id )
@@ -84,14 +174,6 @@ class WPSP_USPS
 		return floatval( $value );
 	}
 
-	function wpsp_label_rates_usps2( $data, &$error, &$rates )
-	{
-		// TODO: RATES API
-
-		$rates = 5;
-		$error = false;
-	}
-
 	function wpsp_label_rates_usps( $data, &$error, &$rates )
 	{
 		$error        = false;
@@ -117,7 +199,7 @@ class WPSP_USPS
 				'Pounds'         => ( $package['weight'] / 16 ),
 				'Ounces'         => $package['weight'],
 				'Container'      => $data->package_type,
-				'Size'           => 'LARGE',
+				'Size'           => 'REGULAR',
 				'Width'          => $package['width'],
 				'Length'         => $package['length'],
 				'Height'         => $package['height'],

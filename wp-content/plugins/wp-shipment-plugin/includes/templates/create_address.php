@@ -17,7 +17,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="wpsp-row">
+                <div class="wpsp-row" style="display: none;">
                     <div class="wpsp-form-group">
                         <label>Paste US Address</label>
                         <br/>

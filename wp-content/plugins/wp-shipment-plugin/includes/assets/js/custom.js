@@ -6,13 +6,13 @@ jQuery(function ($) {
 
     setTimeout(function () {
         $('div#shipment-form').hide();
-    }, 200)
+    }, 200);
 
     $('body').on('label.form.loaded', function () {
         formInit();
     });
 
-    $(document).on('change', '#shipment_form select[name="carrier"]', function () {
+    $(document).on('change', '#shipment_form select[name="carrier"]', function (e, level, package_type) {
         var carrier = $(this).val();
         var $select_levels = $('select[name="shipping_method"]');
         var $package_types = $('select[name="package_type"]');
@@ -30,6 +30,9 @@ jQuery(function ($) {
                 for (var i in res) {
                     $select_levels.append('<option>' + res[i] + '</option>');
                 }
+
+                if (level !== undefined)
+                    $select_levels.val(level);
             }
         });
 
@@ -46,6 +49,9 @@ jQuery(function ($) {
                 for (var i in res) {
                     $package_types.append('<option>' + res[i] + '</option>');
                 }
+
+                if (package_type !== undefined)
+                    $package_types.val(package_type);
             }
         });
     });
@@ -114,8 +120,10 @@ jQuery(function ($) {
 
     $(document).on('click', '#btn-new-package', function (e) {
         e.preventDefault();
+
         var count = $('.package').length;
         var arrIndex = count - 1;
+
         $('.right-sidebar .packages').append('<div class="package">' +
             '<div class="wpsp-row">' +
             '<div class="wpsp-one-half">' +
@@ -132,12 +140,11 @@ jQuery(function ($) {
             '<input type="text" name="packages[' + arrIndex + '][weight]">' +
             '</div>' +
             '</div>' +
-            '</div>' +
-            '<div class="wpsp-row">' +
             '<div class="wpsp-one-half">' +
             '<div class="wpsp-form-group">' +
             '<label>Length (inches)</label>' +
             '<input type="text" name="packages[' + arrIndex + '][length]">' +
+            '</div>' +
             '</div>' +
             '</div>' +
             '<div class="wpsp-one-half">' +
@@ -146,39 +153,17 @@ jQuery(function ($) {
             '<input type="text" name="packages[' + arrIndex + '][width]">' +
             '</div>' +
             '</div>' +
-            '</div>' +
-            '<div class="wpsp-row">' +
             '<div class="wpsp-one-half">' +
             '<div class="wpsp-form-group">' +
             '<label>Height (inches)</label>' +
             '<input type="text" name="packages[' + arrIndex + '][height]">' +
             '</div>' +
             '</div>' +
-            '<div class="wpsp-one-half" style="display: none;">' +
-            '<div class="wpsp-form-group">' +
-            '<label>SKU</label>' +
-            '<input type="text" name="packages[' + arrIndex + '][sku]">' +
             '</div>' +
             '</div>' +
-            '</div>' +
-            '<div class="wpsp-row" style="display: none;">' +
-            '<div class="wpsp-one-half">' +
-            '<div class="wpsp-form-group">' +
-            '<label>Declared Currency</label>' +
-            '<select name="packages[' + arrIndex + '][declared_currency]">' +
-            '<option value=""></option>' +
-            '</select>' +
-            '</div>' +
-            '</div>' +
-            '<div class="wpsp-one-half">' +
-            '<div class="wpsp-form-group">' +
-            '<label>Declared Customs Value</label>' +
-            '<input type="text" name="packages[' + arrIndex + '][declared_customs_value]">' +
-            '</div>' +
-            '</div>' +
-            '</div>' +
-            '</div>');
-    })
+            '<div class="wpsp-clearfix"></div>'
+        );
+    });
 
     $(document).on('click', '.package .delete', function (e) {
         e.preventDefault();
@@ -247,8 +232,62 @@ jQuery(function ($) {
         })
     }
 
+    function refreshRates(all_rates) {
+        var $div = $('#rateShop #rates-list');
+
+        $div.empty();
+
+        for (var key in all_rates) {
+            var rate = all_rates[key];
+            var rates = rate['rates'];
+            var name = rate['name'];
+
+            var $h2 = $('<h2>');
+            $h2.text(name);
+
+            if (rates.length > 0) {
+                var $rates_tbl = $('<table/>');
+                var $rates_th = $('<thead><tr><th>Level</th><th>Rate</th><th>Action</th></tr></thead>');
+
+                $rates_tbl.append($rates_th);
+
+                for (var i in rates) {
+                    var level_rate = rates[i];
+
+                    var $tr = $('<tr/>');
+                    var $level_td = $('<td/>');
+                    var $rate_td = $('<td/>');
+                    var $action_td = $('<td/>');
+                    var $select_btn = $('<button/>');
+
+                    $select_btn.attr('data-carrier', key);
+                    $select_btn.attr('data-level', level_rate.level);
+                    $select_btn.attr('data-package-type', level_rate.package_type);
+                    $select_btn.text('Select');
+
+                    $level_td.text(level_rate.name);
+                    $rate_td.text('$' + level_rate.rate);
+                    $action_td.append($select_btn);
+
+                    $tr.append($level_td).append($rate_td).append($action_td);
+                    $rates_tbl.append($tr);
+                }
+
+                $div.append($h2);
+                $div.append($rates_tbl);
+            }
+        }
+    }
+
     function formInit() {
         $('#rateShop').hide();
+
+        var now = new Date();
+        var day = ("0" + now.getDate()).slice(-2);
+        var month = ("0" + (now.getMonth() + 1)).slice(-2);
+        var today = now.getFullYear() + "-" + (month) + "-" + (day);
+
+        $('.shipping-date input').val(today);
 
         $('#shipment_form').submit(function (e) {
             e.preventDefault();
@@ -341,17 +380,24 @@ jQuery(function ($) {
             })
         });
 
-        $(document).on('click', '#rateShop button', function (e) {
+        $(document).on('click', '#rates-list button', function (e) {
             e.preventDefault();
-            var carrier = $(this).val();
-            $('.shipping-carrier select').val(carrier).trigger('change');
+
+            var carrier = $(this).attr('data-carrier');
+            var level = $(this).attr('data-level');
+            var package_type = $(this).attr('data-package-type');
+
             $('#rateShop').hide();
-        })
+            $('.shipping-carrier select').val(carrier).trigger('change', [level, package_type, true]);
+        });
 
         $(document).on('click', '#rate-shop', function (e) {
             e.preventDefault();
 
-            var form_data = $('#shipment_form').serializeArray()
+            var form_data = $('#shipment_form').serializeArray();
+            var $btn = $(this);
+            var text = $btn.text();
+            var err = false;
 
             for (var i = 0; i <= form_data.length; i++) {
                 if (form_data[i].name === 'action') {
@@ -360,19 +406,56 @@ jQuery(function ($) {
                 }
             }
 
+            if ($('.customers-list select').val() == "") {
+                err = 'Please select customer first';
+            } else if ($('.from-address select').val() == "") {
+                err = 'Please select from address';
+            } else if ($('.to-address select').val() == "") {
+                err = 'Please select to address';
+            } else if ($('.package').first().find('input[name*="weight"]').val() == "") {
+                err = 'Package #1 weight is required';
+            } else if ($('.package').first().find('input[name*="width"]').val() == "") {
+                err = 'Package #1 width is required';
+            } else if ($('.package').first().find('input[name*="height"]').val() == "") {
+                err = 'Package #1 height is required';
+            } else if ($('.package').first().find('input[name*="length"]').val() == "") {
+                err = 'Package #1 length is required';
+            }
+
+            if (err !== false) {
+                alert(err);
+                return;
+            }
+
+            $btn.text('Please wait...');
+            $btn.attr('disabled', 'disabled');
+
             $.ajax({
                 type: 'POST',
                 dataType: 'JSON',
                 data: form_data,
                 url: wsp_ajax_url,
                 success: function (response) {
-                    $('#rateShop').show();
+                    if (response.status) {
+                        refreshRates(response.data);
+                        $('#rateShop').show();
+                    } else {
+                        $('#shipment_form .wpsp-success').hide();
+                        $('#shipment_form .wpsp-error').show().find('p').text(response.message);
+
+                        $('#wpsp-shipment-form-container').animate({
+                            scrollTop: 0
+                        });
+                    }
+
+                    $btn.text(text);
+                    $btn.removeAttr('disabled');
                 }
             })
-        })
+        });
 
         $(document).on('change', '#shipment_form .customers-list select', function () {
-            refreshAddresses()
-        })
+            refreshAddresses();
+        });
     }
 })

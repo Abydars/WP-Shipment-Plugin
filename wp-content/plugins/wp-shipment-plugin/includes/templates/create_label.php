@@ -29,28 +29,35 @@
                 </select>
             </div>
             <div class="wpsp-form-group from-address">
-                <label>From <a id="btn-new-from-address" href="#" class="from-address" data-type="from">(New
-                        Address)</a></label>
+                <label>From
+                    <button id="btn-new-from-address" href="#" class="btn-new-address from-address" data-type="from">Add
+                        New
+                        Address
+                    </button>
+                </label>
                 <select name="from" required>
                 </select>
             </div>
             <div class="wpsp-form-group to-address">
-                <label>To <a id="btn-new-to-address" href="#" class="to-address" data-type="to">(New
-                        Address)</a></label>
+                <label>To
+                    <button id="btn-new-to-address" href="#" class="btn-new-address to-address" data-type="to">Add New
+                        Address
+                    </button>
+                </label>
                 <select name="to" required>
                 </select>
             </div>
-            <div class="wpsp-form-group">
+            <div class="wpsp-form-group shipping-method">
                 <label>Shipping Method</label>
                 <select name="shipping_method" required>
                 </select>
             </div>
-            <div class="wpsp-form-group">
+            <div class="wpsp-form-group shipping-package-type">
                 <label>Package Type</label>
                 <select name="package_type" required>
                 </select>
             </div>
-            <div class="wpsp-form-group">
+            <div class="wpsp-form-group shipping-date">
                 <label>Shipping Date</label>
                 <input type="date" name="shipping_date" id="" required>
             </div>
@@ -63,7 +70,7 @@
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Weight (ounces)</label>
-                            <input type="text" name="packages[0][weight]" required>
+                            <input type="number" name="packages[0][weight]" required>
                         </div>
                     </div>
                     <div class="wpsp-one-half">
@@ -115,6 +122,9 @@
         </div>
         <div class="wpsp-clearfix"></div>
         <div class="wpsp-row">
+            <button id="btn-new-package">+ Add New Package</button>
+        </div>
+        <div class="wpsp-row">
             <div class="pickup">
                 <div class="wpsp-row schedule-pickup">
                     <label>
@@ -133,54 +143,20 @@
         <input type="hidden" name="action" value="save_label"/>
 		<?php wp_nonce_field( 'wpsp_save_label' ); ?>
 
-        <div id="rateShop" class="rateShop modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Rate Shop & Send</h2>
-                <br/>
-                <br/>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Shipping Carrier</th>
-                        <th>Rate</th>
-                        <th>Action</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>UPS</td>
-                        <td></td>
-                        <td>
-                            <button value="ups">Select</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>USPS</td>
-                        <td></td>
-                        <td>
-                            <button value="usps">Select</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>FEDEX</td>
-                        <td></td>
-                        <td>
-                            <button value="fedex">Select</button>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
         <div class="wpsp-row">
             <button id="rate-shop">Rate Shop & Send</button>
-            <button id="btn-new-package">+ Add New Package</button>
             <button type="submit">Create Shipment</button>
         </div>
     </form>
 
+    <div id="rateShop" class="rateShop modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Rate Shop & Send</h2>
+            <br/>
+            <div id="rates-list"></div>
+        </div>
+    </div>
     <div id="addNewPackage" class="new-package modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -255,7 +231,7 @@
             <h2>Add New Address</h2>
 
             <form method="POST" action="">
-                <div class="wpsp-row">
+                <div class="wpsp-row" style="display: none;">
                     <div class="wpsp-form-group">
                         <label>Paste US Address</label>
                         <br/>
@@ -351,5 +327,4 @@
         </div>
 
     </div>
-
 </div>

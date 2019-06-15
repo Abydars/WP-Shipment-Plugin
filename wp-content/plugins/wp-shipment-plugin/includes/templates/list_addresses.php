@@ -2,7 +2,7 @@
 
 global $wpdb;
 $table_name = 'wp_addresses';
-$addresses = $wpdb->get_results("SELECT * FROM $table_name");
+$addresses  = $wpdb->get_results( "SELECT * FROM $table_name" );
 //var_dump($addresses);
 ?>
 <div id="list-addresses">
@@ -14,6 +14,7 @@ $addresses = $wpdb->get_results("SELECT * FROM $table_name");
             <table id="listShipments">
                 <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Customer Name</th>
                     <th>Full Name</th>
                     <th>Company</th>
@@ -29,17 +30,16 @@ $addresses = $wpdb->get_results("SELECT * FROM $table_name");
                 </tr>
                 </thead>
                 <tbody>
-                <?php
-                foreach ($addresses as $address) {
-                    $address_data = json_decode($address->data);
-                    $address_data = (array)$address_data;
-                    $user = get_user_meta($address->customer_id);
-                    $user = (object) $user;
-//                    die();
-                    ?>
+				<?php
+				foreach ( $addresses as $address ) {
+					$address_data = json_decode( $address->data );
+					$address_data = (array) $address_data;
+					$user         = get_user_meta( $address->customer_id );
+					$user         = (object) $user;
+					?>
                     <tr style="text-align: left">
-<!--                        <td></td>-->
-                        <td><?= $user->first_name[0] . " ". $user->last_name[0] ?></td>
+                        <td><?= $address->id ?></td>
+                        <td><?= $user->first_name[0] . " " . $user->last_name[0] ?></td>
                         <td><?= $address_data['full_name'] ?></td>
                         <td><?= $address_data['company'] ?></td>
                         <td><?= $address_data['country'] ?></td>
@@ -48,16 +48,17 @@ $addresses = $wpdb->get_results("SELECT * FROM $table_name");
                         <td><?= $address_data['street_2'] ?></td>
                         <td><?= $address_data['state'] ?></td>
                         <td><?= $address_data['zip_code'] ?></td>
-                        <td><?= $address_data['phone']?></td>
+                        <td><?= $address_data['phone'] ?></td>
                         <td><?= $address_data['email'] ?></td>
                         <td class="view_shipment">
-                            <a id="btn-edit-from-address" href="#" class="from-address" data-type="from" data-id="<?= $address->id ?>"><i class="fa fa-eye"></i></a>
+                            <a id="btn-edit-from-address" href="#" class="from-address" data-type="from"
+                               data-id="<?= $address->id ?>"><i class="fa fa-eye"></i></a>
                             <a>
                                 <i class="fa fa-trash"></i>
                             </a>
                         </td>
                     </tr>
-                <?php } ?>
+				<?php } ?>
                 </tbody>
             </table>
         </div>
@@ -67,12 +68,13 @@ $addresses = $wpdb->get_results("SELECT * FROM $table_name");
                 <h2>Edit Address</h2>
 
                 <form method="POST" action="">
-                    <div class="wpsp-row">
+                    <div class="wpsp-row" style="display: none;">
                         <div class="wpsp-form-group">
                             <label>Paste US Address</label>
                             <br/>
                             <span>Format: 1005 N Gravenstein Highway Sebastopol, CA 95472</span>
-                            <textarea name="address" placeholder="1005 N Gravenstein Highway Sebastopol, CA 95472" style="width: 100%;"></textarea>
+                            <textarea name="address" placeholder="1005 N Gravenstein Highway Sebastopol, CA 95472"
+                                      style="width: 100%;"></textarea>
                         </div>
                     </div>
                     <div class="wpsp-row">
@@ -150,7 +152,7 @@ $addresses = $wpdb->get_results("SELECT * FROM $table_name");
 
                     <input type="hidden" name="action" value="wpsp_edit_address"/>
                     <input type="hidden" name="id" value=""/>
-                    <?php wp_nonce_field( 'wpsp_edit_address' ); ?>
+					<?php wp_nonce_field( 'wpsp_edit_address' ); ?>
 
                     <div class="wpsp-row">
                         <div class="action">
