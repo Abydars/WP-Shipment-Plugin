@@ -22,6 +22,7 @@ include( 'includes/shipment.php' );
 include( 'includes/address.php' );
 include( 'includes/user-meta.php' );
 include( 'includes/tcpdf/tcpdf.php' );
+include( 'includes/FPDI/fpdi.php' );
 include( 'includes/pdf-helper.php' );
 
 $wp_shipment = new WPSP();

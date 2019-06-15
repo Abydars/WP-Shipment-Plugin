@@ -245,10 +245,39 @@ class WPSP_USPS
 		}
 	}
 
-	function wpsp_create_label_usps( &$error, &$encoded_image, $shipment_data )
+	function wpsp_create_label_usps( &$error, &$encoded_images, $shipment_data )
 	{
-		$encoded_image = $shipment_data['label'];
-		$error         = empty( $encoded_image ) ? __( 'Label not found', WPSP_LANG ) : false;
+		$error = __( 'Label not found', WPSP_LANG );
+
+		if ( ! empty( $shipment_data['label'] ) ) {
+			$pdf_file_name = "{$shipment_data['shipKey']}.pdf";
+			$png_file_name = "{$shipment_data['shipKey']}.jpg";
+
+			$filepath      = apply_filters( 'wpsp_file_dir', $pdf_file_name );
+			$png_filepath  = apply_filters( 'wpsp_file_dir', $png_file_name );
+			$pdf_path_page = "{$filepath}[1]";
+
+			file_put_contents( $filepath, base64_decode( $shipment_data['label'] ) );
+
+			try {
+				if ( class_exists( 'Imagick' ) ) {
+					$image = new Imagick( $pdf_path_page );
+
+					$image->setResolution( 300, 300 );
+					$image->setImageFormat( "jpg" );
+					$image->setImageCompression( Imagick::COMPRESSION_JPEG );
+					$image->setImageCompressionQuality( 90 );
+					$image->writeImage( $png_filepath );
+
+					$encoded_images[] = $png_filepath;
+				} else {
+					$error = __( 'Imagick extension is required to generate labels', WPSP_LANG );
+				}
+			} catch ( ImagickException $e ) {
+				$error = $e->getMessage();
+			}
+		}
+		$error = false;
 	}
 
 	function wpsp_usps_create_shipment( $data, &$error, &$shipment_data )

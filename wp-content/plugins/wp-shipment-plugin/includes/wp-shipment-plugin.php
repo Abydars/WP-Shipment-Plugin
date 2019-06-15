@@ -26,6 +26,8 @@ class WPSP
 		add_action( 'admin_init', array( $wpsp_actions, 'action_create_new_address' ) );
 		add_filter( 'wpsp_error', array( $wpsp_actions, 'filter_wpsp_error' ) );
 		add_filter( 'wpsp_success', array( $wpsp_actions, 'filter_wpsp_success' ) );
+		add_filter( 'wpsp_file_dir', array( $wpsp_actions, 'filter_wpsp_file_dir' ) );
+		add_filter( 'wpsp_file_url', array( $wpsp_actions, 'filter_wpsp_file_url' ) );
 
 		//User Extras
 		$wpsp_user_meta = new WPSP_UserMeta();
@@ -209,6 +211,12 @@ class WPSP
 					faxid varchar(255) DEFAULT '',
 					status tinyint(1) DEFAULT 0,
 					PRIMARY KEY  (id)" );
+
+		$filepath = apply_filters( 'wpsp_file_dir', '/' );
+
+		if ( ! file_exists( $filepath ) ) {
+			mkdir( $filepath, 775 );
+		}
 
 		add_option( 'wpsp_db_version', WPSP_DB_VERSION );
 	}

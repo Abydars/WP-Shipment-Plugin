@@ -2,6 +2,20 @@
 
 class WPSP_ShipmentActions
 {
+	function filter_wpsp_file_dir( $filename )
+	{
+		$filepath = WPSP_FILES_DIR . $filename;
+
+		return $filepath;
+	}
+
+	function filter_wpsp_file_url( $filename )
+	{
+		$fileurl = WPSP_FILES_URL . $filename;
+
+		return $fileurl;
+	}
+
 	function filter_wpsp_error( $text )
 	{
 		return '<div class="wpsp-error"' . ( empty( $text ) ? 'style="display: none;"' : '' ) . '><h3><i class="fa fa-frown"></i><p>' . $text . '</p></h3></div>';
@@ -145,13 +159,13 @@ class WPSP_ShipmentActions
 						$inserted = $wpdb->insert( $wpdb->prefix . 'shipments', $row );
 
 						if ( $inserted ) {
-							$shipment_id   = $wpdb->insert_id;
-							$encoded_image = false;
+							$shipment_id    = $wpdb->insert_id;
+							$encoded_images = [];
 
 							// create label
 							do_action_ref_array( "wpsp_create_label_{$post_data->carrier}", [
 								&$error,
-								&$encoded_image,
+								&$encoded_images,
 								$shipment_data,
 								$shipment_id,
 								$post_data,
@@ -160,11 +174,35 @@ class WPSP_ShipmentActions
 							if ( ! $error ) {
 
 								// TODO: generate label
-								//$file_name = "{$post_data->carrier}-{$shipment_id}.tiff";
-								//list( $file_path, $file_url ) = WPSP_PdfHelper::generate( $encoded_image, $file_name );
+								$shipment       = WPSP_Shipment::get_shipment( $shipment_id );
+								$encoded_images = [
+									apply_filters( 'wpsp_file_dir', 'test.jpg' ),
+									apply_filters( 'wpsp_file_dir', 'test.jpg' ),
+								];
+								$pages          = [];
 
-								//var_dump( $file_url, $file_path );
-								//die;
+								foreach ( $encoded_images as $k => $encoded_image ) {
+									$filename = apply_filters( 'wpsp_file_dir', "{$post_data->carrier}-{$shipment_id}-{$k}.pdf" );
+
+									WPSP_PdfHelper::generate( $encoded_image, $filename, '', '', 'image' );
+
+									$pages[] = $filename;
+								}
+
+								$filename = apply_filters( 'wpsp_file_dir', "{$post_data->carrier}-{$shipment_id}-summary.pdf" );
+								$subject  = __( 'Label', WPSP_LANG );
+								$subtitle = __( '', WPSP_LANG );
+
+								$text = "Shipment ID# {$shipment->id}<br/>";
+								$text .= "Rate: {$shipment->rates}<br/>";
+
+								WPSP_PdfHelper::generate( $text, $filename, $subject, $subtitle );
+
+								$pages[] = $filename;
+
+								$filename = apply_filters( 'wpsp_file_dir', "{$post_data->carrier}-{$shipment_id}-final.pdf" );
+
+								WPSP_PdfHelper::merge( $pages, 'F', $filename );
 
 								// TODO: send label via email and fax
 
