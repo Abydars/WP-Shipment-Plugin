@@ -107,6 +107,7 @@ class WPSP_ShipmentActions
 
 				// check for funds
 				$user_funds  = WPSP_Customer::get_account_funds( $post_data->customer );
+				$customer    = WPSP_Customer::get_customer( $post_data->customer );
 				$markup_rate = apply_filters( "wpsp_get_markup_rate_{$post_data->carrier}", 0, $post_data->customer );
 				$label_rates = $rates;
 
@@ -174,20 +175,9 @@ class WPSP_ShipmentActions
 							if ( ! $error ) {
 
 								// TODO: generate label
-								$shipment       = WPSP_Shipment::get_shipment( $shipment_id );
-								$encoded_images = [
-									apply_filters( 'wpsp_file_dir', 'test.jpg' ),
-									apply_filters( 'wpsp_file_dir', 'test.jpg' ),
-								];
-								$pages          = [];
-
-								foreach ( $encoded_images as $k => $encoded_image ) {
-									$filename = apply_filters( 'wpsp_file_dir', "{$post_data->carrier}-{$shipment_id}-{$k}.pdf" );
-
-									WPSP_PdfHelper::generate( $encoded_image, $filename, '', '', 'image' );
-
-									$pages[] = $filename;
-								}
+								$shipment    = WPSP_Shipment::get_shipment( $shipment_id );
+								$extra_files = [];
+								$pages       = [];
 
 								$filename = apply_filters( 'wpsp_file_dir', "{$post_data->carrier}-{$shipment_id}-summary.pdf" );
 								$subject  = __( 'Label', WPSP_LANG );
@@ -198,13 +188,42 @@ class WPSP_ShipmentActions
 
 								WPSP_PdfHelper::generate( $text, $filename, $subject, $subtitle );
 
-								$pages[] = $filename;
+								$pages[]       = $filename;
+								$extra_files[] = $filename;
 
-								$filename = apply_filters( 'wpsp_file_dir', "{$post_data->carrier}-{$shipment_id}-final.pdf" );
+								foreach ( $encoded_images as $k => $encoded_image ) {
+									$filename = apply_filters( 'wpsp_file_dir', "{$post_data->carrier}-{$shipment_id}-{$k}.pdf" );
 
-								WPSP_PdfHelper::merge( $pages, 'F', $filename );
+									if ( strpos( basename( $encoded_image ), '.pdf' ) > 0 ) {
+										$filename = $encoded_image;
+									} else {
+										WPSP_PdfHelper::generate( $encoded_image, $filename, '', '', 'image' );
+									}
 
-								// TODO: send label via email and fax
+									$pages[]       = $filename;
+									$extra_files[] = $filename;
+									$extra_files[] = $encoded_image;
+								}
+
+								$final_filename = apply_filters( 'wpsp_file_dir', "{$post_data->carrier}-{$shipment_id}.pdf" );
+
+								WPSP_PdfHelper::merge( $pages, 'F', $final_filename );
+
+								foreach ( $extra_files as $page ) {
+									unlink( $page );
+								}
+
+								// TODO: send label via email
+								$email         = $customer->user_email;
+								$headers       = array(
+									'Content-Type: text/html; charset=UTF-8'
+								);
+								$attachments[] = $final_filename;
+
+								wp_mail( $email, "Ship4LessLabels - Shipment #{$shipment_id}", __( "Attached labels and cost summary.", WPSP_LANG ), $headers, $attachments );
+
+								// TODO: send label via fax
+
 
 								// funds deduct
 								WPSP_Customer::deduct_funds( $post_data->customer, $rates );

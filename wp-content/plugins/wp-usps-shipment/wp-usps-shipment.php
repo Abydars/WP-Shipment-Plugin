@@ -251,31 +251,11 @@ class WPSP_USPS
 
 		if ( ! empty( $shipment_data['label'] ) ) {
 			$pdf_file_name = "{$shipment_data['shipKey']}.pdf";
-			$png_file_name = "{$shipment_data['shipKey']}.jpg";
-
 			$filepath      = apply_filters( 'wpsp_file_dir', $pdf_file_name );
-			$png_filepath  = apply_filters( 'wpsp_file_dir', $png_file_name );
-			$pdf_path_page = "{$filepath}[1]";
 
 			file_put_contents( $filepath, base64_decode( $shipment_data['label'] ) );
 
-			try {
-				if ( class_exists( 'Imagick' ) ) {
-					$image = new Imagick( $pdf_path_page );
-
-					$image->setResolution( 300, 300 );
-					$image->setImageFormat( "jpg" );
-					$image->setImageCompression( Imagick::COMPRESSION_JPEG );
-					$image->setImageCompressionQuality( 90 );
-					$image->writeImage( $png_filepath );
-
-					$encoded_images[] = $png_filepath;
-				} else {
-					$error = __( 'Imagick extension is required to generate labels', WPSP_LANG );
-				}
-			} catch ( ImagickException $e ) {
-				$error = $e->getMessage();
-			}
+			$encoded_images[] = $filepath;
 		}
 		$error = false;
 	}
@@ -294,7 +274,7 @@ class WPSP_USPS
 			foreach ( $packages as $package ) {
 				$d = [
 					'Option'                     => 1,
-					'ImageParameters'            => [ 'ImageParameter' => 'CROP' ],
+					'ImageParameters'            => [ 'ImageParameter' => 'BARCODE ONLY' ],
 					'FromName'                   => $from_address['full_name'],
 					'FromFirm'                   => $from_address['company'],
 					'FromAddress1'               => $from_address['street_2'],
