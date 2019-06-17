@@ -108,6 +108,7 @@ class WPSP_ShipmentActions
 				// check for funds
 				$user_funds  = WPSP_Customer::get_account_funds( $post_data->customer );
 				$customer    = WPSP_Customer::get_customer( $post_data->customer );
+				$fax_number  = WPSP_Customer::get_fax_number( $post_data->customer );
 				$markup_rate = apply_filters( "wpsp_get_markup_rate_{$post_data->carrier}", 0, $post_data->customer );
 				$label_rates = $rates;
 
@@ -196,7 +197,8 @@ class WPSP_ShipmentActions
 									$text .= "<br /><br /><span style='color: red;'>Unverified Address</span>";
 								}
 
-								$text = apply_filters( "wpsp_label_summary_{$post_data->carrier}", $text );
+								$text = apply_filters( "wpsp_label_summary", $text, $shipment_id );
+								$text = apply_filters( "wpsp_label_summary_{$post_data->carrier}", $text, $shipment_id );
 
 								WPSP_PdfHelper::generate( $text, $filename, $subject, $subtitle );
 
@@ -218,6 +220,7 @@ class WPSP_ShipmentActions
 								}
 
 								$final_filename = apply_filters( 'wpsp_file_dir', "{$post_data->carrier}-{$shipment_id}.pdf" );
+								$final_fileurl  = apply_filters( 'wpsp_file_url', "{$post_data->carrier}-{$shipment_id}.pdf" );
 
 								WPSP_PdfHelper::merge( $pages, 'F', $final_filename );
 
@@ -225,17 +228,20 @@ class WPSP_ShipmentActions
 									unlink( $page );
 								}
 
-								// TODO: send label via email
+								// send label via email
 								$email         = $customer->user_email;
 								$headers       = array(
 									'Content-Type: text/html; charset=UTF-8'
 								);
 								$attachments[] = $final_filename;
 
-								wp_mail( $email, "Ship4LessLabels - Shipment #{$shipment_id}", __( "Attached labels and cost summary.", WPSP_LANG ), $headers, $attachments );
+								wp_mail( $email, "Ship4LessLabels - Shipment #{$shipment_id}", __( "Label Summary: {$text}", WPSP_LANG ), $headers, $attachments );
 
-								// TODO: send label via fax
-
+								// send label via fax
+								if ( class_exists( 'WPTM_FaxManager' ) && ! empty( $fax_number ) ) {
+									$wptm_manager = new WPTM_FaxManager();
+									$wptm_manager->sendFax( $fax_number, $final_fileurl );
+								}
 
 								// funds deduct
 								WPSP_Customer::deduct_funds( $post_data->customer, $rates );
