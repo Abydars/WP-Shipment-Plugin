@@ -8,6 +8,7 @@
                 <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Ticket ID</th>
                     <th>Customer</th>
                     <th>Creator</th>
                     <th>Carrier</th>
@@ -30,6 +31,7 @@
 					?>
                     <tr style="text-align: left">
                         <td><?= $shipment->id ?></td>
+                        <td><?= $shipment->ticket_id ?></td>
                         <td><?= $customer->data->display_name ?></td>
                         <td><?= $creator->data->display_name ?></td>
                         <td><?= $shipment->server ?></td>

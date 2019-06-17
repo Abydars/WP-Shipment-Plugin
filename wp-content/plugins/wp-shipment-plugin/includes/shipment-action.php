@@ -176,6 +176,7 @@ class WPSP_ShipmentActions
 
 								// TODO: generate label
 								$shipment    = WPSP_Shipment::get_shipment( $shipment_id );
+								$to_address  = WPSP_Address::getAddress( $post_data->to );
 								$extra_files = [];
 								$pages       = [];
 
@@ -183,8 +184,19 @@ class WPSP_ShipmentActions
 								$subject  = __( 'Label', WPSP_LANG );
 								$subtitle = __( '', WPSP_LANG );
 
-								$text = "Shipment ID# {$shipment->id}<br/>";
-								$text .= "Rate: {$shipment->rates}<br/>";
+								$text = "Ticket #ID: {$post_data->ticket_id}";
+
+								if ( ! empty( $to_address['full_name'] ) ) {
+									$text .= "<br /><br />Shipped To: {$to_address['full_name']}";
+								}
+
+								$text .= "<br />Shipping Cost: $" . number_format( $shipment->rates, 2 );
+
+								if ( ! empty( $to_address['is_verified'] ) && $to_address['is_verified'] == 0 ) {
+									$text .= "<br /><br /><span style='color: red;'>Unverified Address</span>";
+								}
+
+								$text = apply_filters( "wpsp_label_summary_{$post_data->carrier}", $text );
 
 								WPSP_PdfHelper::generate( $text, $filename, $subject, $subtitle );
 

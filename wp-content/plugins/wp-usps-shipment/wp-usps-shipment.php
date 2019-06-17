@@ -24,6 +24,7 @@ class WPSP_USPS
 		add_filter( 'wpsp_shipment_usps_levels', [ $this, 'wpsp_shipment_usps_levels' ] );
 		add_filter( 'wpsp_shipment_usps_package_types', [ $this, 'wpsp_shipment_usps_package_types' ] );
 		add_filter( 'wpsp_get_markup_rate_usps', [ $this, 'wpsp_get_markup_rate_usps' ], 10, 3 );
+		add_filter( 'wpsp_label_summary_usps', [ $this, 'wpsp_label_summary_usps' ] );
 
 		// Actions
 		add_action( 'wpsp_verify_address_usps', [ $this, 'wpsp_verify_address_usps' ], 10, 3 );
@@ -32,6 +33,11 @@ class WPSP_USPS
 		add_action( 'wpsp_label_rates_usps', [ $this, 'wpsp_label_rates_usps' ], 10, 3 );
 		add_action( 'wpsp_void_label_usps', [ $this, 'wpsp_void_label_usps' ], 10, 2 );
 		add_action( 'wpsp_service_rates_usps', [ $this, 'wpsp_service_rates_usps' ], 10, 3 );
+	}
+
+	function wpsp_label_summary_usps( $text )
+	{
+		return $text;
 	}
 
 	function wpsp_service_rates_usps( $data, &$error, &$rates )

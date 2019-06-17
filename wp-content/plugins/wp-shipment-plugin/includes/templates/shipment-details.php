@@ -25,7 +25,7 @@
                     <th>Status</th>
                     <td><?= $details->status ?></td>
                 </tr>
-                <tr style="display: none;">
+                <tr>
                     <th>Ticket ID</th>
                     <td><?= $details->ticket_id ?></td>
                 </tr>

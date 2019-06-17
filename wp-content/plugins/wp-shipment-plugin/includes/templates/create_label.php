@@ -6,7 +6,7 @@
 		<?= apply_filters( 'wpsp_success', '' ) ?>
 
         <div class="basic-details">
-            <div class="wpsp-form-group" style="display: none;">
+            <div class="wpsp-form-group">
                 <label>Ticket ID</label>
                 <input type="text" name="ticket_id">
             </div>

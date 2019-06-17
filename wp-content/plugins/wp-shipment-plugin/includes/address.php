@@ -56,6 +56,7 @@ class WPSP_Address
 			"address_name" => $address->address_name,
 			"address_id"   => $address->address_id,
 			"customer_id"  => $address->customer_id,
+			"is_verified"  => $address->is_verified,
 			"id"           => $address->id
 		) );
 
