@@ -56,8 +56,8 @@ if ( ! class_exists( 'WPTM_Twilio' ) ) {
 
 		private function track_queued_faxes()
 		{
-			$fax_queue = TwilioFaxQueue::get_instance();
-			$twilio    = new TwilioManager;
+			$fax_queue = WPTM_FaxQueue::get_instance();
+			$twilio    = new WPTM_FaxManager;
 
 			$faxes = $fax_queue->getQueuedFaxes();
 
@@ -81,7 +81,7 @@ if ( ! class_exists( 'WPTM_Twilio' ) ) {
 
 		private function send_queue_faxes()
 		{
-			$fax_queue = TwilioFaxQueue::get_instance();
+			$fax_queue = WPTM_FaxQueue::get_instance();
 			$queues    = $fax_queue->getQueues();
 
 			foreach ( $queues as $queue ) {
@@ -98,12 +98,12 @@ if ( ! class_exists( 'WPTM_Twilio' ) ) {
 		{
 			//var_dump($this->get_last_ticket(11, date("Y-m-d")));
 			if ( isset( $_GET['faxsid'] ) ) {
-				$twilio = new TwilioManager;
+				$twilio = new WPTM_FaxManager;
 				//echo '<pre>';var_dump($twilio->getFaxDetails($_GET['faxsid']));exit;
 			}
 			if ( isset( $_GET['fxr'] ) ) {
 
-				$twilio     = new TwilioManager;
+				$twilio     = new WPTM_FaxManager;
 				$attachment = 'http://ship4lesslabels.com/wp-content/uploads/wpsp/1503455930_fax-2017-08-17_07-25-33.pdf';
 				//$attachment = 'https://ship4lesslabels.com/wp-content/plugins/shipment-form/files/label-31.PNG';
 				$pathinfo = pathinfo( $attachment );
@@ -157,7 +157,7 @@ if ( ! class_exists( 'WPTM_Twilio' ) ) {
 						}
 					}
 
-					$twilio    = new TwilioManager;
+					$twilio    = new WPTM_FaxManager;
 					$attach_id = $twilio->getFax( $faxsid );
 
 					if ( $attach_id ) {
