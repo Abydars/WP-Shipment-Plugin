@@ -251,6 +251,7 @@ class WPSP_ShipmentActions
 									'shipment_id' => $shipment_id
 								];
 								$response['message'] = __( 'Shipment created successfully', WPSP_LANG );
+								$response['nonce']   = wp_create_nonce( 'wpsp_save_label' );
 							}
 
 						} else {
@@ -267,6 +268,7 @@ class WPSP_ShipmentActions
 			if ( $error !== false ) {
 				$response['status']  = false;
 				$response['message'] = $error;
+				$response['nonce']   = wp_create_nonce( 'wpsp_save_label' );
 			}
 
 		} else {
@@ -342,6 +344,7 @@ class WPSP_ShipmentActions
 		$post_data    = (object) $_POST;
 		$carrier_keys = [ $post_data->carrier ];
 		$carriers     = apply_filters( 'wpsp_shipment_carriers', [] );
+		$lowest_rate  = false;
 
 		if ( empty( $post_data->carrier ) ) {
 			$carrier_keys = array_keys( $carriers );
@@ -360,10 +363,24 @@ class WPSP_ShipmentActions
 				'name'  => $carriers[ $carrier ],
 				'rates' => $rates
 			];
+
+			foreach ( $rates as $rate ) {
+				if ( $lowest_rate === false || $rate['rate'] < $lowest_rate['rate'] ) {
+					$lowest_rate = [
+						'carrier'      => $carrier,
+						'level'        => $rate['level'],
+						'package_type' => $rate['package_type'],
+						'rate'         => $rate['rate']
+					];
+				}
+			}
 		}
 
 		$response['status'] = true;
-		$response['data']   = $all_rates;
+		$response['data']   = [
+			'rates'  => $all_rates,
+			'lowest' => $lowest_rate
+		];
 
 		if ( $error ) {
 			$response['status']  = true;

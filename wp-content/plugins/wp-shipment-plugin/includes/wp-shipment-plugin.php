@@ -43,8 +43,11 @@ class WPSP
 		wp_enqueue_style( 'wpsp_styles', WPSP_PLUGIN_URL . '/includes/assets/css/custom.css' );
 		wp_enqueue_style( 'wpsp_font_awesome', WPSP_PLUGIN_URL . '/includes/assets/fontawesome/css/all.css' );
 		wp_enqueue_style( 'wpsp_data-table-styles', 'https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css' );
+		wp_enqueue_style( 'wpsp_chosen', WPSP_PLUGIN_URL . '/includes/assets/chosen/chosen.min.css' );
 		wp_enqueue_script( 'wpsp_data-table-script', 'https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js' );
 		wp_enqueue_script( 'wpsp_scripts', WPSP_PLUGIN_URL . '/includes/assets/js/custom.js' );
+		wp_enqueue_script( 'jquery-ui-autocomplete' );
+		wp_enqueue_script( 'wpsp_chosen', WPSP_PLUGIN_URL . '/includes/assets/chosen/chosen.jquery.min.js', [ 'jquery' ] );
 	}
 
 	function setup_shipment_menu()

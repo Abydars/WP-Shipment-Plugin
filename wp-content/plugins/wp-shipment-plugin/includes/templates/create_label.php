@@ -35,7 +35,7 @@
                         Address
                     </button>
                 </label>
-                <select name="from" required>
+                <select class="wpsp-chosen" name="from" data-placeholder="No address found" required>
                 </select>
             </div>
             <div class="wpsp-form-group to-address">
@@ -44,11 +44,11 @@
                         Address
                     </button>
                 </label>
-                <select name="to" required>
+                <select class="wpsp-chosen" name="to" data-placeholder="No address found" required>
                 </select>
             </div>
             <div class="wpsp-form-group shipping-method">
-                <label>Shipping Method</label>
+                <label>Shipping Method/Service Type</label>
                 <select name="shipping_method" required>
                 </select>
             </div>
@@ -144,8 +144,13 @@
 		<?php wp_nonce_field( 'wpsp_save_label' ); ?>
 
         <div class="wpsp-row">
-            <button id="rate-shop">Rate Shop & Send</button>
-            <button type="submit">Create Shipment</button>
+            <div>
+                <button id="rate-shop">View Rates</button>
+                <button id="rate-shop-send" data-auto-send="1">Rate Shop & Send</button>
+            </div>
+            <div>
+                <button type="submit" class="wpsp-btn-green">Create Shipment</button>
+            </div>
         </div>
     </form>
 

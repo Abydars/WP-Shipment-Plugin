@@ -12,10 +12,19 @@ jQuery(function ($) {
         formInit();
     });
 
-    $(document).on('change', '#shipment_form select[name="carrier"]', function (e, level, package_type) {
+    $(document).on('change', '#shipment_form select[name="carrier"]', function (e, level, package_type, auto_submit) {
+
         var carrier = $(this).val();
         var $select_levels = $('select[name="shipping_method"]');
         var $package_types = $('select[name="package_type"]');
+        var levels_loaded = false;
+        var types_loaded = false;
+
+        function after_load() {
+            if (auto_submit) {
+                $('#shipment_form').submit();
+            }
+        }
 
         $.ajax({
             url: wsp_ajax_url,
@@ -31,8 +40,13 @@ jQuery(function ($) {
                     $select_levels.append('<option>' + res[i] + '</option>');
                 }
 
+                $select_levels.append('<option>All</option>');
+
                 if (level !== undefined)
                     $select_levels.val(level);
+
+                levels_loaded = true;
+                after_load();
             }
         });
 
@@ -52,6 +66,9 @@ jQuery(function ($) {
 
                 if (package_type !== undefined)
                     $package_types.val(package_type);
+
+                types_loaded = true;
+                after_load();
             }
         });
     });
@@ -98,17 +115,17 @@ jQuery(function ($) {
             $('#addAddressModal form').trigger("reset");
             $('#addAddressModal').show();
         }
-    })
+    });
 
     $(document).on('click', '.modal .close', function (e) {
         e.preventDefault();
         $(this).parents('.modal').hide();
-    })
+    });
 
     $(document).on('click', '.modal .action .cancel', function (e) {
         e.preventDefault();
         $(this).parents('.modal').hide();
-    })
+    });
 
     $(document).on('change', '.schedule-pickup input[type="checkbox"]', function () {
         if ($(this).prop("checked") == true) {
@@ -168,12 +185,12 @@ jQuery(function ($) {
     $(document).on('click', '.package .delete', function (e) {
         e.preventDefault();
         $(this).parents('.package').remove();
-    })
+    });
 
     $('#wp-admin-bar-create-label').click(function (e) {
         e.preventDefault();
         $('div#shipment-form').toggle();
-    })
+    });
 
     $('.shipment_detail_actions .void-label').click(function (e) {
         e.preventDefault();
@@ -207,7 +224,7 @@ jQuery(function ($) {
                 $btn.removeAttr('disabled', 'disabled');
             }
         })
-    })
+    });
 
     function refreshAddresses() {
         var customer_id = $('#shipment_form .customers-list select').val();
@@ -228,6 +245,9 @@ jQuery(function ($) {
                     $('.from-address select').append('<option value="' + response[i].id + '">' + response[i].address_name + '</option>')
                     $('.to-address select').append('<option value="' + response[i].id + '">' + response[i].address_name + '</option>')
                 }
+
+                $('.from-address select').chosen().trigger("chosen:updated");
+                $('.to-address select').chosen().trigger("chosen:updated");
             }
         })
     }
@@ -287,6 +307,8 @@ jQuery(function ($) {
         var month = ("0" + (now.getMonth() + 1)).slice(-2);
         var today = now.getFullYear() + "-" + (month) + "-" + (day);
 
+        $('.wpsp-chosen').chosen();
+
         $('.shipping-date input').val(today);
 
         $('#shipment_form').submit(function (e) {
@@ -320,6 +342,10 @@ jQuery(function ($) {
 
                     $btn.removeAttr('disabled', 'disabled');
                     $btn.text('Create Shipment');
+
+                    if (response.nonce) {
+                        $('#shipment_form input#_wpnonce').val();
+                    }
                 }
             });
 
@@ -388,15 +414,16 @@ jQuery(function ($) {
             var package_type = $(this).attr('data-package-type');
 
             $('#rateShop').hide();
-            $('.shipping-carrier select').val(carrier).trigger('change', [level, package_type, true]);
+            $('.shipping-carrier select').val(carrier).trigger('change', [level, package_type]);
         });
 
-        $(document).on('click', '#rate-shop', function (e) {
+        $(document).on('click', '#rate-shop, #rate-shop-send', function (e) {
             e.preventDefault();
 
             var form_data = $('#shipment_form').serializeArray();
             var $btn = $(this);
             var text = $btn.text();
+            var auto_send = $btn.attr('data-auto-send') === '1';
             var err = false;
 
             for (var i = 0; i <= form_data.length; i++) {
@@ -437,8 +464,13 @@ jQuery(function ($) {
                 url: wsp_ajax_url,
                 success: function (response) {
                     if (response.status) {
-                        refreshRates(response.data);
-                        $('#rateShop').show();
+                        refreshRates(response.data.rates);
+
+                        if (auto_send) {
+                            $('.shipping-carrier select').val(response.data.lowest.carrier).trigger('change', [response.data.lowest.level, response.data.lowest.package_type, true]);
+                        } else {
+                            $('#rateShop').show();
+                        }
                     } else {
                         $('#shipment_form .wpsp-success').hide();
                         $('#shipment_form .wpsp-error').show().find('p').text(response.message);
@@ -458,4 +490,4 @@ jQuery(function ($) {
             refreshAddresses();
         });
     }
-})
+});

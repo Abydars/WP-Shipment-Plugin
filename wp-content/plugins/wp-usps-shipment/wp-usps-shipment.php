@@ -25,6 +25,7 @@ class WPSP_USPS
 		add_filter( 'wpsp_shipment_usps_package_types', [ $this, 'wpsp_shipment_usps_package_types' ] );
 		add_filter( 'wpsp_get_markup_rate_usps', [ $this, 'wpsp_get_markup_rate_usps' ], 10, 3 );
 		add_filter( 'wpsp_label_summary_usps', [ $this, 'wpsp_label_summary_usps' ] );
+		add_filter( 'wpsp_shipment_usps_services', [ $this, 'wpsp_shipment_usps_services' ] );
 
 		// Actions
 		add_action( 'wpsp_verify_address_usps', [ $this, 'wpsp_verify_address_usps' ], 10, 3 );
@@ -115,14 +116,32 @@ class WPSP_USPS
 				}
 
 				foreach ( $postages as $postage ) {
-					$rates[] = [
-						'name'         => $postage['MailService'],
-						'rate'         => $postage['Rate'],
-						'level'        => null,
-						'package_type' => null
-					];
+					$levels       = apply_filters( 'wpsp_shipment_usps_levels', [] );
+					$level        = null;
+					$mail_service = strtolower( $postage['MailService'] );
+
+					foreach ( $levels as $lvl ) {
+						$l = strtolower( $lvl );
+
+						if ( strpos( $mail_service, $l ) !== false ) {
+							$level = $lvl;
+						}
+					}
+
+					if ( ! isset( $rates[ $postage['MailService'] ] ) ) {
+						$rates[ $postage['MailService'] ] = [
+							'name'         => $postage['MailService'],
+							'rate'         => 0,
+							'level'        => $level,
+							'package_type' => $data->package_type
+						];
+					}
+
+					$rates[ $postage['MailService'] ]['rate'] += $postage['Rate'];
 				}
 			}
+
+			$rates = array_values( $rates );
 
 		} else {
 			$error = $res['Error']['Description'];
@@ -188,9 +207,10 @@ class WPSP_USPS
 		$from_zip     = $from_address['zip_code'];
 		$to_zip       = $to_address['zip_code'];
 
-		$d = [
+		$d        = [
 			'Revision' => 2,
 		];
+		$services = apply_filters( 'wpsp_shipment_usps_services', [] );
 
 		foreach ( $data->packages as $k => $package ) {
 			$id = $k + 1;
@@ -199,7 +219,7 @@ class WPSP_USPS
 				'_attributes'    => [
 					'ID' => $id,
 				],
-				'Service'        => $data->shipping_method,
+				'Service'        => array_search( $data->shipping_method, $services ),
 				'ZipOrigination' => $from_zip,
 				'ZipDestination' => $to_zip,
 				'Pounds'         => ( $package['weight'] / 16 ),
@@ -280,7 +300,7 @@ class WPSP_USPS
 			foreach ( $packages as $package ) {
 				$d = [
 					'Option'                     => 1,
-					'ImageParameters'            => [ 'ImageParameter' => 'BARCODE ONLY' ],
+					'ImageParameters'            => [ 'ImageParameter' => '4X6LABEL' ],
 					'FromName'                   => $from_address['full_name'],
 					'FromFirm'                   => $from_address['company'],
 					'FromAddress1'               => $from_address['street_2'],
@@ -403,8 +423,8 @@ class WPSP_USPS
 	function wpsp_shipment_usps_levels()
 	{
 		$levels = [
-			'PRIORITY EXPRESS',
 			'PRIORITY',
+			'PRIORITY EXPRESS',
 			'FIRST CLASS',
 			'PARCEL SELECT GROUND',
 			'LIBRARY',
@@ -414,6 +434,38 @@ class WPSP_USPS
 		];
 
 		return $levels;
+	}
+
+	function wpsp_shipment_usps_services()
+	{
+		$services = [
+			'First Class'                          => 'FIRST CLASS',
+			'First Class Commercial'               => 'FIRST CLASS',
+			'First Class HFP Commercial'           => 'FIRST CLASS',
+			'Priority'                             => 'PRIORITY',
+			'Priority Commercial'                  => 'PRIORITY',
+			'Priority Cpp'                         => 'PRIORITY',
+			'Priority HFP Commercial'              => 'PRIORITY',
+			'Priority HFP CPP'                     => 'PRIORITY',
+			'Priority Mail Express'                => 'PRIORITY EXPRESS',
+			'Priority Mail Express Commercial'     => 'PRIORITY EXPRESS',
+			'Priority Mail Express CPP'            => 'PRIORITY EXPRESS',
+			'Priority Mail Express Sh'             => 'PRIORITY EXPRESS',
+			'Priority Mail Express Sh Commercial'  => 'PRIORITY EXPRESS',
+			'Priority Mail Express HFP'            => 'PRIORITY EXPRESS',
+			'Priority Mail Express HFP Commercial' => 'PRIORITY EXPRESS',
+			'Priority Mail Express HFP CPP'        => 'PRIORITY EXPRESS',
+			'Priority Mail Cubic'                  => 'PRIORITY MAIL CUBIC',
+			'Retail Ground'                        => 'PARCEL SELECT GROUND',
+			'Media'                                => 'MEDIA',
+			'Library'                              => 'LIBRARY',
+			'All'                                  => 'ALL',
+			'Online'                               => 'ALL',
+			'Plus'                                 => 'ALL',
+			'BPM'                                  => 'BPM'
+		];
+
+		return $services;
 	}
 
 	function wpsp_shipment_usps_package_types()
