@@ -31,10 +31,13 @@ class WPSP_ShipmentActions
 		if ( isset( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'wpsp_create_address' ) ) {
 			$error     = false;
 			$post_data = (object) $_POST;
-			do_action_ref_array( "wpsp_verify_address_{$post_data->carrier}", [
-				$post_data,
-				&$error
-			] );
+
+			if ( ! empty( $post_data->carrier ) ) {
+				do_action_ref_array( "wpsp_verify_address_{$post_data->carrier}", [
+					$post_data,
+					&$error
+				] );
+			}
 
 			if ( ! $error ) {
 				WPSP_Address::store_address( $post_data );
@@ -396,6 +399,7 @@ class WPSP_ShipmentActions
 	{
 		$customer_id = $_REQUEST['customer_id'];
 		$addresses   = WPSP_Address::get_addresses_by_customer( $customer_id );
+		$addresses   = array_merge( $addresses, WPSP_Address::get_addresses_no_customer() );
 
 		header( 'Content-Type: application/json' );
 		echo json_encode( $addresses );
@@ -429,6 +433,27 @@ class WPSP_ShipmentActions
 		} else {
 			$response['status']  = false;
 			$response['message'] = __( 'Please try again', WPSP_LANG );
+		}
+
+		header( 'Content-Type: application/json' );
+		echo json_encode( $response );
+		die;
+	}
+
+	function action_delete_address()
+	{
+		$response = [
+			'status'  => true,
+			'message' => __( 'Address deleted successfully', WPSP_LANG )
+		];
+
+		$deleted = WPSP_Address::delete_address( $_REQUEST['id'] );
+
+		if ( ! $deleted ) {
+			$response = [
+				'status'  => false,
+				'message' => __( 'Address failed to delete', WPSP_LANG )
+			];
 		}
 
 		header( 'Content-Type: application/json' );

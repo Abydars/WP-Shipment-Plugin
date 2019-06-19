@@ -256,21 +256,7 @@
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Company</label>
-                            <input type="text" name="company" id="" required/>
-                        </div>
-                    </div>
-                </div>
-                <div class="wpsp-row">
-                    <div class="wpsp-one-half">
-                        <div class="wpsp-form-group">
-                            <label>Country</label>
-                            <input type="text" name="country" id="" required/>
-                        </div>
-                    </div>
-                    <div class="wpsp-one-half">
-                        <div class="wpsp-form-group">
-                            <label>City</label>
-                            <input type="text" name="city" id="" required/>
+                            <input type="text" name="company" id=""/>
                         </div>
                     </div>
                 </div>
@@ -285,6 +271,20 @@
                         <div class="wpsp-form-group">
                             <label>Street 2</label>
                             <input type="text" name="street_2" id=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="wpsp-row">
+                    <div class="wpsp-one-half">
+                        <div class="wpsp-form-group">
+                            <label>Country</label>
+                            <input type="text" name="country" id="" required/>
+                        </div>
+                    </div>
+                    <div class="wpsp-one-half">
+                        <div class="wpsp-form-group">
+                            <label>City</label>
+                            <input type="text" name="city" id="" required/>
                         </div>
                     </div>
                 </div>

@@ -25,6 +25,20 @@ class WPSP_Address
 		return $addresses;
 	}
 
+	public static function get_addresses_no_customer()
+	{
+		global $wpdb;
+
+		$table     = self::get_table_name();
+		$addresses = $wpdb->get_results( "SELECT * FROM $table WHERE customer_id = 0 ORDER by id DESC" );
+
+		if ( empty( $addresses ) ) {
+			return array();
+		}
+
+		return $addresses;
+	}
+
 	public static function get_addresses()
 	{
 		global $wpdb;
@@ -73,14 +87,28 @@ class WPSP_Address
 		return $address_id;
 	}
 
+	public static function delete_address( $id )
+	{
+		global $wpdb;
+
+		return $wpdb->delete( self::get_table_name(), [
+			'id' => $id
+		] );
+	}
+
 	public static function store_address( $data )
 	{
 		global $wpdb;
 
-		$addresses = self::get_addresses_by_customer( $data->customer );
-		$is_first  = empty( $addresses );
-		$address   = $data;
-		$row       = array(
+		$is_first = false;
+		$address  = $data;
+
+		if ( ! empty( $data->customer ) ) {
+			$addresses = self::get_addresses_by_customer( $data->customer );
+			$is_first  = empty( $addresses );
+		}
+
+		$row = array(
 			"address_name" => $address->full_name . " " . $address->street_1 . " " . $address->street_2 . ", " . $address->city . ", " . $address->state . ", " . $address->country . " " . $address->zip_code,
 			"customer_id"  => $address->customer,
 			"data"         => json_encode( $address ),

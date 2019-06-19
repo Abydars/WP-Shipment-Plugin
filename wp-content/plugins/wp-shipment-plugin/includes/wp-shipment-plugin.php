@@ -23,6 +23,7 @@ class WPSP
 		add_action( 'wp_ajax_wpsp_get_addresses', array( $wpsp_actions, 'action_get_addresses' ) );
 		add_action( 'wp_ajax_wpsp_void_label', array( $wpsp_actions, 'action_void_label' ) );
 		add_action( 'wp_ajax_wpsp_edit_address', array( $wpsp_actions, 'action_edit_address' ) );
+		add_action( 'wp_ajax_wpsp_delete_address', array( $wpsp_actions, 'action_delete_address' ) );
 		add_action( 'admin_init', array( $wpsp_actions, 'action_create_new_address' ) );
 		add_filter( 'wpsp_error', array( $wpsp_actions, 'filter_wpsp_error' ) );
 		add_filter( 'wpsp_success', array( $wpsp_actions, 'filter_wpsp_success' ) );
@@ -52,15 +53,16 @@ class WPSP
 
 	function setup_shipment_menu()
 	{
-		add_menu_page( __( 'Shipments', WPSP_LANG ), __( 'Shipments', WPSP_LANG ), 'manage_options', 'shipments', array(
+		add_menu_page( __( 'Shipments', WPSP_LANG ), __( 'Shipments', WPSP_LANG ), 'manage_options', 'wpsp-shipment', array(
 			$this,
 			'list_shipments'
 		) );
-		add_submenu_page( 'shipments', __( 'Addresses', WPSP_LANG ), __( 'Addresses', WPSP_LANG ), 'manage_options', 'list_addresses', array(
+		add_submenu_page( 'wpsp-shipment', __( 'Create Label', WPSP_LANG ), __( 'Create Label', WPSP_LANG ), 'manage_options', '#wpsp_create_label' );
+		add_submenu_page( 'wpsp-shipment', __( 'Addresses', WPSP_LANG ), __( 'Addresses', WPSP_LANG ), 'manage_options', 'list_addresses', array(
 			$this,
 			'list_addresses'
 		) );
-		add_submenu_page( 'shipments', __( 'Create Address', WPSP_LANG ), __( 'Create Address', WPSP_LANG ), 'manage_options', 'create_address', array(
+		add_submenu_page( 'wpsp-shipment', __( 'Create Address', WPSP_LANG ), __( 'Create Address', WPSP_LANG ), 'manage_options', 'create_address', array(
 			$this,
 			'create_address'
 		) );
@@ -86,6 +88,8 @@ class WPSP
 
 	function list_addresses()
 	{
+		$addresses = WPSP_Address::get_addresses();
+
 		include( 'templates/list_addresses.php' );
 	}
 

@@ -1,15 +1,18 @@
-<?php
-
-global $wpdb;
-$table_name = 'wp_addresses';
-$addresses  = $wpdb->get_results( "SELECT * FROM $table_name" );
-//var_dump($addresses);
-?>
-<div id="list-addresses">
+<div id="list-addresses" class="wpsp-container">
     <div class="container">
         <div class="row">
-            <h1>Addresses</h1>
+            <h1 class="wpsp-page-title">Addresses <a href="<?= admin_url( 'admin.php?page=create_address' ) ?>">Create
+                    Address</a></h1>
         </div>
+
+		<?php if ( isset( $_GET['error'] ) ) { ?>
+			<?= apply_filters( 'wpsp_error', $_GET['error'] ) ?>
+		<?php } ?>
+
+		<?php if ( isset( $_GET['success'] ) ) { ?>
+			<?= apply_filters( 'wpsp_success', $_GET['success'] ) ?>
+		<?php } ?>
+
         <div class="row">
             <table id="listShipments">
                 <thead>
@@ -31,15 +34,21 @@ $addresses  = $wpdb->get_results( "SELECT * FROM $table_name" );
                 </thead>
                 <tbody>
 				<?php
-				foreach ( $addresses as $address ) {
-					$address_data = json_decode( $address->data );
-					$address_data = (array) $address_data;
-					$user         = get_user_meta( $address->customer_id );
-					$user         = (object) $user;
+				foreach ( $addresses as $k => $address ) {
+					$address_data  = json_decode( $address->data );
+					$address_data  = (array) $address_data;
+					$customer_name = "All Customers";
+
+					if ( ! empty( $address->customer_id ) ) {
+						$user          = get_user_meta( $address->customer_id );
+						$user          = (object) $user;
+						$customer_name = $user->first_name[0] . " " . $user->last_name[0];
+					}
+
 					?>
                     <tr style="text-align: left">
                         <td><?= $address->id ?></td>
-                        <td><?= $user->first_name[0] . " " . $user->last_name[0] ?></td>
+                        <td><?= $customer_name ?></td>
                         <td><?= $address_data['full_name'] ?></td>
                         <td><?= $address_data['company'] ?></td>
                         <td><?= $address_data['country'] ?></td>
@@ -50,10 +59,11 @@ $addresses  = $wpdb->get_results( "SELECT * FROM $table_name" );
                         <td><?= $address_data['zip_code'] ?></td>
                         <td><?= $address_data['phone'] ?></td>
                         <td><?= $address_data['email'] ?></td>
-                        <td class="view_shipment">
-                            <a id="btn-edit-from-address" href="#" class="from-address" data-type="from"
-                               data-id="<?= $address->id ?>"><i class="fa fa-eye"></i></a>
-                            <a>
+                        <td class="address_actions">
+                            <a href="#" class="btn-edit-address" data-type="from"
+                               data-key="<?= $k ?>" data-id="<?= $address->id ?>"><i class="fa fa-eye"></i></a>
+                            <a href="#" class="btn-delete-address"
+                               data-key="<?= $k ?>" data-id="<?= $address->id ?>">
                                 <i class="fa fa-trash"></i>
                             </a>
                         </td>
@@ -87,21 +97,7 @@ $addresses  = $wpdb->get_results( "SELECT * FROM $table_name" );
                         <div class="wpsp-one-half">
                             <div class="wpsp-form-group">
                                 <label>Company</label>
-                                <input type="text" name="company" id="" required/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="wpsp-row">
-                        <div class="wpsp-one-half">
-                            <div class="wpsp-form-group">
-                                <label>Country</label>
-                                <input type="text" name="country" id="" required/>
-                            </div>
-                        </div>
-                        <div class="wpsp-one-half">
-                            <div class="wpsp-form-group">
-                                <label>City</label>
-                                <input type="text" name="city" id="" required/>
+                                <input type="text" name="company" id=""/>
                             </div>
                         </div>
                     </div>
@@ -116,6 +112,20 @@ $addresses  = $wpdb->get_results( "SELECT * FROM $table_name" );
                             <div class="wpsp-form-group">
                                 <label>Street 2</label>
                                 <input type="text" name="street_2" id=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpsp-row">
+                        <div class="wpsp-one-half">
+                            <div class="wpsp-form-group">
+                                <label>Country</label>
+                                <input type="text" name="country" id="" required/>
+                            </div>
+                        </div>
+                        <div class="wpsp-one-half">
+                            <div class="wpsp-form-group">
+                                <label>City</label>
+                                <input type="text" name="city" id="" required/>
                             </div>
                         </div>
                     </div>
@@ -156,8 +166,8 @@ $addresses  = $wpdb->get_results( "SELECT * FROM $table_name" );
 
                     <div class="wpsp-row">
                         <div class="action">
+                            <button type="submit" class="wpsp-btn-green">Edit</button>
                             <button class="cancel">Cancel</button>
-                            <button type="submit">Edit</button>
                         </div>
                     </div>
                 </form>

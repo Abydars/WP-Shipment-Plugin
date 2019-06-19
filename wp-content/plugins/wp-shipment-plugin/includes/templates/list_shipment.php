@@ -1,7 +1,7 @@
-<div id="list-shipments">
+<div id="list-shipments" class="wpsp-container">
     <div class="container">
         <div class="row">
-            <h1>Shipments</h1>
+            <h1 class="wpsp-page-title">Shipments <a href="#" data-wpsp-create-label>Create Label</a></h1>
         </div>
         <div class="row">
             <table id="listShipments">

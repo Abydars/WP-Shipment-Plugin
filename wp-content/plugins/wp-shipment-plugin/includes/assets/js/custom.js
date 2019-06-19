@@ -84,26 +84,56 @@ jQuery(function ($) {
         }
     });
 
-    $(document).on('click', '#btn-edit-from-address', function (e) {
+    $(document).on('click', '.address_actions .btn-edit-address', function (e) {
         e.preventDefault();
 
         $('#editAddressModal').show();
 
+        var tbl = $('#listShipments').DataTable();
         var currentTarget = e.currentTarget;
+        var key = $(currentTarget).data('key');
         var id = $(currentTarget).data('id');
-        var data = $(currentTarget).parent().siblings();
+        var data = tbl.rows(key).data();
+        var row_data = {};
 
-        $('#editAddressModal input[name="full_name"]').val($($(data)[1]).html());
-        $('#editAddressModal input[name="company"]').val($($(data)[2]).html());
-        $('#editAddressModal input[name="country"]').val($($(data)[3]).html());
-        $('#editAddressModal input[name="city"]').val($($(data)[4]).html());
-        $('#editAddressModal input[name="street_1"]').val($($(data)[5]).html());
-        $('#editAddressModal input[name="street_2"]').val($($(data)[6]).html());
-        $('#editAddressModal input[name="state"]').val($($(data)[7]).html());
-        $('#editAddressModal input[name="zip_code"]').val($($(data)[8]).html());
-        $('#editAddressModal input[name="phone"]').val($($(data)[9]).html());
-        $('#editAddressModal input[name="email"]').val($($(data)[10]).html());
+        $('#listShipments').find('thead th').each(function (i) {
+            row_data[$(this).text()] = data[0][i];
+        });
+
+        $('#editAddressModal input[name="full_name"]').val(row_data['Full Name']);
+        $('#editAddressModal input[name="company"]').val(row_data['Company']);
+        $('#editAddressModal input[name="country"]').val(row_data['Country']);
+        $('#editAddressModal input[name="city"]').val(row_data['City']);
+        $('#editAddressModal input[name="street_1"]').val(row_data['Street 1']);
+        $('#editAddressModal input[name="street_2"]').val(row_data['Street 2']);
+        $('#editAddressModal input[name="state"]').val(row_data['State']);
+        $('#editAddressModal input[name="zip_code"]').val(row_data['Zip Code']);
+        $('#editAddressModal input[name="phone"]').val(row_data['Phone']);
+        $('#editAddressModal input[name="email"]').val(row_data['Email']);
         $('#editAddressModal input[name="id"]').val(id);
+    });
+
+    $(document).on('click', '.address_actions .btn-delete-address', function (e) {
+        e.preventDefault();
+
+        var id = $(this).data('id');
+
+        $.ajax({
+            type: 'POST',
+            dataType: 'JSON',
+            data: {
+                action: 'wpsp_delete_address',
+                id: id
+            },
+            url: wsp_ajax_url,
+            success: function (response) {
+                if (response.status) {
+                    location.href = location.href + '&success=' + response.message;
+                } else {
+                    alert(response.message);
+                }
+            }
+        })
     });
 
     $(document).on('click', '#btn-new-to-address', function (e) {
@@ -187,7 +217,7 @@ jQuery(function ($) {
         $(this).parents('.package').remove();
     });
 
-    $('#wp-admin-bar-create-label').click(function (e) {
+    $('#wp-admin-bar-create-label, a[data-wpsp-create-label], a[href="#wpsp_create_label"]').click(function (e) {
         e.preventDefault();
         $('div#shipment-form').toggle();
     });
@@ -222,6 +252,28 @@ jQuery(function ($) {
 
                 $btn.text(text);
                 $btn.removeAttr('disabled', 'disabled');
+            }
+        })
+    });
+
+    $('#editAddressModal form').submit(function (e) {
+        e.preventDefault();
+
+        var form_data = $(this).serializeArray();
+
+        $.ajax({
+            type: 'POST',
+            dataType: 'JSON',
+            data: form_data,
+            url: wsp_ajax_url,
+            success: function (response) {
+                $('#addAddressModal').hide();
+
+                if (response.status) {
+                    location.href = location.href + '&success=' + response.message;
+                } else {
+                    alert(response.message);
+                }
             }
         })
     });
@@ -377,28 +429,6 @@ jQuery(function ($) {
 
                     if (response.status) {
                         refreshAddresses();
-                    } else {
-                        alert(response.message);
-                    }
-                }
-            })
-        });
-
-        $('#editAddressModal form').submit(function (e) {
-            e.preventDefault();
-
-            var form_data = $(this).serializeArray();
-
-            $.ajax({
-                type: 'POST',
-                dataType: 'JSON',
-                data: form_data,
-                url: wsp_ajax_url,
-                success: function (response) {
-                    $('#addAddressModal').hide();
-
-                    if (response.status) {
-                        location.reload();
                     } else {
                         alert(response.message);
                     }

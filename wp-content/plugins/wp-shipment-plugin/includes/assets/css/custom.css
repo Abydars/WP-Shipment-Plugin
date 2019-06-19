@@ -1,3 +1,18 @@
+.wpsp-page-title {
+
+}
+
+.wpsp-page-title a {
+    color: #fff;
+    background: #0073aa;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: none;
+    font-size: 12px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
 #wpsp-shipment-form-container.right-sidebar h1, #wpsp-shipment-form-container.right-sidebar h4, #wpsp-shipment-form-container.right-sidebar h2 {
     color: #fff;
     margin: 10px 5px 20px;
@@ -284,7 +299,8 @@
     padding: 0 10px;
 }
 
-.view_shipment i {
+.view_shipment i,
+.address_actions i {
     background: #23282d;
     color: #fff;
     padding: 6px;

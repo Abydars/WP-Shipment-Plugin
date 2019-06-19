@@ -1,16 +1,19 @@
-<div id="create-address">
+<div id="create-address" class="wpsp-container">
     <div class="container">
         <div class="row">
-            <h1>Create Address</h1>
-			<?php if ( isset( $_GET['error'] ) ) { ?>
+            <h1 class="wpsp-page-title">Create Address <a href="<?= admin_url( 'admin.php?page=list_addresses' ) ?>">View
+                    Addresses</a></h1>
+
+            <?php if ( isset( $_GET['error'] ) ) { ?>
 				<?= apply_filters( 'wpsp_error', $_GET['error'] ) ?>
 			<?php } ?>
+
             <form method="POST">
                 <div class="wpsp-row">
                     <div class="wpsp-form-group customers-list">
                         <label>Customer</label>
-                        <select name="customer" required>
-                            <option value="">Select Customer</option>
+                        <select name="customer">
+                            <option value="">All Customers</option>
 							<?php foreach ( $customers as $customer ) : ?>
                                 <option value="<?= $customer->ID ?>"><?= $customer->display_name ?></option>
 							<?php endforeach; ?>
@@ -37,21 +40,7 @@
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Company</label>
-                            <input type="text" name="company" id="" required/>
-                        </div>
-                    </div>
-                </div>
-                <div class="wpsp-row">
-                    <div class="wpsp-one-half">
-                        <div class="wpsp-form-group">
-                            <label>Country</label>
-                            <input type="text" name="country" id="" required/>
-                        </div>
-                    </div>
-                    <div class="wpsp-one-half">
-                        <div class="wpsp-form-group">
-                            <label>City</label>
-                            <input type="text" name="city" id="" required/>
+                            <input type="text" name="company" id=""/>
                         </div>
                     </div>
                 </div>
@@ -66,6 +55,20 @@
                         <div class="wpsp-form-group">
                             <label>Street 2</label>
                             <input type="text" name="street_2" id=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="wpsp-row">
+                    <div class="wpsp-one-half">
+                        <div class="wpsp-form-group">
+                            <label>Country</label>
+                            <input type="text" name="country" id="" required/>
+                        </div>
+                    </div>
+                    <div class="wpsp-one-half">
+                        <div class="wpsp-form-group">
+                            <label>City</label>
+                            <input type="text" name="city" id="" required/>
                         </div>
                     </div>
                 </div>
