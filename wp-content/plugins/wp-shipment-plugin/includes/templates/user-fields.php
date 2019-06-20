@@ -14,6 +14,16 @@
 
 <table class="form-table">
     <tr>
+        <th><label><?php _e( "Default Address" ); ?></label></th>
+        <td>
+            <select name="default_address" id="default_address">
+				<?php foreach ( $addresses as $address ) { ?>
+                    <option value="<?= $address->id ?>"<?= ( ( WPSP_Customer::get_default_address( $user->ID ) == $address->id ) ? ' selected="selected"' : '' ) ?>><?= $address->address_name ?></option>
+				<?php } ?>
+            </select>
+        </td>
+    </tr>
+    <tr>
         <th><label><?php _e( "Alternate Email Address" ); ?></label></th>
         <td>
             <input type="email" name="alternate_address" id="alternate_address"

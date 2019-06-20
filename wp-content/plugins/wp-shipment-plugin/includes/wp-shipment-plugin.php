@@ -16,6 +16,7 @@ class WPSP
 		$wpsp_actions = new WPSP_ShipmentActions();
 
 		add_action( 'wp_ajax_save_label', array( $wpsp_actions, 'action_save_label' ) );
+		add_action( 'wp_ajax_nopriv_save_label', array( $wpsp_actions, 'action_save_label' ) );
 		add_action( 'wp_ajax_add_address', array( $wpsp_actions, 'action_add_address' ) );
 		add_action( 'wp_ajax_wpsp_shipment_carrier_levels', array( $wpsp_actions, 'action_carrier_levels' ) );
 		add_action( 'wp_ajax_wpsp_shipment_package_types', array( $wpsp_actions, 'action_package_types' ) );
@@ -29,6 +30,7 @@ class WPSP
 		add_filter( 'wpsp_success', array( $wpsp_actions, 'filter_wpsp_success' ) );
 		add_filter( 'wpsp_file_dir', array( $wpsp_actions, 'filter_wpsp_file_dir' ) );
 		add_filter( 'wpsp_file_url', array( $wpsp_actions, 'filter_wpsp_file_url' ) );
+		add_filter( 'wpsp_email_piping_field_value', array( $wpsp_actions, 'filter_wpsp_email_piping_field_value' ) );
 
 		//User Extras
 		$wpsp_user_meta = new WPSP_UserMeta();

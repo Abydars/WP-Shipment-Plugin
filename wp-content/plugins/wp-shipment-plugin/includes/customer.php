@@ -73,9 +73,23 @@ class WPSP_Customer
 		return $value;
 	}
 
+	static function get_default_address( $id )
+	{
+		$value = get_user_meta( $id, 'default_address', true );
+
+		return $value;
+	}
+
 	static function get_customer( $id )
 	{
 		$user = get_user_by( 'id', $id );
+
+		return $user;
+	}
+
+	static function get_customer_by_email( $email )
+	{
+		$user = get_user_by( 'email', $email );
 
 		return $user;
 	}

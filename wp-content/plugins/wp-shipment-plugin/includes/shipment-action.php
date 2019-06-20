@@ -26,6 +26,11 @@ class WPSP_ShipmentActions
 		return '<div class="wpsp-success"' . ( empty( $text ) ? 'style="display: none;"' : '' ) . '><h3><i class="fa fa-smile"></i><p>' . $text . '</p></h3></div>';
 	}
 
+	function filter_wpsp_email_piping_field_value( $value, $key )
+	{
+
+	}
+
 	function action_create_new_address()
 	{
 		if ( isset( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'wpsp_create_address' ) ) {
@@ -92,9 +97,9 @@ class WPSP_ShipmentActions
 
 		$response = [];
 
-		if ( isset( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'wpsp_save_label' ) ) {
+		if ( isset( $_REQUEST['_wpnonce'] ) && wp_verify_nonce( $_REQUEST['_wpnonce'], 'wpsp_save_label' ) ) {
 
-			$post_data     = (object) $_POST;
+			$post_data     = (object) $_REQUEST;
 			$error         = false;
 			$shipment_data = false;
 			$rates         = 0;
@@ -237,8 +242,9 @@ class WPSP_ShipmentActions
 									'Content-Type: text/html; charset=UTF-8'
 								);
 								$attachments[] = $final_filename;
+								$blogname      = get_bloginfo( 'name' );
 
-								wp_mail( $email, "Ship4LessLabels - Shipment #{$shipment_id}", __( "Label Summary: {$text}", WPSP_LANG ), $headers, $attachments );
+								wp_mail( $email, "{$blogname} - Shipment #{$shipment_id}", __( "Label Summary: {$text}", WPSP_LANG ), $headers, $attachments );
 
 								// send label via fax
 								if ( class_exists( 'WPTM_FaxManager' ) && ! empty( $fax_number ) ) {
@@ -264,7 +270,7 @@ class WPSP_ShipmentActions
 				} else {
 					$error = __( 'No funds available', WPSP_LANG );
 				}
-			} else {
+			} else if ( ! $error ) {
 				$error = __( 'Rates not found', WPSP_LANG );
 			}
 

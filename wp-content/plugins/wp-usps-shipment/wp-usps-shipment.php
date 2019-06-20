@@ -26,6 +26,7 @@ class WPSP_USPS
 		add_filter( 'wpsp_get_markup_rate_usps', [ $this, 'wpsp_get_markup_rate_usps' ], 10, 3 );
 		add_filter( 'wpsp_label_summary_usps', [ $this, 'wpsp_label_summary_usps' ] );
 		add_filter( 'wpsp_shipment_usps_services', [ $this, 'wpsp_shipment_usps_services' ] );
+		add_filter( 'wpsp_email_piping_field_value_usps', [ $this, 'wpsp_email_piping_field_value_usps' ], 10, 2 );
 
 		// Actions
 		add_action( 'wpsp_verify_address_usps', [ $this, 'wpsp_verify_address_usps' ], 10, 3 );
@@ -34,6 +35,15 @@ class WPSP_USPS
 		add_action( 'wpsp_label_rates_usps', [ $this, 'wpsp_label_rates_usps' ], 10, 3 );
 		add_action( 'wpsp_void_label_usps', [ $this, 'wpsp_void_label_usps' ], 10, 2 );
 		add_action( 'wpsp_service_rates_usps', [ $this, 'wpsp_service_rates_usps' ], 10, 3 );
+	}
+
+	function wpsp_email_piping_field_value_usps( $value, $key )
+	{
+		if ( in_array( $key, [ 'shipping_method' ] ) ) {
+			$value = strtoupper( $value );
+		}
+
+		return $value;
 	}
 
 	function wpsp_label_summary_usps( $text )

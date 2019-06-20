@@ -25,6 +25,13 @@ class WPSP_Address
 		return $addresses;
 	}
 
+	public static function get_default_customer_address( $customer_id )
+	{
+		$value = get_user_meta( $customer_id, 'default_address', true );
+
+		return $value;
+	}
+
 	public static function get_addresses_by_code( $code )
 	{
 		global $wpdb;
@@ -133,7 +140,7 @@ class WPSP_Address
 		}
 
 		$row = array(
-			"address_name" => $address->full_name . " " . $address->street_1 . " " . $address->street_2 . ", " . $address->city . ", " . $address->state . ", " . $address->country . " " . $address->zip_code,
+			"address_name" => $address->code . " - " . $address->full_name . " " . $address->street_1 . " " . $address->street_2 . ", " . $address->city . ", " . $address->state . ", " . $address->country . " " . $address->zip_code,
 			"customer_id"  => $address->customer,
 			"address_code" => $address->code,
 			"data"         => json_encode( $address ),
@@ -160,7 +167,7 @@ class WPSP_Address
 
 		$is_first = empty( $addresses );
 		$row      = array(
-			"address_name" => $address->full_name . " " . $address->street_1 . " " . $address->street_2 . ", " . $address->city . ", " . $address->state . ", " . $address->country . " " . $address->zip_code,
+			"address_name" => $address->code . " - " . $address->full_name . " " . $address->street_1 . " " . $address->street_2 . ", " . $address->city . ", " . $address->state . ", " . $address->country . " " . $address->zip_code,
 			"address_code" => $address->code,
 			"customer_id"  => $old_address->customer_id,
 			"data"         => json_encode( $address ),

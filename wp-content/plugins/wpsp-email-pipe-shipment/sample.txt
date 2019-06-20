@@ -44,8 +44,16 @@ Content-Type: multipart/alternative; boundary=\"00000000000052b753058bb34eb4\"
 Content-Type: text/plain; charset=\"UTF-8\"
 
 --wpsp--
-Test: Testing
-Test2: Testing1111
+from: 5
+to: 5
+carrier: usps
+level: priority express
+package: variable
+weight: 15
+length: 15
+width: 5
+height: 5
+date: 2019-06-20
 --wpsp--
 
 --00000000000052b753058bb34eb4
