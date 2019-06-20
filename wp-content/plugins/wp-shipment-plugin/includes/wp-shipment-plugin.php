@@ -30,7 +30,6 @@ class WPSP
 		add_filter( 'wpsp_success', array( $wpsp_actions, 'filter_wpsp_success' ) );
 		add_filter( 'wpsp_file_dir', array( $wpsp_actions, 'filter_wpsp_file_dir' ) );
 		add_filter( 'wpsp_file_url', array( $wpsp_actions, 'filter_wpsp_file_url' ) );
-		add_filter( 'wpsp_email_piping_field_value', array( $wpsp_actions, 'filter_wpsp_email_piping_field_value' ) );
 
 		//User Extras
 		$wpsp_user_meta = new WPSP_UserMeta();
@@ -55,16 +54,16 @@ class WPSP
 
 	function setup_shipment_menu()
 	{
-		add_menu_page( __( 'Shipments', WPSP_LANG ), __( 'Shipments', WPSP_LANG ), 'manage_options', 'wpsp-shipment', array(
+		add_menu_page( __( 'Shipments', WPSP_LANG ), __( 'Shipments', WPSP_LANG ), 'manage_options', 'wpsp-shipments', array(
 			$this,
 			'list_shipments'
 		) );
-		add_submenu_page( 'wpsp-shipment', __( 'Create Label', WPSP_LANG ), __( 'Create Label', WPSP_LANG ), 'manage_options', '#wpsp_create_label' );
-		add_submenu_page( 'wpsp-shipment', __( 'Addresses', WPSP_LANG ), __( 'Addresses', WPSP_LANG ), 'manage_options', 'list_addresses', array(
+		add_submenu_page( 'wpsp-shipments', __( 'Create Label', WPSP_LANG ), __( 'Create Label', WPSP_LANG ), 'manage_options', '#wpsp_create_label' );
+		add_submenu_page( 'wpsp-shipments', __( 'Addresses', WPSP_LANG ), __( 'Addresses', WPSP_LANG ), 'manage_options', 'list_addresses', array(
 			$this,
 			'list_addresses'
 		) );
-		add_submenu_page( 'wpsp-shipment', __( 'Create Address', WPSP_LANG ), __( 'Create Address', WPSP_LANG ), 'manage_options', 'create_address', array(
+		add_submenu_page( 'wpsp-shipments', __( 'Create Address', WPSP_LANG ), __( 'Create Address', WPSP_LANG ), 'manage_options', 'create_address', array(
 			$this,
 			'create_address'
 		) );

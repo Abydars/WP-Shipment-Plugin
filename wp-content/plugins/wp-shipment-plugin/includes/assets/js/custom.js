@@ -338,7 +338,7 @@ jQuery(function ($) {
                     $select_btn.attr('data-package-type', level_rate.package_type);
                     $select_btn.text('Select');
 
-                    $level_td.text(level_rate.name);
+                    $level_td.html(level_rate.name);
                     $rate_td.text('$' + level_rate.rate);
                     $action_td.append($select_btn);
 

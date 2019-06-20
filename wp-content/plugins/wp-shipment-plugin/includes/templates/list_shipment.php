@@ -42,7 +42,7 @@
                         <td><?= $shipment->shipDate ?></td>
                         <td><?= $shipment->status ?></td>
                         <td class="view_shipment">
-                            <a href="admin.php?page=shipments&id=<?= $shipment->id ?>">
+                            <a href="admin.php?page=wpsp-shipments&id=<?= $shipment->id ?>">
                                 <i class="fa fa-eye"></i>
                             </a>
                         </td>

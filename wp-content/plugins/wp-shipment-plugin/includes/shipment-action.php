@@ -26,11 +26,6 @@ class WPSP_ShipmentActions
 		return '<div class="wpsp-success"' . ( empty( $text ) ? 'style="display: none;"' : '' ) . '><h3><i class="fa fa-smile"></i><p>' . $text . '</p></h3></div>';
 	}
 
-	function filter_wpsp_email_piping_field_value( $value, $key )
-	{
-
-	}
-
 	function action_create_new_address()
 	{
 		if ( isset( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'wpsp_create_address' ) ) {
@@ -136,12 +131,18 @@ class WPSP_ShipmentActions
 
 					if ( ! $error && ! empty( $shipment_data ) ) {
 
+						$creator_id = ( ! empty( $post_data->creator_id ) ? $post_data->creator_id : null );
+
+						if ( is_user_logged_in() && empty( $creator_id ) ) {
+							$creator_id = get_current_user_id();
+						}
+
 						// db entry
 						$row = array(
 							"shipKey"        => "",
 							"ticket_id"      => $post_data->ticket_id,
 							"customer_id"    => $post_data->customer,
-							"creator_id"     => get_current_user_id(),
+							"creator_id"     => $creator_id,
 							"server"         => $post_data->carrier,
 							"status"         => "Pending",
 							"serverLevel"    => $post_data->shipping_method,

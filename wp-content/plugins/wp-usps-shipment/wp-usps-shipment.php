@@ -39,7 +39,7 @@ class WPSP_USPS
 
 	function wpsp_email_piping_field_value_usps( $value, $key )
 	{
-		if ( in_array( $key, [ 'shipping_method' ] ) ) {
+		if ( in_array( $key, [ 'shipping_method', 'package_type' ] ) ) {
 			$value = strtoupper( $value );
 		}
 
@@ -53,12 +53,14 @@ class WPSP_USPS
 
 	function wpsp_service_rates_usps( $data, &$error, &$rates )
 	{
-		$rates        = [];
-		$error        = false;
-		$from_address = WPSP_Address::getAddress( $data->from );
-		$to_address   = WPSP_Address::getAddress( $data->to );
-		$from_zip     = $from_address['zip_code'];
-		$to_zip       = $to_address['zip_code'];
+		$rates           = [];
+		$error           = false;
+		$from_address    = WPSP_Address::getAddress( $data->from );
+		$to_address      = WPSP_Address::getAddress( $data->to );
+		$from_zip        = $from_address['zip_code'];
+		$to_zip          = $to_address['zip_code'];
+		$services        = apply_filters( 'wpsp_shipment_usps_services', [] );
+		$services['All'] = 'All';
 
 		$d = [
 			'Revision' => 2,
@@ -71,7 +73,7 @@ class WPSP_USPS
 				'_attributes'    => [
 					'ID' => $id,
 				],
-				'Service'        => 'All',
+				'Service'        => array_search( $data->shipping_method, $services ),
 				'ZipOrigination' => $from_zip,
 				'ZipDestination' => $to_zip,
 				'Pounds'         => ( $package['weight'] / 16 ),
@@ -126,21 +128,23 @@ class WPSP_USPS
 				}
 
 				foreach ( $postages as $postage ) {
-					$levels       = apply_filters( 'wpsp_shipment_usps_levels', [] );
+					$levels       = apply_filters( 'wpsp_shipment_usps_services', [] );
 					$level        = null;
-					$mail_service = strtolower( $postage['MailService'] );
+					$mail_service = strtolower( strip_tags( html_entity_decode( $postage['MailService'] ) ) );
 
-					foreach ( $levels as $lvl ) {
-						$l = strtolower( $lvl );
+					foreach ( $levels as $lvl_k => $lvl_v ) {
+						$lv = strtolower( $lvl_v );
+						$lk = strtolower( $lvl_k );
 
-						if ( strpos( $mail_service, $l ) !== false ) {
-							$level = $lvl;
+						if ( strpos( $mail_service, $lk ) !== false ) {
+							$level = $lvl_v;
+							break;
 						}
 					}
 
 					if ( ! isset( $rates[ $postage['MailService'] ] ) ) {
 						$rates[ $postage['MailService'] ] = [
-							'name'         => $postage['MailService'],
+							'name'         => html_entity_decode( $postage['MailService'] ),
 							'rate'         => 0,
 							'level'        => $level,
 							'package_type' => $data->package_type
@@ -452,11 +456,6 @@ class WPSP_USPS
 			'First Class'                          => 'FIRST CLASS',
 			'First Class Commercial'               => 'FIRST CLASS',
 			'First Class HFP Commercial'           => 'FIRST CLASS',
-			'Priority'                             => 'PRIORITY',
-			'Priority Commercial'                  => 'PRIORITY',
-			'Priority Cpp'                         => 'PRIORITY',
-			'Priority HFP Commercial'              => 'PRIORITY',
-			'Priority HFP CPP'                     => 'PRIORITY',
 			'Priority Mail Express'                => 'PRIORITY EXPRESS',
 			'Priority Mail Express Commercial'     => 'PRIORITY EXPRESS',
 			'Priority Mail Express CPP'            => 'PRIORITY EXPRESS',
@@ -466,6 +465,12 @@ class WPSP_USPS
 			'Priority Mail Express HFP Commercial' => 'PRIORITY EXPRESS',
 			'Priority Mail Express HFP CPP'        => 'PRIORITY EXPRESS',
 			'Priority Mail Cubic'                  => 'PRIORITY MAIL CUBIC',
+			'Priority Mail 1-Day™ Cubic'           => 'PRIORITY MAIL CUBIC',
+			'Priority Mail'                        => 'PRIORITY',
+			'Priority Commercial'                  => 'PRIORITY',
+			'Priority Cpp'                         => 'PRIORITY',
+			'Priority HFP Commercial'              => 'PRIORITY',
+			'Priority HFP CPP'                     => 'PRIORITY',
 			'Retail Ground'                        => 'PARCEL SELECT GROUND',
 			'Media'                                => 'MEDIA',
 			'Library'                              => 'LIBRARY',

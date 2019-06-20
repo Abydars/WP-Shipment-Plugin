@@ -32,18 +32,18 @@ class WPSP_Address
 		return $value;
 	}
 
-	public static function get_addresses_by_code( $code )
+	public static function get_address_by_code( $code )
 	{
 		global $wpdb;
 
-		$table     = self::get_table_name();
-		$addresses = $wpdb->get_results( "SELECT * FROM $table WHERE address_code = '{$code}' ORDER by id DESC" );
+		$table      = self::get_table_name();
+		$address_id = $wpdb->get_var( "SELECT id FROM $table WHERE address_code = '{$code}' ORDER by id DESC" );
 
-		if ( empty( $addresses ) ) {
-			return array();
+		if ( empty( $address_id ) ) {
+			return false;
 		}
 
-		return $addresses;
+		return self::getAddress( $address_id );
 	}
 
 	public static function get_addresses_no_customer()
