@@ -74,7 +74,7 @@
             </table>
         </div>
         <div class="row">
-            <div class="wpsp-one-half">
+            <div class="wpsp-one-half" style="display: none;">
                 <h1>Tracking</h1>
                 <table>
                     <tbody>
@@ -91,8 +91,8 @@
                     </tbody>
                 </table>
             </div>
-            <div class="wpsp-one-half">
-                <h1>Rate</h1>
+            <div class="wpsp-one-half1">
+                <h1>Rates</h1>
                 <table>
                     <tbody>
                     <tr>
