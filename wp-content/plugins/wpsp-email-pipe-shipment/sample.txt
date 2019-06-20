@@ -1,0 +1,63 @@
+From abidr.w@gmail.com Wed Jun 19 15:45:53 2019
+Received: from mail-io1-f51.google.com ([209.85.166.51]:45182)
+        by c44670.sgvps.net with esmtps (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128)
+        (Exim 4.90devstart_546-794992d-XX)
+        (envelope-from <abidr.w@gmail.com>)
+        id 1hdhSr-000CtM-K9
+        for emailrequest@ship4lesslabels.com; Wed, 19 Jun 2019 15:45:53 -0500
+Received: by mail-io1-f51.google.com with SMTP id e3so664117ioc.12
+        for <emailrequest@ship4lesslabels.com>; Wed, 19 Jun 2019 13:45:33 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=fjrjuTF9Vt1Jjo8u04lks5PABfaL8A9WDNFmtIIN+j4=;
+        b=cL7vYpaKuanA3azwgehueGuDnhcJN+SIYojv86jZ8yvH/EX6AqTs46bKVdSnvkI2BO
+         ofgYKRRvzL3R/4GdN1SGJ++Xu0jmauximhx5rrs/P49XH9kSCHKZjKNxVnJW89bYdvP8
+         yULjKK/7aUPq+CDgqZlx0WLFJM3vngYYngGli1c2YGJlQFK0MD9/bjs2CvzE1ptYUMMz
+         e8VDMWdiP2VoSboUXNLzLBxBhuBCOiWP1Te8954oq7a7zjFmPIzQJq44ODSl2RZTijip
+         EGxL4KwtZOxhKs/8/AfxbN3Xu/sYNqXmztZPIHlHQLApxhuzfYUStL3+a6UMEfrne7vl
+         TteQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=fjrjuTF9Vt1Jjo8u04lks5PABfaL8A9WDNFmtIIN+j4=;
+        b=RuPJHnunRrNQIZm0RgGeCFwS4quBpw2aj814WprFP4wKfh/aZ+2/NIQ4GFHu0eG9wC
+         QJMCFDBp+A9Pmab7v+byRRRb54O+VJdLw7AM9kXB45PPivsUPh08ZxytrGtZvUZxvmBm
+         XkVGM+mf6UlpGscHCrPZQ3zO5oGiNNooZqYlMHLO8Ycd9E+mN9sOf9EylNGXjZlvvuJc
+         haScQCgqugqNDau/6EU/QO2rWQr0iybKGQGQ04l7CAgXi+2bC0vgzimLfFMpE2efgZOn
+         DrYza7OTVIhx16nw5RkJkVUG0qXQy2tZuwOa497WHIkjJXCIWor8DSmLjZR5nsfTzRPQ
+         xyYg==
+X-Gm-Message-State: APjAAAU4eRn6RgzqdDMf0Uj/S7jDl6sYm4QFXBaugpNYKVc/w+i6p3CQ
+        Shs3uIawtLFzOlj56Wn4WgWM+zs6Yv+arHRdCMYG2PdNa/s=
+X-Google-Smtp-Source: APXvYqwFvOFsBIJwmCHX8gv+XxRx7vRuIxqXwqaHclj/0/P1pprdq7yqhtObtBpKlW1ilIx3u1lSSttEVKiWevTwqEg=
+X-Received: by 2002:a6b:7f0b:: with SMTP id l11mr87076067ioq.282.1560977113001;
+ Wed, 19 Jun 2019 13:45:13 -0700 (PDT)
+MIME-Version: 1.0
+From: Abid Raza <abidr.w@gmail.com>
+Date: Thu, 20 Jun 2019 01:45:02 +0500
+Message-ID: <CANYhTmwSF7jNQzhspviKnwcXpwkTVmr0geTLM6kswNq_XY6MLw@mail.gmail.com>
+Subject: test
+To: emailrequest@ship4lesslabels.com
+Content-Type: multipart/alternative; boundary=\"00000000000052b753058bb34eb4\"
+
+--00000000000052b753058bb34eb4
+Content-Type: text/plain; charset=\"UTF-8\"
+
+--wpsp--
+Test: Testing
+Test2: Testing1111
+--wpsp--
+
+--00000000000052b753058bb34eb4
+Content-Type: text/html; charset=\"UTF-8\"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D\"ltr\"><div class=3D\"gmail_default\" style=3D\"color:rgb(0,0,0);fon=
+t-family:arial,helvetica,sans-serif\">--wpsp--</div><div class=3D\"gmail_defa=
+ult\" style=3D\"color:rgb(0,0,0);font-family:arial,helvetica,sans-serif\">Test=
+: Testing</div><div class=3D\"gmail_default\" style=3D\"color:rgb(0,0,0);font-=
+family:arial,helvetica,sans-serif\">Test2: Testing1111</div><div class=3D\"gm=
+ail_default\" style=3D\"color:rgb(0,0,0);font-family:arial,helvetica,sans-ser=
+if\">--wpsp--</div></div>
+
+--00000000000052b753058bb34eb4--

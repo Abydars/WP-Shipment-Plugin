@@ -1,7 +1,5 @@
-#!/usr/local/bin/php -q
+#!/usr/local/bin/php71 -q
 <?php
-
-require_once '../../../wp-load.php';
 
 $fd    = fopen( "php://stdin", "r" );
 $email = ""; // This will be the variable holding the data.
@@ -11,6 +9,8 @@ while ( ! feof( $fd ) ) {
 }
 
 fclose( $fd );
+
+require_once dirname( __FILE__ ) . '/../../../../wp-load.php';
 
 $params = [
 	'action'  => 'wpsp_parse_email_pipe',
@@ -28,5 +28,3 @@ curl_setopt( $ch, CURLOPT_POSTFIELDS, $params );
 $output = curl_exec( $ch );
 
 curl_close( $ch );
-
-?>

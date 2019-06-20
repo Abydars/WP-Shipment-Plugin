@@ -247,6 +247,12 @@
                     </div>
                 </div>
                 <div class="wpsp-row">
+                    <div class="wpsp-form-group">
+                        <label>Address Code</label>
+                        <input type="text" name="code" id="" placeholder="(optional)"/>
+                    </div>
+                </div>
+                <div class="wpsp-row">
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Full Name</label>
@@ -325,7 +331,7 @@
                 <div class="wpsp-row">
                     <div class="action">
                         <button class="cancel">Cancel</button>
-                        <button type="submit">Add</button>
+                        <button type="submit" class="wpsp-btn-green">Add</button>
                     </div>
                 </div>
             </form>

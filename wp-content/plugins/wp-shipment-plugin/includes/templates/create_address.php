@@ -4,7 +4,7 @@
             <h1 class="wpsp-page-title">Create Address <a href="<?= admin_url( 'admin.php?page=list_addresses' ) ?>">View
                     Addresses</a></h1>
 
-            <?php if ( isset( $_GET['error'] ) ) { ?>
+			<?php if ( isset( $_GET['error'] ) ) { ?>
 				<?= apply_filters( 'wpsp_error', $_GET['error'] ) ?>
 			<?php } ?>
 
@@ -28,6 +28,12 @@
                         <span>Format: 1005 N Gravenstein Highway Sebastopol, CA 95472</span>
                         <textarea name="address" placeholder="1005 N Gravenstein Highway Sebastopol, CA 95472"
                                   style="width: 100%;"></textarea>
+                    </div>
+                </div>
+                <div class="wpsp-row">
+                    <div class="wpsp-form-group">
+                        <label>Address Code</label>
+                        <input type="text" name="code" id="" placeholder="(optional)"/>
                     </div>
                 </div>
                 <div class="wpsp-row">

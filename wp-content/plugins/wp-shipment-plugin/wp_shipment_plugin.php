@@ -1,17 +1,16 @@
 <?php
 /*
 Plugin Name: WPSP Shipment Plugin
-Plugin URI:
+Plugin URI: hztech.biz
 description:
-Version: 1.0
-Author:
-Author URI:
-License:
+Version: 0.0.2
+Author: Hztech
+Author URI: hztech.biz
 */
 
 define( 'WPSP_PLUGIN_URL', plugins_url( '', __FILE__ ) );
 define( 'WPSP_LANG', 'WPSP-SHIPMENT-PLUGIN' );
-define( 'WPSP_DB_VERSION', '0.0.1' );
+define( 'WPSP_DB_VERSION', '0.0.2' );
 define( 'WPSP_FILES_DIR', WP_CONTENT_DIR . '/uploads/wpsp/' );
 define( 'WPSP_FILES_URL', get_bloginfo( 'url' ) . '/wp-content/uploads/wpsp/' );
 

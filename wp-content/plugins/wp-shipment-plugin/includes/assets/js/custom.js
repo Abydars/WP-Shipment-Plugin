@@ -100,6 +100,7 @@ jQuery(function ($) {
             row_data[$(this).text()] = data[0][i];
         });
 
+        $('#editAddressModal input[name="code"]').val(row_data['Code']);
         $('#editAddressModal input[name="full_name"]').val(row_data['Full Name']);
         $('#editAddressModal input[name="company"]').val(row_data['Company']);
         $('#editAddressModal input[name="country"]').val(row_data['Country']);

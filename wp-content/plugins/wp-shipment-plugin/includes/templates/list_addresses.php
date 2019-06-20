@@ -17,7 +17,7 @@
             <table id="listShipments">
                 <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>Code</th>
                     <th>Customer Name</th>
                     <th>Full Name</th>
                     <th>Company</th>
@@ -47,7 +47,7 @@
 
 					?>
                     <tr style="text-align: left">
-                        <td><?= $address->id ?></td>
+                        <td><?= $address->address_code ?></td>
                         <td><?= $customer_name ?></td>
                         <td><?= $address_data['full_name'] ?></td>
                         <td><?= $address_data['company'] ?></td>
@@ -85,6 +85,12 @@
                             <span>Format: 1005 N Gravenstein Highway Sebastopol, CA 95472</span>
                             <textarea name="address" placeholder="1005 N Gravenstein Highway Sebastopol, CA 95472"
                                       style="width: 100%;"></textarea>
+                        </div>
+                    </div>
+                    <div class="wpsp-row">
+                        <div class="wpsp-form-group">
+                            <label>Address Code</label>
+                            <input type="text" name="code" id="" placeholder="(optional)"/>
                         </div>
                     </div>
                     <div class="wpsp-row">

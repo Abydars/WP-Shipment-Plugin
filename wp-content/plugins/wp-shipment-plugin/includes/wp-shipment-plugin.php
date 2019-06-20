@@ -158,6 +158,7 @@ class WPSP
 					customer_id int (9) NOT NULL,
 					address_id varchar(100) DEFAULT '' NULL,
 					address_name varchar(100) DEFAULT '' NOT NULL,
+					address_code varchar(100) DEFAULT NULL,
 					data longtext DEFAULT '' NOT NULL,
 					is_default tinyint DEFAULT 0,
 					type varchar(20) DEFAULT 'to',

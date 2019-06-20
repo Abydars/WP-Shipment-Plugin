@@ -25,6 +25,20 @@ class WPSP_Address
 		return $addresses;
 	}
 
+	public static function get_addresses_by_code( $code )
+	{
+		global $wpdb;
+
+		$table     = self::get_table_name();
+		$addresses = $wpdb->get_results( "SELECT * FROM $table WHERE address_code = '{$code}' ORDER by id DESC" );
+
+		if ( empty( $addresses ) ) {
+			return array();
+		}
+
+		return $addresses;
+	}
+
 	public static function get_addresses_no_customer()
 	{
 		global $wpdb;
@@ -87,6 +101,16 @@ class WPSP_Address
 		return $address_id;
 	}
 
+	public static function getAddressCode( $id )
+	{
+		global $wpdb;
+
+		$table        = self::get_table_name();
+		$address_code = $wpdb->get_var( "SELECT address_code FROM $table WHERE id = $id" );
+
+		return $address_code;
+	}
+
 	public static function delete_address( $id )
 	{
 		global $wpdb;
@@ -111,6 +135,7 @@ class WPSP_Address
 		$row = array(
 			"address_name" => $address->full_name . " " . $address->street_1 . " " . $address->street_2 . ", " . $address->city . ", " . $address->state . ", " . $address->country . " " . $address->zip_code,
 			"customer_id"  => $address->customer,
+			"address_code" => $address->code,
 			"data"         => json_encode( $address ),
 			"is_default"   => $is_first,
 			"type"         => null,
@@ -136,6 +161,7 @@ class WPSP_Address
 		$is_first = empty( $addresses );
 		$row      = array(
 			"address_name" => $address->full_name . " " . $address->street_1 . " " . $address->street_2 . ", " . $address->city . ", " . $address->state . ", " . $address->country . " " . $address->zip_code,
+			"address_code" => $address->code,
 			"customer_id"  => $old_address->customer_id,
 			"data"         => json_encode( $address ),
 			"is_default"   => $is_first,
