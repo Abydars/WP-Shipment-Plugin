@@ -9,6 +9,20 @@ class WPSP_Shipment
 		return $wpdb->get_row( "SELECT * FROM {$wpdb->prefix}shipments WHERE id = {$id};" );
 	}
 
+	static function get_labels( $id )
+	{
+		global $wpdb;
+
+		$labels = $wpdb->get_var( "SELECT labels FROM {$wpdb->prefix}labels WHERE shipment_id = {$id};" );
+		$labels = json_decode( $labels, true );
+
+		if ( empty( $labels ) ) {
+			$labels = [];
+		}
+
+		return $labels;
+	}
+
 	static function get_shipments( $order_by = 'desc' )
 	{
 		global $wpdb;

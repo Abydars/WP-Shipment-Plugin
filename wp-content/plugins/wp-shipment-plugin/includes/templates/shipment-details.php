@@ -68,7 +68,11 @@
                 </tr>
                 <tr>
                     <th>Labels</th>
-                    <td></td>
+                    <td>
+						<?php foreach ( $labels as $k => $label ) { ?>
+                            <a target="_blank" href="<?= $label ?>"><?= basename($label) ?></a>
+						<?php } ?>
+                    </td>
                 </tr>
                 </tbody>
             </table>

@@ -78,6 +78,9 @@ class WPSP
 			$creator_id   = get_userdata( $details->creator_id );
 			$from_address = WPSP_Address::getAddress( $details->fromAddress_id );
 			$to_address   = WPSP_Address::getAddress( $details->toAddress_id );
+			$labels       = array_map( function ( $label ) {
+				return apply_filters( 'wpsp_file_url', $label );
+			}, WPSP_Shipment::get_labels( $shipment_id ) );
 
 			include( 'templates/shipment-details.php' );
 		} else {

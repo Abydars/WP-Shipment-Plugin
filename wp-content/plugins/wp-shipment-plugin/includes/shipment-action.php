@@ -194,7 +194,11 @@ class WPSP_ShipmentActions
 								$subject  = __( 'Label', WPSP_LANG );
 								$subtitle = __( '', WPSP_LANG );
 
-								$text = "Ticket #ID: {$post_data->ticket_id}";
+								$text = "";
+
+								if ( ! empty( $post_data->ticket_id ) ) {
+									$text .= "Ticket #ID: {$post_data->ticket_id}";
+								}
 
 								if ( ! empty( $to_address['full_name'] ) ) {
 									$text .= "<br /><br />Shipped To: {$to_address['full_name']}";
@@ -228,8 +232,9 @@ class WPSP_ShipmentActions
 									$extra_files[] = $encoded_image;
 								}
 
-								$final_filename = apply_filters( 'wpsp_file_dir', "{$post_data->carrier}-{$shipment_id}.pdf" );
-								$final_fileurl  = apply_filters( 'wpsp_file_url', "{$post_data->carrier}-{$shipment_id}.pdf" );
+								$fname          = "{$post_data->carrier}-{$shipment_id}.pdf";
+								$final_filename = apply_filters( 'wpsp_file_dir', $fname );
+								$final_fileurl  = apply_filters( 'wpsp_file_url', $fname );
 
 								WPSP_PdfHelper::merge( $pages, 'F', $final_filename );
 
@@ -244,6 +249,12 @@ class WPSP_ShipmentActions
 								);
 								$attachments[] = $final_filename;
 								$blogname      = get_bloginfo( 'name' );
+
+								$inserted = $wpdb->insert( $wpdb->prefix . 'labels', [
+									'shipment_id' => $shipment_id,
+									'labels'      => json_encode( [ $fname ] ),
+									'label_type'  => 'PDF'
+								] );
 
 								wp_mail( $email, "{$blogname} - Shipment #{$shipment_id}", __( "Label Summary: {$text}", WPSP_LANG ), $headers, $attachments );
 
