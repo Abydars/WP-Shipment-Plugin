@@ -100,4 +100,11 @@ class WPSP_Customer
 
 		return $users;
 	}
+
+	static function get_customer_initials( $id )
+	{
+		$customer = self::get_customer( $id );
+
+		return WPSP_Helper::get_initials( $customer->display_name );
+	}
 }

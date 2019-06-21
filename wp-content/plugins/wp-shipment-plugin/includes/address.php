@@ -43,7 +43,7 @@ class WPSP_Address
 			return false;
 		}
 
-		return self::getAddress( $address_id );
+		return self::get_address( $address_id );
 	}
 
 	public static function get_addresses_no_customer()
@@ -74,7 +74,7 @@ class WPSP_Address
 		return $addresses;
 	}
 
-	public static function getAddress( $id )
+	public static function get_address( $id )
 	{
 		global $wpdb;
 
@@ -98,7 +98,7 @@ class WPSP_Address
 		return $address;
 	}
 
-	public static function getAddressId( $id )
+	public static function get_address_id( $id )
 	{
 		global $wpdb;
 
@@ -108,7 +108,7 @@ class WPSP_Address
 		return $address_id;
 	}
 
-	public static function getAddressCode( $id )
+	public static function get_address_code( $id )
 	{
 		global $wpdb;
 
@@ -159,7 +159,7 @@ class WPSP_Address
 		global $wpdb;
 
 		$error       = false;
-		$old_address = self::getAddress( $id );
+		$old_address = self::get_address( $id );
 		$old_address = (object) $old_address;
 		$address     = $data;
 

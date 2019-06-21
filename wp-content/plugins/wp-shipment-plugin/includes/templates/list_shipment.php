@@ -26,8 +26,8 @@
 				foreach ( $shipments as $shipment ) {
 					$customer     = get_userdata( $shipment->customer_id );
 					$creator      = get_userdata( $shipment->creator_id );
-					$from_address = WPSP_Address::getAddress( $shipment->fromAddress_id );
-					$to_address   = WPSP_Address::getAddress( $shipment->toAddress_id );
+					$from_address = WPSP_Address::get_address( $shipment->fromAddress_id );
+					$to_address   = WPSP_Address::get_address( $shipment->toAddress_id );
 					?>
                     <tr style="text-align: left">
                         <td><?= $shipment->id ?></td>

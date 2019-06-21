@@ -279,6 +279,11 @@ jQuery(function ($) {
         })
     });
 
+    $('.select-country select').on('change', function () {
+        var country = $(this).val();
+        // TODO: get states list in drop down while address creation
+    });
+
     function refreshAddresses() {
         var customer_id = $('#shipment_form .customers-list select').val();
 

@@ -23,8 +23,8 @@ function wpsp_easyship_create_shipment( $data, &$error, &$shipment_id )
 		$courier_id = '';
 	}
 
-	$from_address = WPSP_Address::getAddress( $data->from );
-	$to_address   = WPSP_Address::getAddress( $data->to );
+	$from_address = WPSP_Address::get_address( $data->from );
+	$to_address   = WPSP_Address::get_address( $data->to );
 
 	$data = [
 		'selected_courier_id'        => '',

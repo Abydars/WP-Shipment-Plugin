@@ -23,6 +23,7 @@ include( 'includes/user-meta.php' );
 include( 'includes/tcpdf/tcpdf.php' );
 include( 'includes/FPDI/fpdi.php' );
 include( 'includes/pdf-helper.php' );
+include( 'includes/helper.php' );
 
 $wp_shipment = new WPSP();
 register_activation_hook( __FILE__, array( $wp_shipment, 'wpsp_activation' ) );

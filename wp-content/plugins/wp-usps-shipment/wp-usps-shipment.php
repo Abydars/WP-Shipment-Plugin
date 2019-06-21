@@ -55,8 +55,8 @@ class WPSP_USPS
 	{
 		$rates           = [];
 		$error           = false;
-		$from_address    = WPSP_Address::getAddress( $data->from );
-		$to_address      = WPSP_Address::getAddress( $data->to );
+		$from_address    = WPSP_Address::get_address( $data->from );
+		$to_address      = WPSP_Address::get_address( $data->to );
 		$from_zip        = $from_address['zip_code'];
 		$to_zip          = $to_address['zip_code'];
 		$services        = apply_filters( 'wpsp_shipment_usps_services', [] );
@@ -216,8 +216,8 @@ class WPSP_USPS
 	function wpsp_label_rates_usps( $data, &$error, &$rates )
 	{
 		$error        = false;
-		$from_address = WPSP_Address::getAddress( $data->from );
-		$to_address   = WPSP_Address::getAddress( $data->to );
+		$from_address = WPSP_Address::get_address( $data->from );
+		$to_address   = WPSP_Address::get_address( $data->to );
 		$from_zip     = $from_address['zip_code'];
 		$to_zip       = $to_address['zip_code'];
 
@@ -304,8 +304,8 @@ class WPSP_USPS
 	{
 		try {
 			$error        = false;
-			$from_address = WPSP_Address::getAddress( $data->from );
-			$to_address   = WPSP_Address::getAddress( $data->to );
+			$from_address = WPSP_Address::get_address( $data->from );
+			$to_address   = WPSP_Address::get_address( $data->to );
 			$from_zip     = $from_address['zip_code'];
 			$packages     = $data->packages;
 

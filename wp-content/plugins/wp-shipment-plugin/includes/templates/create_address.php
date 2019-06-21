@@ -15,7 +15,8 @@
                         <select name="customer">
                             <option value="">All Customers</option>
 							<?php foreach ( $customers as $customer ) : ?>
-                                <option value="<?= $customer->ID ?>"><?= $customer->display_name ?></option>
+                                <option value="<?= $customer->ID ?>"
+                                        data-initials="<?= WPSP_Customer::get_customer_initials( $customer->ID ) ?>"><?= $customer->display_name ?></option>
 							<?php endforeach; ?>
                         </select>
                     </div>
@@ -31,7 +32,7 @@
                     </div>
                 </div>
                 <div class="wpsp-row">
-                    <div class="wpsp-form-group">
+                    <div class="wpsp-form-group address-code">
                         <label>Address Code</label>
                         <input type="text" name="code" id="" placeholder="(optional)"/>
                     </div>
@@ -66,9 +67,13 @@
                 </div>
                 <div class="wpsp-row">
                     <div class="wpsp-one-half">
-                        <div class="wpsp-form-group">
+                        <div class="wpsp-form-group select-country">
                             <label>Country</label>
-                            <input type="text" name="country" id="" required/>
+                            <select name="country" required>
+								<?php foreach ( $countries as $country ) { ?>
+                                    <option value="<?= $country['code2'] ?>"><?= $country['name'] ?></option>
+								<?php } ?>
+                            </select>
                         </div>
                     </div>
                     <div class="wpsp-one-half">

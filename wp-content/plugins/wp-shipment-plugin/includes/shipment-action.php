@@ -39,6 +39,18 @@ class WPSP_ShipmentActions
 				] );
 			}
 
+			if ( empty( $post_data->code ) ) {
+				$initials = WPSP_Helper::get_initials( $post_data->full_name );
+
+				if ( ! empty( $post_data->customer ) ) {
+					$initials = WPSP_Customer::get_customer_initials( $post_data->customer );
+				}
+
+				$random          = WPSP_Helper::str_random( 3 );
+				$code            = "{$initials}-{$post_data->state}-{$random}";
+				$post_data->code = $code;
+			}
+
 			if ( ! $error ) {
 				WPSP_Address::store_address( $post_data );
 				wp_redirect( admin_url( 'admin.php?page=list_addresses' ) );
@@ -186,7 +198,7 @@ class WPSP_ShipmentActions
 
 								// TODO: generate label
 								$shipment    = WPSP_Shipment::get_shipment( $shipment_id );
-								$to_address  = WPSP_Address::getAddress( $post_data->to );
+								$to_address  = WPSP_Address::get_address( $post_data->to );
 								$extra_files = [];
 								$pages       = [];
 

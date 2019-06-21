@@ -76,8 +76,8 @@ class WPSP
 			$details      = WPSP_Shipment::get_shipment( $shipment_id );
 			$customer_id  = get_userdata( $details->customer_id );
 			$creator_id   = get_userdata( $details->creator_id );
-			$from_address = WPSP_Address::getAddress( $details->fromAddress_id );
-			$to_address   = WPSP_Address::getAddress( $details->toAddress_id );
+			$from_address = WPSP_Address::get_address( $details->fromAddress_id );
+			$to_address   = WPSP_Address::get_address( $details->toAddress_id );
 			$labels       = array_map( function ( $label ) {
 				return apply_filters( 'wpsp_file_url', $label );
 			}, WPSP_Shipment::get_labels( $shipment_id ) );
@@ -100,6 +100,8 @@ class WPSP
 	function create_address()
 	{
 		$customers = WPSP_Customer::get_customers();
+		$countries = apply_filters( 'wpsp_countries', WPSP_Helper::get_countries() );
+
 		include( 'templates/create_address.php' );
 	}
 
