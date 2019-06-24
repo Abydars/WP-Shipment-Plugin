@@ -153,6 +153,7 @@ class WPSP
 		$carriers  = [ '' => 'All' ];
 		$carriers  = apply_filters( 'wpsp_shipment_carriers', $carriers );
 		$customers = WPSP_Customer::get_customers();
+		$countries = WPSP_Helper::get_countries();
 
 		include( 'templates/create_label.php' );
 		die;

@@ -284,7 +284,11 @@
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Country</label>
-                            <input type="text" name="country" id="" required/>
+                            <select name="country" required>
+                                <?php foreach ( $countries as $country ) { ?>
+                                    <option value="<?= $country['code2'] ?>"><?= $country['name'] ?></option>
+                                <?php } ?>
+                            </select>
                         </div>
                     </div>
                     <div class="wpsp-one-half">
