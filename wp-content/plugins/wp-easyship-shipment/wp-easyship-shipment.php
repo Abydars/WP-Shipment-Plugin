@@ -318,7 +318,7 @@ class WPSP_EZEESHIP
     function wpsp_service_rates_ups($data, &$error, &$rates)
     {
         $error = false;
-        $rates = [];
+//        $rates = [];
         $data->carrier = 'ups';
         $this->wpsp_service_rates_ezeeship($data,$error,$rates);
     }
@@ -329,6 +329,7 @@ class WPSP_EZEESHIP
         $rates = [];
         $data->carrier = 'fedex';
         $this->wpsp_service_rates_ezeeship($data,$error,$rates);
+
     }
 
     function wpsp_service_rates_ezeeship($data, &$error, &$rates)
@@ -341,7 +342,11 @@ class WPSP_EZEESHIP
         $to_address = WPSP_Address::get_address($data->to);
 
         if ($data->shipping_method == 'All') {
-            $ups_services = $this->wpsp_shipment_fedex_levels();
+            if ($data->carrier == 'fedex') {
+                $ups_services = $this->wpsp_shipment_fedex_levels();
+            }else{
+                $ups_services = $this->wpsp_shipment_ups_levels();
+            }
             foreach ($ups_services as $service) {
                 $d = [];
                 $d['from'] = [];
@@ -384,6 +389,7 @@ class WPSP_EZEESHIP
                 $d = json_encode($d);
                 $res = $this->request($endpoint, $type, $d);
                 $res = json_decode($res);
+
                 if ($res->result == 'OK') {
                     $error = false;
                     $rates[] = [
@@ -397,6 +403,7 @@ class WPSP_EZEESHIP
                     $error = $res->message;
                 }
             }
+
         } else {
             $d = [];
             $d['from'] = [];
@@ -433,13 +440,10 @@ class WPSP_EZEESHIP
             }
 
             $d = json_encode($d);
-//        var_dump($d);
-//        die();
+
 
             $res = $this->request($endpoint, $type, $d);
             $res = json_decode($res);
-
-//        var_dump($res->data->rate);
 
             if ($res->result == 'OK') {
                 $error = false;
