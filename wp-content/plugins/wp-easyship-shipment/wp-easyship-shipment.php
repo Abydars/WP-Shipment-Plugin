@@ -256,8 +256,8 @@ class WPSP_EZEESHIP
             $d['from']['city'] = $from_address['city'];
             $d['from']['addressLine1'] = $from_address['street_1'];
             $d['from']['zipCode'] = $from_address['zip_code'];
-            $d['to'] = [];
 
+            $d['to'] = [];
             $d['to']['personName'] = $to_address['full_name'];
             $d['to']['company'] = $to_address['company'];
             $d['to']['countryCode'] = $to_address['country'];
@@ -268,10 +268,12 @@ class WPSP_EZEESHIP
             $d['to']['zipCode'] = $to_address['zip_code'];
             $d['carrierCode'] = $data->carrier;
             $d['serviceCode'] = $data->shipping_method;
-            $d['isTest'] = true;
+            if(WPSP_EZEESHIP_DEBUG == false) {
+                $d['isTest'] = false;
+            }else{
+                $d['isTest'] = true;
+            }
             $d['parcels'] = [];
-
-
             foreach ($packages as $k => $package) {
                 $pac = [
                     "packageNum" => $k + 1,
@@ -356,7 +358,11 @@ class WPSP_EZEESHIP
                 $d['to']['zipCode'] = $to_address['zip_code'];
                 $d['carrierCode'] = $data->carrier;
                 $d['serviceCode'] = $service;
-                $d['isTest'] = true;
+                if(WPSP_EZEESHIP_DEBUG == false) {
+                    $d['isTest'] = false;
+                }else{
+                    $d['isTest'] = true;
+                }
                 $d['parcels'] = [];
 
 
@@ -376,14 +382,8 @@ class WPSP_EZEESHIP
                 }
 
                 $d = json_encode($d);
-//        var_dump($d);
-//        die();
-
                 $res = $this->request($endpoint, $type, $d);
                 $res = json_decode($res);
-
-//        var_dump($res->data->rate);
-
                 if ($res->result == 'OK') {
                     $error = false;
                     $rates[] = [
@@ -395,7 +395,6 @@ class WPSP_EZEESHIP
                     $rates = array_values($rates);
                 } else {
                     $error = $res->message;
-//                    break;
                 }
             }
         } else {
@@ -522,8 +521,6 @@ class WPSP_EZEESHIP
         $d["addressLine1"] = $data->street_1 . $data->street_2;
         $d["zipCode"] = $data->zip_code;
         $d = json_encode($d);
-//        print_r($d);
-//        die();
         $endpoint = 'https://ezeeship.com/api/ezeeship-openapi/address/validate';
         $type = 'POST';
 
