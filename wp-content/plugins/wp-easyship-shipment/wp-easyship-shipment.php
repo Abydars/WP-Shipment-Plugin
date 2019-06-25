@@ -26,6 +26,7 @@ class WPSP_EZEESHIP
         add_action('wpsp_verify_address_ups', [$this, 'wpsp_verify_address_ups'], 10, 3);
         add_action('wpsp_verify_address_fedex', [$this, 'wpsp_verify_address_fedex'], 10, 3);
         add_action('wpsp_create_shipment_ups', [$this, 'wpsp_ups_create_shipment'], 10, 3);
+        add_action('wpsp_create_shipment_fedex', [$this, 'wpsp_fedex_create_shipment'], 10, 3);
         add_action('wpsp_create_label_ups', [$this, 'wpsp_create_label_ups'], 10, 3);
         add_action('wpsp_label_rates_fedex', [$this, 'wpsp_label_rates_fedex'], 10, 3);
         add_action('wpsp_label_rates_ups', [$this, 'wpsp_label_rates_ups'], 10, 3);
@@ -33,6 +34,7 @@ class WPSP_EZEESHIP
         add_action('wpsp_service_rates_ups', [$this, 'wpsp_service_rates_ups'], 10, 3);
         add_action('wpsp_service_rates_fedex', [$this, 'wpsp_service_rates_fedex'], 10, 3);
     }
+
     //api request
 
     function request($endpoint, $type, $data)
@@ -83,12 +85,12 @@ class WPSP_EZEESHIP
     function wpsp_shipment_fedex_package_types()
     {
         $levels = [
-            'your_package',
-            'FedEx_Envelope',
-            'FedEx_Pak_1',
-            'FedEx_Tube',
-            'fedex_box',
-            'fedex_Small_Box'
+            'your_package' => 'YourPackage',
+            'FedEx_Envelope' => 'FedEx® Envelope',
+            'FedEx_Pak_1' => 'FedEx® Pak (1)',
+            'FedEx_Tube' => 'FedEx® Tube',
+            'fedex_box' => 'FedEx® Box',
+            'fedex_Small_Box' => 'FEDEX_SMALL_BOX'
         ];
 
         return $levels;
@@ -97,13 +99,13 @@ class WPSP_EZEESHIP
     function wpsp_shipment_ups_package_types()
     {
         $levels = [
-            'your_package',
-            'ups_letter',
-            'UPS_Express_Tube',
-            'UPS_Express_Pak',
-            'UPS_Express_Box_Small',
-            'UPS_Express_Box_Medium',
-            'UPS_Express_Box_Large'
+            'your_package' => 'YourPackage',
+            'ups_letter' => 'UPS Letter',
+            'UPS_Express_Tube' => 'UPS Tube',
+            'UPS_Express_Pak' => 'UPS Express® Pak',
+            'UPS_Express_Box_Small' => 'UPS Express® Box - Small',
+            'UPS_Express_Box_Medium' => 'UPS Express® Box - Medium',
+            'UPS_Express_Box_Large' => 'UPS Express® Box - Large'
         ];
 
         return $levels;
@@ -113,16 +115,16 @@ class WPSP_EZEESHIP
     {
 
         $services = [
-            'fedex_home_delivery',
-            'fedex_priority_overnight',
-            'fedex_standard_overnight',
-            'fedex_2_day_am',
-            'fedex_2_day',
-            'fedex_express_saver',
-            'fedex_ground',
-            'fedex_smart_post',
-            'fedex_international_economy',
-            'fedex_international_priority',
+            'fedex_home_delivery' => 'FedEx Home Delivery®',
+            'fedex_priority_overnight' => 'FedEx Priority Overnight®',
+            'fedex_standard_overnight' => 'FedEx Standard Overnight®',
+            'fedex_2_day_am' => 'FedEx 2Day® A.M.',
+            'fedex_2_day' => 'FedEx 2Day®',
+            'fedex_express_saver' => 'FedEx Express Saver®',
+            'fedex_ground' => 'FedEx Ground®',
+            'fedex_smart_post' => 'FedEx SmartPost(only support single parcel)',
+            'fedex_international_economy' => 'FedEx International Economy®',
+            'fedex_international_priority' => 'FedEx International Priority®'
         ];
 
         return $services;
@@ -132,13 +134,13 @@ class WPSP_EZEESHIP
     {
 
         $services = [
-            'ups_next_day_air_early_am',
-            'ups_next_day_air',
-            'ups_next_day_air_saver',
-            'ups_second_day_air_am',
-            'ups_second_day_air',
-            'ups_3_day_select',
-            'ups_ground'
+            'ups_next_day_air_early_am' => 'UPS Next Day Air® Early',
+            'ups_next_day_air' => 'UPS Next Day Air®',
+            'ups_next_day_air_saver' => 'UPS Next Day Air Saver®',
+            'ups_second_day_air_am' => 'UPS 2nd Day Air AM®',
+            'ups_second_day_air' => 'UPS 2nd Day Air®',
+            'ups_3_day_select' => 'UPS 3 Day Select®',
+            'ups_ground' => 'UPS® Ground'
         ];
 
         return $services;
@@ -150,7 +152,6 @@ class WPSP_EZEESHIP
     //Addon Action
 
     //create label
-
     function wpsp_create_label_fedex(&$error, &$encoded_images, $shipment_data)
     {
         $error = __('Label not found', WPSP_LANG);
@@ -190,17 +191,14 @@ class WPSP_EZEESHIP
     //end create label
 
     // Rates
+
     function wpsp_label_rates_fedex($data, &$error, &$rates)
     {
-        $this->wpsp_service_rates_ups($data, $error, $rates);
+        $this->wpsp_service_rates_fedex($data, $error, $rates);
         $res = $rates;
         if (!$error) {
             $rates = 0;
             $rates += $res[0]['rate'];
-//            var_dump($rates);
-//            die();
-        } else {
-            $error = $error;
         }
     }
 
@@ -240,6 +238,7 @@ class WPSP_EZEESHIP
 
     function wpsp_ezeeship_create_shipment($data, &$error, &$shipment_data)
     {
+
         try {
             $from_address = WPSP_Address::get_address($data->from);
             $to_address = WPSP_Address::get_address($data->to);
@@ -268,9 +267,9 @@ class WPSP_EZEESHIP
             $d['to']['zipCode'] = $to_address['zip_code'];
             $d['carrierCode'] = $data->carrier;
             $d['serviceCode'] = $data->shipping_method;
-            if(WPSP_EZEESHIP_DEBUG == false) {
+            if (WPSP_EZEESHIP_DEBUG == false) {
                 $d['isTest'] = false;
-            }else{
+            } else {
                 $d['isTest'] = true;
             }
             $d['parcels'] = [];
@@ -293,8 +292,7 @@ class WPSP_EZEESHIP
             $res = $this->request($endpoint, $type, $d);
 
             $res = json_decode($res);
-//            var_dump($d);
-//            die;
+
 
             if ($res->result == 'OK') {
                 $shipment_data = array(
@@ -315,21 +313,20 @@ class WPSP_EZEESHIP
 
     //Estimate Rates
 
-    function wpsp_service_rates_ups($data, &$error, &$rates)
-    {
-        $error = false;
-//        $rates = [];
-        $data->carrier = 'ups';
-        $this->wpsp_service_rates_ezeeship($data,$error,$rates);
-    }
-
     function wpsp_service_rates_fedex($data, &$error, &$rates)
     {
         $error = false;
         $rates = [];
         $data->carrier = 'fedex';
-        $this->wpsp_service_rates_ezeeship($data,$error,$rates);
+        $this->wpsp_service_rates_ezeeship($data, $error, $rates);
 
+    }
+
+    function wpsp_service_rates_ups($data, &$error, &$rates)
+    {
+        $error = false;
+        $data->carrier = 'ups';
+        $this->wpsp_service_rates_ezeeship($data, $error, $rates);
     }
 
     function wpsp_service_rates_ezeeship($data, &$error, &$rates)
@@ -344,10 +341,10 @@ class WPSP_EZEESHIP
         if ($data->shipping_method == 'All') {
             if ($data->carrier == 'fedex') {
                 $ups_services = $this->wpsp_shipment_fedex_levels();
-            }else{
+            } else {
                 $ups_services = $this->wpsp_shipment_ups_levels();
             }
-            foreach ($ups_services as $service) {
+            foreach ($ups_services as $key => $service) {
                 $d = [];
                 $d['from'] = [];
                 $d['from']['countryCode'] = $from_address['country'];
@@ -362,10 +359,10 @@ class WPSP_EZEESHIP
                 $d['to']['addressLine1'] = $to_address['street_1'];
                 $d['to']['zipCode'] = $to_address['zip_code'];
                 $d['carrierCode'] = $data->carrier;
-                $d['serviceCode'] = $service;
-                if(WPSP_EZEESHIP_DEBUG == false) {
+                $d['serviceCode'] = $key;
+                if (WPSP_EZEESHIP_DEBUG == false) {
                     $d['isTest'] = false;
-                }else{
+                } else {
                     $d['isTest'] = true;
                 }
                 $d['parcels'] = [];
@@ -395,7 +392,7 @@ class WPSP_EZEESHIP
                     $rates[] = [
                         'name' => $service,
                         'rate' => $res->data->rate,
-                        'level' => $service,
+                        'level' => $key,
                         'package_type' => $data->package_type
                     ];
                     $rates = array_values($rates);
@@ -466,21 +463,22 @@ class WPSP_EZEESHIP
 
     //void label
 
-    function wpsp_void_label_ups( &$error, $shipment_id )
+    function wpsp_void_label_ups(&$error, $shipment_id)
     {
         $error = false;
-        $this->wpsp_void_label_ezeeship($error,$shipment_id);
+        $this->wpsp_void_label_ezeeship($error, $shipment_id);
     }
 
-    function wpsp_void_label_fedex( &$error, $shipment_id )
+    function wpsp_void_label_fedex(&$error, $shipment_id)
     {
         $error = false;
-        $this->wpsp_void_label_ezeeship($error,$shipment_id);
+        $this->wpsp_void_label_ezeeship($error, $shipment_id);
     }
 
-    function wpsp_void_label_ezeeship( &$error, $shipment_id ){
-        $error    = false;
-        $shipment = WPSP_Shipment::get_shipment( $shipment_id );
+    function wpsp_void_label_ezeeship(&$error, $shipment_id)
+    {
+        $error = false;
+        $shipment = WPSP_Shipment::get_shipment($shipment_id);
         $endpoint = 'https://ezeeship.com/api/ezeeship-openapi/label/cancel';
         $type = 'POST';
 
@@ -488,7 +486,7 @@ class WPSP_EZEESHIP
             $d = [];
             $d['objectId'] = $shipment->shipKey;
             $d = json_encode($d);
-            $res = $this->request( $endpoint,$type,$d);
+            $res = $this->request($endpoint, $type, $d);
             $res = json_decode($res);
 
             if ($res->result != 'OK') {
@@ -497,7 +495,7 @@ class WPSP_EZEESHIP
                 $error = false;
             }
 
-        } catch ( Exception $e ) {
+        } catch (Exception $e) {
             $error = $e->getMessage();
         }
     }
@@ -508,15 +506,15 @@ class WPSP_EZEESHIP
 
     function wpsp_verify_address_fedex($data, &$error)
     {
-        $this->wpsp_verify_address_ezeeship($data,$error);
+        $this->wpsp_verify_address_ezeeship($data, $error);
     }
 
     function wpsp_verify_address_ups($data, &$error)
     {
-        $this->wpsp_verify_address_ezeeship($data,$error);
+        $this->wpsp_verify_address_ezeeship($data, $error);
     }
 
-    function wpsp_verify_address_ezeeship($data,&$errror)
+    function wpsp_verify_address_ezeeship($data, &$errror)
     {
         $d = [];
         $d["countryCode"] = $data->country;

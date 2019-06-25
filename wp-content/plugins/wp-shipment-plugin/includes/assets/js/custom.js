@@ -36,9 +36,9 @@ jQuery(function ($) {
             success: function (res) {
                 $select_levels.empty();
 
-                for (var i in res) {
-                    $select_levels.append('<option>' + res[i] + '</option>');
-                }
+                $.each(res,function( index, value ) {
+                    $select_levels.append('<option value="' +index +'">' + value + '</option>');
+                });
 
                 $select_levels.append('<option>All</option>');
 
@@ -60,9 +60,9 @@ jQuery(function ($) {
             success: function (res) {
                 $package_types.empty();
 
-                for (var i in res) {
-                    $package_types.append('<option>' + res[i] + '</option>');
-                }
+                $.each(res,function( index, value ) {
+                    $package_types.append('<option value="' + index + '">' + value + '</option>');
+                });
 
                 if (package_type !== undefined)
                     $package_types.val(package_type);
