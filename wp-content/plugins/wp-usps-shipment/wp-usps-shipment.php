@@ -373,10 +373,10 @@ class WPSP_USPS
 
 				if ( ! isset( $res['Error'] ) ) {
 					$res           = $res['eVSResponse'];
-					$shipment_data = array(
-						"shipKey" => $res['BarcodeNumber'],
-						"label"   => $res['LabelImage']
-					);
+                    $shipment_data = array(
+                        "shipKey" => $res['BarcodeNumber'],
+                        "label"   => $res['LabelImage']
+                    );
 				} else {
 					$error = $res['Error']['Description'];
 				}

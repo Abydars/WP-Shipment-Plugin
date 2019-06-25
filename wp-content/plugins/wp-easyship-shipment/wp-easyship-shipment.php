@@ -22,371 +22,18 @@ class WPSP_EZEESHIP
         add_filter('wpsp_shipment_ups_package_types', [$this, 'wpsp_shipment_ups_package_types']);
         add_filter('wpsp_shipment_fedex_package_types', [$this, 'wpsp_shipment_fedex_package_types']);
 
-        add_filter('wpsp_get_markup_rate_usps', [$this, 'wpsp_get_markup_rate_usps'], 10, 3);
-//        add_filter( 'wpsp_label_summary_usps', [ $this, 'wpsp_label_summary_usps' ] );
-        add_filter('wpsp_shipment_usps_services', [$this, 'wpsp_shipment_usps_services']);
-//        add_filter( 'wpsp_email_piping_field_value_usps', [ $this, 'wpsp_email_piping_field_value_usps' ], 10, 2 );
-
         // Actions
         add_action('wpsp_verify_address_ups', [$this, 'wpsp_verify_address_ups'], 10, 3);
         add_action('wpsp_verify_address_fedex', [$this, 'wpsp_verify_address_fedex'], 10, 3);
-        add_action('wpsp_create_shipment_ups', [$this, 'wpsp_usps_create_shipment'], 10, 3);
-        add_action('wpsp_create_label_usps', [$this, 'wpsp_create_label_usps'], 10, 3);
+        add_action('wpsp_create_shipment_ups', [$this, 'wpsp_ups_create_shipment'], 10, 3);
+        add_action('wpsp_create_label_ups', [$this, 'wpsp_create_label_ups'], 10, 3);
         add_action('wpsp_label_rates_fedex', [$this, 'wpsp_label_rates_fedex'], 10, 3);
-//        add_action('wpsp_label_rates_ups', [$this, 'wpsp_label_rates_ups'], 10, 3);
+        add_action('wpsp_label_rates_ups', [$this, 'wpsp_label_rates_ups'], 10, 3);
         add_action('wpsp_void_label_usps', [$this, 'wpsp_void_label_usps'], 10, 2);
         add_action('wpsp_service_rates_ups', [$this, 'wpsp_service_rates_ups'], 10, 3);
         add_action('wpsp_service_rates_fedex', [$this, 'wpsp_service_rates_fedex'], 10, 3);
     }
-
-//    function wpsp_email_piping_field_value_usps( $value, $key )
-//    {
-//        if ( in_array( $key, [ 'shipping_method', 'package_type' ] ) ) {
-//            $value = strtoupper( $value );
-//        }
-//
-//        return $value;
-//    }
-//
-//    function wpsp_label_summary_usps( $text )
-//    {
-//        return $text;
-//    }
-//
-    function wpsp_service_rates_ups($data, &$error, &$rates)
-    {
-        $rates = [];
-        $error = false;
-        $endpoint = 'https://ezeeship.com/api/ezeeship-openapi/shipment/estimateRate';
-        $type = 'POST';
-        $from_address = WPSP_Address::get_address($data->from);
-        $to_address = WPSP_Address::get_address($data->to);
-        $from_zip = $from_address['zip_code'];
-        $to_zip = $to_address['zip_code'];
-        $services = apply_filters('wpsp_shipment_ups_services', []);
-        $services['All'] = 'All';
-
-//        $d = [];
-
-
-        $d = [];
-        $d['from'] = [];
-        $d['from']['countryCode'] = $from_address['country'];
-        $d['from']['stateCode'] = $from_address['state'];
-        $d['from']['city'] = $from_address['city'];
-        $d['from']['addressLine1'] = $from_address['street_1'] . $from_address['street_2'];
-        $d['from']['zipCode'] = $from_address['zip_code'];
-        $d['to'] = [];
-        $d['to']['countryCode'] = $to_address['country'];
-        $d['to']['stateCode'] =  $to_address['state'];
-        $d['to']['city'] = $to_address['city'];
-        $d['to']['addressLine1'] = $to_address['street_1'] . $from_address['street_2'];
-        $d['to']['zipCode'] = $to_address['zip_code'];
-        $d['carrierCode'] = 'ups';
-        $d['serviceCode'] = $data->shipping_method;
-        $d['isTest'] = true;
-        $d['parcels'] = [];
-
-
-        foreach ($data->packages as $k => $package) {
-            $pac = [
-                "packageNum" => $k,
-                "length" => $package['length'],
-                "width" => $package['width'],
-                "height" => $package['height'],
-                "distanceUnit" => "in",
-                "weight" => $package['weight'],
-                "massUnit" => "oz",
-                "packageCode" => $data->package_type,
-            ];
-            $d['parcels'][] = $pac;
-        }
-
-        $d = json_encode($d);
-//        var_dump($d);
-//        die();
-
-        $res = $this->request($endpoint, $type, $d);
-        var_dump($res);
-        die();
-
-        if (!isset($res['Error'])) {
-            $res = $res['RateV4Response'];
-            $packages = [];
-
-            if (count($data->packages) == 1) {
-                $packages[] = $res['Package'];
-            } else {
-                $packages = $res['Package'];
-            }
-
-            foreach ($packages as $package) {
-                $postages = [];
-
-                if (!empty($package['Postage']['_attributes'])) {
-                    $postages[] = $package['Postage'];
-                } else {
-                    $postages = $package['Postage'];
-                }
-
-                foreach ($postages as $postage) {
-                    $levels = apply_filters('wpsp_shipment_usps_services', []);
-                    $level = null;
-                    $mail_service = strtolower(strip_tags(html_entity_decode($postage['MailService'])));
-
-                    foreach ($levels as $lvl_k => $lvl_v) {
-                        $lv = strtolower($lvl_v);
-                        $lk = strtolower($lvl_k);
-
-                        if (strpos($mail_service, $lk) !== false) {
-                            $level = $lvl_v;
-                            break;
-                        }
-                    }
-
-                    if (!isset($rates[$postage['MailService']])) {
-                        $rates[$postage['MailService']] = [
-                            'name' => html_entity_decode($postage['MailService']),
-                            'rate' => 0,
-                            'level' => $level,
-                            'package_type' => $data->package_type
-                        ];
-                    }
-
-                    $rates[$postage['MailService']]['rate'] += $postage['Rate'];
-                }
-            }
-
-            $rates = array_values($rates);
-
-        } else {
-            $error = $res['Error']['Description'];
-        }
-    }
-//
-//    function wpsp_void_label_usps( &$error, $shipment_id )
-//    {
-//        $error    = false;
-//        $shipment = WPSP_Shipment::get_shipment( $shipment_id );
-//
-//        try {
-//            $d = [
-//                'BarcodeNumber' => $shipment->shipKey
-//            ];
-//
-//            $xml = ShipmentArrayToXml::convert( $d, [
-//                'rootElementName' => 'eVSCancelRequest',
-//                '_attributes'     => [
-//                    'USERID' => WPSP_USPS_USER_ID,
-//                ],
-//            ], true, 'UTF-8' );
-//
-//            $url = add_query_arg( [
-//                'API' => 'eVSCancel',
-//                'XML' => urlencode( $xml )
-//            ], "ShippingAPI.dll" );
-//
-//            $res = $this->request( $url );
-//            $res = ShipmentXmlToArray::convert( $res );
-//
-//            if ( isset( $res['Error'] ) ) {
-//                $error = $res['Error']['Description'];
-//            } else {
-//                $res = $res['eVSCancelResponse'];
-//
-//                if ( isset( $res['Status'] ) && $res['Status'] != 'Cancelled' ) {
-//                    $error = $res['Reason'];
-//                }
-//            }
-//
-//        } catch ( Exception $e ) {
-//            $error = $e->getMessage();
-//        }
-//    }
-//
-//    function wpsp_get_markup_rate_usps( $rate, $customer )
-//    {
-//        $value = get_user_meta( $customer, 'usps_rate', true );
-//
-//        if ( $value === false ) {
-//            $value = 0;
-//        }
-//
-//        return floatval( $value );
-//    }
-//
-//    function wpsp_label_rates_usps( $data, &$error, &$rates )
-//    {
-//        $error        = false;
-//        $from_address = WPSP_Address::get_address( $data->from );
-//        $to_address   = WPSP_Address::get_address( $data->to );
-//        $from_zip     = $from_address['zip_code'];
-//        $to_zip       = $to_address['zip_code'];
-//
-//        $d        = [
-//            'Revision' => 2,
-//        ];
-//        $services = apply_filters( 'wpsp_shipment_usps_services', [] );
-//
-//        foreach ( $data->packages as $k => $package ) {
-//            $id = $k + 1;
-//
-//            $d["Package_{$id}"] = [
-//                '_attributes'    => [
-//                    'ID' => $id,
-//                ],
-//                'Service'        => array_search( $data->shipping_method, $services ),
-//                'ZipOrigination' => $from_zip,
-//                'ZipDestination' => $to_zip,
-//                'Pounds'         => ( $package['weight'] / 16 ),
-//                'Ounces'         => $package['weight'],
-//                'Container'      => $data->package_type,
-//                'Size'           => 'REGULAR',
-//                'Width'          => $package['width'],
-//                'Length'         => $package['length'],
-//                'Height'         => $package['height'],
-//                'Girth'          => ( ( $package['width'] + $package['height'] ) * 2 )
-//            ];
-//        }
-//
-//        $xml = ShipmentArrayToXml::convert( $d, [
-//            'rootElementName' => 'RateV4Request',
-//            '_attributes'     => [
-//                'USERID' => WPSP_USPS_USER_ID,
-//            ],
-//        ], true, 'UTF-8' );
-//
-//        foreach ( $data->packages as $k => $package ) {
-//            $id  = $k + 1;
-//            $xml = str_replace( "Package_{$id}", "Package", $xml );
-//        }
-//
-//        $url = add_query_arg( [
-//            'API' => 'RateV4',
-//            'XML' => urlencode( $xml )
-//        ], "ShippingAPI.dll" );
-//
-//        $res = $this->request( $url );
-//        $res = ShipmentXmlToArray::convert( $res );
-//
-//        if ( ! isset( $res['Error'] ) ) {
-//            $res   = $res['RateV4Response'];
-//            $rates = 0;
-//
-//            if ( count( $data->packages ) > 1 ) {
-//                foreach ( $res['Package'] as $package ) {
-//                    if ( ! empty( $package['Postage']['Rate'] ) ) {
-//                        $rates += $package['Postage']['Rate'];
-//                    }
-//                }
-//            } else {
-//                $rates += $res['Package']['Postage']['Rate'];
-//            }
-//        } else {
-//            $error = $res['Error']['Description'];
-//        }
-//    }
-//
-//    function wpsp_create_label_usps( &$error, &$encoded_images, $shipment_data )
-//    {
-//        $error = __( 'Label not found', WPSP_LANG );
-//
-//        if ( ! empty( $shipment_data['label'] ) ) {
-//            $pdf_file_name = "{$shipment_data['shipKey']}.pdf";
-//            $filepath      = apply_filters( 'wpsp_file_dir', $pdf_file_name );
-//
-//            file_put_contents( $filepath, base64_decode( $shipment_data['label'] ) );
-//
-//            $encoded_images[] = $filepath;
-//        }
-//        $error = false;
-//    }
-//
-//    function wpsp_usps_create_shipment( $data, &$error, &$shipment_data )
-//    {
-//        try {
-//            $error        = false;
-//            $from_address = WPSP_Address::get_address( $data->from );
-//            $to_address   = WPSP_Address::get_address( $data->to );
-//            $from_zip     = $from_address['zip_code'];
-//            $packages     = $data->packages;
-//
-//            list( $from_zip4, $from_zip5 ) = $this->zip4_5( $from_zip );
-//
-//            foreach ( $packages as $package ) {
-//                $d = [
-//                    'Option'                     => 1,
-//                    'ImageParameters'            => [ 'ImageParameter' => '4X6LABEL' ],
-//                    'FromName'                   => $from_address['full_name'],
-//                    'FromFirm'                   => $from_address['company'],
-//                    'FromAddress1'               => $from_address['street_2'],
-//                    'FromAddress2'               => $from_address['street_1'],
-//                    'FromCity'                   => $from_address['city'],
-//                    'FromState'                  => $from_address['state'],
-//                    'FromZip5'                   => $from_zip5,
-//                    'FromZip4'                   => $from_zip4,
-//                    'FromPhone'                  => $from_address['phone'],
-//                    'AllowNonCleansedOriginAddr' => "false",
-//                    'ToName'                     => $to_address['full_name'],
-//                    'ToFirm'                     => $to_address['company'],
-//                    'ToAddress1'                 => $to_address['street_2'],
-//                    'ToAddress2'                 => $to_address['street_1'],
-//                    'ToCity'                     => $to_address['city'],
-//                    'ToState'                    => $to_address['state'],
-//                    'ToZip5'                     => $from_zip5,
-//                    'ToZip4'                     => $from_zip4,
-//                    'ToPhone'                    => $to_address['phone'],
-//                    'POBox'                      => "false",
-//                    'AllowNonCleansedDestAddr'   => "false",
-//                    'WeightInOunces'             => $package['weight'],
-//                    'ServiceType'                => $data->shipping_method,
-//                    'Container'                  => $data->package_type,
-//                    'Width'                      => $package['width'],
-//                    'Length'                     => $package['length'],
-//                    'Height'                     => $package['height'],
-//                    'Machinable'                 => "true",
-//                    'ProcessingCategory'         => [],
-//                    'PriceOptions'               => 'Commercial Plus',
-//                    'AddressServiceRequested'    => "true",
-//                    'ExpressMailOptions'         => [ 'DeliveryOption' => [], 'WaiverOfSignature' => [] ],
-//                    'ShipDate'                   => date( "m/d/Y", strtotime( $data->shipping_date ) ),
-//                    'CustomerRefNo'              => $data->customer,
-//                    'RecipientName'              => $to_address['fullName'],
-//                    'ImageType'                  => 'PDF',
-//                    'PrintCustomerRefNo'         => "false",
-//                    'OptOutOfSPE'                => "false",
-//                    'ePostageMailerReporting'    => []
-//                ];
-//
-//                $xml = ShipmentArrayToXml::convert( $d, [
-//                    'rootElementName' => 'eVSRequest',
-//                    '_attributes'     => [
-//                        'USERID' => WPSP_USPS_USER_ID,
-//                    ],
-//                ], true, 'UTF-8' );
-//
-//                $url = add_query_arg( [
-//                    'API' => 'eVS',
-//                    'XML' => urlencode( $xml )
-//                ], "ShippingAPI.dll" );
-//
-//                $res = $this->request( $url );
-//                $res = ShipmentXmlToArray::convert( $res );
-//
-//                if ( ! isset( $res['Error'] ) ) {
-//                    $res           = $res['eVSResponse'];
-//                    $shipment_data = array(
-//                        "shipKey" => $res['BarcodeNumber'],
-//                        "label"   => $res['LabelImage']
-//                    );
-//                } else {
-//                    $error = $res['Error']['Description'];
-//                }
-//            }
-//        } catch ( Exception $e ) {
-//            $error = $e->getMessage();
-//        }
-//    }
+    //api request
 
     function request($endpoint, $type, $data)
     {
@@ -421,47 +68,16 @@ class WPSP_EZEESHIP
         return $response;
     }
 
+    //end api request
+
+    //Addon filter
+
     function wpsp_add_ezeeship_carrier($carriers)
     {
         $carriers['fedex'] = 'FedEx';
         $carriers['ups'] = 'UPS';
 
         return $carriers;
-    }
-
-    function wpsp_shipment_ups_levels()
-    {
-
-        $services = [
-            'ups_next_day_air_early_am',
-            'ups_next_day_air',
-            'ups_next_day_air_saver',
-            'ups_second_day_air_am',
-            'ups_second_day_air',
-            'ups_3_day_select',
-            'ups_ground'
-        ];
-
-        return $services;
-    }
-
-    function wpsp_shipment_fedex_levels()
-    {
-
-        $services = [
-            'fedex_home_delivery',
-            'fedex_priority_overnight',
-            'fedex_standard_overnight',
-            'fedex_2_day_am',
-            'fedex_2_day',
-            'fedex_express_saver',
-            'fedex_ground',
-            'fedex_smart_post',
-            'fedex_international_economy',
-            'fedex_international_priority',
-        ];
-
-        return $services;
     }
 
     function wpsp_shipment_fedex_package_types()
@@ -493,33 +109,412 @@ class WPSP_EZEESHIP
         return $levels;
     }
 
-    function wpsp_verify_address_fedex($data, &$error)
+    function wpsp_shipment_fedex_levels()
     {
-        $d = [];
-        $d["countryCode"] = $data->country;
-        $d["stateCode"] = $data->state;
-        $d["city"] = $data->state;
-        $d["addressLine1"] = $data->street_1 . $data->street_2;
-        $d["zipCode"] = $data->zip_code;
-        $d = json_encode($d);
-//        print_r($d);
-//        die();
-        $endpoint = 'https://ezeeship.com/api/ezeeship-openapi/address/validate';
-        $type = 'POST';
 
-        $res = $this->request($endpoint, $type, $d);
-        $res = json_decode($res);
+        $services = [
+            'fedex_home_delivery',
+            'fedex_priority_overnight',
+            'fedex_standard_overnight',
+            'fedex_2_day_am',
+            'fedex_2_day',
+            'fedex_express_saver',
+            'fedex_ground',
+            'fedex_smart_post',
+            'fedex_international_economy',
+            'fedex_international_priority',
+        ];
 
-        if ($res->result == 'OK') {
-            $error = false;
+        return $services;
+    }
+
+    function wpsp_shipment_ups_levels()
+    {
+
+        $services = [
+            'ups_next_day_air_early_am',
+            'ups_next_day_air',
+            'ups_next_day_air_saver',
+            'ups_second_day_air_am',
+            'ups_second_day_air',
+            'ups_3_day_select',
+            'ups_ground'
+        ];
+
+        return $services;
+    }
+
+    //end Addon filter
+
+
+    //Addon Action
+
+    //create label
+
+    function wpsp_create_label_fedex(&$error, &$encoded_images, $shipment_data)
+    {
+        $error = __('Label not found', WPSP_LANG);
+
+        if (!empty($shipment_data['label'])) {
+            $pdf_file_name = "{$shipment_data['shipKey']}.pdf";
+            $filepath = apply_filters('wpsp_file_dir', $pdf_file_name);
+
+            file_put_contents($filepath, file_get_contents($shipment_data['label']));
+
+            $encoded_images[] = $filepath;
+
+//            var_dump($encoded_images);
+//            die();
+        }
+        $error = false;
+    }
+
+    function wpsp_create_label_ups(&$error, &$encoded_images, $shipment_data)
+    {
+        $error = __('Label not found', WPSP_LANG);
+
+        if (!empty($shipment_data['label'])) {
+            $pdf_file_name = "{$shipment_data['shipKey']}.pdf";
+            $filepath = apply_filters('wpsp_file_dir', $pdf_file_name);
+
+            file_put_contents($filepath, file_get_contents($shipment_data['label']));
+
+            $encoded_images[] = $filepath;
+
+//            var_dump($encoded_images);
+//            die();
+        }
+        $error = false;
+    }
+
+    //end create label
+
+    // Rates
+    function wpsp_label_rates_fedex($data, &$error, &$rates)
+    {
+        $this->wpsp_service_rates_ups($data, $error, $rates);
+        $res = $rates;
+        if (!$error) {
+            $rates = 0;
+            $rates += $res[0]['rate'];
+//            var_dump($rates);
+//            die();
         } else {
-            $error = $res->message;
+            $error = $error;
+        }
+    }
+
+    function wpsp_label_rates_ups($data, &$error, &$rates)
+    {
+        $this->wpsp_service_rates_ups($data, $error, $rates);
+        $res = $rates;
+        if (!$error) {
+            $rates = 0;
+            $rates += $res[0]['rate'];
+//            var_dump($rates);
+//            die();
+        } else {
+            $error = $error;
+        }
+    }
+
+    //end rate
+
+    //create Shipment
+
+    function wpsp_fedex_create_shipment($data, &$error, &$shipment_data)
+    {
+        $error = false;
+        $shipment_data = [];
+        $data->carrier = 'fedex';
+        $this->wpsp_ezeeship_create_shipment($data, $error, $shipment_data);
+    }
+
+    function wpsp_ups_create_shipment($data, &$error, &$shipment_data)
+    {
+        $error = false;
+        $shipment_data = [];
+        $data->carrier = 'ups';
+        $this->wpsp_ezeeship_create_shipment($data, $error, $shipment_data);
+    }
+
+    function wpsp_ezeeship_create_shipment($data, &$error, &$shipment_data)
+    {
+        try {
+            $from_address = WPSP_Address::get_address($data->from);
+            $to_address = WPSP_Address::get_address($data->to);
+            $packages = $data->packages;
+            $endpoint = 'https://ezeeship.com/api/ezeeship-openapi/label/create';
+            $type = 'POST';
+
+            $d = [];
+            $d['from'] = [];
+            $d['from']['personName'] = $from_address['full_name'];
+            $d['from']['countryCode'] = $from_address['country'];
+            $d['from']['stateCode'] = $from_address['state'];
+            $d['from']['phone'] = $from_address['phone'];
+            $d['from']['city'] = $from_address['city'];
+            $d['from']['addressLine1'] = $from_address['street_1'];
+            $d['from']['zipCode'] = $from_address['zip_code'];
+            $d['to'] = [];
+
+            $d['to']['personName'] = $to_address['full_name'];
+            $d['to']['company'] = $to_address['company'];
+            $d['to']['countryCode'] = $to_address['country'];
+            $d['to']['stateCode'] = $to_address['state'];
+            $d['to']['city'] = $to_address['city'];
+            $d['to']['phone'] = $to_address['phone'];
+            $d['to']['addressLine1'] = $to_address['street_1'];
+            $d['to']['zipCode'] = $to_address['zip_code'];
+            $d['carrierCode'] = $data->carrier;
+            $d['serviceCode'] = $data->shipping_method;
+            $d['isTest'] = true;
+            $d['parcels'] = [];
+
+
+            foreach ($packages as $k => $package) {
+                $pac = [
+                    "packageNum" => $k + 1,
+                    "length" => $package['length'],
+                    "width" => $package['width'],
+                    "height" => $package['height'],
+                    "distanceUnit" => "in",
+                    "weight" => $package['weight'],
+                    "massUnit" => "lb",
+                    "packageCode" => $data->package_type,
+
+                ];
+                $d['parcels'][] = $pac;
+            }
+
+            $d = json_encode($d);
+            $res = $this->request($endpoint, $type, $d);
+
+            $res = json_decode($res);
+//            var_dump($d);
+//            die;
+
+            if ($res->result == 'OK') {
+                $shipment_data = array(
+                    "shipKey" => $res->data->objectId,
+                    "label" => $res->data->pdfUrl,
+                );
+            } else {
+                $error = $res->message;
+
+            }
+
+        } catch (Exception $e) {
+            $error = $e->getMessage();
+        }
+    }
+
+    //end create shipment
+
+    //Estimate Rates
+
+    function wpsp_service_rates_ups($data, &$error, &$rates)
+    {
+        $error = false;
+        $rates = [];
+        $data->carrier = 'ups';
+        $this->wpsp_service_rates_ezeeship($data,$error,$rates);
+    }
+
+    function wpsp_service_rates_fedex($data, &$error, &$rates)
+    {
+        $error = false;
+        $rates = [];
+        $data->carrier = 'fedex';
+        $this->wpsp_service_rates_ezeeship($data,$error,$rates);
+    }
+
+    function wpsp_service_rates_ezeeship($data, &$error, &$rates)
+    {
+        $rates = [];
+        $error = false;
+        $endpoint = 'https://ezeeship.com/api/ezeeship-openapi/shipment/estimateRate';
+        $type = 'POST';
+        $from_address = WPSP_Address::get_address($data->from);
+        $to_address = WPSP_Address::get_address($data->to);
+
+        if ($data->shipping_method == 'All') {
+            $ups_services = $this->wpsp_shipment_fedex_levels();
+            foreach ($ups_services as $service) {
+                $d = [];
+                $d['from'] = [];
+                $d['from']['countryCode'] = $from_address['country'];
+                $d['from']['stateCode'] = $from_address['state'];
+                $d['from']['city'] = $from_address['city'];
+                $d['from']['addressLine1'] = $from_address['street_1'];
+                $d['from']['zipCode'] = $from_address['zip_code'];
+                $d['to'] = [];
+                $d['to']['countryCode'] = $to_address['country'];
+                $d['to']['stateCode'] = $to_address['state'];
+                $d['to']['city'] = $to_address['city'];
+                $d['to']['addressLine1'] = $to_address['street_1'];
+                $d['to']['zipCode'] = $to_address['zip_code'];
+                $d['carrierCode'] = $data->carrier;
+                $d['serviceCode'] = $service;
+                $d['isTest'] = true;
+                $d['parcels'] = [];
+
+
+                foreach ($data->packages as $k => $package) {
+                    $pac = [
+                        "packageNum" => $k + 1,
+                        "length" => $package['length'],
+                        "width" => $package['width'],
+                        "height" => $package['height'],
+                        "distanceUnit" => "in",
+                        "weight" => $package['weight'],
+                        "massUnit" => "lb",
+                        "packageCode" => $data->package_type,
+
+                    ];
+                    $d['parcels'][] = $pac;
+                }
+
+                $d = json_encode($d);
+//        var_dump($d);
+//        die();
+
+                $res = $this->request($endpoint, $type, $d);
+                $res = json_decode($res);
+
+//        var_dump($res->data->rate);
+
+                if ($res->result == 'OK') {
+                    $error = false;
+                    $rates[] = [
+                        'name' => $service,
+                        'rate' => $res->data->rate,
+                        'level' => $service,
+                        'package_type' => $data->package_type
+                    ];
+                    $rates = array_values($rates);
+                } else {
+                    $error = $res->message;
+//                    break;
+                }
+            }
+        } else {
+            $d = [];
+            $d['from'] = [];
+            $d['from']['countryCode'] = $from_address['country'];
+            $d['from']['stateCode'] = $from_address['state'];
+            $d['from']['city'] = $from_address['city'];
+            $d['from']['addressLine1'] = $from_address['street_1'];
+            $d['from']['zipCode'] = $from_address['zip_code'];
+            $d['to'] = [];
+            $d['to']['countryCode'] = $to_address['country'];
+            $d['to']['stateCode'] = $to_address['state'];
+            $d['to']['city'] = $to_address['city'];
+            $d['to']['addressLine1'] = $to_address['street_1'];
+            $d['to']['zipCode'] = $to_address['zip_code'];
+            $d['carrierCode'] = $data->carrier;
+            $d['serviceCode'] = $data->shipping_method;
+            $d['isTest'] = true;
+            $d['parcels'] = [];
+
+
+            foreach ($data->packages as $k => $package) {
+                $pac = [
+                    "packageNum" => $k + 1,
+                    "length" => $package['length'],
+                    "width" => $package['width'],
+                    "height" => $package['height'],
+                    "distanceUnit" => "in",
+                    "weight" => $package['weight'],
+                    "massUnit" => "lb",
+                    "packageCode" => $data->package_type,
+
+                ];
+                $d['parcels'][] = $pac;
+            }
+
+            $d = json_encode($d);
+//        var_dump($d);
+//        die();
+
+            $res = $this->request($endpoint, $type, $d);
+            $res = json_decode($res);
+
+//        var_dump($res->data->rate);
+
+            if ($res->result == 'OK') {
+                $error = false;
+                $rates[] = [
+                    'name' => $data->shipping_method,
+                    'rate' => $res->data->rate,
+                    'level' => $data->shipping_method,
+                    'package_type' => $data->package_type
+                ];
+                $rates = array_values($rates);
+            } else {
+                $error = $res->message;
+
+            }
 
         }
+    }
+
+    //end Estimate Rates
+
+    //void label
+
+    function wpsp_void_label_ups( &$error, $shipment_id )
+    {
+        $error = false;
+        $this->wpsp_void_label_ezeeship($error,$shipment_id);
+    }
+
+    function wpsp_void_label_fedex( &$error, $shipment_id )
+    {
+        $error = false;
+        $this->wpsp_void_label_ezeeship($error,$shipment_id);
+    }
+
+    function wpsp_void_label_ezeeship( &$error, $shipment_id ){
+        $error    = false;
+        $shipment = WPSP_Shipment::get_shipment( $shipment_id );
+        $endpoint = 'https://ezeeship.com/api/ezeeship-openapi/label/cancel';
+        $type = 'POST';
+
+        try {
+            $d = [];
+            $d['objectId'] = $shipment->shipKey;
+            $d = json_encode($d);
+            $res = $this->request( $endpoint,$type,$d);
+            $res = json_decode($res);
+
+            if ($res->result != 'OK') {
+                $error = $res->message;
+            } else {
+                $error = false;
+            }
+
+        } catch ( Exception $e ) {
+            $error = $e->getMessage();
+        }
+    }
+
+    //end void label
+
+    // address verification
+
+    function wpsp_verify_address_fedex($data, &$error)
+    {
+        $this->wpsp_verify_address_ezeeship($data,$error);
     }
 
     function wpsp_verify_address_ups($data, &$error)
     {
+        $this->wpsp_verify_address_ezeeship($data,$error);
+    }
+
+    function wpsp_verify_address_ezeeship($data,&$errror)
+    {
         $d = [];
         $d["countryCode"] = $data->country;
         $d["stateCode"] = $data->state;
@@ -543,6 +538,9 @@ class WPSP_EZEESHIP
         }
     }
 
+    //end address verification
+
+    //end Addon Action
 }
 
 new WPSP_EZEESHIP();

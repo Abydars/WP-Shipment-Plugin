@@ -103,7 +103,7 @@ jQuery(function ($) {
         $('#editAddressModal input[name="code"]').val(row_data['Code']);
         $('#editAddressModal input[name="full_name"]').val(row_data['Full Name']);
         $('#editAddressModal input[name="company"]').val(row_data['Company']);
-        $('#editAddressModal input[name="country"]').val(row_data['Country']);
+        $('#editAddressModal select[name="country"]').val(row_data['Country']);
         $('#editAddressModal input[name="city"]').val(row_data['City']);
         $('#editAddressModal input[name="street_1"]').val(row_data['Street 1']);
         $('#editAddressModal input[name="street_2"]').val(row_data['Street 2']);

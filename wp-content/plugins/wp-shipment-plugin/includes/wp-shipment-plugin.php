@@ -93,8 +93,9 @@ class WPSP
 	function list_addresses()
 	{
 		$addresses = WPSP_Address::get_addresses();
+        $countries = apply_filters( 'wpsp_countries', WPSP_Helper::get_countries() );
 
-		include( 'templates/list_addresses.php' );
+        include( 'templates/list_addresses.php' );
 	}
 
 	function create_address()
