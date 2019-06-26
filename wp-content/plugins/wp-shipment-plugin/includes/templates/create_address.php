@@ -70,6 +70,7 @@
                         <div class="wpsp-form-group select-country">
                             <label>Country</label>
                             <select name="country" required>
+                                <option value="">Select Country</option>
 								<?php foreach ( $countries as $country ) { ?>
                                     <option value="<?= $country['code2'] ?>"><?= $country['name'] ?></option>
 								<?php } ?>
@@ -85,9 +86,10 @@
                 </div>
                 <div class="wpsp-row">
                     <div class="wpsp-one-half">
-                        <div class="wpsp-form-group">
+                        <div class="wpsp-form-group select-state">
                             <label>State</label>
-                            <input type="text" name="state" id="" required/>
+                            <select name="state" required>
+                            </select>
                         </div>
                     </div>
                     <div class="wpsp-one-half">

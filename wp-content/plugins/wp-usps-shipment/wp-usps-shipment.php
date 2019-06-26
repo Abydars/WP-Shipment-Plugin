@@ -373,10 +373,10 @@ class WPSP_USPS
 
 				if ( ! isset( $res['Error'] ) ) {
 					$res           = $res['eVSResponse'];
-                    $shipment_data = array(
-                        "shipKey" => $res['BarcodeNumber'],
-                        "label"   => $res['LabelImage']
-                    );
+					$shipment_data = array(
+						"shipKey" => $res['BarcodeNumber'],
+						"label"   => $res['LabelImage']
+					);
 				} else {
 					$error = $res['Error']['Description'];
 				}
@@ -437,14 +437,14 @@ class WPSP_USPS
 	function wpsp_shipment_usps_levels()
 	{
 		$levels = [
-			'PRIORITY',
-			'PRIORITY EXPRESS',
-			'FIRST CLASS',
-			'PARCEL SELECT GROUND',
-			'LIBRARY',
-			'MEDIA',
-			'BPM',
-			'PRIORITY MAIL CUBIC'
+			'PRIORITY'             => 'PRIORITY',
+			'PRIORITY EXPRESS'     => 'PRIORITY EXPRESS',
+			'FIRST CLASS'          => 'FIRST CLASS',
+			'PARCEL SELECT GROUND' => 'PARCEL SELECT GROUND',
+			'LIBRARY'              => 'LIBRARY',
+			'MEDIA'                => 'MEDIA',
+			'BPM'                  => 'BPM',
+			'PRIORITY MAIL CUBIC'  => 'PRIORITY MAIL CUBIC'
 		];
 
 		return $levels;
@@ -486,23 +486,23 @@ class WPSP_USPS
 	function wpsp_shipment_usps_package_types()
 	{
 		$levels = [
-			'VARIABLE',
-			'FLAT RATE ENVELOPE',
-			'LEGAL FLAT RATE ENVELOPE',
-			'PADDED FLAT RATE ENVELOPE',
-			'GIFT CARD FLAT RATE ENVELOPE',
-			'SM FLAT RATE ENVELOPE',
-			'WINDOW FLAT RATE ENVELOPE',
-			'SM FLAT RATE BOX',
-			'MD FLAT RATE BOX',
-			'LG FLAT RATE BOX',
-			'REGIONALRATEBOXA',
-			'REGIONALRATEBOXB',
-			'RECTANGULAR',
-			'NONRECTANGULAR',
-			'PACKAGE SERVICE',
-			'CUBIC PARCELS',
-			'CUBIC SOFT PACK'
+			'VARIABLE'                     => 'VARIABLE',
+			'FLAT RATE ENVELOPE'           => 'FLAT RATE ENVELOPE',
+			'LEGAL FLAT RATE ENVELOPE'     => 'LEGAL FLAT RATE ENVELOPE',
+			'PADDED FLAT RATE ENVELOPE'    => 'PADDED FLAT RATE ENVELOPE',
+			'GIFT CARD FLAT RATE ENVELOPE' => 'GIFT CARD FLAT RATE ENVELOPE',
+			'SM FLAT RATE ENVELOPE'        => 'SM FLAT RATE ENVELOPE',
+			'WINDOW FLAT RATE ENVELOPE'    => 'WINDOW FLAT RATE ENVELOPE',
+			'SM FLAT RATE BOX'             => 'SM FLAT RATE BOX',
+			'MD FLAT RATE BOX'             => 'MD FLAT RATE BOX',
+			'LG FLAT RATE BOX'             => 'LG FLAT RATE BOX',
+			'REGIONALRATEBOXA'             => 'REGIONALRATEBOXA',
+			'REGIONALRATEBOXB'             => 'REGIONALRATEBOXB',
+			'RECTANGULAR'                  => 'RECTANGULAR',
+			'NONRECTANGULAR'               => 'NONRECTANGULAR',
+			'PACKAGE SERVICE'              => 'PACKAGE SERVICE',
+			'CUBIC PARCELS'                => 'CUBIC PARCELS',
+			'CUBIC SOFT PACK'              => 'CUBIC SOFT PACK'
 		];
 
 		return $levels;

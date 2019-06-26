@@ -3,6 +3,7 @@ jQuery(function ($) {
     $('#listShipments').DataTable({
         "order": [[1, "desc"]]
     });
+    $('.wpsp-datatable').DataTable();
 
     setTimeout(function () {
         $('div#shipment-form').hide();
@@ -36,8 +37,8 @@ jQuery(function ($) {
             success: function (res) {
                 $select_levels.empty();
 
-                $.each(res,function( index, value ) {
-                    $select_levels.append('<option value="' +index +'">' + value + '</option>');
+                $.each(res, function (index, value) {
+                    $select_levels.append('<option value="' + index + '">' + value + '</option>');
                 });
 
                 $select_levels.append('<option>All</option>');
@@ -60,7 +61,7 @@ jQuery(function ($) {
             success: function (res) {
                 $package_types.empty();
 
-                $.each(res,function( index, value ) {
+                $.each(res, function (index, value) {
                     $package_types.append('<option value="' + index + '">' + value + '</option>');
                 });
 
@@ -279,9 +280,29 @@ jQuery(function ($) {
         })
     });
 
-    $('.select-country select').on('change', function () {
+    $(document).on('change', '.select-country select', function () {
         var country = $(this).val();
-        // TODO: get states list in drop down while address creation
+        var $states = $(this).parents('form').find('.select-state').find('select');
+
+        $.ajax({
+            url: wsp_ajax_url,
+            data: {
+                action: 'wpsp_get_states',
+                country: country
+            },
+            dataType: "JSON",
+            success: function (response) {
+                $states.empty();
+
+                if (response.length > 0) {
+                    for (var i in response) {
+                        var state = response[i];
+
+                        $states.append('<option value="' + state.code + '">' + state.name + '</option>');
+                    }
+                }
+            }
+        });
     });
 
     function refreshAddresses() {
@@ -431,9 +452,8 @@ jQuery(function ($) {
                 data: form_data,
                 url: wsp_ajax_url,
                 success: function (response) {
-                    $('#addAddressModal').hide();
-
                     if (response.status) {
+                        $('#addAddressModal').hide();
                         refreshAddresses();
                     } else {
                         alert(response.message);
@@ -469,19 +489,19 @@ jQuery(function ($) {
                 }
             }
 
-            if ($('.customers-list select').val() == "") {
+            if ($('#shipment_form .customers-list select').val() == "") {
                 err = 'Please select customer first';
-            } else if ($('.from-address select').val() == "") {
+            } else if ($('#shipment_form .from-address select').val() == "") {
                 err = 'Please select from address';
-            } else if ($('.to-address select').val() == "") {
+            } else if ($('#shipment_form .to-address select').val() == "") {
                 err = 'Please select to address';
-            } else if ($('.package').first().find('input[name*="weight"]').val() == "") {
+            } else if ($('#shipment_form .package').first().find('input[name*="weight"]').val() == "") {
                 err = 'Package #1 weight is required';
-            } else if ($('.package').first().find('input[name*="width"]').val() == "") {
+            } else if ($('#shipment_form .package').first().find('input[name*="width"]').val() == "") {
                 err = 'Package #1 width is required';
-            } else if ($('.package').first().find('input[name*="height"]').val() == "") {
+            } else if ($('#shipment_form .package').first().find('input[name*="height"]').val() == "") {
                 err = 'Package #1 height is required';
-            } else if ($('.package').first().find('input[name*="length"]').val() == "") {
+            } else if ($('#shipment_form .package').first().find('input[name*="length"]').val() == "") {
                 err = 'Package #1 length is required';
             }
 

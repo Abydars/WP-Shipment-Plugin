@@ -490,4 +490,15 @@ class WPSP_ShipmentActions
 		echo json_encode( $response );
 		die;
 	}
+
+	function action_get_states()
+	{
+		$country = $_REQUEST['country'];
+
+		$states = WPSP_Helper::get_states( $country );
+
+		header( 'Content-Type: application/json' );
+		echo json_encode( $states );
+		die;
+	}
 }

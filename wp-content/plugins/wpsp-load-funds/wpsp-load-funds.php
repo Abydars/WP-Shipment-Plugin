@@ -23,30 +23,27 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 
 			add_action( 'admin_menu', array( $this, 'render_admin_menu' ), 1000 );
 			add_action( 'admin_init', array( $this, 'render_admin_init' ) );
-			add_filter( 'load_funds_error_message', array( $this, 'render_as_error_div' ) );
-			add_filter( 'load_funds_success_message', array( $this, 'render_as_success_div' ) );
-		}
-
-		public function render_as_error_div( $text )
-		{
-			return '<div class="alert alert-danger">' . $text . '</div>';
-		}
-
-		public function render_as_success_div( $text )
-		{
-			return '<div class="alert alert-success">' . $text . '</div>';
 		}
 
 		public function render_admin_menu()
 		{
 			add_menu_page(
-				__( 'Load Account Funds', WPSP_LANG ),
-				'Load Account Funds',
+				__( 'Account Funds', WPSP_LANG ),
+				'Account Funds',
 				'manage_options',
 				'wpsp-load-funds',
-				array( $this, 'render_load_funds_form' ),
+				array( $this, 'render_load_funds_list' ),
 				'',
 				30
+			);
+
+			add_submenu_page(
+				'wpsp-load-funds',
+				'Load Funds',
+				'Load Funds',
+				'manage_options',
+				'wpsp-load-funds-load',
+				array( $this, 'render_load_funds_form' )
 			);
 
 			add_submenu_page(
@@ -67,8 +64,8 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 			$results    = $wpdb->get_results( "SELECT * FROM {$table_name} ORDER BY id DESC" );
 			?>
             <div id="wrap">
-                <h2>Account Funds History</h2>
-                <table class="table table-bordered table-striped table-hover">
+                <h1 class="wpsp-page-title">Account Funds History</h1>
+                <table class="wpsp-datatable">
                     <thead>
                     <tr>
                         <th>ID</th>
@@ -107,7 +104,7 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 
 				if ( ! $amount || ! $date || ! $check_number || ! $customer_id ) {
 					add_action( 'load_funds_errors', function () {
-						echo apply_filters( 'load_funds_error_message', 'Please fill the required fields' );
+						echo apply_filters( 'wpsp_error', 'Please fill the required fields' );
 					} );
 				} else {
 					$customer = get_user_by( 'id', $customer_id );
@@ -129,7 +126,7 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 							$newbalance = $this->getUserFunds( $customer_id );
 
 							if ( class_exists( 'WPSP_PdfHelper' ) ) {
-								$date_now = date( 'Y-m-d H:i:s' );
+								$date_now = date( 'Y-m-d-H-i-s' );
 								$path     = apply_filters( 'wpsp_file_dir', "{$customer_id}-{$date_now}.pdf" );
 								$url      = apply_filters( 'wpsp_file_url', "{$customer_id}-{$date_now}.pdf" );
 
@@ -140,6 +137,7 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 
 								if ( $url && class_exists( 'WPTM_FaxManager' ) ) {
 									$fax_to = WPSP_Customer::get_fax_number( $customer_id );
+
 									try {
 
 										$twilio = new WPTM_FaxManager();
@@ -159,11 +157,11 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 						}
 
 						add_action( 'load_funds_success', function () {
-							echo apply_filters( 'load_funds_success_message', 'Funds loaded successfully' );
+							echo apply_filters( 'wpsp_success', 'Funds loaded successfully' );
 						} );
 					} else {
 						add_action( 'load_funds_errors', function () {
-							echo apply_filters( 'load_funds_error_message', 'Failed to load funds' );
+							echo apply_filters( 'wpsp_error', 'Failed to load funds' );
 						} );
 					}
 				}
@@ -188,12 +186,12 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 				                        "role" => "customer"
 			                        ) );
 			?>
-            <div id="wrap">
-                <h2>Load Account Funds</h2>
+            <div id="wpsp">
+                <h1 class="wpsp-page-title">Load Account Funds</h1>
                 <form method="POST" style="max-width: 800px;" enctype="multipart/form-data">
 					<?php do_action( 'load_funds_errors' ); ?>
 					<?php do_action( 'load_funds_success' ); ?>
-                    <div class="form-group">
+                    <div class="wpsp-form-group">
                         <label>Customer</label>
                         <select name="customer_id" class="form-control" required>
 							<?php foreach ( $customers as $customer ) { ?>
@@ -201,23 +199,55 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 							<?php } ?>
                         </select>
                     </div>
-                    <div class="form-group">
+                    <div class="wpsp-form-group">
                         <label>Check Number</label>
                         <input type="text" name="check_number" class="form-control" required/>
                     </div>
-                    <div class="form-group">
+                    <div class="wpsp-form-group">
                         <label>Amount</label>
                         <input type="number" name="amount" class="form-control" placeholder="$" step="any" required/>
                     </div>
-                    <div class="form-group">
+                    <div class="wpsp-form-group">
                         <label>Date</label>
                         <input id="funds-datepicker" type="date" name="date" class="form-control datepicker" required/>
                     </div>
-                    <div class="form-group">
+                    <div class="wpsp-form-group">
 						<?php wp_nonce_field( 'wpsp-load-funds' ); ?>
-                        <input type="submit" value="Load" class="btn btn-success" required/>
+                        <button type="submit">Load</button>
                     </div>
                 </form>
+            </div>
+            <script>
+                document.getElementById("funds-datepicker").value = "<?= date( "Y-m-d" ) ?>";
+            </script>
+			<?php
+		}
+
+		public function render_load_funds_list()
+		{
+			$customers = get_users( array(
+				                        "role" => "customer"
+			                        ) );
+			?>
+            <div id="wpsp">
+                <h1 class="wpsp-page-title">Account Funds <a
+                            href="<?= admin_url( 'admin.php?page=wpsp-load-funds-load' ) ?>">Load Funds</a></h1>
+                <table class="wpsp-datatable">
+                    <thead>
+                    <tr>
+                        <th>Customer</th>
+                        <th>Funds</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+					<?php foreach ( $customers as $customer ) : ?>
+                        <tr>
+                            <td><?= $customer->display_name ?></td>
+                            <td>$<?= number_format( WPSP_Customer::get_account_funds( $customer->ID ), 2 ) ?></td>
+                        </tr>
+					<?php endforeach; ?>
+                    </tbody>
+                </table>
             </div>
             <script>
                 document.getElementById("funds-datepicker").value = "<?= date( "Y-m-d" ) ?>";

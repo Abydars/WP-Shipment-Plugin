@@ -40,12 +40,12 @@ if ( ! class_exists( 'WPSP_Helper' ) ) {
 			return $countries;
 		}
 
-		static function get_states( $country )
+		static function get_states( $country_code )
 		{
 			$countries = self::get_countries();
 
 			foreach ( $countries as $country ) {
-				if ( $country['code2'] === $country ) {
+				if ( $country['code2'] === $country_code ) {
 					return $country['states'];
 				}
 			}

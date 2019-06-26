@@ -25,6 +25,7 @@ class WPSP
 		add_action( 'wp_ajax_wpsp_void_label', array( $wpsp_actions, 'action_void_label' ) );
 		add_action( 'wp_ajax_wpsp_edit_address', array( $wpsp_actions, 'action_edit_address' ) );
 		add_action( 'wp_ajax_wpsp_delete_address', array( $wpsp_actions, 'action_delete_address' ) );
+		add_action( 'wp_ajax_wpsp_get_states', array( $wpsp_actions, 'action_get_states' ) );
 		add_action( 'admin_init', array( $wpsp_actions, 'action_create_new_address' ) );
 		add_filter( 'wpsp_error', array( $wpsp_actions, 'filter_wpsp_error' ) );
 		add_filter( 'wpsp_success', array( $wpsp_actions, 'filter_wpsp_success' ) );

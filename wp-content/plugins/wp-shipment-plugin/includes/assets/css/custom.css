@@ -131,7 +131,10 @@
     margin: 10px;
 }
 
-#wpsp-shipment-form-container.right-sidebar button, #create-address button, #list-addresses button {
+#wpsp-shipment-form-container.right-sidebar button,
+#create-address button,
+#list-addresses button,
+#wpsp button {
     margin: 10px 5px;
     color: #fff;
     background: #0073aa;
