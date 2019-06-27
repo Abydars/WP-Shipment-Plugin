@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: WPSP USPS Add-on
+Plugin Name: WPSP Ezeeship Add-on
 Plugin URI: hztech.biz
 description: This plugin works only with WPSP Shipment Plugin.
 Version: 1.0
