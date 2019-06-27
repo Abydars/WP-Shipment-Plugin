@@ -112,6 +112,25 @@ class WPSP_Ezeeship
 		return $services;
 	}
 
+    function wpsp_service_rates_fedex($data, &$error, &$rates)
+    {
+        $error = false;
+        $rates = [];
+        $data->carrier = 'fedex';
+
+        $this->wpsp_service_rates_ezeeship($data, $error, $rates);
+
+    }
+
+    function wpsp_service_rates_ups($data, &$error, &$rates)
+    {
+        $error = false;
+        $rates = [];
+        $data->carrier = 'ups';
+        
+        $this->wpsp_service_rates_ezeeship($data, $error, $rates);
+    }
+
 	function wpsp_create_label_any( &$error, &$encoded_images, $shipment_data )
 	{
 		$error = __( 'Label not found', WPSP_LANG );
