@@ -392,6 +392,11 @@ class WPSP_ShipmentActions
 				&$rates
 			] );
 
+			$rates = array_filter( $rates, function ( $rate ) {
+				return ( $rate['rate'] > 0 );
+			} );
+			$rates = array_values( $rates );
+
 			$all_rates[ $carrier ] = [
 				'name'  => $carriers[ $carrier ],
 				'rates' => $rates

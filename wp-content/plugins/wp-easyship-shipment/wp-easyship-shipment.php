@@ -34,8 +34,8 @@ class WPSP_Ezeeship
 		add_action( 'wpsp_label_rates_fedex', [ $this, 'wpsp_label_rates_any' ], 10, 3 );
 		add_action( 'wpsp_label_rates_ups', [ $this, 'wpsp_label_rates_any' ], 10, 3 );
 
-		add_action( 'wpsp_service_rates_ups', [ $this, 'wpsp_service_rates_any' ], 10, 3 );
-		add_action( 'wpsp_service_rates_fedex', [ $this, 'wpsp_service_rates_any' ], 10, 3 );
+		add_action( 'wpsp_service_rates_ups', [ $this, 'wpsp_service_rates_ups' ], 10, 3 );
+		add_action( 'wpsp_service_rates_fedex', [ $this, 'wpsp_service_rates_fedex' ], 10, 3 );
 
 		add_action( 'wpsp_void_label_ups', [ $this, 'wpsp_void_label_any' ], 10, 2 );
 		add_action( 'wpsp_void_label_fedex', [ $this, 'wpsp_void_label_any' ], 10, 2 );
@@ -107,9 +107,7 @@ class WPSP_Ezeeship
 
 			$d   = json_encode( $d );
 			$res = $this->request( $endpoint, $type, $d );
-
 			$res = json_decode( $res );
-
 
 			if ( $res->result == 'OK' ) {
 				$shipment_data = array(
@@ -138,6 +136,18 @@ class WPSP_Ezeeship
 		}
 	}
 
+	function wpsp_service_rates_ups( $data, &$error, &$rates )
+	{
+		$data->carrier = 'ups';
+		$this->wpsp_service_rates_any( $data, $error, $rates );
+	}
+
+	function wpsp_service_rates_fedex( $data, &$error, &$rates )
+	{
+		$data->carrier = 'fedex';
+		$this->wpsp_service_rates_any( $data, $error, $rates );
+	}
+
 	function wpsp_service_rates_any( $data, &$error, &$rates )
 	{
 		$rates        = [];
@@ -149,6 +159,11 @@ class WPSP_Ezeeship
 		$services     = apply_filters( "wpsp_shipment_{$data->carrier}_levels", [] );
 
 		if ( $data->shipping_method == 'All' ) {
+
+			$package_type = $data->package_type;
+			if ( empty( $package_type ) ) {
+				$package_type = $this->get_default_package_type( $data->carrier );
+			}
 
 			foreach ( $services as $key => $service ) {
 				$d                         = [];
@@ -178,7 +193,7 @@ class WPSP_Ezeeship
 						"distanceUnit" => "in",
 						"weight"       => $package['weight'],
 						"massUnit"     => "lb",
-						"packageCode"  => $data->package_type,
+						"packageCode"  => $package_type,
 					];
 					$d['parcels'][] = $pac;
 				}
@@ -193,7 +208,7 @@ class WPSP_Ezeeship
 						'name'         => $service,
 						'rate'         => $res->data->rate,
 						'level'        => $key,
-						'package_type' => $data->package_type
+						'package_type' => $package_type
 					];
 					$rates   = array_values( $rates );
 				} else {
@@ -343,7 +358,7 @@ class WPSP_Ezeeship
 	function wpsp_shipment_fedex_package_types()
 	{
 		$levels = [
-			'your_package'    => 'YourPackage',
+			'your_package'    => 'Your Package',
 			'FedEx_Envelope'  => 'FedEx® Envelope',
 			'FedEx_Pak_1'     => 'FedEx® Pak (1)',
 			'FedEx_Tube'      => 'FedEx® Tube',
@@ -357,7 +372,7 @@ class WPSP_Ezeeship
 	function wpsp_shipment_ups_package_types()
 	{
 		$levels = [
-			'your_package'           => 'YourPackage',
+			'your_package'           => 'Your Package',
 			'ups_letter'             => 'UPS Letter',
 			'UPS_Express_Tube'       => 'UPS Tube',
 			'UPS_Express_Pak'        => 'UPS Express® Pak',
@@ -372,16 +387,16 @@ class WPSP_Ezeeship
 	function wpsp_shipment_fedex_levels()
 	{
 		$services = [
-			'fedex_home_delivery'          => 'FedEx Home Delivery®',
 			'fedex_priority_overnight'     => 'FedEx Priority Overnight®',
+			'fedex_home_delivery'          => 'FedEx Home Delivery®',
 			'fedex_standard_overnight'     => 'FedEx Standard Overnight®',
 			'fedex_2_day_am'               => 'FedEx 2Day® A.M.',
 			'fedex_2_day'                  => 'FedEx 2Day®',
 			'fedex_express_saver'          => 'FedEx Express Saver®',
-			'fedex_ground'                 => 'FedEx Ground®',
 			'fedex_smart_post'             => 'FedEx SmartPost(only support single parcel)',
 			'fedex_international_economy'  => 'FedEx International Economy®',
-			'fedex_international_priority' => 'FedEx International Priority®'
+			'fedex_international_priority' => 'FedEx International Priority®',
+			'fedex_ground'                 => 'FedEx Ground®',
 		];
 
 		return $services;
@@ -390,16 +405,24 @@ class WPSP_Ezeeship
 	function wpsp_shipment_ups_levels()
 	{
 		$services = [
+			'ups_ground'                => 'UPS® Ground',
 			'ups_next_day_air_early_am' => 'UPS Next Day Air® Early',
 			'ups_next_day_air'          => 'UPS Next Day Air®',
 			'ups_next_day_air_saver'    => 'UPS Next Day Air Saver®',
 			'ups_second_day_air_am'     => 'UPS 2nd Day Air AM®',
 			'ups_second_day_air'        => 'UPS 2nd Day Air®',
 			'ups_3_day_select'          => 'UPS 3 Day Select®',
-			'ups_ground'                => 'UPS® Ground'
 		];
 
 		return $services;
+	}
+
+	private function get_default_package_type( $carrier )
+	{
+		$package_types = apply_filters( "wpsp_shipment_{$carrier}_package_types", [] );
+		$package_types = array_keys( $package_types );
+
+		return $package_types[0];
 	}
 }
 
