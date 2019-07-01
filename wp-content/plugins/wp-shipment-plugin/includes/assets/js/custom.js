@@ -183,17 +183,28 @@ jQuery(function ($) {
             '</div>' +
             '</div>' +
             '<div class="wpsp-row">' +
+            '<div class="wpsp-one-half"> \
+            <div class="wpsp-form-group"> \
+            <label>Weight unit</label>\
+            <select name="packages[' + arrIndex + '][unit]" required>\
+            <option value="">Select Weight Unit</option>\
+            <option value="oz">Ounces</option>\
+            <option value="lbs">Pounds</option>\
+            </select>\
+            </div>\
+            </div>' +
             '<div class="wpsp-one-half">' +
             '<div class="wpsp-form-group">' +
             '<label>Weight (ounces)</label>' +
             '<input type="text" name="packages[' + arrIndex + '][weight]">' +
             '</div>' +
             '</div>' +
+            '</div>' +
+            '<div class="wpsp-row">' +
             '<div class="wpsp-one-half">' +
             '<div class="wpsp-form-group">' +
             '<label>Length (inches)</label>' +
             '<input type="text" name="packages[' + arrIndex + '][length]">' +
-            '</div>' +
             '</div>' +
             '</div>' +
             '<div class="wpsp-one-half">' +
@@ -202,6 +213,8 @@ jQuery(function ($) {
             '<input type="text" name="packages[' + arrIndex + '][width]">' +
             '</div>' +
             '</div>' +
+            '</div>' +
+            '<div class="wpsp-row">' +
             '<div class="wpsp-one-half">' +
             '<div class="wpsp-form-group">' +
             '<label>Height (inches)</label>' +

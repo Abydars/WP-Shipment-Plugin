@@ -69,24 +69,36 @@
                 <div class="wpsp-row">
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
-                            <label>Weight (ounces)</label>
-                            <input type="number" name="packages[0][weight]" required>
+                            <label>Weight unit</label>
+                            <select name="packages[0][unit]" required>
+                                <option value="">Select Weight Unit</option>
+                                <option value="oz">Ounces</option>
+                                <option value="lbs">Pounds</option>
+                            </select>
                         </div>
                     </div>
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
-                            <label>Length (inches)</label>
-                            <input type="number" step="any" name="packages[0][length]" required>
+                            <label>Weight</label>
+                            <input type="number" name="packages[0][weight]" required>
                         </div>
                     </div>
                 </div>
                 <div class="wpsp-row">
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
+                            <label>Length (inches)</label>
+                            <input type="number" step="any" name="packages[0][length]" required>
+                        </div>
+                    </div>
+                    <div class="wpsp-one-half">
+                        <div class="wpsp-form-group">
                             <label>Width (inches)</label>
                             <input type="number" step="any" name="packages[0][width]" required>
                         </div>
                     </div>
+                </div>
+                <div class="wpsp-row">
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Height (inches)</label>
@@ -171,7 +183,17 @@
                 <div class="wpsp-row">
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
-                            <label>Weight (OZ)</label>
+                            <label>Weight unit</label>
+                            <select name="unit" required>
+                                <option value="">Select Weight Unit</option>
+                                <option value="oz">Ounces</option>
+                                <option value="lbs">Pounds</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="wpsp-one-half">
+                        <div class="wpsp-form-group">
+                            <label>Weight</label>
                             <input type="text" name="weight">
                         </div>
                     </div>
