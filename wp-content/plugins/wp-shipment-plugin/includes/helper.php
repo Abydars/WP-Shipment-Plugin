@@ -16,6 +16,18 @@ if ( ! class_exists( 'WPSP_Helper' ) ) {
 			return $randomString;
 		}
 
+		static function num_random( $length = 10 )
+		{
+			$characters       = '0123456789';
+			$charactersLength = strlen( $characters );
+			$randomString     = '';
+			for ( $i = 0; $i < $length; $i ++ ) {
+				$randomString .= $characters[ rand( 0, $charactersLength - 1 ) ];
+			}
+
+			return $randomString;
+		}
+
 		static function get_initials( $name )
 		{
 			$names    = explode( ' ', preg_replace( '/[^A-Za-z0-9\- ]/', '', $name ) );

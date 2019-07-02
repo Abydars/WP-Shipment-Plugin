@@ -46,7 +46,7 @@ class WPSP_ShipmentActions
 					$initials = WPSP_Customer::get_customer_initials( $post_data->customer );
 				}
 
-				$random          = WPSP_Helper::str_random( 3 );
+				$random          = WPSP_Helper::num_random( 3 );
 				$code            = "{$initials}-{$post_data->state}-{$random}";
 				$post_data->code = $code;
 			}
