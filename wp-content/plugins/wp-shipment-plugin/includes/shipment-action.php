@@ -110,6 +110,7 @@ class WPSP_ShipmentActions
 			$error         = false;
 			$shipment_data = false;
 			$rates         = 0;
+			$pickup_rates  = 0;
 
 			// rates
 			do_action_ref_array( "wpsp_label_rates_{$post_data->carrier}", [
@@ -118,18 +119,25 @@ class WPSP_ShipmentActions
 				&$rates
 			] );
 
-			if ( ! $error && $rates ) {
+			if ( ! $error && $rates > 0 ) {
+
+				do_action_ref_array( "wpsp_service_pickup_rates_{$post_data->carrier}", [
+					$post_data,
+					&$error,
+					&$pickup_rates
+				] );
 
 				// check for funds
 				$user_funds  = WPSP_Customer::get_account_funds( $post_data->customer );
 				$customer    = WPSP_Customer::get_customer( $post_data->customer );
 				$fax_number  = WPSP_Customer::get_fax_number( $post_data->customer );
-				$markup_rate = apply_filters( "wpsp_get_markup_rate_{$post_data->carrier}", 0, $post_data->customer );
+				$markup_rate = WPSP_Customer::get_markup_rate( $post_data->customer, $post_data->carrier );
 				$label_rates = $rates;
+				$markup      = $pickup_rates;
 
 				if ( $markup_rate > 0 ) {
-					$markup_rate = ( $rates * ( $markup_rate / 100 ) );
-					$rates       += $markup_rate;
+					$markup += ( $rates * ( $markup_rate / 100 ) );
+					$rates  += $markup;
 				}
 
 				if ( $user_funds > $rates ) {
@@ -169,7 +177,7 @@ class WPSP_ShipmentActions
 							"reference"      => "",
 							"shipmentNo"     => "",
 							"rates"          => $rates,
-							"markupRate"     => $markup_rate,
+							"markupRate"     => $markup,
 							"labelRate"      => $label_rates
 						);
 
@@ -378,13 +386,20 @@ class WPSP_ShipmentActions
 		$carrier_keys = [ $post_data->carrier ];
 		$carriers     = apply_filters( 'wpsp_shipment_carriers', [] );
 		$lowest_rate  = false;
+		$has_rates    = false;
 
 		if ( empty( $post_data->carrier ) ) {
 			$carrier_keys = array_keys( $carriers );
 		}
 
 		foreach ( $carrier_keys as $k => $carrier ) {
-			$rates = [];
+			$rates        = [];
+			$pickup_rates = 0;
+			$markup_rate  = WPSP_Customer::get_markup_rate( $post_data->customer, $carrier );
+
+			if ( $markup_rate > 0 ) {
+				$markup_rate = ( $markup_rate / 100 );
+			}
 
 			do_action_ref_array( "wpsp_service_rates_{$carrier}", [
 				$post_data,
@@ -392,24 +407,49 @@ class WPSP_ShipmentActions
 				&$rates
 			] );
 
-			$rates = array_filter( $rates, function ( $rate ) {
-				return ( $rate['rate'] > 0 );
-			} );
-			$rates = array_values( $rates );
+			if ( $error === false ) {
 
-			$all_rates[ $carrier ] = [
-				'name'  => $carriers[ $carrier ],
-				'rates' => $rates
-			];
+				do_action_ref_array( "wpsp_service_pickup_rates_{$carrier}", [
+					$post_data,
+					&$error,
+					&$pickup_rates
+				] );
 
-			foreach ( $rates as $rate ) {
-				if ( $lowest_rate === false || $rate['rate'] < $lowest_rate['rate'] ) {
-					$lowest_rate = [
-						'carrier'      => $carrier,
-						'level'        => $rate['level'],
-						'package_type' => $rate['package_type'],
-						'rate'         => $rate['rate']
+				if ( $error === false ) {
+
+					$rates = array_filter( $rates, function ( $rate ) {
+						return ( $rate['rate'] > 0 );
+					} );
+					$rates = array_values( $rates );
+
+					foreach ( $rates as $j => $rate ) {
+						$markup = floatval( number_format( $rate['rate'] * $markup_rate, 2 ) );
+						$total  = floatval( number_format( $rate['rate'] + $markup, 2 ) );
+
+						$rates[ $j ]['markup'] = $markup;
+						$rates[ $j ]['total']  = $total;
+					}
+
+					$all_rates[ $carrier ] = [
+						'name'         => $carriers[ $carrier ],
+						'pickup_rates' => $pickup_rates,
+						'rates'        => $rates
 					];
+
+					if ( ! $has_rates && count( $rates ) > 0 ) {
+						$has_rates = true;
+					}
+
+					foreach ( $rates as $rate ) {
+						if ( $lowest_rate === false || $rate['rate'] < $lowest_rate['rate'] ) {
+							$lowest_rate = [
+								'carrier'      => $carrier,
+								'level'        => $rate['level'],
+								'package_type' => $rate['package_type'],
+								'rate'         => $rate['rate']
+							];
+						}
+					}
 				}
 			}
 		}
@@ -420,8 +460,12 @@ class WPSP_ShipmentActions
 			'lowest' => $lowest_rate
 		];
 
+		if ( ! $has_rates ) {
+			$error = __( "Rates not found", WPSP_LANG );
+		}
+
 		if ( $error ) {
-			$response['status']  = true;
+			$response['status']  = false;
 			$response['message'] = $error;
 		}
 

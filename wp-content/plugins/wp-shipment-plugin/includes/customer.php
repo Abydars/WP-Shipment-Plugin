@@ -3,6 +3,12 @@
 
 class WPSP_Customer
 {
+	const DEFAULTS = [
+		'usps'  => 5,
+		'ups'   => 25,
+		'fedex' => 25
+	];
+
 	static function get_alt_email_address( $id )
 	{
 		$value = get_user_meta( $id, 'alternate_address', true );
@@ -30,37 +36,20 @@ class WPSP_Customer
 	static function add_funds( $id, $amount )
 	{
 		$value = self::get_account_funds( $id ) + $amount;
+
 		return update_user_meta( $id, 'account_funds', $value );
 	}
 
-	static function get_ups_markup_rate( $id )
+	static function get_markup_rate( $id, $carrier )
 	{
-		$value = get_user_meta( $id, 'ups_rate', true );
+		$value = get_user_meta( $id, "{$carrier}_rate", true );
 
-		if ( $value === false ) {
+		if ( $value === false || $value === "" ) {
 			$value = 0;
-		}
 
-		return floatval( $value );
-	}
-
-	static function get_usps_markup_rate( $id )
-	{
-		$value = get_user_meta( $id, 'usps_rate', true );
-
-		if ( $value === false ) {
-			$value = 0;
-		}
-
-		return floatval( $value );
-	}
-
-	static function get_fedex_markup_rate( $id )
-	{
-		$value = get_user_meta( $id, 'fedex_rate', true );
-
-		if ( $value === false ) {
-			$value = 0;
+			if ( isset( self::DEFAULTS[ $carrier ] ) ) {
+				$value = self::DEFAULTS[ $carrier ];
+			}
 		}
 
 		return floatval( $value );

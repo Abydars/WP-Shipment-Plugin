@@ -39,28 +39,14 @@
                    class="regular-text"/><br/>
         </td>
     </tr>
-    <tr>
-        <th><label><?php _e( "UPS Markup rate (%)" ); ?></label></th>
-        <td>
-            <input type="number" name="ups_rate" id="ups_rate"
-                   value="<?php echo esc_attr( WPSP_Customer::get_ups_markup_rate( $user->ID ) ); ?>"
-                   class="regular-text"/><br/>
-        </td>
-    </tr>
-    <tr>
-        <th><label><?php _e( "USPS Markup rate (%)" ); ?></label></th>
-        <td>
-            <input type="number" name="usps_rate" id="usps_rate"
-                   value="<?php echo esc_attr( WPSP_Customer::get_usps_markup_rate( $user->ID ) ); ?>"
-                   class="regular-text"/><br/>
-        </td>
-    </tr>
-    <tr>
-        <th><label><?php _e( "Fedex Markup rate (%)" ); ?></label></th>
-        <td>
-            <input type="number" name="fedex_rate" id="fedex_rate"
-                   value="<?php echo esc_attr( WPSP_Customer::get_fedex_markup_rate( $user->ID ) ); ?>"
-                   class="regular-text"/><br/>
-        </td>
-    </tr>
+	<?php foreach ( $carriers as $k => $carrier ) : ?>
+        <tr>
+            <th><label><?php _e( "{$carrier} Markup rate (%)" ); ?></label></th>
+            <td>
+                <input type="number" name="<?= $k ?>_rate" id="<?= $k ?>_rate"
+                       value="<?php echo esc_attr( WPSP_Customer::get_markup_rate( $user->ID, $k ) ); ?>"
+                       class="regular-text"/><br/>
+            </td>
+        </tr>
+	<?php endforeach; ?>
 </table>

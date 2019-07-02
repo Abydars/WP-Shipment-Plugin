@@ -22,7 +22,7 @@
             <div class="wpsp-form-group shipping-carrier">
                 <label>Shipping Carrier</label>
                 <select name="carrier" required>
-                    <option value="">Select Shipping Carrier</option>
+                    <!--<option value="">Select Shipping Carrier</option>-->
 					<?php foreach ( $carriers as $k => $carrier ) { ?>
                         <option value="<?= $k ?>"><?= $carrier ?></option>
 					<?php } ?>

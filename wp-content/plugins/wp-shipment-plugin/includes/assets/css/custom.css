@@ -218,7 +218,7 @@
 
 #wpsp-shipment-form-container.right-sidebar .packages {
     background: #424242;
-    padding: 5px 10px 79px;
+    padding: 5px 10px 20px;
     margin: 6px;
 }
 
@@ -286,6 +286,13 @@
 
 .modal-content label, .modal-content h2, .modal-content span {
     color: #000 !important;
+}
+
+.modal-content h2 small {
+    display: block;
+    color: red;
+    font-style: italic;
+    font-size: 11px;
 }
 
 .new-package .modal-content .actions {

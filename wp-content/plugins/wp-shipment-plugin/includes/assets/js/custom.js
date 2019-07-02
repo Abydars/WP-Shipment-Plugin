@@ -41,7 +41,7 @@ jQuery(function ($) {
                     $select_levels.append('<option value="' + index + '">' + value + '</option>');
                 });
 
-                $select_levels.append('<option>All</option>');
+                $select_levels.append('<option value="">Default</option>');
 
                 if (level !== undefined)
                     $select_levels.val(level);
@@ -64,6 +64,8 @@ jQuery(function ($) {
                 $.each(res, function (index, value) {
                     $package_types.append('<option value="' + index + '">' + value + '</option>');
                 });
+
+                $package_types.append('<option value="">Default</option>');
 
                 if (package_type !== undefined)
                     $package_types.val(package_type);
@@ -353,13 +355,18 @@ jQuery(function ($) {
             var rate = all_rates[key];
             var rates = rate['rates'];
             var name = rate['name'];
+            var pickup_rates = rate['pickup_rates'];
 
             var $h2 = $('<h2>');
-            $h2.text(name);
+            $h2.html(name);
+
+            if (pickup_rates > 0) {
+                $h2.append('<small>Pickup rates will be applied - $' + pickup_rates.toFixed(2) + '</small>');
+            }
 
             if (rates.length > 0) {
                 var $rates_tbl = $('<table/>');
-                var $rates_th = $('<thead><tr><th>Level</th><th>Rate</th><th>Action</th></tr></thead>');
+                var $rates_th = $('<thead><tr><th>Level</th><th>Actual Rate</th><th>Markup</th><th>Rate</th><th>Action</th></tr></thead>');
 
                 $rates_tbl.append($rates_th);
 
@@ -369,6 +376,8 @@ jQuery(function ($) {
                     var $tr = $('<tr/>');
                     var $level_td = $('<td/>');
                     var $rate_td = $('<td/>');
+                    var $markup_rate_td = $('<td/>');
+                    var $total_rate_td = $('<td/>');
                     var $action_td = $('<td/>');
                     var $select_btn = $('<button/>');
 
@@ -379,9 +388,16 @@ jQuery(function ($) {
 
                     $level_td.html(level_rate.name);
                     $rate_td.text('$' + level_rate.rate);
+                    $markup_rate_td.text('$' + level_rate.markup);
+                    $total_rate_td.text('$' + level_rate.total);
                     $action_td.append($select_btn);
 
-                    $tr.append($level_td).append($rate_td).append($action_td);
+                    $tr.append($level_td)
+                        .append($rate_td)
+                        .append($markup_rate_td)
+                        .append($total_rate_td)
+                        .append($action_td);
+
                     $rates_tbl.append($tr);
                 }
 
@@ -402,6 +418,7 @@ jQuery(function ($) {
         $('.wpsp-chosen').chosen();
 
         $('.shipping-date input').val(today);
+        $('.shipping-carrier select').trigger('change');
 
         $('#shipment_form').submit(function (e) {
             e.preventDefault();
@@ -510,6 +527,8 @@ jQuery(function ($) {
                 err = 'Please select to address';
             } else if ($('#shipment_form .package').first().find('input[name*="weight"]').val() == "") {
                 err = 'Package #1 weight is required';
+            } else if ($('#shipment_form .package').first().find('select[name*="unit"]').val() == "") {
+                err = 'Package #1 unit is required';
             } else if ($('#shipment_form .package').first().find('input[name*="width"]').val() == "") {
                 err = 'Package #1 width is required';
             } else if ($('#shipment_form .package').first().find('input[name*="height"]').val() == "") {
