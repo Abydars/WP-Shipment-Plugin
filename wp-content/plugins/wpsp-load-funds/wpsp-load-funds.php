@@ -290,6 +290,8 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 
 }
 
-$loader = new WPSP_LoadFunds();
+if ( class_exists( 'WPSP' ) ) {
+	$loader = new WPSP_LoadFunds();
 
-register_activation_hook( __FILE__, array( $loader, 'activation' ) );
+	register_activation_hook( __FILE__, array( $loader, 'activation' ) );
+}

@@ -12,7 +12,7 @@
             </div>
             <div class="wpsp-form-group customers-list">
                 <label>Customer</label>
-                <select name="customer" required>
+                <select class="wpsp-chosen" name="customer" required>
                     <option value="">Select Customer</option>
 					<?php foreach ( $customers as $customer ) : ?>
                         <option value="<?= $customer->ID ?>"><?= $customer->display_name ?></option>
@@ -71,7 +71,6 @@
                         <div class="wpsp-form-group">
                             <label>Weight unit</label>
                             <select name="packages[0][unit]" required>
-                                <option value="">Select Weight Unit</option>
                                 <option value="oz">Ounces</option>
                                 <option value="lbs">Pounds</option>
                             </select>
@@ -306,7 +305,7 @@
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group select-country">
                             <label>Country</label>
-                            <select name="country" required>
+                            <select class="wpsp-chosen" name="country" required>
                                 <option value="">Select Country</option>
 								<?php foreach ( $countries as $country ) { ?>
                                     <option value="<?= $country['code2'] ?>"><?= $country['name'] ?></option>
@@ -325,7 +324,7 @@
                     <div class="wpsp-one-half select-state">
                         <div class="wpsp-form-group">
                             <label>State</label>
-                            <select name="state" required></select>
+                            <select class="wpsp-chosen" name="state" required></select>
                         </div>
                     </div>
                     <div class="wpsp-one-half">

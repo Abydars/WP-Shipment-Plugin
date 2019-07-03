@@ -4,21 +4,19 @@ if ( ! class_exists( 'WPSP_Helper' ) ) {
 
 	class WPSP_Helper
 	{
-		static function str_random( $length = 10 )
+		static function str_random( $length = 10, $type = 'alphanumeric' )
 		{
-			$characters       = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-			$charactersLength = strlen( $characters );
-			$randomString     = '';
-			for ( $i = 0; $i < $length; $i ++ ) {
-				$randomString .= $characters[ rand( 0, $charactersLength - 1 ) ];
+			$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+			switch ( $type ) {
+				case 'numeric':
+					$characters = '0123456789';
+					break;
+				case 'alphabetic':
+					$characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+					break;
 			}
 
-			return $randomString;
-		}
-
-		static function num_random( $length = 10 )
-		{
-			$characters       = '0123456789';
 			$charactersLength = strlen( $characters );
 			$randomString     = '';
 			for ( $i = 0; $i < $length; $i ++ ) {

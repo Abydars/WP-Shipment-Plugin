@@ -31,24 +31,14 @@ class WPSP_ShipmentActions
 		if ( isset( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'wpsp_create_address' ) ) {
 			$error     = false;
 			$post_data = (object) $_POST;
+			$response  = [];
 
 			if ( ! empty( $post_data->carrier ) ) {
 				do_action_ref_array( "wpsp_verify_address_{$post_data->carrier}", [
 					$post_data,
-					&$error
+					&$error,
+					&$response
 				] );
-			}
-
-			if ( empty( $post_data->code ) ) {
-				$initials = WPSP_Helper::get_initials( $post_data->full_name );
-
-				if ( ! empty( $post_data->customer ) ) {
-					$initials = WPSP_Customer::get_customer_initials( $post_data->customer );
-				}
-
-				$random          = WPSP_Helper::num_random( 3 );
-				$code            = "{$initials}-{$post_data->state}-{$random}";
-				$post_data->code = $code;
 			}
 
 			if ( ! $error ) {
@@ -328,25 +318,40 @@ class WPSP_ShipmentActions
 
 		if ( isset( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'wpsp_add_address' ) ) {
 
-			$error     = false;
-			$post_data = (object) $_POST;
+			$error          = false;
+			$post_data      = (object) $_POST;
+			$is_residential = true;
+			$carriers       = apply_filters( 'wpsp_shipment_carriers', [] );
 
-			do_action_ref_array( "wpsp_verify_address_{$post_data->carrier}", [
-				$post_data,
-				&$error
-			] );
+			foreach ( $carriers as $k_carrier => $v_carrier ) {
+				$temp_is_residential = false;
+
+				do_action_ref_array( "wpsp_verify_address_{$k_carrier}", [
+					$post_data,
+					&$error,
+					&$temp_is_residential
+				] );
+
+				$is_residential &= $temp_is_residential;
+
+				if ( $error !== false ) {
+					break;
+				}
+			}
 
 			if ( ! $error ) {
-				$address             = WPSP_Address::store_address( $post_data );
-				$response['status']  = true;
-				$response['message'] = __( 'Address created successfully', WPSP_LANG );
-				$response['data']    = $address;
+				$post_data->is_residential = $is_residential ? 1 : 0;
+				$address                   = WPSP_Address::store_address( $post_data );
+				$response['status']        = true;
+				$response['message']       = __( 'Address created successfully', WPSP_LANG );
+				$response['data']          = $address;
 			} else {
 				$response['status']  = false;
 				$response['message'] = $error;
 			}
 		} else {
 			$response['status']  = false;
+			$response['none']    = wp_create_nonce( 'wpsp_add_address' );
 			$response['message'] = __( 'Please try again', WPSP_LANG );
 		}
 
@@ -460,7 +465,7 @@ class WPSP_ShipmentActions
 			'lowest' => $lowest_rate
 		];
 
-		if ( ! $has_rates ) {
+		if ( ! $has_rates && $error === false ) {
 			$error = __( "Rates not found", WPSP_LANG );
 		}
 

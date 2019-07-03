@@ -290,6 +290,8 @@ if ( ! class_exists( 'WPTM_Twilio' ) ) {
 	}
 }
 
-$loader = new WPTM_Twilio();
+if ( class_exists( 'WPSP' ) ) {
+	$loader = new WPTM_Twilio();
 
-register_activation_hook( __FILE__, array( $loader, 'activation' ) );
+	register_activation_hook( __FILE__, array( $loader, 'activation' ) );
+}

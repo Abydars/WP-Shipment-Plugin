@@ -139,14 +139,30 @@ class WPSP_Address
 			$is_first  = empty( $addresses );
 		}
 
+		if ( empty( $address->code ) ) {
+
+			$initials = strtoupper( WPSP_Helper::str_random( 2, 'alphabetic' ) );
+
+			if ( ! empty( $address->full_name ) ) {
+				$initials = WPSP_Helper::get_initials( $address->full_name );
+			} else if ( ! empty( $address->customer ) ) {
+				$initials = WPSP_Customer::get_customer_initials( $address->customer );
+			}
+
+			$random        = WPSP_Helper::str_random( 3, 'numeric' );
+			$code          = "{$initials}-{$address->state}-{$random}";
+			$address->code = $code;
+		}
+
 		$row = array(
-			"address_name" => $address->code . " - " . $address->full_name . " " . $address->street_1 . " " . $address->street_2 . ", " . $address->city . ", " . $address->state . ", " . $address->country . " " . $address->zip_code,
-			"customer_id"  => $address->customer,
-			"address_code" => $address->code,
-			"data"         => json_encode( $address ),
-			"is_default"   => $is_first,
-			"type"         => null,
-			"is_verified"  => 1
+			"address_name"   => $address->code . " - " . $address->full_name . " " . $address->street_1 . " " . $address->street_2 . ", " . $address->city . ", " . $address->state . ", " . $address->country . " " . $address->zip_code,
+			"customer_id"    => $address->customer,
+			"address_code"   => $address->code,
+			"data"           => json_encode( $address ),
+			"is_default"     => $is_first,
+			"type"           => null,
+			"is_verified"    => 1,
+			"is_residential" => $address->is_residential,
 		);
 
 		$wpdb->insert( self::get_table_name(), $row );

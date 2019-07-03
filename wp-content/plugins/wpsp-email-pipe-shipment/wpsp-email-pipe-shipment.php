@@ -171,4 +171,6 @@ if ( ! class_exists( 'WPSP_EmailPipe' ) ) {
 	}
 }
 
-new WPSP_EmailPipe();
+if ( class_exists( 'WPSP' ) ) {
+	new WPSP_EmailPipe();
+}

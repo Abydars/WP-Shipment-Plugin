@@ -189,7 +189,7 @@ class WPSP_Ezeeship
 		}
 
 		if ( empty( $level ) ) {
-			$level = $this->get_default_service_level( $data->carrier );
+			$level = $this->get_default_service_level( $data->carrier, ( $to_address['is_residential'] === 1 ) );
 		}
 
 		$level_name = $services[ $level ];
@@ -262,10 +262,14 @@ class WPSP_Ezeeship
 		return $package_types[0];
 	}
 
-	private function get_default_service_level( $carrier )
+	private function get_default_service_level( $carrier, $residential = true )
 	{
 		$levels = apply_filters( "wpsp_shipment_{$carrier}_levels", [] );
 		$levels = array_keys( $levels );
+
+		if ( $carrier == 'fedex' && $residential ) {
+			return 'fedex_home_delivery';
+		}
 
 		return $levels[0];
 	}
@@ -325,7 +329,7 @@ class WPSP_Ezeeship
 		}
 	}
 
-	function wpsp_verify_address_any( $data, &$error )
+	function wpsp_verify_address_any( $data, &$error, &$is_residential )
 	{
 		$d                 = [];
 		$error             = false;
@@ -343,6 +347,8 @@ class WPSP_Ezeeship
 
 		if ( $res->result != 'OK' ) {
 			$error = $res->message;
+		} else {
+			$is_residential = $res->data->isResidential;
 		}
 	}
 

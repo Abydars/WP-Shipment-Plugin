@@ -78,9 +78,9 @@ jQuery(function ($) {
 
     $(document).on('click', '#btn-new-from-address', function (e) {
         e.preventDefault();
-        if ($('#shipment_form .customers-list select').val() == "" || $('.shipping-carrier select').val() == "") {
+        if ($('#shipment_form .customers-list select').val() == "") {
             alert('Please select a customer and shipping carrier before adding a new address');
-            $('#addAddressModal').hide()
+            $('#addAddressModal').hide();
         } else {
             $('#addAddressModal form').trigger("reset");
             $('#addAddressModal').show();
@@ -316,8 +316,16 @@ jQuery(function ($) {
                         $states.append('<option value="' + state.code + '">' + state.name + '</option>');
                     }
                 }
+
+                $states.chosen().trigger("chosen:updated");
             }
         });
+    });
+
+    $(document).on('reset', 'form', function () {
+        setTimeout(function () {
+            $(this).find('.wpsp-chosen').chosen().trigger("chosen:updated");
+        }, 1000);
     });
 
     function refreshAddresses() {
@@ -465,6 +473,8 @@ jQuery(function ($) {
             e.preventDefault();
 
             var form_data = $(this).serializeArray();
+            var $form = $(this);
+            var $btn = $form.find('button[type="submit"]');
 
             form_data.push({
                 'name': 'customer',
@@ -476,18 +486,34 @@ jQuery(function ($) {
                 'value': $('select[name="carrier"]').val()
             });
 
+            $btn.attr('disabled', 'disabled');
+            $btn.attr('data-text', $btn.text());
+            $btn.text('Please wait...');
+
             $.ajax({
                 type: 'POST',
                 dataType: 'JSON',
                 data: form_data,
                 url: wsp_ajax_url,
                 success: function (response) {
+
+                    $btn.val($btn.attr('data-text'));
+                    $btn.removeAttr('disabled');
+
                     if (response.status) {
                         $('#addAddressModal').hide();
                         refreshAddresses();
                     } else {
                         alert(response.message);
+
+                        if (response.nonce) {
+                            $form.find('input[name="_wpnonce"]').val(response.nonce);
+                        }
                     }
+                },
+                error: function (e) {
+                    $btn.text($btn.attr('data-text'));
+                    $btn.removeAttr('disabled');
                 }
             })
         });

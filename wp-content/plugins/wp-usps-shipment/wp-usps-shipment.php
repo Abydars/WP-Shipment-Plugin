@@ -469,12 +469,14 @@ class WPSP_USPS
 		return [ $zip4, $zip5 ];
 	}
 
-	function wpsp_verify_address_usps( $data, &$error )
+	function wpsp_verify_address_usps( $data, &$error, &$is_residential )
 	{
-
 		list( $from_zip4, $from_zip5 ) = $this->zip4_5( $data->zip_code );
-		$d = [
-			'Address' => [
+
+		$is_residential = false;
+		$d              = [
+			'Revision' => 1,
+			'Address'  => [
 				'_attributes' => [
 					'ID' => 0,
 				],
@@ -503,10 +505,10 @@ class WPSP_USPS
 		$res = ShipmentXmlToArray::convert( $res );
 
 		if ( ! isset( $res['AddressValidateResponse']['Address']['Error'] ) ) {
-			$error = false;
+			$error          = false;
+			$is_residential = $res['AddressValidateResponse']['Address']['Business'] === "N";
 		} else {
 			$error = $res['AddressValidateResponse']['Address']['Error']['Description'];
-
 		}
 	}
 
@@ -592,4 +594,6 @@ class WPSP_USPS
 	}
 }
 
-new WPSP_USPS();
+if ( class_exists( 'WPSP' ) ) {
+	new WPSP_USPS();
+}

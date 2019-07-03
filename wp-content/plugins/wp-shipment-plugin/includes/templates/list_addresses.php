@@ -29,6 +29,7 @@
                     <th>Zip Code</th>
                     <th>Phone</th>
                     <th>Email</th>
+                    <th>Residential</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
@@ -59,6 +60,7 @@
                         <td><?= $address_data['zip_code'] ?></td>
                         <td><?= $address_data['phone'] ?></td>
                         <td><?= $address_data['email'] ?></td>
+                        <td><?= ($address->is_residential == 1) ? 'Yes' : 'No' ?></td>
                         <td class="address_actions">
                             <a href="#" class="btn-edit-address" data-type="from"
                                data-key="<?= $k ?>" data-id="<?= $address->id ?>"><i class="fa fa-eye"></i></a>

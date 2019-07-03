@@ -17,7 +17,7 @@ class WPSP
 
 		add_action( 'wp_ajax_save_label', array( $wpsp_actions, 'action_save_label' ) );
 		add_action( 'wp_ajax_nopriv_save_label', array( $wpsp_actions, 'action_save_label' ) );
-		add_action( 'wp_ajax_add_address', array( $wpsp_actions, 'action_add_address' ) );
+		add_action( 'wp_ajax_add_address', array( $wpsp_actions, 'action_add_address' ), 20 );
 		add_action( 'wp_ajax_wpsp_shipment_carrier_levels', array( $wpsp_actions, 'action_carrier_levels' ) );
 		add_action( 'wp_ajax_wpsp_shipment_package_types', array( $wpsp_actions, 'action_package_types' ) );
 		add_action( 'wp_ajax_wpsp_get_rates', array( $wpsp_actions, 'action_get_rates' ) );
@@ -172,6 +172,7 @@ class WPSP
 					is_default tinyint DEFAULT 0,
 					type varchar(20) DEFAULT 'to',
 					is_verified tinyint DEFAULT 1,
+					is_residential tinyint DEFAULT 0,
 					PRIMARY KEY  (id)" );
 		$this->create_table( 'shipments', "id mediumint(9) NOT NULL AUTO_INCREMENT,
 					customer_id int (9) NOT NULL,
