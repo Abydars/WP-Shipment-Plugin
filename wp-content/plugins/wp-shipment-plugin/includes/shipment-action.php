@@ -29,23 +29,34 @@ class WPSP_ShipmentActions
 	function action_create_new_address()
 	{
 		if ( isset( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'wpsp_create_address' ) ) {
-			$error     = false;
-			$post_data = (object) $_POST;
-			$response  = [];
+			$error          = false;
+			$post_data      = (object) $_POST;
+			$is_residential = true;
+			$carriers       = apply_filters( 'wpsp_shipment_carriers', [] );
 
-			if ( ! empty( $post_data->carrier ) ) {
-				do_action_ref_array( "wpsp_verify_address_{$post_data->carrier}", [
+			foreach ( $carriers as $k_carrier => $v_carrier ) {
+				$temp_is_residential = false;
+
+				do_action_ref_array( "wpsp_verify_address_{$k_carrier}", [
 					$post_data,
 					&$error,
-					&$response
+					&$temp_is_residential
 				] );
+
+				$is_residential &= $temp_is_residential;
+
+				if ( $error !== false ) {
+					break;
+				}
 			}
 
 			if ( ! $error ) {
+				$post_data->is_residential = $is_residential ? 1 : 0;
+
 				WPSP_Address::store_address( $post_data );
 				wp_redirect( admin_url( 'admin.php?page=list_addresses' ) );
 			} else {
-				wp_redirect( admin_url( 'admin.php?page=create_address&error=' . $error ) );
+				wp_redirect( admin_url( 'admin.php?page=create_address&error=' . urlencode( $error ) ) );
 			}
 			die;
 		}

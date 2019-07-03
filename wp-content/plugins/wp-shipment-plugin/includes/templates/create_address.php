@@ -41,7 +41,7 @@
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Full Name</label>
-                            <input type="text" name="full_name" id="" required/>
+                            <input type="text" name="full_name" id=""/>
                         </div>
                     </div>
                     <div class="wpsp-one-half">
@@ -69,7 +69,7 @@
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group select-country">
                             <label>Country</label>
-                            <select name="country" required>
+                            <select class="wpsp-chosen" name="country" required>
                                 <option value="">Select Country</option>
 								<?php foreach ( $countries as $country ) { ?>
                                     <option value="<?= $country['code2'] ?>"><?= $country['name'] ?></option>
@@ -88,7 +88,7 @@
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group select-state">
                             <label>State</label>
-                            <select name="state" required>
+                            <select class="wpsp-chosen" name="state" required>
                             </select>
                         </div>
                     </div>
@@ -99,17 +99,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="wpsp-row">
+                <div class="wpsp-row" style="display: none;">
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Phone Number</label>
-                            <input type="number" name="phone" id="" required/>
+                            <input type="number" name="phone" id=""/>
                         </div>
                     </div>
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Email</label>
-                            <input type="email" name="email" id="" required/>
+                            <input type="email" name="email" id=""/>
                         </div>
                     </div>
                 </div>

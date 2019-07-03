@@ -63,7 +63,7 @@
                         <td><?= ($address->is_residential == 1) ? 'Yes' : 'No' ?></td>
                         <td class="address_actions">
                             <a href="#" class="btn-edit-address" data-type="from"
-                               data-key="<?= $k ?>" data-id="<?= $address->id ?>"><i class="fa fa-eye"></i></a>
+                               data-key="<?= $k ?>" data-id="<?= $address->id ?>" style="display: none;"><i class="fa fa-eye"></i></a>
                             <a href="#" class="btn-delete-address"
                                data-key="<?= $k ?>" data-id="<?= $address->id ?>">
                                 <i class="fa fa-trash"></i>
