@@ -344,8 +344,6 @@ jQuery(function ($) {
     $(document).on('reset', 'form', function () {
         var $form = $(this);
 
-        $form.find('.shipping-carrier select').trigger('change');
-
         $form.find('.wpsp-chosen').each(function () {
             $(this).val('').trigger('change').chosen().trigger("chosen:updated");
         });
@@ -447,9 +445,6 @@ jQuery(function ($) {
 
         $('#shipment_form').submit(function (e) {
             e.preventDefault();
-
-            $('#shipment_form').trigger('reset');
-            return;
 
             var form_data = $(this).serializeArray();
             var $btn = $(this).find('button[type="submit"]');
