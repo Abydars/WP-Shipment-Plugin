@@ -440,6 +440,7 @@ class WPSP_ShipmentActions
 
 					foreach ( $rates as $j => $rate ) {
 						$markup = floatval( number_format( $rate['rate'] * $markup_rate, 2 ) );
+						$markup += $pickup_rates;
 						$total  = floatval( number_format( $rate['rate'] + $markup, 2 ) );
 
 						$rates[ $j ]['markup'] = $markup;
@@ -493,8 +494,12 @@ class WPSP_ShipmentActions
 	function action_get_addresses()
 	{
 		$customer_id = $_REQUEST['customer_id'];
-		$addresses   = WPSP_Address::get_addresses_by_customer( $customer_id );
+		$addresses   = [];
 		$addresses   = array_merge( $addresses, WPSP_Address::get_addresses_no_customer() );
+
+		if ( ! empty( $customer_id ) ) {
+			$addresses = array_merge( $addresses, WPSP_Address::get_addresses_by_customer( $customer_id ) );
+		}
 
 		header( 'Content-Type: application/json' );
 		echo json_encode( $addresses );
@@ -512,15 +517,34 @@ class WPSP_ShipmentActions
 
 		if ( isset( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'wpsp_edit_address' ) ) {
 
-			$error     = false;
-			$post_data = (object) $_POST;
+			$error          = false;
+			$post_data      = (object) $_POST;
+			$is_residential = true;
+			$carriers       = apply_filters( 'wpsp_shipment_carriers', [] );
+
+			foreach ( $carriers as $k_carrier => $v_carrier ) {
+				$temp_is_residential = false;
+
+				do_action_ref_array( "wpsp_verify_address_{$k_carrier}", [
+					$post_data,
+					&$error,
+					&$temp_is_residential
+				] );
+
+				$is_residential &= $temp_is_residential;
+
+				if ( $error !== false ) {
+					break;
+				}
+			}
 
 			if ( ! $error ) {
-				$id                  = $post_data->id;
-				$address             = WPSP_Address::edit_address( $id, $post_data );
-				$response['status']  = true;
-				$response['message'] = __( 'Address edited successfully', WPSP_LANG );
-				$response['data']    = $address;
+				$id                        = $post_data->id;
+				$post_data->is_residential = $is_residential ? 1 : 0;
+				$address                   = WPSP_Address::edit_address( $id, $post_data );
+				$response['status']        = true;
+				$response['message']       = __( 'Address edited successfully', WPSP_LANG );
+				$response['data']          = $address;
 			} else {
 				$response['status']  = false;
 				$response['message'] = $error;

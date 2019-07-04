@@ -71,8 +71,8 @@
                         <div class="wpsp-form-group">
                             <label>Weight unit</label>
                             <select name="packages[0][unit]" required>
-                                <option value="oz">Ounces</option>
                                 <option value="lbs">Pounds</option>
+                                <option value="oz">Ounces</option>
                             </select>
                         </div>
                     </div>
@@ -184,9 +184,8 @@
                         <div class="wpsp-form-group">
                             <label>Weight unit</label>
                             <select name="unit" required>
-                                <option value="">Select Weight Unit</option>
-                                <option value="oz">Ounces</option>
                                 <option value="lbs">Pounds</option>
+                                <option value="oz">Ounces</option>
                             </select>
                         </div>
                     </div>
@@ -277,7 +276,7 @@
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Full Name</label>
-                            <input type="text" name="full_name" id=""/>
+                            <input type="text" name="full_name" id="" required/>
                         </div>
                     </div>
                     <div class="wpsp-one-half">
@@ -334,11 +333,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="wpsp-row" style="display: none;">
+                <div class="wpsp-row">
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Phone Number</label>
-                            <input type="number" name="phone" id=""/>
+                            <input type="number" name="phone" id="" required/>
                         </div>
                     </div>
                     <div class="wpsp-one-half">

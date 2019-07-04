@@ -60,10 +60,10 @@
                         <td><?= $address_data['zip_code'] ?></td>
                         <td><?= $address_data['phone'] ?></td>
                         <td><?= $address_data['email'] ?></td>
-                        <td><?= ($address->is_residential == 1) ? 'Yes' : 'No' ?></td>
+                        <td><?= ( $address->is_residential == 1 ) ? 'Yes' : 'No' ?></td>
                         <td class="address_actions">
                             <a href="#" class="btn-edit-address" data-type="from"
-                               data-key="<?= $k ?>" data-id="<?= $address->id ?>" style="display: none;"><i class="fa fa-eye"></i></a>
+                               data-key="<?= $k ?>" data-id="<?= $address->id ?>"><i class="fa fa-eye"></i></a>
                             <a href="#" class="btn-delete-address"
                                data-key="<?= $k ?>" data-id="<?= $address->id ?>">
                                 <i class="fa fa-trash"></i>
@@ -125,12 +125,13 @@
                     </div>
                     <div class="wpsp-row">
                         <div class="wpsp-one-half">
-                            <div class="wpsp-form-group">
+                            <div class="wpsp-form-group select-country">
                                 <label>Country</label>
-                                <select name="country" required>
-                                    <?php foreach ( $countries as $country ) { ?>
+                                <select class="wpsp-chosen" name="country" required>
+                                    <option value="">Select Country</option>
+									<?php foreach ( $countries as $country ) { ?>
                                         <option value="<?= $country['code2'] ?>"><?= $country['name'] ?></option>
-                                    <?php } ?>
+									<?php } ?>
                                 </select>
                             </div>
                         </div>
@@ -143,9 +144,9 @@
                     </div>
                     <div class="wpsp-row">
                         <div class="wpsp-one-half">
-                            <div class="wpsp-form-group">
+                            <div class="wpsp-form-group select-state">
                                 <label>State</label>
-                                <input type="text" name="state" id="" required/>
+                                <select class="wpsp-chosen" name="state" required></select>
                             </div>
                         </div>
                         <div class="wpsp-one-half">
@@ -165,7 +166,7 @@
                         <div class="wpsp-one-half">
                             <div class="wpsp-form-group">
                                 <label>Email</label>
-                                <input type="email" name="email" id="" required/>
+                                <input type="email" name="email" id=""/>
                             </div>
                         </div>
                     </div>

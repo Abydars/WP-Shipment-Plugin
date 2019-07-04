@@ -110,11 +110,17 @@ jQuery(function ($) {
         $('#editAddressModal input[name="city"]').val(row_data['City']);
         $('#editAddressModal input[name="street_1"]').val(row_data['Street 1']);
         $('#editAddressModal input[name="street_2"]').val(row_data['Street 2']);
-        $('#editAddressModal input[name="state"]').val(row_data['State']);
+        $('#editAddressModal select[name="state"]').attr('data-value', row_data['State']);
         $('#editAddressModal input[name="zip_code"]').val(row_data['Zip Code']);
         $('#editAddressModal input[name="phone"]').val(row_data['Phone']);
         $('#editAddressModal input[name="email"]').val(row_data['Email']);
         $('#editAddressModal input[name="id"]').val(id);
+
+        $('#editAddressModal select[name="country"]').chosen().trigger("chosen:updated");
+        $('#editAddressModal select[name="state"]').chosen().trigger("chosen:updated");
+
+        $('#editAddressModal select[name="country"]').trigger('change');
+        $('#editAddressModal select[name="state"]').trigger('change');
     });
 
     $(document).on('click', '.address_actions .btn-delete-address', function (e) {
@@ -277,6 +283,11 @@ jQuery(function ($) {
         e.preventDefault();
 
         var form_data = $(this).serializeArray();
+        var $btn = $(this).find('button[type="submit"]');
+
+        $btn.attr('disabled', 'disabled');
+        $btn.attr('data-text', $btn.text());
+        $btn.text('Please wait...');
 
         $.ajax({
             type: 'POST',
@@ -286,11 +297,17 @@ jQuery(function ($) {
             success: function (response) {
                 $('#addAddressModal').hide();
 
+                $btn.removeAttr('disabled');
+                $btn.text($btn.attr('data-text'));
+
                 if (response.status) {
                     location.href = location.href + '&success=' + response.message;
                 } else {
                     alert(response.message);
                 }
+            }, error: function () {
+                $btn.removeAttr('disabled');
+                $btn.text($btn.attr('data-text'));
             }
         })
     });
@@ -298,6 +315,7 @@ jQuery(function ($) {
     $(document).on('change', '.select-country select', function () {
         var country = $(this).val();
         var $states = $(this).parents('form').find('.select-state').find('select');
+        var default_state = $states.attr('data-value');
 
         $.ajax({
             url: wsp_ajax_url,
@@ -312,8 +330,9 @@ jQuery(function ($) {
                 if (response.length > 0) {
                     for (var i in response) {
                         var state = response[i];
+                        var selected = default_state === state.code;
 
-                        $states.append('<option value="' + state.code + '">' + state.name + '</option>');
+                        $states.append('<option value="' + state.code + '"' + (selected ? " selected" : "") + '>' + state.name + '</option>');
                     }
                 }
 
@@ -323,9 +342,13 @@ jQuery(function ($) {
     });
 
     $(document).on('reset', 'form', function () {
-        setTimeout(function () {
-            $(this).find('.wpsp-chosen').chosen().trigger("chosen:updated");
-        }, 1000);
+        var $form = $(this);
+
+        $form.find('.shipping-carrier select').trigger('change');
+
+        $form.find('.wpsp-chosen').each(function () {
+            $(this).val('').trigger('change').chosen().trigger("chosen:updated");
+        });
     });
 
     function refreshAddresses() {
@@ -369,12 +392,12 @@ jQuery(function ($) {
             $h2.html(name);
 
             if (pickup_rates > 0) {
-                $h2.append('<small>Pickup rates will be applied - $' + pickup_rates.toFixed(2) + '</small>');
+                //$h2.append('<small>Pickup rates will be applied - $' + pickup_rates.toFixed(2) + '</small>');
             }
 
             if (rates.length > 0) {
                 var $rates_tbl = $('<table/>');
-                var $rates_th = $('<thead><tr><th>Level</th><th>Actual Rate</th><th>Markup</th><th>Rate</th><th>Action</th></tr></thead>');
+                var $rates_th = $('<thead><tr><th>Level</th><th>Rate</th><th>Action</th></tr></thead>');
 
                 $rates_tbl.append($rates_th);
 
@@ -383,8 +406,6 @@ jQuery(function ($) {
 
                     var $tr = $('<tr/>');
                     var $level_td = $('<td/>');
-                    var $rate_td = $('<td/>');
-                    var $markup_rate_td = $('<td/>');
                     var $total_rate_td = $('<td/>');
                     var $action_td = $('<td/>');
                     var $select_btn = $('<button/>');
@@ -395,14 +416,10 @@ jQuery(function ($) {
                     $select_btn.text('Select');
 
                     $level_td.html(level_rate.name);
-                    $rate_td.text('$' + level_rate.rate);
-                    $markup_rate_td.text('$' + level_rate.markup);
                     $total_rate_td.text('$' + level_rate.total);
                     $action_td.append($select_btn);
 
                     $tr.append($level_td)
-                        .append($rate_td)
-                        .append($markup_rate_td)
                         .append($total_rate_td)
                         .append($action_td);
 
@@ -430,6 +447,9 @@ jQuery(function ($) {
 
         $('#shipment_form').submit(function (e) {
             e.preventDefault();
+
+            $('#shipment_form').trigger('reset');
+            return;
 
             var form_data = $(this).serializeArray();
             var $btn = $(this).find('button[type="submit"]');

@@ -41,7 +41,7 @@
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Full Name</label>
-                            <input type="text" name="full_name" id=""/>
+                            <input type="text" name="full_name" id="" required/>
                         </div>
                     </div>
                     <div class="wpsp-one-half">
@@ -99,11 +99,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="wpsp-row" style="display: none;">
+                <div class="wpsp-row">
                     <div class="wpsp-one-half">
                         <div class="wpsp-form-group">
                             <label>Phone Number</label>
-                            <input type="number" name="phone" id=""/>
+                            <input type="number" name="phone" id="" required/>
                         </div>
                     </div>
                     <div class="wpsp-one-half">
