@@ -178,14 +178,17 @@ if ( ! class_exists( 'WPSP_ChargeCustomer' ) ) {
 
 		public function charge_customer()
 		{
+			global $wpdb;
+
 			$customers           = $this->get_forte_customers();
 			$card_processing_fee = $this->wpcc_get_option( 'processing_fee' ) / 100;
 			$funds_limit         = $this->wpcc_get_option( 'funds_limit' );
 			$reload_amount       = $this->wpcc_get_option( 'reload_amount' );
 
 			foreach ( $customers as $customer ) {
-				$token = get_user_meta( $customer->ID, 'forte_token', true );
-				$funds = WPCC_Customer::get_account_funds( $customer->ID );
+				$token      = get_user_meta( $customer->ID, 'forte_token', true );
+				$funds      = WPCC_Customer::get_account_funds( $customer->ID );
+				$fax_number = WPSP_Customer::get_fax_number( $customer->ID );
 
 				if ( $funds >= $funds_limit ) {
 					echo "{$customer->display_name}: $ {$funds}<br/>";
@@ -201,10 +204,42 @@ if ( ! class_exists( 'WPSP_ChargeCustomer' ) ) {
 				$res    = $this->forte->createTransaction( $data );
 
 				if ( ! empty( $res['response']['response_type'] ) && $res['response']['response_type'] === 'A' ) {
-					$log_text = "$ {$reload_amount} added successfully";
+					$log_text       = "$ {$reload_amount} added successfully";
+					$transaction_id = $res['transaction_id'];
 
 					WPCC_Customer::add_funds( $customer->ID, $reload_amount );
 					WPCC_Customer::log( $customer->ID, $log_text );
+
+					// TODO: Maintain Order History
+
+					$filename     = apply_filters( 'wpsp_file_dir', "charge-customer-{$customer->ID}.pdf" );
+					$subject      = __( 'Funds Loaded', WPSP_LANG );
+					$subtitle     = __( '', WPSP_LANG );
+					$datetime_now = date( 'Y-m-d H:i:s' );
+
+					$text = "";
+
+					$text .= "Transaction ID: {$transaction_id}<br/>";
+					$text .= "Date Time: {$datetime_now}<br/><br/>";
+					$text .= "$" . number_format( $amount, 2 ) . " has been charged.<br/>";
+
+					WPSP_PdfHelper::generate( $text, $filename, $subject, $subtitle );
+
+					$email         = $customer->user_email;
+					$headers       = array(
+						'Content-Type: text/html; charset=UTF-8'
+					);
+					$attachments[] = $filename;
+					$blogname      = get_bloginfo( 'name' );
+
+					wp_mail( $email, "{$blogname} - Transaction #{$transaction_id}", __( "Transaction Summary: {$text}", WPSP_LANG ), $headers, $attachments );
+
+					// send transaction summary via fax
+					if ( class_exists( 'WPTM_FaxManager' ) && ! empty( $fax_number ) ) {
+						$wptm_manager = new WPTM_FaxManager();
+						$wptm_manager->sendFax( $fax_number, $filename );
+					}
+
 				} else {
 					$log_text = 'Failed to charge';
 
