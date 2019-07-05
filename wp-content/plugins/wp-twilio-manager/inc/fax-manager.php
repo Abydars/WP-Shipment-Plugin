@@ -16,8 +16,8 @@ if ( ! class_exists( 'WPTM_FaxManager' ) ) {
 		public function __construct()
 		{
 
-			$sid   = WPTM_TWILIO_SID;
-			$token = WPTM_TWILIO_TOKEN;
+			$sid   = WPTM_Twilio::get_option( 'twilio_sid' );
+			$token = WPTM_Twilio::get_option( 'twilio_token' );
 
 			$this->number = WPTM_TWILIO_NUMBER;
 			$this->client = new Client( $sid, $token );

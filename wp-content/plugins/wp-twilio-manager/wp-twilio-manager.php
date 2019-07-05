@@ -8,8 +8,6 @@ Author: Hztech
 Author URI: hztech.biz
 */
 
-define( 'WPTM_TWILIO_SID', 'AC1d1c3e14dc48997f09ef0d7c3917984c' );//AC1d1c3e14dc48997f09ef0d7c3917984c
-define( 'WPTM_TWILIO_TOKEN', '22703760acf214c9d5a2d3252f4f3379' );//22703760acf214c9d5a2d3252f4f3379
 define( 'WPTM_DB_VERSION', '0.0.1' );
 define( 'WPTM_TWILIO_NUMBER', '+17177757281' );//17173245684
 define( 'WPTM_TWILIO_STANDARD_NUMBER', WPTM_TWILIO_NUMBER );//17173245684
@@ -30,6 +28,34 @@ if ( ! class_exists( 'WPTM_Twilio' ) ) {
 			add_action( 'init', array( $this, 'handle_fax' ) );
 			add_action( 'init', array( $this, 'cron_jobs' ) );
 			add_action( 'init', array( $this, 'fxr' ) ); // for testing fax
+			add_action( 'admin_menu', array( $this, 'add_menus' ) );
+			add_action( 'admin_init', array( $this, 'actions' ) );
+		}
+
+		function actions()
+		{
+			if ( isset( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'wptm_save_settings' ) ) {
+				$not = [ '_wpnonce' ];
+
+				foreach ( $_POST as $k => $v ) {
+					if ( ! in_array( $k, $not ) ) {
+						update_option( $k, $v );
+					}
+				}
+			}
+		}
+
+		function add_menus()
+		{
+			add_options_page( __( 'Twilio Settings', WPSP_LANG ), __( 'Twilio Settings', WPSP_LANG ), 'manage_options', 'wptm_settings', array(
+				$this,
+				'settings'
+			) );
+		}
+
+		function settings()
+		{
+			include dirname( __FILE__ ) . '/inc/templates/settings.php';
 		}
 
 		function update_cron_timestamp( $type )
@@ -283,6 +309,17 @@ if ( ! class_exists( 'WPTM_Twilio' ) ) {
 			dbDelta( 'CREATE TABLE ' . $table_name . ' (' . $columns . ');' );
 		}
 
+		public static function get_option( $key, $default = false )
+		{
+			$defaults = [];
+			$value    = get_option( $key );
+
+			if ( empty( $value ) && ! empty( $defaults[ $key ] ) ) {
+				$value = $defaults[ $key ];
+			}
+
+			return empty( $value ) ? $default : $value;
+		}
 	}
 }
 
