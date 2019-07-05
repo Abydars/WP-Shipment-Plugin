@@ -1,4 +1,4 @@
-<div id="create-address" class="wpsp-container">
+<div id="wpsp" class="wpsp-container">
     <div class="container">
         <div class="row">
             <h1 class="wpsp-page-title">Create Customer <a href="<?= admin_url( 'admin.php?page=wpcc-customers' ) ?>">View

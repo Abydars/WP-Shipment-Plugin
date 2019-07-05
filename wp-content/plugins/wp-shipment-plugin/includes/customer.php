@@ -45,11 +45,7 @@ class WPSP_Customer
 		$value = get_user_meta( $id, "{$carrier}_rate", true );
 
 		if ( $value === false || $value === "" ) {
-			$value = 0;
-
-			if ( isset( self::DEFAULTS[ $carrier ] ) ) {
-				$value = self::DEFAULTS[ $carrier ];
-			}
+			$value = WPSP::get_option( "wpsp_{$carrier}_rate", 0 );
 		}
 
 		return floatval( $value );

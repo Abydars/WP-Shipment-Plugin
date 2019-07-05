@@ -27,6 +27,7 @@ class WPSP
 		add_action( 'wp_ajax_wpsp_delete_address', array( $wpsp_actions, 'action_delete_address' ) );
 		add_action( 'wp_ajax_wpsp_get_states', array( $wpsp_actions, 'action_get_states' ) );
 		add_action( 'admin_init', array( $wpsp_actions, 'action_create_new_address' ) );
+		add_action( 'admin_init', array( $wpsp_actions, 'action_save_settings' ) );
 		add_filter( 'wpsp_error', array( $wpsp_actions, 'filter_wpsp_error' ) );
 		add_filter( 'wpsp_success', array( $wpsp_actions, 'filter_wpsp_success' ) );
 		add_filter( 'wpsp_file_dir', array( $wpsp_actions, 'filter_wpsp_file_dir' ) );
@@ -68,6 +69,17 @@ class WPSP
 			$this,
 			'create_address'
 		) );
+		add_submenu_page( 'wpsp-shipments', __( 'Settings', WPSP_LANG ), __( 'Settings', WPSP_LANG ), 'manage_options', 'wpsp_settings', array(
+			$this,
+			'settings'
+		) );
+	}
+
+	function settings()
+	{
+		$carriers = apply_filters( 'wpsp_shipment_carriers', [] );
+
+		include( 'templates/settings.php' );
 	}
 
 	function list_shipments()
@@ -250,5 +262,17 @@ class WPSP
 
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 		dbDelta( $sql );
+	}
+
+	public static function get_option( $key, $default = false )
+	{
+		$defaults = [];
+		$value    = get_option( $key );
+
+		if ( empty( $value ) && ! empty( $defaults[ $key ] ) ) {
+			$value = $defaults[ $key ];
+		}
+
+		return empty( $value ) ? $default : $value;
 	}
 }

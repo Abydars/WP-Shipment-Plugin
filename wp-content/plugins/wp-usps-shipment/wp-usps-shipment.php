@@ -37,6 +37,18 @@ class WPSP_USPS
 		add_action( 'wpsp_service_pickup_rates_usps', [ $this, 'wpsp_service_pickup_rates_usps' ], 10, 3 );
 	}
 
+	function wpsp_service_pickup_rates_usps( $data, &$error, &$pickup_rates )
+	{
+		$error        = false;
+		$pickup_rates = 0;
+
+		if ( $data->schedule === 'yes' ) {
+			$usps_pickup_rates = WPSP::get_option( 'wpsp_usps_pickup_rates', 0 );
+			$usps_pickup_rates = floatval( $usps_pickup_rates );
+			$pickup_rates      = $usps_pickup_rates;
+		}
+	}
+
 	function wpsp_email_piping_field_value_usps( $value, $key )
 	{
 		if ( in_array( $key, [ 'shipping_method', 'package_type' ] ) ) {

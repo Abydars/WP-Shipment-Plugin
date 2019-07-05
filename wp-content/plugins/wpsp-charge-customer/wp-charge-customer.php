@@ -246,7 +246,7 @@ if ( ! class_exists( 'WPSP_ChargeCustomer' ) ) {
 			];
 			$value    = get_option( $key );
 
-			if ( empty( $value ) ) {
+			if ( empty( $value ) && ! empty( $defaults[ $key ] ) ) {
 				$value = $defaults[ $key ];
 			}
 

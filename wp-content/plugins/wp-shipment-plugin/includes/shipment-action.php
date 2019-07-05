@@ -590,4 +590,15 @@ class WPSP_ShipmentActions
 		echo json_encode( $states );
 		die;
 	}
+
+	function action_save_settings()
+	{
+		$not = [ '_wpnonce' ];
+
+		foreach ( $_POST as $k => $v ) {
+			if ( ! in_array( $k, $not ) ) {
+				update_option( $k, $v );
+			}
+		}
+	}
 }

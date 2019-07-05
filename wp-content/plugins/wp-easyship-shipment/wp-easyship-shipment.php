@@ -292,7 +292,9 @@ class WPSP_Ezeeship
 		$pickup_rates = 0;
 
 		if ( $data->schedule === 'yes' ) {
-			$pickup_rates = 6.50;
+			$ups_pickup_rates = WPSP::get_option( 'wpsp_ups_pickup_rates', 0 );
+			$ups_pickup_rates = floatval( $ups_pickup_rates );
+			$pickup_rates     = $ups_pickup_rates;
 		}
 	}
 
@@ -302,7 +304,9 @@ class WPSP_Ezeeship
 		$pickup_rates = 0;
 
 		if ( $data->schedule === 'yes' ) {
-			$pickup_rates = ( 4.5 * count( $data->packages ) );
+			$fedex_pickup_rates = WPSP::get_option( 'wpsp_fedex_pickup_rates', 0 );
+			$fedex_pickup_rates = floatval( $fedex_pickup_rates );
+			$pickup_rates       = ( $fedex_pickup_rates * count( $data->packages ) );
 		}
 	}
 
