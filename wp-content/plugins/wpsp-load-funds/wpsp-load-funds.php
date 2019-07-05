@@ -121,7 +121,7 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 						) );
 
 						if ( class_exists( 'WPSP' ) ) {
-							// TODO: Create shipment order in customer dashboard
+						    // TODO: Maintain Order History
 
 							$newbalance = $this->getUserFunds( $customer_id );
 
@@ -139,7 +139,6 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 									$fax_to = WPSP_Customer::get_fax_number( $customer_id );
 
 									try {
-
 										$twilio = new WPTM_FaxManager();
 										$twilio->sendFax( '+' . $fax_to, $url );
 

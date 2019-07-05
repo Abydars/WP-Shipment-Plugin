@@ -82,7 +82,7 @@ if (!$connection) {
 
         <div class="submit">
             <button class="wpsp_ep_save_pipe_connection button button-primary" type="button" onclick="wpsp_ep_add_imap();"><?php _e('Test & Save Connection', 'wpsp_emailpipe')?></button><br>
-            <img class="wpsp_ep_save_pipe_connection_loder" src="<?php echo WPSP_PLUGIN_URL.'asset/images/ajax-loader@2x.gif'?>" alt="">
+            <img class="wpsp_ep_save_pipe_connection_loder" src="<?php echo WPSP_PLUGINS_URL . 'asset/images/ajax-loader@2x.gif'?>" alt="">
             <div class="wpsp_ep_save_pipe_connection_msg"></div>
         </div>
 

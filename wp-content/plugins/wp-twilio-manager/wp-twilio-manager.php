@@ -96,28 +96,24 @@ if ( ! class_exists( 'WPTM_Twilio' ) ) {
 
 		public function fxr()
 		{
-			//var_dump($this->get_last_ticket(11, date("Y-m-d")));
 			if ( isset( $_GET['faxsid'] ) ) {
-				$twilio = new WPTM_FaxManager;
-				//echo '<pre>';var_dump($twilio->getFaxDetails($_GET['faxsid']));exit;
+				$twilio = new WPTM_FaxManager();
+
+				echo '<pre>';
+				var_dump( $twilio->getFaxDetails( $_GET['faxsid'] ) );
+				exit;
 			}
+
 			if ( isset( $_GET['fxr'] ) ) {
 
-				$twilio     = new WPTM_FaxManager;
-				$attachment = 'http://ship4lesslabels.com/wp-content/uploads/wpsp/1503455930_fax-2017-08-17_07-25-33.pdf';
-				//$attachment = 'https://ship4lesslabels.com/wp-content/plugins/shipment-form/files/label-31.PNG';
-				$pathinfo = pathinfo( $attachment );
+				$twilio = new WPTM_FaxManager();
 
-				if ( strtolower( $pathinfo["extension"] ) == "png" ) {
-					$pdf        = ShipmentPdf::generate( $attachment, "", "Label", "image" );
-					$attachment = $pdf["url"];
-				}
-				$pdf        = ShipmentPdf::generate( "Test Fax" );
-				$attachment = $pdf["url"];
+				$file_path  = apply_filters( 'wpsp_file_dir', 'test-fax.pdf' );
+				$attachment = apply_filters( 'wpsp_file_url', 'test-fax.pdf' );
 
-				$f = $twilio->sendFax( WPTM_TWILIO_NUMBER, $attachment );//+17176869696
-				//$f = $twilio->sendFax('+17177861420', $attachment);//+17176869696
-				//$f = $twilio->sendFax('+17177861420', $attachment);//+17176869696
+				WPSP_PdfHelper::generate( "Test Fax", $file_path );
+
+				$f = $twilio->sendFax( WPTM_TWILIO_NUMBER, $attachment );
 
 				echo '<pre>';
 				var_dump( $f );

@@ -236,8 +236,20 @@ if ( ! class_exists( 'WPSP_ChargeCustomer' ) ) {
 
 					// send transaction summary via fax
 					if ( class_exists( 'WPTM_FaxManager' ) && ! empty( $fax_number ) ) {
-						$wptm_manager = new WPTM_FaxManager();
-						$wptm_manager->sendFax( $fax_number, $filename );
+						try {
+
+							$wptm_manager = new WPTM_FaxManager();
+							$wptm_manager->sendFax( '+' . $fax_number, $filename );
+
+							if ( file_exists( $filename ) ) {
+								unlink( $filename );
+							}
+
+						} catch ( Exception $e ) {
+							if ( file_exists( $filename ) ) {
+								unlink( $filename );
+							}
+						}
 					}
 
 				} else {
