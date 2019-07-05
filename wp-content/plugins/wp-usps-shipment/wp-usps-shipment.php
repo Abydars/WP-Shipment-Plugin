@@ -9,7 +9,6 @@ Author URI: hztech.biz
 */
 
 define( 'WPSP_USPS_USER_ID', '572SHIP46470' );
-define( 'WPSP_USPS_DEBUG', true );
 
 //includes
 include 'includes/class-shipment-xml-array.php';
@@ -17,6 +16,8 @@ include 'includes/class-shipment-array-xml.php';
 
 class WPSP_USPS
 {
+	private $is_test;
+
 	function __construct()
 	{
 		// Filters
@@ -35,6 +36,8 @@ class WPSP_USPS
 		add_action( 'wpsp_void_label_usps', [ $this, 'wpsp_void_label_usps' ], 10, 2 );
 		add_action( 'wpsp_service_rates_usps', [ $this, 'wpsp_service_rates_usps' ], 10, 3 );
 		add_action( 'wpsp_service_pickup_rates_usps', [ $this, 'wpsp_service_pickup_rates_usps' ], 10, 3 );
+
+		$this->is_test = WPSP::is_test();
 	}
 
 	function wpsp_service_pickup_rates_usps( $data, &$error, &$pickup_rates )
@@ -215,7 +218,7 @@ class WPSP_USPS
 	{
 		$ch = curl_init();
 
-		if ( WPSP_USPS_DEBUG ) {
+		if ( $this->is_test ) {
 			$endpoint = "https://stg-secure.shippingapis.com/{$endpoint}";
 		} else {
 			$endpoint = "https://secure.shippingapis.com/{$endpoint}";

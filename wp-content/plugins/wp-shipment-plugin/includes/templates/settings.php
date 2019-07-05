@@ -8,6 +8,18 @@
 			<?php } ?>
 
             <form method="POST">
+                <h3>General</h3>
+                <div class="wpsp-form-group">
+                    <label>Enable Test Mode</label>
+                    <select name="wpsp_test_mode">
+                        <option value="yes"<?= ( WPSP::get_option( 'wpsp_test_mode' ) === 'yes' ? ' selected' : '' ) ?>>
+                            Yes
+                        </option>
+                        <option value="no"<?= ( WPSP::get_option( 'wpsp_test_mode' ) === 'no' ? ' selected' : '' ) ?>>
+                            No
+                        </option>
+                    </select>
+                </div>
                 <h3>Default Markup Rates (%)</h3>
                 <div class="wpsp-row">
 					<?php foreach ( $carriers as $k => $carrier ) : ?>

@@ -19,7 +19,7 @@ if ( ! class_exists( 'WPSP_Forte' ) ) {
 			$this->org_id        = WPSP_ChargeCustomer::wpcc_get_option( 'org_id' );
 			$this->loc_id        = WPSP_ChargeCustomer::wpcc_get_option( 'loc_id' );
 			$this->authorization = WPSP_ChargeCustomer::wpcc_get_option( 'live_authorization' );
-			$this->is_sandbox    = WPSP_ChargeCustomer::wpcc_get_option( 'test_mode' ) == 'yes';
+			$this->is_sandbox    = WPSP_ChargeCustomer::wpcc_get_option( 'wpcc_test_mode' ) == 'yes';
 			$this->endpoint      = 'https://api.forte.net/v3/';
 			$this->key           = $this->authorization;
 

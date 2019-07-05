@@ -36,11 +36,11 @@
                 <h3>Forte Settings</h3>
                 <div class="wpsp-form-group">
                     <label>Enable Test Mode</label>
-                    <select name="test_mode">
-                        <option value="yes"<?= ( WPSP_ChargeCustomer::wpcc_get_option( 'test_mode' ) === 'yes' ? ' selected' : '' ) ?>>
+                    <select name="wpcc_test_mode">
+                        <option value="yes"<?= ( WPSP_ChargeCustomer::wpcc_get_option( 'wpcc_test_mode' ) === 'yes' ? ' selected' : '' ) ?>>
                             Yes
                         </option>
-                        <option value="no"<?= ( WPSP_ChargeCustomer::wpcc_get_option( 'test_mode' ) === 'no' ? ' selected' : '' ) ?>>
+                        <option value="no"<?= ( WPSP_ChargeCustomer::wpcc_get_option( 'wpcc_test_mode' ) === 'no' ? ' selected' : '' ) ?>>
                             No
                         </option>
                     </select>

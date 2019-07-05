@@ -275,4 +275,9 @@ class WPSP
 
 		return empty( $value ) ? $default : $value;
 	}
+
+	public static function is_test()
+	{
+		return self::get_option( 'wpsp_test_mode' ) === 'yes';
+	}
 }
