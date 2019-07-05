@@ -103,7 +103,8 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
 
 					$body = strip_tags( html_entity_decode( $reply->body ) );
 
-					$text = "Subject: {$reply->ticket->subject}";
+					$text = "Ticket ID: {$ticket_id}";
+					$text .= "<br/>Subject: {$reply->ticket->subject}";
 					$text .= "<br/>Timestamp: {$reply->ticket->update_time}";
 					$text .= "<br/><br/>{$user->display_name}: {$body}";
 
