@@ -9,11 +9,19 @@ if ( ! class_exists( 'WPSP_Forte' ) ) {
 		private $endpoints;
 		private $headers;
 		private $key;
+		private $org_id;
+		private $loc_id;
+		private $authorization;
+		private $is_sandbox;
 
 		public function __construct()
 		{
-			$this->endpoint = 'https://api.forte.net/v3/';
-			$this->key      = ShipmentForteAuthorizationProduction;
+			$this->org_id        = WPSP_ChargeCustomer::wpcc_get_option( 'org_id' );
+			$this->loc_id        = WPSP_ChargeCustomer::wpcc_get_option( 'loc_id' );
+			$this->authorization = WPSP_ChargeCustomer::wpcc_get_option( 'live_authorization' );
+			$this->is_sandbox    = WPSP_ChargeCustomer::wpcc_get_option( 'test_mode' ) == 'yes';
+			$this->endpoint      = 'https://api.forte.net/v3/';
+			$this->key           = $this->authorization;
 
 			$this->endpoints = array(
 				'getCustomers'        => 'organizations/{organization_id}/locations/{location_id}/customers',
@@ -23,15 +31,16 @@ if ( ! class_exists( 'WPSP_Forte' ) ) {
 				'getPaymentMethod'    => 'organizations/{organization_id}/locations/{location_id}/customers/{customer_token}/paymethods/mth_{paymethod_token}',
 			);
 
-			if ( ShipmentForteSandbox ) {
-				$this->endpoint = 'https://sandbox.forte.net/api/v3/';
-				$this->key      = ShipmentForteAuthorization;
+			if ( $this->is_sandbox ) {
+				$this->endpoint      = 'https://sandbox.forte.net/api/v3/';
+				$this->authorization = WPSP_ChargeCustomer::wpcc_get_option( 'authorization' );
+				$this->key           = $this->authorization;
 			}
 
 			$this->headers = array(
 				"Content-Type: application/json",
 				"Accept: application/json",
-				"X-Forte-Auth-Organization-Id : org_" . ShipmentForteOrgId,
+				"X-Forte-Auth-Organization-Id : org_" . $this->org_id,
 				"Authorization: " . $this->key
 			);
 		}
@@ -81,8 +90,8 @@ if ( ! class_exists( 'WPSP_Forte' ) ) {
 		{
 			$request = $this->endpoints[ $key ];
 
-			$request = str_replace( '{organization_id}', "org_" . ShipmentForteOrgId, $request );
-			$request = str_replace( '{location_id}', "loc_" . ShipmentForteLocId, $request );
+			$request = str_replace( '{organization_id}', "org_" . $this->org_id, $request );
+			$request = str_replace( '{location_id}', "loc_" . $this->loc_id, $request );
 
 			if ( $extras ) {
 				foreach ( $extras as $key => $val ) {

@@ -8,14 +8,6 @@ Author: Hztech
 Author URI: http://www.hztech.biz
 */
 
-define( 'ShipmentForteOrgId', '351125' );
-define( 'ShipmentForteLocId', '207639' );
-define( 'ShipmentForteAccessId', 'db6a89acef6936ced77a61d0b7a0d488' );
-define( 'ShipmentForteAccessIdProduction', '549e50363908d4dc9e2ffb7012861f3d' );
-define( 'ShipmentForteSecureKey', '44e2be27712d277109fd2cff014cc1d9' );
-define( 'ShipmentForteSecureKeyProduction', 'cc79046990514bea6584081621c4b593' );
-define( 'ShipmentForteAuthorization', 'Basic ZGI2YTg5YWNlZjY5MzZjZWQ3N2E2MWQwYjdhMGQ0ODg6NDRlMmJlMjc3MTJkMjc3MTA5ZmQyY2ZmMDE0Y2MxZDk=' );
-define( 'ShipmentForteAuthorizationProduction', 'Basic NTQ5ZTUwMzYzOTA4ZDRkYzllMmZmYjcwMTI4NjFmM2Q6Y2M3OTA0Njk5MDUxNGJlYTY1ODQwODE2MjFjNGI1OTM=' );
 define( 'ShipmentForteSandbox', true );
 
 require_once dirname( __FILE__ ) . '/inc/forte.php';
@@ -110,14 +102,12 @@ if ( ! class_exists( 'WPSP_ChargeCustomer' ) ) {
 						} );
 					}
 				} else if ( wp_verify_nonce( $_POST['_wpnonce'], 'wpcc_save_settings' ) ) {
-					$keys = [
-						'reload_amount',
-						'processing_fee',
-						'funds_limit'
-					];
+					$not = [ '_wpnonce' ];
 
-					foreach ( $keys as $key ) {
-						update_option( $key, $_POST[ $key ] );
+					foreach ( $_POST as $k => $v ) {
+						if ( ! in_array( $k, $not ) ) {
+							update_option( $k, $v );
+						}
 					}
 				}
 			}
@@ -147,10 +137,6 @@ if ( ! class_exists( 'WPSP_ChargeCustomer' ) ) {
 
 		public function settings_page()
 		{
-			$reload_amount  = $this->wpcc_get_option( 'reload_amount' );
-			$processing_fee = $this->wpcc_get_option( 'processing_fee' );
-			$funds_limit    = $this->wpcc_get_option( 'funds_limit' );
-
 			include( 'templates/settings.php' );
 		}
 
@@ -284,7 +270,7 @@ if ( ! class_exists( 'WPSP_ChargeCustomer' ) ) {
 			<?php
 		}
 
-		function wpcc_get_option( $key )
+		public static function wpcc_get_option( $key )
 		{
 			$defaults = [
 				'reload_amount'  => 100,
