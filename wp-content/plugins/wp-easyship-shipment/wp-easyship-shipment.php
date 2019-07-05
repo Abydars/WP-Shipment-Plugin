@@ -10,8 +10,6 @@ Author URI: hztech.biz
 
 class WPSP_Ezeeship
 {
-	private $is_test;
-
 	function __construct()
 	{
 		// Filters
@@ -42,8 +40,6 @@ class WPSP_Ezeeship
 
 		add_action( 'wpsp_void_label_ups', [ $this, 'wpsp_void_label_any' ], 10, 2 );
 		add_action( 'wpsp_void_label_fedex', [ $this, 'wpsp_void_label_any' ], 10, 2 );
-
-		$this->is_test = WPSP::is_test();
 	}
 
 	function wpsp_create_label_any( &$error, &$encoded_images, $shipment_data )
@@ -92,7 +88,7 @@ class WPSP_Ezeeship
 			$d['to']['zipCode']      = $to_address['zip_code'];
 			$d['carrierCode']        = $data->carrier;
 			$d['serviceCode']        = $data->shipping_method;
-			$d['isTest']             = $this->is_test;
+			$d['isTest']             = WPSP::is_test();
 			$d['parcels']            = [];
 
 			foreach ( $packages as $k => $package ) {
@@ -213,7 +209,7 @@ class WPSP_Ezeeship
 			$d['to']['zipCode']        = $to_address['zip_code'];
 			$d['carrierCode']          = $data->carrier;
 			$d['serviceCode']          = $key;
-			$d['isTest']               = $this->is_test;
+			$d['isTest']               = WPSP::is_test();
 			$d['parcels']              = [];
 
 			foreach ( $data->packages as $k => $package ) {
