@@ -1,0 +1,8 @@
+#wpcc-logs p {
+    margin: 0;
+}
+
+#wpcc-logs {
+    max-height: 400px;
+    overflow-y: scroll;
+}

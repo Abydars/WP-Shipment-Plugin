@@ -162,7 +162,8 @@
 
 /*Modal shippment*/
 
-#wpsp-shipment-form-container.right-sidebar .modal, #list-addresses .modal {
+#wpsp-shipment-form-container.right-sidebar .modal,
+#list-addresses .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -177,7 +178,8 @@
 
 /* Modal Content/Box */
 #wpsp-shipment-form-container.right-sidebar .modal-content,
-#list-addresses .modal-content {
+#list-addresses .modal-content,
+.wpsp-modal .modal-content {
     background-color: #fefefe;
     margin: 2% auto; /* 15% from the top and centered */
     padding: 20px;
@@ -187,7 +189,8 @@
 
 /* The Close Button */
 #wpsp-shipment-form-container.right-sidebar .close,
-#list-addresses .close {
+#list-addresses .close,
+.wpsp-modal .close {
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -196,14 +199,16 @@
 
 #wpsp-shipment-form-container.right-sidebar .close:hover,
 #wpsp-shipment-form-container.right-sidebar .close:focus,
-#list-addresses .close:focus, #list-addresses .close:hover {
+#list-addresses .close:focus, #list-addresses .close:hover,
+.wpsp-modal .close:focus, .wpsp-modal .close:hover {
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
 
 #wpsp-shipment-form-container.right-sidebar .modal,
-#list-addresses .modal {
+#list-addresses .modal,
+.wpsp-modal.modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
