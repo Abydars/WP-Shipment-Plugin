@@ -25,9 +25,8 @@ if ( ! class_exists( 'WPTM_Twilio' ) ) {
 	{
 		public function __construct()
 		{
-			add_action( 'init', array( $this, 'handle_fax' ) );
 			add_action( 'init', array( $this, 'cron_jobs' ) );
-			add_action( 'init', array( $this, 'fxr' ) ); // for testing fax
+			add_action( 'init', array( $this, 'fxr' ) );
 			add_action( 'admin_menu', array( $this, 'add_menus' ) );
 			add_action( 'admin_init', array( $this, 'actions' ) );
 		}
@@ -137,147 +136,13 @@ if ( ! class_exists( 'WPTM_Twilio' ) ) {
 				$file_path  = apply_filters( 'wpsp_file_dir', 'test-fax.pdf' );
 				$attachment = apply_filters( 'wpsp_file_url', 'test-fax.pdf' );
 
-				WPSP_PdfHelper::generate( "Test Fax", $file_path );
+				WPSP_PdfHelper::generate( "Test Fax!", $file_path );
 
-				$f = $twilio->sendFax( WPTM_TWILIO_NUMBER, $attachment );
+				$f = $twilio->sendRealFax( WPTM_TWILIO_NUMBER, $attachment );
 
 				echo '<pre>';
 				var_dump( $f );
 				exit;
-			}
-		}
-
-		public function handle_fax()
-		{
-			if ( isset( $_GET['fxrequest'] ) ) {
-
-				if ( ! isset( $_GET['debug'] ) ) {
-					header( "content-type: text/xml" );
-					echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
-				}
-				?>
-
-				<?php
-
-				if ( isset( $_REQUEST['FaxSid'] ) ) {
-					$faxsid      = $_REQUEST['FaxSid'];
-					$from        = $_REQUEST['From'];
-					$to          = $_REQUEST['To'];
-					$is_standard = $to == WPTM_TWILIO_STANDARD_NUMBER;
-
-					file_put_contents( dirname( __FILE__ ) . '/logs/received/' . $from . '.txt', json_encode( $_REQUEST ) );
-
-					$users     = get_users();
-					$from_user = false;
-
-					foreach ( $users as $user ) {
-						$fax = get_field( "fax_number", "user_" . $user->id );
-						$fax = '+' . $fax;
-						if ( ! empty( $fax ) && $fax == $from ) {
-							$from_user = $user;
-							break;
-						}
-					}
-
-					$twilio    = new WPTM_FaxManager;
-					$attach_id = $twilio->getFax( $faxsid );
-
-					if ( $attach_id ) {
-
-						$attachment = get_attached_file( $attach_id );
-
-						if ( $attachment ) {
-							$headers = array(
-								'Content-Type: text/html; charset=UTF-8',
-								'From: ' . get_bloginfo( 'name' ) . ' <' . get_bloginfo( 'admin_email' ) . '>'
-							);
-							//wp_mail('support@pinnaclemetalcraft.com', "New Fax from {$from}", "FaxSid: {$faxsid}<br/>From {$from}<br/>To: {$to}", $headers, $attachment);
-						}
-
-						$create_new_ticket = true;
-						$last_ticket       = false;
-
-						if ( $from_user && isset( $from_user->id ) ) {
-							$last_ticket = $this->get_last_ticket( $from_user->id, date( "Y-m-d" ) );
-
-							if ( $last_ticket ) {
-								$create_new_ticket = false;
-							}
-						}
-
-						$from_id = ( ( $from_user && isset( $from_user->id ) ) ? $from_user->id : '' );
-
-						if ( $create_new_ticket ) {
-							$params = array(
-								"subject"            => $faxsid,
-								"description"        => "Ticket via Fax, From: {$from}; To: {$to}",
-								"ckeditor_enabled"   => "1",
-								"category"           => $is_standard ? "1" : "2", // General or Special
-								"priority"           => $is_standard ? "Normal" : "High",
-								"desc_attachment[0]" => $attach_id,
-								"create_ticket_type" => "0",
-								"user_id"            => $from_id,
-								"type"               => "user",
-								"guest_name"         => "",
-								"guest_email"        => "",
-								"action"             => "createNewTicket",
-								"pipe"               => 1,
-								"nonce"              => wp_create_nonce()
-							);
-
-							$ch = curl_init();
-
-							$url = admin_url( "admin-ajax.php" );
-							//$url = 'https://ship4lesslabels.com/support-tickets/?page=tickets&section=create-ticket';
-
-							curl_setopt( $ch, CURLOPT_URL, $url );
-							curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-							curl_setopt( $ch, CURLOPT_HEADER, false );
-							curl_setopt( $ch, CURLOPT_POST, 1 );
-							curl_setopt( $ch, CURLOPT_POSTFIELDS, $params );
-
-							$output = curl_exec( $ch );
-
-							curl_close( $ch );
-
-						} else {
-							$params = array(
-								"reply_body"         => "Replied via Fax",
-								//"reply_ticket_status" => "open",
-								//"reply_ticket_category" => $is_standard ? "1" : "2", // General or Special
-								//"reply_ticket_priority" => $is_standard ? "normal" : "high",
-								"desc_attachment[0]" => $attach_id,
-								"user_id"            => $from_id,
-								"type"               => "user",
-								"guest_name"         => "",
-								"guest_email"        => "",
-								"action"             => "replyTicket",
-								"ticket_id"          => $last_ticket->id,
-								"notify"             => true,
-								"pipe"               => 1,
-								"nonce"              => wp_create_nonce( $last_ticket->id )
-							);
-
-							$ch = curl_init();
-
-							curl_setopt( $ch, CURLOPT_URL, admin_url( "admin-ajax.php" ) );
-							curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-							curl_setopt( $ch, CURLOPT_HEADER, false );
-							curl_setopt( $ch, CURLOPT_POST, 1 );
-							curl_setopt( $ch, CURLOPT_POSTFIELDS, $params );
-
-							$output = curl_exec( $ch );
-
-							curl_close( $ch );
-						}
-					}
-				}
-				?>
-                <Response>
-                    <Receive/>
-                </Response>
-				<?php
-				die();
 			}
 		}
 

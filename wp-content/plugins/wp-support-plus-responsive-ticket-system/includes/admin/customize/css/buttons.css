@@ -1,0 +1,19 @@
+.btn-default{
+  background-color : #fff !important;
+  color: #333 !important;
+}
+
+.btn-info{
+  background-color : #5bc0de !important;
+  color: #ffffff !important;
+}
+
+.btn-success{
+  background-color : #398439 !important;
+  color: #ffffff !important;
+}
+
+.btn-primary {
+  background-color : #337ab7 !important;
+  color: #ffffff !important;
+}

@@ -1,0 +1,14 @@
+#ticket_filter_container{
+  background-color : #ffffff !important;
+  color: #333 !important;
+}
+
+#filter_header_container{
+  background-color : #dddddd !important;
+  color: #333 !important;
+}
+
+#save_filter_widget{
+  background-color : #dddddd !important;
+  color: #333 !important;
+}

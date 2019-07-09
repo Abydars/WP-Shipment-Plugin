@@ -1,0 +1,20 @@
+<wpml-config>
+    <admin-texts>
+        <key name="wpsp_custom_fields_localize">
+            <key name="label_*"/>
+        </key>
+        <key name="wpsp_custom_status_localize">
+            <key name="label_*"/>
+        </key>
+        <key name="wpsp_custom_category_localize">
+            <key name="label_*"/>
+        </key>
+        <key name="wpsp_custom_priority_localize">
+            <key name="label_*"/>
+        </key>
+        <key name="wpsp_thank_you_page">
+			      <key name="title"/>
+			      <key name="body"/>
+		  </key>
+  </admin-texts>
+</wpml-config>

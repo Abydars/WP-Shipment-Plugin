@@ -56,16 +56,16 @@ class WPSP
 
 	function setup_shipment_menu()
 	{
-		add_menu_page( __( 'Shipments', WPSP_LANG ), __( 'Shipments', WPSP_LANG ), 'manage_options', 'wpsp-shipments', array(
+		add_menu_page( __( 'Shipments', WPSP_LANG ), __( 'Shipments', WPSP_LANG ), 'edit_shipments', 'wpsp-shipments', array(
 			$this,
 			'list_shipments'
 		) );
-		add_submenu_page( 'wpsp-shipments', __( 'Create Label', WPSP_LANG ), __( 'Create Label', WPSP_LANG ), 'manage_options', '#wpsp_create_label' );
-		add_submenu_page( 'wpsp-shipments', __( 'Addresses', WPSP_LANG ), __( 'Addresses', WPSP_LANG ), 'manage_options', 'list_addresses', array(
+		add_submenu_page( 'wpsp-shipments', __( 'Create Label', WPSP_LANG ), __( 'Create Label', WPSP_LANG ), 'edit_shipments', '#wpsp_create_label' );
+		add_submenu_page( 'wpsp-shipments', __( 'Addresses', WPSP_LANG ), __( 'Addresses', WPSP_LANG ), 'edit_shipments', 'list_addresses', array(
 			$this,
 			'list_addresses'
 		) );
-		add_submenu_page( 'wpsp-shipments', __( 'Create Address', WPSP_LANG ), __( 'Create Address', WPSP_LANG ), 'manage_options', 'create_address', array(
+		add_submenu_page( 'wpsp-shipments', __( 'Create Address', WPSP_LANG ), __( 'Create Address', WPSP_LANG ), 'edit_shipments', 'create_address', array(
 			$this,
 			'create_address'
 		) );

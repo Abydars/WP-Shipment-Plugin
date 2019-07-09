@@ -1,0 +1,743 @@
+html{
+  background-color: #eee;
+}
+
+body{
+    font-family: proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.wpsp_user_info{
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.form-signin{
+    margin: 0 auto;
+    max-width: 330px;
+    padding: 15px;
+}
+
+.wpsp_notice{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.header_menu_icon{
+    width: 20px;
+}
+
+.topbar-menu, .secondery-menu{
+    border-radius: 0px !important;
+}
+
+.topbar-menu{
+    margin-bottom: 0px !important;
+}
+
+fieldset.scheduler-border {
+    border: 1px solid #ccc !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 10px 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+}
+
+legend.scheduler-border {
+    font-size: 15px !important;
+    font-weight: bold !important;
+    text-align: left !important;
+    width:auto;
+    padding:1px;
+    border-bottom:none;
+}
+
+.attachment_cancel{
+    float: right;
+    margin: -40px 0px 0 0;
+    cursor: pointer;
+}
+
+.attach_plus{
+    cursor: pointer;
+}
+
+.label{
+    font-size: 13px !important;
+}
+
+.button-checkbox button{
+    text-align: left !important;
+}
+
+.button-radio button{
+    text-align: left !important;
+}
+
+.form-control{
+    margin-top: 10px;
+}
+
+.inner_control{
+    padding-left: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.fa-snowflake-o{
+    color: #ff0000 !important;
+}
+
+#ticket_filter_container{
+    border-right: 1px solid #c3c3c3;
+}
+
+#ticket_filter_container hr{
+    border-top: 1px solid #c3c3c3 !important;
+}
+
+#filter_body_container{
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+/* enable absolute positioning */
+.inner-addon {
+  position: relative;
+}
+
+/* style glyph */
+.inner-addon .glyphicon {
+  position: absolute !important;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align glyph */
+.wpsp_mobile_filter  { 
+    position: absolute;
+    left:  0px;
+    cursor: pointer;
+    border-radius: 0px !important;
+}
+.wpsp_ticket_list_search { right: 0px;}
+
+/* add padding  */
+.inner-addon input  { 
+    padding-left:  38px !important; 
+    padding-right: 30px !important;
+}
+
+#tbl_wpsp_ticket_list thead th{
+    background-color: #DDDDDD;
+}
+
+.wpsp_btn_ticket_list_action{
+    margin-bottom: 5px;
+}
+
+#tbl_wpsp_ticket_list tr {
+    cursor: pointer;
+}
+
+#footer{
+    border-radius: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+#save_filter_widget {
+    background-color: #DDDDDD;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.wpsp_autocomplete_choice_item {
+    display: inline-block;
+    background-clip: padding-box;
+    background-color: #e4e4e4;
+    background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    box-shadow: 0 0 2px #fff inset, 0 1px 0 rgba(0, 0, 0, 0.05);
+    color: #333;
+    cursor: default;
+    margin: 3px 3px 3px 0;
+    padding: 3px;
+    font-size: 12px;
+    position: relative;
+    float: left;
+}
+.wpsp_autocomplete_choice_item_delete{
+    cursor: pointer;
+}
+
+#ticket_filter .wpsp_date{
+    font-size: 11px;
+}
+
+.wpsp_filter_loading_icon{
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.wpsp_filter_loading_icon img{
+    width: 50px;
+}
+
+#filter_header_container {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #dddddd;
+    border-radius: 5px;
+}
+
+@media (max-width: 991px) and (min-width: 768px){
+    #btn_mo_reset_filter {
+        display: inline !important;
+    }
+}
+
+@media (max-width: 767px){
+    #btn_mo_reset_filter {
+        display: inline !important;
+    }
+}
+
+.wpsp_admin_label{
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 10px;
+}
+
+.wpsp_td_field_id{
+    min-width: 0px !important;
+}
+
+.wpsp_td_field_subject{
+    min-width: 175px !important;
+}
+
+.wpsp_td_field_raised_by{
+    min-width: 130px !important;
+}
+
+.wpsp_td_field_status, .wpsp_td_field_priority{
+    max-width:100% !important;
+    white-space:nowrap !important;
+}
+
+#tbl_wpsp_ticket_list td, #tbl_wpsp_ticket_list th{
+    vertical-align: middle;
+    min-width: 90px;
+}
+
+.sidebar-module{
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 5px 10px 10px 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    float: left;
+    overflow-x: hidden;
+    color: #565051;
+    border: 1px solid #e3e3e3;
+}
+
+.sidebar-module-hr{
+    border-top: 1px solid #D1D0CE !important;
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+}
+
+.sidebar-module-raisedby-icon{
+    margin-top: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#tbl_wpsp_sidebar_raisedby, .wpsp_ticket_thread_attachment table{
+    
+    box-sizing: content-box !important;
+    width: auto !important;
+    margin: 5px !important;
+    
+}
+
+#tbl_wpsp_sidebar_raisedby td, .wpsp_ticket_thread_attachment table td{
+    padding: 5px !important;
+    vertical-align: top;
+    text-align: left !important;
+}
+
+#tbl_wpsp_sidebar_raisedby, .wpsp_ticket_thread_attachment table, #tbl_wpsp_sidebar_raisedby tr, .wpsp_ticket_thread_attachment table tr, #tbl_wpsp_sidebar_raisedby td, .wpsp_ticket_thread_attachment table td{
+    border: none !important;
+}
+
+#tbl_wpsp_ticket_list th, #tbl_wpsp_ticket_list td{
+    text-align: left !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+}
+
+.stick_action{
+  max-width: none !important;
+}
+
+.ticket-field-sidebar{
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.ticket_status_sidebar{
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.assign_agent_sidebar{
+    margin: 5px;
+    float: left;
+}
+
+#individual-ticket-action-container{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.thread_actions {
+    text-align: center;
+}
+
+.thread_actions span{
+    color: #003eff;
+    cursor: pointer;
+}
+
+.thread_actions span:hover {
+    color: #000;
+}
+
+.ticket_thread_title{
+    padding: 0px !important;
+}
+
+.ticket_thread_actions{
+    text-align: right;
+    font-size: 18px;
+}
+
+.wpsp_ticket_thread_log{
+    margin-bottom: 10px;
+    font-size: 12px
+}
+
+.wpsp_ticket_thread_log small{
+    font-size: 10px;
+}
+
+.wpsp_ticket_thread_log p{
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.wpsp_ticket_thread_note .bg-default{
+    color: #A7ADB4;
+}
+
+.wpsp_ticket_thread_content{
+    font-size: 12px;
+    color: #565051;
+}
+
+.rich_form_container{
+    display: none;
+    background-color: #d2d2d2;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+@media (max-width: 767px){
+    
+    .rich_form_container{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
+    .rich_form_container div {
+        padding: 0px;
+    }
+}
+
+.wpsp_ticket_thread_attachment{
+    background-color: #F9F8F6;
+    padding: 15px !important;
+    margin-top: 20px;
+}
+
+.wpsp_ticket_thread_attachment table{
+    margin-top: 10px;
+}
+
+.wpsp_ticket_thread_attachment td{
+    padding: 5px;
+}
+
+.wpsp_ticket_thread_attachment i{
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.wpsp_ticket_thread_attachment i:hover{
+    color: #003eff;
+}
+
+.wpsp_ticket_thread_expander{
+    margin-top: 10px;
+    color: #003eff;
+    cursor: pointer;
+}
+
+.wpsp_ticket_thread_body{
+    overflow: hidden;
+}
+
+.wpsp_ticket_thread .panel-heading, .wpsp_ticket_thread_note .panel-heading {
+    padding: 5px !important;
+}
+
+.wpsp_ticket_note_label{
+    padding: 0px;
+    text-align: left;
+    font-size: 10px;
+}
+
+.wpsp_ticket_thread_content img{
+    cursor: pointer;
+}
+
+.iv-close{
+    background-color: #000;
+    border-radius: 30px;
+}
+
+#ajax_modal{
+    color: #565051;
+}
+
+#ajax_modal .form-control{
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+}
+
+.thread_action_icon{
+    cursor: pointer;
+}
+
+.wpsp_dashboard_status_container{
+    padding: 20px;
+    text-align: center;
+}
+
+.wpsp_dashboard_status {
+    width: 150px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    padding: 52px 0;
+    margin: auto;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.wpsp_raisedby_action_icon{
+    width: 20px;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+#wpsp_thank_you_page_body{
+    margin: 20px 0;
+}
+
+.site_logo img{
+  height: 75px;
+  margin-left: 10px;
+}
+
+.navbar-collapse{
+  padding-top: 12px;
+}
+
+.navigation-clean-button{
+  background:#fff;
+  padding-top:10px;
+  padding-bottom:10px;
+  color:#333;
+  border-radius:0;
+  box-shadow:none;
+  border:none;
+  margin-bottom:0;
+}
+
+
+.navigation-clean-button .navbar-brand{
+  font-weight:bold;
+  color:inherit;
+}
+
+.navigation-clean-button .navbar-brand:hover{
+  color:#222;
+}
+
+.navigation-clean-button.navbar-inverse .navbar-brand:hover{
+  color:#f0f0f0;
+}
+
+.navigation-clean-button .navbar-brand img{
+  height:100%;
+  display:inline-block;
+  margin-right:10px;
+  width:auto;
+}
+
+.navigation-clean-button .navbar-toggle{
+  border-color:#ddd;
+}
+
+.navigation-clean-button .navbar-toggle:hover, .navigation-clean-button .navbar-toggle:focus{
+  background:none;
+}
+
+.navigation-clean-button.navbar-inverse .navbar-toggle{
+  border-color:#555;
+}
+
+.navigation-clean-button .navbar-toggle .icon-bar{
+  background-color:#888;
+}
+
+.navigation-clean-button.navbar-inverse .navbar-toggle .icon-bar{
+  background-color:#eee;
+}
+
+.navigation-clean-button .navbar-collapse, .navigation-clean-button .navbar-form{
+  border-top-color:#ddd;
+}
+
+.navigation-clean-button.navbar-inverse .navbar-collapse, .navigation-clean-button.navbar-inverse .navbar-form{
+  border-top-color:#333;
+}
+
+.navigation-clean-button .navbar-nav > .active > a, .navigation-clean-button .navbar-nav > .open > a{
+  background:none;
+  box-shadow:none;
+}
+
+.navigation-clean-button.navbar-default .navbar-nav > .active > a, .navigation-clean-button.navbar-default .navbar-nav > .active > a:focus, .navigation-clean-button.navbar-default .navbar-nav > .active > a:hover{
+  color:#8f8f8f;
+  box-shadow:none;
+  background:none;
+  pointer-events:none;
+}
+
+.navigation-clean-button.navbar .navbar-nav > li > a{
+  padding-left:18px;
+  padding-right:18px;
+}
+
+.navigation-clean-button.navbar-default .navbar-nav > li > a{
+  color:#465765;
+}
+
+.navigation-clean-button.navbar-default .navbar-nav > li > a:focus, .navigation-clean-button.navbar-default .navbar-nav > li > a:hover{
+  color:#37434d !important;
+  background-color:transparent;
+}
+
+.navigation-clean-button .navbar-nav > li > .dropdown-menu{
+  margin-top:-5px;
+  box-shadow:0 4px 8px rgba(0,0,0,.1);
+  background-color:#fff;
+  border-radius:2px;
+}
+
+.navigation-clean-button .dropdown-menu > li > a:focus, .navigation-clean-button .dropdown-menu > li > a{
+  line-height:2;
+  font-size:14px;
+  color:#37434d;
+}
+
+.navigation-clean-button .dropdown-menu > li > a:focus, .navigation-clean-button .dropdown-menu > li > a:hover{
+  background:#eee;
+  color:inherit;
+}
+
+.navigation-clean-button.navbar-inverse{
+  background-color:#1f2021;
+  color:#fff;
+}
+
+.navigation-clean-button.navbar-inverse .navbar-nav > .active > a, .navigation-clean-button.navbar-inverse .navbar-nav > .active > a:focus, .navigation-clean-button.navbar-inverse .navbar-nav > .active > a:hover{
+  color:#fff;
+  box-shadow:none;
+  background:none;
+  pointer-events:none;
+}
+
+.navigation-clean-button.navbar-inverse .navbar-nav > li > a{
+  color:#8f8f8f;
+}
+
+.navigation-clean-button.navbar-inverse .navbar-nav > li > a:focus, .navigation-clean-button.navbar-inverse .navbar-nav > li > a:hover{
+  background-color:transparent;
+}
+
+.navigation-clean-button.navbar-inverse .navbar-nav > li > .dropdown-menu{
+  background-color:#1f2021;
+}
+
+.navigation-clean-button.navbar-inverse .dropdown-menu > li > a:focus, .navigation-clean-button.navbar-inverse .dropdown-menu > li > a{
+  color:#f2f5f8;
+}
+
+.navigation-clean-button.navbar-inverse .dropdown-menu > li > a:focus, .navigation-clean-button.navbar-inverse .dropdown-menu > li > a:hover{
+  background:#363739;
+}
+
+@media (max-width:767px) {
+  .navigation-clean-button.navbar-inverse .navbar-nav .open .dropdown-menu > li > a{
+    color:#fff;
+  }
+}
+
+.navigation-clean-button .actions{
+  margin-top:7px;
+  margin-bottom:0;
+}
+
+.navigation-clean-button .actions .login{
+  margin-right:7px;
+  text-decoration:none;
+  color:#465765;
+}
+
+.navigation-clean-button.navbar-inverse .actions .login{
+  color:#dfe8ee;
+}
+
+.navigation-clean-button.navbar-inverse .actions .login:hover{
+  color:#fff;
+}
+
+.navigation-clean-button .action-button, .navigation-clean-button .action-button:active{
+  background:#56c6c6;
+  border-radius:20px;
+  color:#fff;
+  box-shadow:none;
+  border:none;
+  text-shadow:none;
+  padding:10px 22px;
+  transition:background-color 0.25s;
+}
+
+.navigation-clean-button .action-button:hover{
+  background:#66d7d7;
+}
+
+.navigation-clean-button.navbar-inverse .action-button, .navigation-clean-button.navbar-inverse .action-button:active{
+  background:#208f8f;
+}
+
+.navigation-clean-button.navbar-inverse .action-button:hover{
+  background:#269d9d;
+}
+
+
+@media (max-width:767px) {
+  .navigation-clean-button .navbar-nav .open .dropdown-menu{
+    box-shadow:none;
+  }
+}
+
+@media (max-width:767px) {
+  .navigation-clean-button .navbar-nav .open .dropdown-menu > li > a{
+    color:#37434d;
+    padding-top:12px;
+    padding-bottom:12px;
+    line-height:1;
+  }
+}
+
+@media (max-width:767px) {
+  .navigation-clean-button{
+    padding-top:0;
+    padding-bottom:0;
+  }
+}
+
+@media (max-width:767px) {
+  .navigation-clean-button .navbar-header{
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+}
+
+@media (max-width:767px) {
+  .navigation-clean-button .navbar-right{
+    margin-bottom:20px;
+  }
+}
+
+#agent_signature{
+  margin-top:10px;
+}
+
+#agent_setting_container{
+  margin-left:30px;
+  margin-right:30px;
+}
+
+#agent_setting_btn{
+  margin-top:15px;
+}
+
+#wpsp_select_deleted_ticket_filter_val{
+    height: 36px;
+}
+
+#tbl_ticket_created tr{
+  cursor: pointer;
+}
+
+.wpsp_raisedby_icon{
+  font-size:20px;
+  margin-right:5px;
+  margin-top:5px;
+}
+
+.wpsp_ct_custom_instruction{
+  margin-top:5px !important;
+}
+
+.support-ticket-sub-header ul{
+  padding: 0px !important;
+}
+
+.wpsp_ticket_filter_actions{
+  margin-bottom: 5px;
+}
+
+.tbl_wpsp_sidebar_raisedby,tr,td{
+  border:none !important;
+}
+
+#wpsp_ticket_assigned_agents, #wpsp_ticket_assigned_agents tr, #wpsp_ticket_assigned_agents td{
+  border: none !important;
+}

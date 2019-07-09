@@ -1,0 +1,1775 @@
+# Translation of WP Support Plus Responsive Ticket System in Italian
+# This file is distributed under the same license as the WP Support Plus Responsive Ticket System package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-12-14 12:09:05+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: it\n"
+"Project-Id-Version: WP Support Plus Responsive Ticket System\n"
+
+#: template/tickets/ticket_list/list.php:33
+msgid "Default"
+msgstr "Default"
+
+#: template/tickets/ticket_list/filter.php:112
+msgid "Public"
+msgstr "Pubblico"
+
+#: template/tickets/ticket_list/filter.php:111
+msgid "Private"
+msgstr "Privato"
+
+#: template/tickets/ticket_list/filter.php:106
+msgid "Filter Name"
+msgstr "Nome del Filtro"
+
+#: template/tickets/ticket_list/filter.php:105
+msgid "Save Current Filter"
+msgstr "Salva il Filtro Corrente"
+
+#: template/tickets/ticket_list/filter.php:87
+msgid "To"
+msgstr "A"
+
+#: template/tickets/ticket_list/filter.php:84
+msgid "From"
+msgstr "Da"
+
+#: template/tickets/ticket_list/filter.php:57
+#: template/tickets/ticket_list/list.php:13
+msgid "Search..."
+msgstr "Ricerca..."
+
+#: template/tickets/ticket_list/filter.php:26
+#: template/tickets/ticket_list/list.php:27
+msgid "Saved Filters"
+msgstr "Filtri Salvati"
+
+#: template/tickets/ticket_list/filter.php:24
+msgid "Apply Filters"
+msgstr "Applica Filtri"
+
+#: template/tickets/ticket-list.php:69
+msgid "Sorry, you do not have permission to view this ticket. <a href=\"%s\" class=\"alert-link\">Click here</a> for ticket list."
+msgstr "Spiacente, non hai il permesso di visualizzare questo ticket.. <a href=\"%s\" class=\"alert-link\">Clicca qui</a> per la lista dei ticket."
+
+#: template/tickets/ticket-list.php:68
+msgid "Unauthorized access!"
+msgstr "Accesso non autorizzato!"
+
+#: template/tickets/open-ticket/sidebar.php:354
+msgid "Are you sure to add this note?"
+msgstr "Sei sicuro di voler aggiungere questa nota?"
+
+#: template/tickets/open-ticket/sidebar.php:327
+msgid "Are you sure to post this reply?"
+msgstr "Sei sicuro di pubblicare questa risposta?"
+
+#: template/tickets/open-ticket/sidebar.php:323
+#: template/tickets/open-ticket/sidebar.php:350
+msgid "Please Confirm"
+msgstr "Cortesemente Conferma"
+
+#: template/tickets/open-ticket/sidebar.php:201
+msgid "Ticket Fields"
+msgstr "Campi del Ticket"
+
+#: template/tickets/open-ticket/sidebar.php:143
+msgid "Agent Only Fields"
+msgstr "Campi Solo per l'Agent"
+
+#: template/tickets/open-ticket/sidebar.php:98
+msgid "Assigned Agents"
+msgstr "Agenti Assegnati"
+
+#: template/tickets/open-ticket/sidebar.php:20
+msgid "Ticket Status"
+msgstr "Status del Ticket"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:324
+msgid "Open in Browser"
+msgstr "Apri nel Browser"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:293
+msgid "Visible to support staff only!"
+msgstr "Visibile solamente allo Staff di Support"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:293
+msgid "Private Note:"
+msgstr "Nota Privata:"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:201
+#: template/tickets/open-ticket/class-threads-formatting.php:305
+msgid "Attachments"
+msgstr "Allegati"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:181
+#: template/tickets/open-ticket/class-threads-formatting.php:283
+msgid "Delete this thread"
+msgstr "Cancella questa discussione"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:175
+#: template/tickets/open-ticket/class-threads-formatting.php:277
+msgid "Edit this thread"
+msgstr "Modifica questa discussione"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:100
+msgid "Submit Note"
+msgstr "Conferma Nota"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:78
+msgid "Submit Reply"
+msgstr "Conferma Risposta"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:74
+msgid "BCC (Comma separated list)"
+msgstr "BCC (Lista separata da virgole)"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:46
+msgid "Add Private Note"
+msgstr "Aggiungi una Nota Privata"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:41
+msgid "Post Reply"
+msgstr "Pubblica Risposta"
+
+#: template/tickets/open-ticket/class-fields-formatting.php:93
+msgid "Click Here"
+msgstr "Clicca Qui"
+
+#: template/tickets/open-ticket/class-fields-formatting.php:76
+#: template/tickets/open-ticket/class-threads-formatting.php:220
+#: template/tickets/open-ticket/class-threads-formatting.php:325
+msgid "Download"
+msgstr "Download"
+
+#: template/tickets/open-ticket/body.php:41
+msgid "Ticket"
+msgstr "Ticket"
+
+#: template/tickets/open-ticket/body.php:12
+msgid "Bank to tickets"
+msgstr "Ritorna ai tickets"
+
+#: template/tickets/logged-in.php:18
+msgid "Dashboard"
+msgstr "Bacheca Support"
+
+#: template/tickets/dashboard.php:93
+msgid "Total"
+msgstr "Totale"
+
+#: template/tickets/create-ticket.php:333
+msgid "View Ticket"
+msgstr "Vedi Ticket"
+
+#: template/tickets/create-ticket.php:122
+msgid "No Description"
+msgstr "Nessuna Descrizione"
+
+#: template/tickets/create-ticket.php:121
+msgid "No Subject"
+msgstr "Nessun Oggetto"
+
+#: template/tickets/create-ticket.php:96
+msgid "Reset Form"
+msgstr "Sbianca Modulo"
+
+#: template/tickets/create-ticket.php:92
+msgid "Submit Ticket"
+msgstr "Conferma Ticket"
+
+#: template/tickets/create-ticket.php:47
+msgid "Create Ticket As"
+msgstr "Crea un Ticket Come"
+
+#: template/tickets/create-ticket.php:29 template/tickets/create-ticket.php:335
+#: template/tickets/logged-in.php:14
+msgid "Create New Ticket"
+msgstr "Crea Nuovo Ticket"
+
+#: template/tickets/class-ticket-form.php:136
+#: template/tickets/class-ticket-form.php:152
+#: template/tickets/open-ticket/class-threads-formatting.php:533
+#: template/tickets/open-ticket/class-threads-formatting.php:549
+msgid "Uploading..."
+msgstr "Sto Caricando..."
+
+#: template/tickets/class-ticket-form.php:131
+#: template/tickets/open-ticket/class-threads-formatting.php:528
+msgid "Only '.jpeg','.jpg', '.png', '.gif', '.bmp' formats are allowed."
+msgstr "Sono permessi solamente i formati '.jpeg', '.jpg', '.png', '.gif' e '.bmp'."
+
+#: template/js_data.php:41
+msgid "MB"
+msgstr "MB"
+
+#: template/js_data.php:41
+msgid "File Size limit exceeded! Allowed limit:"
+msgstr "Superato il limite di dimensione del file! La dimensione massima è: "
+
+#: template/js_data.php:39
+msgid "Name or Email not given!"
+msgstr "Nome o eMail non inseriti!"
+
+#: template/js_data.php:38
+msgid "Please choose registered user!"
+msgstr "Per cortesia scegli un utente registrato!"
+
+#: template/js_data.php:37
+msgid "Note can not be empty!"
+msgstr "La nota non può essere vuota!"
+
+#: template/js_data.php:36
+msgid "Reply can not be empty!"
+msgstr "La riposta non può essere vuota!"
+
+#: template/js_data.php:35
+msgid "View Less ..."
+msgstr "Vedi Meno..."
+
+#: template/js_data.php:34
+msgid "View More ..."
+msgstr "Vedi Più..."
+
+#: template/js_data.php:32
+msgid "WARNING: Anyone having your email address can access your guest tickets. Please avoid sharing any sensitive data."
+msgstr "ATTENZIONE: Chiunque abbia il tuo indirizzo email può accedere ai tuoi ticket. Per cortesia evita di inserire dati sensibili."
+
+#: template/js_data.php:27
+msgid "You do not have permission to delete public filter!"
+msgstr "Non hai il permesso per cancellare un filtro pubblico!"
+
+#: template/js_data.php:26
+msgid "Default filter can not be deleted!"
+msgstr "Il filtro di default non può essere cancellato!"
+
+#: template/js_data.php:25
+msgid "Please enter filter name!"
+msgstr "Per cortesia inserisci un nome di filtro!"
+
+#: template/js_data.php:24
+msgid "Are you sure?"
+msgstr "Sei sicuro?"
+
+#: template/js_data.php:23
+msgid "Incorrect URL!"
+msgstr "Indirizzo URL non corretto!"
+
+#: template/js_data.php:22
+msgid "Incorrect Email Address!"
+msgstr "Indirizzo eMail non corretto!"
+
+#: template/js_data.php:21
+msgid "Required field should not be empty!"
+msgstr "E' un campo obbigatorio e non dovrebbe essere vuoto!"
+
+#: template/js_data.php:20
+msgid "'.exe', '.php' files are not allowed!"
+msgstr "Non sono permessi files di tipo '.exe' e '.php'!"
+
+#: template/js_data.php:14
+msgid "Please wait..."
+msgstr "Per cortesia attendi..."
+
+#: template/header/user_info.php:40
+msgid "Login"
+msgstr "Login"
+
+#: template/header/user_info.php:30
+msgid "Sign out"
+msgstr "Disconnetti"
+
+#: template/header/sign-in.php:66
+msgid "Your Email"
+msgstr "La tua eMail"
+
+#: template/header/sign-in.php:63
+msgid "Your Name"
+msgstr "Il tuo Nome "
+
+#: template/header/sign-in.php:58
+msgid "Guest sign in"
+msgstr "Accesso Ospite"
+
+#: template/header/sign-in.php:50
+msgid "OR"
+msgstr "Oppure"
+
+#: template/header/sign-in.php:38 template/header/sign-in.php:71
+msgid "Sign in"
+msgstr "Accesso"
+
+#: template/header/sign-in.php:28
+msgid "Remember me"
+msgstr "Ricordami"
+
+#: template/header/sign-in.php:23 template/header/sign-in.php:24
+msgid "Password"
+msgstr "Password"
+
+#: template/header/sign-in.php:20 template/header/sign-in.php:21
+msgid "Username or email"
+msgstr "Nome Utente o eMail"
+
+#: template/header/sign-in.php:16
+msgid "Please sign in"
+msgstr "Per cortesia autenticati"
+
+#: template/header/header.php:68 template/header/user_info.php:39
+msgid "Sign Up"
+msgstr "Iscriviti"
+
+#: template/header/header.php:67
+msgid "Sign In"
+msgstr "Registrati"
+
+#: template/header/header.php:59
+msgid "Sign Out"
+msgstr "Disconnessione"
+
+#: template/header/header.php:27
+msgid "Back to website"
+msgstr "Torna al sitoweb"
+
+#: includes/functions/replace_template_tags.php:113
+msgid "On %1$s, %2$s wrote:"
+msgstr "In %1$s, %2$s ha scritto:"
+
+#: includes/functions/replace_template_tags.php:23
+#: includes/functions/replace_template_tags.php:97
+msgid "Attachments:"
+msgstr "Allegati:"
+
+#: includes/class-wpsp-functions.php:752
+msgid "Tickets"
+msgstr "Tickets"
+
+#: includes/class-wpsp-functions.php:717
+msgid "Agent Created"
+msgstr "Agente Creato"
+
+#: includes/class-wpsp-functions.php:716
+msgid "Date Updated"
+msgstr "Data Aggiornamento"
+
+#: includes/class-wpsp-functions.php:715
+msgid "Date Created"
+msgstr "Data di Creazione"
+
+#: includes/class-wpsp-functions.php:713
+msgid "Assigned Agent"
+msgstr "Agente Assegnato"
+
+#: includes/class-wpsp-functions.php:710
+#: template/tickets/open-ticket/sidebar.php:52
+msgid "Raised By"
+msgstr "Creato da"
+
+#: includes/class-wpsp-functions.php:707
+msgid "ID"
+msgstr "ID"
+
+#: includes/class-wpsp-functions.php:689
+msgid "Description"
+msgstr "Descrizione"
+
+#: includes/class-wpsp-functions.php:688 includes/class-wpsp-functions.php:709
+#: includes/class-wpsp-functions.php:1078
+msgid "Subject"
+msgstr "Oggetto"
+
+#: includes/class-wpsp-functions.php:654
+msgid "Delete Custom Field"
+msgstr "Cancella Campo Personalizzato"
+
+#: includes/class-wpsp-functions.php:653
+msgid "Edit Custom Field"
+msgstr "Modifica Campo Personalizzato"
+
+#: includes/class-wpsp-functions.php:619
+msgid "URL"
+msgstr "URL"
+
+#: includes/class-wpsp-functions.php:618
+msgid "Attachment"
+msgstr "Allegato"
+
+#: includes/class-wpsp-functions.php:617
+msgid "Date"
+msgstr "Data"
+
+#: includes/class-wpsp-functions.php:616
+msgid "Textarea"
+msgstr "Area di Testo"
+
+#: includes/class-wpsp-functions.php:615
+msgid "Radio Button"
+msgstr "Pulsante di Scelta"
+
+#: includes/class-wpsp-functions.php:614
+msgid "Checkbox"
+msgstr "Casella di Controllo"
+
+#: includes/class-wpsp-functions.php:613
+msgid "Drop-Down"
+msgstr "Casella a Menu"
+
+#: includes/class-wpsp-functions.php:612
+msgid "Text Field"
+msgstr "Campo di Testo"
+
+#: includes/class-wpsp-functions.php:601
+msgid "Delete Priority"
+msgstr "Cancella Priorità"
+
+#: includes/class-wpsp-functions.php:596
+msgid "Edit Priority"
+msgstr "Modifica Priorità"
+
+#: includes/class-wpsp-functions.php:584
+msgid "Delete Status"
+msgstr "Cancella Priorità"
+
+#: includes/class-wpsp-functions.php:579
+msgid "Edit Status"
+msgstr "Modifica Status"
+
+#: includes/class-wpsp-functions.php:543
+msgid "Delete Category"
+msgstr "Cancella Categoria"
+
+#: includes/class-wpsp-functions.php:538
+msgid "Edit Category"
+msgstr "Modifica Categoria"
+
+#: includes/ajax/user-login/guest_signin.php:41
+#: includes/ajax/user-login/signin.php:35
+msgid "Success!"
+msgstr "Riuscito!"
+
+#: includes/ajax/user-login/guest_signin.php:27
+msgid "This email address already registered as user. Please sign in above!"
+msgstr "Questo indirizzo email è già associato ad un utente registrato. Per cortesia autenticati qui sopra!"
+
+#: includes/ajax/ticket-list/get_tickets.php:331
+msgid "<strong>%d</strong> of <strong>%d</strong> Pages"
+msgstr "<strong>%d</strong> di <strong>%d</strong> Pagine"
+
+#: includes/ajax/ticket-list/get_tickets.php:315
+msgid "No Tickets found!"
+msgstr "Nessun Ticket trovato!"
+
+#: includes/ajax/ticket-list/get_tickets.php:225
+msgid "<strong>%d</strong> Tickets"
+msgstr "<strong>%d</strong> Tickets"
+
+#: includes/ajax/ticket-list/get_tickets.php:223
+msgid "<strong>%d</strong>-<strong>%d</strong> of <strong>%d</strong> Tickets"
+msgstr "<strong>%d</strong>-<strong>%d</strong> di <strong>%d</strong> Tickets"
+
+#: includes/ajax/ticket-list/get_tickets.php:212
+#: template/tickets/ticket_list/list.php:59
+msgid "Delete"
+msgstr "Cancella"
+
+#: includes/ajax/ticket-list/get_tickets.php:205
+msgid "Assign Agent"
+msgstr "Assegna Agente"
+
+#: includes/ajax/ticket-list/get_tickets.php:198
+msgid "Change Status"
+msgstr "Cambia Status"
+
+#: includes/ajax/ticket-list/get_tickets.php:12
+msgid "Filter not found!"
+msgstr "Filtro non trovato!"
+
+#: includes/ajax/ticket-list/class-ticket-list-formating.php:157
+#: includes/functions/replace_template_tags.php:68
+#: template/tickets/dashboard.php:100
+#: template/tickets/open-ticket/class-threads-formatting.php:357
+#: template/tickets/open-ticket/sidebar.php:127
+msgid "None"
+msgstr "Niente"
+
+#: includes/ajax/ticket-individual/get_ticket_fields.php:56
+#: includes/ajax/ticket-individual/set_ticket_fields.php:142
+#: template/tickets/open-ticket/sidebar.php:253
+msgid "No Ticket fields"
+msgstr "Nessun campo per il Ticket"
+
+#: includes/ajax/ticket-individual/get_ticket_fields.php:21
+msgid "Change Ticket Fields"
+msgstr "Modifica i Campi del Ticket"
+
+#: includes/ajax/ticket-individual/get_edit_thread.php:26
+msgid "Edit Thread"
+msgstr "Modifica Discussione"
+
+#: includes/ajax/ticket-individual/get_edit_subject.php:20
+msgid "Edit Subject"
+msgstr "Modifica Oggetto"
+
+#: includes/ajax/ticket-individual/get_delete_ticket.php:29
+msgid "Are you sure to delete this ticket?"
+msgstr "Sei sicuro di cancellare questo ticket?"
+
+#: includes/ajax/ticket-individual/get_delete_ticket.php:20
+#: template/tickets/open-ticket/body.php:24
+msgid "Delete Ticket"
+msgstr "Cancella Ticket"
+
+#: includes/ajax/ticket-individual/get_delete_thread.php:30
+msgid "Are you sure to delete this thread?"
+msgstr "Sei sicuro di cancellare questa discussione?"
+
+#: includes/ajax/ticket-individual/get_delete_thread.php:22
+msgid "Delete Thread"
+msgstr "Cancella Discussione"
+
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:31
+msgid "Are you sure to delete these tickets?"
+msgstr "Sei sicuro di cancellare questi tickets?"
+
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:22
+msgid "Delete Tickets"
+msgstr "Cancella Tickets"
+
+#: includes/ajax/ticket-individual/get_close_ticket.php:60
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:62
+#: includes/ajax/ticket-individual/get_delete_thread.php:62
+#: includes/ajax/ticket-individual/get_delete_ticket.php:60
+#: template/tickets/open-ticket/sidebar.php:332
+#: template/tickets/open-ticket/sidebar.php:359
+msgid "Confirm"
+msgstr "Conferma"
+
+#: includes/ajax/ticket-individual/get_close_ticket.php:29
+msgid "Are you sure to close ticket?"
+msgstr "Sei sicuro di chiudere il ticket?"
+
+#: includes/ajax/ticket-individual/get_close_ticket.php:21
+#: template/tickets/open-ticket/body.php:18
+msgid "Close Ticket"
+msgstr "Chiudi Ticket"
+
+#: includes/ajax/ticket-individual/get_clone_ticket.php:18
+#: template/tickets/open-ticket/body.php:31
+msgid "Clone Ticket"
+msgstr "Clona Ticket"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:44
+#: template/tickets/create-ticket.php:62
+msgid "Guest Email"
+msgstr "Email Ospite"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:40
+#: template/tickets/create-ticket.php:58
+msgid "Guest Name"
+msgstr "Nome Ospite"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:37
+#: template/tickets/create-ticket.php:55
+msgid "Search user ..."
+msgstr "Ricerca utente..."
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:36
+#: template/tickets/create-ticket.php:54
+msgid "Choose User"
+msgstr "Scegli Utente"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:32
+#: template/tickets/create-ticket.php:50
+msgid "Guest"
+msgstr "Ospite"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:31
+#: template/tickets/create-ticket.php:49
+msgid "Registered User"
+msgstr "Utente Registrato"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:29
+#: includes/class-wpsp-functions.php:711
+msgid "User Type"
+msgstr "Tipo Utente"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:20
+msgid "Change Raised By"
+msgstr "Modifica Creatore "
+
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:54
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:59
+#: includes/class-wpsp-functions.php:691 includes/class-wpsp-functions.php:714
+#: includes/class-wpsp-functions.php:1090
+#: template/tickets/open-ticket/sidebar.php:41
+msgid "Priority"
+msgstr "Priorità"
+
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:41
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:44
+#: includes/class-wpsp-functions.php:690 includes/class-wpsp-functions.php:712
+#: includes/class-wpsp-functions.php:1086
+#: template/tickets/open-ticket/sidebar.php:37
+msgid "Category"
+msgstr "Categoria"
+
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:19
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:20
+msgid "Change Ticket Status"
+msgstr "Modifica lo Status dei Ticket"
+
+#: includes/ajax/ticket-individual/get_assign_agent.php:30
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:27
+msgid "Search agent ..."
+msgstr "Ricerca agente..."
+
+#: includes/ajax/ticket-individual/get_assign_agent.php:21
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:18
+msgid "Change Assigned Agent"
+msgstr "Modifica Agente Assegnato"
+
+#: includes/ajax/ticket-individual/get_agent_fields.php:48
+#: includes/ajax/ticket-individual/set_agent_fields.php:136
+#: template/tickets/open-ticket/sidebar.php:187
+msgid "No Agent Only fields"
+msgstr "Nessun Campo per Soli Agenti"
+
+#: includes/ajax/ticket-individual/get_agent_fields.php:21
+msgid "Change Agent Fields"
+msgstr "Modifca Campi Agente"
+
+#: includes/ajax/ticket-individual/class-ticket-fields-format.php:226
+#: template/js_data.php:19 template/tickets/class-ticket-form.php:88
+#: template/tickets/class-ticket-form.php:410
+#: template/tickets/open-ticket/class-threads-formatting.php:486
+msgid "Attach Files"
+msgstr "Files Allegati"
+
+#: includes/ajax/ticket-form/upload_file.php:72
+msgid "done"
+msgstr "fatto"
+
+#: includes/ajax/ticket-form/upload_file.php:40
+msgid "Error: file size exceeded allowed limit!"
+msgstr "Errore: la dimensione del file eccede il limite permesso!"
+
+#: includes/ajax/ticket-form/upload_file.php:29
+#: includes/ajax/ticket-form/upload_file.php:34
+msgid "Error: file format not supported!"
+msgstr "Errore: il formato file non è supportato!"
+
+#: includes/ajax/save_table_order.php:56
+msgid "Error saving order!"
+msgstr "Errore nel salvataggio dell'ordinamento!"
+
+#: includes/ajax/save_table_order.php:54
+msgid "Order saved successfully!"
+msgstr "Ordinamento riuscito!"
+
+#: includes/ajax/get_delete_status.php:29
+msgid "Are you sure to delete this status?"
+msgstr "Sei sicuro di cancellare questo status?"
+
+#: includes/ajax/get_delete_priority.php:29
+msgid "Are you sure to delete this priority?"
+msgstr "Sei sicuro di cancellare questa priorità?"
+
+#: includes/ajax/get_delete_custom_menu.php:28
+#: includes/ajax/get_delete_support_menu.php:28
+msgid "Are you sure to delete this menu?"
+msgstr "Sei sicuro di cancellare questo menu?"
+
+#: includes/ajax/get_delete_custom_field.php:33
+msgid "Please note, this will delete all data associated with this custom field and can not be undone!"
+msgstr "Per cortesia nota che ciò cancellerà tutte le informazioni associate a questo campo personalizzato e non potrai più tornare indietro!"
+
+#: includes/ajax/get_delete_custom_field.php:29
+msgid "Are you sure to delete this custom field?"
+msgstr "Sei sicuro di cancellare questo campo personalizzato?"
+
+#: includes/ajax/get_delete_category.php:29
+msgid "Are you sure to delete this category?"
+msgstr "Sei sicuro di cancellare questa categoria?"
+
+#: includes/ajax/get_delete_agent.php:29
+msgid "Are you sure to delete this agent?"
+msgstr "Sei sicuro di cancellare questo agente?"
+
+#: includes/ajax/get_add_status.php:54 includes/ajax/get_edit_status.php:60
+msgid "Please enter status name!"
+msgstr "Per cortesia inserisci il nome dello status!"
+
+#: includes/ajax/get_add_status.php:24 includes/ajax/get_edit_status.php:29
+msgid "Status Name"
+msgstr "Nome Status"
+
+#: includes/ajax/get_add_priority.php:61 includes/ajax/get_add_status.php:61
+#: includes/ajax/get_edit_priority.php:67 includes/ajax/get_edit_status.php:67
+msgid "Please choose color!"
+msgstr "Per cortesia scegli un colore!"
+
+#: includes/ajax/get_add_priority.php:54 includes/ajax/get_edit_priority.php:60
+msgid "Please enter priority name!"
+msgstr "Per cortesia scegli il nome della priorità!"
+
+#: includes/ajax/get_add_priority.php:29 includes/ajax/get_add_status.php:29
+#: includes/ajax/get_edit_priority.php:34 includes/ajax/get_edit_status.php:34
+msgid "Choose Color"
+msgstr "Scegli il Colore"
+
+#: includes/ajax/get_add_priority.php:24 includes/ajax/get_edit_priority.php:29
+msgid "Priority Name"
+msgstr "Nome Priorità"
+
+#: includes/ajax/get_add_custom_field.php:138
+#: includes/ajax/get_edit_custom_field.php:150
+msgid "Please insert Field Options!"
+msgstr "Per cortesia inserisci le Opzioni del Campo!"
+
+#: includes/ajax/get_add_custom_field.php:131
+#: includes/ajax/get_edit_custom_field.php:143
+msgid "Please choose Field Type!"
+msgstr "Per cortesia scegli il Tipo Campo!"
+
+#: includes/ajax/get_add_custom_field.php:124
+#: includes/ajax/get_edit_custom_field.php:136
+msgid "Please enter Field Label!"
+msgstr "Per cortesia inserire l'Etichetta del Campo"
+
+#: includes/ajax/get_add_custom_field.php:77
+#: includes/ajax/get_edit_custom_field.php:88
+msgid "If category is set, custom field will only visible when one of the selected category is choosen in create ticket form. If you want to show this all the time, please leave this empty. Use Ctrl+Click for select OR unselect value."
+msgstr "Se la categoria è impostata, il campo personalizzato sarà visibile solo quando uno delle categorie selezionate sarà scelta nel modulo di creazione del ticket. Se vuoi mostrarlo sempre comunque, lascia questo campo vuoto. Premi Ctrl+Click per selezionare oppure deselezionare valori."
+
+#: includes/ajax/get_add_custom_field.php:69
+#: includes/ajax/get_edit_custom_field.php:74
+msgid "Assign Categories (optional)"
+msgstr "Categorie da Assegnare (opzionale)"
+
+#: includes/ajax/get_add_custom_field.php:65
+#: includes/ajax/get_edit_custom_field.php:70
+msgid "Required field to ticket form. If set Yes, user must have to fill or submit value for this field"
+msgstr "Campo obbligatorio nel modulo del ticket. Se impostato a Sì, l'utente dovrà compilarlo o dargli un valore obbligatoriamente."
+
+#: includes/ajax/get_add_custom_field.php:56
+#: includes/ajax/get_edit_custom_field.php:61
+msgid "Agent Only fields not available for ticket form. These can be edited by agents for their internal use."
+msgstr "I campi solo per gli Agenti non sono disponibili nel modulo del ticket. Questi possono essere solo modificati dagli Agenti stessi per i loro usi riservati."
+
+#: includes/ajax/get_add_custom_field.php:47
+#: includes/ajax/get_edit_custom_field.php:52
+msgid "Please make sure you enter one option per line"
+msgstr "Per cortesia sii sicuro di inserire un parametro per linea"
+
+#: includes/ajax/get_add_custom_field.php:45
+#: includes/ajax/get_edit_custom_field.php:50
+msgid "Enter Field Options"
+msgstr "Inserisci Parametri Campo"
+
+#: includes/ajax/get_add_custom_field.php:31
+#: includes/ajax/get_edit_custom_field.php:35
+msgid "Choose Field Type"
+msgstr "Scegli il Tipo Campo"
+
+#: includes/ajax/get_add_custom_field.php:26
+#: includes/ajax/get_edit_custom_field.php:30
+msgid "Field Label"
+msgstr "Etichetta Campo"
+
+#: includes/ajax/get_add_category.php:114
+#: includes/ajax/get_edit_category.php:135
+msgid "Please enter category name!"
+msgstr "Per cortesia inserisci un nome di categoria!"
+
+#: includes/ajax/get_add_category.php:31 includes/ajax/get_edit_category.php:36
+msgid "Search Supervisors..."
+msgstr "Ricerca Supervisori..."
+
+#: includes/ajax/get_add_category.php:29 includes/ajax/get_edit_category.php:34
+msgid "Supervisor (Optional)"
+msgstr "Supervisore (Opzionale)"
+
+#: includes/ajax/get_add_category.php:24 includes/ajax/get_edit_category.php:29
+msgid "Category Name"
+msgstr "Nome Categoria"
+
+#: includes/ajax/get_add_agent.php:81
+msgid "Please select an Agent!"
+msgstr "Per cortesia seleziona un Agente!"
+
+#: includes/ajax/get_add_agent.php:51 includes/ajax/get_add_category.php:45
+#: includes/ajax/get_add_custom_field.php:86
+#: includes/ajax/get_add_priority.php:39 includes/ajax/get_add_status.php:39
+#: includes/ajax/get_delete_agent.php:42
+#: includes/ajax/get_delete_category.php:42
+#: includes/ajax/get_delete_custom_field.php:43
+#: includes/ajax/get_delete_custom_menu.php:41
+#: includes/ajax/get_delete_priority.php:42
+#: includes/ajax/get_delete_status.php:42
+#: includes/ajax/get_delete_support_menu.php:41
+#: includes/ajax/get_edit_agent.php:42 includes/ajax/get_edit_category.php:65
+#: includes/ajax/get_edit_custom_field.php:98
+#: includes/ajax/get_edit_priority.php:45 includes/ajax/get_edit_status.php:45
+#: template/tickets/ticket_list/filter.php:117
+msgid "Submit"
+msgstr "Invia"
+
+#: includes/ajax/get_add_agent.php:31
+msgid "Search Agents..."
+msgstr "Ricerca Agenti..."
+
+#: includes/ajax/get_add_agent.php:26
+msgid "Select Agent"
+msgstr "Seleziona Agente"
+
+#: includes/ajax/autocomplete/wp_user.php:66
+msgid "No user found!"
+msgstr "Nessun utente trovato!"
+
+#: includes/ajax/autocomplete/ticket_filter.php:124
+msgid "No results found!"
+msgstr "Nessun risultato trovato!"
+
+#: includes/admin/ticket-list/ticket-list.php:15
+msgid "Default Filters"
+msgstr "Filtri di Default"
+
+#: includes/admin/ticket-list/ticket-list.php:11
+msgid "List Settings"
+msgstr "Elenco Impostazioni"
+
+#: includes/admin/ticket-list/list-settings.php:30
+msgid "Agent Filter"
+msgstr "Filtro Agente"
+
+#: includes/admin/ticket-list/list-settings.php:29
+msgid "Customer Filter"
+msgstr "Filtro Personalizzato"
+
+#: includes/admin/ticket-list/list-settings.php:17
+msgid "Ticket List Settings"
+msgstr "Impostazioni Lista Ticket"
+
+#: includes/admin/ticket-list/default-filters.php:147
+msgid "Number of Tickets shown per page for agent view."
+msgstr "Numero di Ticket mostrati per pagina nella vista agente"
+
+#: includes/admin/ticket-list/default-filters.php:129
+msgid "Tickets are loaded on selected order for agent view by default. If agent apply manual filter, this setting will not take effect."
+msgstr "I ticket vengono caricati nell'ordine di default selezionato per la vista agenda. Se l'agente applica un filtro manuale, questo settaggio non avrà effetto."
+
+#: includes/admin/ticket-list/default-filters.php:106
+msgid "Selected statuses will be hidden if no filter is active for agent view. If agent use status filter manually on ticket list, this setting will not take effect and tickets will be filtered as per customer selection."
+msgstr "Gli status selezionati verranno nascosti se nessun filtro è attivo per la vista agente. Se l'agente imposta manualmente un filtro di status nella lista dei ticket, questo settaggio non avrà effetto e i ticket verranno filtrati per la selezione personalizzata."
+
+#: includes/admin/ticket-list/default-filters.php:89
+#: includes/admin/ticket-list/list-settings.php:28
+msgid "Agent View"
+msgstr "Vista Agente"
+
+#: includes/admin/ticket-list/default-filters.php:83
+msgid "Number of Tickets shown per page for customer view."
+msgstr "Numero di Ticket mostrati per pagina per la vista personalizzata."
+
+#: includes/admin/ticket-list/default-filters.php:80
+#: includes/admin/ticket-list/default-filters.php:144
+msgid "500"
+msgstr "500"
+
+#: includes/admin/ticket-list/default-filters.php:79
+#: includes/admin/ticket-list/default-filters.php:143
+msgid "100"
+msgstr "100"
+
+#: includes/admin/ticket-list/default-filters.php:78
+#: includes/admin/ticket-list/default-filters.php:142
+msgid "50"
+msgstr "50"
+
+#: includes/admin/ticket-list/default-filters.php:77
+#: includes/admin/ticket-list/default-filters.php:141
+msgid "40"
+msgstr "40"
+
+#: includes/admin/ticket-list/default-filters.php:76
+#: includes/admin/ticket-list/default-filters.php:140
+msgid "30"
+msgstr "30"
+
+#: includes/admin/ticket-list/default-filters.php:75
+#: includes/admin/ticket-list/default-filters.php:139
+msgid "20"
+msgstr "20"
+
+#: includes/admin/ticket-list/default-filters.php:74
+#: includes/admin/ticket-list/default-filters.php:138
+msgid "10"
+msgstr "10"
+
+#: includes/admin/ticket-list/default-filters.php:71
+#: includes/admin/ticket-list/default-filters.php:135
+msgid "Number of Tickets"
+msgstr "Numero di Tickets"
+
+#: includes/admin/ticket-list/default-filters.php:65
+msgid "Tickets are loaded on selected order for customer view by default. If customer apply manual filter, this setting will not take effect."
+msgstr "Per default, i ticket vengono caricati nell'ordine selezionato per la vista utente. Se l'utente imposta un filtro manuale, questo parametro non avrà alcun effetto."
+
+#: includes/admin/ticket-list/default-filters.php:48
+#: includes/admin/ticket-list/default-filters.php:112
+msgid "Order By"
+msgstr "Ordinato per"
+
+#: includes/admin/ticket-list/default-filters.php:42
+msgid "Selected statuses will be hidden if no filter is active for customer view. If customer use status filter manually on ticket list, this setting will not take effect and tickets will be filtered as per customer selection."
+msgstr "Gli status selezionati verranno nascosti se nessun filtro è attivo per la vista utente. Se l'utent imposta manualmente un filtro sugli status per la lista dei ticket, questa impostazione non avrà alcun effetto e i ticket verranno filtrati per la selezione dell'utente."
+
+#: includes/admin/ticket-list/default-filters.php:30
+#: includes/admin/ticket-list/default-filters.php:94
+msgid "Hide Selected Statuses"
+msgstr "Nascondi Status Selezionati"
+
+#: includes/admin/ticket-list/default-filters.php:25
+#: includes/admin/ticket-list/list-settings.php:27
+msgid "Customer View"
+msgstr "Vista Utente"
+
+#: includes/admin/ticket-form/ticket-form.php:11
+msgid "Manage Form"
+msgstr "Gestione Modulo"
+
+#: includes/admin/ticket-form/form-management.php:96
+#: includes/admin/ticket-list/list-settings.php:120
+msgid "Please Wait ..."
+msgstr "Per cortesia attenti..."
+
+#: includes/admin/ticket-form/form-management.php:47
+msgid "Disable"
+msgstr "Disabilita"
+
+#: includes/admin/ticket-form/form-management.php:46
+msgid "Enable"
+msgstr "Abilita"
+
+#: includes/admin/ticket-form/form-management.php:28
+msgid "Full Width"
+msgstr "Larghezza Intera"
+
+#: includes/admin/ticket-form/form-management.php:27
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:28
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:29
+#: includes/class-wpsp-functions.php:708 includes/class-wpsp-functions.php:1082
+#: template/tickets/open-ticket/sidebar.php:33
+msgid "Status"
+msgstr "Status"
+
+#: includes/admin/ticket-form/form-management.php:17
+msgid "Create New Ticket Form"
+msgstr "Crea un Nuovo Modulo di Ticket"
+
+#: includes/admin/ticket-form/custom-fields.php:55
+msgid "No Custom Fields found!"
+msgstr "Nessun Campo Personalizzato trovato!"
+
+#: includes/admin/ticket-form/custom-fields.php:30
+msgid "Assigned Categories"
+msgstr "Categorie Assegnate"
+
+#: includes/admin/ticket-form/custom-fields.php:29
+#: includes/ajax/get_add_custom_field.php:60
+#: includes/ajax/get_edit_custom_field.php:65
+msgid "Required"
+msgstr "Richiesto"
+
+#: includes/admin/ticket-form/custom-fields.php:28
+#: includes/ajax/get_add_custom_field.php:51
+#: includes/ajax/get_edit_custom_field.php:56
+msgid "Agent Only"
+msgstr "Solo Agente"
+
+#: includes/admin/ticket-form/custom-fields.php:27
+msgid "Type"
+msgstr "Tipo"
+
+#: includes/admin/ticket-form/custom-fields.php:19
+msgid "Add New Custom Field"
+msgstr "Aggiungi un Nuovo Campo Personalizzato"
+
+#: includes/admin/ticket-form/custom-fields.php:18
+#: includes/admin/ticket-form/ticket-form.php:15
+msgid "Custom Fields"
+msgstr "Campi Personalizzati"
+
+#: includes/admin/general/thank_you.php:48
+msgid "URL of the ticket."
+msgstr "Indirizzo URL del ticket."
+
+#: includes/admin/general/thank_you.php:47
+msgid "Name of user doing current activity."
+msgstr "Nome dell'utente che sta facendo l'attività corrente."
+
+#: includes/admin/general/thank_you.php:46
+msgid "History of communication in ticket."
+msgstr "Storia della conversazione nel ticket."
+
+#: includes/admin/general/thank_you.php:45
+msgid "Last reply description."
+msgstr "Descrizione dell'ultima risposta."
+
+#: includes/admin/general/thank_you.php:44
+msgid "Email of user posted last reply."
+msgstr "Indirzzo eMail dell'utente che ha pubblicato l'ultima riposta."
+
+#: includes/admin/general/thank_you.php:43
+msgid "Name of user posted last reply."
+msgstr "Nome dell'utente che ha pubblicato l'ultima risposta."
+
+#: includes/admin/general/thank_you.php:42
+msgid "Name(s) of agent assigned to ticket."
+msgstr "Nome (o nomi) dell'agente assegnato per il ticket."
+
+#: includes/admin/general/thank_you.php:41
+msgid "Name of the agent who have created ticket on behalf of user. Empty if ticket created by user himself."
+msgstr "Nome dell'agente che ha creato il ticket per conto dell'utente. E' vuoto se il ticket è stato creato dallo stesso utente."
+
+#: includes/admin/general/thank_you.php:40
+msgid "Ticket create time"
+msgstr "Data creazione ticket"
+
+#: includes/admin/general/thank_you.php:39
+msgid "Email of ticket creator"
+msgstr "eMail di chi ha creato il ticket"
+
+#: includes/admin/general/thank_you.php:38
+msgid "Name of ticket creator"
+msgstr "Nome di chi ha creato il ticket"
+
+#: includes/admin/general/thank_you.php:37
+msgid "Ticket Priority"
+msgstr "Priorità Ticket"
+
+#: includes/admin/general/thank_you.php:36
+msgid "Ticket Category"
+msgstr "Categoria Ticket"
+
+#: includes/admin/general/thank_you.php:35
+msgid "Ticket status"
+msgstr "Status Ticket"
+
+#: includes/admin/general/thank_you.php:34
+msgid "Ticket description given while creating ticket"
+msgstr "Descrizione del ticket data in fase di creazione"
+
+#: includes/admin/general/thank_you.php:33
+msgid "Ticket Subject"
+msgstr "Oggetto Ticket"
+
+#: includes/admin/general/thank_you.php:31
+msgid "Template Tags"
+msgstr "Tags Modello"
+
+#: includes/admin/general/thank_you.php:17
+msgid "Thank You Page after create ticket"
+msgstr "Pagina di Ringraziamento dopo la creazione del ticket"
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:15
+#: includes/admin/general/support-page-menu/menu_list_update.php:25
+msgid "Add New Support Page Menu"
+msgstr "Aggiungi un Nuovo Menu di Support"
+
+#: includes/admin/general/support-page-menu/menu_list.php:60
+msgid "Delete Support Menu"
+msgstr "Cancella Menu di Support"
+
+#: includes/admin/general/statuses.php:19
+msgid "Add New Status"
+msgstr "Aggiungi Nuovo Status"
+
+#: includes/admin/general/priorities.php:28
+#: includes/admin/general/statuses.php:28
+msgid "Color"
+msgstr "Colore"
+
+#: includes/admin/general/priorities.php:19
+msgid "Add New Priority"
+msgstr "Aggiungi Nuova Priorità"
+
+#: includes/admin/general/general.php:43
+msgid "Support Page Menu"
+msgstr "Menu Pagine di Support "
+
+#: includes/admin/general/general.php:39
+msgid "Thank you page"
+msgstr "Pagina di ringraziamento"
+
+#: includes/admin/general/general.php:23
+#: includes/admin/general/priorities.php:18
+msgid "Priorities"
+msgstr "Priorità"
+
+#: includes/admin/general/general.php:19 includes/admin/general/statuses.php:18
+msgid "Statuses"
+msgstr "Status"
+
+#: includes/admin/general/general-settings.php:323
+msgid "If you set SRN, [Ticket #123456] will become [Ticket SRN123456] whereever applicable. Please don't leave blank."
+msgstr "Se tu imposti Nr., [Ticket #123456] diventerà [Ticket Nr.123456] dove applicabile. Per cortesia non lasciare vuoto."
+
+#: includes/admin/general/general-settings.php:319
+msgid "Ticket ID Prefix"
+msgstr "Prefisso ID Ticket"
+
+#: includes/admin/general/general-settings.php:309
+msgid "Allow Support Staff to read all ticket"
+msgstr "Permetti allo Staff di Support di leggere tutti i ticket"
+
+#: includes/admin/general/general-settings.php:299
+msgid "Allow Guest Ticket"
+msgstr "Permetti i Ticket Ospiti"
+
+#: includes/admin/general/general-settings.php:292
+msgid "Attachment Max Size(MB)"
+msgstr "Dimensione Massima degli Allegati (MB)"
+
+#: includes/admin/general/general-settings.php:286
+msgid "This format will be applicable for custom date fields for Support Plus"
+msgstr "Questo fomato sarà applicabile per i campi data personalizzati per Support Plus"
+
+#: includes/admin/general/general-settings.php:281
+msgid "Custom Date Format"
+msgstr "Formato Data Personalizzato"
+
+#: includes/admin/general/general-settings.php:275
+msgid "This format will be applicable for default date fields for Support Plus"
+msgstr "Questo formato sarà applicabile di default per i campi data di Support Plus"
+
+#: includes/admin/general/general-settings.php:270
+msgid "System Date Format"
+msgstr "Formato Data di Sistema"
+
+#: includes/admin/general/general-settings.php:264
+msgid "This format will be applicable for input date fields (datepicker) for WP Support Plus"
+msgstr "Questo formato sarà applicabile nella valorizzazione dei campi data (datepicker) di WP Support Plus"
+
+#: includes/admin/general/general-settings.php:240
+msgid "Calender Date Format"
+msgstr "Fomato Data Calendario"
+
+#: includes/admin/general/general-settings.php:234
+msgid "Bottom"
+msgstr "Basso"
+
+#: includes/admin/general/general-settings.php:233
+msgid "Top"
+msgstr "Alto"
+
+#: includes/admin/general/general-settings.php:230
+msgid "Reply Form Position"
+msgstr "Posizione del Modulo di Risposta"
+
+#: includes/admin/general/general-settings.php:225
+msgid "As name suggest, this setting will change ticket status to selected when support agent reply to ticket. Current Status will not change status of ticket in this case."
+msgstr "Come il nome suggerisce, questo parametro cambierà lo status del ticket allo status selezionato, quando un Agente risponde al ticket. Lo status corrente non cambierà lo stato del ticket in questo caso. "
+
+#: includes/admin/general/general-settings.php:209
+msgid "Ticket Status after Agent Reply"
+msgstr "Status Ticket dopo la Riposta di un Agente"
+
+#: includes/admin/general/general-settings.php:203
+msgid "This is applicable for Ticket id being created for new ticket."
+msgstr "Questo è applicabile agli ID Ticket creati per i futuri nuovi ticket. "
+
+#: includes/admin/general/general-settings.php:201
+msgid "Random"
+msgstr "Casuale"
+
+#: includes/admin/general/general-settings.php:195
+msgid "Sequential"
+msgstr "Sequenziale"
+
+#: includes/admin/general/general-settings.php:187
+#: includes/admin/general/thank_you.php:32
+msgid "Ticket ID"
+msgstr "ID Ticket"
+
+#: includes/admin/general/general-settings.php:181
+msgid "If enabled, it will show Close Ticket button to open ticket view for customer. This button will change ticket status to selected status."
+msgstr "Se abilitato, questo mostrerà il pulsante Chiudi Ticket nella vista dei ticket aperti dell'utente. Questo pulsante cambierà lo status del ticket allo status selezionato."
+
+#: includes/admin/general/general-settings.php:162
+msgid "Allow Customer to Close Ticket"
+msgstr "Permetti all'utente la Chiusura del Ticket"
+
+#: includes/admin/general/general-settings.php:156
+msgid "As name suggest, this setting will change ticket status to selected when ticket creator reply to ticket. Current Status will not change status of ticket in this case."
+msgstr "Come il nome suggerisce, questo settaggio cambierà lo stato del ticket selezionato, nel momento in cui il creatore del ticket risponderà. Lo status corrente non cambierà lo stato del ticket in questo caso."
+
+#: includes/admin/general/general-settings.php:144
+#: includes/admin/general/general-settings.php:215
+msgid "Status List"
+msgstr "Lista Status"
+
+#: includes/admin/general/general-settings.php:142
+#: includes/admin/general/general-settings.php:213
+msgid "Current Status"
+msgstr "Status Corrente"
+
+#: includes/admin/general/general-settings.php:137
+msgid "Ticket Status after Customer Reply"
+msgstr "Status Ticket dopo una Risposta Utente"
+
+#: includes/admin/general/general-settings.php:131
+msgid "This priority will be default priority for new ticket."
+msgstr "Questa sarà la priorità di default per tutti i nuovi ticket."
+
+#: includes/admin/general/general-settings.php:115
+msgid "Default Ticket Priority"
+msgstr "Priorità di default dei Ticket"
+
+#: includes/admin/general/general-settings.php:109
+msgid "This status will be default status for new ticket."
+msgstr "Questo stato sarà quello di default per tutti i nuovi ticket."
+
+#: includes/admin/general/general-settings.php:93
+msgid "Default Ticket Status"
+msgstr "Status di default dei Ticket"
+
+#: includes/admin/general/general-settings.php:87
+msgid "This category will be default category for new ticket. If category is not present in ticket form or ticket created via email piping, this category will be used as new ticket category."
+msgstr "Questa categoria sarà quella di default per tutti i nuovi ticket. Se la categoria non è presente nel modulo di inserimento dei ticket creati via \"email piping\", questa sarà la cagegoria utilizzata per il nuovo ticket."
+
+#: includes/admin/general/general-settings.php:71
+msgid "Default Category"
+msgstr "Categoria di Default"
+
+#: includes/admin/general/general-settings.php:59
+msgid "Open support page in new window?"
+msgstr "Aprire la pagina di Support in una nuova finestra?"
+
+#: includes/admin/general/general-settings.php:53
+msgid "This page will be used as helpdesk page on front-end. All users ( customer, agent, supervisor, administrator ) will able to access helpdesk on same page depending on their role. Please note, this page will not use your theme. That means your other frontend features like header, footer, sidebars, menus etc. will not be applicable to this page. It will have button to go back to your homepage. It does not require to have any shortcode, just go to your pages and create new page without description."
+msgstr "Questa pagina sarà usata come pagina di Helpdesk sul sito. Tutti gli utenti (clienti, agenti, supervisori, amministratori) saranno capaci di accedere alla stessa pagina di Helpdesk a seconda del loro ruolo. Per cortesia nota che questa pagina non userà il tuo personale tema. Ciò significa che le tue altre funzionalità del tuo tema (header, footer, sidebars, menu) non saranno applicabili a questa pagina. Dovrà esserci un pulsante per tornare alla tua homepage. Questa pagina speciale non richiede alcun codice aggiuntivo, semplicemente vai nelle tue pagine e crea una pagina senza alcuna descrizione."
+
+#: includes/admin/general/general-settings.php:35
+msgid "Support Page"
+msgstr "Pagina di Support"
+
+#: includes/admin/general/general-settings.php:26
+msgid "Choose Logo"
+msgstr "Scegli un Logo"
+
+#: includes/admin/general/footer-text.php:17
+#: includes/admin/general/general.php:35
+msgid "Footer Text"
+msgstr "Testo a Piè di Pagina"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:11
+#: includes/admin/general/support-page-menu/menu_list_update.php:12
+#: includes/ajax/autocomplete/index.php:10
+#: includes/ajax/autocomplete/ticket_filter.php:12
+#: includes/ajax/get_add_agent.php:10 includes/ajax/get_add_category.php:10
+#: includes/ajax/get_add_custom_field.php:10
+#: includes/ajax/get_add_priority.php:10 includes/ajax/get_add_status.php:10
+#: includes/ajax/get_delete_agent.php:13
+#: includes/ajax/get_delete_category.php:13
+#: includes/ajax/get_delete_custom_field.php:13
+#: includes/ajax/get_delete_custom_menu.php:13
+#: includes/ajax/get_delete_priority.php:13
+#: includes/ajax/get_delete_status.php:13
+#: includes/ajax/get_delete_support_menu.php:13
+#: includes/ajax/get_edit_agent.php:13 includes/ajax/get_edit_category.php:13
+#: includes/ajax/get_edit_custom_field.php:13
+#: includes/ajax/get_edit_priority.php:13 includes/ajax/get_edit_status.php:13
+#: includes/ajax/save_form_management.php:19
+#: includes/ajax/save_list_settings.php:21
+#: includes/ajax/save_table_order.php:17
+#: includes/ajax/search_users_for_add_agent.php:10
+#: includes/ajax/set_add_agent.php:10 includes/ajax/set_add_category.php:10
+#: includes/ajax/set_add_custom_field.php:10
+#: includes/ajax/set_add_priority.php:10 includes/ajax/set_add_status.php:10
+#: includes/ajax/set_delete_agent.php:13
+#: includes/ajax/set_delete_category.php:13
+#: includes/ajax/set_delete_custom_field.php:13
+#: includes/ajax/set_delete_custom_menu.php:13
+#: includes/ajax/set_delete_priority.php:13
+#: includes/ajax/set_delete_status.php:13
+#: includes/ajax/set_delete_support_menu.php:13
+#: includes/ajax/set_edit_agent.php:14 includes/ajax/set_edit_category.php:17
+#: includes/ajax/set_edit_custom_field.php:13
+#: includes/ajax/set_edit_priority.php:15 includes/ajax/set_edit_status.php:15
+#: includes/ajax/ticket-form/create_tkt_cng_cat.php:10
+#: includes/ajax/ticket-form/upload_file.php:9
+#: includes/ajax/ticket-form/upload_image.php:8
+#: includes/ajax/ticket-individual/get_agent_fields.php:16
+#: includes/ajax/ticket-individual/get_assign_agent.php:16
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:15
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:15
+#: includes/ajax/ticket-individual/get_change_raised_by.php:15
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:15
+#: includes/ajax/ticket-individual/get_clone_ticket.php:13
+#: includes/ajax/ticket-individual/get_close_ticket.php:18
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:19
+#: includes/ajax/ticket-individual/get_delete_thread.php:19
+#: includes/ajax/ticket-individual/get_delete_ticket.php:16
+#: includes/ajax/ticket-individual/get_edit_subject.php:15
+#: includes/ajax/ticket-individual/get_edit_thread.php:19
+#: includes/ajax/ticket-individual/get_ticket_fields.php:16
+#: includes/ajax/ticket-individual/set_agent_fields.php:17
+#: includes/ajax/ticket-individual/set_assign_agent.php:18
+#: includes/ajax/ticket-individual/set_bulk_assign_agent.php:20
+#: includes/ajax/ticket-individual/set_bulk_change_status.php:19
+#: includes/ajax/ticket-individual/set_change_raised_by.php:17
+#: includes/ajax/ticket-individual/set_change_ticket_status.php:17
+#: includes/ajax/ticket-individual/set_clone_ticket.php:18
+#: includes/ajax/ticket-individual/set_close_ticket.php:17
+#: includes/ajax/ticket-individual/set_delete_bulk_ticket.php:20
+#: includes/ajax/ticket-individual/set_delete_thread.php:18
+#: includes/ajax/ticket-individual/set_delete_ticket.php:19
+#: includes/ajax/ticket-individual/set_edit_subject.php:18
+#: includes/ajax/ticket-individual/set_edit_thread.php:19
+#: includes/ajax/ticket-individual/set_ticket_fields.php:17
+#: includes/ajax/ticket-list/apply_ticket_filter.php:12
+#: includes/ajax/ticket-list/apply_ticket_filter.php:20
+#: includes/ajax/ticket-list/apply_ticket_filter.php:28
+#: includes/ajax/ticket-list/delete_ticket_filter.php:12
+#: includes/ajax/ticket-list/delete_ticket_filter.php:20
+#: includes/ajax/ticket-list/delete_ticket_filter.php:25
+#: includes/ajax/ticket-list/delete_ticket_filter.php:32
+#: includes/ajax/ticket-list/save_ticket_filter.php:12
+#: includes/ajax/upgrade.php:11 includes/ajax/user-login/guest_signin.php:12
+#: includes/ajax/user-login/guest_signin.php:46
+#: includes/ajax/user-login/signin.php:12
+#: includes/ajax/user-login/signin.php:40 includes/class-wpsp-ajax.php:131
+#: includes/class-wpsp-ajax.php:149 includes/class-wpsp-ajax.php:203
+#: template/tickets/create-ticket.php:135
+#: template/tickets/create-ticket.php:142
+#: template/tickets/ticket-operations/add_ticket_note.php:20
+#: template/tickets/ticket-operations/reply_ticket.php:21
+#: wp-support-plus.php:72 wp-support-plus.php:79
+msgid "Cheating huh?"
+msgstr "Stai imbrogliando? "
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:48
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:57
+#: includes/admin/general/support-page-menu/menu_list_add.php:48
+#: includes/admin/general/support-page-menu/menu_list_update.php:59
+#: includes/ajax/get_add_agent.php:52 includes/ajax/get_add_category.php:46
+#: includes/ajax/get_add_custom_field.php:87
+#: includes/ajax/get_add_priority.php:40 includes/ajax/get_add_status.php:40
+#: includes/ajax/get_delete_agent.php:43
+#: includes/ajax/get_delete_category.php:43
+#: includes/ajax/get_delete_custom_field.php:44
+#: includes/ajax/get_delete_custom_menu.php:42
+#: includes/ajax/get_delete_priority.php:43
+#: includes/ajax/get_delete_status.php:43
+#: includes/ajax/get_delete_support_menu.php:42
+#: includes/ajax/get_edit_agent.php:43 includes/ajax/get_edit_category.php:66
+#: includes/ajax/get_edit_custom_field.php:99
+#: includes/ajax/get_edit_priority.php:46 includes/ajax/get_edit_status.php:46
+#: includes/ajax/ticket-individual/get_agent_fields.php:89
+#: includes/ajax/ticket-individual/get_assign_agent.php:140
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:116
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:83
+#: includes/ajax/ticket-individual/get_change_raised_by.php:142
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:91
+#: includes/ajax/ticket-individual/get_clone_ticket.php:59
+#: includes/ajax/ticket-individual/get_close_ticket.php:59
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:61
+#: includes/ajax/ticket-individual/get_delete_thread.php:61
+#: includes/ajax/ticket-individual/get_delete_ticket.php:59
+#: includes/ajax/ticket-individual/get_edit_subject.php:61
+#: includes/ajax/ticket-individual/get_edit_thread.php:85
+#: includes/ajax/ticket-individual/get_ticket_fields.php:97
+#: template/tickets/open-ticket/class-threads-formatting.php:81
+#: template/tickets/open-ticket/class-threads-formatting.php:103
+#: template/tickets/open-ticket/sidebar.php:331
+#: template/tickets/open-ticket/sidebar.php:358
+msgid "Cancel"
+msgstr "Cancella"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:35
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:43
+#: includes/admin/general/support-page-menu/menu_list_add.php:35
+#: includes/admin/general/support-page-menu/menu_list_update.php:45
+msgid "Menu URL"
+msgstr "URL del Menu"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:26
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:34
+#: includes/admin/general/support-page-menu/menu_list_add.php:26
+#: includes/admin/general/support-page-menu/menu_list_update.php:36
+msgid "Menu Icon"
+msgstr "Icon del Menu"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:15
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:23
+msgid "Add New Menu Slider"
+msgstr "Aggiungi un Nuovo Menu Slider"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:99
+msgid "Delete Custom Menu"
+msgstr "Cancella il Menu Personalizzato"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:72
+#: includes/admin/general/support-page-menu/menu_list.php:34
+#: includes/admin/general/thank_you.php:18
+msgid "Title"
+msgstr "Titolo"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:55
+msgid "Custom Menu Slider"
+msgstr "Personalizza il Menu Slider"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:46
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:29
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:37
+#: includes/admin/general/general-settings.php:29
+#: includes/admin/general/support-page-menu/menu_list_add.php:29
+#: includes/admin/general/support-page-menu/menu_list_update.php:39
+msgid "Upload Logo"
+msgstr "Carica Logo"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:42
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:71
+#: includes/admin/general/support-page-menu/menu_list.php:33
+msgid "Icon"
+msgstr "Icona"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:36
+msgid "If enabled, it will show Support Button on front-end website. When visitor click this button, it will open Support Page selected above in new tab."
+msgstr "Se abilitato, verrà mostrato il Pulsante di Support sul front-end del sito. Quando i visitatori cliccheranno su questo pulsante, verrà aperta la suddetta pagina di Support in una nuova scheda."
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:26
+msgid "Show Support Button"
+msgstr "Mostra Pulsante di Support"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:21
+#: includes/admin/general/general.php:27
+msgid "Support Button"
+msgstr "Pulsante di Support"
+
+#: includes/admin/general/custom-css.php:18
+#: includes/admin/general/general.php:31
+msgid "Custom CSS"
+msgstr "CSS Personalizzati"
+
+#: includes/admin/general/categories.php:64
+#: includes/admin/general/priorities.php:59
+#: includes/admin/general/statuses.php:59
+msgid "Save Order"
+msgstr "Memorizza l'Ordine"
+
+#: includes/admin/general/categories.php:29
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:73
+#: includes/admin/general/priorities.php:29
+#: includes/admin/general/statuses.php:29
+#: includes/admin/general/support-page-menu/menu_list.php:35
+#: includes/admin/ticket-form/custom-fields.php:31
+msgid "Action"
+msgstr "Azioni"
+
+#: includes/admin/general/categories.php:28
+msgid "Supervisor(s)"
+msgstr "Supervisori"
+
+#: includes/admin/general/categories.php:26
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:70
+#: includes/admin/general/priorities.php:26
+#: includes/admin/general/statuses.php:26
+#: includes/admin/general/support-page-menu/menu_list.php:32
+#: includes/admin/ticket-form/form-management.php:25
+#: includes/admin/ticket-list/list-settings.php:25
+msgid "Order"
+msgstr "Ordina"
+
+#: includes/admin/general/categories.php:19
+msgid "Add New Category"
+msgstr "Aggiungi Nuova Categoria"
+
+#: includes/admin/general/categories.php:18
+#: includes/admin/general/general.php:15
+msgid "Categories"
+msgstr "Categorie"
+
+#: includes/admin/dashbord/general.php:24
+msgid "Statuses to Show"
+msgstr "Status da Mostrare"
+
+#: includes/admin/class-wpsp-admin.php:242
+msgid "Dismiss this notice"
+msgstr "Rimuovi questa notifica"
+
+#: includes/admin/class-wpsp-admin.php:242
+msgid "Settings updated"
+msgstr "Impostazioni aggiornate"
+
+#: includes/admin/class-wpsp-admin.php:218
+msgid "Add-Ons"
+msgstr "Add-Ons"
+
+#: includes/admin/class-wpsp-admin.php:214
+msgid "Dashbord"
+msgstr "Bacheca"
+
+#: includes/admin/class-wpsp-admin.php:206
+#: template/tickets/create-ticket.php:334 template/tickets/logged-in.php:10
+msgid "Ticket List"
+msgstr "Lista Ticket"
+
+#: includes/admin/class-wpsp-admin.php:202
+msgid "Ticket Form"
+msgstr "Modulo Ticket"
+
+#: includes/admin/class-wpsp-admin.php:198
+#: includes/admin/dashbord/dashbord.php:11
+msgid "General"
+msgstr "Generale"
+
+#: includes/admin/class-wpsp-admin.php:166
+msgid "WP Support Plus Settings"
+msgstr "Impostazioni WP Support Plus"
+
+#: includes/admin/agents/ticket-agents.php:39
+msgid "Search"
+msgstr "Ricerca"
+
+#: includes/admin/agents/ticket-agents.php:38
+#: includes/ajax/ticket-list/get_tickets.php:194
+#: template/tickets/ticket_list/filter.php:27
+msgid "Reset Filter"
+msgstr "Azzera Filtro"
+
+#: includes/admin/agents/ticket-agents.php:37
+#: template/tickets/ticket_list/list.php:55
+msgid "Apply"
+msgstr "Applica"
+
+#: includes/admin/agents/ticket-agents.php:32
+msgid "All"
+msgstr "Tutti"
+
+#: includes/admin/agents/ticket-agents.php:18
+#: includes/admin/general/categories.php:19
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:64
+#: includes/admin/general/priorities.php:19
+#: includes/admin/general/statuses.php:19
+#: includes/admin/general/support-page-menu/menu_list.php:26
+#: includes/admin/ticket-form/custom-fields.php:19
+msgid "Add New"
+msgstr "Aggiungi Nuovo"
+
+#: includes/admin/agents/ticket-agents.php:18
+msgid "Add New Agent"
+msgstr "Aggiungi un Nuovo Agente"
+
+#: includes/admin/agents/ticket-agents.php:17
+#: includes/admin/class-wpsp-admin.php:210
+msgid "Agents"
+msgstr "Agenti"
+
+#: includes/admin/agents/general-settings.php:94
+msgid "If set yes, supervisor will able to change raised by of tickets of assigned categories."
+msgstr "Se impostato a sì, il supervisore sarà capace di cambiare l'autore dei ticket della categorie assegnategli."
+
+#: includes/admin/agents/general-settings.php:83
+msgid "If set yes, supervisor will able to delete tickets of assigned categories"
+msgstr "Se impostato a sì, il supervisore sarà capace di cancellare i ticket delle categorie assegnategli."
+
+#: includes/admin/agents/general-settings.php:67
+msgid "If set yes, an agent will able to view all tickets of categories assigned to him but do not have permission to reply or modify in tickets not assigned to him. This is important to have this permission because sometimes an agent will need to refer other tickets not assigned to him."
+msgstr "Se hai detto sì, un agente sarà capace di vedere tutti i ticket delle categoria assegnategli ma non avrà il permesso di rispondere o modificare i ticket a lui non assegnati. E' utile avere questo permesso perché qualche volta un agente avrà bisogno di riferirsi a dei ticket a lui non assegnati."
+
+#: includes/admin/agents/general-settings.php:61
+msgid "Allow Read Only Not Assigned Tickets"
+msgstr "Permetti la sola lettura dei ticket non assegnati"
+
+#: includes/admin/agents/general-settings.php:56
+msgid "If set yes, an agent will able to change raised by of ticket assigned to him."
+msgstr "Se hai detto sì, un agente sarà capace di cambiare l'autore di un ticket assegnatogli"
+
+#: includes/admin/agents/general-settings.php:50
+#: includes/admin/agents/general-settings.php:88
+msgid "Allow Change Raised By"
+msgstr "Permetti di modificare l'autore del ticket"
+
+#: includes/admin/agents/general-settings.php:45
+msgid "If set yes, an agent will able to delete ticket assigned to him."
+msgstr "Se hai detto sì, un agente sarà capace di cancellare ticket a lui assegnati."
+
+#: includes/admin/agents/general-settings.php:39
+#: includes/admin/agents/general-settings.php:77
+msgid "Allow Delete Ticket"
+msgstr "Permetti la Cancellazione dei Ticket"
+
+#: includes/admin/agents/general-settings.php:34
+msgid "If set yes, an agent will able to assign ticket assigned to him to some other agent who is assigned to ticket category."
+msgstr "Se hai detto sì, un agente sarà capace di assegnare ticket precedentemente assegnati a lui a qualcun altro agente a cui è assegnata la categoria del ticket."
+
+#: includes/admin/agents/general-settings.php:32
+#: includes/admin/agents/general-settings.php:43
+#: includes/admin/agents/general-settings.php:54
+#: includes/admin/agents/general-settings.php:65
+#: includes/admin/agents/general-settings.php:81
+#: includes/admin/agents/general-settings.php:92
+#: includes/admin/general/general-settings.php:64
+#: includes/admin/general/general-settings.php:303
+#: includes/admin/general/general-settings.php:313
+#: includes/admin/ticket-form/custom-fields.php:44
+#: includes/admin/ticket-form/custom-fields.php:45
+#: includes/admin/ticket-form/form-management.php:53
+#: includes/admin/ticket-list/list-settings.php:49
+#: includes/admin/ticket-list/list-settings.php:55
+#: includes/admin/ticket-list/list-settings.php:64
+#: includes/admin/ticket-list/list-settings.php:70
+#: includes/ajax/get_add_custom_field.php:54
+#: includes/ajax/get_add_custom_field.php:62
+#: includes/ajax/get_edit_custom_field.php:59
+#: includes/ajax/get_edit_custom_field.php:67
+msgid "No"
+msgstr "No"
+
+#: includes/admin/agents/general-settings.php:31
+#: includes/admin/agents/general-settings.php:42
+#: includes/admin/agents/general-settings.php:53
+#: includes/admin/agents/general-settings.php:64
+#: includes/admin/agents/general-settings.php:80
+#: includes/admin/agents/general-settings.php:91
+#: includes/admin/general/general-settings.php:63
+#: includes/admin/general/general-settings.php:302
+#: includes/admin/general/general-settings.php:312
+#: includes/admin/ticket-form/custom-fields.php:44
+#: includes/admin/ticket-form/custom-fields.php:45
+#: includes/admin/ticket-form/form-management.php:52
+#: includes/admin/ticket-list/list-settings.php:48
+#: includes/admin/ticket-list/list-settings.php:54
+#: includes/admin/ticket-list/list-settings.php:63
+#: includes/admin/ticket-list/list-settings.php:69
+#: includes/ajax/get_add_custom_field.php:53
+#: includes/ajax/get_add_custom_field.php:63
+#: includes/ajax/get_edit_custom_field.php:58
+#: includes/ajax/get_edit_custom_field.php:68
+msgid "Yes"
+msgstr "Sì"
+
+#: includes/admin/agents/general-settings.php:28
+msgid "Allow Assign Ticket"
+msgstr "Permetti di Assegnare Ticket"
+
+#: includes/admin/agents/class_agent_table.php:66
+msgid "Delete Agent"
+msgstr "Cancella Agente"
+
+#: includes/admin/agents/class_agent_table.php:45
+#: includes/admin/agents/ticket-agents.php:35
+#: includes/ajax/get_add_agent.php:41 includes/ajax/get_edit_agent.php:33
+msgid "Administrator"
+msgstr "Amministratore"
+
+#: includes/admin/agents/class_agent_table.php:43
+#: includes/admin/agents/general-settings.php:72
+#: includes/admin/agents/ticket-agents.php:34
+#: includes/ajax/get_add_agent.php:40 includes/ajax/get_edit_agent.php:32
+msgid "Supervisor"
+msgstr "Supervisore"
+
+#: includes/admin/agents/class_agent_table.php:41
+#: includes/admin/agents/general-settings.php:23
+#: includes/admin/agents/ticket-agents.php:33
+#: includes/ajax/get_add_agent.php:24 includes/ajax/get_add_agent.php:39
+#: includes/ajax/get_edit_agent.php:31 template/tickets/dashboard.php:83
+msgid "Agent"
+msgstr "Agente"
+
+#: includes/admin/agents/class_agent_table.php:17
+#: includes/admin/agents/ticket-agents.php:30
+#: includes/ajax/get_add_agent.php:37 includes/ajax/get_edit_agent.php:29
+msgid "Role"
+msgstr "Ruolo"
+
+#: includes/admin/agents/class_agent_table.php:16
+#: includes/class-wpsp-functions.php:620 template/header/sign-in.php:65
+msgid "Email"
+msgstr "eMail"
+
+#: includes/admin/agents/class_agent_table.php:15
+#: includes/admin/general/categories.php:27
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:19
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:27
+#: includes/admin/general/priorities.php:27
+#: includes/admin/general/statuses.php:27
+#: includes/admin/general/support-page-menu/menu_list_add.php:19
+#: includes/admin/general/support-page-menu/menu_list_update.php:29
+#: includes/admin/ticket-form/custom-fields.php:26
+#: includes/admin/ticket-form/form-management.php:26
+#: includes/admin/ticket-list/list-settings.php:26
+#: template/header/sign-in.php:62
+msgid "Name"
+msgstr "Nome"
+
+#: includes/admin/agents/class_agent_table.php:14
+msgid "Username"
+msgstr "Nome utente"
+
+#: includes/admin/agents/agents.php:15
+msgid "Agents & Supervisors"
+msgstr "Agenti & Supervisori"
+
+#: includes/admin/agents/agents.php:11
+#: includes/admin/general/general-settings.php:21
+#: includes/admin/general/general.php:11
+msgid "General Settings"
+msgstr "Impostazioni Generali"
+
+#: includes/admin/addons/wpsp_license_settings.php:26
+#: includes/admin/agents/general-settings.php:104
+#: includes/admin/dashbord/general.php:44
+#: includes/admin/general/custom-css.php:31
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:114
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:47
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:56
+#: includes/admin/general/footer-text.php:36
+#: includes/admin/general/general-settings.php:332
+#: includes/admin/general/support-page-menu/menu_list.php:75
+#: includes/admin/general/support-page-menu/menu_list_add.php:47
+#: includes/admin/general/support-page-menu/menu_list_update.php:58
+#: includes/admin/general/thank_you.php:57
+#: includes/admin/ticket-form/form-management.php:69
+#: includes/admin/ticket-list/default-filters.php:157
+#: includes/admin/ticket-list/list-settings.php:93
+#: includes/ajax/ticket-individual/get_agent_fields.php:90
+#: includes/ajax/ticket-individual/get_assign_agent.php:141
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:117
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:84
+#: includes/ajax/ticket-individual/get_change_raised_by.php:143
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:92
+#: includes/ajax/ticket-individual/get_clone_ticket.php:60
+#: includes/ajax/ticket-individual/get_edit_subject.php:62
+#: includes/ajax/ticket-individual/get_edit_thread.php:86
+#: includes/ajax/ticket-individual/get_ticket_fields.php:98
+msgid "Save Changes"
+msgstr "Salva Modifiche"
+
+#: includes/admin/addons/addons.php:10
+msgid "Licenses"
+msgstr "Licenze"
+
+#: includes/EDD_SL_Plugin_Updater.php:399
+msgid "Error"
+msgstr "Errore"
+
+#: includes/EDD_SL_Plugin_Updater.php:399
+msgid "You do not have permission to install plugin updates"
+msgstr "Non hai il permesso per installare aggiornamenti al plugin"
+
+#: includes/EDD_SL_Plugin_Updater.php:209
+msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s or %5$supdate now%6$s."
+msgstr "C'è una nuova versione di %1$s disponibile. Vedi i dettagli %4$s della versione %3$s di %2$soppure %5$s aggiorna ora %6$s."
+
+#: includes/EDD_SL_Plugin_Updater.php:201
+msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr "C'è una nuova versione di %1$s disponibile. Vedi i dettagli %4$s della versione %3$s di %2$s."

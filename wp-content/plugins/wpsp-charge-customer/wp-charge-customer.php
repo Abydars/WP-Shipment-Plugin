@@ -199,6 +199,7 @@ if ( ! class_exists( 'WPSP_ChargeCustomer' ) ) {
 					// TODO: Maintain Order History
 
 					$filename     = apply_filters( 'wpsp_file_dir', "charge-customer-{$customer->ID}.pdf" );
+					$file_url     = apply_filters( 'wpsp_file_url', "charge-customer-{$customer->ID}.pdf" );
 					$subject      = __( 'Funds Loaded', WPSP_LANG );
 					$subtitle     = __( '', WPSP_LANG );
 					$datetime_now = date( 'Y-m-d H:i:s' );
@@ -225,11 +226,7 @@ if ( ! class_exists( 'WPSP_ChargeCustomer' ) ) {
 						try {
 
 							$wptm_manager = new WPTM_FaxManager();
-							$wptm_manager->sendFax( '+' . $fax_number, $filename );
-
-							if ( file_exists( $filename ) ) {
-								unlink( $filename );
-							}
+							$wptm_manager->sendFax( '+' . $fax_number, $file_url );
 
 						} catch ( Exception $e ) {
 							if ( file_exists( $filename ) ) {

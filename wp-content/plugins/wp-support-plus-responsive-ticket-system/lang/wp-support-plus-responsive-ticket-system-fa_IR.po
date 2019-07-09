@@ -1,0 +1,2097 @@
+# Translation of WP Support Plus Responsive Ticket System in Persian
+# This file is distributed under the same license as the WP Support Plus Responsive Ticket System package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-07-20 10:51+0530\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Language: fa\n"
+"Project-Id-Version: WP Support Plus Responsive Ticket System\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+
+#: includes/class-wpsp-functions.php:941
+msgid "Trashed Tickets"
+msgstr "تیک ها حذف شده"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:420
+msgid "%1$s changed category to %2$s"
+msgstr "%1$s  دسته تغییر کرد به  %2$s"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:394
+msgid "%1$s changed status to %2$s"
+msgstr "%1$s  وضعیت تغییر کرد به  %2$s"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:368
+msgid "%1$s changed assigned agent to %2$s"
+msgstr "%1$s  تغییر پشتیبان به  %2$s"
+
+#: template/tickets/ticket_list/filter.php:72
+msgid "ON"
+msgstr "روشن"
+
+#: template/tickets/ticket_list/filter.php:71
+msgid "OFF"
+msgstr "خاموش"
+
+#: includes/ajax/get_permanent_delete_ticket.php:19
+msgid "Permanent Delete Ticket"
+msgstr "اجازه به حذف تیکت"
+
+#: includes/ajax/get_restore_ticket.php:19
+msgid "Restore Ticket"
+msgstr "بازگرداندن تیکت "
+
+#: template/tickets/create-ticket.php:97
+msgid "Don't Notify Owner"
+msgstr "اطلاع رسانی به مالک اجرا نشود"
+
+#: includes/admin/general/general-settings.php:52
+msgid "Click here to go to support page"
+msgstr "برای رفتن به صفحه پشتیبانی ، اینجا را کلیک کنید."
+
+#: template/tickets/open-ticket/sidebar.php:117
+msgid "Biographical Information"
+msgstr "اطلاعات بیوگرافی"
+
+#: template/tickets/open-ticket/sidebar.php:107
+msgid "User location by IP address"
+msgstr "آدرس آی پی کاربر"
+
+#: template/tickets/open-ticket/sidebar.php:97
+msgid "All Tickets of this user"
+msgstr "تیکت های این کاربر"
+
+#: template/tickets/open-ticket/body.php:43
+msgid "Delete Permanently"
+msgstr "حذف اولویت"
+
+#: template/tickets/open-ticket/body.php:37
+msgid "Restore"
+msgstr "بازیافت"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:471
+msgid "%1$s changed raised by to %2$s"
+msgstr "%1$s  پاسخ تغییر کرد به  %2$s"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:446
+msgid "%1$s changed priority to %2$s"
+msgstr "%1$s  اولویت تغییر کرد به  %2$s"
+
+#: includes/admin/general/general-settings.php:435
+msgid "Disable Default Login"
+msgstr "غیر فعال کردن بخش ورود؟"
+
+#: includes/admin/general/general.php:47
+#: includes/admin/ticket-list/advanced-settings.php:21
+#: includes/admin/ticket-list/ticket-list.php:23
+msgid "Advanced Settings"
+msgstr "تنظیمات پیشرفته"
+
+#: includes/admin/general/thank_you.php:63
+msgid "Redirect to below link after submit(above message wont display)"
+msgstr "به آدرس زیر منتقل شود بعد از ثبت تیکت"
+
+#: includes/admin/general/thank_you.php:57
+msgid "Redirect link"
+msgstr "لینک تغییر مسیر "
+
+#: includes/admin/ticket-list/advanced-settings.php:26
+msgid "Subject Character Length"
+msgstr "میزان کاراکتر ویژه موضوع"
+
+#: includes/admin/ticket-list/open-ticket-widget.php:26
+msgid "Widgets Name"
+msgstr "ابزارک "
+
+#: includes/admin/ticket-list/list-settings.php:31
+msgid "Customer Tickets"
+msgstr "تیکت مشتری"
+
+#: includes/admin/ticket-list/advanced-settings.php:32
+msgid "Raised By Character Length"
+msgstr "میزان کاراکتر ویژه پاسخ"
+
+#: includes/ajax/ticket-individual/get_user_biography.php:22
+msgid "Biographical Info"
+msgstr "اطلاعات بیوگرافی"
+
+#: includes/admin/dashbord/general.php:40
+msgid "Dashborad to Hide"
+msgstr "پنهان کردن داشبورد"
+
+#. Author URI of the plugin
+msgid "https://www.wpsupportplus.com/"
+msgstr "http://www.prostyle.ir"
+
+#. Author of the plugin
+msgid "Pradeep Makone"
+msgstr "تیم پرو استایل"
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/wp-support-plus-responsive-ticket-system"
+msgstr "http://www.prostyle.ir"
+
+#. Description of the plugin
+msgid "Exceptional customer support solution for WordPress!"
+msgstr "سیتستم تیکتینگ و پشتیبانی سایت بدون نیاز به دیتابیس و دامین جدید "
+
+#. Name of the plugin
+msgid "WP Support Plus"
+msgstr "سیستم تیکتینگ پلاس"
+
+#: includes/ajax/ticket-individual/get_ticket_created.php:56
+msgid "All Tickets"
+msgstr "تیکت ها"
+
+#: includes/admin/customize/general.php:55
+msgid "Buttons"
+msgstr "دکمه ها"
+
+#: includes/admin/customize/general.php:48
+msgid "Footer"
+msgstr "پانوشت"
+
+#: includes/admin/customize/general.php:41
+msgid "Body"
+msgstr "بدنه اصلی"
+
+#: includes/admin/customize/general.php:34
+msgid "Secondary Menu"
+msgstr "منو دوم "
+
+#: includes/admin/customize/general.php:27
+msgid "Header"
+msgstr "سربرگ"
+
+#: includes/admin/customize/general.php:22
+msgid "General CSS"
+msgstr "استایل عمومی"
+
+#: includes/admin/class-wpsp-admin.php:231
+msgid "Customize"
+msgstr "سفارشی سازی"
+
+#: includes/admin/class-wpsp-admin.php:150
+msgid "Please enter required field."
+msgstr "اطلاعات لازم را برای این فیلد ضروری را وارد کنید."
+
+#: includes/admin/customize/ticket_list.php:27
+msgid "Filter Sidebar"
+msgstr "فیلتر کناری"
+
+#: includes/admin/customize/ticket_list.php:22
+msgid "Ticket List CSS"
+msgstr "استایل لیست تیکت"
+
+#: includes/admin/customize/ticket_list.php:58
+#: includes/admin/customize/general.php:66
+msgid "Reset default"
+msgstr "بازگردانی به تنظیمات پیش فرض"
+
+#: includes/admin/customize/ticket_list.php:48
+msgid "Ticket Log"
+msgstr "گزارش  تیکت"
+
+#: includes/admin/ticket-list/open-ticket-widget.php:17
+#: includes/admin/ticket-list/ticket-list.php:19
+#: includes/admin/customize/ticket_list.php:41
+msgid "Open Ticket Widgets"
+msgstr "بازکردن ابزارک تیکت"
+
+#: includes/admin/customize/ticket_list.php:34
+msgid "Ticket List Table"
+msgstr "جدول لیست تیکت"
+
+#: includes/admin/general/custom-css.php:29
+#: includes/admin/general/general-settings.php:64
+msgid "Theme Integration"
+msgstr "یکپارچه سازی قالب"
+
+#: includes/admin/general/custom-css.php:30
+msgid "Applicable only in theme integration view"
+msgstr "اعمال شده فقط برای صفحات سازگار نمایشی قالب"
+
+#: includes/admin/general/general-settings.php:55
+msgid "This page will be used as helpdesk page on front-end. All users ( customer, agent, supervisor, administrator ) will able to access helpdesk on same page depending on their role. It does not require to have any shortcode, just go to your pages and create new page without description."
+msgstr "این صفحه به عنوان صفحه راهنما در قسمت جلویی استفاده خواهد شد. تمام کاربران (مشتری، نماینده، سرپرست، مدیر) قادر به دسترسی در همان صفحه ، بسته به نقش خود خواهند بود. لطفا توجه داشته باشید، این صفحه از قالب شما استفاده نخواهد کرد. این بدان معنی است که دیگر ویژگی های ظاهر خود مانند هدر، پاورقی، ستون های فرعی، منوها و غیره به این صفحه قابل اجرا نخواهد بود. این صفحه دکمه ای برای بازگشت به صفحه اصلی شما وجود خواهد داشت. این نیازی به هیچ شورتکاتی ندارد، فقط به قسمت برگه های خود بروید و برگه جدیدی را بدون توضیح ایجاد کنید."
+
+#: includes/admin/general/general-settings.php:116
+msgid "Load Bootstrap"
+msgstr "لود  بوت استرپ"
+
+#: includes/admin/general/general-settings.php:75
+#: includes/admin/general/general-settings.php:396
+#: includes/admin/dashbord/general.php:47
+msgid "Customer"
+msgstr "مشتری"
+
+#: includes/admin/general/general-settings.php:389
+msgid "Restrict to view advance support page"
+msgstr "محدود به صفحه پشتیبانی "
+
+#: includes/admin/general/general-settings.php:123
+msgid "Applicable on theme integration page only."
+msgstr "اعمال شده فقط برای صفحات سازگار قالب"
+
+#: includes/admin/general/general-settings.php:429
+msgid "Default Login"
+msgstr "ورود پیشفرض "
+
+#: includes/admin/general/general-settings.php:413
+msgid "Ticket Label"
+msgstr "برچسب تیک"
+
+#: includes/admin/general/general-settings.php:442
+msgid "Default Support Plus Login Module"
+msgstr "ماژول ورود پیشفرض"
+
+#: includes/admin/general/general-settings.php:448
+msgid "WP Login Link"
+msgstr "لینک ورود وردپرس"
+
+#: includes/admin/general/general-settings.php:453
+msgid "Allow Powered by"
+msgstr "اجازه نمایش برای قدرت گرفته از "
+
+#: includes/admin/general/general-settings.php:463
+msgid "Public Ticket Mode"
+msgstr "تیکت عمومی "
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:30
+#: includes/admin/general/support-page-menu/menu_list_update.php:40
+msgid "Clear Logo"
+msgstr "پاک کردن لوگو"
+
+#: includes/admin/general/general-settings.php:470
+msgid "If you enable this setting then all tickets will be visible to all users and they can reply to each others tickets."
+msgstr "اگر این گزینه را فعال کنید تیکت ها به همه بازدید کنندگان نمایش داده خواهد شد و میتوانند تیکت را ویرایش و ادامه دهند ."
+
+#: includes/admin/ticket-list/default-filters.php:158
+msgid "On page load"
+msgstr "نمایش در صفحه"
+
+#: includes/admin/ticket-list/default-filters.php:157
+msgid "Ticket List Filter"
+msgstr "لیست تیکت"
+
+#: includes/admin/installation/wpsp_install.php:97
+msgid "Next"
+msgstr "بعدی"
+
+#: includes/admin/installation/wpsp_install.php:96
+msgid "Set Now"
+msgstr "اکنون تنظیم شود "
+
+#: template/js_data.php:42 includes/ajax/ticket-list/get_tickets.php:203
+msgid "Hide Filters"
+msgstr "مخفی شدن فیلتر"
+
+#: template/js_data.php:43 includes/ajax/ticket-list/get_tickets.php:206
+msgid "Show Filters"
+msgstr "نمايش فيلتر"
+
+#: template/header/sign-in.php:36
+msgid "Forgot your password?"
+msgstr " رمز عبور را فراموش کرده اید؟ "
+
+#: template/header/sign-in.php:73
+msgid "Guest login"
+msgstr "ورود مهمان"
+
+#: template/header/sign-in.php:74
+msgid "No user account required. Create or access tickets created earlier by guest login."
+msgstr "اجباری به عضویت وجود ندارد . میتوانید بصورت مهمان تیکت ارسال فرمائید "
+
+#: template/tickets/agent_setting.php:25
+msgid "Signature"
+msgstr "امضا"
+
+#: template/tickets/agent_setting.php:33
+msgid "Save Settings"
+msgstr "ذخیره تنظیمات"
+
+#: template/tickets/dashboard.php:103
+msgid "Ticket Statistics"
+msgstr "وضعیت تیکت"
+
+#: template/tickets/logged-in.php:50
+msgid "Agent Setting"
+msgstr "تنظیمات کارمند پشتیبان"
+
+#: template/tickets/tickets.php:8 template/tickets/tickets.php:10
+#: template/tickets/tickets.php:12
+msgid "<h4>Sorry, you do not have permission to view this page</h4>"
+msgstr "<h4> شما مجوز لازم را ندارید </h4>"
+
+#: template/tickets/ticket_list/list.php:33
+msgid "Default"
+msgstr "پیشفرض"
+
+#: template/tickets/ticket_list/filter.php:132
+msgid "Public"
+msgstr "عمومی"
+
+#: template/tickets/ticket_list/filter.php:131
+msgid "Private"
+msgstr "خصوصی"
+
+#: template/tickets/ticket_list/filter.php:126
+msgid "Filter Name"
+msgstr "نام فیلتر"
+
+#: template/tickets/ticket_list/filter.php:125
+msgid "Save Current Filter"
+msgstr "ذخیره فیلتر کنونی"
+
+#: template/tickets/ticket_list/filter.php:106
+msgid "To"
+msgstr "به"
+
+#: template/tickets/ticket_list/filter.php:103
+msgid "From"
+msgstr "از"
+
+#: template/tickets/ticket_list/filter.php:76
+#: template/tickets/ticket_list/list.php:13
+msgid "Search..."
+msgstr "جستجو کردن..."
+
+#: template/tickets/ticket_list/filter.php:30
+#: template/tickets/ticket_list/list.php:27
+msgid "Saved Filters"
+msgstr "فیلتر های ذخیره شده"
+
+#: template/tickets/ticket_list/filter.php:28
+msgid "Apply Filters"
+msgstr "اعمال فیلتر"
+
+#: template/tickets/ticket-list.php:80
+msgid "Sorry, you do not have permission to view this ticket. <a href=\"%s\" class=\"alert-link\">Click here</a> for ticket list."
+msgstr "متاسفانه شما دسترسی لازم برای مشاهده این تیکت را ندارید. به منظور انتقال به لیست تیکت‌ها <a href=\"%s\" class=\"alert-link\">اینجا</a> کلیک کنید."
+
+#: template/tickets/ticket-list.php:79
+msgid "Unauthorized access!"
+msgstr "دسترسی غیرمجاز!"
+
+#: template/tickets/open-ticket/sidebar.php:405
+msgid "Are you sure to add this note?"
+msgstr "مطمئنید که می‌خواهید یادداشت اضافه کنید؟"
+
+#: template/tickets/open-ticket/sidebar.php:378
+msgid "Are you sure to post this reply?"
+msgstr "در مورد ارسال این پاسخ مطمئنید؟"
+
+#: template/tickets/open-ticket/sidebar.php:374
+#: template/tickets/open-ticket/sidebar.php:401
+msgid "Please Confirm"
+msgstr "لطفا تایید کنید"
+
+#: template/tickets/open-ticket/sidebar.php:247
+msgid "Ticket Fields"
+msgstr "فیلدهای تیکت"
+
+#: template/tickets/open-ticket/sidebar.php:189
+msgid "Agent Only Fields"
+msgstr "فیلد مخصوص کارمندان"
+
+#: template/tickets/open-ticket/sidebar.php:142
+msgid "Assigned Agents"
+msgstr "پشتیبان ارجاع یافته"
+
+#: template/tickets/open-ticket/sidebar.php:30
+msgid "Ticket Status"
+msgstr "وضعیت تیکت"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:293
+msgid "Visible to support staff only!"
+msgstr "فقط به پشتیبانان نمایش داده میشود"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:293
+msgid "Private Note:"
+msgstr "یادداشت خصوصی"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:201
+#: template/tickets/open-ticket/class-threads-formatting.php:305
+msgid "Attachments"
+msgstr "پیوست ها"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:181
+#: template/tickets/open-ticket/class-threads-formatting.php:283
+msgid "Delete this thread"
+msgstr "حذف پاسخ"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:175
+#: template/tickets/open-ticket/class-threads-formatting.php:277
+msgid "Edit this thread"
+msgstr "ویرایش موضوع"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:100
+msgid "Submit Note"
+msgstr "ذخیره پاسخ"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:78
+msgid "Submit Reply"
+msgstr "فرستادن پاسخ"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:74
+msgid "BCC (Comma separated list)"
+msgstr "فهرست BCC  (با کاما از هم جدا شده)"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:46
+msgid "Add Private Note"
+msgstr "افزودن یادداشت خصوصی"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:41
+msgid "Post Reply"
+msgstr "ارسال پاسخ"
+
+#: template/tickets/open-ticket/class-fields-formatting.php:98
+msgid "Click Here"
+msgstr "اینجا کلیک کنید"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:220
+#: template/tickets/open-ticket/class-threads-formatting.php:324
+#: template/tickets/open-ticket/class-fields-formatting.php:76
+msgid "Download"
+msgstr "دانلود"
+
+#: template/tickets/open-ticket/body.php:12
+msgid "Back to tickets"
+msgstr "بازگشت به تیکت ها"
+
+#: template/tickets/logged-in.php:25 includes/admin/class-wpsp-admin.php:227
+msgid "Dashboard"
+msgstr "پیشخوان"
+
+#: template/tickets/dashboard.php:121
+msgid "Total"
+msgstr "جمع"
+
+#: template/tickets/create-ticket.php:369
+msgid "View Ticket"
+msgstr "مشاهده تیکت"
+
+#: template/tickets/create-ticket.php:144
+msgid "No Description"
+msgstr "بدون توضیحات"
+
+#: template/tickets/create-ticket.php:143
+msgid "No Subject"
+msgstr "بدون عنوان"
+
+#: template/tickets/create-ticket.php:117
+msgid "Reset Form"
+msgstr "بازنشانی فرم"
+
+#: template/tickets/create-ticket.php:113
+msgid "Submit Ticket"
+msgstr "ارسال تیکت"
+
+#: template/tickets/create-ticket.php:59
+msgid "Create Ticket As"
+msgstr "ایجاد تیکت به عنوان"
+
+#: template/tickets/create-ticket.php:41 template/tickets/create-ticket.php:371
+#: template/tickets/logged-in.php:21
+msgid "Create New Ticket"
+msgstr "ایجاد یک تیکت جدید"
+
+#: template/tickets/class-ticket-form.php:136
+#: template/tickets/class-ticket-form.php:152
+#: template/tickets/open-ticket/class-threads-formatting.php:535
+#: template/tickets/open-ticket/class-threads-formatting.php:551
+msgid "Uploading..."
+msgstr "در حال بارگذاری..."
+
+#: template/tickets/class-ticket-form.php:131
+#: template/tickets/open-ticket/class-threads-formatting.php:530
+msgid "Only '.jpeg','.jpg', '.png', '.gif', '.bmp' formats are allowed."
+msgstr "تنها فرمت های '.jpeg','.jpg', '.png', '.gif', '.bmp' مجاز هستند."
+
+#: template/js_data.php:41
+msgid "MB"
+msgstr "مگابایت"
+
+#: template/js_data.php:41
+msgid "File Size limit exceeded! Allowed limit:"
+msgstr "حجم فایل بیش از حد مجاز! حد مجاز:"
+
+#: template/js_data.php:39
+msgid "Name or Email not given!"
+msgstr "نام یا ایمیلی داده نشده است."
+
+#: template/js_data.php:38
+msgid "Please choose registered user!"
+msgstr "لطفا کاربر ثبت نام شده را انتخاب کنید !"
+
+#: template/js_data.php:37
+msgid "Note can not be empty!"
+msgstr "یادداشت نمی تواند خالی باشد."
+
+#: template/js_data.php:36
+msgid "Reply can not be empty!"
+msgstr "پاسخ نمی تواند خالی باشد!"
+
+#: template/js_data.php:35
+msgid "View Less ..."
+msgstr "مخفی کردن ..."
+
+#: template/js_data.php:34
+msgid "View More ..."
+msgstr "نمایش بیشتر ..."
+
+#: template/js_data.php:32
+msgid "WARNING: Anyone having your email address can access your guest tickets. Please avoid sharing any sensitive data."
+msgstr "اخطار :‌ هرکس که آدرس ایمیل شما را دارد میتواند به تیکت های مهمان شما دسترسی داشته باشد . لطفا از اشتراک گذاری اطلاعات حساس خود داری نمایید ."
+
+#: template/js_data.php:27
+msgid "You do not have permission to delete public filter!"
+msgstr "شما اجازه ندارید که فیلتر عمومی را حذف کنید !"
+
+#: template/js_data.php:26
+msgid "Default filter can not be deleted!"
+msgstr "فیلتر پیشفرض قابل حذف نیست !"
+
+#: template/js_data.php:25
+msgid "Please enter filter name!"
+msgstr "لطفا نام فیلتر را وارد نمایید !"
+
+#: template/js_data.php:24 includes/admin/class-wpsp-admin.php:151
+#: includes/ajax/get_restore_ticket.php:28
+#: includes/ajax/get_permanent_delete_ticket.php:28
+msgid "Are you sure?"
+msgstr "آیا مطمئن هستید؟"
+
+#: template/js_data.php:23
+msgid "Incorrect URL!"
+msgstr "آدرس نادرست !"
+
+#: template/js_data.php:22
+msgid "Incorrect Email Address!"
+msgstr "ایمیل نادرست !"
+
+#: template/js_data.php:21
+msgid "Required field should not be empty!"
+msgstr "خانه های ضروری نباید خالی باشند !"
+
+#: template/js_data.php:20
+msgid "'.exe', '.php' files are not allowed!"
+msgstr "پسوند های '.exe' و '.php' قابل قبول نیست !"
+
+#: template/js_data.php:14
+msgid "Please wait..."
+msgstr "لطفاً صبر کنید..."
+
+#: template/header/user_info.php:40
+msgid "Login"
+msgstr "ورود"
+
+#: template/header/user_info.php:30
+msgid "Sign out"
+msgstr "خروج"
+
+#: template/header/sign-in.php:83
+msgid "Your Email"
+msgstr "ایمیل شما"
+
+#: template/header/sign-in.php:80
+msgid "Your Name"
+msgstr "نام شما"
+
+#: template/header/sign-in.php:63
+msgid "OR"
+msgstr "یا"
+
+#: template/header/sign-in.php:43 template/header/sign-in.php:88
+msgid "Sign in"
+msgstr "ورود"
+
+#: template/header/sign-in.php:33
+msgid "Remember me"
+msgstr " مرا به خاطر بسپار"
+
+#: template/header/sign-in.php:28 template/header/sign-in.php:29
+msgid "Password"
+msgstr "گذر واژه"
+
+#: template/header/sign-in.php:25 template/header/sign-in.php:26
+msgid "Username or email"
+msgstr "نام کاربری یا رایانامه"
+
+#: template/header/sign-in.php:21
+msgid "Please sign in"
+msgstr "لطفا وارد شوید "
+
+#: template/header/user_info.php:39 template/header/header.php:85
+#: includes/admin/general/general-advanced-settings.php:45
+msgid "Sign Up"
+msgstr "ثبت نام"
+
+#: template/header/header.php:80
+#: includes/admin/general/general-advanced-settings.php:21
+msgid "Sign In"
+msgstr "ورود"
+
+#: template/tickets/logged-in.php:76 template/tickets/logged-in.php:98
+#: template/header/header.php:68
+#: includes/admin/general/general-advanced-settings.php:33
+msgid "Sign Out"
+msgstr "خروج"
+
+#: template/header/header.php:30
+msgid "Back to website"
+msgstr "بازگشت به وبسایت"
+
+#: includes/functions/replace_template_tags.php:121
+msgid "On %1$s, %2$s wrote:"
+msgstr "در %1$s ، %2$s نوشته \""
+
+#: includes/functions/replace_template_tags.php:23
+#: includes/functions/replace_template_tags.php:102
+msgid "Attachments:"
+msgstr "پیوست: "
+
+#: includes/class-wpsp-functions.php:987 template/tickets/dashboard.php:71
+msgid "Tickets"
+msgstr "تیکت ها"
+
+#: includes/class-wpsp-functions.php:952
+msgid "Agent Created"
+msgstr "نماینده ایجاد شده"
+
+#: includes/class-wpsp-functions.php:951
+msgid "Date Updated"
+msgstr "تاریخ بروزرسانی"
+
+#: includes/class-wpsp-functions.php:950
+msgid "Date Created"
+msgstr "تاریخ ایجاد"
+
+#: includes/class-wpsp-functions.php:948
+msgid "Assigned Agent"
+msgstr "پشتیبان ارجاع داده شده"
+
+#: includes/class-wpsp-functions.php:945
+#: template/tickets/open-ticket/sidebar.php:64
+msgid "Raised By"
+msgstr "ایجاد شده توسط"
+
+#: includes/class-wpsp-functions.php:942
+msgid "ID"
+msgstr "شناسه"
+
+#: includes/class-wpsp-functions.php:923
+msgid "Description"
+msgstr "توضیح"
+
+#: includes/class-wpsp-functions.php:922 includes/class-wpsp-functions.php:944
+#: includes/class-wpsp-functions.php:1332
+msgid "Subject"
+msgstr "موضوع"
+
+#: includes/class-wpsp-functions.php:888
+msgid "Delete Custom Field"
+msgstr "حذف فیلد سفارشی"
+
+#: includes/class-wpsp-functions.php:887
+msgid "Edit Custom Field"
+msgstr "تغیر فیلد سفارشی"
+
+#: includes/class-wpsp-functions.php:853
+msgid "URL"
+msgstr "آدرس URL"
+
+#: includes/class-wpsp-functions.php:852
+msgid "Attachment"
+msgstr "الحاقات"
+
+#: includes/class-wpsp-functions.php:851
+msgid "Date"
+msgstr "تاریخ"
+
+#: includes/class-wpsp-functions.php:850
+msgid "Textarea"
+msgstr "ناحیه ی متنی"
+
+#: includes/class-wpsp-functions.php:849
+msgid "Radio Button"
+msgstr "دکمه رادیویی"
+
+#: includes/class-wpsp-functions.php:848
+msgid "Checkbox"
+msgstr "چک باکس"
+
+#: includes/class-wpsp-functions.php:847
+msgid "Drop-Down"
+msgstr "فهرست کشویی"
+
+#: includes/class-wpsp-functions.php:846
+msgid "Text Field"
+msgstr "فیلد متنی"
+
+#: includes/class-wpsp-functions.php:835
+msgid "Delete Priority"
+msgstr "حذف اولویت"
+
+#: includes/class-wpsp-functions.php:830
+msgid "Edit Priority"
+msgstr "ویرایش اولویت"
+
+#: includes/class-wpsp-functions.php:818
+msgid "Delete Status"
+msgstr "حذف وضعیت"
+
+#: includes/class-wpsp-functions.php:813
+msgid "Edit Status"
+msgstr "ویرایش وضعیت"
+
+#: includes/class-wpsp-functions.php:753
+msgid "Delete Category"
+msgstr "حذف دسته بندی"
+
+#: includes/class-wpsp-functions.php:748
+msgid "Edit Category"
+msgstr "ویرایش دسته بندی"
+
+#: includes/ajax/user-login/signin.php:43
+#: includes/ajax/user-login/guest_signin.php:40
+msgid "Success!"
+msgstr "موفق!"
+
+#: includes/ajax/user-login/guest_signin.php:27
+msgid "This email address already registered as user. Please sign in above!"
+msgstr "ایمیل مورد نظر به عنوان یک کاربر در وبسایت ثبت شده است . لطفا از طریق فرم بالا , وارد شوید !"
+
+#: includes/ajax/ticket-list/get_tickets.php:377
+msgid "<strong>%d</strong> of <strong>%d</strong> Pages"
+msgstr "<strong>%d</strong> از <strong>%d</strong> صفحات"
+
+#: includes/ajax/ticket-list/get_tickets.php:330
+msgid "No Tickets found!"
+msgstr "هیچ تیکت‌ای یافت نشد"
+
+#: includes/ajax/ticket-list/get_tickets.php:239
+msgid "<strong>%d</strong> Tickets"
+msgstr "<strong>%d</strong> تیکت ها"
+
+#: includes/ajax/ticket-list/get_tickets.php:237
+msgid "<strong>%d</strong>-<strong>%d</strong> of <strong>%d</strong> Tickets"
+msgstr "<strong>%d</strong>-<strong>%d</strong> از <strong>%d</strong> تیکت ها"
+
+#: template/tickets/ticket_list/list.php:59
+#: includes/ajax/ticket-list/get_tickets.php:225
+msgid "Delete"
+msgstr "حذف"
+
+#: includes/ajax/ticket-list/get_tickets.php:218
+msgid "Assign Agent"
+msgstr "انتصاب نماینده"
+
+#: includes/ajax/ticket-list/get_tickets.php:211
+msgid "Change Status"
+msgstr "تغییر وضعیت"
+
+#: includes/ajax/ticket-list/get_tickets.php:17
+msgid "Filter not found!"
+msgstr "فیلتر پیدا نشد !"
+
+#: template/tickets/dashboard.php:128
+#: includes/functions/replace_template_tags.php:73
+#: template/tickets/open-ticket/class-threads-formatting.php:356
+#: template/tickets/open-ticket/sidebar.php:171
+#: includes/ajax/ticket-list/class-ticket-list-formating.php:163
+msgid "None"
+msgstr "هیچکدام"
+
+#: template/tickets/open-ticket/sidebar.php:303
+#: includes/ajax/ticket-individual/get_ticket_fields.php:56
+#: includes/ajax/ticket-individual/set_ticket_fields.php:143
+msgid "No Ticket fields"
+msgstr "فیلد تیکتی وجود ندارد."
+
+#: includes/ajax/ticket-individual/get_ticket_fields.php:21
+msgid "Change Ticket Fields"
+msgstr "تغییر فیلد های تیکت"
+
+#: includes/ajax/ticket-individual/get_edit_thread.php:26
+msgid "Edit Thread"
+msgstr "ویرایش موضوع"
+
+#: includes/ajax/ticket-individual/get_edit_subject.php:20
+msgid "Edit Subject"
+msgstr "ویرایش موضوع"
+
+#: includes/ajax/ticket-individual/get_delete_ticket.php:29
+msgid "Are you sure to delete this ticket?"
+msgstr "مطمئنید که می‌خواهید این تیکت را پاک کنید؟"
+
+#: template/tickets/open-ticket/body.php:24
+#: includes/ajax/ticket-individual/get_delete_ticket.php:20
+msgid "Delete Ticket"
+msgstr "حذف تیکت"
+
+#: includes/ajax/ticket-individual/get_delete_thread.php:30
+msgid "Are you sure to delete this thread?"
+msgstr "مطمئنید که می‌خواهید این موضوع را حذف کنید؟"
+
+#: includes/ajax/ticket-individual/get_delete_thread.php:22
+msgid "Delete Thread"
+msgstr "حذف پاسخ"
+
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:31
+msgid "Are you sure to delete these tickets?"
+msgstr "مطمئنید که می‌خواهید این تیکت ها را پاک کنید؟"
+
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:22
+msgid "Delete Tickets"
+msgstr "حذف تیکت؟"
+
+#: includes/ajax/get_restore_ticket.php:59
+#: includes/ajax/get_permanent_delete_ticket.php:59
+#: template/tickets/open-ticket/sidebar.php:383
+#: template/tickets/open-ticket/sidebar.php:410
+#: includes/ajax/ticket-individual/get_close_ticket.php:60
+#: includes/ajax/ticket-individual/get_delete_thread.php:62
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:62
+#: includes/ajax/ticket-individual/get_delete_ticket.php:60
+msgid "Confirm"
+msgstr "تایید کردن"
+
+#: includes/ajax/ticket-individual/get_close_ticket.php:29
+msgid "Are you sure to close ticket?"
+msgstr "مطمئنید که می‌خواهید این تیکت را بازگردانید؟"
+
+#: template/tickets/open-ticket/body.php:18
+#: includes/ajax/ticket-individual/get_close_ticket.php:21
+msgid "Close Ticket"
+msgstr "بستن تیکت"
+
+#: template/tickets/open-ticket/body.php:31
+#: includes/ajax/ticket-individual/get_clone_ticket.php:18
+msgid "Clone Ticket"
+msgstr "کپی تیکت"
+
+#: template/tickets/create-ticket.php:74
+#: includes/ajax/ticket-individual/get_change_raised_by.php:44
+msgid "Guest Email"
+msgstr "ایمیل مهمان"
+
+#: template/tickets/create-ticket.php:70
+#: includes/ajax/ticket-individual/get_change_raised_by.php:40
+msgid "Guest Name"
+msgstr "نام مهمان"
+
+#: template/tickets/create-ticket.php:67
+#: includes/ajax/ticket-individual/get_change_raised_by.php:37
+msgid "Search user ..."
+msgstr "جستجو کاربر"
+
+#: template/tickets/create-ticket.php:66
+#: includes/ajax/ticket-individual/get_change_raised_by.php:36
+msgid "Choose User"
+msgstr "جستجو کاربر"
+
+#: template/tickets/create-ticket.php:62
+#: includes/ajax/ticket-individual/get_change_raised_by.php:32
+msgid "Guest"
+msgstr "مهمان"
+
+#: template/tickets/create-ticket.php:61
+#: includes/ajax/ticket-individual/get_change_raised_by.php:31
+msgid "Registered User"
+msgstr "کاربران ثبت نام شده"
+
+#: includes/class-wpsp-functions.php:946
+#: includes/ajax/ticket-individual/get_change_raised_by.php:29
+msgid "User Type"
+msgstr "نوع کاربر"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:20
+msgid "Change Raised By"
+msgstr "تغییر ایجاد شده توسط"
+
+#: includes/class-wpsp-functions.php:925 includes/class-wpsp-functions.php:949
+#: includes/class-wpsp-functions.php:1344
+#: template/tickets/open-ticket/sidebar.php:51
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:61
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:56
+msgid "Priority"
+msgstr "اولویت"
+
+#: includes/class-wpsp-functions.php:924 includes/class-wpsp-functions.php:947
+#: includes/class-wpsp-functions.php:1340
+#: template/tickets/open-ticket/sidebar.php:47
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:45
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:42
+msgid "Category"
+msgstr "دسته بندی"
+
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:20
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:19
+msgid "Change Ticket Status"
+msgstr "تغییر وضعیت تیکت"
+
+#: includes/ajax/ticket-individual/get_assign_agent.php:30
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:27
+msgid "Search agent ..."
+msgstr "جستجو پشتیبان"
+
+#: includes/ajax/ticket-individual/get_assign_agent.php:21
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:18
+msgid "Change Assigned Agent"
+msgstr "تغییر پشتیبان"
+
+#: template/tickets/open-ticket/sidebar.php:233
+#: includes/ajax/ticket-individual/get_agent_fields.php:48
+#: includes/ajax/ticket-individual/set_agent_fields.php:136
+msgid "No Agent Only fields"
+msgstr "بدون فیلد مخصوص"
+
+#: includes/ajax/ticket-individual/get_agent_fields.php:21
+msgid "Change Agent Fields"
+msgstr "تغییر فیلد های پشتیبان"
+
+#: template/js_data.php:19 template/tickets/class-ticket-form.php:88
+#: template/tickets/class-ticket-form.php:413
+#: template/tickets/open-ticket/class-threads-formatting.php:488
+#: includes/ajax/ticket-individual/class-ticket-fields-format.php:226
+msgid "Attach Files"
+msgstr "پیوست فایل(ها)"
+
+#: includes/ajax/ticket-form/upload_file.php:73
+msgid "done"
+msgstr "انجام شد"
+
+#: includes/ajax/ticket-form/upload_file.php:40
+msgid "Error: file size exceeded allowed limit!"
+msgstr "خطا: حجم فایل بیش از حد مجاز است!"
+
+#: includes/ajax/ticket-form/upload_file.php:29
+#: includes/ajax/ticket-form/upload_file.php:34
+msgid "Error: file format not supported!"
+msgstr "خطا: فرمت فایل پشتیبانی نمی شود!"
+
+#: includes/ajax/save_table_order.php:55
+msgid "Error saving order!"
+msgstr "خطا در ذخیره محصول"
+
+#: includes/ajax/save_table_order.php:53
+msgid "Order saved successfully!"
+msgstr "ذخیره محصول موفقیت آمیر بود!"
+
+#: includes/ajax/get_delete_status.php:29
+msgid "Are you sure to delete this status?"
+msgstr "آیا از حذف \"وضعیت\" مطمئن هستید ؟"
+
+#: includes/ajax/get_delete_priority.php:29
+msgid "Are you sure to delete this priority?"
+msgstr "آیا از حذف \"اولویت\" مطمئن هستید ؟"
+
+#: includes/ajax/get_delete_custom_menu.php:28
+#: includes/ajax/get_delete_support_menu.php:28
+msgid "Are you sure to delete this menu?"
+msgstr "آیا از حذف این منو مطمئن هستید ؟"
+
+#: includes/ajax/get_delete_custom_field.php:33
+msgid "Please note, this will delete all data associated with this custom field and can not be undone!"
+msgstr "توجه فرمایید ، این تمامی دیتا هایی که توسط این فیلد ساختگی ایجاد شده را می تواند حذف کند و احتمال دارد قابل برگشت نباشد."
+
+#: includes/ajax/get_delete_custom_field.php:29
+msgid "Are you sure to delete this custom field?"
+msgstr "آیا مطمئن هستید که می خواهید این فیلد ساختگی را حذف کنید؟"
+
+#: includes/ajax/get_delete_category.php:29
+msgid "Are you sure to delete this category?"
+msgstr "آیا از حذف این دسته مطمئن هستید ؟"
+
+#: includes/ajax/get_delete_agent.php:29
+msgid "Are you sure to delete this agent?"
+msgstr "ایا مطمئن هستید که می خواهید این پشتیبان را حذف کنید؟"
+
+#: includes/ajax/get_edit_status.php:60 includes/ajax/get_add_status.php:54
+msgid "Please enter status name!"
+msgstr "لطفا نام وضعیت را وارد کنید."
+
+#: includes/ajax/get_edit_status.php:29 includes/ajax/get_add_status.php:24
+msgid "Status Name"
+msgstr "نام وضعیت"
+
+#: includes/ajax/get_edit_priority.php:67 includes/ajax/get_edit_status.php:67
+#: includes/ajax/get_add_status.php:61 includes/ajax/get_add_priority.php:61
+msgid "Please choose color!"
+msgstr "لطفا رنگی را انتخاب کنید."
+
+#: includes/ajax/get_edit_priority.php:60 includes/ajax/get_add_priority.php:54
+msgid "Please enter priority name!"
+msgstr "لطفا نام اولویت را وارد کنید."
+
+#: includes/ajax/get_edit_priority.php:34 includes/ajax/get_edit_status.php:34
+#: includes/ajax/get_add_status.php:29 includes/ajax/get_add_priority.php:29
+msgid "Choose Color"
+msgstr "رنگی را انتخاب کنید."
+
+#: includes/ajax/get_edit_priority.php:29 includes/ajax/get_add_priority.php:24
+msgid "Priority Name"
+msgstr "نام اولویت"
+
+#: includes/ajax/get_add_custom_field.php:138
+#: includes/ajax/get_edit_custom_field.php:150
+msgid "Please insert Field Options!"
+msgstr "لطفاً گزینه های فیلد را وارد کنید!"
+
+#: includes/ajax/get_add_custom_field.php:131
+#: includes/ajax/get_edit_custom_field.php:143
+msgid "Please choose Field Type!"
+msgstr "لطفا نوع فیلد را انتخاب کنید"
+
+#: includes/ajax/get_add_custom_field.php:124
+#: includes/ajax/get_edit_custom_field.php:136
+msgid "Please enter Field Label!"
+msgstr "لطفاً برچسب فیلد را وارد کنید!"
+
+#: includes/ajax/get_add_custom_field.php:77
+#: includes/ajax/get_edit_custom_field.php:88
+msgid "If category is set, custom field will only visible when one of the selected category is choosen in create ticket form. If you want to show this all the time, please leave this empty. Use Ctrl+Click for select OR unselect value."
+msgstr "اگر موضوعی انتخاب شود ، فیلد ساختگی فقط زمانی که موضوع هدف در فرم ثبت تیکت انتخاب شود نمایش داده می شود . اگر می خواهید همیشه نمیاش داده شود ، این گزینه را خالی بگذارید . از CTRL + CLICK برای انتخاب استفاده کنید یا گزینه ای انتخاب نکنید."
+
+#: includes/ajax/get_add_custom_field.php:69
+#: includes/ajax/get_edit_custom_field.php:74
+msgid "Assign Categories (optional)"
+msgstr "پشتیبان موضوعات ( اختیاری ) "
+
+#: includes/ajax/get_add_custom_field.php:65
+#: includes/ajax/get_edit_custom_field.php:70
+msgid "Required field to ticket form. If set Yes, user must have to fill or submit value for this field"
+msgstr "فیلد اجباری ، اگر بله را انتخاب کنید کاربر حتما باید فیلد را تکمیل کند."
+
+#: includes/ajax/get_add_custom_field.php:56
+#: includes/ajax/get_edit_custom_field.php:61
+msgid "Agent Only fields not available for ticket form. These can be edited by agents for their internal use."
+msgstr "فیلد های مخصوص پشتیبانان در صفحه تیکت قرار ندارد . این موارد می توانید توسط پشتیبان ها برای استفاده هایشان ویرایش کنند ."
+
+#: includes/ajax/get_add_custom_field.php:45
+#: includes/ajax/get_edit_custom_field.php:50
+msgid "Enter Field Options"
+msgstr "لطفا گزینه ها را برای این زمینه وارد کنید:"
+
+#: includes/ajax/get_add_custom_field.php:31
+#: includes/ajax/get_edit_custom_field.php:35
+msgid "Choose Field Type"
+msgstr "نوع فیلد را انتخاب کند."
+
+#: includes/ajax/get_add_custom_field.php:26
+#: includes/ajax/get_edit_custom_field.php:30
+msgid "Field Label"
+msgstr "برچسب فیلد"
+
+#: includes/ajax/get_edit_category.php:135
+#: includes/ajax/get_add_category.php:114
+msgid "Please enter category name!"
+msgstr "لطفاً نام موضوع را وارد کنید!"
+
+#: includes/ajax/get_edit_category.php:36 includes/ajax/get_add_category.php:31
+msgid "Search Supervisors..."
+msgstr "جستجو سرپرستان پشتیبان ها ..."
+
+#: includes/ajax/get_edit_category.php:34 includes/ajax/get_add_category.php:29
+msgid "Supervisor (Optional)"
+msgstr "سرپرست پشتیبان ( اختیاری )"
+
+#: includes/ajax/get_edit_category.php:29 includes/ajax/get_add_category.php:24
+msgid "Category Name"
+msgstr "نام موضوع"
+
+#: includes/ajax/get_add_agent.php:81
+msgid "Please select an Agent!"
+msgstr "لطفا پشتیبانی را انتخاب کنید!"
+
+#: includes/ajax/get_edit_category.php:65
+#: includes/ajax/get_delete_custom_menu.php:41
+#: includes/ajax/get_delete_support_menu.php:41
+#: includes/ajax/get_add_category.php:45 includes/ajax/get_delete_agent.php:42
+#: includes/ajax/get_delete_priority.php:42
+#: includes/ajax/get_add_custom_field.php:86
+#: includes/ajax/get_edit_priority.php:45 includes/ajax/get_edit_status.php:45
+#: includes/ajax/get_add_status.php:39 includes/ajax/get_delete_status.php:42
+#: includes/ajax/get_add_agent.php:51 includes/ajax/get_edit_agent.php:42
+#: includes/ajax/get_delete_custom_field.php:43
+#: includes/ajax/get_edit_custom_field.php:98
+#: includes/ajax/get_delete_category.php:42
+#: includes/ajax/get_add_priority.php:39
+#: template/tickets/ticket_list/filter.php:137
+msgid "Submit"
+msgstr "ثبت"
+
+#: includes/ajax/get_add_agent.php:31
+msgid "Search Agents..."
+msgstr "جستجو پشتیبان ..."
+
+#: includes/ajax/get_add_agent.php:26
+msgid "Select Agent"
+msgstr "انتخاب پشتیبان"
+
+#: includes/ajax/autocomplete/wp_user.php:32
+msgid "No user found!"
+msgstr "کاربر پیدا نشد !"
+
+#: includes/ajax/autocomplete/ticket_filter.php:126
+msgid "No results found!"
+msgstr "نتیجه ای پیدا نشد"
+
+#: includes/admin/ticket-list/ticket-list.php:15
+msgid "Default Filters"
+msgstr "فیلتر های پیشرض"
+
+#: includes/admin/ticket-list/ticket-list.php:11
+msgid "List Settings"
+msgstr "تنظیمات لیست"
+
+#: includes/admin/ticket-list/list-settings.php:30
+msgid "Agent Filter"
+msgstr "فیلتر پشتیبان"
+
+#: includes/admin/ticket-list/list-settings.php:29
+msgid "Customer Filter"
+msgstr "فیلتر مشتری"
+
+#: includes/admin/ticket-list/list-settings.php:17
+msgid "Ticket List Settings"
+msgstr "تنظیمات لیست تیکت"
+
+#: includes/admin/ticket-list/default-filters.php:147
+msgid "Number of Tickets shown per page for agent view."
+msgstr "شماره تیکت ها در هر صفحه برای صفحه پشتیبان نمایش داده می شود."
+
+#: includes/admin/ticket-list/default-filters.php:129
+msgid "Tickets are loaded on selected order for agent view by default. If agent apply manual filter, this setting will not take effect."
+msgstr "ترتیب تیکت ها  برای صفحه پشتیبان بصورت پیشفرض بارگیری شده است. اگر پشتیبان فیلتر خاصی را تنظیم کند این تنظیم روی آن اثر ندارد."
+
+#: includes/admin/ticket-list/default-filters.php:106
+msgid "Selected statuses will be hidden if no filter is active for agent view. If agent use status filter manually on ticket list, this setting will not take effect and tickets will be filtered as per customer selection."
+msgstr "وضعیت های انتخاب شده پنهان خواهد شد اگر فیلتر فعالی برای صفحه پشتیبان وجود نداشته باشد. اگر پشتیبان از فیلتر وضعیت در لیست تیکت استفاده می کند این تنظیم تاثیری روی فیلتر های انتخاب شده برای تیکت هایی که بصورت فیلتر شده نمایش داده می شوند ندارد."
+
+#: includes/admin/ticket-list/list-settings.php:28
+#: includes/admin/ticket-list/default-filters.php:89
+msgid "Agent View"
+msgstr "صفحه پشتیبان"
+
+#: includes/admin/ticket-list/default-filters.php:83
+msgid "Number of Tickets shown per page for customer view."
+msgstr "تعداد تیکت ها در هر صفحه برای صفحه مشتری"
+
+#: includes/admin/ticket-list/default-filters.php:80
+#: includes/admin/ticket-list/default-filters.php:144
+msgid "500"
+msgstr "500"
+
+#: includes/admin/ticket-list/default-filters.php:79
+#: includes/admin/ticket-list/default-filters.php:143
+msgid "100"
+msgstr "100"
+
+#: includes/admin/ticket-list/default-filters.php:78
+#: includes/admin/ticket-list/default-filters.php:142
+msgid "50"
+msgstr "50"
+
+#: includes/admin/ticket-list/default-filters.php:77
+#: includes/admin/ticket-list/default-filters.php:141
+msgid "40"
+msgstr "40"
+
+#: includes/admin/ticket-list/default-filters.php:76
+#: includes/admin/ticket-list/default-filters.php:140
+msgid "30"
+msgstr "30"
+
+#: includes/admin/ticket-list/default-filters.php:75
+#: includes/admin/ticket-list/default-filters.php:139
+msgid "20"
+msgstr "20"
+
+#: includes/admin/ticket-list/default-filters.php:74
+#: includes/admin/ticket-list/default-filters.php:138
+msgid "10"
+msgstr "10"
+
+#: includes/admin/ticket-list/default-filters.php:71
+#: includes/admin/ticket-list/default-filters.php:135
+msgid "Number of Tickets"
+msgstr "تعداد تیکت"
+
+#: includes/admin/ticket-list/default-filters.php:65
+msgid "Tickets are loaded on selected order for customer view by default. If customer apply manual filter, this setting will not take effect."
+msgstr "وضعیت های انتخاب شده پنهان خواهد شد اگر فیلتر فعالی برای صفحه پشتیبان وجود نداشته باشد. اگر پشتیبان از فیلتر وضعیت در لیست تیکت استفاده می کند این تنظیم تاثیری روی فیلتر های انتخاب شده برای تیکت هایی که بصورت فیلتر شده نمایش داده می شوند ندارد."
+
+#: includes/admin/ticket-list/default-filters.php:48
+#: includes/admin/ticket-list/default-filters.php:112
+msgid "Order By"
+msgstr "مرتب کردن بر اساس"
+
+#: includes/admin/ticket-list/default-filters.php:42
+msgid "Selected statuses will be hidden if no filter is active for customer view. If customer use status filter manually on ticket list, this setting will not take effect and tickets will be filtered as per customer selection."
+msgstr "وضعیت های انتخاب شده پنهان خواهد شد اگر فیلتر فعالی برای صفحه پشتیبان وجود نداشته باشد. اگر پشتیبان از فیلتر وضعیت در لیست تیکت استفاده می کند این تنظیم تاثیری روی فیلتر های انتخاب شده برای تیکت هایی که بصورت فیلتر شده نمایش داده می شوند ندارد."
+
+#: includes/admin/ticket-list/default-filters.php:30
+#: includes/admin/ticket-list/default-filters.php:94
+msgid "Hide Selected Statuses"
+msgstr "مخفی کردن وضعیت های انتخاب شده"
+
+#: includes/admin/ticket-list/list-settings.php:27
+#: includes/admin/ticket-list/default-filters.php:25
+msgid "Customer View"
+msgstr "صفحه مشتری"
+
+#: includes/admin/ticket-form/ticket-form.php:11
+msgid "Manage Form"
+msgstr "فرم تنظیمات"
+
+#: includes/admin/ticket-list/list-settings.php:139
+#: includes/admin/ticket-list/open-ticket-widget.php:82
+#: includes/admin/ticket-form/form-management.php:96
+msgid "Please Wait ..."
+msgstr "لطفا منتظر بمانید ..."
+
+#: includes/admin/general/general-advanced-settings.php:26
+#: includes/admin/general/general-advanced-settings.php:38
+#: includes/admin/general/general-advanced-settings.php:50
+#: includes/admin/general/general-settings.php:457
+#: includes/admin/general/general-settings.php:467
+#: includes/admin/ticket-list/default-filters.php:172
+#: includes/admin/ticket-form/form-management.php:47
+msgid "Disable"
+msgstr "غیر فعال"
+
+#: includes/admin/general/general-advanced-settings.php:25
+#: includes/admin/general/general-advanced-settings.php:37
+#: includes/admin/general/general-advanced-settings.php:49
+#: includes/admin/general/general-settings.php:456
+#: includes/admin/general/general-settings.php:466
+#: includes/admin/ticket-list/default-filters.php:166
+#: includes/admin/ticket-form/form-management.php:46
+msgid "Enable"
+msgstr "فعال"
+
+#: includes/admin/ticket-form/form-management.php:28
+msgid "Full Width"
+msgstr "تمام طول ( Full width )"
+
+#: includes/class-wpsp-functions.php:943 includes/class-wpsp-functions.php:1336
+#: template/tickets/open-ticket/sidebar.php:43
+#: includes/admin/ticket-form/form-management.php:27
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:29
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:28
+msgid "Status"
+msgstr "وضعیت"
+
+#: includes/admin/ticket-form/form-management.php:17
+msgid "Create New Ticket Form"
+msgstr "ایجاد فرم تیکت جدید"
+
+#: includes/admin/ticket-form/custom-fields.php:55
+msgid "No Custom Fields found!"
+msgstr "هیچ فیلد سفارشی‌ای یافت نشد"
+
+#: includes/admin/ticket-form/custom-fields.php:30
+msgid "Assigned Categories"
+msgstr "اختصاص دسته ها"
+
+#: includes/ajax/get_add_custom_field.php:60
+#: includes/ajax/get_edit_custom_field.php:65
+#: includes/admin/ticket-form/custom-fields.php:29
+msgid "Required"
+msgstr "اجباری"
+
+#: includes/ajax/get_add_custom_field.php:51
+#: includes/ajax/get_edit_custom_field.php:56
+#: includes/admin/ticket-form/custom-fields.php:28
+msgid "Agent Only"
+msgstr "فقط پشتیبان"
+
+#: includes/admin/ticket-form/custom-fields.php:27
+msgid "Type"
+msgstr "نوع"
+
+#: includes/admin/ticket-form/custom-fields.php:19
+msgid "Add New Custom Field"
+msgstr "افزودن فیلد گزینشی جدید"
+
+#: includes/admin/ticket-form/ticket-form.php:15
+#: includes/admin/ticket-form/custom-fields.php:18
+msgid "Custom Fields"
+msgstr "فیلدهای دل‌خواه"
+
+#: includes/admin/general/thank_you.php:48
+msgid "URL of the ticket."
+msgstr "لینک تیکت"
+
+#: includes/admin/general/thank_you.php:47
+msgid "Name of user doing current activity."
+msgstr "نام کاربری که این کار را انجام داده است."
+
+#: includes/admin/general/thank_you.php:46
+msgid "History of communication in ticket."
+msgstr "تاریخچه گفتگو ها در تیکت."
+
+#: includes/admin/general/thank_you.php:45
+msgid "Last reply description."
+msgstr "متن آخرین پاسخ"
+
+#: includes/admin/general/thank_you.php:44
+msgid "Email of user posted last reply."
+msgstr "ایمیل کاربری که آخرین پاسخ را ارسال کرده است."
+
+#: includes/admin/general/thank_you.php:43
+msgid "Name of user posted last reply."
+msgstr "نام کاربری که آخرین پاسخ را ارسال کرده است."
+
+#: includes/admin/general/thank_you.php:42
+msgid "Name(s) of agent assigned to ticket."
+msgstr "نام پشتیبان هایی که تیکت برای آنها ارجاع داده شده است."
+
+#: includes/admin/general/thank_you.php:41
+msgid "Name of the agent who have created ticket on behalf of user. Empty if ticket created by user himself."
+msgstr "نام پشتیبان که تیکتی از طرف کاربر ایجاد کرده است. اگر خالی باشد یعنی تیکت توسط خود کاربر ایجاد شده است."
+
+#: includes/admin/general/thank_you.php:40
+msgid "Ticket create time"
+msgstr "زمان ایجاد تیکت"
+
+#: includes/admin/general/thank_you.php:39
+msgid "Email of ticket creator"
+msgstr "ایمیل ایجاد کننده تیکت"
+
+#: includes/admin/general/thank_you.php:38
+msgid "Name of ticket creator"
+msgstr "نام ایجاد کننده تیکت"
+
+#: includes/admin/general/thank_you.php:37
+msgid "Ticket Priority"
+msgstr "اولویت تیکت"
+
+#: includes/admin/general/thank_you.php:36
+msgid "Ticket Category"
+msgstr "دسته‌بندی تیکت"
+
+#: includes/admin/general/thank_you.php:35
+msgid "Ticket status"
+msgstr "وضعیت تیکت"
+
+#: includes/admin/general/thank_you.php:34
+msgid "Ticket description given while creating ticket"
+msgstr "متن تیکتی که ایجاد شده است."
+
+#: includes/admin/general/thank_you.php:33
+msgid "Ticket Subject"
+msgstr "موضوع تیکت"
+
+#: includes/admin/general/thank_you.php:17
+msgid "Thank You Page after create ticket"
+msgstr "صفحه تشکر بعد از ایجاد تیکت"
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:15
+#: includes/admin/general/support-page-menu/menu_list_update.php:25
+msgid "Add New Support Page Menu"
+msgstr "ایجاد منو جدید صفجه پشتیبانی"
+
+#: includes/admin/general/support-page-menu/menu_list.php:69
+msgid "Delete Support Menu"
+msgstr "حذف منو پشتیبانی"
+
+#: includes/admin/general/statuses.php:19
+msgid "Add New Status"
+msgstr "افزودن وضعیت جدید"
+
+#: includes/admin/general/priorities.php:28
+#: includes/admin/general/statuses.php:28
+msgid "Color"
+msgstr "رنگ"
+
+#: includes/admin/general/priorities.php:19
+msgid "Add New Priority"
+msgstr "افزودن اولویت جدید"
+
+#: includes/admin/general/general.php:43
+msgid "Support Page Menu"
+msgstr "منو صفحه پشتیبانی"
+
+#: includes/admin/general/general.php:39
+msgid "Thank you page"
+msgstr "صفحه تشکر"
+
+#: includes/admin/general/priorities.php:18
+#: includes/admin/general/general.php:23
+msgid "Priorities"
+msgstr "اولویت ها"
+
+#: includes/admin/general/statuses.php:18 includes/admin/general/general.php:19
+msgid "Statuses"
+msgstr "وضعیت ها"
+
+#: includes/admin/general/general-settings.php:424
+msgid "If you set SRN, [Ticket #123456] will become [Ticket SRN123456] whereever applicable. Please don't leave blank."
+msgstr "اگر SRN را تنظیم کنید، [تیکت #123456] تبدیل خواهد شد به [تیکت SRN123456] در هر کجا که قابل استفاده باشد. لطفاً خالی نگذارید."
+
+#: includes/admin/general/general-settings.php:420
+msgid "Ticket ID Prefix"
+msgstr "پیشوند شناسه تیکت"
+
+#: includes/admin/general/general-settings.php:379
+msgid "Allow Support Staff to read all ticket"
+msgstr "اجازه دادن به تمامی پشتیبان ها برای خواندن تمامی تیکت ها "
+
+#: includes/admin/general/general-settings.php:369
+msgid "Allow Guest Ticket"
+msgstr "اجازه دادن ایجاد تیکت مهمان"
+
+#: includes/admin/general/general-settings.php:362
+msgid "Attachment Max Size(MB)"
+msgstr "حداکثر اندازه پیوست ها ( مگابایت )"
+
+#: includes/admin/general/general-settings.php:356
+msgid "This format will be applicable for custom date fields for Support Plus"
+msgstr "این فرمت قابل استفاده برای فیلد تاریخ برای Support Plus است."
+
+#: includes/admin/general/general-settings.php:351
+msgid "Custom Date Format"
+msgstr "فرمت زمان"
+
+#: includes/admin/general/general-settings.php:345
+msgid "This format will be applicable for default date fields for Support Plus"
+msgstr "این فرمت قابل استاده برای فیلد تاریخ پیشفرض برای Support Plus است."
+
+#: includes/admin/general/general-settings.php:340
+msgid "System Date Format"
+msgstr "فرمت تاریخ سیستم"
+
+#: includes/admin/general/general-settings.php:334
+msgid "This format will be applicable for input date fields (datepicker) for WP Support Plus"
+msgstr "از این فرمت برای نمایش تاریخ در اطلاعات ورودی استفاده میشود"
+
+#: includes/admin/general/general-settings.php:310
+msgid "Calender Date Format"
+msgstr "فرمت تاریخ سیستم"
+
+#: includes/admin/general/general-settings.php:304
+msgid "Bottom"
+msgstr "پایین"
+
+#: includes/admin/general/general-settings.php:303
+msgid "Top"
+msgstr "بالا"
+
+#: includes/admin/general/general-settings.php:300
+msgid "Reply Form Position"
+msgstr "موقعیت فرم پاسخ"
+
+#: includes/admin/general/general-settings.php:295
+msgid "As name suggest, this setting will change ticket status to selected when support agent reply to ticket. Current Status will not change status of ticket in this case."
+msgstr "از نام مشخص است که این تنظیم هنگام ارسال پاسخ از طرف ایجاد کننده تیکت ، به گزینه انتخاب شده تغییر وضعیت می دهد . "
+
+#: includes/admin/general/general-settings.php:279
+msgid "Ticket Status after Agent Reply"
+msgstr "وضعیت تیکت بعد از ارسال مشتری"
+
+#: includes/admin/general/general-settings.php:273
+msgid "This is applicable for Ticket id being created for new ticket."
+msgstr "این مورد برای تیکت های جیدد اعمال خواهد شد"
+
+#: includes/admin/general/general-settings.php:271
+msgid "Random"
+msgstr "تصادفی"
+
+#: includes/admin/general/general-settings.php:265
+msgid "Sequential"
+msgstr "پیوسته"
+
+#: includes/admin/general/general-settings.php:257
+#: includes/admin/general/thank_you.php:32
+msgid "Ticket ID"
+msgstr "شناسه تیکت"
+
+#: includes/admin/general/general-settings.php:251
+msgid "If enabled, it will show Close Ticket button to open ticket view for customer. This button will change ticket status to selected status."
+msgstr "اگر فعال شود دکمه بستن تیکت را برای تیکت جدید مشتری نمایش خواهد داد . این دکمه وضعیت تیکت را به وضعیت انتخابی تغییر میدهد"
+
+#: includes/admin/general/general-settings.php:232
+msgid "Allow Customer to Close Ticket"
+msgstr "اجازه دادن به مشتری برای بستن تیکت"
+
+#: includes/admin/general/general-settings.php:226
+msgid "As name suggest, this setting will change ticket status to selected when ticket creator reply to ticket. Current Status will not change status of ticket in this case."
+msgstr "از نام مشخص است که این تنظیم هنگام ارسال پاسخ از طرف ایجاد کننده تیکت ، به گزینه انتخاب شده تغییر وضعیت می دهد . "
+
+#: includes/admin/general/general-settings.php:214
+#: includes/admin/general/general-settings.php:285
+msgid "Status List"
+msgstr "لیست وضعیت ها"
+
+#: includes/admin/general/general-settings.php:212
+#: includes/admin/general/general-settings.php:283
+msgid "Current Status"
+msgstr "وضعیت فعلی"
+
+#: includes/admin/general/general-settings.php:207
+msgid "Ticket Status after Customer Reply"
+msgstr "وضعیت تیکت پس از پاسخ مشتری"
+
+#: includes/admin/general/general-settings.php:201
+msgid "This priority will be default priority for new ticket."
+msgstr "این اولویت ، اولویت پیشفرض برای تیکت جدید خواهد بود."
+
+#: includes/admin/general/general-settings.php:185
+msgid "Default Ticket Priority"
+msgstr "اولویت پیشفرض تیکت"
+
+#: includes/admin/general/general-settings.php:179
+msgid "This status will be default status for new ticket."
+msgstr "این وضعیت ها ، وضعیت های پیشفرض برای تیکت جدید خواهد بود."
+
+#: includes/admin/general/general-settings.php:163
+msgid "Default Ticket Status"
+msgstr "وضعیت های پیشفرض تیکت"
+
+#: includes/admin/general/general-settings.php:157
+msgid "This category will be default category for new ticket. If category is not present in ticket form or ticket created via email piping, this category will be used as new ticket category."
+msgstr "این دسته بندی ، دسته بندی پیشرض برای تیکت جدید خواهد بود . اگر دسته ای در فرم تیکت یا تیکت ایجاد شده توسط ایمیل نباشد ، این موضوع بصورت پیشفرض برای دسته بندی لحاظ خواهد شد."
+
+#: includes/admin/general/general-settings.php:141
+msgid "Default Category"
+msgstr "دسته‌بندی پیش فرض"
+
+#: includes/admin/general/general-settings.php:129
+msgid "Open support page in new window?"
+msgstr "باز کردن صفحه پشتیبانی در صفحه جدید ؟"
+
+#: includes/admin/general/general-settings.php:35
+msgid "Support Page"
+msgstr "صفحه پشتیبانی"
+
+#: includes/admin/general/general-settings.php:26
+msgid "Choose Logo"
+msgstr "انتخاب لوگو"
+
+#: includes/admin/general/footer-text.php:17
+#: includes/admin/general/general.php:35
+msgid "Footer Text"
+msgstr "متن فوتر"
+
+#: wp-support-plus.php:72 wp-support-plus.php:79
+#: includes/class-wpsp-ajax.php:141 includes/class-wpsp-ajax.php:159
+#: includes/class-wpsp-ajax.php:213 template/tickets/create-ticket.php:158
+#: template/tickets/create-ticket.php:165
+#: includes/ajax/set_add_custom_field.php:10
+#: includes/ajax/search_users_for_add_agent.php:10
+#: includes/ajax/set_delete_status.php:13
+#: includes/ajax/set_edit_category.php:17 includes/ajax/set_add_priority.php:10
+#: includes/ajax/set_add_status.php:10 includes/ajax/get_edit_category.php:13
+#: includes/ajax/get_delete_custom_menu.php:13
+#: includes/ajax/get_delete_support_menu.php:13
+#: includes/ajax/set_delete_support_menu.php:13
+#: includes/ajax/set_restore_ticket.php:12
+#: includes/ajax/get_add_category.php:10 includes/ajax/set_add_category.php:10
+#: includes/ajax/get_delete_agent.php:13
+#: includes/ajax/get_delete_priority.php:13
+#: includes/ajax/get_add_custom_field.php:10
+#: includes/ajax/set_edit_priority.php:15
+#: includes/ajax/get_edit_priority.php:13 includes/ajax/set_delete_agent.php:13
+#: includes/ajax/get_edit_status.php:13 includes/ajax/save_ticket_widget.php:13
+#: includes/ajax/set_edit_agent.php:14 includes/ajax/get_add_status.php:10
+#: includes/ajax/set_delete_custom_field.php:13
+#: includes/ajax/set_delete_category.php:13
+#: includes/ajax/get_delete_status.php:13 includes/ajax/get_add_agent.php:10
+#: includes/ajax/set_permanent_delete_ticket.php:12
+#: includes/ajax/get_restore_ticket.php:16
+#: includes/ajax/get_permanent_delete_ticket.php:16
+#: includes/ajax/get_edit_agent.php:13
+#: includes/ajax/get_delete_custom_field.php:13
+#: includes/ajax/get_edit_custom_field.php:13
+#: includes/ajax/save_table_order.php:16
+#: includes/ajax/set_delete_priority.php:13
+#: includes/ajax/save_list_settings.php:22
+#: includes/ajax/save_form_management.php:19
+#: includes/ajax/set_edit_custom_field.php:13
+#: includes/ajax/set_delete_custom_menu.php:13 includes/ajax/upgrade.php:11
+#: includes/ajax/set_edit_status.php:15 includes/ajax/set_add_agent.php:10
+#: includes/ajax/get_delete_category.php:13
+#: includes/ajax/get_add_priority.php:10
+#: template/tickets/ticket-operations/reply_ticket.php:21
+#: template/tickets/ticket-operations/add_ticket_note.php:20
+#: includes/ajax/ticket-list/apply_ticket_filter.php:12
+#: includes/ajax/ticket-list/apply_ticket_filter.php:20
+#: includes/ajax/ticket-list/apply_ticket_filter.php:28
+#: includes/ajax/ticket-list/delete_ticket_filter.php:12
+#: includes/ajax/ticket-list/delete_ticket_filter.php:20
+#: includes/ajax/ticket-list/delete_ticket_filter.php:25
+#: includes/ajax/ticket-list/delete_ticket_filter.php:32
+#: includes/ajax/ticket-list/save_ticket_filter.php:12
+#: includes/ajax/ticket-form/create_tkt_cng_cat.php:10
+#: includes/ajax/ticket-form/upload_file.php:9
+#: includes/ajax/ticket-form/upload_image.php:8
+#: includes/ajax/ticket-individual/get_ticket_fields.php:16
+#: includes/ajax/ticket-individual/get_edit_thread.php:19
+#: includes/ajax/ticket-individual/get_assign_agent.php:16
+#: includes/ajax/ticket-individual/get_user_biography.php:15
+#: includes/ajax/ticket-individual/get_close_ticket.php:18
+#: includes/ajax/ticket-individual/set_bulk_assign_agent.php:20
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:15
+#: includes/ajax/ticket-individual/set_delete_ticket.php:19
+#: includes/ajax/ticket-individual/get_agent_fields.php:16
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:15
+#: includes/ajax/ticket-individual/get_delete_thread.php:19
+#: includes/ajax/ticket-individual/set_close_ticket.php:17
+#: includes/ajax/ticket-individual/set_bulk_change_status.php:19
+#: includes/ajax/ticket-individual/get_edit_subject.php:15
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:19
+#: includes/ajax/ticket-individual/set_ticket_fields.php:17
+#: includes/ajax/ticket-individual/get_ticket_created.php:16
+#: includes/ajax/ticket-individual/get_delete_ticket.php:16
+#: includes/ajax/ticket-individual/set_agent_fields.php:17
+#: includes/ajax/ticket-individual/set_edit_subject.php:18
+#: includes/ajax/ticket-individual/get_clone_ticket.php:13
+#: includes/ajax/ticket-individual/set_assign_agent.php:18
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:15
+#: includes/ajax/ticket-individual/set_edit_thread.php:19
+#: includes/ajax/ticket-individual/set_delete_thread.php:18
+#: includes/ajax/ticket-individual/set_change_ticket_status.php:17
+#: includes/ajax/ticket-individual/set_clone_ticket.php:18
+#: includes/ajax/ticket-individual/get_change_raised_by.php:15
+#: includes/ajax/ticket-individual/set_change_raised_by.php:17
+#: includes/ajax/ticket-individual/set_delete_bulk_ticket.php:20
+#: includes/ajax/user-login/signin.php:12
+#: includes/ajax/user-login/signin.php:48
+#: includes/ajax/user-login/guest_signin.php:12
+#: includes/ajax/user-login/guest_signin.php:45
+#: includes/ajax/autocomplete/ticket_filter.php:12
+#: includes/ajax/autocomplete/index.php:10
+#: includes/admin/general/support-page-menu/menu_list_update.php:12
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:11
+msgid "Cheating huh?"
+msgstr "متاسفم ؟"
+
+#: includes/ajax/get_edit_category.php:66
+#: includes/ajax/get_delete_custom_menu.php:42
+#: includes/ajax/get_delete_support_menu.php:42
+#: includes/ajax/get_add_category.php:46 includes/ajax/get_delete_agent.php:43
+#: includes/ajax/get_delete_priority.php:43
+#: includes/ajax/get_add_custom_field.php:87
+#: includes/ajax/get_edit_priority.php:46 includes/ajax/get_edit_status.php:46
+#: includes/ajax/get_add_status.php:40 includes/ajax/get_delete_status.php:43
+#: includes/ajax/get_add_agent.php:52 includes/ajax/get_restore_ticket.php:58
+#: includes/ajax/get_permanent_delete_ticket.php:58
+#: includes/ajax/get_edit_agent.php:43
+#: includes/ajax/get_delete_custom_field.php:44
+#: includes/ajax/get_edit_custom_field.php:99
+#: includes/ajax/get_delete_category.php:43
+#: includes/ajax/get_add_priority.php:40
+#: template/tickets/open-ticket/class-threads-formatting.php:81
+#: template/tickets/open-ticket/class-threads-formatting.php:103
+#: template/tickets/open-ticket/sidebar.php:382
+#: template/tickets/open-ticket/sidebar.php:409
+#: includes/ajax/ticket-individual/get_ticket_fields.php:97
+#: includes/ajax/ticket-individual/get_edit_thread.php:90
+#: includes/ajax/ticket-individual/get_assign_agent.php:140
+#: includes/ajax/ticket-individual/get_close_ticket.php:59
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:94
+#: includes/ajax/ticket-individual/get_agent_fields.php:89
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:86
+#: includes/ajax/ticket-individual/get_delete_thread.php:61
+#: includes/ajax/ticket-individual/get_edit_subject.php:61
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:61
+#: includes/ajax/ticket-individual/get_delete_ticket.php:59
+#: includes/ajax/ticket-individual/get_clone_ticket.php:59
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:116
+#: includes/ajax/ticket-individual/get_change_raised_by.php:142
+#: includes/admin/general/support-page-menu/menu_list_add.php:49
+#: includes/admin/general/support-page-menu/menu_list_update.php:60
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:57
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:48
+msgid "Cancel"
+msgstr "لغو"
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:36
+#: includes/admin/general/support-page-menu/menu_list_update.php:46
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:43
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:35
+msgid "Menu URL"
+msgstr "لینک منو"
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:26
+#: includes/admin/general/support-page-menu/menu_list_update.php:36
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:34
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:26
+msgid "Menu Icon"
+msgstr "آیکون منو"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:23
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:15
+msgid "Add New Menu Slider"
+msgstr "اضافه کردن اسلایدر جدید به منو"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:99
+msgid "Delete Custom Menu"
+msgstr "حذف منو سفارشی ( custom )"
+
+#: includes/admin/general/thank_you.php:18
+#: includes/admin/general/support-page-menu/menu_list.php:34
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:72
+msgid "Title"
+msgstr "عنوان"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:55
+msgid "Custom Menu Slider"
+msgstr "اسلایدر منو سفارشی ( custom )"
+
+#: includes/admin/general/general-settings.php:29
+#: includes/admin/general/support-page-menu/menu_list_add.php:29
+#: includes/admin/general/support-page-menu/menu_list_update.php:39
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:46
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:37
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:29
+msgid "Upload Logo"
+msgstr "آپلود لوگو"
+
+#: includes/admin/general/support-page-menu/menu_list.php:33
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:42
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:71
+msgid "Icon"
+msgstr "آیکون"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:36
+msgid "If enabled, it will show Support Button on front-end website. When visitor click this button, it will open Support Page selected above in new tab."
+msgstr "اگر فعال شود ، دکمه پشتیبانی در سایت فعال خواهد شد . وقتی که بازدید کننده روی این دکمه کلیک کند ، صفحه پشتیبانی انتخاب شده در صفحه جدید باز خواهد شد."
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:26
+msgid "Show Support Button"
+msgstr "نمایش دکمه پشتیبانی"
+
+#: includes/admin/general/general.php:27
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:21
+msgid "Support Button"
+msgstr "دکمه پشتیبانی"
+
+#: includes/admin/general/custom-css.php:23
+#: includes/admin/general/general.php:31
+msgid "Custom CSS"
+msgstr "CSS سفارشی"
+
+#: includes/admin/general/categories.php:64
+#: includes/admin/general/priorities.php:59
+#: includes/admin/general/statuses.php:59
+msgid "Save Order"
+msgstr "ذخیره سفارش"
+
+#: includes/admin/general/categories.php:29
+#: includes/admin/general/priorities.php:29
+#: includes/admin/general/statuses.php:29
+#: includes/admin/general/general-settings.php:70
+#: includes/admin/ticket-form/custom-fields.php:31
+#: includes/admin/general/support-page-menu/menu_list.php:35
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:73
+msgid "Action"
+msgstr "عمل"
+
+#: includes/admin/general/categories.php:28
+msgid "Supervisor(s)"
+msgstr "سرپرست پشتیبانی ها"
+
+#: includes/admin/general/categories.php:26
+#: includes/admin/general/priorities.php:26
+#: includes/admin/general/statuses.php:26
+#: includes/admin/ticket-list/list-settings.php:25
+#: includes/admin/ticket-list/open-ticket-widget.php:25
+#: includes/admin/ticket-form/form-management.php:25
+#: includes/admin/general/support-page-menu/menu_list.php:32
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:70
+msgid "Order"
+msgstr "سفارش"
+
+#: includes/admin/general/categories.php:19
+msgid "Add New Category"
+msgstr "افزودن دسته جدید"
+
+#: includes/admin/general/categories.php:18
+#: includes/admin/general/general.php:15
+msgid "Categories"
+msgstr "دسته بندی ها"
+
+#: includes/admin/dashbord/general.php:24
+msgid "Statuses to Show"
+msgstr "وضعیت ها برای نمایش"
+
+#: includes/admin/class-wpsp-admin.php:259
+msgid "Dismiss this notice"
+msgstr "رد این پیام"
+
+#: includes/admin/class-wpsp-admin.php:259
+msgid "Settings updated"
+msgstr "تنظیمات بروزرسانی شدند."
+
+#: includes/admin/class-wpsp-admin.php:235
+msgid "Add-Ons"
+msgstr "پشتیبانی محصول"
+
+#: template/tickets/create-ticket.php:370 template/tickets/logged-in.php:17
+#: includes/admin/class-wpsp-admin.php:219
+#: includes/admin/ticket-list/default-filters.php:152
+#: includes/admin/customize/customize.php:15
+msgid "Ticket List"
+msgstr "لینک تیکت"
+
+#: includes/admin/class-wpsp-admin.php:215
+msgid "Ticket Form"
+msgstr "فرم تیکت"
+
+#: includes/admin/class-wpsp-admin.php:211
+#: includes/admin/general/custom-css.php:19
+#: includes/admin/customize/customize.php:11
+#: includes/admin/dashbord/dashbord.php:11
+msgid "General"
+msgstr "عمومی"
+
+#: includes/admin/class-wpsp-admin.php:179
+msgid "WP Support Plus Settings"
+msgstr "تنظیمات WP Support Plus"
+
+#: includes/admin/agents/ticket-agents.php:39
+msgid "Search"
+msgstr "جستجو"
+
+#: template/tickets/ticket_list/filter.php:31
+#: includes/admin/agents/ticket-agents.php:38
+#: includes/ajax/ticket-list/get_tickets.php:201
+msgid "Reset Filter"
+msgstr "بازنشانی فیلتر"
+
+#: template/tickets/ticket_list/list.php:55
+#: includes/admin/agents/ticket-agents.php:37
+msgid "Apply"
+msgstr "Apply"
+
+#: includes/admin/agents/ticket-agents.php:32
+msgid "All"
+msgstr "همه"
+
+#: includes/admin/general/categories.php:19
+#: includes/admin/general/priorities.php:19
+#: includes/admin/general/statuses.php:19
+#: includes/admin/ticket-form/custom-fields.php:19
+#: includes/admin/agents/ticket-agents.php:18
+#: includes/admin/general/support-page-menu/menu_list.php:26
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:64
+msgid "Add New"
+msgstr "اضافه کردن جدید"
+
+#: includes/admin/agents/ticket-agents.php:18
+msgid "Add New Agent"
+msgstr "افزودن پشتیبان جدید"
+
+#: includes/admin/class-wpsp-admin.php:223
+#: includes/admin/agents/ticket-agents.php:17
+msgid "Agents"
+msgstr "نمایندگان"
+
+#: includes/admin/agents/general-settings.php:83
+msgid "If set yes, supervisor will able to change raised by of tickets of assigned categories."
+msgstr "اگر بله ست شود ، سرپرست پشتیبان ها قادر خواهد بود تا ایجاد کننده تیکت های دسته های ارجاع داده شده را تغییر دهد."
+
+#: includes/admin/agents/general-settings.php:72
+msgid "If set yes, supervisor will able to delete tickets of assigned categories"
+msgstr "اگر بله ست شود ، سرپرست پشتیبان ها قادر خواهد بود تا تیکت های دسته های ارجاع داده شده را حذف کند."
+
+#: includes/admin/agents/general-settings.php:56
+msgid "If set yes, an agent will able to change raised by of ticket assigned to him."
+msgstr "اگر بله ست شود ، پشتیبان ها قادر خواهد بود تا اطلاعات ایجاد کننده تیکت های ارجاع داده شده به خود را تغییر دهد."
+
+#: includes/admin/agents/general-settings.php:50
+#: includes/admin/agents/general-settings.php:77
+msgid "Allow Change Raised By"
+msgstr "امکان تغییر ارسال کننده تیکت"
+
+#: includes/admin/agents/general-settings.php:45
+msgid "If set yes, an agent will able to delete ticket assigned to him."
+msgstr "اگر بله ست شود ، پشتیبان قادر خواهد بود تا تیکت ارجاع داده شده به خود را حذف کند."
+
+#: includes/admin/agents/general-settings.php:39
+#: includes/admin/agents/general-settings.php:66
+msgid "Allow Delete Ticket"
+msgstr "اجازه به حذف تیکت"
+
+#: includes/admin/agents/general-settings.php:34
+msgid "If set yes, an agent will able to assign ticket assigned to him to some other agent who is assigned to ticket category."
+msgstr "اگر بله ست شود ، پشتیبان قادر خواهد بود تا تیکت ارجاع شده به خود را به دیگر پشتیبانان در دسته خود ارجاع دهد."
+
+#: includes/ajax/get_add_custom_field.php:54
+#: includes/ajax/get_add_custom_field.php:62
+#: includes/ajax/get_edit_custom_field.php:59
+#: includes/ajax/get_edit_custom_field.php:67
+#: includes/admin/general/general-settings.php:78
+#: includes/admin/general/general-settings.php:87
+#: includes/admin/general/general-settings.php:96
+#: includes/admin/general/general-settings.php:105
+#: includes/admin/general/general-settings.php:121
+#: includes/admin/general/general-settings.php:134
+#: includes/admin/general/general-settings.php:373
+#: includes/admin/general/general-settings.php:383
+#: includes/admin/ticket-list/list-settings.php:54
+#: includes/admin/ticket-list/list-settings.php:60
+#: includes/admin/ticket-list/list-settings.php:76
+#: includes/admin/ticket-list/list-settings.php:82
+#: includes/admin/ticket-list/list-settings.php:96
+#: includes/admin/ticket-form/custom-fields.php:44
+#: includes/admin/ticket-form/custom-fields.php:45
+#: includes/admin/ticket-form/form-management.php:53
+#: includes/admin/agents/general-settings.php:32
+#: includes/admin/agents/general-settings.php:43
+#: includes/admin/agents/general-settings.php:54
+#: includes/admin/agents/general-settings.php:70
+#: includes/admin/agents/general-settings.php:81
+msgid "No"
+msgstr "خیر"
+
+#: includes/ajax/get_add_custom_field.php:53
+#: includes/ajax/get_add_custom_field.php:63
+#: includes/ajax/get_edit_custom_field.php:58
+#: includes/ajax/get_edit_custom_field.php:68
+#: includes/admin/general/general-settings.php:79
+#: includes/admin/general/general-settings.php:88
+#: includes/admin/general/general-settings.php:97
+#: includes/admin/general/general-settings.php:106
+#: includes/admin/general/general-settings.php:120
+#: includes/admin/general/general-settings.php:133
+#: includes/admin/general/general-settings.php:372
+#: includes/admin/general/general-settings.php:382
+#: includes/admin/ticket-list/list-settings.php:53
+#: includes/admin/ticket-list/list-settings.php:59
+#: includes/admin/ticket-list/list-settings.php:75
+#: includes/admin/ticket-list/list-settings.php:81
+#: includes/admin/ticket-list/list-settings.php:95
+#: includes/admin/ticket-form/custom-fields.php:44
+#: includes/admin/ticket-form/custom-fields.php:45
+#: includes/admin/ticket-form/form-management.php:52
+#: includes/admin/agents/general-settings.php:31
+#: includes/admin/agents/general-settings.php:42
+#: includes/admin/agents/general-settings.php:53
+#: includes/admin/agents/general-settings.php:69
+#: includes/admin/agents/general-settings.php:80
+msgid "Yes"
+msgstr "بله"
+
+#: includes/admin/agents/general-settings.php:28
+msgid "Allow Assign Ticket"
+msgstr "اجازه به ارجاع دادن تیکت"
+
+#: includes/admin/agents/class_agent_table.php:66
+msgid "Delete Agent"
+msgstr "حذف پشتیبان"
+
+#: includes/ajax/get_add_agent.php:41 includes/ajax/get_edit_agent.php:33
+#: includes/admin/general/general-settings.php:102
+#: includes/admin/agents/class_agent_table.php:45
+#: includes/admin/agents/ticket-agents.php:35
+#: includes/admin/dashbord/general.php:65
+msgid "Administrator"
+msgstr "مدیر"
+
+#: includes/ajax/get_add_agent.php:40 includes/ajax/get_edit_agent.php:32
+#: includes/admin/general/general-settings.php:93
+#: includes/admin/general/general-settings.php:408
+#: includes/admin/agents/class_agent_table.php:43
+#: includes/admin/agents/general-settings.php:61
+#: includes/admin/agents/ticket-agents.php:34
+#: includes/admin/dashbord/general.php:59
+msgid "Supervisor"
+msgstr "ناظران"
+
+#: template/tickets/dashboard.php:111 includes/ajax/get_add_agent.php:24
+#: includes/ajax/get_add_agent.php:39 includes/ajax/get_edit_agent.php:31
+#: includes/admin/general/general-settings.php:84
+#: includes/admin/general/general-settings.php:402
+#: includes/admin/agents/class_agent_table.php:41
+#: includes/admin/agents/general-settings.php:23
+#: includes/admin/agents/ticket-agents.php:33
+#: includes/admin/dashbord/general.php:53
+msgid "Agent"
+msgstr "پشتیبان"
+
+#: includes/ajax/get_add_agent.php:37 includes/ajax/get_edit_agent.php:29
+#: includes/admin/general/general-settings.php:69
+#: includes/admin/agents/class_agent_table.php:17
+#: includes/admin/agents/ticket-agents.php:30
+msgid "Role"
+msgstr "نقش"
+
+#: includes/class-wpsp-functions.php:854 template/header/sign-in.php:82
+#: includes/admin/agents/class_agent_table.php:16
+msgid "Email"
+msgstr "ایمیل"
+
+#: template/header/sign-in.php:79 includes/admin/general/categories.php:27
+#: includes/admin/general/priorities.php:27
+#: includes/admin/general/statuses.php:27
+#: includes/admin/ticket-list/list-settings.php:26
+#: includes/admin/ticket-form/custom-fields.php:26
+#: includes/admin/ticket-form/form-management.php:26
+#: includes/admin/agents/class_agent_table.php:15
+#: includes/admin/general/support-page-menu/menu_list_add.php:19
+#: includes/admin/general/support-page-menu/menu_list_update.php:29
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:27
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:19
+msgid "Name"
+msgstr "نام"
+
+#: includes/admin/agents/class_agent_table.php:14
+msgid "Username"
+msgstr "نام کاربری"
+
+#: includes/admin/agents/agents.php:15
+msgid "Agents & Supervisors"
+msgstr "پشتیبانان و سرپرست پشتیبانان"
+
+#: includes/admin/general/general-settings.php:21
+#: includes/admin/general/general.php:11 includes/admin/agents/agents.php:11
+msgid "General Settings"
+msgstr "تنظیمات عمومی"
+
+#: includes/admin/general/custom-css.php:39
+#: includes/admin/general/footer-text.php:36
+#: includes/admin/general/general-advanced-settings.php:59
+#: includes/admin/general/general-settings.php:479
+#: includes/admin/general/thank_you.php:73
+#: includes/admin/ticket-list/list-settings.php:112
+#: includes/admin/ticket-list/open-ticket-widget.php:56
+#: includes/admin/ticket-list/advanced-settings.php:40
+#: includes/admin/ticket-list/default-filters.php:180
+#: includes/admin/customize/ticket_list.php:57
+#: includes/admin/customize/general.php:65
+#: includes/admin/ticket-form/form-management.php:69
+#: includes/admin/addons/wpsp_license_settings.php:26
+#: includes/admin/agents/general-settings.php:93
+#: includes/admin/dashbord/general.php:74
+#: includes/ajax/ticket-individual/get_ticket_fields.php:98
+#: includes/ajax/ticket-individual/get_edit_thread.php:91
+#: includes/ajax/ticket-individual/get_assign_agent.php:141
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:95
+#: includes/ajax/ticket-individual/get_agent_fields.php:90
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:87
+#: includes/ajax/ticket-individual/get_edit_subject.php:62
+#: includes/ajax/ticket-individual/get_clone_ticket.php:60
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:117
+#: includes/ajax/ticket-individual/get_change_raised_by.php:143
+#: includes/admin/general/support-page-menu/menu_list.php:84
+#: includes/admin/general/support-page-menu/menu_list_add.php:48
+#: includes/admin/general/support-page-menu/menu_list_update.php:59
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:114
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:56
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:47
+msgid "Save Changes"
+msgstr "ذخیره‌ی تغییرات"
+
+#: includes/admin/addons/addons.php:10
+msgid "Licenses"
+msgstr "مجوز استفاده از سامانه"

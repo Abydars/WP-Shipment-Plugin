@@ -133,12 +133,10 @@ if ( ! class_exists( 'WPTM_FaxManager' ) ) {
 			global $wpdb;
 
 			$wpdb->insert( $wpdb->prefix . "wpsp_attachments", array(
-				"filepath"     => $path,
-				"id"           => $attach_id,
-				"filename"     => basename( $path ),
-				"filetype"     => $type,
-				"fileurl"      => wp_get_attachment_url( $attach_id ),
-				"download_key" => md5( $attach_id )
+				"filepath" => $path,
+				"id"       => $attach_id,
+				"filename" => basename( $path ),
+				"filetype" => $type
 			) );
 		}
 	}

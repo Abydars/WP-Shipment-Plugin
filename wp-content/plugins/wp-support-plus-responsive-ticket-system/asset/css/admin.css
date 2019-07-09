@@ -1,0 +1,254 @@
+/**
+ * Admin setting table
+ */
+.hndle a, .widefat tfoot td, .widefat th, .widefat thead td {
+    font-weight: bold !important;
+}
+.wpsp_pointer{
+    cursor: pointer;
+}
+.wpsp_admin_label{
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+/**
+ * Admin pop-up
+ */
+#wpsp-admin-popup-body{
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.wpsp_fullwidth{
+    width: 90%;
+}
+.wpsp_admin_popup_footer_saperator, .wpsp_popup_form_element{
+    margin-top: 20px;
+}
+.wpsp_admin_list_table_filter{
+    background: #f5f5f5 linear-gradient(to top, #f5f5f5, #fafafa) repeat scroll 0 0;
+    border-color: #dfdfdf;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    clear: both;
+    font-size: 13px;
+    line-height: 2.1em;
+    margin: 8px 0;
+    overflow: auto;
+    padding: 12px;
+}
+
+/**
+ * Autocomplete css
+ */
+.wpsp_autocomplete_container{
+    position: relative;
+    width: 300px;
+}
+.wpsp_autocomplete_search_container{
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.wpsp_autocomplete_search_container input[type=text]{
+    width: 100%;
+    margin: 0;
+}
+.wpsp_autocomplete_choosen_drop{
+    width: 298px;
+    position: absolute;
+    z-index: 10001;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    display: none;
+}
+.wpsp_autocomplete_choosen_results{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.wpsp_autocomplete_choosen_results .active-result{
+    cursor: pointer;
+    display: list-item;
+    line-height: 15px;
+    list-style: outside none none;
+    margin: 0;
+    padding: 5px 6px;
+    background-color: #fff;
+    color: #000;
+}
+.wpsp_autocomplete_choosen_results .heightligted{
+    background-color: #0073aa;
+    color: #fff;
+}
+.wpsp_autocomplete_choosen_choices{
+    position: relative;
+    width: 100%;
+    float: left;
+}
+.wpsp_autocomplete_choice_item {
+    display: inline-block;
+    background-clip: padding-box;
+    background-color: #e4e4e4;
+    background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    box-shadow: 0 0 2px #fff inset, 0 1px 0 rgba(0, 0, 0, 0.05);
+    color: #333;
+    cursor: default;
+    margin: 3px 3px 3px 0;
+    padding: 3px;
+    font-size: 12px;
+    position: relative;
+    float: left;
+}
+.wpsp_autocomplete_choice_item_delete{
+    cursor: pointer;
+}
+.wpsp_filter_loading_icon{
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+}
+.wpsp_filter_loading_icon img{
+    width: 20px;
+}
+.wpsp_et_role_tbl {
+    border: 1px solid;
+    border-collapse: collapse;
+    text-align: left;
+}
+.wpsp_et_role_tbl td,.wpsp_et_role_tbl th {
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.wpsp_installation_container{
+    width: 98%;
+    height: 500px;
+    margin-top: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.wpsp_upgrade_terms_container{
+    height: 335px;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+#wpsp_upgrade_btn{
+    margin-top: 20px;
+}
+
+.wpsp_filter_loading_icon{
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.wpsp_filter_loading_icon img{
+    width: 50px;
+}
+
+.wpsp_list_template_tags{
+    font-style: italic;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #c3c3c3;
+    overflow: auto;
+}
+
+.wpsp_settings_tbl th,
+.wpsp_settings_tbl td {
+  padding-left: 20px;
+}
+
+.wpsp_settings_tbl_half{
+  width: 50%;
+}
+
+.wpsp_addon_license_messege_container .warning_messege{
+  background-color: yellow;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.wpsp_addon_license_messege_container .error_messege{
+  background-color: red;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.wpsp_addon_license_messege_container .error_messege a{
+  color: #fff;
+}
+
+.wpsp_customize_panel{
+  width: 1000px;
+  height: 100px;
+  background-color: #fff;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  border: 2px solid #c3c3c3;
+}
+.wpsp_ssplan_tbl{
+  float: left;
+  margin-right: 10px;
+  min-width: 280px;
+  margin-bottom: 20px;
+}
+
+.wpsp_ssplan_tbl_header{
+  background-color: #208CBD;
+  text-align: center;
+}
+
+.wpsp_ssplan_tbl_header_free{
+  background-color: #2ca00c;
+  text-align: center;
+}
+
+.wpsp_ssplan_tbl_body{
+  background-color: #ffffff;
+  text-align: left;
+}
+.wpsp_ssplan_tbl_footer{
+  background-color: #ffffff;
+  text-align: center;
+}
+.wpsp_ssplan_tbl th, .wpsp_ssplan_tbl td {
+    padding: 25px;
+}
+.wpsp_view_more_addon{
+  font-size: 16px;
+  padding: 15px;
+  background-color: #208CBD;
+  line-height: 100%;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+.wpsp_subscribe_ssplan{
+    font-size: 16px;
+    padding: 15px;
+    background-color: #2ca00c;
+    line-height: 100%;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+.wpsp_subscribe_ssplan:hover,.wpsp_view_more_addon:hover{
+  color: #ffffff;
+}

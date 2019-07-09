@@ -1,0 +1,1778 @@
+# Translation of WP Support Plus Responsive Ticket System in Slovenian
+# This file is distributed under the same license as the WP Support Plus Responsive Ticket System package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-01-03 12:31+0530\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Language: sl_SI\n"
+"Project-Id-Version: WP Support Plus Responsive Ticket System\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+
+#: template/tickets/ticket_list/list.php:33
+msgid "Default"
+msgstr "Privzeto"
+
+#: template/tickets/ticket_list/filter.php:112
+msgid "Public"
+msgstr "Javno"
+
+#: template/tickets/ticket_list/filter.php:111
+msgid "Private"
+msgstr "Zasebno"
+
+#: template/tickets/ticket_list/filter.php:106
+msgid "Filter Name"
+msgstr "Ime filtra"
+
+#: template/tickets/ticket_list/filter.php:105
+msgid "Save Current Filter"
+msgstr "Shrani trenutni filter"
+
+#: template/tickets/ticket_list/filter.php:87
+msgid "To"
+msgstr "Za"
+
+#: template/tickets/ticket_list/filter.php:84
+msgid "From"
+msgstr "Od"
+
+#: template/tickets/ticket_list/filter.php:57
+#: template/tickets/ticket_list/list.php:13
+msgid "Search..."
+msgstr "Iskranje..."
+
+#: template/tickets/ticket_list/filter.php:26
+#: template/tickets/ticket_list/list.php:27
+msgid "Saved Filters"
+msgstr "Shranjeni filtri"
+
+#: template/tickets/ticket_list/filter.php:24
+msgid "Apply Filters"
+msgstr "Uporabi filtre"
+
+#: template/tickets/ticket-list.php:69
+msgid "Sorry, you do not have permission to view this ticket. <a href=\"%s\" class=\"alert-link\">Click here</a> for ticket list."
+msgstr "Oprostite, nimate pravic za ogled tega zahtevka.  <a href=\"%s\" class=\"alert-link\">Kliknite tukaj</a> za seznam zahtevkov."
+
+#: template/tickets/ticket-list.php:68
+msgid "Unauthorized access!"
+msgstr "Neavtoriziran dostop!"
+
+#: template/tickets/open-ticket/sidebar.php:354
+msgid "Are you sure to add this note?"
+msgstr "Ste prepričani, da želite dodati ta komentar?"
+
+#: template/tickets/open-ticket/sidebar.php:327
+msgid "Are you sure to post this reply?"
+msgstr "Ste prepričani, da želite poslati odgovor?"
+
+#: template/tickets/open-ticket/sidebar.php:323
+#: template/tickets/open-ticket/sidebar.php:350
+msgid "Please Confirm"
+msgstr "Prosimo potrdite"
+
+#: template/tickets/open-ticket/sidebar.php:201
+msgid "Ticket Fields"
+msgstr "Polja zahtevkov"
+
+#: template/tickets/open-ticket/sidebar.php:143
+msgid "Agent Only Fields"
+msgstr "Polja samo za tehnično službo"
+
+#: template/tickets/open-ticket/sidebar.php:98
+msgid "Assigned Agents"
+msgstr "Dodeljeno tehnični podpori"
+
+#: template/tickets/open-ticket/sidebar.php:20
+msgid "Ticket Status"
+msgstr "Status zahtevka"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:324
+msgid "Open in Browser"
+msgstr "Odpri v brskalniku"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:293
+msgid "Visible to support staff only!"
+msgstr "Vidno samo tehnični podpori"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:293
+msgid "Private Note:"
+msgstr "Zasebni komentar"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:201
+#: template/tickets/open-ticket/class-threads-formatting.php:305
+msgid "Attachments"
+msgstr "Priponke"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:181
+#: template/tickets/open-ticket/class-threads-formatting.php:283
+msgid "Delete this thread"
+msgstr "Zbriši to nit"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:175
+#: template/tickets/open-ticket/class-threads-formatting.php:277
+msgid "Edit this thread"
+msgstr "Uredi to nit"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:100
+msgid "Submit Note"
+msgstr "Objavi komentar"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:78
+msgid "Submit Reply"
+msgstr "Objavi odgovor"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:74
+msgid "BCC (Comma separated list)"
+msgstr "Skrita kopija (za več e-naslovo, jih delite z vejico)"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:46
+msgid "Add Private Note"
+msgstr "Dodaj zasebni komentar"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:41
+msgid "Post Reply"
+msgstr "Objavi odgovor"
+
+#: template/tickets/open-ticket/class-fields-formatting.php:93
+msgid "Click Here"
+msgstr "Kliknite tukaj"
+
+#: template/tickets/open-ticket/class-fields-formatting.php:76
+#: template/tickets/open-ticket/class-threads-formatting.php:220
+#: template/tickets/open-ticket/class-threads-formatting.php:325
+msgid "Download"
+msgstr "Prenesi"
+
+#: template/tickets/open-ticket/body.php:41
+msgid "Ticket"
+msgstr "Zahtevek"
+
+#: template/tickets/open-ticket/body.php:12
+msgid "Bank to tickets"
+msgstr "Shrani v zahtevke"
+
+#: template/tickets/logged-in.php:18
+msgid "Dashboard"
+msgstr "Nadzorna plošča"
+
+#: template/tickets/dashboard.php:93
+msgid "Total"
+msgstr "Skupaj"
+
+#: template/tickets/create-ticket.php:333
+msgid "View Ticket"
+msgstr "Poglej zahtevek"
+
+#: template/tickets/create-ticket.php:122
+msgid "No Description"
+msgstr "Ni opisa"
+
+#: template/tickets/create-ticket.php:121
+msgid "No Subject"
+msgstr "Ni zadeve"
+
+#: template/tickets/create-ticket.php:96
+msgid "Reset Form"
+msgstr "Osveži obrazec"
+
+#: template/tickets/create-ticket.php:92
+msgid "Submit Ticket"
+msgstr "Pošlji zahtevek"
+
+#: template/tickets/create-ticket.php:47
+msgid "Create Ticket As"
+msgstr "Ustvari zahtevek kot"
+
+#: template/tickets/create-ticket.php:29 template/tickets/create-ticket.php:335
+#: template/tickets/logged-in.php:14
+msgid "Create New Ticket"
+msgstr "Ustvari nov zahtevek"
+
+#: template/tickets/class-ticket-form.php:136
+#: template/tickets/class-ticket-form.php:152
+#: template/tickets/open-ticket/class-threads-formatting.php:533
+#: template/tickets/open-ticket/class-threads-formatting.php:549
+msgid "Uploading..."
+msgstr "Pošiljanje..."
+
+#: template/tickets/class-ticket-form.php:131
+#: template/tickets/open-ticket/class-threads-formatting.php:528
+msgid "Only '.jpeg','.jpg', '.png', '.gif', '.bmp' formats are allowed."
+msgstr "samo '.jpeg','.jpg', '.png', '.gif', '.bmp'  formati so dovoljeni."
+
+#: template/js_data.php:41
+msgid "MB"
+msgstr "MB"
+
+#: template/js_data.php:41
+msgid "File Size limit exceeded! Allowed limit:"
+msgstr "Velikost datoteke je presežena! Dovoljen limit:"
+
+#: template/js_data.php:39
+msgid "Name or Email not given!"
+msgstr "Ime ali e-pošta nista vnešena!"
+
+#: template/js_data.php:38
+msgid "Please choose registered user!"
+msgstr "Prosimo izberite registriranega uporabnika!"
+
+#: template/js_data.php:37
+msgid "Note can not be empty!"
+msgstr "Komentar ne sme biti prazen"
+
+#: template/js_data.php:36
+msgid "Reply can not be empty!"
+msgstr "Odgovor ne sme biti prazen!"
+
+#: template/js_data.php:35
+msgid "View Less ..."
+msgstr "manj..."
+
+#: template/js_data.php:34
+msgid "View More ..."
+msgstr "več..."
+
+#: template/js_data.php:32
+msgid "WARNING: Anyone having your email address can access your guest tickets. Please avoid sharing any sensitive data."
+msgstr "OPOZORILO: Vsi, ki imajo vašo e-pošto lahko dostopajo do vaših javnih zahtevkov. Prosimo izogibajte se deljenju vsebine zasebne narave."
+
+#: template/js_data.php:27
+msgid "You do not have permission to delete public filter!"
+msgstr "Nimate dovoljenja za brisanje javnih filtrov!"
+
+#: template/js_data.php:26
+msgid "Default filter can not be deleted!"
+msgstr "Privzete filtre ni mogoče odstraniti!"
+
+#: template/js_data.php:25
+msgid "Please enter filter name!"
+msgstr "Vnesite ime filtra!"
+
+#: template/js_data.php:24
+msgid "Are you sure?"
+msgstr "Ste prepričani?"
+
+#: template/js_data.php:23
+msgid "Incorrect URL!"
+msgstr "Napačen URL!"
+
+#: template/js_data.php:22
+msgid "Incorrect Email Address!"
+msgstr "Napačna e-pošta!"
+
+#: template/js_data.php:21
+msgid "Required field should not be empty!"
+msgstr "Obvezna polja morajo biti izpolnjena!"
+
+#: template/js_data.php:20
+msgid "'.exe', '.php' files are not allowed!"
+msgstr "'.exe', '.php' datoteke niso dovoljene!"
+
+#: template/js_data.php:14
+msgid "Please wait..."
+msgstr "Prosimo počakajte..."
+
+#: template/header/user_info.php:40
+msgid "Login"
+msgstr "Vpis"
+
+#: template/header/user_info.php:30
+msgid "Sign out"
+msgstr "Odjava"
+
+#: template/header/sign-in.php:66
+msgid "Your Email"
+msgstr "Vaša e-pošta"
+
+#: template/header/sign-in.php:63
+msgid "Your Name"
+msgstr "Vaše ime"
+
+#: template/header/sign-in.php:58
+msgid "Guest sign in"
+msgstr "Prijava kot gost (neregistriran uporabnik)"
+
+#: template/header/sign-in.php:50
+msgid "OR"
+msgstr "ALI"
+
+#: template/header/sign-in.php:38 template/header/sign-in.php:71
+msgid "Sign in"
+msgstr "Prijava"
+
+#: template/header/sign-in.php:28
+msgid "Remember me"
+msgstr "Zapomni si me"
+
+#: template/header/sign-in.php:23 template/header/sign-in.php:24
+msgid "Password"
+msgstr "Geslo"
+
+#: template/header/sign-in.php:20 template/header/sign-in.php:21
+msgid "Username or email"
+msgstr "Uporabniško ime ali e-pošta"
+
+#: template/header/sign-in.php:16
+msgid "Please sign in"
+msgstr "Prosimo, prijavite se"
+
+#: template/header/header.php:68 template/header/user_info.php:39
+msgid "Sign Up"
+msgstr "Registracija"
+
+#: template/header/header.php:67
+msgid "Sign In"
+msgstr "Prijava"
+
+#: template/header/header.php:59
+msgid "Sign Out"
+msgstr "Odjava"
+
+#: template/header/header.php:27
+msgid "Back to website"
+msgstr "Nazaj na spletno stran"
+
+#: includes/functions/replace_template_tags.php:113
+msgid "On %1$s, %2$s wrote:"
+msgstr "Na %1$s, %2$s napisal:"
+
+#: includes/functions/replace_template_tags.php:23
+#: includes/functions/replace_template_tags.php:97
+msgid "Attachments:"
+msgstr "Priloge:"
+
+#: includes/class-wpsp-functions.php:752
+msgid "Tickets"
+msgstr "Zahtevki"
+
+#: includes/class-wpsp-functions.php:717
+msgid "Agent Created"
+msgstr "Kreiral"
+
+#: includes/class-wpsp-functions.php:716
+msgid "Date Updated"
+msgstr "Datum posodobitve"
+
+#: includes/class-wpsp-functions.php:715
+msgid "Date Created"
+msgstr "Datum ustvarjanja"
+
+#: includes/class-wpsp-functions.php:713
+msgid "Assigned Agent"
+msgstr "Dodeljeno tehniku"
+
+#: includes/class-wpsp-functions.php:710
+#: template/tickets/open-ticket/sidebar.php:52
+msgid "Raised By"
+msgstr "Dvignil"
+
+#: includes/class-wpsp-functions.php:707
+msgid "ID"
+msgstr "ID"
+
+#: includes/class-wpsp-functions.php:689
+msgid "Description"
+msgstr "Opis"
+
+#: includes/class-wpsp-functions.php:688 includes/class-wpsp-functions.php:709
+#: includes/class-wpsp-functions.php:1078
+msgid "Subject"
+msgstr "Zadeva"
+
+#: includes/class-wpsp-functions.php:654
+msgid "Delete Custom Field"
+msgstr "Briši polje"
+
+#: includes/class-wpsp-functions.php:653
+msgid "Edit Custom Field"
+msgstr "Uredi polje"
+
+#: includes/class-wpsp-functions.php:619
+msgid "URL"
+msgstr "URL"
+
+#: includes/class-wpsp-functions.php:618
+msgid "Attachment"
+msgstr "Priponka"
+
+#: includes/class-wpsp-functions.php:617
+msgid "Date"
+msgstr "Datum"
+
+#: includes/class-wpsp-functions.php:616
+msgid "Textarea"
+msgstr "Polje za tekst"
+
+#: includes/class-wpsp-functions.php:615
+msgid "Radio Button"
+msgstr "Gumb za izbiranje (opcijski gumb)"
+
+#: includes/class-wpsp-functions.php:614
+msgid "Checkbox"
+msgstr "Polje za več možnosti"
+
+#: includes/class-wpsp-functions.php:613
+msgid "Drop-Down"
+msgstr "Spustni seznam"
+
+#: includes/class-wpsp-functions.php:612
+msgid "Text Field"
+msgstr "Polje za vnos teksta"
+
+#: includes/class-wpsp-functions.php:601
+msgid "Delete Priority"
+msgstr "Odstrani prioriteto"
+
+#: includes/class-wpsp-functions.php:596
+msgid "Edit Priority"
+msgstr "Uredi prioriteto"
+
+#: includes/class-wpsp-functions.php:584
+msgid "Delete Status"
+msgstr "Briši status"
+
+#: includes/class-wpsp-functions.php:579
+msgid "Edit Status"
+msgstr "Uredi status"
+
+#: includes/class-wpsp-functions.php:543
+msgid "Delete Category"
+msgstr "Briši skupino"
+
+#: includes/class-wpsp-functions.php:538
+msgid "Edit Category"
+msgstr "Uredi skupino"
+
+#: includes/ajax/user-login/guest_signin.php:41
+#: includes/ajax/user-login/signin.php:35
+msgid "Success!"
+msgstr "Uspešno!"
+
+#: includes/ajax/user-login/guest_signin.php:27
+msgid "This email address already registered as user. Please sign in above!"
+msgstr "Ta e-pošta je že registrirana kot uporabnik. Prosimo vpišite se spodaj!"
+
+#: includes/ajax/ticket-list/get_tickets.php:331
+msgid "<strong>%d</strong> of <strong>%d</strong> Pages"
+msgstr "<strong>%d</strong> od <strong>%d</strong> strani"
+
+#: includes/ajax/ticket-list/get_tickets.php:315
+msgid "No Tickets found!"
+msgstr "Ne najdem zahtevkov!"
+
+#: includes/ajax/ticket-list/get_tickets.php:225
+msgid "<strong>%d</strong> Tickets"
+msgstr "<strong>%d</strong> zahtevkov"
+
+#: includes/ajax/ticket-list/get_tickets.php:223
+msgid "<strong>%d</strong>-<strong>%d</strong> of <strong>%d</strong> Tickets"
+msgstr "<strong>%d</strong>-<strong>%d</strong> od <strong>%d</strong> Zahtevkov"
+
+#: includes/ajax/ticket-list/get_tickets.php:212
+#: template/tickets/ticket_list/list.php:59
+msgid "Delete"
+msgstr "Briši"
+
+#: includes/ajax/ticket-list/get_tickets.php:205
+msgid "Assign Agent"
+msgstr "Dodeli tehniku"
+
+#: includes/ajax/ticket-list/get_tickets.php:198
+msgid "Change Status"
+msgstr "Spremeni status"
+
+#: includes/ajax/ticket-list/get_tickets.php:12
+msgid "Filter not found!"
+msgstr "Ne najdem filtra!"
+
+#: includes/ajax/ticket-list/class-ticket-list-formating.php:157
+#: includes/functions/replace_template_tags.php:68
+#: template/tickets/dashboard.php:100
+#: template/tickets/open-ticket/class-threads-formatting.php:357
+#: template/tickets/open-ticket/sidebar.php:127
+msgid "None"
+msgstr "brez"
+
+#: includes/ajax/ticket-individual/get_ticket_fields.php:56
+#: includes/ajax/ticket-individual/set_ticket_fields.php:142
+#: template/tickets/open-ticket/sidebar.php:253
+msgid "No Ticket fields"
+msgstr "Ni polj zahtevka"
+
+#: includes/ajax/ticket-individual/get_ticket_fields.php:21
+msgid "Change Ticket Fields"
+msgstr "Spremeni polje zahtevka"
+
+#: includes/ajax/ticket-individual/get_edit_thread.php:26
+msgid "Edit Thread"
+msgstr "Uredi nit"
+
+#: includes/ajax/ticket-individual/get_edit_subject.php:20
+msgid "Edit Subject"
+msgstr "Uredi zadevo"
+
+#: includes/ajax/ticket-individual/get_delete_ticket.php:29
+msgid "Are you sure to delete this ticket?"
+msgstr "Ste prepričani, da želite brisati zahtevek?"
+
+#: includes/ajax/ticket-individual/get_delete_ticket.php:20
+#: template/tickets/open-ticket/body.php:24
+msgid "Delete Ticket"
+msgstr "Briši zahtevek"
+
+#: includes/ajax/ticket-individual/get_delete_thread.php:30
+msgid "Are you sure to delete this thread?"
+msgstr "Ste prepričani, da želite brisati nit?"
+
+#: includes/ajax/ticket-individual/get_delete_thread.php:22
+msgid "Delete Thread"
+msgstr "Briši nit"
+
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:31
+msgid "Are you sure to delete these tickets?"
+msgstr "Ste prepričani, da želite brisati zahtevek?"
+
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:22
+msgid "Delete Tickets"
+msgstr "Briši zahtevke"
+
+#: includes/ajax/ticket-individual/get_close_ticket.php:60
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:62
+#: includes/ajax/ticket-individual/get_delete_thread.php:62
+#: includes/ajax/ticket-individual/get_delete_ticket.php:60
+#: template/tickets/open-ticket/sidebar.php:332
+#: template/tickets/open-ticket/sidebar.php:359
+msgid "Confirm"
+msgstr "Potrdi"
+
+#: includes/ajax/ticket-individual/get_close_ticket.php:29
+msgid "Are you sure to close ticket?"
+msgstr "Ste prepraičani, da želite zaključiti zahtevek?"
+
+#: includes/ajax/ticket-individual/get_close_ticket.php:21
+#: template/tickets/open-ticket/body.php:18
+msgid "Close Ticket"
+msgstr "Zaključi zahtevek"
+
+#: includes/ajax/ticket-individual/get_clone_ticket.php:18
+#: template/tickets/open-ticket/body.php:31
+msgid "Clone Ticket"
+msgstr "Kopiraj zahtevek"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:44
+#: template/tickets/create-ticket.php:62
+msgid "Guest Email"
+msgstr "e-pošta gosta"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:40
+#: template/tickets/create-ticket.php:58
+msgid "Guest Name"
+msgstr "Ime gosta"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:37
+#: template/tickets/create-ticket.php:55
+msgid "Search user ..."
+msgstr "Išči uporabnika..."
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:36
+#: template/tickets/create-ticket.php:54
+msgid "Choose User"
+msgstr "Izberi uporabnika"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:32
+#: template/tickets/create-ticket.php:50
+msgid "Guest"
+msgstr "Gost"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:31
+#: template/tickets/create-ticket.php:49
+msgid "Registered User"
+msgstr "Registriran uporabnik"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:29
+#: includes/class-wpsp-functions.php:711
+msgid "User Type"
+msgstr "Tip uporabnika"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:20
+msgid "Change Raised By"
+msgstr "Spremembo uredil"
+
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:54
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:59
+#: includes/class-wpsp-functions.php:691 includes/class-wpsp-functions.php:714
+#: includes/class-wpsp-functions.php:1090
+#: template/tickets/open-ticket/sidebar.php:41
+msgid "Priority"
+msgstr "Prioriteta"
+
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:41
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:44
+#: includes/class-wpsp-functions.php:690 includes/class-wpsp-functions.php:712
+#: includes/class-wpsp-functions.php:1086
+#: template/tickets/open-ticket/sidebar.php:37
+msgid "Category"
+msgstr "Skupina"
+
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:19
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:20
+msgid "Change Ticket Status"
+msgstr "Spremeni status zahtevka"
+
+#: includes/ajax/ticket-individual/get_assign_agent.php:30
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:27
+msgid "Search agent ..."
+msgstr "Išči tehnika..."
+
+#: includes/ajax/ticket-individual/get_assign_agent.php:21
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:18
+msgid "Change Assigned Agent"
+msgstr "Spremeni dodeljenega tehnika"
+
+#: includes/ajax/ticket-individual/get_agent_fields.php:48
+#: includes/ajax/ticket-individual/set_agent_fields.php:136
+#: template/tickets/open-ticket/sidebar.php:187
+msgid "No Agent Only fields"
+msgstr "Polje samo za tehnika"
+
+#: includes/ajax/ticket-individual/get_agent_fields.php:21
+msgid "Change Agent Fields"
+msgstr "Spremeni polje tehnika"
+
+#: includes/ajax/ticket-individual/class-ticket-fields-format.php:226
+#: template/js_data.php:19 template/tickets/class-ticket-form.php:88
+#: template/tickets/class-ticket-form.php:410
+#: template/tickets/open-ticket/class-threads-formatting.php:486
+msgid "Attach Files"
+msgstr "Pripni datoteko"
+
+#: includes/ajax/ticket-form/upload_file.php:72
+msgid "done"
+msgstr "urejeno"
+
+#: includes/ajax/ticket-form/upload_file.php:40
+msgid "Error: file size exceeded allowed limit!"
+msgstr "Napaka: velikost datoteke je prevelika!"
+
+#: includes/ajax/ticket-form/upload_file.php:29
+#: includes/ajax/ticket-form/upload_file.php:34
+msgid "Error: file format not supported!"
+msgstr "Napaka: datoteka ni podprta!"
+
+#: includes/ajax/save_table_order.php:56
+msgid "Error saving order!"
+msgstr "Napaka pri shranjevanju!"
+
+#: includes/ajax/save_table_order.php:54
+msgid "Order saved successfully!"
+msgstr "Uspešno shranjeno!"
+
+#: includes/ajax/get_delete_status.php:29
+msgid "Are you sure to delete this status?"
+msgstr "Ste prepričani, da želite odstraniti ta status?"
+
+#: includes/ajax/get_delete_priority.php:29
+msgid "Are you sure to delete this priority?"
+msgstr "Ste prepričani, da želite odstraniti to prioriteto?"
+
+#: includes/ajax/get_delete_custom_menu.php:28
+#: includes/ajax/get_delete_support_menu.php:28
+msgid "Are you sure to delete this menu?"
+msgstr "Ste prepričani, da želite odstraniti ta meni?"
+
+#: includes/ajax/get_delete_custom_field.php:33
+msgid "Please note, this will delete all data associated with this custom field and can not be undone!"
+msgstr "V opozorilo, vsi podatki, ki se nanašajo na to polje, bodo odstranjeni in povrnitev v prejšnje stanje ni mogoče!"
+
+#: includes/ajax/get_delete_custom_field.php:29
+msgid "Are you sure to delete this custom field?"
+msgstr "Ste prepričani, da želite odstraniti to polje?"
+
+#: includes/ajax/get_delete_category.php:29
+msgid "Are you sure to delete this category?"
+msgstr "Ste prepričani, da želite odstraniti to skupino?"
+
+#: includes/ajax/get_delete_agent.php:29
+msgid "Are you sure to delete this agent?"
+msgstr "Ste prepričani, da želite odstraniti tega uporabnika podpore?"
+
+#: includes/ajax/get_add_status.php:54 includes/ajax/get_edit_status.php:60
+msgid "Please enter status name!"
+msgstr "Vnesite naziv statusa!"
+
+#: includes/ajax/get_add_status.php:24 includes/ajax/get_edit_status.php:29
+msgid "Status Name"
+msgstr "Naziv statusa"
+
+#: includes/ajax/get_add_priority.php:61 includes/ajax/get_add_status.php:61
+#: includes/ajax/get_edit_priority.php:67 includes/ajax/get_edit_status.php:67
+msgid "Please choose color!"
+msgstr "Izberite barvo!"
+
+#: includes/ajax/get_add_priority.php:54 includes/ajax/get_edit_priority.php:60
+msgid "Please enter priority name!"
+msgstr "Vnesite naziv prioritete!"
+
+#: includes/ajax/get_add_priority.php:29 includes/ajax/get_add_status.php:29
+#: includes/ajax/get_edit_priority.php:34 includes/ajax/get_edit_status.php:34
+msgid "Choose Color"
+msgstr "Izberite barvo"
+
+#: includes/ajax/get_add_priority.php:24 includes/ajax/get_edit_priority.php:29
+msgid "Priority Name"
+msgstr "Naziv prioritete"
+
+#: includes/ajax/get_add_custom_field.php:138
+#: includes/ajax/get_edit_custom_field.php:150
+msgid "Please insert Field Options!"
+msgstr "Vnesite možnosti polja!"
+
+#: includes/ajax/get_add_custom_field.php:131
+#: includes/ajax/get_edit_custom_field.php:143
+msgid "Please choose Field Type!"
+msgstr "Izberite tip polja!"
+
+#: includes/ajax/get_add_custom_field.php:124
+#: includes/ajax/get_edit_custom_field.php:136
+msgid "Please enter Field Label!"
+msgstr "Izberite oznako polja!"
+
+#: includes/ajax/get_add_custom_field.php:77
+#: includes/ajax/get_edit_custom_field.php:88
+msgid "If category is set, custom field will only visible when one of the selected category is choosen in create ticket form. If you want to show this all the time, please leave this empty. Use Ctrl+Click for select OR unselect value."
+msgstr "Če je izbrana skupina, potem bo polje po meri vidno samo ob ustvarjanju novega zahtevka v obrazcu. V primeru, da želite, da je to prikazano vedno, pustite to polje prazno. Uporabite CTRL + klik, da izberete ALI odznačite vrednost."
+
+#: includes/ajax/get_add_custom_field.php:69
+#: includes/ajax/get_edit_custom_field.php:74
+msgid "Assign Categories (optional)"
+msgstr "Dodeli skupino (opcijsko)"
+
+#: includes/ajax/get_add_custom_field.php:65
+#: includes/ajax/get_edit_custom_field.php:70
+msgid "Required field to ticket form. If set Yes, user must have to fill or submit value for this field"
+msgstr "Obvezna polja v obrazcu za podporo. Če nastavite na Da, potem mora uporabnik obvezno vnesti vrednost za to polje."
+
+#: includes/ajax/get_add_custom_field.php:56
+#: includes/ajax/get_edit_custom_field.php:61
+msgid "Agent Only fields not available for ticket form. These can be edited by agents for their internal use."
+msgstr "Polje samo za agente podpore za obraze podpore. To urejajo samo agenti podpore za njihovo interno uporabo."
+
+#: includes/ajax/get_add_custom_field.php:47
+#: includes/ajax/get_edit_custom_field.php:52
+msgid "Please make sure you enter one option per line"
+msgstr "Prepričajte se, da ste vnesli eno opcijo na vrstico"
+
+#: includes/ajax/get_add_custom_field.php:45
+#: includes/ajax/get_edit_custom_field.php:50
+msgid "Enter Field Options"
+msgstr "Vnesite možnosti polja"
+
+#: includes/ajax/get_add_custom_field.php:31
+#: includes/ajax/get_edit_custom_field.php:35
+msgid "Choose Field Type"
+msgstr "Izberite tip polja"
+
+#: includes/ajax/get_add_custom_field.php:26
+#: includes/ajax/get_edit_custom_field.php:30
+msgid "Field Label"
+msgstr "Oznaka polja"
+
+#: includes/ajax/get_add_category.php:114
+#: includes/ajax/get_edit_category.php:135
+msgid "Please enter category name!"
+msgstr "Vnesite naziv polja!"
+
+#: includes/ajax/get_add_category.php:31 includes/ajax/get_edit_category.php:36
+msgid "Search Supervisors..."
+msgstr "Iskanje skrbnikov..."
+
+#: includes/ajax/get_add_category.php:29 includes/ajax/get_edit_category.php:34
+msgid "Supervisor (Optional)"
+msgstr "Skrbnik (opcijsko)"
+
+#: includes/ajax/get_add_category.php:24 includes/ajax/get_edit_category.php:29
+msgid "Category Name"
+msgstr "Naziv skupine"
+
+#: includes/ajax/get_add_agent.php:81
+msgid "Please select an Agent!"
+msgstr "Izberite agenta podpore!"
+
+#: includes/ajax/get_add_agent.php:51 includes/ajax/get_add_category.php:45
+#: includes/ajax/get_add_custom_field.php:86
+#: includes/ajax/get_add_priority.php:39 includes/ajax/get_add_status.php:39
+#: includes/ajax/get_delete_agent.php:42
+#: includes/ajax/get_delete_category.php:42
+#: includes/ajax/get_delete_custom_field.php:43
+#: includes/ajax/get_delete_custom_menu.php:41
+#: includes/ajax/get_delete_priority.php:42
+#: includes/ajax/get_delete_status.php:42
+#: includes/ajax/get_delete_support_menu.php:41
+#: includes/ajax/get_edit_agent.php:42 includes/ajax/get_edit_category.php:65
+#: includes/ajax/get_edit_custom_field.php:98
+#: includes/ajax/get_edit_priority.php:45 includes/ajax/get_edit_status.php:45
+#: template/tickets/ticket_list/filter.php:117
+msgid "Submit"
+msgstr "Pošlji"
+
+#: includes/ajax/get_add_agent.php:31
+msgid "Search Agents..."
+msgstr "Iskanje agentov podpore..."
+
+#: includes/ajax/get_add_agent.php:26
+msgid "Select Agent"
+msgstr "Izberite agenta podpore"
+
+#: includes/ajax/autocomplete/wp_user.php:66
+msgid "No user found!"
+msgstr "Ne najdem uporabnika!"
+
+#: includes/ajax/autocomplete/ticket_filter.php:124
+msgid "No results found!"
+msgstr "Ni rezultatov za prikaz!"
+
+#: includes/admin/ticket-list/ticket-list.php:15
+msgid "Default Filters"
+msgstr "Privzeti filtri"
+
+#: includes/admin/ticket-list/ticket-list.php:11
+msgid "List Settings"
+msgstr "Seznam nastavitev"
+
+#: includes/admin/ticket-list/list-settings.php:30
+msgid "Agent Filter"
+msgstr "Filter agenta"
+
+#: includes/admin/ticket-list/list-settings.php:29
+msgid "Customer Filter"
+msgstr "Filter uporabnika"
+
+#: includes/admin/ticket-list/list-settings.php:17
+msgid "Ticket List Settings"
+msgstr "Nastavitve seznama zahtevkov"
+
+#: includes/admin/ticket-list/default-filters.php:147
+msgid "Number of Tickets shown per page for agent view."
+msgstr "Število zahtevkov prikazano na stran za agente."
+
+#: includes/admin/ticket-list/default-filters.php:129
+msgid "Tickets are loaded on selected order for agent view by default. If agent apply manual filter, this setting will not take effect."
+msgstr "Zahtevki so prikazani po privzetem izbranem razvrščanju za agente. V primeru, da agent uporablja svoje filtre, ta nastavitev nima funkcije."
+
+#: includes/admin/ticket-list/default-filters.php:106
+msgid "Selected statuses will be hidden if no filter is active for agent view. If agent use status filter manually on ticket list, this setting will not take effect and tickets will be filtered as per customer selection."
+msgstr "Izbrani statusi bodo skriti v primeru, da noben filter ni aktiven. Velja za agente. V primeru, da agent uporabi svoj filter statusa na seznamu zahtevkov, ta nastavitev nima vpliva in zahtevki bodo filtrirani kakor si izberejo stranke."
+
+#: includes/admin/ticket-list/default-filters.php:89
+#: includes/admin/ticket-list/list-settings.php:28
+msgid "Agent View"
+msgstr "Pogled agenta"
+
+#: includes/admin/ticket-list/default-filters.php:83
+msgid "Number of Tickets shown per page for customer view."
+msgstr "Število zahtevkov prikaznih na strani za pogled uporabnika"
+
+#: includes/admin/ticket-list/default-filters.php:80
+#: includes/admin/ticket-list/default-filters.php:144
+msgid "500"
+msgstr "500"
+
+#: includes/admin/ticket-list/default-filters.php:79
+#: includes/admin/ticket-list/default-filters.php:143
+msgid "100"
+msgstr "100"
+
+#: includes/admin/ticket-list/default-filters.php:78
+#: includes/admin/ticket-list/default-filters.php:142
+msgid "50"
+msgstr "50"
+
+#: includes/admin/ticket-list/default-filters.php:77
+#: includes/admin/ticket-list/default-filters.php:141
+msgid "40"
+msgstr "40"
+
+#: includes/admin/ticket-list/default-filters.php:76
+#: includes/admin/ticket-list/default-filters.php:140
+msgid "30"
+msgstr "30"
+
+#: includes/admin/ticket-list/default-filters.php:75
+#: includes/admin/ticket-list/default-filters.php:139
+msgid "20"
+msgstr "20"
+
+#: includes/admin/ticket-list/default-filters.php:74
+#: includes/admin/ticket-list/default-filters.php:138
+msgid "10"
+msgstr "10"
+
+#: includes/admin/ticket-list/default-filters.php:71
+#: includes/admin/ticket-list/default-filters.php:135
+msgid "Number of Tickets"
+msgstr "Število zahtevkov"
+
+#: includes/admin/ticket-list/default-filters.php:65
+msgid "Tickets are loaded on selected order for customer view by default. If customer apply manual filter, this setting will not take effect."
+msgstr "Zahtevki so prikazani privzeto glede na izbrano razvrstitev. V primeru, da nastavite lastne filtre, ta nastavitev nima pomena."
+
+#: includes/admin/ticket-list/default-filters.php:48
+#: includes/admin/ticket-list/default-filters.php:112
+msgid "Order By"
+msgstr "Razvrsti po"
+
+#: includes/admin/ticket-list/default-filters.php:42
+msgid "Selected statuses will be hidden if no filter is active for customer view. If customer use status filter manually on ticket list, this setting will not take effect and tickets will be filtered as per customer selection."
+msgstr "Izbrani statusi bodo skriti v primeru, da ni izbran noben filter. V primeru, da uporabnik uporablja lasten filter za stutus na seznamu zahtevkov, ta nastavitev nima pomena."
+
+#: includes/admin/ticket-list/default-filters.php:30
+#: includes/admin/ticket-list/default-filters.php:94
+msgid "Hide Selected Statuses"
+msgstr "Skrij izbrane statuse"
+
+#: includes/admin/ticket-list/default-filters.php:25
+#: includes/admin/ticket-list/list-settings.php:27
+msgid "Customer View"
+msgstr "Pogled uporabnika"
+
+#: includes/admin/ticket-form/ticket-form.php:11
+msgid "Manage Form"
+msgstr "Upravljaj obrazec"
+
+#: includes/admin/ticket-form/form-management.php:96
+#: includes/admin/ticket-list/list-settings.php:120
+msgid "Please Wait ..."
+msgstr "Prosimo počakajte..."
+
+#: includes/admin/ticket-form/form-management.php:47
+msgid "Disable"
+msgstr "Onemogoči"
+
+#: includes/admin/ticket-form/form-management.php:46
+msgid "Enable"
+msgstr "Omogoči"
+
+#: includes/admin/ticket-form/form-management.php:28
+msgid "Full Width"
+msgstr "Celotna širina"
+
+#: includes/admin/ticket-form/form-management.php:27
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:28
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:29
+#: includes/class-wpsp-functions.php:708 includes/class-wpsp-functions.php:1082
+#: template/tickets/open-ticket/sidebar.php:33
+msgid "Status"
+msgstr "Status"
+
+#: includes/admin/ticket-form/form-management.php:17
+msgid "Create New Ticket Form"
+msgstr "Ustvari nov zahtevek s pomočjo obrazca"
+
+#: includes/admin/ticket-form/custom-fields.php:55
+msgid "No Custom Fields found!"
+msgstr "Ne najdem polja po meri!"
+
+#: includes/admin/ticket-form/custom-fields.php:30
+msgid "Assigned Categories"
+msgstr "Dodeljeno skupinam"
+
+#: includes/admin/ticket-form/custom-fields.php:29
+#: includes/ajax/get_add_custom_field.php:60
+#: includes/ajax/get_edit_custom_field.php:65
+msgid "Required"
+msgstr "Obvezno"
+
+#: includes/admin/ticket-form/custom-fields.php:28
+#: includes/ajax/get_add_custom_field.php:51
+#: includes/ajax/get_edit_custom_field.php:56
+msgid "Agent Only"
+msgstr "Samo agentje"
+
+#: includes/admin/ticket-form/custom-fields.php:27
+msgid "Type"
+msgstr "Tip"
+
+#: includes/admin/ticket-form/custom-fields.php:19
+msgid "Add New Custom Field"
+msgstr "Dodaj novo polje po meri"
+
+#: includes/admin/ticket-form/custom-fields.php:18
+#: includes/admin/ticket-form/ticket-form.php:15
+msgid "Custom Fields"
+msgstr "Polja po meri"
+
+#: includes/admin/general/thank_you.php:48
+msgid "URL of the ticket."
+msgstr "Povezava do zahtevka"
+
+#: includes/admin/general/thank_you.php:47
+msgid "Name of user doing current activity."
+msgstr "Imena uporabnikov, s trenutnimi aktivnostmi."
+
+#: includes/admin/general/thank_you.php:46
+msgid "History of communication in ticket."
+msgstr "Zgodovina pogovora v zahtevku."
+
+#: includes/admin/general/thank_you.php:45
+msgid "Last reply description."
+msgstr "Opis zadnjega odgovora."
+
+#: includes/admin/general/thank_you.php:44
+msgid "Email of user posted last reply."
+msgstr "E-naslov uporabnika, ki je dal zadnji odgovor."
+
+#: includes/admin/general/thank_you.php:43
+msgid "Name of user posted last reply."
+msgstr "Ime uporabnika, ki je zadnji oddal odgovor."
+
+#: includes/admin/general/thank_you.php:42
+msgid "Name(s) of agent assigned to ticket."
+msgstr "Ime(na) agentov podpore, katerim je dodeljen ta zahtevek."
+
+#: includes/admin/general/thank_you.php:41
+msgid "Name of the agent who have created ticket on behalf of user. Empty if ticket created by user himself."
+msgstr "Ime agenta podpore, ki je ustvari ta zahtevek za podporo na zahtevo uporabnika. Prazno, če je zahtevo oddal uporabnik sam."
+
+#: includes/admin/general/thank_you.php:40
+msgid "Ticket create time"
+msgstr "Čas ustvarjanja zahtevka"
+
+#: includes/admin/general/thank_you.php:39
+msgid "Email of ticket creator"
+msgstr "E-naslov uporabnika, ki je ustvaril zahtevek"
+
+#: includes/admin/general/thank_you.php:38
+msgid "Name of ticket creator"
+msgstr "Ime uporabnika, ki je ustvaril zahtevek"
+
+#: includes/admin/general/thank_you.php:37
+msgid "Ticket Priority"
+msgstr "Prioriteta zahtevka"
+
+#: includes/admin/general/thank_you.php:36
+msgid "Ticket Category"
+msgstr "Skupina zahtevka"
+
+#: includes/admin/general/thank_you.php:35
+msgid "Ticket status"
+msgstr "Status zahtevka"
+
+#: includes/admin/general/thank_you.php:34
+msgid "Ticket description given while creating ticket"
+msgstr "Opis zahtevka podan med ustvarjanjem zahtevka"
+
+#: includes/admin/general/thank_you.php:33
+msgid "Ticket Subject"
+msgstr "Zadeva zahtevka"
+
+#: includes/admin/general/thank_you.php:31
+msgid "Template Tags"
+msgstr "Oznaka predloge"
+
+#: includes/admin/general/thank_you.php:17
+msgid "Thank You Page after create ticket"
+msgstr "Stran za zahvalo po ustvarjanju zahtevka"
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:15
+#: includes/admin/general/support-page-menu/menu_list_update.php:25
+msgid "Add New Support Page Menu"
+msgstr "Dodaj novo stran za podporo za meni"
+
+#: includes/admin/general/support-page-menu/menu_list.php:60
+msgid "Delete Support Menu"
+msgstr "Odstrani meni za podporo"
+
+#: includes/admin/general/statuses.php:19
+msgid "Add New Status"
+msgstr "Dodaj nov status"
+
+#: includes/admin/general/priorities.php:28
+#: includes/admin/general/statuses.php:28
+msgid "Color"
+msgstr "Barva"
+
+#: includes/admin/general/priorities.php:19
+msgid "Add New Priority"
+msgstr "Dodaj novo prioriteto"
+
+#: includes/admin/general/general.php:43
+msgid "Support Page Menu"
+msgstr "Stran za podoro"
+
+#: includes/admin/general/general.php:39
+msgid "Thank you page"
+msgstr "Stran za zahvalo"
+
+#: includes/admin/general/general.php:23
+#: includes/admin/general/priorities.php:18
+msgid "Priorities"
+msgstr "Prioritete"
+
+#: includes/admin/general/general.php:19 includes/admin/general/statuses.php:18
+msgid "Statuses"
+msgstr "Statusi"
+
+#: includes/admin/general/general-settings.php:323
+msgid "If you set SRN, [Ticket #123456] will become [Ticket SRN123456] whereever applicable. Please don't leave blank."
+msgstr "Če nastavite SRN, [Zahtevek #123456] bo postal [Zahtevek SRN123456] vedno ko nastavite. Tega ne pustite prazno."
+
+#: includes/admin/general/general-settings.php:319
+msgid "Ticket ID Prefix"
+msgstr "ID predpona zahtevka"
+
+#: includes/admin/general/general-settings.php:309
+msgid "Allow Support Staff to read all ticket"
+msgstr "Omogoči, da lahko vsi zaposleni preberejo vse zahtevke"
+
+#: includes/admin/general/general-settings.php:299
+msgid "Allow Guest Ticket"
+msgstr "Dovoli zahtevke brez registracije"
+
+#: includes/admin/general/general-settings.php:292
+msgid "Attachment Max Size(MB)"
+msgstr "Dovoljena velikost priponke (MB)"
+
+#: includes/admin/general/general-settings.php:286
+msgid "This format will be applicable for custom date fields for Support Plus"
+msgstr "Ta format bo uporabljen za uporabniške podatke za Support Plus"
+
+#: includes/admin/general/general-settings.php:281
+msgid "Custom Date Format"
+msgstr "Format datuma"
+
+#: includes/admin/general/general-settings.php:275
+msgid "This format will be applicable for default date fields for Support Plus"
+msgstr "Format bo uporabljen za privzet datum za Support Plus"
+
+#: includes/admin/general/general-settings.php:270
+msgid "System Date Format"
+msgstr "Sistemski format datuma"
+
+#: includes/admin/general/general-settings.php:264
+msgid "This format will be applicable for input date fields (datepicker) for WP Support Plus"
+msgstr "Ta format bo uporabljen za vnosni datum za WP Support Plus"
+
+#: includes/admin/general/general-settings.php:240
+msgid "Calender Date Format"
+msgstr "Format datuma v koledarju"
+
+#: includes/admin/general/general-settings.php:234
+msgid "Bottom"
+msgstr "Spodaj"
+
+#: includes/admin/general/general-settings.php:233
+msgid "Top"
+msgstr "Na vrhu"
+
+#: includes/admin/general/general-settings.php:230
+msgid "Reply Form Position"
+msgstr "Odgovori na postavko obrazca"
+
+#: includes/admin/general/general-settings.php:225
+msgid "As name suggest, this setting will change ticket status to selected when support agent reply to ticket. Current Status will not change status of ticket in this case."
+msgstr "Ta nastavitev bo spremenila status zahtevka na izbranega, ko bo podpora odgovorila na zahtevek. Trenutni status ne bo spremenjen."
+
+#: includes/admin/general/general-settings.php:209
+msgid "Ticket Status after Agent Reply"
+msgstr "Status zahtevka po odgovoru podpore"
+
+#: includes/admin/general/general-settings.php:203
+msgid "This is applicable for Ticket id being created for new ticket."
+msgstr "To se nanaša na ID zahtevka ob ustvarjanju novega zahtevka."
+
+#: includes/admin/general/general-settings.php:201
+msgid "Random"
+msgstr "Naključno"
+
+#: includes/admin/general/general-settings.php:195
+msgid "Sequential"
+msgstr "Sekventno"
+
+#: includes/admin/general/general-settings.php:187
+#: includes/admin/general/thank_you.php:32
+msgid "Ticket ID"
+msgstr "Št, zahtevka"
+
+#: includes/admin/general/general-settings.php:181
+msgid "If enabled, it will show Close Ticket button to open ticket view for customer. This button will change ticket status to selected status."
+msgstr "Če je omogočeno, bo prikazan gumb Zapri zahtevek za odprte zahtevke za uporabnike. Ta gumb bo spremenil status v izbranega."
+
+#: includes/admin/general/general-settings.php:162
+msgid "Allow Customer to Close Ticket"
+msgstr "Dovoli uporabniku, da zapre zahtevek"
+
+#: includes/admin/general/general-settings.php:156
+msgid "As name suggest, this setting will change ticket status to selected when ticket creator reply to ticket. Current Status will not change status of ticket in this case."
+msgstr "Ta nastavitev bo spremenila status zahtevka na izbranega, ko bo oseba, ki je ustvarila zahtevek podala odgovor. Trenuten status se ne bo spremenil v tem primeru."
+
+#: includes/admin/general/general-settings.php:144
+#: includes/admin/general/general-settings.php:215
+msgid "Status List"
+msgstr "Seznam statusov"
+
+#: includes/admin/general/general-settings.php:142
+#: includes/admin/general/general-settings.php:213
+msgid "Current Status"
+msgstr "Trenuten status"
+
+#: includes/admin/general/general-settings.php:137
+msgid "Ticket Status after Customer Reply"
+msgstr "Status zahtevka po odgovoru uporabnika"
+
+#: includes/admin/general/general-settings.php:131
+msgid "This priority will be default priority for new ticket."
+msgstr "Ta prioriteta bo privzeta za nove zahtevke"
+
+#: includes/admin/general/general-settings.php:115
+msgid "Default Ticket Priority"
+msgstr "Privzeta prioriteta zahtevka"
+
+#: includes/admin/general/general-settings.php:109
+msgid "This status will be default status for new ticket."
+msgstr "Ta status bo privzet status za nove zahtevke."
+
+#: includes/admin/general/general-settings.php:93
+msgid "Default Ticket Status"
+msgstr "Privzeti status zahtevka"
+
+#: includes/admin/general/general-settings.php:87
+msgid "This category will be default category for new ticket. If category is not present in ticket form or ticket created via email piping, this category will be used as new ticket category."
+msgstr "Ta skupina bo privzeta skupina za nove zahtevke. Če skupina ni nastavljena v obrazcu za podporo ali v zahtevku poslan po e-pošti, bo ta skupina uporabljena za nove zahtevke."
+
+#: includes/admin/general/general-settings.php:71
+msgid "Default Category"
+msgstr "Privzete skupina"
+
+#: includes/admin/general/general-settings.php:59
+msgid "Open support page in new window?"
+msgstr "Odprem stran za podporo v novem oknu?"
+
+#: includes/admin/general/general-settings.php:53
+msgid "This page will be used as helpdesk page on front-end. All users ( customer, agent, supervisor, administrator ) will able to access helpdesk on same page depending on their role. Please note, this page will not use your theme. That means your other frontend features like header, footer, sidebars, menus etc. will not be applicable to this page. It will have button to go back to your homepage. It does not require to have any shortcode, just go to your pages and create new page without description."
+msgstr "Ta stran bo uporabljena kot stran za podporo za pogled uporabnika. Vsi uporabniki, bodo lahko dostopali do iste nadzorne plošče, glede na njihovo pravico dostopa. Ta stran ne bo uporabljala vaše teme. To pomeni, da vaša prva stran, kot so glava, noga..itd ne bodo uporabljena iz vaše predloge. Imel bo gumb, da se vrnete na vašo prvo stran."
+
+#: includes/admin/general/general-settings.php:35
+msgid "Support Page"
+msgstr "Stran za podporo"
+
+#: includes/admin/general/general-settings.php:26
+msgid "Choose Logo"
+msgstr "Izberite logotip"
+
+#: includes/admin/general/footer-text.php:17
+#: includes/admin/general/general.php:35
+msgid "Footer Text"
+msgstr "Tekst v nogi"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:11
+#: includes/admin/general/support-page-menu/menu_list_update.php:12
+#: includes/ajax/autocomplete/index.php:10
+#: includes/ajax/autocomplete/ticket_filter.php:12
+#: includes/ajax/get_add_agent.php:10 includes/ajax/get_add_category.php:10
+#: includes/ajax/get_add_custom_field.php:10
+#: includes/ajax/get_add_priority.php:10 includes/ajax/get_add_status.php:10
+#: includes/ajax/get_delete_agent.php:13
+#: includes/ajax/get_delete_category.php:13
+#: includes/ajax/get_delete_custom_field.php:13
+#: includes/ajax/get_delete_custom_menu.php:13
+#: includes/ajax/get_delete_priority.php:13
+#: includes/ajax/get_delete_status.php:13
+#: includes/ajax/get_delete_support_menu.php:13
+#: includes/ajax/get_edit_agent.php:13 includes/ajax/get_edit_category.php:13
+#: includes/ajax/get_edit_custom_field.php:13
+#: includes/ajax/get_edit_priority.php:13 includes/ajax/get_edit_status.php:13
+#: includes/ajax/save_form_management.php:19
+#: includes/ajax/save_list_settings.php:21
+#: includes/ajax/save_table_order.php:17
+#: includes/ajax/search_users_for_add_agent.php:10
+#: includes/ajax/set_add_agent.php:10 includes/ajax/set_add_category.php:10
+#: includes/ajax/set_add_custom_field.php:10
+#: includes/ajax/set_add_priority.php:10 includes/ajax/set_add_status.php:10
+#: includes/ajax/set_delete_agent.php:13
+#: includes/ajax/set_delete_category.php:13
+#: includes/ajax/set_delete_custom_field.php:13
+#: includes/ajax/set_delete_custom_menu.php:13
+#: includes/ajax/set_delete_priority.php:13
+#: includes/ajax/set_delete_status.php:13
+#: includes/ajax/set_delete_support_menu.php:13
+#: includes/ajax/set_edit_agent.php:14 includes/ajax/set_edit_category.php:17
+#: includes/ajax/set_edit_custom_field.php:13
+#: includes/ajax/set_edit_priority.php:15 includes/ajax/set_edit_status.php:15
+#: includes/ajax/ticket-form/create_tkt_cng_cat.php:10
+#: includes/ajax/ticket-form/upload_file.php:9
+#: includes/ajax/ticket-form/upload_image.php:8
+#: includes/ajax/ticket-individual/get_agent_fields.php:16
+#: includes/ajax/ticket-individual/get_assign_agent.php:16
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:15
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:15
+#: includes/ajax/ticket-individual/get_change_raised_by.php:15
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:15
+#: includes/ajax/ticket-individual/get_clone_ticket.php:13
+#: includes/ajax/ticket-individual/get_close_ticket.php:18
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:19
+#: includes/ajax/ticket-individual/get_delete_thread.php:19
+#: includes/ajax/ticket-individual/get_delete_ticket.php:16
+#: includes/ajax/ticket-individual/get_edit_subject.php:15
+#: includes/ajax/ticket-individual/get_edit_thread.php:19
+#: includes/ajax/ticket-individual/get_ticket_fields.php:16
+#: includes/ajax/ticket-individual/set_agent_fields.php:17
+#: includes/ajax/ticket-individual/set_assign_agent.php:18
+#: includes/ajax/ticket-individual/set_bulk_assign_agent.php:20
+#: includes/ajax/ticket-individual/set_bulk_change_status.php:19
+#: includes/ajax/ticket-individual/set_change_raised_by.php:17
+#: includes/ajax/ticket-individual/set_change_ticket_status.php:17
+#: includes/ajax/ticket-individual/set_clone_ticket.php:18
+#: includes/ajax/ticket-individual/set_close_ticket.php:17
+#: includes/ajax/ticket-individual/set_delete_bulk_ticket.php:20
+#: includes/ajax/ticket-individual/set_delete_thread.php:18
+#: includes/ajax/ticket-individual/set_delete_ticket.php:19
+#: includes/ajax/ticket-individual/set_edit_subject.php:18
+#: includes/ajax/ticket-individual/set_edit_thread.php:19
+#: includes/ajax/ticket-individual/set_ticket_fields.php:17
+#: includes/ajax/ticket-list/apply_ticket_filter.php:12
+#: includes/ajax/ticket-list/apply_ticket_filter.php:20
+#: includes/ajax/ticket-list/apply_ticket_filter.php:28
+#: includes/ajax/ticket-list/delete_ticket_filter.php:12
+#: includes/ajax/ticket-list/delete_ticket_filter.php:20
+#: includes/ajax/ticket-list/delete_ticket_filter.php:25
+#: includes/ajax/ticket-list/delete_ticket_filter.php:32
+#: includes/ajax/ticket-list/save_ticket_filter.php:12
+#: includes/ajax/upgrade.php:11 includes/ajax/user-login/guest_signin.php:12
+#: includes/ajax/user-login/guest_signin.php:46
+#: includes/ajax/user-login/signin.php:12
+#: includes/ajax/user-login/signin.php:40 includes/class-wpsp-ajax.php:131
+#: includes/class-wpsp-ajax.php:149 includes/class-wpsp-ajax.php:203
+#: template/tickets/create-ticket.php:135
+#: template/tickets/create-ticket.php:142
+#: template/tickets/ticket-operations/add_ticket_note.php:20
+#: template/tickets/ticket-operations/reply_ticket.php:21
+#: wp-support-plus.php:72 wp-support-plus.php:79
+msgid "Cheating huh?"
+msgstr "Goljufanje mar ne?"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:48
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:57
+#: includes/admin/general/support-page-menu/menu_list_add.php:48
+#: includes/admin/general/support-page-menu/menu_list_update.php:59
+#: includes/ajax/get_add_agent.php:52 includes/ajax/get_add_category.php:46
+#: includes/ajax/get_add_custom_field.php:87
+#: includes/ajax/get_add_priority.php:40 includes/ajax/get_add_status.php:40
+#: includes/ajax/get_delete_agent.php:43
+#: includes/ajax/get_delete_category.php:43
+#: includes/ajax/get_delete_custom_field.php:44
+#: includes/ajax/get_delete_custom_menu.php:42
+#: includes/ajax/get_delete_priority.php:43
+#: includes/ajax/get_delete_status.php:43
+#: includes/ajax/get_delete_support_menu.php:42
+#: includes/ajax/get_edit_agent.php:43 includes/ajax/get_edit_category.php:66
+#: includes/ajax/get_edit_custom_field.php:99
+#: includes/ajax/get_edit_priority.php:46 includes/ajax/get_edit_status.php:46
+#: includes/ajax/ticket-individual/get_agent_fields.php:89
+#: includes/ajax/ticket-individual/get_assign_agent.php:140
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:116
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:83
+#: includes/ajax/ticket-individual/get_change_raised_by.php:142
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:91
+#: includes/ajax/ticket-individual/get_clone_ticket.php:59
+#: includes/ajax/ticket-individual/get_close_ticket.php:59
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:61
+#: includes/ajax/ticket-individual/get_delete_thread.php:61
+#: includes/ajax/ticket-individual/get_delete_ticket.php:59
+#: includes/ajax/ticket-individual/get_edit_subject.php:61
+#: includes/ajax/ticket-individual/get_edit_thread.php:85
+#: includes/ajax/ticket-individual/get_ticket_fields.php:97
+#: template/tickets/open-ticket/class-threads-formatting.php:81
+#: template/tickets/open-ticket/class-threads-formatting.php:103
+#: template/tickets/open-ticket/sidebar.php:331
+#: template/tickets/open-ticket/sidebar.php:358
+msgid "Cancel"
+msgstr "Prekliči"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:35
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:43
+#: includes/admin/general/support-page-menu/menu_list_add.php:35
+#: includes/admin/general/support-page-menu/menu_list_update.php:45
+msgid "Menu URL"
+msgstr "Povezava menija"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:26
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:34
+#: includes/admin/general/support-page-menu/menu_list_add.php:26
+#: includes/admin/general/support-page-menu/menu_list_update.php:36
+msgid "Menu Icon"
+msgstr "Ikona menija"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:15
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:23
+msgid "Add New Menu Slider"
+msgstr "Dodaj nov slider meni"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:99
+msgid "Delete Custom Menu"
+msgstr "Odstrani meni po meri"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:72
+#: includes/admin/general/support-page-menu/menu_list.php:34
+#: includes/admin/general/thank_you.php:18
+msgid "Title"
+msgstr "Naziv"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:55
+msgid "Custom Menu Slider"
+msgstr "Slider meni po meri"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:46
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:29
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:37
+#: includes/admin/general/general-settings.php:29
+#: includes/admin/general/support-page-menu/menu_list_add.php:29
+#: includes/admin/general/support-page-menu/menu_list_update.php:39
+msgid "Upload Logo"
+msgstr "Prenesite logotip"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:42
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:71
+#: includes/admin/general/support-page-menu/menu_list.php:33
+msgid "Icon"
+msgstr "Ikona"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:36
+msgid "If enabled, it will show Support Button on front-end website. When visitor click this button, it will open Support Page selected above in new tab."
+msgstr "Če je omogočeno, bo prikazan gumb za podporo na prvi strani strani. Ko bo uporabnik kliknil na gumb, bo odprlo stran za podporo, izbran v novem zavihku."
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:26
+msgid "Show Support Button"
+msgstr "Prikaži gumb za podporo"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:21
+#: includes/admin/general/general.php:27
+msgid "Support Button"
+msgstr "Gumb za podporo"
+
+#: includes/admin/general/custom-css.php:18
+#: includes/admin/general/general.php:31
+msgid "Custom CSS"
+msgstr "CSS po meri"
+
+#: includes/admin/general/categories.php:64
+#: includes/admin/general/priorities.php:59
+#: includes/admin/general/statuses.php:59
+msgid "Save Order"
+msgstr "Shrani razporeditev"
+
+#: includes/admin/general/categories.php:29
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:73
+#: includes/admin/general/priorities.php:29
+#: includes/admin/general/statuses.php:29
+#: includes/admin/general/support-page-menu/menu_list.php:35
+#: includes/admin/ticket-form/custom-fields.php:31
+msgid "Action"
+msgstr "Akcija"
+
+#: includes/admin/general/categories.php:28
+msgid "Supervisor(s)"
+msgstr "Nadzornik(i)"
+
+#: includes/admin/general/categories.php:26
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:70
+#: includes/admin/general/priorities.php:26
+#: includes/admin/general/statuses.php:26
+#: includes/admin/general/support-page-menu/menu_list.php:32
+#: includes/admin/ticket-form/form-management.php:25
+#: includes/admin/ticket-list/list-settings.php:25
+msgid "Order"
+msgstr "Razvrščanje"
+
+#: includes/admin/general/categories.php:19
+msgid "Add New Category"
+msgstr "Dodaj novo skupino"
+
+#: includes/admin/general/categories.php:18
+#: includes/admin/general/general.php:15
+msgid "Categories"
+msgstr "Skupine"
+
+#: includes/admin/dashbord/general.php:24
+msgid "Statuses to Show"
+msgstr "Statusi za prikaz"
+
+#: includes/admin/class-wpsp-admin.php:242
+msgid "Dismiss this notice"
+msgstr "Prezri to opozorilo"
+
+#: includes/admin/class-wpsp-admin.php:242
+msgid "Settings updated"
+msgstr "Nastavitve posodobljene"
+
+#: includes/admin/class-wpsp-admin.php:218
+msgid "Add-Ons"
+msgstr "Dodatki"
+
+#: includes/admin/class-wpsp-admin.php:214
+msgid "Dashbord"
+msgstr "Nadzorna plošča"
+
+#: includes/admin/class-wpsp-admin.php:206
+#: template/tickets/create-ticket.php:334 template/tickets/logged-in.php:10
+msgid "Ticket List"
+msgstr "Seznam zahtevkov"
+
+#: includes/admin/class-wpsp-admin.php:202
+msgid "Ticket Form"
+msgstr "Obrazec za podporo"
+
+#: includes/admin/class-wpsp-admin.php:198
+#: includes/admin/dashbord/dashbord.php:11
+msgid "General"
+msgstr "Splošno"
+
+#: includes/admin/class-wpsp-admin.php:166
+msgid "WP Support Plus Settings"
+msgstr "WP Support Plus nastavitve"
+
+#: includes/admin/agents/ticket-agents.php:39
+msgid "Search"
+msgstr "Iskanje"
+
+#: includes/admin/agents/ticket-agents.php:38
+#: includes/ajax/ticket-list/get_tickets.php:194
+#: template/tickets/ticket_list/filter.php:27
+msgid "Reset Filter"
+msgstr "Ponastavi filter"
+
+#: includes/admin/agents/ticket-agents.php:37
+#: template/tickets/ticket_list/list.php:55
+msgid "Apply"
+msgstr "Uporabi"
+
+#: includes/admin/agents/ticket-agents.php:32
+msgid "All"
+msgstr "Vse"
+
+#: includes/admin/agents/ticket-agents.php:18
+#: includes/admin/general/categories.php:19
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:64
+#: includes/admin/general/priorities.php:19
+#: includes/admin/general/statuses.php:19
+#: includes/admin/general/support-page-menu/menu_list.php:26
+#: includes/admin/ticket-form/custom-fields.php:19
+msgid "Add New"
+msgstr "Dodaj nov"
+
+#: includes/admin/agents/ticket-agents.php:18
+msgid "Add New Agent"
+msgstr "Dodaj novega agenta za podporo"
+
+#: includes/admin/agents/ticket-agents.php:17
+#: includes/admin/class-wpsp-admin.php:210
+msgid "Agents"
+msgstr "Agenti podpore"
+
+#: includes/admin/agents/general-settings.php:94
+msgid "If set yes, supervisor will able to change raised by of tickets of assigned categories."
+msgstr "Če je nastavljeno na Da, nadzorniki bodo lahko spremenili zahtevek za dodeljeno skupino"
+
+#: includes/admin/agents/general-settings.php:83
+msgid "If set yes, supervisor will able to delete tickets of assigned categories"
+msgstr "Če je nastavljeno na Da, nadzorniki bodo lahko odstranili zahtevek iz dodeljene skupine"
+
+#: includes/admin/agents/general-settings.php:67
+msgid "If set yes, an agent will able to view all tickets of categories assigned to him but do not have permission to reply or modify in tickets not assigned to him. This is important to have this permission because sometimes an agent will need to refer other tickets not assigned to him."
+msgstr "Če je nastavljeno na Da, bodo agenti podpore lahko videli vse zahtevke skupin dodeljene njemu,vendar ne bodo imeli dovoljenja, da na njih odgovorijo ali jih urejajo, razen če je zahtevek dodeljen temu agentu podpore."
+
+#: includes/admin/agents/general-settings.php:61
+msgid "Allow Read Only Not Assigned Tickets"
+msgstr "Dovoli samo za branje na zahtevke, ki so nedodeljeni"
+
+#: includes/admin/agents/general-settings.php:56
+msgid "If set yes, an agent will able to change raised by of ticket assigned to him."
+msgstr "Če je nastavljeno na Da, bo agent podpore lahko spremenil nastavitev na dodeljen zahtevek"
+
+#: includes/admin/agents/general-settings.php:50
+#: includes/admin/agents/general-settings.php:88
+msgid "Allow Change Raised By"
+msgstr "Dovoli spremeni postavljen od"
+
+#: includes/admin/agents/general-settings.php:45
+msgid "If set yes, an agent will able to delete ticket assigned to him."
+msgstr "Če je nastavljeno na Da, bo agent lahko odstranil zahtevek dodeljen njemu"
+
+#: includes/admin/agents/general-settings.php:39
+#: includes/admin/agents/general-settings.php:77
+msgid "Allow Delete Ticket"
+msgstr "Dovoli brisanje zahtevkov"
+
+#: includes/admin/agents/general-settings.php:34
+msgid "If set yes, an agent will able to assign ticket assigned to him to some other agent who is assigned to ticket category."
+msgstr "Če je nastavljeno na Da, bo agent lahko dodelil zahtevek, ki mu je dodeljen, nekomu drugemu, ki je dodeljen tej skupini."
+
+#: includes/admin/agents/general-settings.php:32
+#: includes/admin/agents/general-settings.php:43
+#: includes/admin/agents/general-settings.php:54
+#: includes/admin/agents/general-settings.php:65
+#: includes/admin/agents/general-settings.php:81
+#: includes/admin/agents/general-settings.php:92
+#: includes/admin/general/general-settings.php:64
+#: includes/admin/general/general-settings.php:303
+#: includes/admin/general/general-settings.php:313
+#: includes/admin/ticket-form/custom-fields.php:44
+#: includes/admin/ticket-form/custom-fields.php:45
+#: includes/admin/ticket-form/form-management.php:53
+#: includes/admin/ticket-list/list-settings.php:49
+#: includes/admin/ticket-list/list-settings.php:55
+#: includes/admin/ticket-list/list-settings.php:64
+#: includes/admin/ticket-list/list-settings.php:70
+#: includes/ajax/get_add_custom_field.php:54
+#: includes/ajax/get_add_custom_field.php:62
+#: includes/ajax/get_edit_custom_field.php:59
+#: includes/ajax/get_edit_custom_field.php:67
+msgid "No"
+msgstr "Ne"
+
+#: includes/admin/agents/general-settings.php:31
+#: includes/admin/agents/general-settings.php:42
+#: includes/admin/agents/general-settings.php:53
+#: includes/admin/agents/general-settings.php:64
+#: includes/admin/agents/general-settings.php:80
+#: includes/admin/agents/general-settings.php:91
+#: includes/admin/general/general-settings.php:63
+#: includes/admin/general/general-settings.php:302
+#: includes/admin/general/general-settings.php:312
+#: includes/admin/ticket-form/custom-fields.php:44
+#: includes/admin/ticket-form/custom-fields.php:45
+#: includes/admin/ticket-form/form-management.php:52
+#: includes/admin/ticket-list/list-settings.php:48
+#: includes/admin/ticket-list/list-settings.php:54
+#: includes/admin/ticket-list/list-settings.php:63
+#: includes/admin/ticket-list/list-settings.php:69
+#: includes/ajax/get_add_custom_field.php:53
+#: includes/ajax/get_add_custom_field.php:63
+#: includes/ajax/get_edit_custom_field.php:58
+#: includes/ajax/get_edit_custom_field.php:68
+msgid "Yes"
+msgstr "Da"
+
+#: includes/admin/agents/general-settings.php:28
+msgid "Allow Assign Ticket"
+msgstr "Dovoli dodeli zahtevek"
+
+#: includes/admin/agents/class_agent_table.php:66
+msgid "Delete Agent"
+msgstr "Odstrani agenta podpore"
+
+#: includes/admin/agents/class_agent_table.php:45
+#: includes/admin/agents/ticket-agents.php:35
+#: includes/ajax/get_add_agent.php:41 includes/ajax/get_edit_agent.php:33
+msgid "Administrator"
+msgstr "Administrator"
+
+#: includes/admin/agents/class_agent_table.php:43
+#: includes/admin/agents/general-settings.php:72
+#: includes/admin/agents/ticket-agents.php:34
+#: includes/ajax/get_add_agent.php:40 includes/ajax/get_edit_agent.php:32
+msgid "Supervisor"
+msgstr "Nadzornik"
+
+#: includes/admin/agents/class_agent_table.php:41
+#: includes/admin/agents/general-settings.php:23
+#: includes/admin/agents/ticket-agents.php:33
+#: includes/ajax/get_add_agent.php:24 includes/ajax/get_add_agent.php:39
+#: includes/ajax/get_edit_agent.php:31 template/tickets/dashboard.php:83
+msgid "Agent"
+msgstr "Agent podpore"
+
+#: includes/admin/agents/class_agent_table.php:17
+#: includes/admin/agents/ticket-agents.php:30
+#: includes/ajax/get_add_agent.php:37 includes/ajax/get_edit_agent.php:29
+msgid "Role"
+msgstr "Pravica"
+
+#: includes/admin/agents/class_agent_table.php:16
+#: includes/class-wpsp-functions.php:620 template/header/sign-in.php:65
+msgid "Email"
+msgstr "E-pošta"
+
+#: includes/admin/agents/class_agent_table.php:15
+#: includes/admin/general/categories.php:27
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:19
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:27
+#: includes/admin/general/priorities.php:27
+#: includes/admin/general/statuses.php:27
+#: includes/admin/general/support-page-menu/menu_list_add.php:19
+#: includes/admin/general/support-page-menu/menu_list_update.php:29
+#: includes/admin/ticket-form/custom-fields.php:26
+#: includes/admin/ticket-form/form-management.php:26
+#: includes/admin/ticket-list/list-settings.php:26
+#: template/header/sign-in.php:62
+msgid "Name"
+msgstr "Ime"
+
+#: includes/admin/agents/class_agent_table.php:14
+msgid "Username"
+msgstr "Uporabniško ime"
+
+#: includes/admin/agents/agents.php:15
+msgid "Agents & Supervisors"
+msgstr "Agenti podpore in nadzorniki"
+
+#: includes/admin/agents/agents.php:11
+#: includes/admin/general/general-settings.php:21
+#: includes/admin/general/general.php:11
+msgid "General Settings"
+msgstr "Splošne nastavitve"
+
+#: includes/admin/addons/wpsp_license_settings.php:26
+#: includes/admin/agents/general-settings.php:104
+#: includes/admin/dashbord/general.php:44
+#: includes/admin/general/custom-css.php:31
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:114
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:47
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:56
+#: includes/admin/general/footer-text.php:36
+#: includes/admin/general/general-settings.php:332
+#: includes/admin/general/support-page-menu/menu_list.php:75
+#: includes/admin/general/support-page-menu/menu_list_add.php:47
+#: includes/admin/general/support-page-menu/menu_list_update.php:58
+#: includes/admin/general/thank_you.php:57
+#: includes/admin/ticket-form/form-management.php:69
+#: includes/admin/ticket-list/default-filters.php:157
+#: includes/admin/ticket-list/list-settings.php:93
+#: includes/ajax/ticket-individual/get_agent_fields.php:90
+#: includes/ajax/ticket-individual/get_assign_agent.php:141
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:117
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:84
+#: includes/ajax/ticket-individual/get_change_raised_by.php:143
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:92
+#: includes/ajax/ticket-individual/get_clone_ticket.php:60
+#: includes/ajax/ticket-individual/get_edit_subject.php:62
+#: includes/ajax/ticket-individual/get_edit_thread.php:86
+#: includes/ajax/ticket-individual/get_ticket_fields.php:98
+msgid "Save Changes"
+msgstr "Shrani spremembe"
+
+#: includes/admin/addons/addons.php:10
+msgid "Licenses"
+msgstr "Licence"
+
+#: includes/EDD_SL_Plugin_Updater.php:399
+msgid "Error"
+msgstr "Napake"
+
+#: includes/EDD_SL_Plugin_Updater.php:399
+msgid "You do not have permission to install plugin updates"
+msgstr "Nimate pravice do namestitve posodobitev za dodatke"
+
+#: includes/EDD_SL_Plugin_Updater.php:209
+msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s or %5$supdate now%6$s."
+msgstr "Na voljo je nova verzije %1$s. %2$s Poglej verzijo %3$s podrobnosti %4$s ali %5$s posodobi zdaj %6$s."
+
+#: includes/EDD_SL_Plugin_Updater.php:201
+msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr "Na voljo je nova verzija %1$s. %2$s Poglej verzijo %3$s pordrobnosti %4$s."

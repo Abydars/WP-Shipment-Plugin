@@ -1,0 +1,2097 @@
+# Translation of WP Support Plus Responsive Ticket System in Hebrew
+# This file is distributed under the same license as the WP Support Plus Responsive Ticket System package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-07-20 10:57+0530\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Language: he_IL\n"
+"Project-Id-Version: WP Support Plus Responsive Ticket System\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+
+#: includes/class-wpsp-functions.php:941
+msgid "Trashed Tickets"
+msgstr "זרוק כרטיסים לאשפה"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:420
+msgid "%1$s changed category to %2$s"
+msgstr "%1$s שינה קטגוריה ל%2$s"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:394
+msgid "%1$s changed status to %2$s"
+msgstr "%1$s שינה סטטוס ל%2$s"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:368
+msgid "%1$s changed assigned agent to %2$s"
+msgstr "%1$s שינה את הסוכן שהוקצה ל%2$s"
+
+#: template/tickets/ticket_list/filter.php:72
+msgid "ON"
+msgstr "פועל"
+
+#: template/tickets/ticket_list/filter.php:71
+msgid "OFF"
+msgstr "מכובה"
+
+#: includes/ajax/get_permanent_delete_ticket.php:19
+msgid "Permanent Delete Ticket"
+msgstr "מחיקת כרטיס קבוע"
+
+#: includes/ajax/get_restore_ticket.php:19
+msgid "Restore Ticket"
+msgstr "שחזור כרטיס"
+
+#: template/tickets/create-ticket.php:97
+msgid "Don't Notify Owner"
+msgstr "אל תודיע לבעלים"
+
+#: includes/admin/general/general-settings.php:52
+msgid "Click here to go to support page"
+msgstr "לחץ כן כדי לגשת לדף התמיכה"
+
+#: template/tickets/open-ticket/sidebar.php:117
+msgid "Biographical Information"
+msgstr "מידע ביוגרפי"
+
+#: template/tickets/open-ticket/sidebar.php:107
+msgid "User location by IP address"
+msgstr "מיקום משתמש עפ\"י כתובת IP"
+
+#: template/tickets/open-ticket/sidebar.php:97
+msgid "All Tickets of this user"
+msgstr "כל הכרטיסים של משתמש זה"
+
+#: template/tickets/open-ticket/body.php:43
+msgid "Delete Permanently"
+msgstr "מחק לצמיתות"
+
+#: template/tickets/open-ticket/body.php:37
+msgid "Restore"
+msgstr "לשחזר"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:471
+msgid "%1$s changed raised by to %2$s"
+msgstr "%1$s השתנה ל%2$s"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:446
+msgid "%1$s changed priority to %2$s"
+msgstr "%1$s שינה את העדיפות ל%2$s"
+
+#: includes/admin/general/general-settings.php:435
+msgid "Disable Default Login"
+msgstr "השבת כניסה ברירת מחדל"
+
+#: includes/admin/general/general.php:47
+#: includes/admin/ticket-list/advanced-settings.php:21
+#: includes/admin/ticket-list/ticket-list.php:23
+msgid "Advanced Settings"
+msgstr "הגדרות מתקדמות"
+
+#: includes/admin/general/thank_you.php:63
+msgid "Redirect to below link after submit(above message wont display)"
+msgstr "הפניה מחדש לקישור הבא לאחר השליחה (ההודעה לעיל אינה מוצגת)"
+
+#: includes/admin/general/thank_you.php:57
+msgid "Redirect link"
+msgstr "הפניה מחדש של הקישור"
+
+#: includes/admin/ticket-list/advanced-settings.php:26
+msgid "Subject Character Length"
+msgstr "אורך תו נושא"
+
+#: includes/admin/ticket-list/open-ticket-widget.php:26
+msgid "Widgets Name"
+msgstr "שם של הווג'ט"
+
+#: includes/admin/ticket-list/list-settings.php:31
+msgid "Customer Tickets"
+msgstr "כרטיסים של לקוחות"
+
+#: includes/admin/ticket-list/advanced-settings.php:32
+msgid "Raised By Character Length"
+msgstr "אורך תו מוגדל"
+
+#: includes/ajax/ticket-individual/get_user_biography.php:22
+msgid "Biographical Info"
+msgstr "מידע ביוגרפי"
+
+#: includes/admin/dashbord/general.php:40
+msgid "Dashborad to Hide"
+msgstr "סמן ממי להסתיר את לוח מחוונים?"
+
+#. Author URI of the plugin
+msgid "https://www.wpsupportplus.com/"
+msgstr ""
+
+#. Author of the plugin
+msgid "Pradeep Makone"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/wp-support-plus-responsive-ticket-system"
+msgstr ""
+
+#. Description of the plugin
+msgid "Exceptional customer support solution for WordPress!"
+msgstr "תמיכת לקוחות יוצאת דופן לאתרי וורדפרס!"
+
+#. Name of the plugin
+msgid "WP Support Plus"
+msgstr "מערכת תמיכה+"
+
+#: includes/ajax/ticket-individual/get_ticket_created.php:56
+msgid "All Tickets"
+msgstr "כל הכרטיסים"
+
+#: includes/admin/customize/general.php:55
+msgid "Buttons"
+msgstr "כפתורים"
+
+#: includes/admin/customize/general.php:48
+msgid "Footer"
+msgstr ""
+
+#: includes/admin/customize/general.php:41
+msgid "Body"
+msgstr "גוף"
+
+#: includes/admin/customize/general.php:34
+msgid "Secondary Menu"
+msgstr "תפריט משני"
+
+#: includes/admin/customize/general.php:27
+msgid "Header"
+msgstr ""
+
+#: includes/admin/customize/general.php:22
+msgid "General CSS"
+msgstr "CSS כללי"
+
+#: includes/admin/class-wpsp-admin.php:231
+msgid "Customize"
+msgstr "התאמה אישית"
+
+#: includes/admin/class-wpsp-admin.php:150
+msgid "Please enter required field."
+msgstr "הזן שדה חובה."
+
+#: includes/admin/customize/ticket_list.php:27
+msgid "Filter Sidebar"
+msgstr ""
+
+#: includes/admin/customize/ticket_list.php:22
+msgid "Ticket List CSS"
+msgstr "רשימת CSS של כרטיסים"
+
+#: includes/admin/customize/ticket_list.php:58
+#: includes/admin/customize/general.php:66
+msgid "Reset default"
+msgstr "אפס לברירת המחדל"
+
+#: includes/admin/customize/ticket_list.php:48
+msgid "Ticket Log"
+msgstr "יומן כרטיס"
+
+#: includes/admin/ticket-list/open-ticket-widget.php:17
+#: includes/admin/ticket-list/ticket-list.php:19
+#: includes/admin/customize/ticket_list.php:41
+msgid "Open Ticket Widgets"
+msgstr "סדר ווג'טים של כרטיסים"
+
+#: includes/admin/customize/ticket_list.php:34
+msgid "Ticket List Table"
+msgstr "טבלת רשימת כרטיסים"
+
+#: includes/admin/general/custom-css.php:29
+#: includes/admin/general/general-settings.php:64
+msgid "Theme Integration"
+msgstr "שילוב התבנית "
+
+#: includes/admin/general/custom-css.php:30
+msgid "Applicable only in theme integration view"
+msgstr "חל רק בתצוגת שילוב התבנית"
+
+#: includes/admin/general/general-settings.php:55
+msgid "This page will be used as helpdesk page on front-end. All users ( customer, agent, supervisor, administrator ) will able to access helpdesk on same page depending on their role. It does not require to have any shortcode, just go to your pages and create new page without description."
+msgstr "דף זה ישמש כדף התמיכה בחזית. כל המשתמשים (לקוח, סוכן, מפקח, מנהל מערכת) יוכלו לגשת לשירותי התמיכה באותו דף, בהתאם לתפקידם. זה לא דורש שום shortcode, פשוט ללכת לדפים שלך וליצור דף חדש ללא תיאור."
+
+#: includes/admin/general/general-settings.php:116
+msgid "Load Bootstrap"
+msgstr "טען את Bootstrap"
+
+#: includes/admin/general/general-settings.php:75
+#: includes/admin/general/general-settings.php:396
+#: includes/admin/dashbord/general.php:47
+msgid "Customer"
+msgstr "לקוח"
+
+#: includes/admin/general/general-settings.php:389
+msgid "Restrict to view advance support page"
+msgstr "הגבל להצגת דף תמיכה מראש"
+
+#: includes/admin/general/general-settings.php:123
+msgid "Applicable on theme integration page only."
+msgstr "חל רק על דף האינטגרציה עם התבנית בלבד."
+
+#: includes/admin/general/general-settings.php:429
+msgid "Default Login"
+msgstr "התחברות ברירת מחדל"
+
+#: includes/admin/general/general-settings.php:413
+msgid "Ticket Label"
+msgstr "תווית כרטיס"
+
+#: includes/admin/general/general-settings.php:442
+msgid "Default Support Plus Login Module"
+msgstr "ברירת מחדל של Support Plus Login Module"
+
+#: includes/admin/general/general-settings.php:448
+msgid "WP Login Link"
+msgstr "קישור כניסה של וורדפרס"
+
+#: includes/admin/general/general-settings.php:453
+msgid "Allow Powered by"
+msgstr "לאפשר מופעל על ידי..."
+
+#: includes/admin/general/general-settings.php:463
+msgid "Public Ticket Mode"
+msgstr "מצב כרטיס ציבורי"
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:30
+#: includes/admin/general/support-page-menu/menu_list_update.php:40
+msgid "Clear Logo"
+msgstr "נקה לוגו"
+
+#: includes/admin/general/general-settings.php:470
+msgid "If you enable this setting then all tickets will be visible to all users and they can reply to each others tickets."
+msgstr "אם תפעיל הגדרה זו, כל הכרטיסים יהיו גלויים לכל המשתמשים והם יוכלו להשיב על כל הכרטיסים."
+
+#: includes/admin/ticket-list/default-filters.php:158
+msgid "On page load"
+msgstr "על טעינת הדף"
+
+#: includes/admin/ticket-list/default-filters.php:157
+msgid "Ticket List Filter"
+msgstr "מסנן רשימת כרטיסים"
+
+#: includes/admin/installation/wpsp_install.php:97
+msgid "Next"
+msgstr "הבא"
+
+#: includes/admin/installation/wpsp_install.php:96
+msgid "Set Now"
+msgstr "הגדר עכשיו"
+
+#: template/js_data.php:42 includes/ajax/ticket-list/get_tickets.php:203
+msgid "Hide Filters"
+msgstr "הסתר מסננים"
+
+#: template/js_data.php:43 includes/ajax/ticket-list/get_tickets.php:206
+msgid "Show Filters"
+msgstr "הצג מסננים"
+
+#: template/header/sign-in.php:36
+msgid "Forgot your password?"
+msgstr "שכחת את הסיסמה שלך?"
+
+#: template/header/sign-in.php:73
+msgid "Guest login"
+msgstr "כניסת אורחים"
+
+#: template/header/sign-in.php:74
+msgid "No user account required. Create or access tickets created earlier by guest login."
+msgstr "אין צורך בחשבון משתמש. צור או גש לכרטיסים שנוצרו קודם לכן על ידי כניסת אורח."
+
+#: template/tickets/agent_setting.php:25
+msgid "Signature"
+msgstr "חֲתִימָה"
+
+#: template/tickets/agent_setting.php:33
+msgid "Save Settings"
+msgstr "שמור הגדרות"
+
+#: template/tickets/dashboard.php:103
+msgid "Ticket Statistics"
+msgstr "סטטיסטיקת כרטיס"
+
+#: template/tickets/logged-in.php:50
+msgid "Agent Setting"
+msgstr "הגדרות סוכן"
+
+#: template/tickets/tickets.php:8 template/tickets/tickets.php:10
+#: template/tickets/tickets.php:12
+msgid "<h4>Sorry, you do not have permission to view this page</h4>"
+msgstr "<h4>מצטערים, אין לך הרשאה להציג דף זה</h4>"
+
+#: template/tickets/ticket_list/list.php:33
+msgid "Default"
+msgstr "בְּרִירַת מֶחדָל"
+
+#: template/tickets/ticket_list/filter.php:132
+msgid "Public"
+msgstr "פרסם"
+
+#: template/tickets/ticket_list/filter.php:131
+msgid "Private"
+msgstr "פְּרָטִי"
+
+#: template/tickets/ticket_list/filter.php:126
+msgid "Filter Name"
+msgstr "שם מסנן"
+
+#: template/tickets/ticket_list/filter.php:125
+msgid "Save Current Filter"
+msgstr "שמור את המסנן הנוכחי"
+
+#: template/tickets/ticket_list/filter.php:106
+msgid "To"
+msgstr "ל"
+
+#: template/tickets/ticket_list/filter.php:103
+msgid "From"
+msgstr "מ"
+
+#: template/tickets/ticket_list/filter.php:76
+#: template/tickets/ticket_list/list.php:13
+msgid "Search..."
+msgstr "חפש.."
+
+#: template/tickets/ticket_list/filter.php:30
+#: template/tickets/ticket_list/list.php:27
+msgid "Saved Filters"
+msgstr "שמור מסננים"
+
+#: template/tickets/ticket_list/filter.php:28
+msgid "Apply Filters"
+msgstr "החל מסננים"
+
+#: template/tickets/ticket-list.php:80
+msgid "Sorry, you do not have permission to view this ticket. <a href=\"%s\" class=\"alert-link\">Click here</a> for ticket list."
+msgstr "סליחה, אין לך הרשאה לראות כרטיס זה <a href=\"%s\" class=\"alert-link\">לחץ כאן</a> כדי לראות את רשימת הכרטיסים."
+
+#: template/tickets/ticket-list.php:79
+msgid "Unauthorized access!"
+msgstr "גישה לא מורשית!"
+
+#: template/tickets/open-ticket/sidebar.php:405
+msgid "Are you sure to add this note?"
+msgstr "האם אתה בטוח להוסיף הערה זו?"
+
+#: template/tickets/open-ticket/sidebar.php:378
+msgid "Are you sure to post this reply?"
+msgstr "האם אתה בטוח לפרסם תגובה זו?"
+
+#: template/tickets/open-ticket/sidebar.php:374
+#: template/tickets/open-ticket/sidebar.php:401
+msgid "Please Confirm"
+msgstr "אנא אשר"
+
+#: template/tickets/open-ticket/sidebar.php:247
+msgid "Ticket Fields"
+msgstr "שדות של הכרטיס"
+
+#: template/tickets/open-ticket/sidebar.php:189
+msgid "Agent Only Fields"
+msgstr "שדות רק לסוכנים"
+
+#: template/tickets/open-ticket/sidebar.php:142
+msgid "Assigned Agents"
+msgstr "סוכנים מוקצים"
+
+#: template/tickets/open-ticket/sidebar.php:30
+msgid "Ticket Status"
+msgstr "סטטוס הכרטיס"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:293
+msgid "Visible to support staff only!"
+msgstr "גלוי לצוות התמיכה בלבד!"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:293
+msgid "Private Note:"
+msgstr "הערה פרטית:"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:201
+#: template/tickets/open-ticket/class-threads-formatting.php:305
+msgid "Attachments"
+msgstr "קבצים מצורפים"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:181
+#: template/tickets/open-ticket/class-threads-formatting.php:283
+msgid "Delete this thread"
+msgstr "מחק שרשור זה"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:175
+#: template/tickets/open-ticket/class-threads-formatting.php:277
+msgid "Edit this thread"
+msgstr "ערוך שרשור זה"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:100
+msgid "Submit Note"
+msgstr "שלח הערה"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:78
+msgid "Submit Reply"
+msgstr "שלח תגובה"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:74
+msgid "BCC (Comma separated list)"
+msgstr "BCC (רשימה מופרדת בפסיקים)"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:46
+msgid "Add Private Note"
+msgstr "צור הערה פרטית"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:41
+msgid "Post Reply"
+msgstr "פרסם תגובה"
+
+#: template/tickets/open-ticket/class-fields-formatting.php:98
+msgid "Click Here"
+msgstr "לחץ כאן"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:220
+#: template/tickets/open-ticket/class-threads-formatting.php:324
+#: template/tickets/open-ticket/class-fields-formatting.php:76
+msgid "Download"
+msgstr "הורד"
+
+#: template/tickets/open-ticket/body.php:12
+msgid "Back to tickets"
+msgstr "חזור לכרטיסים"
+
+#: template/tickets/logged-in.php:25 includes/admin/class-wpsp-admin.php:227
+msgid "Dashboard"
+msgstr "לוח בקרה"
+
+#: template/tickets/dashboard.php:121
+msgid "Total"
+msgstr "סה\"כ"
+
+#: template/tickets/create-ticket.php:369
+msgid "View Ticket"
+msgstr "הצג כרטיס"
+
+#: template/tickets/create-ticket.php:144
+msgid "No Description"
+msgstr "אין תיאור"
+
+#: template/tickets/create-ticket.php:143
+msgid "No Subject"
+msgstr "ללא נושא"
+
+#: template/tickets/create-ticket.php:117
+msgid "Reset Form"
+msgstr "איפוס טופס"
+
+#: template/tickets/create-ticket.php:113
+msgid "Submit Ticket"
+msgstr "שלח כרטיס"
+
+#: template/tickets/create-ticket.php:59
+msgid "Create Ticket As"
+msgstr "צור כרטיס בתור"
+
+#: template/tickets/create-ticket.php:41 template/tickets/create-ticket.php:371
+#: template/tickets/logged-in.php:21
+msgid "Create New Ticket"
+msgstr "צור כרטיס חדש"
+
+#: template/tickets/class-ticket-form.php:136
+#: template/tickets/class-ticket-form.php:152
+#: template/tickets/open-ticket/class-threads-formatting.php:535
+#: template/tickets/open-ticket/class-threads-formatting.php:551
+msgid "Uploading..."
+msgstr "מעלה ..."
+
+#: template/tickets/class-ticket-form.php:131
+#: template/tickets/open-ticket/class-threads-formatting.php:530
+msgid "Only '.jpeg','.jpg', '.png', '.gif', '.bmp' formats are allowed."
+msgstr "רק קבצים בפורמטים '.jpeg','.jpg', '.png', '.gif', '.bmp' מותרים."
+
+#: template/js_data.php:41
+msgid "MB"
+msgstr ""
+
+#: template/js_data.php:41
+msgid "File Size limit exceeded! Allowed limit:"
+msgstr "חריגה ממגבלת גודל הקובץ! מגבלה מותרת:"
+
+#: template/js_data.php:39
+msgid "Name or Email not given!"
+msgstr "חסר שם או אימייל"
+
+#: template/js_data.php:38
+msgid "Please choose registered user!"
+msgstr "בחר משתמש רשום!"
+
+#: template/js_data.php:37
+msgid "Note can not be empty!"
+msgstr "הערה לא יכולה להיות ריקה!"
+
+#: template/js_data.php:36
+msgid "Reply can not be empty!"
+msgstr "תשובה לא יכולה להיות ריקה!"
+
+#: template/js_data.php:35
+msgid "View Less ..."
+msgstr ""
+
+#: template/js_data.php:34
+msgid "View More ..."
+msgstr ""
+
+#: template/js_data.php:32
+msgid "WARNING: Anyone having your email address can access your guest tickets. Please avoid sharing any sensitive data."
+msgstr "אזהרה: כל מי שיש לו את כתובת הדוא\"ל שלך יכול לגשת לכרטיסי האורחים שלך. הימנע משיתוף נתונים רגישים."
+
+#: template/js_data.php:27
+msgid "You do not have permission to delete public filter!"
+msgstr "אין לך הרשאה למחוק מסנן ציבורי!"
+
+#: template/js_data.php:26
+msgid "Default filter can not be deleted!"
+msgstr "לא ניתן למחוק את מסנן ברירת המחדל!"
+
+#: template/js_data.php:25
+msgid "Please enter filter name!"
+msgstr "הזן שם מסנן!"
+
+#: template/js_data.php:24 includes/admin/class-wpsp-admin.php:151
+#: includes/ajax/get_restore_ticket.php:28
+#: includes/ajax/get_permanent_delete_ticket.php:28
+msgid "Are you sure?"
+msgstr "אתה בטוח?"
+
+#: template/js_data.php:23
+msgid "Incorrect URL!"
+msgstr "URL לא נכון!"
+
+#: template/js_data.php:22
+msgid "Incorrect Email Address!"
+msgstr "כתובת אימייל שגוייה!"
+
+#: template/js_data.php:21
+msgid "Required field should not be empty!"
+msgstr "שדה חובה לא יכול להיות ריק!"
+
+#: template/js_data.php:20
+msgid "'.exe', '.php' files are not allowed!"
+msgstr "'.exe', '.php' קבצים לא מאושרים!"
+
+#: template/js_data.php:14
+msgid "Please wait..."
+msgstr "חכה בבקשה..."
+
+#: template/header/user_info.php:40
+msgid "Login"
+msgstr "התחברות"
+
+#: template/header/user_info.php:30
+msgid "Sign out"
+msgstr "התנתק"
+
+#: template/header/sign-in.php:83
+msgid "Your Email"
+msgstr "האימייל שלך"
+
+#: template/header/sign-in.php:80
+msgid "Your Name"
+msgstr "השם שלך"
+
+#: template/header/sign-in.php:63
+msgid "OR"
+msgstr "או"
+
+#: template/header/sign-in.php:43 template/header/sign-in.php:88
+msgid "Sign in"
+msgstr "היכנס"
+
+#: template/header/sign-in.php:33
+msgid "Remember me"
+msgstr "זכור אותי"
+
+#: template/header/sign-in.php:28 template/header/sign-in.php:29
+msgid "Password"
+msgstr "סיסמה"
+
+#: template/header/sign-in.php:25 template/header/sign-in.php:26
+msgid "Username or email"
+msgstr "שם משתמש או מייל"
+
+#: template/header/sign-in.php:21
+msgid "Please sign in"
+msgstr "התחבר בבקשה"
+
+#: template/header/user_info.php:39 template/header/header.php:85
+#: includes/admin/general/general-advanced-settings.php:45
+msgid "Sign Up"
+msgstr "הירשם"
+
+#: template/header/header.php:80
+#: includes/admin/general/general-advanced-settings.php:21
+msgid "Sign In"
+msgstr "היכנס"
+
+#: template/tickets/logged-in.php:76 template/tickets/logged-in.php:98
+#: template/header/header.php:68
+#: includes/admin/general/general-advanced-settings.php:33
+msgid "Sign Out"
+msgstr "התנתק"
+
+#: template/header/header.php:30
+msgid "Back to website"
+msgstr "חזור לאתר"
+
+#: includes/functions/replace_template_tags.php:121
+msgid "On %1$s, %2$s wrote:"
+msgstr "ב %1$s, %2$s כתב:"
+
+#: includes/functions/replace_template_tags.php:23
+#: includes/functions/replace_template_tags.php:102
+msgid "Attachments:"
+msgstr "קבצים מצורפים:"
+
+#: includes/class-wpsp-functions.php:987 template/tickets/dashboard.php:71
+msgid "Tickets"
+msgstr "כרטיסים"
+
+#: includes/class-wpsp-functions.php:952
+msgid "Agent Created"
+msgstr "צור סוכן"
+
+#: includes/class-wpsp-functions.php:951
+msgid "Date Updated"
+msgstr "תאריך עדכון"
+
+#: includes/class-wpsp-functions.php:950
+msgid "Date Created"
+msgstr "תאריך יצירה"
+
+#: includes/class-wpsp-functions.php:948
+msgid "Assigned Agent"
+msgstr "סוכן שהוקצה"
+
+#: includes/class-wpsp-functions.php:945
+#: template/tickets/open-ticket/sidebar.php:64
+msgid "Raised By"
+msgstr "נוצר ע\"י"
+
+#: includes/class-wpsp-functions.php:942
+msgid "ID"
+msgstr ""
+
+#: includes/class-wpsp-functions.php:923
+msgid "Description"
+msgstr "תיאור"
+
+#: includes/class-wpsp-functions.php:922 includes/class-wpsp-functions.php:944
+#: includes/class-wpsp-functions.php:1332
+msgid "Subject"
+msgstr "נושא"
+
+#: includes/class-wpsp-functions.php:888
+msgid "Delete Custom Field"
+msgstr "מחק שדה מותאם אישית"
+
+#: includes/class-wpsp-functions.php:887
+msgid "Edit Custom Field"
+msgstr "ערוך שדה מותאם אישית"
+
+#: includes/class-wpsp-functions.php:853
+msgid "URL"
+msgstr ""
+
+#: includes/class-wpsp-functions.php:852
+msgid "Attachment"
+msgstr "הִתקַשְׁרוּת"
+
+#: includes/class-wpsp-functions.php:851
+msgid "Date"
+msgstr "תַאֲרִיך"
+
+#: includes/class-wpsp-functions.php:850
+msgid "Textarea"
+msgstr ""
+
+#: includes/class-wpsp-functions.php:849
+msgid "Radio Button"
+msgstr "כפתור רדיו"
+
+#: includes/class-wpsp-functions.php:848
+msgid "Checkbox"
+msgstr "תיבת סימון"
+
+#: includes/class-wpsp-functions.php:847
+msgid "Drop-Down"
+msgstr "גרור-שחרר"
+
+#: includes/class-wpsp-functions.php:846
+msgid "Text Field"
+msgstr "שדה טקסט"
+
+#: includes/class-wpsp-functions.php:835
+msgid "Delete Priority"
+msgstr "מחק עדיפות"
+
+#: includes/class-wpsp-functions.php:830
+msgid "Edit Priority"
+msgstr "ערוך עדיפות"
+
+#: includes/class-wpsp-functions.php:818
+msgid "Delete Status"
+msgstr "מחק סטטוס"
+
+#: includes/class-wpsp-functions.php:813
+msgid "Edit Status"
+msgstr "ערוך סטטוס"
+
+#: includes/class-wpsp-functions.php:753
+msgid "Delete Category"
+msgstr "nje eydurhv"
+
+#: includes/class-wpsp-functions.php:748
+msgid "Edit Category"
+msgstr "ערוך קטגוריה"
+
+#: includes/ajax/user-login/signin.php:43
+#: includes/ajax/user-login/guest_signin.php:40
+msgid "Success!"
+msgstr "הַצלָחָה!"
+
+#: includes/ajax/user-login/guest_signin.php:27
+msgid "This email address already registered as user. Please sign in above!"
+msgstr "כתובת דוא\"ל זו כבר רשומה כמשתמש. בבקשה היכנס למעלה!"
+
+#: includes/ajax/ticket-list/get_tickets.php:377
+msgid "<strong>%d</strong> of <strong>%d</strong> Pages"
+msgstr "<strong>%d</strong> מתוך <strong>%d</strong> דפים"
+
+#: includes/ajax/ticket-list/get_tickets.php:330
+msgid "No Tickets found!"
+msgstr "לא נמצאו כרטיסים!"
+
+#: includes/ajax/ticket-list/get_tickets.php:239
+msgid "<strong>%d</strong> Tickets"
+msgstr "<strong>%d</strong> כרטיסים"
+
+#: includes/ajax/ticket-list/get_tickets.php:237
+msgid "<strong>%d</strong>-<strong>%d</strong> of <strong>%d</strong> Tickets"
+msgstr "<strong>%d</strong>-<strong>%d</strong> מתוך <strong>%d</strong> כרטיסים"
+
+#: template/tickets/ticket_list/list.php:59
+#: includes/ajax/ticket-list/get_tickets.php:225
+msgid "Delete"
+msgstr "מחק"
+
+#: includes/ajax/ticket-list/get_tickets.php:218
+msgid "Assign Agent"
+msgstr "הקצאת הסוכן"
+
+#: includes/ajax/ticket-list/get_tickets.php:211
+msgid "Change Status"
+msgstr "שנה סטטוס"
+
+#: includes/ajax/ticket-list/get_tickets.php:17
+msgid "Filter not found!"
+msgstr "מסנן לא נמצא!"
+
+#: template/tickets/dashboard.php:128
+#: includes/functions/replace_template_tags.php:73
+#: template/tickets/open-ticket/class-threads-formatting.php:356
+#: template/tickets/open-ticket/sidebar.php:171
+#: includes/ajax/ticket-list/class-ticket-list-formating.php:163
+msgid "None"
+msgstr "אין"
+
+#: template/tickets/open-ticket/sidebar.php:303
+#: includes/ajax/ticket-individual/get_ticket_fields.php:56
+#: includes/ajax/ticket-individual/set_ticket_fields.php:143
+msgid "No Ticket fields"
+msgstr "אין שדות לכרטיסים"
+
+#: includes/ajax/ticket-individual/get_ticket_fields.php:21
+msgid "Change Ticket Fields"
+msgstr "שנה שדה כרטיס"
+
+#: includes/ajax/ticket-individual/get_edit_thread.php:26
+msgid "Edit Thread"
+msgstr "ערוך שרשור"
+
+#: includes/ajax/ticket-individual/get_edit_subject.php:20
+msgid "Edit Subject"
+msgstr "ערוך נושא"
+
+#: includes/ajax/ticket-individual/get_delete_ticket.php:29
+msgid "Are you sure to delete this ticket?"
+msgstr "אתה בטוח רוצה למחוק כרטיס זה?"
+
+#: template/tickets/open-ticket/body.php:24
+#: includes/ajax/ticket-individual/get_delete_ticket.php:20
+msgid "Delete Ticket"
+msgstr "מחק כרטיס"
+
+#: includes/ajax/ticket-individual/get_delete_thread.php:30
+msgid "Are you sure to delete this thread?"
+msgstr "האם אתה בטוח למחוק את שרשור זה?"
+
+#: includes/ajax/ticket-individual/get_delete_thread.php:22
+msgid "Delete Thread"
+msgstr "מחק שרשור"
+
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:31
+msgid "Are you sure to delete these tickets?"
+msgstr "אתה בטוח רוצה למחוק כרטיס זה?"
+
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:22
+msgid "Delete Tickets"
+msgstr "מחק כרטיסים"
+
+#: includes/ajax/get_restore_ticket.php:59
+#: includes/ajax/get_permanent_delete_ticket.php:59
+#: template/tickets/open-ticket/sidebar.php:383
+#: template/tickets/open-ticket/sidebar.php:410
+#: includes/ajax/ticket-individual/get_close_ticket.php:60
+#: includes/ajax/ticket-individual/get_delete_thread.php:62
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:62
+#: includes/ajax/ticket-individual/get_delete_ticket.php:60
+msgid "Confirm"
+msgstr "לְאַשֵׁר"
+
+#: includes/ajax/ticket-individual/get_close_ticket.php:29
+msgid "Are you sure to close ticket?"
+msgstr "האם אתה בטוח שברצונך לסגור את הכרטיס?"
+
+#: template/tickets/open-ticket/body.php:18
+#: includes/ajax/ticket-individual/get_close_ticket.php:21
+msgid "Close Ticket"
+msgstr "סגור כרטיס"
+
+#: template/tickets/open-ticket/body.php:31
+#: includes/ajax/ticket-individual/get_clone_ticket.php:18
+msgid "Clone Ticket"
+msgstr "שכפל כרטיס"
+
+#: template/tickets/create-ticket.php:74
+#: includes/ajax/ticket-individual/get_change_raised_by.php:44
+msgid "Guest Email"
+msgstr "דוא\"ל אורח"
+
+#: template/tickets/create-ticket.php:70
+#: includes/ajax/ticket-individual/get_change_raised_by.php:40
+msgid "Guest Name"
+msgstr "שם האורח"
+
+#: template/tickets/create-ticket.php:67
+#: includes/ajax/ticket-individual/get_change_raised_by.php:37
+msgid "Search user ..."
+msgstr "חפש משתמש..."
+
+#: template/tickets/create-ticket.php:66
+#: includes/ajax/ticket-individual/get_change_raised_by.php:36
+msgid "Choose User"
+msgstr "בחר משתמש"
+
+#: template/tickets/create-ticket.php:62
+#: includes/ajax/ticket-individual/get_change_raised_by.php:32
+msgid "Guest"
+msgstr "אוֹרֵחַ"
+
+#: template/tickets/create-ticket.php:61
+#: includes/ajax/ticket-individual/get_change_raised_by.php:31
+msgid "Registered User"
+msgstr "משתמש רשום"
+
+#: includes/class-wpsp-functions.php:946
+#: includes/ajax/ticket-individual/get_change_raised_by.php:29
+msgid "User Type"
+msgstr "סוג משתמש"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:20
+msgid "Change Raised By"
+msgstr "שינוי גויס על ידי"
+
+#: includes/class-wpsp-functions.php:925 includes/class-wpsp-functions.php:949
+#: includes/class-wpsp-functions.php:1344
+#: template/tickets/open-ticket/sidebar.php:51
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:61
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:56
+msgid "Priority"
+msgstr "עדיפות"
+
+#: includes/class-wpsp-functions.php:924 includes/class-wpsp-functions.php:947
+#: includes/class-wpsp-functions.php:1340
+#: template/tickets/open-ticket/sidebar.php:47
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:45
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:42
+msgid "Category"
+msgstr "קטגוריה"
+
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:20
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:19
+msgid "Change Ticket Status"
+msgstr "שנה סטטוס כרטיס"
+
+#: includes/ajax/ticket-individual/get_assign_agent.php:30
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:27
+msgid "Search agent ..."
+msgstr "חפש סוכן..."
+
+#: includes/ajax/ticket-individual/get_assign_agent.php:21
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:18
+msgid "Change Assigned Agent"
+msgstr "שנה הקצאת סוכן"
+
+#: template/tickets/open-ticket/sidebar.php:233
+#: includes/ajax/ticket-individual/get_agent_fields.php:48
+#: includes/ajax/ticket-individual/set_agent_fields.php:136
+msgid "No Agent Only fields"
+msgstr "אין שדות לסוכנים בלבד"
+
+#: includes/ajax/ticket-individual/get_agent_fields.php:21
+msgid "Change Agent Fields"
+msgstr "שנה שדות של הסוכנים"
+
+#: template/js_data.php:19 template/tickets/class-ticket-form.php:88
+#: template/tickets/class-ticket-form.php:413
+#: template/tickets/open-ticket/class-threads-formatting.php:488
+#: includes/ajax/ticket-individual/class-ticket-fields-format.php:226
+msgid "Attach Files"
+msgstr "צרף קבצים"
+
+#: includes/ajax/ticket-form/upload_file.php:73
+msgid "done"
+msgstr "בוצע"
+
+#: includes/ajax/ticket-form/upload_file.php:40
+msgid "Error: file size exceeded allowed limit!"
+msgstr "שגיאה: גודל הקובץ חרג מהמגבלה המותרת!"
+
+#: includes/ajax/ticket-form/upload_file.php:29
+#: includes/ajax/ticket-form/upload_file.php:34
+msgid "Error: file format not supported!"
+msgstr "שגיאה: פורמט הקובץ לא נתמך!"
+
+#: includes/ajax/save_table_order.php:55
+msgid "Error saving order!"
+msgstr "שגיאה בשמירת הזמנה!"
+
+#: includes/ajax/save_table_order.php:53
+msgid "Order saved successfully!"
+msgstr "ההזמנה נשמרה בהצלחה!"
+
+#: includes/ajax/get_delete_status.php:29
+msgid "Are you sure to delete this status?"
+msgstr "האם אתה בטוח רוצה למחוק סטטוס זה?"
+
+#: includes/ajax/get_delete_priority.php:29
+msgid "Are you sure to delete this priority?"
+msgstr "האם אתה בטוח למחוק את העדיפות הזו?"
+
+#: includes/ajax/get_delete_custom_menu.php:28
+#: includes/ajax/get_delete_support_menu.php:28
+msgid "Are you sure to delete this menu?"
+msgstr "האם אתה בטוח רוצה למחוק תפריט זה?"
+
+#: includes/ajax/get_delete_custom_field.php:33
+msgid "Please note, this will delete all data associated with this custom field and can not be undone!"
+msgstr "לידיעתך, פעולה זו תמחק את כל הנתונים המשויכים לשדה מותאם אישית זה ולא יהיה ניתן לבטל את הפעולה!"
+
+#: includes/ajax/get_delete_custom_field.php:29
+msgid "Are you sure to delete this custom field?"
+msgstr "האם אתה בטוח למחוק את השדה המותאם אישית?"
+
+#: includes/ajax/get_delete_category.php:29
+msgid "Are you sure to delete this category?"
+msgstr "האם אתה בטוח רוצה למחוק את הקטגוריה?"
+
+#: includes/ajax/get_delete_agent.php:29
+msgid "Are you sure to delete this agent?"
+msgstr "אתה בטוח שברצונך למחוק את הסוכן?"
+
+#: includes/ajax/get_edit_status.php:60 includes/ajax/get_add_status.php:54
+msgid "Please enter status name!"
+msgstr "הזן שם סטטוס!"
+
+#: includes/ajax/get_edit_status.php:29 includes/ajax/get_add_status.php:24
+msgid "Status Name"
+msgstr "שם של הסטטוס"
+
+#: includes/ajax/get_edit_priority.php:67 includes/ajax/get_edit_status.php:67
+#: includes/ajax/get_add_status.php:61 includes/ajax/get_add_priority.php:61
+msgid "Please choose color!"
+msgstr "בבקשה בחר צבע!"
+
+#: includes/ajax/get_edit_priority.php:60 includes/ajax/get_add_priority.php:54
+msgid "Please enter priority name!"
+msgstr "נא להזין שם מועודף!"
+
+#: includes/ajax/get_edit_priority.php:34 includes/ajax/get_edit_status.php:34
+#: includes/ajax/get_add_status.php:29 includes/ajax/get_add_priority.php:29
+msgid "Choose Color"
+msgstr "בחר צבע"
+
+#: includes/ajax/get_edit_priority.php:29 includes/ajax/get_add_priority.php:24
+msgid "Priority Name"
+msgstr "שם פרטי"
+
+#: includes/ajax/get_add_custom_field.php:138
+#: includes/ajax/get_edit_custom_field.php:150
+msgid "Please insert Field Options!"
+msgstr "בבקשה הוסף אפשרויות שדה!"
+
+#: includes/ajax/get_add_custom_field.php:131
+#: includes/ajax/get_edit_custom_field.php:143
+msgid "Please choose Field Type!"
+msgstr "בחר סוג שדה!"
+
+#: includes/ajax/get_add_custom_field.php:124
+#: includes/ajax/get_edit_custom_field.php:136
+msgid "Please enter Field Label!"
+msgstr "הזן תווית שדה!"
+
+#: includes/ajax/get_add_custom_field.php:77
+#: includes/ajax/get_edit_custom_field.php:88
+msgid "If category is set, custom field will only visible when one of the selected category is choosen in create ticket form. If you want to show this all the time, please leave this empty. Use Ctrl+Click for select OR unselect value."
+msgstr "אם הקטגוריה מוגדרת, שדה מותאם אישית יהיה גלוי רק כאשר אחת מהקטגוריות שנבחרה, נבחרה כדי ליצור טופס כרטיס. אם אתה רוצה להציג את זה כל הזמן, בבקשה להשאיר את זה ריק. השתמש ב- Ctrl + Click כדי לבחור או לבטל את בחירת הערך."
+
+#: includes/ajax/get_add_custom_field.php:69
+#: includes/ajax/get_edit_custom_field.php:74
+msgid "Assign Categories (optional)"
+msgstr "להקצות קטגוריות (אופציונלי)"
+
+#: includes/ajax/get_add_custom_field.php:65
+#: includes/ajax/get_edit_custom_field.php:70
+msgid "Required field to ticket form. If set Yes, user must have to fill or submit value for this field"
+msgstr "שדה חובה לטופס הכרטיסים. אם תסמן כן, המשתמש יהיה חייב למלא או לשלוח ערך עבור שדה זה"
+
+#: includes/ajax/get_add_custom_field.php:56
+#: includes/ajax/get_edit_custom_field.php:61
+msgid "Agent Only fields not available for ticket form. These can be edited by agents for their internal use."
+msgstr "רק שדות הסוכנים לא זמינים עבור טופס כרטיס. אלה ניתן לערוך רק על ידי סוכנים לשימוש פנימי שלהם."
+
+#: includes/ajax/get_add_custom_field.php:45
+#: includes/ajax/get_edit_custom_field.php:50
+msgid "Enter Field Options"
+msgstr "הכנס אפשרויות שדה"
+
+#: includes/ajax/get_add_custom_field.php:31
+#: includes/ajax/get_edit_custom_field.php:35
+msgid "Choose Field Type"
+msgstr "בחר 'סוג שדה'"
+
+#: includes/ajax/get_add_custom_field.php:26
+#: includes/ajax/get_edit_custom_field.php:30
+msgid "Field Label"
+msgstr "תווית שדה"
+
+#: includes/ajax/get_edit_category.php:135
+#: includes/ajax/get_add_category.php:114
+msgid "Please enter category name!"
+msgstr "הזן שם קטגוריה!"
+
+#: includes/ajax/get_edit_category.php:36 includes/ajax/get_add_category.php:31
+msgid "Search Supervisors..."
+msgstr "חפש מפקחים"
+
+#: includes/ajax/get_edit_category.php:34 includes/ajax/get_add_category.php:29
+msgid "Supervisor (Optional)"
+msgstr "מְפַקֵחַ"
+
+#: includes/ajax/get_edit_category.php:29 includes/ajax/get_add_category.php:24
+msgid "Category Name"
+msgstr "שם הקטגוריה"
+
+#: includes/ajax/get_add_agent.php:81
+msgid "Please select an Agent!"
+msgstr "בבקשה בחר סוכן!"
+
+#: includes/ajax/get_edit_category.php:65
+#: includes/ajax/get_delete_custom_menu.php:41
+#: includes/ajax/get_delete_support_menu.php:41
+#: includes/ajax/get_add_category.php:45 includes/ajax/get_delete_agent.php:42
+#: includes/ajax/get_delete_priority.php:42
+#: includes/ajax/get_add_custom_field.php:86
+#: includes/ajax/get_edit_priority.php:45 includes/ajax/get_edit_status.php:45
+#: includes/ajax/get_add_status.php:39 includes/ajax/get_delete_status.php:42
+#: includes/ajax/get_add_agent.php:51 includes/ajax/get_edit_agent.php:42
+#: includes/ajax/get_delete_custom_field.php:43
+#: includes/ajax/get_edit_custom_field.php:98
+#: includes/ajax/get_delete_category.php:42
+#: includes/ajax/get_add_priority.php:39
+#: template/tickets/ticket_list/filter.php:137
+msgid "Submit"
+msgstr "שלח"
+
+#: includes/ajax/get_add_agent.php:31
+msgid "Search Agents..."
+msgstr "חפש סוכן..."
+
+#: includes/ajax/get_add_agent.php:26
+msgid "Select Agent"
+msgstr "בחר סוכן"
+
+#: includes/ajax/autocomplete/wp_user.php:32
+msgid "No user found!"
+msgstr "לא נמצאו משתמשים"
+
+#: includes/ajax/autocomplete/ticket_filter.php:126
+msgid "No results found!"
+msgstr "לא נמצאו תוצאות!"
+
+#: includes/admin/ticket-list/ticket-list.php:15
+msgid "Default Filters"
+msgstr "מסנני ברירת מחדל"
+
+#: includes/admin/ticket-list/ticket-list.php:11
+msgid "List Settings"
+msgstr "הגדרות רשימה"
+
+#: includes/admin/ticket-list/list-settings.php:30
+msgid "Agent Filter"
+msgstr "מיין סוכנים"
+
+#: includes/admin/ticket-list/list-settings.php:29
+msgid "Customer Filter"
+msgstr "לקוח פילטר"
+
+#: includes/admin/ticket-list/list-settings.php:17
+msgid "Ticket List Settings"
+msgstr "הגדרות רשימת כרטיסים"
+
+#: includes/admin/ticket-list/default-filters.php:147
+msgid "Number of Tickets shown per page for agent view."
+msgstr "מספר הכרטיסים שמוצג בכל דף עבור תצוגת סוכן."
+
+#: includes/admin/ticket-list/default-filters.php:129
+msgid "Tickets are loaded on selected order for agent view by default. If agent apply manual filter, this setting will not take effect."
+msgstr "כרטיסים נטענים בסדר שנבחר כדי להציג סוכן כברירת מחדל. אם הסוכן יחיל מסנן ידני, הגדרה זו לא תיכנס לתוקף."
+
+#: includes/admin/ticket-list/default-filters.php:106
+msgid "Selected statuses will be hidden if no filter is active for agent view. If agent use status filter manually on ticket list, this setting will not take effect and tickets will be filtered as per customer selection."
+msgstr "הסטטוסים שנבחרו יוסתרו אם אין מסנן פעיל לתצוגת סוכן. אם סטטוס השימוש של סוכן מסונן באופן ידני ברשימת הכרטיסים, הגדרה זו לא תיכנס לתוקף והכרטיסים יסוננו לפי בחירת הלקוח."
+
+#: includes/admin/ticket-list/list-settings.php:28
+#: includes/admin/ticket-list/default-filters.php:89
+msgid "Agent View"
+msgstr "הצג סוכן"
+
+#: includes/admin/ticket-list/default-filters.php:83
+msgid "Number of Tickets shown per page for customer view."
+msgstr "מספר הכרטיסים שמוצג בכל דף עבור תצוגת הלקוח."
+
+#: includes/admin/ticket-list/default-filters.php:80
+#: includes/admin/ticket-list/default-filters.php:144
+msgid "500"
+msgstr "500"
+
+#: includes/admin/ticket-list/default-filters.php:79
+#: includes/admin/ticket-list/default-filters.php:143
+msgid "100"
+msgstr "100"
+
+#: includes/admin/ticket-list/default-filters.php:78
+#: includes/admin/ticket-list/default-filters.php:142
+msgid "50"
+msgstr "50"
+
+#: includes/admin/ticket-list/default-filters.php:77
+#: includes/admin/ticket-list/default-filters.php:141
+msgid "40"
+msgstr "40"
+
+#: includes/admin/ticket-list/default-filters.php:76
+#: includes/admin/ticket-list/default-filters.php:140
+msgid "30"
+msgstr "30"
+
+#: includes/admin/ticket-list/default-filters.php:75
+#: includes/admin/ticket-list/default-filters.php:139
+msgid "20"
+msgstr "20"
+
+#: includes/admin/ticket-list/default-filters.php:74
+#: includes/admin/ticket-list/default-filters.php:138
+msgid "10"
+msgstr "10"
+
+#: includes/admin/ticket-list/default-filters.php:71
+#: includes/admin/ticket-list/default-filters.php:135
+msgid "Number of Tickets"
+msgstr "מספר כרטיסים"
+
+#: includes/admin/ticket-list/default-filters.php:65
+msgid "Tickets are loaded on selected order for customer view by default. If customer apply manual filter, this setting will not take effect."
+msgstr "כרטיסים נטענים לפי סדר נבחר עבור תצוגת הלקוח כברירת מחדל. אם הלקוח יחיל מסנן ידני, הגדרה זו לא תיכנס לתוקף."
+
+#: includes/admin/ticket-list/default-filters.php:48
+#: includes/admin/ticket-list/default-filters.php:112
+msgid "Order By"
+msgstr "מיין לפי"
+
+#: includes/admin/ticket-list/default-filters.php:42
+msgid "Selected statuses will be hidden if no filter is active for customer view. If customer use status filter manually on ticket list, this setting will not take effect and tickets will be filtered as per customer selection."
+msgstr "הסטטוסים שנבחרו יוסתרו רק אם אין מסנן פעיל לתצוגת הלקוחות. אם סטטוס השימוש של הלקוח מסונן באופן ידני ברשימת הכרטיסים, הגדרה זו לא תיכנס לתוקף והכרטיסים יסוננו לפי בחירת הלקוח."
+
+#: includes/admin/ticket-list/default-filters.php:30
+#: includes/admin/ticket-list/default-filters.php:94
+msgid "Hide Selected Statuses"
+msgstr "הסתר מצבים נבחרים"
+
+#: includes/admin/ticket-list/list-settings.php:27
+#: includes/admin/ticket-list/default-filters.php:25
+msgid "Customer View"
+msgstr "הצג לקוח"
+
+#: includes/admin/ticket-form/ticket-form.php:11
+msgid "Manage Form"
+msgstr "ניהול טפסים"
+
+#: includes/admin/ticket-list/list-settings.php:139
+#: includes/admin/ticket-list/open-ticket-widget.php:82
+#: includes/admin/ticket-form/form-management.php:96
+msgid "Please Wait ..."
+msgstr "חכה בבקשה..."
+
+#: includes/admin/general/general-advanced-settings.php:26
+#: includes/admin/general/general-advanced-settings.php:38
+#: includes/admin/general/general-advanced-settings.php:50
+#: includes/admin/general/general-settings.php:457
+#: includes/admin/general/general-settings.php:467
+#: includes/admin/ticket-list/default-filters.php:172
+#: includes/admin/ticket-form/form-management.php:47
+msgid "Disable"
+msgstr "השבת"
+
+#: includes/admin/general/general-advanced-settings.php:25
+#: includes/admin/general/general-advanced-settings.php:37
+#: includes/admin/general/general-advanced-settings.php:49
+#: includes/admin/general/general-settings.php:456
+#: includes/admin/general/general-settings.php:466
+#: includes/admin/ticket-list/default-filters.php:166
+#: includes/admin/ticket-form/form-management.php:46
+msgid "Enable"
+msgstr "לְאַפשֵׁר"
+
+#: includes/admin/ticket-form/form-management.php:28
+msgid "Full Width"
+msgstr "רוחב מלא"
+
+#: includes/class-wpsp-functions.php:943 includes/class-wpsp-functions.php:1336
+#: template/tickets/open-ticket/sidebar.php:43
+#: includes/admin/ticket-form/form-management.php:27
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:29
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:28
+msgid "Status"
+msgstr "סטטוס"
+
+#: includes/admin/ticket-form/form-management.php:17
+msgid "Create New Ticket Form"
+msgstr "יצירת טופס כרטיס חדש"
+
+#: includes/admin/ticket-form/custom-fields.php:55
+msgid "No Custom Fields found!"
+msgstr "לא נמצאו שדות מותאמים אישית!"
+
+#: includes/admin/ticket-form/custom-fields.php:30
+msgid "Assigned Categories"
+msgstr "קטגוריות מוקצות"
+
+#: includes/ajax/get_add_custom_field.php:60
+#: includes/ajax/get_edit_custom_field.php:65
+#: includes/admin/ticket-form/custom-fields.php:29
+msgid "Required"
+msgstr "נדרש"
+
+#: includes/ajax/get_add_custom_field.php:51
+#: includes/ajax/get_edit_custom_field.php:56
+#: includes/admin/ticket-form/custom-fields.php:28
+msgid "Agent Only"
+msgstr "סוכן בלבד"
+
+#: includes/admin/ticket-form/custom-fields.php:27
+msgid "Type"
+msgstr "סוּג"
+
+#: includes/admin/ticket-form/custom-fields.php:19
+msgid "Add New Custom Field"
+msgstr "הוסף שדה מותאם אישית חדש"
+
+#: includes/admin/ticket-form/ticket-form.php:15
+#: includes/admin/ticket-form/custom-fields.php:18
+msgid "Custom Fields"
+msgstr "שדות מותאמים אישית"
+
+#: includes/admin/general/thank_you.php:48
+msgid "URL of the ticket."
+msgstr "כתובת URL של הכרטיס"
+
+#: includes/admin/general/thank_you.php:47
+msgid "Name of user doing current activity."
+msgstr "שם של המשתמש שמבצע פעילות נוכחית."
+
+#: includes/admin/general/thank_you.php:46
+msgid "History of communication in ticket."
+msgstr "היסטוריה של תקשורת כרטיס."
+
+#: includes/admin/general/thank_you.php:45
+msgid "Last reply description."
+msgstr "תיאור תגובה אחרונה."
+
+#: includes/admin/general/thank_you.php:44
+msgid "Email of user posted last reply."
+msgstr "דוא\"ל של המשתמש פרסם תגובה אחרונה."
+
+#: includes/admin/general/thank_you.php:43
+msgid "Name of user posted last reply."
+msgstr "שם המשתמש שפרסם תגובה אחרונה."
+
+#: includes/admin/general/thank_you.php:42
+msgid "Name(s) of agent assigned to ticket."
+msgstr "שמות של סוכנים שהוקצו לכרטיס."
+
+#: includes/admin/general/thank_you.php:41
+msgid "Name of the agent who have created ticket on behalf of user. Empty if ticket created by user himself."
+msgstr "שם הסוכן שיצר כרטיס בשם המשתמש. רוקן אם הכרטיס נוצר על ידי המשתמש בעצמו."
+
+#: includes/admin/general/thank_you.php:40
+msgid "Ticket create time"
+msgstr "זמן יצירת הכרטיס"
+
+#: includes/admin/general/thank_you.php:39
+msgid "Email of ticket creator"
+msgstr "אימייל של יוצר הכרטיס"
+
+#: includes/admin/general/thank_you.php:38
+msgid "Name of ticket creator"
+msgstr "שם יוצר הכרטיס"
+
+#: includes/admin/general/thank_you.php:37
+msgid "Ticket Priority"
+msgstr "עדיפות כרטיס"
+
+#: includes/admin/general/thank_you.php:36
+msgid "Ticket Category"
+msgstr "קטגוריית כרטיסים"
+
+#: includes/admin/general/thank_you.php:35
+msgid "Ticket status"
+msgstr "סטטוס הכרטיס"
+
+#: includes/admin/general/thank_you.php:34
+msgid "Ticket description given while creating ticket"
+msgstr "תיאור הכרטיס ניתן בעת יצירת הכרטיס"
+
+#: includes/admin/general/thank_you.php:33
+msgid "Ticket Subject"
+msgstr "נושא הכרטיס"
+
+#: includes/admin/general/thank_you.php:17
+msgid "Thank You Page after create ticket"
+msgstr "דף התודה שיהיה לאחר יצירת כרטיס"
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:15
+#: includes/admin/general/support-page-menu/menu_list_update.php:25
+msgid "Add New Support Page Menu"
+msgstr "צור תפריט דף תמיכה חדש"
+
+#: includes/admin/general/support-page-menu/menu_list.php:69
+msgid "Delete Support Menu"
+msgstr "מחק תפריט תמיכה"
+
+#: includes/admin/general/statuses.php:19
+msgid "Add New Status"
+msgstr "הוסף סטטוס חדש"
+
+#: includes/admin/general/priorities.php:28
+#: includes/admin/general/statuses.php:28
+msgid "Color"
+msgstr "צבע"
+
+#: includes/admin/general/priorities.php:19
+msgid "Add New Priority"
+msgstr "הוסף עדיפות חדשה"
+
+#: includes/admin/general/general.php:43
+msgid "Support Page Menu"
+msgstr "תפריט דף התמיכה"
+
+#: includes/admin/general/general.php:39
+msgid "Thank you page"
+msgstr "דף תודה"
+
+#: includes/admin/general/priorities.php:18
+#: includes/admin/general/general.php:23
+msgid "Priorities"
+msgstr "סדרי עדיפויות"
+
+#: includes/admin/general/statuses.php:18 includes/admin/general/general.php:19
+msgid "Statuses"
+msgstr "סטטוס מצב כרטיס"
+
+#: includes/admin/general/general-settings.php:424
+msgid "If you set SRN, [Ticket #123456] will become [Ticket SRN123456] whereever applicable. Please don't leave blank."
+msgstr "אם תגדיר SRN, [כרטיס #123456] יהפוך [כרטיס SRN123456] היכן שהדבר רלוונטי. בבקשה אל תשאיר שדה זה ריק."
+
+#: includes/admin/general/general-settings.php:420
+msgid "Ticket ID Prefix"
+msgstr "קידומת מזהה כרטיס"
+
+#: includes/admin/general/general-settings.php:379
+msgid "Allow Support Staff to read all ticket"
+msgstr "אפשר לצוות התמיכה לקרוא את כל הכרטיס"
+
+#: includes/admin/general/general-settings.php:369
+msgid "Allow Guest Ticket"
+msgstr "אפשר פתיחת כרטיס לאורחים"
+
+#: includes/admin/general/general-settings.php:362
+msgid "Attachment Max Size(MB)"
+msgstr "גודל מקסימלי של קבצים מצורפים (MB)"
+
+#: includes/admin/general/general-settings.php:356
+msgid "This format will be applicable for custom date fields for Support Plus"
+msgstr "פורמט זה יחול על שדות תאריך מותאמים אישית רק עבור Support Plus"
+
+#: includes/admin/general/general-settings.php:351
+msgid "Custom Date Format"
+msgstr "תבנית תאריך מותאמת אישית"
+
+#: includes/admin/general/general-settings.php:345
+msgid "This format will be applicable for default date fields for Support Plus"
+msgstr "פורמט זה יחול על שדות תאריך ברירת המחדל עבור Support Plus"
+
+#: includes/admin/general/general-settings.php:340
+msgid "System Date Format"
+msgstr "פורמט תאריך של המערכת"
+
+#: includes/admin/general/general-settings.php:334
+msgid "This format will be applicable for input date fields (datepicker) for WP Support Plus"
+msgstr "פורמט זה יחול על שדות תאריך קלט (datepicker) עבור WP Support Plus"
+
+#: includes/admin/general/general-settings.php:310
+msgid "Calender Date Format"
+msgstr "פורמט תאריך"
+
+#: includes/admin/general/general-settings.php:304
+msgid "Bottom"
+msgstr "בתַחתִית"
+
+#: includes/admin/general/general-settings.php:303
+msgid "Top"
+msgstr "בחלק העליון"
+
+#: includes/admin/general/general-settings.php:300
+msgid "Reply Form Position"
+msgstr "מיקום התשובה בטופס"
+
+#: includes/admin/general/general-settings.php:295
+msgid "As name suggest, this setting will change ticket status to selected when support agent reply to ticket. Current Status will not change status of ticket in this case."
+msgstr "כפי שהשם מרמז, הגדרה זו תשנה את סטטוס הכרטיס לבחירה כאשר נציג התמיכה יענה לכרטיס. המצב הנוכחי לא ישנה את סטטוס הכרטיס במקרה זה."
+
+#: includes/admin/general/general-settings.php:279
+msgid "Ticket Status after Agent Reply"
+msgstr "סטטוס הכרטיס אחרי תשובת הסוכן"
+
+#: includes/admin/general/general-settings.php:273
+msgid "This is applicable for Ticket id being created for new ticket."
+msgstr "זה יהיה ישים עבור מזהה כרטיס שיווצר עבור כרטיס חדש."
+
+#: includes/admin/general/general-settings.php:271
+msgid "Random"
+msgstr "אַקרַאִי"
+
+#: includes/admin/general/general-settings.php:265
+msgid "Sequential"
+msgstr "מספר עוֹקֵב"
+
+#: includes/admin/general/general-settings.php:257
+#: includes/admin/general/thank_you.php:32
+msgid "Ticket ID"
+msgstr "ID מזהה כרטיס"
+
+#: includes/admin/general/general-settings.php:251
+msgid "If enabled, it will show Close Ticket button to open ticket view for customer. This button will change ticket status to selected status."
+msgstr "אם אפשרות זו מופעלת, היא תציג לחצן \"סגור כרטיס\" כדי לפתוח את תצוגת הכרטיס עבור הלקוח. לחצן זה ישנה את סטטוס הכרטיס לסטטוס שנבחר."
+
+#: includes/admin/general/general-settings.php:232
+msgid "Allow Customer to Close Ticket"
+msgstr "הרשה ללקוח לסגור כרטיסים"
+
+#: includes/admin/general/general-settings.php:226
+msgid "As name suggest, this setting will change ticket status to selected when ticket creator reply to ticket. Current Status will not change status of ticket in this case."
+msgstr "כפי שהשם מרמז, הגדרה זו תשנה את סטטוס הכרטיסים שנבחרו כאשר יוצר הכרטיס יענה על כרטיס. המצב הנוכחי לא ישנה את סטטוס הכרטיס במקרה זה."
+
+#: includes/admin/general/general-settings.php:214
+#: includes/admin/general/general-settings.php:285
+msgid "Status List"
+msgstr "רשימת סטטוס"
+
+#: includes/admin/general/general-settings.php:212
+#: includes/admin/general/general-settings.php:283
+msgid "Current Status"
+msgstr "מצב נוכחי"
+
+#: includes/admin/general/general-settings.php:207
+msgid "Ticket Status after Customer Reply"
+msgstr "מצב כרטיס אחרי תשובת הלקוח"
+
+#: includes/admin/general/general-settings.php:201
+msgid "This priority will be default priority for new ticket."
+msgstr "עדיפות זו תהיה ברירת המחדל עבור כרטיס חדש."
+
+#: includes/admin/general/general-settings.php:185
+msgid "Default Ticket Priority"
+msgstr "עדיפות כרטיס - ברירת מחדל"
+
+#: includes/admin/general/general-settings.php:179
+msgid "This status will be default status for new ticket."
+msgstr "סטטוס זה יהיה סטטוס ברירת המחדל עבור כרטיס חדש."
+
+#: includes/admin/general/general-settings.php:163
+msgid "Default Ticket Status"
+msgstr "מצב כרטיס ברירת מחדל"
+
+#: includes/admin/general/general-settings.php:157
+msgid "This category will be default category for new ticket. If category is not present in ticket form or ticket created via email piping, this category will be used as new ticket category."
+msgstr "קטגוריה זו תהיה ברירת המחדל עבור כרטיס חדש. אם הקטגוריה אינה מופיעה בטופס הכרטיס או בכרטיס שנוצר באמצעות האימייל, קטגוריה זו תשמש כקטגורית כרטיסים חדשה."
+
+#: includes/admin/general/general-settings.php:141
+msgid "Default Category"
+msgstr "קטגוריית ברירת מחדל"
+
+#: includes/admin/general/general-settings.php:129
+msgid "Open support page in new window?"
+msgstr "לפתוח את דף התמיכה בחלון חדש?"
+
+#: includes/admin/general/general-settings.php:35
+msgid "Support Page"
+msgstr "דף התמיכה"
+
+#: includes/admin/general/general-settings.php:26
+msgid "Choose Logo"
+msgstr "בחר לוגו"
+
+#: includes/admin/general/footer-text.php:17
+#: includes/admin/general/general.php:35
+msgid "Footer Text"
+msgstr "כותרת תחתונה"
+
+#: wp-support-plus.php:72 wp-support-plus.php:79
+#: includes/class-wpsp-ajax.php:141 includes/class-wpsp-ajax.php:159
+#: includes/class-wpsp-ajax.php:213 template/tickets/create-ticket.php:158
+#: template/tickets/create-ticket.php:165
+#: includes/ajax/set_add_custom_field.php:10
+#: includes/ajax/search_users_for_add_agent.php:10
+#: includes/ajax/set_delete_status.php:13
+#: includes/ajax/set_edit_category.php:17 includes/ajax/set_add_priority.php:10
+#: includes/ajax/set_add_status.php:10 includes/ajax/get_edit_category.php:13
+#: includes/ajax/get_delete_custom_menu.php:13
+#: includes/ajax/get_delete_support_menu.php:13
+#: includes/ajax/set_delete_support_menu.php:13
+#: includes/ajax/set_restore_ticket.php:12
+#: includes/ajax/get_add_category.php:10 includes/ajax/set_add_category.php:10
+#: includes/ajax/get_delete_agent.php:13
+#: includes/ajax/get_delete_priority.php:13
+#: includes/ajax/get_add_custom_field.php:10
+#: includes/ajax/set_edit_priority.php:15
+#: includes/ajax/get_edit_priority.php:13 includes/ajax/set_delete_agent.php:13
+#: includes/ajax/get_edit_status.php:13 includes/ajax/save_ticket_widget.php:13
+#: includes/ajax/set_edit_agent.php:14 includes/ajax/get_add_status.php:10
+#: includes/ajax/set_delete_custom_field.php:13
+#: includes/ajax/set_delete_category.php:13
+#: includes/ajax/get_delete_status.php:13 includes/ajax/get_add_agent.php:10
+#: includes/ajax/set_permanent_delete_ticket.php:12
+#: includes/ajax/get_restore_ticket.php:16
+#: includes/ajax/get_permanent_delete_ticket.php:16
+#: includes/ajax/get_edit_agent.php:13
+#: includes/ajax/get_delete_custom_field.php:13
+#: includes/ajax/get_edit_custom_field.php:13
+#: includes/ajax/save_table_order.php:16
+#: includes/ajax/set_delete_priority.php:13
+#: includes/ajax/save_list_settings.php:22
+#: includes/ajax/save_form_management.php:19
+#: includes/ajax/set_edit_custom_field.php:13
+#: includes/ajax/set_delete_custom_menu.php:13 includes/ajax/upgrade.php:11
+#: includes/ajax/set_edit_status.php:15 includes/ajax/set_add_agent.php:10
+#: includes/ajax/get_delete_category.php:13
+#: includes/ajax/get_add_priority.php:10
+#: template/tickets/ticket-operations/reply_ticket.php:21
+#: template/tickets/ticket-operations/add_ticket_note.php:20
+#: includes/ajax/ticket-list/apply_ticket_filter.php:12
+#: includes/ajax/ticket-list/apply_ticket_filter.php:20
+#: includes/ajax/ticket-list/apply_ticket_filter.php:28
+#: includes/ajax/ticket-list/delete_ticket_filter.php:12
+#: includes/ajax/ticket-list/delete_ticket_filter.php:20
+#: includes/ajax/ticket-list/delete_ticket_filter.php:25
+#: includes/ajax/ticket-list/delete_ticket_filter.php:32
+#: includes/ajax/ticket-list/save_ticket_filter.php:12
+#: includes/ajax/ticket-form/create_tkt_cng_cat.php:10
+#: includes/ajax/ticket-form/upload_file.php:9
+#: includes/ajax/ticket-form/upload_image.php:8
+#: includes/ajax/ticket-individual/get_ticket_fields.php:16
+#: includes/ajax/ticket-individual/get_edit_thread.php:19
+#: includes/ajax/ticket-individual/get_assign_agent.php:16
+#: includes/ajax/ticket-individual/get_user_biography.php:15
+#: includes/ajax/ticket-individual/get_close_ticket.php:18
+#: includes/ajax/ticket-individual/set_bulk_assign_agent.php:20
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:15
+#: includes/ajax/ticket-individual/set_delete_ticket.php:19
+#: includes/ajax/ticket-individual/get_agent_fields.php:16
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:15
+#: includes/ajax/ticket-individual/get_delete_thread.php:19
+#: includes/ajax/ticket-individual/set_close_ticket.php:17
+#: includes/ajax/ticket-individual/set_bulk_change_status.php:19
+#: includes/ajax/ticket-individual/get_edit_subject.php:15
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:19
+#: includes/ajax/ticket-individual/set_ticket_fields.php:17
+#: includes/ajax/ticket-individual/get_ticket_created.php:16
+#: includes/ajax/ticket-individual/get_delete_ticket.php:16
+#: includes/ajax/ticket-individual/set_agent_fields.php:17
+#: includes/ajax/ticket-individual/set_edit_subject.php:18
+#: includes/ajax/ticket-individual/get_clone_ticket.php:13
+#: includes/ajax/ticket-individual/set_assign_agent.php:18
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:15
+#: includes/ajax/ticket-individual/set_edit_thread.php:19
+#: includes/ajax/ticket-individual/set_delete_thread.php:18
+#: includes/ajax/ticket-individual/set_change_ticket_status.php:17
+#: includes/ajax/ticket-individual/set_clone_ticket.php:18
+#: includes/ajax/ticket-individual/get_change_raised_by.php:15
+#: includes/ajax/ticket-individual/set_change_raised_by.php:17
+#: includes/ajax/ticket-individual/set_delete_bulk_ticket.php:20
+#: includes/ajax/user-login/signin.php:12
+#: includes/ajax/user-login/signin.php:48
+#: includes/ajax/user-login/guest_signin.php:12
+#: includes/ajax/user-login/guest_signin.php:45
+#: includes/ajax/autocomplete/ticket_filter.php:12
+#: includes/ajax/autocomplete/index.php:10
+#: includes/admin/general/support-page-menu/menu_list_update.php:12
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:11
+msgid "Cheating huh?"
+msgstr "מרמה?"
+
+#: includes/ajax/get_edit_category.php:66
+#: includes/ajax/get_delete_custom_menu.php:42
+#: includes/ajax/get_delete_support_menu.php:42
+#: includes/ajax/get_add_category.php:46 includes/ajax/get_delete_agent.php:43
+#: includes/ajax/get_delete_priority.php:43
+#: includes/ajax/get_add_custom_field.php:87
+#: includes/ajax/get_edit_priority.php:46 includes/ajax/get_edit_status.php:46
+#: includes/ajax/get_add_status.php:40 includes/ajax/get_delete_status.php:43
+#: includes/ajax/get_add_agent.php:52 includes/ajax/get_restore_ticket.php:58
+#: includes/ajax/get_permanent_delete_ticket.php:58
+#: includes/ajax/get_edit_agent.php:43
+#: includes/ajax/get_delete_custom_field.php:44
+#: includes/ajax/get_edit_custom_field.php:99
+#: includes/ajax/get_delete_category.php:43
+#: includes/ajax/get_add_priority.php:40
+#: template/tickets/open-ticket/class-threads-formatting.php:81
+#: template/tickets/open-ticket/class-threads-formatting.php:103
+#: template/tickets/open-ticket/sidebar.php:382
+#: template/tickets/open-ticket/sidebar.php:409
+#: includes/ajax/ticket-individual/get_ticket_fields.php:97
+#: includes/ajax/ticket-individual/get_edit_thread.php:90
+#: includes/ajax/ticket-individual/get_assign_agent.php:140
+#: includes/ajax/ticket-individual/get_close_ticket.php:59
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:94
+#: includes/ajax/ticket-individual/get_agent_fields.php:89
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:86
+#: includes/ajax/ticket-individual/get_delete_thread.php:61
+#: includes/ajax/ticket-individual/get_edit_subject.php:61
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:61
+#: includes/ajax/ticket-individual/get_delete_ticket.php:59
+#: includes/ajax/ticket-individual/get_clone_ticket.php:59
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:116
+#: includes/ajax/ticket-individual/get_change_raised_by.php:142
+#: includes/admin/general/support-page-menu/menu_list_add.php:49
+#: includes/admin/general/support-page-menu/menu_list_update.php:60
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:57
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:48
+msgid "Cancel"
+msgstr "לְבַטֵל"
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:36
+#: includes/admin/general/support-page-menu/menu_list_update.php:46
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:43
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:35
+msgid "Menu URL"
+msgstr "תפריט כתובת URL"
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:26
+#: includes/admin/general/support-page-menu/menu_list_update.php:36
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:34
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:26
+msgid "Menu Icon"
+msgstr "אייקון בתפריט"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:23
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:15
+msgid "Add New Menu Slider"
+msgstr "הוסף תפריט סליידר חדש"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:99
+msgid "Delete Custom Menu"
+msgstr "מחיקת תפריט מותאם אישית"
+
+#: includes/admin/general/thank_you.php:18
+#: includes/admin/general/support-page-menu/menu_list.php:34
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:72
+msgid "Title"
+msgstr "כותרת"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:55
+msgid "Custom Menu Slider"
+msgstr "סליידר תפריט מותאם אישית"
+
+#: includes/admin/general/general-settings.php:29
+#: includes/admin/general/support-page-menu/menu_list_add.php:29
+#: includes/admin/general/support-page-menu/menu_list_update.php:39
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:46
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:37
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:29
+msgid "Upload Logo"
+msgstr "העלה לוגו"
+
+#: includes/admin/general/support-page-menu/menu_list.php:33
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:42
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:71
+msgid "Icon"
+msgstr "אייקון"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:36
+msgid "If enabled, it will show Support Button on front-end website. When visitor click this button, it will open Support Page selected above in new tab."
+msgstr "אם מאופשר, הוא יראה לחצן תמיכה באתר האינטרנט הקדמי. כאשר המבקר לחץ על לחצן זה, הוא יפתח דף תמיכה שנבחר למעלה בכרטיסייה חדשה."
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:26
+msgid "Show Support Button"
+msgstr "הצג כפתור תמיכה"
+
+#: includes/admin/general/general.php:27
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:21
+msgid "Support Button"
+msgstr "כפתור תמיכה"
+
+#: includes/admin/general/custom-css.php:23
+#: includes/admin/general/general.php:31
+msgid "Custom CSS"
+msgstr "CSS מותאם אישית"
+
+#: includes/admin/general/categories.php:64
+#: includes/admin/general/priorities.php:59
+#: includes/admin/general/statuses.php:59
+msgid "Save Order"
+msgstr "שמור הזמנה"
+
+#: includes/admin/general/categories.php:29
+#: includes/admin/general/priorities.php:29
+#: includes/admin/general/statuses.php:29
+#: includes/admin/general/general-settings.php:70
+#: includes/admin/ticket-form/custom-fields.php:31
+#: includes/admin/general/support-page-menu/menu_list.php:35
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:73
+msgid "Action"
+msgstr "פעולה"
+
+#: includes/admin/general/categories.php:28
+msgid "Supervisor(s)"
+msgstr "מְפַקֵחים"
+
+#: includes/admin/general/categories.php:26
+#: includes/admin/general/priorities.php:26
+#: includes/admin/general/statuses.php:26
+#: includes/admin/ticket-list/list-settings.php:25
+#: includes/admin/ticket-list/open-ticket-widget.php:25
+#: includes/admin/ticket-form/form-management.php:25
+#: includes/admin/general/support-page-menu/menu_list.php:32
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:70
+msgid "Order"
+msgstr "סדר"
+
+#: includes/admin/general/categories.php:19
+msgid "Add New Category"
+msgstr "צור קטגוריה חדשה"
+
+#: includes/admin/general/categories.php:18
+#: includes/admin/general/general.php:15
+msgid "Categories"
+msgstr "קטגוריות"
+
+#: includes/admin/dashbord/general.php:24
+msgid "Statuses to Show"
+msgstr "מצבים להצגה"
+
+#: includes/admin/class-wpsp-admin.php:259
+msgid "Dismiss this notice"
+msgstr "דחה הודעה זו"
+
+#: includes/admin/class-wpsp-admin.php:259
+msgid "Settings updated"
+msgstr "ההגדרות עודכנו"
+
+#: includes/admin/class-wpsp-admin.php:235
+msgid "Add-Ons"
+msgstr "תוספים"
+
+#: template/tickets/create-ticket.php:370 template/tickets/logged-in.php:17
+#: includes/admin/class-wpsp-admin.php:219
+#: includes/admin/ticket-list/default-filters.php:152
+#: includes/admin/customize/customize.php:15
+msgid "Ticket List"
+msgstr "רשימת כרטיסים"
+
+#: includes/admin/class-wpsp-admin.php:215
+msgid "Ticket Form"
+msgstr "טופס של הכרטיס"
+
+#: includes/admin/class-wpsp-admin.php:211
+#: includes/admin/general/custom-css.php:19
+#: includes/admin/customize/customize.php:11
+#: includes/admin/dashbord/dashbord.php:11
+msgid "General"
+msgstr "כללי"
+
+#: includes/admin/class-wpsp-admin.php:179
+msgid "WP Support Plus Settings"
+msgstr "הגדרות מערכת תמיכה"
+
+#: includes/admin/agents/ticket-agents.php:39
+msgid "Search"
+msgstr "חפש"
+
+#: template/tickets/ticket_list/filter.php:31
+#: includes/admin/agents/ticket-agents.php:38
+#: includes/ajax/ticket-list/get_tickets.php:201
+msgid "Reset Filter"
+msgstr "אפס מסנן"
+
+#: template/tickets/ticket_list/list.php:55
+#: includes/admin/agents/ticket-agents.php:37
+msgid "Apply"
+msgstr "לְיַשֵׂם"
+
+#: includes/admin/agents/ticket-agents.php:32
+msgid "All"
+msgstr "כל"
+
+#: includes/admin/general/categories.php:19
+#: includes/admin/general/priorities.php:19
+#: includes/admin/general/statuses.php:19
+#: includes/admin/ticket-form/custom-fields.php:19
+#: includes/admin/agents/ticket-agents.php:18
+#: includes/admin/general/support-page-menu/menu_list.php:26
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:64
+msgid "Add New"
+msgstr "צור חדש"
+
+#: includes/admin/agents/ticket-agents.php:18
+msgid "Add New Agent"
+msgstr "צור סוכן חדש"
+
+#: includes/admin/class-wpsp-admin.php:223
+#: includes/admin/agents/ticket-agents.php:17
+msgid "Agents"
+msgstr "סוכנים"
+
+#: includes/admin/agents/general-settings.php:83
+msgid "If set yes, supervisor will able to change raised by of tickets of assigned categories."
+msgstr "אם תבחר כן, המפקח יוכל לשנות את הכרטיסים של קטגוריות שהוקצו לו."
+
+#: includes/admin/agents/general-settings.php:72
+msgid "If set yes, supervisor will able to delete tickets of assigned categories"
+msgstr "אם כן, המפקח יוכל למחוק כרטיסים של קטגוריות שהוקצו"
+
+#: includes/admin/agents/general-settings.php:56
+msgid "If set yes, an agent will able to change raised by of ticket assigned to him."
+msgstr "אם תסמן כן, סוכן יוכל לשנות את הכרטיס שהוקצו לו."
+
+#: includes/admin/agents/general-settings.php:50
+#: includes/admin/agents/general-settings.php:77
+msgid "Allow Change Raised By"
+msgstr "אפשר שינוי שגויס על ידי.."
+
+#: includes/admin/agents/general-settings.php:45
+msgid "If set yes, an agent will able to delete ticket assigned to him."
+msgstr "אם כן, סוכן יוכל למחוק את הכרטיס שהוקצה לו."
+
+#: includes/admin/agents/general-settings.php:39
+#: includes/admin/agents/general-settings.php:66
+msgid "Allow Delete Ticket"
+msgstr "אפשר מחיקת כרטיסים"
+
+#: includes/admin/agents/general-settings.php:34
+msgid "If set yes, an agent will able to assign ticket assigned to him to some other agent who is assigned to ticket category."
+msgstr "אם כן, סוכן יוכל להקצות כרטיס שהוקצה לו לסוכן אחר אשר מוקצה לקטגוריה הכרטיס."
+
+#: includes/ajax/get_add_custom_field.php:54
+#: includes/ajax/get_add_custom_field.php:62
+#: includes/ajax/get_edit_custom_field.php:59
+#: includes/ajax/get_edit_custom_field.php:67
+#: includes/admin/general/general-settings.php:78
+#: includes/admin/general/general-settings.php:87
+#: includes/admin/general/general-settings.php:96
+#: includes/admin/general/general-settings.php:105
+#: includes/admin/general/general-settings.php:121
+#: includes/admin/general/general-settings.php:134
+#: includes/admin/general/general-settings.php:373
+#: includes/admin/general/general-settings.php:383
+#: includes/admin/ticket-list/list-settings.php:54
+#: includes/admin/ticket-list/list-settings.php:60
+#: includes/admin/ticket-list/list-settings.php:76
+#: includes/admin/ticket-list/list-settings.php:82
+#: includes/admin/ticket-list/list-settings.php:96
+#: includes/admin/ticket-form/custom-fields.php:44
+#: includes/admin/ticket-form/custom-fields.php:45
+#: includes/admin/ticket-form/form-management.php:53
+#: includes/admin/agents/general-settings.php:32
+#: includes/admin/agents/general-settings.php:43
+#: includes/admin/agents/general-settings.php:54
+#: includes/admin/agents/general-settings.php:70
+#: includes/admin/agents/general-settings.php:81
+msgid "No"
+msgstr "לא"
+
+#: includes/ajax/get_add_custom_field.php:53
+#: includes/ajax/get_add_custom_field.php:63
+#: includes/ajax/get_edit_custom_field.php:58
+#: includes/ajax/get_edit_custom_field.php:68
+#: includes/admin/general/general-settings.php:79
+#: includes/admin/general/general-settings.php:88
+#: includes/admin/general/general-settings.php:97
+#: includes/admin/general/general-settings.php:106
+#: includes/admin/general/general-settings.php:120
+#: includes/admin/general/general-settings.php:133
+#: includes/admin/general/general-settings.php:372
+#: includes/admin/general/general-settings.php:382
+#: includes/admin/ticket-list/list-settings.php:53
+#: includes/admin/ticket-list/list-settings.php:59
+#: includes/admin/ticket-list/list-settings.php:75
+#: includes/admin/ticket-list/list-settings.php:81
+#: includes/admin/ticket-list/list-settings.php:95
+#: includes/admin/ticket-form/custom-fields.php:44
+#: includes/admin/ticket-form/custom-fields.php:45
+#: includes/admin/ticket-form/form-management.php:52
+#: includes/admin/agents/general-settings.php:31
+#: includes/admin/agents/general-settings.php:42
+#: includes/admin/agents/general-settings.php:53
+#: includes/admin/agents/general-settings.php:69
+#: includes/admin/agents/general-settings.php:80
+msgid "Yes"
+msgstr "כן"
+
+#: includes/admin/agents/general-settings.php:28
+msgid "Allow Assign Ticket"
+msgstr "אפשר הקצאת כרטיסים"
+
+#: includes/admin/agents/class_agent_table.php:66
+msgid "Delete Agent"
+msgstr "מחק סוכן"
+
+#: includes/ajax/get_add_agent.php:41 includes/ajax/get_edit_agent.php:33
+#: includes/admin/general/general-settings.php:102
+#: includes/admin/agents/class_agent_table.php:45
+#: includes/admin/agents/ticket-agents.php:35
+#: includes/admin/dashbord/general.php:65
+msgid "Administrator"
+msgstr "מנהל"
+
+#: includes/ajax/get_add_agent.php:40 includes/ajax/get_edit_agent.php:32
+#: includes/admin/general/general-settings.php:93
+#: includes/admin/general/general-settings.php:408
+#: includes/admin/agents/class_agent_table.php:43
+#: includes/admin/agents/general-settings.php:61
+#: includes/admin/agents/ticket-agents.php:34
+#: includes/admin/dashbord/general.php:59
+msgid "Supervisor"
+msgstr "מְפַקֵחַ"
+
+#: template/tickets/dashboard.php:111 includes/ajax/get_add_agent.php:24
+#: includes/ajax/get_add_agent.php:39 includes/ajax/get_edit_agent.php:31
+#: includes/admin/general/general-settings.php:84
+#: includes/admin/general/general-settings.php:402
+#: includes/admin/agents/class_agent_table.php:41
+#: includes/admin/agents/general-settings.php:23
+#: includes/admin/agents/ticket-agents.php:33
+#: includes/admin/dashbord/general.php:53
+msgid "Agent"
+msgstr "סוכן"
+
+#: includes/ajax/get_add_agent.php:37 includes/ajax/get_edit_agent.php:29
+#: includes/admin/general/general-settings.php:69
+#: includes/admin/agents/class_agent_table.php:17
+#: includes/admin/agents/ticket-agents.php:30
+msgid "Role"
+msgstr "תַפְקִיד"
+
+#: includes/class-wpsp-functions.php:854 template/header/sign-in.php:82
+#: includes/admin/agents/class_agent_table.php:16
+msgid "Email"
+msgstr "אימייל"
+
+#: template/header/sign-in.php:79 includes/admin/general/categories.php:27
+#: includes/admin/general/priorities.php:27
+#: includes/admin/general/statuses.php:27
+#: includes/admin/ticket-list/list-settings.php:26
+#: includes/admin/ticket-form/custom-fields.php:26
+#: includes/admin/ticket-form/form-management.php:26
+#: includes/admin/agents/class_agent_table.php:15
+#: includes/admin/general/support-page-menu/menu_list_add.php:19
+#: includes/admin/general/support-page-menu/menu_list_update.php:29
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:27
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:19
+msgid "Name"
+msgstr "שם"
+
+#: includes/admin/agents/class_agent_table.php:14
+msgid "Username"
+msgstr "שם משתמש"
+
+#: includes/admin/agents/agents.php:15
+msgid "Agents & Supervisors"
+msgstr "סוכנים ומפקחים"
+
+#: includes/admin/general/general-settings.php:21
+#: includes/admin/general/general.php:11 includes/admin/agents/agents.php:11
+msgid "General Settings"
+msgstr "הגדרות כלליות"
+
+#: includes/admin/general/custom-css.php:39
+#: includes/admin/general/footer-text.php:36
+#: includes/admin/general/general-advanced-settings.php:59
+#: includes/admin/general/general-settings.php:479
+#: includes/admin/general/thank_you.php:73
+#: includes/admin/ticket-list/list-settings.php:112
+#: includes/admin/ticket-list/open-ticket-widget.php:56
+#: includes/admin/ticket-list/advanced-settings.php:40
+#: includes/admin/ticket-list/default-filters.php:180
+#: includes/admin/customize/ticket_list.php:57
+#: includes/admin/customize/general.php:65
+#: includes/admin/ticket-form/form-management.php:69
+#: includes/admin/addons/wpsp_license_settings.php:26
+#: includes/admin/agents/general-settings.php:93
+#: includes/admin/dashbord/general.php:74
+#: includes/ajax/ticket-individual/get_ticket_fields.php:98
+#: includes/ajax/ticket-individual/get_edit_thread.php:91
+#: includes/ajax/ticket-individual/get_assign_agent.php:141
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:95
+#: includes/ajax/ticket-individual/get_agent_fields.php:90
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:87
+#: includes/ajax/ticket-individual/get_edit_subject.php:62
+#: includes/ajax/ticket-individual/get_clone_ticket.php:60
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:117
+#: includes/ajax/ticket-individual/get_change_raised_by.php:143
+#: includes/admin/general/support-page-menu/menu_list.php:84
+#: includes/admin/general/support-page-menu/menu_list_add.php:48
+#: includes/admin/general/support-page-menu/menu_list_update.php:59
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:114
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:56
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:47
+msgid "Save Changes"
+msgstr "שמור שינויים"
+
+#: includes/admin/addons/addons.php:10
+msgid "Licenses"
+msgstr "רישיונות"

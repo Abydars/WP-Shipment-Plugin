@@ -8,6 +8,11 @@ Author: Hztech
 Author URI: hztech.biz
 */
 
+/*
+ * Notes:
+ * Remove current user condition in /includes/ajax/submit_ticket.php:50
+ */
+
 if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
 	class WPTS_TicketSupport
 	{
@@ -17,6 +22,34 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
 			add_action( 'wpsp_after_ticket_reply', array( $this, 'wpsp_after_ticket_reply' ), 10, 2 );
 			add_action( 'wp_ajax_create_pickups', array( $this, 'create_pickups' ) );
 			add_action( 'wp_ajax_nopriv_create_pickups', array( $this, 'create_pickups' ) );
+			add_action( 'admin_bar_menu', array( $this, 'add_toolbar_items' ), 100 );
+			add_action( 'admin_menu', array( $this, 'admin_menu' ), 5 );
+		}
+
+		function admin_menu()
+		{
+			add_menu_page( __( 'Support Tickets', WPSP_LANG ), __( 'Support Tickets', WPSP_LANG ), 'manage_tickets', 'wpts_support_tickets', array(
+				$this,
+				'wpts_support_tickets'
+			) );
+		}
+
+		function wpts_support_tickets()
+		{
+			$url = get_bloginfo( 'url' ) . '/support';
+			echo '<iframe width="100%" style="height: 100vh;" src="' . $url . '"></iframe>';
+		}
+
+		function add_toolbar_items( $admin_bar )
+		{
+			$admin_bar->add_menu( array(
+				                      'id'    => 'support-tickets',
+				                      'title' => 'Support Tickets',
+				                      'href'  => add_query_arg( 'page', 'wpts_support_tickets', admin_url( "admin.php" ) ),
+				                      'meta'  => array(
+					                      'title' => __( 'Support Tickets' ),
+				                      ),
+			                      ) );
 		}
 
 		public function create_pickups()
@@ -54,6 +87,20 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
 						"action"           => "wpsp_submit_ticket",
 						"nonce"            => wp_create_nonce( 'wpsp_nonce' ),
 						"captcha_code"     => $captcha
+					);
+
+					$params = array(
+						"subject"            => $subject,
+						"description"        => $desc,
+						"category"           => "1",
+						"priority"           => "High",
+						"user_id"            => $shipment->customer_id,
+						"agent_created"      => $shipment->creator_id,
+						"create_ticket_as"   => 1,
+						"guest_name"         => "",
+						"guest_email"        => "",
+						"action"             => "wpsp_submit_ticket",
+						"nonce"              => wp_create_nonce( 'wpsp_nonce' ),
 					);
 
 					$this->request( $params );
@@ -97,7 +144,7 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
 				if ( ! empty( $reply->body ) ) {
 					$user = $reply->thread_user_object;
 
-					if ( $current_user_id == $reply->ticket->created_by ) {
+					if ( $current_user_id == $to ) {
 						return;
 					}
 
@@ -129,11 +176,6 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
 		{
 			if ( isset( $_GET['fxrequest'] ) ) {
 
-				if ( ! isset( $_GET['debug'] ) ) {
-					header( "content-type: text/xml" );
-					echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
-				}
-
 				if ( isset( $_REQUEST['FaxSid'] ) ) {
 					$faxsid      = $_REQUEST['FaxSid'];
 					$from        = $_REQUEST['From'];
@@ -162,55 +204,63 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
 							$create_new_ticket = true;
 							$last_ticket       = false;
 
-							if ( $from_user && isset( $from_user->id ) ) {
-								$last_ticket = $this->get_last_ticket( $from_user->id, date( "Y-m-d" ) );
+							if ( $from_user && isset( $from_user->ID ) ) {
+								$last_ticket = $this->get_last_ticket( $from_user->ID, date( "Y-m-d" ) );
 
 								if ( $last_ticket ) {
 									$create_new_ticket = false;
 								}
 							}
 
-							$from_id = ( ( $from_user && isset( $from_user->id ) ) ? $from_user->id : '' );
+							$from_id = ( ( $from_user && isset( $from_user->ID ) ) ? $from_user->ID : '' );
 
 							if ( $create_new_ticket ) {
 								$params = array(
 									"subject"            => $faxsid,
-									"description"        => "Ticket via Fax, From: {$from}; To: {$to}",
-									"ckeditor_enabled"   => "1",
-									"category"           => $is_standard ? "1" : "2", // General or Special
-									"priority"           => $is_standard ? "Normal" : "High",
 									"desc_attachment[0]" => $attach_id,
-									"create_ticket_type" => "0",
+									"description"        => "Ticket via Fax, From: {$from}; To: {$to}",
+									"category"           => $is_standard ? "1" : "2", // General or Special,
+									"priority"           => $is_standard ? "Normal" : "High",
 									"user_id"            => $from_id,
-									"type"               => "user",
+									"agent_created"      => $from_id,
+									"create_ticket_as"   => 1,
 									"guest_name"         => "",
 									"guest_email"        => "",
-									"action"             => "createNewTicket",
-									"pipe"               => 1,
-									"nonce"              => wp_create_nonce()
+									"action"             => "wpsp_submit_ticket",
+									"nonce"              => wp_create_nonce( 'wpsp_nonce' ),
 								);
 
-								$this->request( $params );
+								$res = $this->request( $params );
 
 							} else {
-								$params = array(
-									"reply_body"         => "Replied via Fax",
-									"desc_attachment[0]" => $attach_id,
-									"user_id"            => $from_id,
-									"type"               => "user",
-									"guest_name"         => "",
-									"guest_email"        => "",
-									"action"             => "replyTicket",
-									"ticket_id"          => $last_ticket->id,
-									"notify"             => true,
-									"pipe"               => 1,
-									"nonce"              => wp_create_nonce( $last_ticket->id )
+								$_POST = array(
+									"reply_body"      => "Replied via Fax",
+									"desc_attachment" => [ $attach_id ],
+									"user_id"         => $from_id,
+									"type"            => "user",
+									"guest_name"      => "",
+									"guest_email"     => "",
+									"action"          => "wpsp_ticket_reply",
+									"ticket_id"       => $last_ticket->id,
+									"notify"          => true,
+									"nonce"           => wp_create_nonce( $last_ticket->id )
 								);
 
-								$this->request( $params );
+								ob_start();
+
+								include_once WPSP_ABSPATH . 'template/tickets/class-ticket-operations.php';
+
+								$ticket_oprations = new WPSP_Ticket_Operations();
+								$ticket_oprations->reply_ticket();
+
+								$res = ob_get_clean();
 							}
 						}
 					}
+				}
+				if ( ! isset( $_GET['debug'] ) ) {
+					header( "content-type: text/xml" );
+					echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 				}
 				?>
                 <Response>

@@ -1,0 +1,13 @@
+
+.wpsp_secondery_menu{
+  background-color : #f8f8f8 !important;
+}
+
+.wpsp_secondery_menu .active a{
+  background-color : #e7e7e7 !important;
+  color : #555 !important;
+}
+
+.wpsp_secondery_menu a{
+  color : #777 !important;
+}

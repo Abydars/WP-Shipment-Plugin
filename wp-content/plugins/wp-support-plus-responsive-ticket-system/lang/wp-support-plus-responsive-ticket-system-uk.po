@@ -1,0 +1,1959 @@
+# Translation of WP Support Plus Responsive Ticket System in Ukrainian
+# This file is distributed under the same license as the WP Support Plus Responsive Ticket System package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-03-29 16:16+0530\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Language: uk_UA\n"
+"Project-Id-Version: WP Support Plus Responsive Ticket System\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+
+#: includes/admin/customize/general.php:55
+msgid "Buttons"
+msgstr "Кнопки"
+
+#: includes/admin/customize/general.php:48
+msgid "Footer"
+msgstr "Підвал"
+
+#: includes/admin/customize/general.php:41
+msgid "Body"
+msgstr "Тіло"
+
+#: includes/admin/customize/general.php:34
+msgid "Secondery Menu"
+msgstr "Вторинне меню"
+
+#: includes/admin/customize/general.php:27
+msgid "Header"
+msgstr "Заголовок"
+
+#: includes/admin/customize/general.php:22
+msgid "General CSS"
+msgstr "Загальні CSS"
+
+#: includes/admin/class-wpsp-admin.php:231
+msgid "Customize"
+msgstr "Налаштувати"
+
+#: includes/admin/class-wpsp-admin.php:150
+msgid "Please enter required field."
+msgstr "Будь ласка, введіть обов'язкове поле"
+
+#: includes/admin/customize/ticket_list.php:27
+msgid "Filter Sidebar"
+msgstr "Панель фільтру"
+
+#: includes/admin/customize/ticket_list.php:22
+msgid "Ticket List CSS"
+msgstr "CSS списка заявок"
+
+#: includes/admin/customize/general.php:66
+#: includes/admin/customize/ticket_list.php:58
+msgid "Reset default"
+msgstr "Скинути до замовчень"
+
+#: includes/admin/customize/ticket_list.php:48
+msgid "Ticket Log"
+msgstr "Журнал заявок"
+
+#: includes/admin/customize/ticket_list.php:41
+msgid "Open Ticket Widgets"
+msgstr "Відкрити віджети заявок"
+
+#: includes/admin/customize/ticket_list.php:34
+msgid "Ticket List Table"
+msgstr "Таблиця списку заявок"
+
+#: includes/admin/general/custom-css.php:29
+#: includes/admin/general/general-settings.php:62
+msgid "Theme Integration"
+msgstr "Інтеграція з темою"
+
+#: includes/admin/general/custom-css.php:30
+msgid "Applicable only in theme integration view"
+msgstr "Застосовується лише в режимі інтеграції з темою"
+
+#: includes/admin/general/general-settings.php:53
+msgid "This page will be used as helpdesk page on front-end. All users ( customer, agent, supervisor, administrator ) will able to access helpdesk on same page depending on their role. It does not require to have any shortcode, just go to your pages and create new page without description."
+msgstr "Ця сторінка буде використана як сторінка підтримки на сайті. Всі користувачі (замовник, агент, керівник, адміністратор) зможуть отримати доступ до цієї сторінки підтримки з правами, що залежать від їх ролі. Не потрібно використовувати шорт-код, просто перейдіть до сторінок і створіть нову сторінку без опису."
+
+#: includes/admin/general/general-settings.php:114
+msgid "Load Bootstrap"
+msgstr "Завантажити Bootstrap"
+
+#: includes/admin/general/general-settings.php:73
+#: includes/admin/general/general-settings.php:394
+msgid "Customer"
+msgstr "Замовник"
+
+#: includes/admin/general/general-settings.php:387
+msgid "Restrict to view advance support page"
+msgstr "Обмежити перегляд покращеної сторінки підтримки"
+
+#: includes/admin/general/general-settings.php:121
+msgid "Applicable on theme integration page only."
+msgstr "Застосовується лише на сторінці інтеграції з темою."
+
+#: includes/admin/general/general-settings.php:427
+msgid "Default Login"
+msgstr "Поточний вхід"
+
+#: includes/admin/general/general-settings.php:411
+msgid "Ticket Label"
+msgstr "Мітка заявки"
+
+#: includes/admin/general/general-settings.php:434
+msgid "Default Support Plus Login Module"
+msgstr "Поточний модуль входу Support Plus"
+
+#: includes/admin/general/general-settings.php:440
+msgid "WP Login Link"
+msgstr "Посилання на сторінку входу WP"
+
+#: includes/admin/general/general-settings.php:445
+msgid "Allow Powered by"
+msgstr "Дозволити \"Працює на\""
+
+#: includes/admin/general/general-settings.php:455
+msgid "Public Ticket Mode"
+msgstr "Режим загальнодоступних заявок"
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:30
+#: includes/admin/general/support-page-menu/menu_list_update.php:40
+msgid "Clear Logo"
+msgstr "Скинути логотип"
+
+#: includes/admin/general/general-settings.php:462
+msgid "If you enable this setting then all tickets will be visible to all users and they can reply to each others tickets."
+msgstr "Якщо ви включите цю настройку, всі заявки будуть видимі для всіх користувачів і користувачі зможуть відповідати на заявки один одного."
+
+#: includes/admin/ticket-list/default-filters.php:158
+msgid "On page load"
+msgstr "При завантаженні сторінки"
+
+#: includes/admin/ticket-list/default-filters.php:157
+msgid "Ticket List Filter"
+msgstr "Фільтр списка заявок"
+
+#: includes/admin/installation/wpsp_install.php:97
+msgid "Next"
+msgstr "Наступний"
+
+#: includes/admin/installation/wpsp_install.php:96
+msgid "Set Now"
+msgstr "Встановити зараз"
+
+#: includes/ajax/ticket-list/get_tickets.php:196 template/js_data.php:42
+msgid "Hide Filters"
+msgstr "Приховати фільтри"
+
+#: includes/ajax/ticket-list/get_tickets.php:199 template/js_data.php:43
+msgid "Show Filters"
+msgstr "Показати фільтри"
+
+#: template/header/sign-in.php:31
+msgid "Forgot your password?"
+msgstr "Забули пароль?"
+
+#: template/header/sign-in.php:43
+msgid "Click Here to Login"
+msgstr "Клацніть тут щоб увійти"
+
+#: template/header/sign-in.php:65
+msgid "Guest login"
+msgstr "Гостьовий вхід"
+
+#: template/header/sign-in.php:66
+msgid "No user account required. Create or access tickets created earlier by guest login."
+msgstr "Обліковий запис не потрібен. Створення або перегляд заявок, створених раніше за гостьовим входом."
+
+#: template/tickets/agent_setting.php:25
+msgid "Signature"
+msgstr "Підпис"
+
+#: template/tickets/agent_setting.php:33
+msgid "Save Settings"
+msgstr "Зберегти налаштування"
+
+#: template/tickets/dashboard.php:103
+msgid "Ticket Statistics"
+msgstr "Статистика за заявками"
+
+#: template/tickets/logged-in.php:27
+msgid "Agent Setting"
+msgstr "Налаштування агента"
+
+#: template/tickets/tickets.php:8 template/tickets/tickets.php:10
+#: template/tickets/tickets.php:12
+msgid "<h4>Sorry, you do not have permission to view this page</h4>"
+msgstr "<h4>Вибачте, але Ви не маєте прав на перегляд цієї сторінки</h4>"
+
+#: template/tickets/ticket_list/list.php:33
+msgid "Default"
+msgstr "Замовчання"
+
+#: template/tickets/ticket_list/filter.php:113
+msgid "Public"
+msgstr "Публічне"
+
+#: template/tickets/ticket_list/filter.php:112
+msgid "Private"
+msgstr "Особисте"
+
+#: template/tickets/ticket_list/filter.php:107
+msgid "Filter Name"
+msgstr "Найменування фільтру"
+
+#: template/tickets/ticket_list/filter.php:106
+msgid "Save Current Filter"
+msgstr "Зберегти поточний фільтр"
+
+#: template/tickets/ticket_list/filter.php:87
+msgid "To"
+msgstr "Кому"
+
+#: template/tickets/ticket_list/filter.php:84
+msgid "From"
+msgstr "Від"
+
+#: template/tickets/ticket_list/filter.php:57
+#: template/tickets/ticket_list/list.php:13
+msgid "Search..."
+msgstr "Пошук..."
+
+#: template/tickets/ticket_list/filter.php:26
+#: template/tickets/ticket_list/list.php:27
+msgid "Saved Filters"
+msgstr "Збережені фільтри"
+
+#: template/tickets/ticket_list/filter.php:24
+msgid "Apply Filters"
+msgstr "Застосувати фільтри"
+
+#: template/tickets/ticket-list.php:80
+msgid "Sorry, you do not have permission to view this ticket. <a href=\"%s\" class=\"alert-link\">Click here</a> for ticket list."
+msgstr "Вибачте, але Ви не маєте дозволу передивлятись цю заявку. <a href=\"%s\" class=\"alert-link\">Клацніть тут</a> аби переглянути список заявок."
+
+#: template/tickets/ticket-list.php:79
+msgid "Unauthorized access!"
+msgstr "Доступ не авторізовано!"
+
+#: template/tickets/open-ticket/sidebar.php:358
+msgid "Are you sure to add this note?"
+msgstr "Ви певні, що хочете дотати цю примітку?"
+
+#: template/tickets/open-ticket/sidebar.php:331
+msgid "Are you sure to post this reply?"
+msgstr "Ви певні, що хочете відправити цю відповідь?"
+
+#: template/tickets/open-ticket/sidebar.php:327
+#: template/tickets/open-ticket/sidebar.php:354
+msgid "Please Confirm"
+msgstr "Будь ласка, підтверьдьте"
+
+#: template/tickets/open-ticket/sidebar.php:205
+msgid "Ticket Fields"
+msgstr "Поля заявки"
+
+#: template/tickets/open-ticket/sidebar.php:147
+msgid "Agent Only Fields"
+msgstr "Поля тільки для агента"
+
+#: template/tickets/open-ticket/sidebar.php:102
+msgid "Assigned Agents"
+msgstr "Призначені агенти"
+
+#: template/tickets/open-ticket/sidebar.php:24
+msgid "Ticket Status"
+msgstr "Статус заявки"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:293
+msgid "Visible to support staff only!"
+msgstr "Бачить лише група підтримки!"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:293
+msgid "Private Note:"
+msgstr "Особиста примітка:"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:201
+#: template/tickets/open-ticket/class-threads-formatting.php:305
+msgid "Attachments"
+msgstr "Долучення"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:181
+#: template/tickets/open-ticket/class-threads-formatting.php:283
+msgid "Delete this thread"
+msgstr "Видалити цю гілку"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:175
+#: template/tickets/open-ticket/class-threads-formatting.php:277
+msgid "Edit this thread"
+msgstr "Редагувати цю гілку"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:100
+msgid "Submit Note"
+msgstr "Надіслати примітку"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:78
+msgid "Submit Reply"
+msgstr "Надіслати відповідь"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:74
+msgid "BCC (Comma separated list)"
+msgstr "BCC (список, розділений комами)"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:46
+msgid "Add Private Note"
+msgstr "Додати особисту примітку"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:41
+msgid "Post Reply"
+msgstr "Надіслати відповідь"
+
+#: template/tickets/open-ticket/class-fields-formatting.php:98
+msgid "Click Here"
+msgstr "Клацніть тут"
+
+#: template/tickets/open-ticket/class-fields-formatting.php:76
+#: template/tickets/open-ticket/class-threads-formatting.php:220
+#: template/tickets/open-ticket/class-threads-formatting.php:324
+msgid "Download"
+msgstr "Завантажити"
+
+#: template/tickets/open-ticket/body.php:12
+msgid "Back to tickets"
+msgstr "Повернутися до заявок"
+
+#: includes/admin/class-wpsp-admin.php:227 template/tickets/logged-in.php:20
+msgid "Dashboard"
+msgstr "Панель керування"
+
+#: template/tickets/dashboard.php:121
+msgid "Total"
+msgstr "Разом"
+
+#: template/tickets/create-ticket.php:351
+msgid "View Ticket"
+msgstr "Переглянути заявку"
+
+#: template/tickets/create-ticket.php:134
+msgid "No Description"
+msgstr "Немає опису"
+
+#: template/tickets/create-ticket.php:133
+msgid "No Subject"
+msgstr "Немає теми"
+
+#: template/tickets/create-ticket.php:108
+msgid "Reset Form"
+msgstr "Скинути форму"
+
+#: template/tickets/create-ticket.php:104
+msgid "Submit Ticket"
+msgstr "Надіслати заявку"
+
+#: template/tickets/create-ticket.php:59
+msgid "Create Ticket As"
+msgstr "Створити заявку від"
+
+#: template/tickets/create-ticket.php:41 template/tickets/create-ticket.php:353
+#: template/tickets/logged-in.php:16
+msgid "Create New Ticket"
+msgstr "Створити нову заявку"
+
+#: template/tickets/class-ticket-form.php:136
+#: template/tickets/class-ticket-form.php:152
+#: template/tickets/open-ticket/class-threads-formatting.php:535
+#: template/tickets/open-ticket/class-threads-formatting.php:551
+msgid "Uploading..."
+msgstr "Завантаження..."
+
+#: template/tickets/class-ticket-form.php:131
+#: template/tickets/open-ticket/class-threads-formatting.php:530
+msgid "Only '.jpeg','.jpg', '.png', '.gif', '.bmp' formats are allowed."
+msgstr "Тільки наступні формати '.jpeg','.jpg', '.png', '.gif', '.bmp' дозволені."
+
+#: template/js_data.php:41
+msgid "MB"
+msgstr "MB"
+
+#: template/js_data.php:41
+msgid "File Size limit exceeded! Allowed limit:"
+msgstr "Перевищено ліміт розміру файлу. Дозволений ліміт:"
+
+#: template/js_data.php:39
+msgid "Name or Email not given!"
+msgstr "Ім'я або електронна адреса не надані!"
+
+#: template/js_data.php:38
+msgid "Please choose registered user!"
+msgstr "Будь ласка, оберіть зареєстрованого користувача!"
+
+#: template/js_data.php:37
+msgid "Note can not be empty!"
+msgstr "Примітка не може бути пустою!"
+
+#: template/js_data.php:36
+msgid "Reply can not be empty!"
+msgstr "Відповідь не може бути пустою!"
+
+#: template/js_data.php:35
+msgid "View Less ..."
+msgstr "Показати меньше ..."
+
+#: template/js_data.php:34
+msgid "View More ..."
+msgstr "Показати більше ..."
+
+#: template/js_data.php:32
+msgid "WARNING: Anyone having your email address can access your guest tickets. Please avoid sharing any sensitive data."
+msgstr "ПОПЕРЕДЖЕННЯ: Кожен, хто має Вашу електронну адресу може отримати доступ до ваших гостьових заявок. Будь ласка, утримайтесь від поширення чутливої інформації."
+
+#: template/js_data.php:27
+msgid "You do not have permission to delete public filter!"
+msgstr "Ви на маєте повноважень на видалення публічного фільтру!"
+
+#: template/js_data.php:26
+msgid "Default filter can not be deleted!"
+msgstr "Поточний фільтр не може бути видалено!"
+
+#: template/js_data.php:25
+msgid "Please enter filter name!"
+msgstr "Будь ласка, введіть найменування фільтру!"
+
+#: includes/admin/class-wpsp-admin.php:151 template/js_data.php:24
+msgid "Are you sure?"
+msgstr "Ви певні?"
+
+#: template/js_data.php:23
+msgid "Incorrect URL!"
+msgstr "Невірний URL!"
+
+#: template/js_data.php:22
+msgid "Incorrect Email Address!"
+msgstr "Невірна електронна адреса!"
+
+#: template/js_data.php:21
+msgid "Required field should not be empty!"
+msgstr "Обов'язкове поле не повинно бути порожнім!"
+
+#: template/js_data.php:20
+msgid "'.exe', '.php' files are not allowed!"
+msgstr "Файли '.exe', '.php' не дозволені!"
+
+#: template/js_data.php:14
+msgid "Please wait..."
+msgstr "Будь ласка, зачекайте..."
+
+#: template/header/user_info.php:40
+msgid "Login"
+msgstr "Вхід"
+
+#: template/header/user_info.php:30
+msgid "Sign out"
+msgstr "Вийти"
+
+#: template/header/sign-in.php:75
+msgid "Your Email"
+msgstr "Ваша електронна адреса"
+
+#: template/header/sign-in.php:72
+msgid "Your Name"
+msgstr "Ваше ім'я"
+
+#: template/header/sign-in.php:56
+msgid "OR"
+msgstr "АБО"
+
+#: template/header/sign-in.php:38 template/header/sign-in.php:80
+msgid "Sign in"
+msgstr "Увійти"
+
+#: template/header/sign-in.php:28
+msgid "Remember me"
+msgstr "Запам'ятати мене"
+
+#: template/header/sign-in.php:23 template/header/sign-in.php:24
+msgid "Password"
+msgstr "Пароль"
+
+#: template/header/sign-in.php:20 template/header/sign-in.php:21
+msgid "Username or email"
+msgstr "Ім'я користувача або електронна адреса"
+
+#: template/header/sign-in.php:16
+msgid "Please sign in"
+msgstr "Будь ласка, увійдіть"
+
+#: template/header/header.php:79 template/header/user_info.php:39
+msgid "Sign Up"
+msgstr "Підписатися"
+
+#: template/header/header.php:78
+msgid "Sign In"
+msgstr "Увійти"
+
+#: template/header/header.php:70 template/tickets/logged-in.php:53
+#: template/tickets/logged-in.php:75
+msgid "Sign Out"
+msgstr "Вийти"
+
+#: template/header/header.php:34
+msgid "Back to website"
+msgstr "Повернутися до сайту"
+
+#: includes/functions/replace_template_tags.php:116
+msgid "On %1$s, %2$s wrote:"
+msgstr "%1$s, %2$s написав(ла):"
+
+#: includes/functions/replace_template_tags.php:23
+#: includes/functions/replace_template_tags.php:100
+msgid "Attachments:"
+msgstr "Долучення"
+
+#: includes/class-wpsp-functions.php:858 template/tickets/dashboard.php:71
+msgid "Tickets"
+msgstr "Заявки"
+
+#: includes/class-wpsp-functions.php:823
+msgid "Agent Created"
+msgstr "Агент створений"
+
+#: includes/class-wpsp-functions.php:822
+msgid "Date Updated"
+msgstr "Дата поновлена"
+
+#: includes/class-wpsp-functions.php:821
+msgid "Date Created"
+msgstr "Дата створена"
+
+#: includes/class-wpsp-functions.php:819
+msgid "Assigned Agent"
+msgstr "Призначений агент"
+
+#: includes/class-wpsp-functions.php:816
+#: template/tickets/open-ticket/sidebar.php:56
+msgid "Raised By"
+msgstr "Автор"
+
+#: includes/class-wpsp-functions.php:813
+msgid "ID"
+msgstr "ID"
+
+#: includes/class-wpsp-functions.php:795
+msgid "Description"
+msgstr "Опис"
+
+#: includes/class-wpsp-functions.php:794 includes/class-wpsp-functions.php:815
+#: includes/class-wpsp-functions.php:1200
+msgid "Subject"
+msgstr "Тема"
+
+#: includes/class-wpsp-functions.php:760
+msgid "Delete Custom Field"
+msgstr "Видалити довільне поле"
+
+#: includes/class-wpsp-functions.php:759
+msgid "Edit Custom Field"
+msgstr "Редагувати довільне поле"
+
+#: includes/class-wpsp-functions.php:725
+msgid "URL"
+msgstr "URL"
+
+#: includes/class-wpsp-functions.php:724
+msgid "Attachment"
+msgstr "Долучення"
+
+#: includes/class-wpsp-functions.php:723
+msgid "Date"
+msgstr "Дата"
+
+#: includes/class-wpsp-functions.php:722
+msgid "Textarea"
+msgstr "Простір для вводу тексту"
+
+#: includes/class-wpsp-functions.php:721
+msgid "Radio Button"
+msgstr "Кнопка-перемикач"
+
+#: includes/class-wpsp-functions.php:720
+msgid "Checkbox"
+msgstr "Прапорець"
+
+#: includes/class-wpsp-functions.php:719
+msgid "Drop-Down"
+msgstr "Список, що випадає"
+
+#: includes/class-wpsp-functions.php:718
+msgid "Text Field"
+msgstr "Текстове поле"
+
+#: includes/class-wpsp-functions.php:707
+msgid "Delete Priority"
+msgstr "Видалити пріоритет"
+
+#: includes/class-wpsp-functions.php:702
+msgid "Edit Priority"
+msgstr "Редагувати пріоритет"
+
+#: includes/class-wpsp-functions.php:690
+msgid "Delete Status"
+msgstr "Видалити статус"
+
+#: includes/class-wpsp-functions.php:685
+msgid "Edit Status"
+msgstr "Редагувати статус"
+
+#: includes/class-wpsp-functions.php:641
+msgid "Delete Category"
+msgstr "Видалити категорію"
+
+#: includes/class-wpsp-functions.php:636
+msgid "Edit Category"
+msgstr "Редагувати категорію"
+
+#: includes/ajax/user-login/guest_signin.php:40
+#: includes/ajax/user-login/signin.php:43
+msgid "Success!"
+msgstr "Успіх!"
+
+#: includes/ajax/user-login/guest_signin.php:27
+msgid "This email address already registered as user. Please sign in above!"
+msgstr "Ця адреса електронної пошти вже зареєстрована. Будь ласка, увійдіть!"
+
+#: includes/ajax/ticket-list/get_tickets.php:370
+msgid "<strong>%d</strong> of <strong>%d</strong> Pages"
+msgstr "<strong>%d</strong> з <strong>%d</strong> сторінок"
+
+#: includes/ajax/ticket-list/get_tickets.php:323
+msgid "No Tickets found!"
+msgstr "Не знайдено жодної заявки!"
+
+#: includes/ajax/ticket-list/get_tickets.php:232
+msgid "<strong>%d</strong> Tickets"
+msgstr "<strong>%d</strong> заявок"
+
+#: includes/ajax/ticket-list/get_tickets.php:230
+msgid "<strong>%d</strong>-<strong>%d</strong> of <strong>%d</strong> Tickets"
+msgstr "<strong>%d</strong>-<strong>%d</strong> з <strong>%d</strong> заявок"
+
+#: includes/ajax/ticket-list/get_tickets.php:218
+#: template/tickets/ticket_list/list.php:59
+msgid "Delete"
+msgstr "Видалити"
+
+#: includes/ajax/ticket-list/get_tickets.php:211
+msgid "Assign Agent"
+msgstr "Призначити агента"
+
+#: includes/ajax/ticket-list/get_tickets.php:204
+msgid "Change Status"
+msgstr "Змінити статус"
+
+#: includes/ajax/ticket-list/get_tickets.php:12
+msgid "Filter not found!"
+msgstr "Фільтр не знайдено!"
+
+#: includes/ajax/ticket-list/class-ticket-list-formating.php:160
+#: includes/functions/replace_template_tags.php:71
+#: template/tickets/dashboard.php:128
+#: template/tickets/open-ticket/class-threads-formatting.php:356
+#: template/tickets/open-ticket/sidebar.php:131
+msgid "None"
+msgstr "Нічого"
+
+#: includes/ajax/ticket-individual/get_ticket_fields.php:56
+#: includes/ajax/ticket-individual/set_ticket_fields.php:143
+#: template/tickets/open-ticket/sidebar.php:257
+msgid "No Ticket fields"
+msgstr "Немає полів заявки"
+
+#: includes/ajax/ticket-individual/get_ticket_fields.php:21
+msgid "Change Ticket Fields"
+msgstr "Змінити поля заявки"
+
+#: includes/ajax/ticket-individual/get_edit_thread.php:26
+msgid "Edit Thread"
+msgstr "Редагувати гілку"
+
+#: includes/ajax/ticket-individual/get_edit_subject.php:20
+msgid "Edit Subject"
+msgstr "Редагувати тему"
+
+#: includes/ajax/ticket-individual/get_delete_ticket.php:29
+msgid "Are you sure to delete this ticket?"
+msgstr "Ви певні, що хочете видалити цю заявку?"
+
+#: includes/ajax/ticket-individual/get_delete_ticket.php:20
+#: template/tickets/open-ticket/body.php:24
+msgid "Delete Ticket"
+msgstr "Видалити заявку"
+
+#: includes/ajax/ticket-individual/get_delete_thread.php:30
+msgid "Are you sure to delete this thread?"
+msgstr "Ви певні, що хочете видалити цю гілку?"
+
+#: includes/ajax/ticket-individual/get_delete_thread.php:22
+msgid "Delete Thread"
+msgstr "Видалити гілку"
+
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:31
+msgid "Are you sure to delete these tickets?"
+msgstr "Ви певні, що хочете видалити ці заявки?"
+
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:22
+msgid "Delete Tickets"
+msgstr "Видалити заявки"
+
+#: includes/ajax/ticket-individual/get_close_ticket.php:60
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:62
+#: includes/ajax/ticket-individual/get_delete_thread.php:62
+#: includes/ajax/ticket-individual/get_delete_ticket.php:60
+#: template/tickets/open-ticket/sidebar.php:336
+#: template/tickets/open-ticket/sidebar.php:363
+msgid "Confirm"
+msgstr "Підтвердити"
+
+#: includes/ajax/ticket-individual/get_close_ticket.php:29
+msgid "Are you sure to close ticket?"
+msgstr "Ви певні, що хочете закрити заявку?"
+
+#: includes/ajax/ticket-individual/get_close_ticket.php:21
+#: template/tickets/open-ticket/body.php:18
+msgid "Close Ticket"
+msgstr "Закрити заявку"
+
+#: includes/ajax/ticket-individual/get_clone_ticket.php:18
+#: template/tickets/open-ticket/body.php:31
+msgid "Clone Ticket"
+msgstr "Клонувати заявку"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:44
+#: template/tickets/create-ticket.php:74
+msgid "Guest Email"
+msgstr "Гостьова адреса електронної пошти"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:40
+#: template/tickets/create-ticket.php:70
+msgid "Guest Name"
+msgstr "Гостьове ім'я"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:37
+#: template/tickets/create-ticket.php:67
+msgid "Search user ..."
+msgstr "Знайти користувача..."
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:36
+#: template/tickets/create-ticket.php:66
+msgid "Choose User"
+msgstr "Обрати користувача"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:32
+#: template/tickets/create-ticket.php:62
+msgid "Guest"
+msgstr "Гість"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:31
+#: template/tickets/create-ticket.php:61
+msgid "Registered User"
+msgstr "Зареєстрований користувач"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:29
+#: includes/class-wpsp-functions.php:817
+msgid "User Type"
+msgstr "Тип користувача"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:20
+msgid "Change Raised By"
+msgstr "Змінити автора"
+
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:56
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:61
+#: includes/class-wpsp-functions.php:797 includes/class-wpsp-functions.php:820
+#: includes/class-wpsp-functions.php:1212
+#: template/tickets/open-ticket/sidebar.php:45
+msgid "Priority"
+msgstr "Пріоритет"
+
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:42
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:45
+#: includes/class-wpsp-functions.php:796 includes/class-wpsp-functions.php:818
+#: includes/class-wpsp-functions.php:1208
+#: template/tickets/open-ticket/sidebar.php:41
+msgid "Category"
+msgstr "Категорія"
+
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:19
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:20
+msgid "Change Ticket Status"
+msgstr "Змінити статус заявки"
+
+#: includes/ajax/ticket-individual/get_assign_agent.php:30
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:27
+msgid "Search agent ..."
+msgstr "Знайти агента..."
+
+#: includes/ajax/ticket-individual/get_assign_agent.php:21
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:18
+msgid "Change Assigned Agent"
+msgstr "Змінити призначеного агента"
+
+#: includes/ajax/ticket-individual/get_agent_fields.php:48
+#: includes/ajax/ticket-individual/set_agent_fields.php:136
+#: template/tickets/open-ticket/sidebar.php:191
+msgid "No Agent Only fields"
+msgstr "Немає полів тільки для агентів"
+
+#: includes/ajax/ticket-individual/get_agent_fields.php:21
+msgid "Change Agent Fields"
+msgstr "Змінити поля агентів"
+
+#: includes/ajax/ticket-individual/class-ticket-fields-format.php:226
+#: template/js_data.php:19 template/tickets/class-ticket-form.php:88
+#: template/tickets/class-ticket-form.php:412
+#: template/tickets/open-ticket/class-threads-formatting.php:488
+msgid "Attach Files"
+msgstr "Долучити файли"
+
+#: includes/ajax/ticket-form/upload_file.php:72
+msgid "done"
+msgstr "завершено"
+
+#: includes/ajax/ticket-form/upload_file.php:40
+msgid "Error: file size exceeded allowed limit!"
+msgstr "Помилка: розмір файлу перевищує дозволений ліміт!"
+
+#: includes/ajax/ticket-form/upload_file.php:29
+#: includes/ajax/ticket-form/upload_file.php:34
+msgid "Error: file format not supported!"
+msgstr "Помилка: формат файлу не підтримується!"
+
+#: includes/ajax/save_table_order.php:55
+msgid "Error saving order!"
+msgstr "Помилка зберігання замовлення!"
+
+#: includes/ajax/save_table_order.php:53
+msgid "Order saved successfully!"
+msgstr "Замовлення збережено успішно!"
+
+#: includes/ajax/get_delete_status.php:29
+msgid "Are you sure to delete this status?"
+msgstr "Ви певні, що хочете видалити цей статус?"
+
+#: includes/ajax/get_delete_priority.php:29
+msgid "Are you sure to delete this priority?"
+msgstr "Ви певні, що хочете видалити цей пріоритет?"
+
+#: includes/ajax/get_delete_custom_menu.php:28
+#: includes/ajax/get_delete_support_menu.php:28
+msgid "Are you sure to delete this menu?"
+msgstr "Ви певні, що хочете видалити це меню?"
+
+#: includes/ajax/get_delete_custom_field.php:33
+msgid "Please note, this will delete all data associated with this custom field and can not be undone!"
+msgstr "Будь ласка, зауважте, що ця дія видалить всі дані, асоційовані з довільним полем і вони не зможуть бути відновлені!"
+
+#: includes/ajax/get_delete_custom_field.php:29
+msgid "Are you sure to delete this custom field?"
+msgstr "Ви певні, що хочете видалити це довільне поле?"
+
+#: includes/ajax/get_delete_category.php:29
+msgid "Are you sure to delete this category?"
+msgstr "Ви певні, що хочете видалити цю категорію?"
+
+#: includes/ajax/get_delete_agent.php:29
+msgid "Are you sure to delete this agent?"
+msgstr "Ви певні, що хочете видалити цього агента?"
+
+#: includes/ajax/get_add_status.php:54 includes/ajax/get_edit_status.php:60
+msgid "Please enter status name!"
+msgstr "Будь ласка, вкажіть найменування статусу!"
+
+#: includes/ajax/get_add_status.php:24 includes/ajax/get_edit_status.php:29
+msgid "Status Name"
+msgstr "Найменування статусу"
+
+#: includes/ajax/get_add_priority.php:61 includes/ajax/get_add_status.php:61
+#: includes/ajax/get_edit_priority.php:67 includes/ajax/get_edit_status.php:67
+msgid "Please choose color!"
+msgstr "Будь ласка, оберіть колір!"
+
+#: includes/ajax/get_add_priority.php:54 includes/ajax/get_edit_priority.php:60
+msgid "Please enter priority name!"
+msgstr "Будь ласка, вкажіть найменування пріоритету!"
+
+#: includes/ajax/get_add_priority.php:29 includes/ajax/get_add_status.php:29
+#: includes/ajax/get_edit_priority.php:34 includes/ajax/get_edit_status.php:34
+msgid "Choose Color"
+msgstr "Обрати колір"
+
+#: includes/ajax/get_add_priority.php:24 includes/ajax/get_edit_priority.php:29
+msgid "Priority Name"
+msgstr "Найменування приорітету"
+
+#: includes/ajax/get_add_custom_field.php:138
+#: includes/ajax/get_edit_custom_field.php:150
+msgid "Please insert Field Options!"
+msgstr "Будь ласка, додайте параметри поля!"
+
+#: includes/ajax/get_add_custom_field.php:131
+#: includes/ajax/get_edit_custom_field.php:143
+msgid "Please choose Field Type!"
+msgstr "Будь ласка, оберіть тип поля!"
+
+#: includes/ajax/get_add_custom_field.php:124
+#: includes/ajax/get_edit_custom_field.php:136
+msgid "Please enter Field Label!"
+msgstr "Будь ласка, вкажіть мітку поля!"
+
+#: includes/ajax/get_add_custom_field.php:77
+#: includes/ajax/get_edit_custom_field.php:88
+msgid "If category is set, custom field will only visible when one of the selected category is choosen in create ticket form. If you want to show this all the time, please leave this empty. Use Ctrl+Click for select OR unselect value."
+msgstr "Якщо встановлено категорію, довідне поле буде видимим тільки якщо обрана категорія буде вказана при створенні заявки. Якщо Ви хочете, щоб довільне поле було завжди видимим, будь ласка, залиште незаповненим. Використовуйте Ctrl+Click для того щоб обрати АБО скасувати вибір."
+
+#: includes/ajax/get_add_custom_field.php:69
+#: includes/ajax/get_edit_custom_field.php:74
+msgid "Assign Categories (optional)"
+msgstr "Призначити категорії (не обов'язково)"
+
+#: includes/ajax/get_add_custom_field.php:65
+#: includes/ajax/get_edit_custom_field.php:70
+msgid "Required field to ticket form. If set Yes, user must have to fill or submit value for this field"
+msgstr "Обов'язкове поле форми заявки. Якщо встановлено в \"Так\", користувач буде повинен заповнити або надати інформацію в цьому полі"
+
+#: includes/ajax/get_add_custom_field.php:56
+#: includes/ajax/get_edit_custom_field.php:61
+msgid "Agent Only fields not available for ticket form. These can be edited by agents for their internal use."
+msgstr "Поля тільки для агентів не доступні для форми заявки. Вони можуть бути відредаговані агентами для їхнього внутрішнього використання."
+
+#: includes/ajax/get_add_custom_field.php:47
+#: includes/ajax/get_edit_custom_field.php:52
+msgid "Please make sure you enter one option per line"
+msgstr "Будь ласка, введіть по одному значенню на строку"
+
+#: includes/ajax/get_add_custom_field.php:45
+#: includes/ajax/get_edit_custom_field.php:50
+msgid "Enter Field Options"
+msgstr "Вкажіть параметри поля"
+
+#: includes/ajax/get_add_custom_field.php:31
+#: includes/ajax/get_edit_custom_field.php:35
+msgid "Choose Field Type"
+msgstr "Оберіть тип поля"
+
+#: includes/ajax/get_add_custom_field.php:26
+#: includes/ajax/get_edit_custom_field.php:30
+msgid "Field Label"
+msgstr "Мітка поля"
+
+#: includes/ajax/get_add_category.php:114
+#: includes/ajax/get_edit_category.php:135
+msgid "Please enter category name!"
+msgstr "Будь ласка, вкажіть найменування категорії!"
+
+#: includes/ajax/get_add_category.php:31 includes/ajax/get_edit_category.php:36
+msgid "Search Supervisors..."
+msgstr "Знайти керівників..."
+
+#: includes/ajax/get_add_category.php:29 includes/ajax/get_edit_category.php:34
+msgid "Supervisor (Optional)"
+msgstr "Керівник (не обов'язково)"
+
+#: includes/ajax/get_add_category.php:24 includes/ajax/get_edit_category.php:29
+msgid "Category Name"
+msgstr "Найменування категорії"
+
+#: includes/ajax/get_add_agent.php:81
+msgid "Please select an Agent!"
+msgstr "Будь ласка, оберіть агента!"
+
+#: includes/ajax/get_add_agent.php:51 includes/ajax/get_add_category.php:45
+#: includes/ajax/get_add_custom_field.php:86
+#: includes/ajax/get_add_priority.php:39 includes/ajax/get_add_status.php:39
+#: includes/ajax/get_delete_agent.php:42
+#: includes/ajax/get_delete_category.php:42
+#: includes/ajax/get_delete_custom_field.php:43
+#: includes/ajax/get_delete_custom_menu.php:41
+#: includes/ajax/get_delete_priority.php:42
+#: includes/ajax/get_delete_status.php:42
+#: includes/ajax/get_delete_support_menu.php:41
+#: includes/ajax/get_edit_agent.php:42 includes/ajax/get_edit_category.php:65
+#: includes/ajax/get_edit_custom_field.php:98
+#: includes/ajax/get_edit_priority.php:45 includes/ajax/get_edit_status.php:45
+#: template/tickets/ticket_list/filter.php:118
+msgid "Submit"
+msgstr "Відправити"
+
+#: includes/ajax/get_add_agent.php:31
+msgid "Search Agents..."
+msgstr "Знайти агентів..."
+
+#: includes/ajax/get_add_agent.php:26
+msgid "Select Agent"
+msgstr "Обрати Агента"
+
+#: includes/ajax/autocomplete/wp_user.php:31
+msgid "No user found!"
+msgstr "Користувач не знайдений!"
+
+#: includes/ajax/autocomplete/ticket_filter.php:126
+msgid "No results found!"
+msgstr "Нічого не знайдено!"
+
+#: includes/admin/ticket-list/ticket-list.php:15
+msgid "Default Filters"
+msgstr "Поточні фільтри"
+
+#: includes/admin/ticket-list/ticket-list.php:11
+msgid "List Settings"
+msgstr "Список налаштувань"
+
+#: includes/admin/ticket-list/list-settings.php:30
+msgid "Agent Filter"
+msgstr "Фільтр агента"
+
+#: includes/admin/ticket-list/list-settings.php:29
+msgid "Customer Filter"
+msgstr "Фільтр замовника"
+
+#: includes/admin/ticket-list/list-settings.php:17
+msgid "Ticket List Settings"
+msgstr "Налаштування списку заявок"
+
+#: includes/admin/ticket-list/default-filters.php:147
+msgid "Number of Tickets shown per page for agent view."
+msgstr "Кількість заявок на сторінку в перегляді для агента."
+
+#: includes/admin/ticket-list/default-filters.php:129
+msgid "Tickets are loaded on selected order for agent view by default. If agent apply manual filter, this setting will not take effect."
+msgstr "Заявки в перегляді для агента показуються з поточним сортуванням. В разі, якщо агент застосує фільтр, це налаштування не буде враховуватись."
+
+#: includes/admin/ticket-list/default-filters.php:106
+msgid "Selected statuses will be hidden if no filter is active for agent view. If agent use status filter manually on ticket list, this setting will not take effect and tickets will be filtered as per customer selection."
+msgstr "Обрані статуси будуть приховані якщо в перегляді для агента не застосований фільтр. Якщо агент застосує фільтр за статусом до списку заявок, це налаштування не буде враховуватись."
+
+#: includes/admin/ticket-list/default-filters.php:89
+#: includes/admin/ticket-list/list-settings.php:28
+msgid "Agent View"
+msgstr "Перегляд для агента"
+
+#: includes/admin/ticket-list/default-filters.php:83
+msgid "Number of Tickets shown per page for customer view."
+msgstr "Кількість заявок на сторінку в перегляді для замовника."
+
+#: includes/admin/ticket-list/default-filters.php:80
+#: includes/admin/ticket-list/default-filters.php:144
+msgid "500"
+msgstr "500"
+
+#: includes/admin/ticket-list/default-filters.php:79
+#: includes/admin/ticket-list/default-filters.php:143
+msgid "100"
+msgstr "100"
+
+#: includes/admin/ticket-list/default-filters.php:78
+#: includes/admin/ticket-list/default-filters.php:142
+msgid "50"
+msgstr "50"
+
+#: includes/admin/ticket-list/default-filters.php:77
+#: includes/admin/ticket-list/default-filters.php:141
+msgid "40"
+msgstr "40"
+
+#: includes/admin/ticket-list/default-filters.php:76
+#: includes/admin/ticket-list/default-filters.php:140
+msgid "30"
+msgstr "30"
+
+#: includes/admin/ticket-list/default-filters.php:75
+#: includes/admin/ticket-list/default-filters.php:139
+msgid "20"
+msgstr "20"
+
+#: includes/admin/ticket-list/default-filters.php:74
+#: includes/admin/ticket-list/default-filters.php:138
+msgid "10"
+msgstr "10"
+
+#: includes/admin/ticket-list/default-filters.php:71
+#: includes/admin/ticket-list/default-filters.php:135
+msgid "Number of Tickets"
+msgstr "Кількість заявок"
+
+#: includes/admin/ticket-list/default-filters.php:65
+msgid "Tickets are loaded on selected order for customer view by default. If customer apply manual filter, this setting will not take effect."
+msgstr "Заявки в перегляді для замовника показуються з поточним сортуванням. В разі, якщо замовник застосує фільтр, це налаштування не буде враховуватись."
+
+#: includes/admin/ticket-list/default-filters.php:48
+#: includes/admin/ticket-list/default-filters.php:112
+msgid "Order By"
+msgstr "Сортувати за"
+
+#: includes/admin/ticket-list/default-filters.php:42
+msgid "Selected statuses will be hidden if no filter is active for customer view. If customer use status filter manually on ticket list, this setting will not take effect and tickets will be filtered as per customer selection."
+msgstr "Обрані статуси будуть приховані якщо в перегляді для замовника не застосований фільтр. Якщо замовник застосує фільтр за статусом до списку заявок, це налаштування не буде враховуватись."
+
+#: includes/admin/ticket-list/default-filters.php:30
+#: includes/admin/ticket-list/default-filters.php:94
+msgid "Hide Selected Statuses"
+msgstr "Приховати обрані статуси"
+
+#: includes/admin/ticket-list/default-filters.php:25
+#: includes/admin/ticket-list/list-settings.php:27
+msgid "Customer View"
+msgstr "Перегляд для замовника"
+
+#: includes/admin/ticket-form/ticket-form.php:11
+msgid "Manage Form"
+msgstr "Керування формою"
+
+#: includes/admin/ticket-form/form-management.php:96
+#: includes/admin/ticket-list/list-settings.php:120
+msgid "Please Wait ..."
+msgstr "Будь ласка, зачекайте..."
+
+#: includes/admin/general/general-settings.php:449
+#: includes/admin/general/general-settings.php:459
+#: includes/admin/ticket-form/form-management.php:47
+#: includes/admin/ticket-list/default-filters.php:172
+msgid "Disable"
+msgstr "Вимкнути"
+
+#: includes/admin/general/general-settings.php:448
+#: includes/admin/general/general-settings.php:458
+#: includes/admin/ticket-form/form-management.php:46
+#: includes/admin/ticket-list/default-filters.php:166
+msgid "Enable"
+msgstr "Ввімкнути"
+
+#: includes/admin/ticket-form/form-management.php:28
+msgid "Full Width"
+msgstr "Повна ширина"
+
+#: includes/admin/ticket-form/form-management.php:27
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:28
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:29
+#: includes/class-wpsp-functions.php:814 includes/class-wpsp-functions.php:1204
+#: template/tickets/open-ticket/sidebar.php:37
+msgid "Status"
+msgstr "Статус"
+
+#: includes/admin/ticket-form/form-management.php:17
+msgid "Create New Ticket Form"
+msgstr "Створити нову форму заявки"
+
+#: includes/admin/ticket-form/custom-fields.php:55
+msgid "No Custom Fields found!"
+msgstr "Довільні поля не знайдені!"
+
+#: includes/admin/ticket-form/custom-fields.php:30
+msgid "Assigned Categories"
+msgstr "Призначені категорії"
+
+#: includes/admin/ticket-form/custom-fields.php:29
+#: includes/ajax/get_add_custom_field.php:60
+#: includes/ajax/get_edit_custom_field.php:65
+msgid "Required"
+msgstr "Обов'язково"
+
+#: includes/admin/ticket-form/custom-fields.php:28
+#: includes/ajax/get_add_custom_field.php:51
+#: includes/ajax/get_edit_custom_field.php:56
+msgid "Agent Only"
+msgstr "Тільки для агента"
+
+#: includes/admin/ticket-form/custom-fields.php:27
+msgid "Type"
+msgstr "Тип"
+
+#: includes/admin/ticket-form/custom-fields.php:19
+msgid "Add New Custom Field"
+msgstr "Додати нове довільне поле"
+
+#: includes/admin/ticket-form/custom-fields.php:18
+#: includes/admin/ticket-form/ticket-form.php:15
+msgid "Custom Fields"
+msgstr "Довільні поля"
+
+#: includes/admin/general/thank_you.php:48
+msgid "URL of the ticket."
+msgstr "URL заявки."
+
+#: includes/admin/general/thank_you.php:47
+msgid "Name of user doing current activity."
+msgstr "Ім'я користувача, який виконує роботу."
+
+#: includes/admin/general/thank_you.php:46
+msgid "History of communication in ticket."
+msgstr "Історія комунікацій по заявці."
+
+#: includes/admin/general/thank_you.php:45
+msgid "Last reply description."
+msgstr "Опис останньої відповіді."
+
+#: includes/admin/general/thank_you.php:44
+msgid "Email of user posted last reply."
+msgstr "Адреса електронної пошти користувача, який відповів останнім."
+
+#: includes/admin/general/thank_you.php:43
+msgid "Name of user posted last reply."
+msgstr "Ім'я користувача, який відповів останнім."
+
+#: includes/admin/general/thank_you.php:42
+msgid "Name(s) of agent assigned to ticket."
+msgstr "Ім'я(імена) агента(ів) яким призначена заявка."
+
+#: includes/admin/general/thank_you.php:41
+msgid "Name of the agent who have created ticket on behalf of user. Empty if ticket created by user himself."
+msgstr "Ім'я агента, який створив заявку на користь користувача. Порожньо, якщо користувач створив заявку самостійно."
+
+#: includes/admin/general/thank_you.php:40
+msgid "Ticket create time"
+msgstr "Час створення заявки"
+
+#: includes/admin/general/thank_you.php:39
+msgid "Email of ticket creator"
+msgstr "Адреса електронної пошти того, хто створив"
+
+#: includes/admin/general/thank_you.php:38
+msgid "Name of ticket creator"
+msgstr "Ім'я того, хто створив заявку"
+
+#: includes/admin/general/thank_you.php:37
+msgid "Ticket Priority"
+msgstr "Пріоритет заявки"
+
+#: includes/admin/general/thank_you.php:36
+msgid "Ticket Category"
+msgstr "Категорія заявки"
+
+#: includes/admin/general/thank_you.php:35
+msgid "Ticket status"
+msgstr "Статус заявки"
+
+#: includes/admin/general/thank_you.php:34
+msgid "Ticket description given while creating ticket"
+msgstr "Оригінальний опис заявки, наведений при її створенні"
+
+#: includes/admin/general/thank_you.php:33
+msgid "Ticket Subject"
+msgstr "Тема заявки"
+
+#: includes/admin/general/thank_you.php:31
+msgid "Template Tags"
+msgstr "Мітки шаблону"
+
+#: includes/admin/general/thank_you.php:17
+msgid "Thank You Page after create ticket"
+msgstr "Сторінка подяки після створення заявки"
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:15
+#: includes/admin/general/support-page-menu/menu_list_update.php:25
+msgid "Add New Support Page Menu"
+msgstr "Додати нове меню сторінки підтримки"
+
+#: includes/admin/general/support-page-menu/menu_list.php:69
+msgid "Delete Support Menu"
+msgstr "Видалити меню сторінки підтримки"
+
+#: includes/admin/general/statuses.php:19
+msgid "Add New Status"
+msgstr "Додати новий статус"
+
+#: includes/admin/general/priorities.php:28
+#: includes/admin/general/statuses.php:28
+msgid "Color"
+msgstr "Колір"
+
+#: includes/admin/general/priorities.php:19
+msgid "Add New Priority"
+msgstr "Додати новий пріоритет"
+
+#: includes/admin/general/general.php:43
+msgid "Support Page Menu"
+msgstr "Меню сторінки підтримки"
+
+#: includes/admin/general/general.php:39
+msgid "Thank you page"
+msgstr "Сторінка подяки"
+
+#: includes/admin/general/general.php:23
+#: includes/admin/general/priorities.php:18
+msgid "Priorities"
+msgstr "Пріоритети"
+
+#: includes/admin/general/general.php:19 includes/admin/general/statuses.php:18
+msgid "Statuses"
+msgstr "Статуси"
+
+#: includes/admin/general/general-settings.php:422
+msgid "If you set SRN, [Ticket #123456] will become [Ticket SRN123456] whereever applicable. Please don't leave blank."
+msgstr "Якщо ви впишете SRN, [Заявка #123456] стане [Заявка SRN123456] всюди, де це може застосовуватись. Будь ласка, не залишайте порожнім."
+
+#: includes/admin/general/general-settings.php:418
+msgid "Ticket ID Prefix"
+msgstr "Префікс до ID заявки"
+
+#: includes/admin/general/general-settings.php:377
+msgid "Allow Support Staff to read all ticket"
+msgstr "Дозволити персоналу підтримки передивлятись всі заявки"
+
+#: includes/admin/general/general-settings.php:367
+msgid "Allow Guest Ticket"
+msgstr "Дозволити гостьові заявки"
+
+#: includes/admin/general/general-settings.php:360
+msgid "Attachment Max Size(MB)"
+msgstr "Максимальний розмір долучення (MB)"
+
+#: includes/admin/general/general-settings.php:354
+msgid "This format will be applicable for custom date fields for Support Plus"
+msgstr "Цей формат буде застосовано до довільних полів дати в Support Plus"
+
+#: includes/admin/general/general-settings.php:349
+msgid "Custom Date Format"
+msgstr "Довільний формат дати"
+
+#: includes/admin/general/general-settings.php:343
+msgid "This format will be applicable for default date fields for Support Plus"
+msgstr "Цей формат буде застосовано до поточних полів дати в Support Plus"
+
+#: includes/admin/general/general-settings.php:338
+msgid "System Date Format"
+msgstr "Системний формат дати"
+
+#: includes/admin/general/general-settings.php:332
+msgid "This format will be applicable for input date fields (datepicker) for WP Support Plus"
+msgstr "Цей формат буде застосовано для полів дати з календарем в WP Support Plus"
+
+#: includes/admin/general/general-settings.php:308
+msgid "Calender Date Format"
+msgstr "Формат дати для полів з календарем"
+
+#: includes/admin/general/general-settings.php:302
+msgid "Bottom"
+msgstr "Низ"
+
+#: includes/admin/general/general-settings.php:301
+msgid "Top"
+msgstr "Верх"
+
+#: includes/admin/general/general-settings.php:298
+msgid "Reply Form Position"
+msgstr "Розташування форми відповіді"
+
+#: includes/admin/general/general-settings.php:293
+msgid "As name suggest, this setting will change ticket status to selected when support agent reply to ticket. Current Status will not change status of ticket in this case."
+msgstr "Це налаштування змінить статус заявки до обраного, коли агент підтримки відповість на заявку. Поточний статус не змінить статус заявки в цьому випадку."
+
+#: includes/admin/general/general-settings.php:277
+msgid "Ticket Status after Agent Reply"
+msgstr "Статус заявки після відповіді агента"
+
+#: includes/admin/general/general-settings.php:271
+msgid "This is applicable for Ticket id being created for new ticket."
+msgstr "Це налаштування застосовується до ID заявки для новостворюваних заявок."
+
+#: includes/admin/general/general-settings.php:269
+msgid "Random"
+msgstr "Випадковий"
+
+#: includes/admin/general/general-settings.php:263
+msgid "Sequential"
+msgstr "Послідовний"
+
+#: includes/admin/general/general-settings.php:255
+#: includes/admin/general/thank_you.php:32
+msgid "Ticket ID"
+msgstr "ID заявки"
+
+#: includes/admin/general/general-settings.php:249
+msgid "If enabled, it will show Close Ticket button to open ticket view for customer. This button will change ticket status to selected status."
+msgstr "Якщо включене, кнопка \"Закрити заявку\" буде показана замовнику в перегляді відкритих заявок. Ця кнопка змінить статус заявки до обраного."
+
+#: includes/admin/general/general-settings.php:230
+msgid "Allow Customer to Close Ticket"
+msgstr "Дозволити замовнику закривати заявку"
+
+#: includes/admin/general/general-settings.php:224
+msgid "As name suggest, this setting will change ticket status to selected when ticket creator reply to ticket. Current Status will not change status of ticket in this case."
+msgstr "Це налаштування змінить статус заявки до обраного, коли той, хто створив заявку відповість на неї. Поточний статус не змінить статус заявки в цьому випадку."
+
+#: includes/admin/general/general-settings.php:212
+#: includes/admin/general/general-settings.php:283
+msgid "Status List"
+msgstr "Список статусів"
+
+#: includes/admin/general/general-settings.php:210
+#: includes/admin/general/general-settings.php:281
+msgid "Current Status"
+msgstr "Поточний статус"
+
+#: includes/admin/general/general-settings.php:205
+msgid "Ticket Status after Customer Reply"
+msgstr "Статус заявки після відповіді замовника"
+
+#: includes/admin/general/general-settings.php:199
+msgid "This priority will be default priority for new ticket."
+msgstr "Пріоритет за замовчанням для нової заявки."
+
+#: includes/admin/general/general-settings.php:183
+msgid "Default Ticket Priority"
+msgstr "Пріоритет заявки за замовчанням"
+
+#: includes/admin/general/general-settings.php:177
+msgid "This status will be default status for new ticket."
+msgstr "Статус за замовчанням для нової заявки."
+
+#: includes/admin/general/general-settings.php:161
+msgid "Default Ticket Status"
+msgstr "Статус заявки за замовчанням"
+
+#: includes/admin/general/general-settings.php:155
+msgid "This category will be default category for new ticket. If category is not present in ticket form or ticket created via email piping, this category will be used as new ticket category."
+msgstr "Категорія за замовчанням для нової заявки. В разі, якщо поля \"категорія\" немає на формі заявки, або заявка створена через електронну пошту, ця категорія буде використана при створенні заявки."
+
+#: includes/admin/general/general-settings.php:139
+msgid "Default Category"
+msgstr "Категорія за замовчанням"
+
+#: includes/admin/general/general-settings.php:127
+msgid "Open support page in new window?"
+msgstr "Відкрити сторінку підтримки в новому вікні?"
+
+#: includes/admin/general/general-settings.php:35
+msgid "Support Page"
+msgstr "Сторінка підтримки"
+
+#: includes/admin/general/general-settings.php:26
+msgid "Choose Logo"
+msgstr "Оберіть логотип"
+
+#: includes/admin/general/footer-text.php:17
+#: includes/admin/general/general.php:35
+msgid "Footer Text"
+msgstr "Тест підвалу"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:11
+#: includes/admin/general/support-page-menu/menu_list_update.php:12
+#: includes/ajax/autocomplete/index.php:10
+#: includes/ajax/autocomplete/ticket_filter.php:12
+#: includes/ajax/get_add_agent.php:10 includes/ajax/get_add_category.php:10
+#: includes/ajax/get_add_custom_field.php:10
+#: includes/ajax/get_add_priority.php:10 includes/ajax/get_add_status.php:10
+#: includes/ajax/get_delete_agent.php:13
+#: includes/ajax/get_delete_category.php:13
+#: includes/ajax/get_delete_custom_field.php:13
+#: includes/ajax/get_delete_custom_menu.php:13
+#: includes/ajax/get_delete_priority.php:13
+#: includes/ajax/get_delete_status.php:13
+#: includes/ajax/get_delete_support_menu.php:13
+#: includes/ajax/get_edit_agent.php:13 includes/ajax/get_edit_category.php:13
+#: includes/ajax/get_edit_custom_field.php:13
+#: includes/ajax/get_edit_priority.php:13 includes/ajax/get_edit_status.php:13
+#: includes/ajax/save_form_management.php:19
+#: includes/ajax/save_list_settings.php:21
+#: includes/ajax/save_table_order.php:16
+#: includes/ajax/search_users_for_add_agent.php:10
+#: includes/ajax/set_add_agent.php:10 includes/ajax/set_add_category.php:10
+#: includes/ajax/set_add_custom_field.php:10
+#: includes/ajax/set_add_priority.php:10 includes/ajax/set_add_status.php:10
+#: includes/ajax/set_delete_agent.php:13
+#: includes/ajax/set_delete_category.php:13
+#: includes/ajax/set_delete_custom_field.php:13
+#: includes/ajax/set_delete_custom_menu.php:13
+#: includes/ajax/set_delete_priority.php:13
+#: includes/ajax/set_delete_status.php:13
+#: includes/ajax/set_delete_support_menu.php:13
+#: includes/ajax/set_edit_agent.php:14 includes/ajax/set_edit_category.php:17
+#: includes/ajax/set_edit_custom_field.php:13
+#: includes/ajax/set_edit_priority.php:15 includes/ajax/set_edit_status.php:15
+#: includes/ajax/ticket-form/create_tkt_cng_cat.php:10
+#: includes/ajax/ticket-form/upload_file.php:9
+#: includes/ajax/ticket-form/upload_image.php:8
+#: includes/ajax/ticket-individual/get_agent_fields.php:16
+#: includes/ajax/ticket-individual/get_assign_agent.php:16
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:15
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:15
+#: includes/ajax/ticket-individual/get_change_raised_by.php:15
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:15
+#: includes/ajax/ticket-individual/get_clone_ticket.php:13
+#: includes/ajax/ticket-individual/get_close_ticket.php:18
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:19
+#: includes/ajax/ticket-individual/get_delete_thread.php:19
+#: includes/ajax/ticket-individual/get_delete_ticket.php:16
+#: includes/ajax/ticket-individual/get_edit_subject.php:15
+#: includes/ajax/ticket-individual/get_edit_thread.php:19
+#: includes/ajax/ticket-individual/get_ticket_fields.php:16
+#: includes/ajax/ticket-individual/set_agent_fields.php:17
+#: includes/ajax/ticket-individual/set_assign_agent.php:18
+#: includes/ajax/ticket-individual/set_bulk_assign_agent.php:20
+#: includes/ajax/ticket-individual/set_bulk_change_status.php:19
+#: includes/ajax/ticket-individual/set_change_raised_by.php:17
+#: includes/ajax/ticket-individual/set_change_ticket_status.php:17
+#: includes/ajax/ticket-individual/set_clone_ticket.php:18
+#: includes/ajax/ticket-individual/set_close_ticket.php:17
+#: includes/ajax/ticket-individual/set_delete_bulk_ticket.php:20
+#: includes/ajax/ticket-individual/set_delete_thread.php:18
+#: includes/ajax/ticket-individual/set_delete_ticket.php:19
+#: includes/ajax/ticket-individual/set_edit_subject.php:18
+#: includes/ajax/ticket-individual/set_edit_thread.php:19
+#: includes/ajax/ticket-individual/set_ticket_fields.php:17
+#: includes/ajax/ticket-list/apply_ticket_filter.php:12
+#: includes/ajax/ticket-list/apply_ticket_filter.php:20
+#: includes/ajax/ticket-list/apply_ticket_filter.php:28
+#: includes/ajax/ticket-list/delete_ticket_filter.php:12
+#: includes/ajax/ticket-list/delete_ticket_filter.php:20
+#: includes/ajax/ticket-list/delete_ticket_filter.php:25
+#: includes/ajax/ticket-list/delete_ticket_filter.php:32
+#: includes/ajax/ticket-list/save_ticket_filter.php:12
+#: includes/ajax/upgrade.php:11 includes/ajax/user-login/guest_signin.php:12
+#: includes/ajax/user-login/guest_signin.php:45
+#: includes/ajax/user-login/signin.php:12
+#: includes/ajax/user-login/signin.php:48 includes/class-wpsp-ajax.php:133
+#: includes/class-wpsp-ajax.php:151 includes/class-wpsp-ajax.php:205
+#: template/tickets/create-ticket.php:147
+#: template/tickets/create-ticket.php:154
+#: template/tickets/ticket-operations/add_ticket_note.php:20
+#: template/tickets/ticket-operations/reply_ticket.php:21
+#: wp-support-plus.php:72 wp-support-plus.php:79
+msgid "Cheating huh?"
+msgstr "Обманюєте, ні?"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:48
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:57
+#: includes/admin/general/support-page-menu/menu_list_add.php:49
+#: includes/admin/general/support-page-menu/menu_list_update.php:60
+#: includes/ajax/get_add_agent.php:52 includes/ajax/get_add_category.php:46
+#: includes/ajax/get_add_custom_field.php:87
+#: includes/ajax/get_add_priority.php:40 includes/ajax/get_add_status.php:40
+#: includes/ajax/get_delete_agent.php:43
+#: includes/ajax/get_delete_category.php:43
+#: includes/ajax/get_delete_custom_field.php:44
+#: includes/ajax/get_delete_custom_menu.php:42
+#: includes/ajax/get_delete_priority.php:43
+#: includes/ajax/get_delete_status.php:43
+#: includes/ajax/get_delete_support_menu.php:42
+#: includes/ajax/get_edit_agent.php:43 includes/ajax/get_edit_category.php:66
+#: includes/ajax/get_edit_custom_field.php:99
+#: includes/ajax/get_edit_priority.php:46 includes/ajax/get_edit_status.php:46
+#: includes/ajax/ticket-individual/get_agent_fields.php:89
+#: includes/ajax/ticket-individual/get_assign_agent.php:140
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:116
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:86
+#: includes/ajax/ticket-individual/get_change_raised_by.php:142
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:94
+#: includes/ajax/ticket-individual/get_clone_ticket.php:59
+#: includes/ajax/ticket-individual/get_close_ticket.php:59
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:61
+#: includes/ajax/ticket-individual/get_delete_thread.php:61
+#: includes/ajax/ticket-individual/get_delete_ticket.php:59
+#: includes/ajax/ticket-individual/get_edit_subject.php:61
+#: includes/ajax/ticket-individual/get_edit_thread.php:90
+#: includes/ajax/ticket-individual/get_ticket_fields.php:97
+#: template/tickets/open-ticket/class-threads-formatting.php:81
+#: template/tickets/open-ticket/class-threads-formatting.php:103
+#: template/tickets/open-ticket/sidebar.php:335
+#: template/tickets/open-ticket/sidebar.php:362
+msgid "Cancel"
+msgstr "Відмінити"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:35
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:43
+#: includes/admin/general/support-page-menu/menu_list_add.php:36
+#: includes/admin/general/support-page-menu/menu_list_update.php:46
+msgid "Menu URL"
+msgstr "URL меню"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:26
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:34
+#: includes/admin/general/support-page-menu/menu_list_add.php:26
+#: includes/admin/general/support-page-menu/menu_list_update.php:36
+msgid "Menu Icon"
+msgstr "Іконка меню"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:15
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:23
+msgid "Add New Menu Slider"
+msgstr "Додати новий слайдер меню"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:99
+msgid "Delete Custom Menu"
+msgstr "Видалити довільне меню"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:72
+#: includes/admin/general/support-page-menu/menu_list.php:34
+#: includes/admin/general/thank_you.php:18
+msgid "Title"
+msgstr "Заголовок"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:55
+msgid "Custom Menu Slider"
+msgstr "Довільний слайдер меню"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:46
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:29
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:37
+#: includes/admin/general/general-settings.php:29
+#: includes/admin/general/support-page-menu/menu_list_add.php:29
+#: includes/admin/general/support-page-menu/menu_list_update.php:39
+msgid "Upload Logo"
+msgstr "Завантажити логотип"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:42
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:71
+#: includes/admin/general/support-page-menu/menu_list.php:33
+msgid "Icon"
+msgstr "Іконка"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:36
+msgid "If enabled, it will show Support Button on front-end website. When visitor click this button, it will open Support Page selected above in new tab."
+msgstr "Включає відображення кнопки підтримки на сайті. Коли відвідувач натисне на цю кнопку, відкриється сторінка підтримки обрана вище."
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:26
+msgid "Show Support Button"
+msgstr "Відображати кнопку підтримки"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:21
+#: includes/admin/general/general.php:27
+msgid "Support Button"
+msgstr "Кнопка підтримки"
+
+#: includes/admin/general/custom-css.php:23
+#: includes/admin/general/general.php:31
+msgid "Custom CSS"
+msgstr "Довільний CSS"
+
+#: includes/admin/general/categories.php:64
+#: includes/admin/general/priorities.php:59
+#: includes/admin/general/statuses.php:59
+msgid "Save Order"
+msgstr "Зберегти порядок"
+
+#: includes/admin/general/categories.php:29
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:73
+#: includes/admin/general/general-settings.php:68
+#: includes/admin/general/priorities.php:29
+#: includes/admin/general/statuses.php:29
+#: includes/admin/general/support-page-menu/menu_list.php:35
+#: includes/admin/ticket-form/custom-fields.php:31
+msgid "Action"
+msgstr "Дія"
+
+#: includes/admin/general/categories.php:28
+msgid "Supervisor(s)"
+msgstr "Керівник(и)"
+
+#: includes/admin/general/categories.php:26
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:70
+#: includes/admin/general/priorities.php:26
+#: includes/admin/general/statuses.php:26
+#: includes/admin/general/support-page-menu/menu_list.php:32
+#: includes/admin/ticket-form/form-management.php:25
+#: includes/admin/ticket-list/list-settings.php:25
+msgid "Order"
+msgstr "Порядок"
+
+#: includes/admin/general/categories.php:19
+msgid "Add New Category"
+msgstr "Додати нову категорію"
+
+#: includes/admin/general/categories.php:18
+#: includes/admin/general/general.php:15
+msgid "Categories"
+msgstr "Категорії"
+
+#: includes/admin/dashbord/general.php:24
+msgid "Statuses to Show"
+msgstr "Відображати статуси"
+
+#: includes/admin/class-wpsp-admin.php:259
+msgid "Dismiss this notice"
+msgstr "Закрити це повідомлення"
+
+#: includes/admin/class-wpsp-admin.php:259
+msgid "Settings updated"
+msgstr "Налаштування оновлені"
+
+#: includes/admin/class-wpsp-admin.php:235
+msgid "Add-Ons"
+msgstr "Додатки"
+
+#: includes/admin/class-wpsp-admin.php:219
+#: includes/admin/customize/customize.php:15
+#: includes/admin/ticket-list/default-filters.php:152
+#: template/tickets/create-ticket.php:352 template/tickets/logged-in.php:12
+msgid "Ticket List"
+msgstr "Список заявок"
+
+#: includes/admin/class-wpsp-admin.php:215
+msgid "Ticket Form"
+msgstr "Форма заявки"
+
+#: includes/admin/class-wpsp-admin.php:211
+#: includes/admin/customize/customize.php:11
+#: includes/admin/dashbord/dashbord.php:11
+#: includes/admin/general/custom-css.php:19
+msgid "General"
+msgstr "Загальне"
+
+#: includes/admin/class-wpsp-admin.php:179
+msgid "WP Support Plus Settings"
+msgstr "Налаштування WP Support Plus"
+
+#: includes/admin/agents/ticket-agents.php:39
+msgid "Search"
+msgstr "Пошук"
+
+#: includes/admin/agents/ticket-agents.php:38
+#: includes/ajax/ticket-list/get_tickets.php:194
+#: template/tickets/ticket_list/filter.php:27
+msgid "Reset Filter"
+msgstr "Скинути фільтр"
+
+#: includes/admin/agents/ticket-agents.php:37
+#: template/tickets/ticket_list/list.php:55
+msgid "Apply"
+msgstr "Застосувати"
+
+#: includes/admin/agents/ticket-agents.php:32
+msgid "All"
+msgstr "Всі"
+
+#: includes/admin/agents/ticket-agents.php:18
+#: includes/admin/general/categories.php:19
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:64
+#: includes/admin/general/priorities.php:19
+#: includes/admin/general/statuses.php:19
+#: includes/admin/general/support-page-menu/menu_list.php:26
+#: includes/admin/ticket-form/custom-fields.php:19
+msgid "Add New"
+msgstr "Додати нове"
+
+#: includes/admin/agents/ticket-agents.php:18
+msgid "Add New Agent"
+msgstr "Додати нового агента"
+
+#: includes/admin/agents/ticket-agents.php:17
+#: includes/admin/class-wpsp-admin.php:223
+msgid "Agents"
+msgstr "Агенти"
+
+#: includes/admin/agents/general-settings.php:83
+msgid "If set yes, supervisor will able to change raised by of tickets of assigned categories."
+msgstr "Якщо встановлене \"так\", керівник зможе змінювати авторів заявок у призначених категоріях."
+
+#: includes/admin/agents/general-settings.php:72
+msgid "If set yes, supervisor will able to delete tickets of assigned categories"
+msgstr "Якщо встановлене \"так\", керівник зможе видаляти заявки у призначених категоріях"
+
+#: includes/admin/agents/general-settings.php:56
+msgid "If set yes, an agent will able to change raised by of ticket assigned to him."
+msgstr "Якщо встановлене \"так\", агент зможе змінювати авторів заявок у призначених йому заявках."
+
+#: includes/admin/agents/general-settings.php:50
+#: includes/admin/agents/general-settings.php:77
+msgid "Allow Change Raised By"
+msgstr "Дозволити змінювати автора"
+
+#: includes/admin/agents/general-settings.php:45
+msgid "If set yes, an agent will able to delete ticket assigned to him."
+msgstr "Якщо встановлене \"так\", агент зможе видаляти призначені заявки йому."
+
+#: includes/admin/agents/general-settings.php:39
+#: includes/admin/agents/general-settings.php:66
+msgid "Allow Delete Ticket"
+msgstr "Дозволити видаляти заявку"
+
+#: includes/admin/agents/general-settings.php:34
+msgid "If set yes, an agent will able to assign ticket assigned to him to some other agent who is assigned to ticket category."
+msgstr "Якщо встановлене \"так\", агент зможе призначати заявку комусь іншому, хто призначений до категорії заявки."
+
+#: includes/admin/agents/general-settings.php:32
+#: includes/admin/agents/general-settings.php:43
+#: includes/admin/agents/general-settings.php:54
+#: includes/admin/agents/general-settings.php:70
+#: includes/admin/agents/general-settings.php:81
+#: includes/admin/general/general-settings.php:76
+#: includes/admin/general/general-settings.php:85
+#: includes/admin/general/general-settings.php:94
+#: includes/admin/general/general-settings.php:103
+#: includes/admin/general/general-settings.php:119
+#: includes/admin/general/general-settings.php:132
+#: includes/admin/general/general-settings.php:371
+#: includes/admin/general/general-settings.php:381
+#: includes/admin/ticket-form/custom-fields.php:44
+#: includes/admin/ticket-form/custom-fields.php:45
+#: includes/admin/ticket-form/form-management.php:53
+#: includes/admin/ticket-list/list-settings.php:49
+#: includes/admin/ticket-list/list-settings.php:55
+#: includes/admin/ticket-list/list-settings.php:64
+#: includes/admin/ticket-list/list-settings.php:70
+#: includes/ajax/get_add_custom_field.php:54
+#: includes/ajax/get_add_custom_field.php:62
+#: includes/ajax/get_edit_custom_field.php:59
+#: includes/ajax/get_edit_custom_field.php:67
+msgid "No"
+msgstr "Ні"
+
+#: includes/admin/agents/general-settings.php:31
+#: includes/admin/agents/general-settings.php:42
+#: includes/admin/agents/general-settings.php:53
+#: includes/admin/agents/general-settings.php:69
+#: includes/admin/agents/general-settings.php:80
+#: includes/admin/general/general-settings.php:77
+#: includes/admin/general/general-settings.php:86
+#: includes/admin/general/general-settings.php:95
+#: includes/admin/general/general-settings.php:104
+#: includes/admin/general/general-settings.php:118
+#: includes/admin/general/general-settings.php:131
+#: includes/admin/general/general-settings.php:370
+#: includes/admin/general/general-settings.php:380
+#: includes/admin/ticket-form/custom-fields.php:44
+#: includes/admin/ticket-form/custom-fields.php:45
+#: includes/admin/ticket-form/form-management.php:52
+#: includes/admin/ticket-list/list-settings.php:48
+#: includes/admin/ticket-list/list-settings.php:54
+#: includes/admin/ticket-list/list-settings.php:63
+#: includes/admin/ticket-list/list-settings.php:69
+#: includes/ajax/get_add_custom_field.php:53
+#: includes/ajax/get_add_custom_field.php:63
+#: includes/ajax/get_edit_custom_field.php:58
+#: includes/ajax/get_edit_custom_field.php:68
+msgid "Yes"
+msgstr "Так"
+
+#: includes/admin/agents/general-settings.php:28
+msgid "Allow Assign Ticket"
+msgstr "Дозволити призначати заявку"
+
+#: includes/admin/agents/class_agent_table.php:66
+msgid "Delete Agent"
+msgstr "Видалити агента"
+
+#: includes/admin/agents/class_agent_table.php:45
+#: includes/admin/agents/ticket-agents.php:35
+#: includes/admin/general/general-settings.php:100
+#: includes/ajax/get_add_agent.php:41 includes/ajax/get_edit_agent.php:33
+msgid "Administrator"
+msgstr "Адміністратор"
+
+#: includes/admin/agents/class_agent_table.php:43
+#: includes/admin/agents/general-settings.php:61
+#: includes/admin/agents/ticket-agents.php:34
+#: includes/admin/general/general-settings.php:91
+#: includes/admin/general/general-settings.php:406
+#: includes/ajax/get_add_agent.php:40 includes/ajax/get_edit_agent.php:32
+msgid "Supervisor"
+msgstr "Керівник"
+
+#: includes/admin/agents/class_agent_table.php:41
+#: includes/admin/agents/general-settings.php:23
+#: includes/admin/agents/ticket-agents.php:33
+#: includes/admin/general/general-settings.php:82
+#: includes/admin/general/general-settings.php:400
+#: includes/ajax/get_add_agent.php:24 includes/ajax/get_add_agent.php:39
+#: includes/ajax/get_edit_agent.php:31 template/tickets/dashboard.php:111
+msgid "Agent"
+msgstr "Агент"
+
+#: includes/admin/agents/class_agent_table.php:17
+#: includes/admin/agents/ticket-agents.php:30
+#: includes/admin/general/general-settings.php:67
+#: includes/ajax/get_add_agent.php:37 includes/ajax/get_edit_agent.php:29
+msgid "Role"
+msgstr "Роль"
+
+#: includes/admin/agents/class_agent_table.php:16
+#: includes/class-wpsp-functions.php:726 template/header/sign-in.php:74
+msgid "Email"
+msgstr "Електронна пошта"
+
+#: includes/admin/agents/class_agent_table.php:15
+#: includes/admin/general/categories.php:27
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:19
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:27
+#: includes/admin/general/priorities.php:27
+#: includes/admin/general/statuses.php:27
+#: includes/admin/general/support-page-menu/menu_list_add.php:19
+#: includes/admin/general/support-page-menu/menu_list_update.php:29
+#: includes/admin/ticket-form/custom-fields.php:26
+#: includes/admin/ticket-form/form-management.php:26
+#: includes/admin/ticket-list/list-settings.php:26
+#: template/header/sign-in.php:71
+msgid "Name"
+msgstr "Ім'я"
+
+#: includes/admin/agents/class_agent_table.php:14
+msgid "Username"
+msgstr "Користувач"
+
+#: includes/admin/agents/agents.php:15
+msgid "Agents & Supervisors"
+msgstr "Агенти та керівники"
+
+#: includes/admin/agents/agents.php:11
+#: includes/admin/general/general-settings.php:21
+#: includes/admin/general/general.php:11
+msgid "General Settings"
+msgstr "Загальні налаштування"
+
+#: includes/admin/addons/wpsp_license_settings.php:26
+#: includes/admin/agents/general-settings.php:93
+#: includes/admin/customize/general.php:65
+#: includes/admin/customize/ticket_list.php:57
+#: includes/admin/dashbord/general.php:44
+#: includes/admin/general/custom-css.php:39
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:114
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:47
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:56
+#: includes/admin/general/footer-text.php:36
+#: includes/admin/general/general-settings.php:471
+#: includes/admin/general/support-page-menu/menu_list.php:84
+#: includes/admin/general/support-page-menu/menu_list_add.php:48
+#: includes/admin/general/support-page-menu/menu_list_update.php:59
+#: includes/admin/general/thank_you.php:57
+#: includes/admin/ticket-form/form-management.php:69
+#: includes/admin/ticket-list/default-filters.php:180
+#: includes/admin/ticket-list/list-settings.php:93
+#: includes/ajax/ticket-individual/get_agent_fields.php:90
+#: includes/ajax/ticket-individual/get_assign_agent.php:141
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:117
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:87
+#: includes/ajax/ticket-individual/get_change_raised_by.php:143
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:95
+#: includes/ajax/ticket-individual/get_clone_ticket.php:60
+#: includes/ajax/ticket-individual/get_edit_subject.php:62
+#: includes/ajax/ticket-individual/get_edit_thread.php:91
+#: includes/ajax/ticket-individual/get_ticket_fields.php:98
+msgid "Save Changes"
+msgstr "Зберегти зміни"
+
+#: includes/admin/addons/addons.php:10
+msgid "Licenses"
+msgstr "Ліцензії"
+
+#: includes/EDD_SL_Plugin_Updater.php:399
+msgid "Error"
+msgstr "Помилка"
+
+#: includes/EDD_SL_Plugin_Updater.php:399
+msgid "You do not have permission to install plugin updates"
+msgstr "Ви не маєте повноважень встановлювати оновлення додатків"
+
+#: includes/EDD_SL_Plugin_Updater.php:209
+msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s or %5$supdate now%6$s."
+msgstr "Є нова версія %1$s. %2$sПереглянути деталі %3$s версії%4$s або %5$sоновити зараз%6$s."
+
+#: includes/EDD_SL_Plugin_Updater.php:201
+msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr "Є нова версія %1$s. %2$sПереглянути деталі %3$s версії%4$s."

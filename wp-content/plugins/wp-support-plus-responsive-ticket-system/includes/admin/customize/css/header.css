@@ -1,0 +1,23 @@
+
+.wpsp_header {
+  background-color : #1f2021 !important;
+}
+
+.wpsp_header_menu_item {
+  color: #fff !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+.wpsp_header_menu_item:hover {
+  color: #fff !important;
+}
+
+.wpsp_header_sign_in_link{
+  color: #fff !important;
+} 
+
+.wpsp_header_button{
+  background-color : #208f8f !important;
+  color: #fff !important;
+}

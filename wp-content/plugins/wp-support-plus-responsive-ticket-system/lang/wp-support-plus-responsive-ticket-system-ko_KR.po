@@ -1,0 +1,2097 @@
+# Translation of WP Support Plus Responsive Ticket System in Korean
+# This file is distributed under the same license as the WP Support Plus Responsive Ticket System package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-07-20 10:43+0530\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Language: ko_KR\n"
+"Project-Id-Version: WP Support Plus Responsive Ticket System\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+
+#: includes/class-wpsp-functions.php:941
+msgid "Trashed Tickets"
+msgstr "삭제된 티켓"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:420
+msgid "%1$s changed category to %2$s"
+msgstr "%1$s는 %2$s 카테고리로 변경되었음"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:394
+msgid "%1$s changed status to %2$s"
+msgstr "%1$s는 %2$s 상태로 변경되었음"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:368
+msgid "%1$s changed assigned agent to %2$s"
+msgstr "%1$s는 지정된 담당자가 %2$s로 변경되었음"
+
+#: template/tickets/ticket_list/filter.php:72
+msgid "ON"
+msgstr "ON"
+
+#: template/tickets/ticket_list/filter.php:71
+msgid "OFF"
+msgstr "OFF"
+
+#: includes/ajax/get_permanent_delete_ticket.php:19
+msgid "Permanent Delete Ticket"
+msgstr "티켓을 영원히 삭제"
+
+#: includes/ajax/get_restore_ticket.php:19
+msgid "Restore Ticket"
+msgstr "티켓 복원"
+
+#: template/tickets/create-ticket.php:97
+msgid "Don't Notify Owner"
+msgstr "담당자(Owner)에게 통보 않함"
+
+#: includes/admin/general/general-settings.php:52
+msgid "Click here to go to support page"
+msgstr "지원 페이지로 가기위해 여기 클릭"
+
+#: template/tickets/open-ticket/sidebar.php:117
+msgid "Biographical Information"
+msgstr "약력 정보"
+
+#: template/tickets/open-ticket/sidebar.php:107
+msgid "User location by IP address"
+msgstr "사용자의 IP 주소"
+
+#: template/tickets/open-ticket/sidebar.php:97
+msgid "All Tickets of this user"
+msgstr "이 사용자의 모든 티켓"
+
+#: template/tickets/open-ticket/body.php:43
+msgid "Delete Permanently"
+msgstr "영원히 삭제"
+
+#: template/tickets/open-ticket/body.php:37
+msgid "Restore"
+msgstr "복원"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:471
+msgid "%1$s changed raised by to %2$s"
+msgstr "%1$s는 등록자 정보가 %2$s으로 변경되었음"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:446
+msgid "%1$s changed priority to %2$s"
+msgstr "%1$s는 우선순위가 %2$s으로 변경되었음"
+
+#: includes/admin/general/general-settings.php:435
+msgid "Disable Default Login"
+msgstr "디폴트 로그인 비활성화"
+
+#: includes/admin/general/general.php:47
+#: includes/admin/ticket-list/advanced-settings.php:21
+#: includes/admin/ticket-list/ticket-list.php:23
+msgid "Advanced Settings"
+msgstr "고급 세팅"
+
+#: includes/admin/general/thank_you.php:63
+msgid "Redirect to below link after submit(above message wont display)"
+msgstr "제출후 아래 링크로 전환 (위의 메시지은 표시 않됨)"
+
+#: includes/admin/general/thank_you.php:57
+msgid "Redirect link"
+msgstr "전환 링크"
+
+#: includes/admin/ticket-list/advanced-settings.php:26
+msgid "Subject Character Length"
+msgstr "주제의 총 글자 숫자"
+
+#: includes/admin/ticket-list/open-ticket-widget.php:26
+msgid "Widgets Name"
+msgstr "위젯 이름"
+
+#: includes/admin/ticket-list/list-settings.php:31
+msgid "Customer Tickets"
+msgstr "고객 티켓"
+
+#: includes/admin/ticket-list/advanced-settings.php:32
+msgid "Raised By Character Length"
+msgstr "등록자 총 글자 숫자"
+
+#: includes/ajax/ticket-individual/get_user_biography.php:22
+msgid "Biographical Info"
+msgstr "약력 정보"
+
+#: includes/admin/dashbord/general.php:40
+msgid "Dashborad to Hide"
+msgstr "숨길 대시보드"
+
+#. Author URI of the plugin
+msgid "https://www.wpsupportplus.com/"
+msgstr "https://www.wpsupportplus.com/"
+
+#. Author of the plugin
+msgid "Pradeep Makone"
+msgstr "Pradeep Makone"
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/wp-support-plus-responsive-ticket-system"
+msgstr "https://wordpress.org/plugins/wp-support-plus-responsive-ticket-system"
+
+#. Description of the plugin
+msgid "Exceptional customer support solution for WordPress!"
+msgstr "워드프레스의 훌륭한 고객 지원 솔루션!"
+
+#. Name of the plugin
+msgid "WP Support Plus"
+msgstr "WP Support Plus"
+
+#: includes/ajax/ticket-individual/get_ticket_created.php:56
+msgid "All Tickets"
+msgstr "모든 티켓"
+
+#: includes/admin/customize/general.php:55
+msgid "Buttons"
+msgstr "단추"
+
+#: includes/admin/customize/general.php:48
+msgid "Footer"
+msgstr "꼬리말"
+
+#: includes/admin/customize/general.php:41
+msgid "Body"
+msgstr "본론"
+
+#: includes/admin/customize/general.php:34
+msgid "Secondary Menu"
+msgstr "이차적 메뉴"
+
+#: includes/admin/customize/general.php:27
+msgid "Header"
+msgstr "머리말"
+
+#: includes/admin/customize/general.php:22
+msgid "General CSS"
+msgstr "일반 CSS"
+
+#: includes/admin/class-wpsp-admin.php:231
+msgid "Customize"
+msgstr "커스터마이즈"
+
+#: includes/admin/class-wpsp-admin.php:150
+msgid "Please enter required field."
+msgstr "필수 입력란에 입력하십시오"
+
+#: includes/admin/customize/ticket_list.php:27
+msgid "Filter Sidebar"
+msgstr "필터 사이드바"
+
+#: includes/admin/customize/ticket_list.php:22
+msgid "Ticket List CSS"
+msgstr "티켓 목록 CSS"
+
+#: includes/admin/customize/ticket_list.php:58
+#: includes/admin/customize/general.php:66
+msgid "Reset default"
+msgstr "기존값 복귀"
+
+#: includes/admin/customize/ticket_list.php:48
+msgid "Ticket Log"
+msgstr "티켓 일지"
+
+#: includes/admin/ticket-list/open-ticket-widget.php:17
+#: includes/admin/ticket-list/ticket-list.php:19
+#: includes/admin/customize/ticket_list.php:41
+msgid "Open Ticket Widgets"
+msgstr "오픈 티켓 위젯"
+
+#: includes/admin/customize/ticket_list.php:34
+msgid "Ticket List Table"
+msgstr "티켓 리스트 데이블"
+
+#: includes/admin/general/custom-css.php:29
+#: includes/admin/general/general-settings.php:64
+msgid "Theme Integration"
+msgstr "테마 통합"
+
+#: includes/admin/general/custom-css.php:30
+msgid "Applicable only in theme integration view"
+msgstr "테마 통합 뷰에서만 해당"
+
+#: includes/admin/general/general-settings.php:55
+msgid "This page will be used as helpdesk page on front-end. All users ( customer, agent, supervisor, administrator ) will able to access helpdesk on same page depending on their role. It does not require to have any shortcode, just go to your pages and create new page without description."
+msgstr "이 페이지는 프런트 엔트 업무 지원 페이지에서 사용됨.  모든 사용자 (사용자, 담당자, 관리자 (팀장), 시스템 관리자)들은 역할에 따라 업무지원 페이지를 접속 할 수 있음."
+
+#: includes/admin/general/general-settings.php:116
+msgid "Load Bootstrap"
+msgstr "로드 부트스트랩"
+
+#: includes/admin/general/general-settings.php:75
+#: includes/admin/general/general-settings.php:396
+#: includes/admin/dashbord/general.php:47
+msgid "Customer"
+msgstr "사용자"
+
+#: includes/admin/general/general-settings.php:389
+msgid "Restrict to view advance support page"
+msgstr "상급 지원 페이지 뷰 제한"
+
+#: includes/admin/general/general-settings.php:123
+msgid "Applicable on theme integration page only."
+msgstr "테마 통합 페이지 뷰에서 해당됨"
+
+#: includes/admin/general/general-settings.php:429
+msgid "Default Login"
+msgstr "디폴트 로그인"
+
+#: includes/admin/general/general-settings.php:413
+msgid "Ticket Label"
+msgstr "티켓 라벨"
+
+#: includes/admin/general/general-settings.php:442
+msgid "Default Support Plus Login Module"
+msgstr "디폴트 Support Plus 로그인 모듈"
+
+#: includes/admin/general/general-settings.php:448
+msgid "WP Login Link"
+msgstr "WP 로그인 링크"
+
+#: includes/admin/general/general-settings.php:453
+msgid "Allow Powered by"
+msgstr "Powered by 허용"
+
+#: includes/admin/general/general-settings.php:463
+msgid "Public Ticket Mode"
+msgstr "공공의 티켓 모드"
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:30
+#: includes/admin/general/support-page-menu/menu_list_update.php:40
+msgid "Clear Logo"
+msgstr "삭제 로고"
+
+#: includes/admin/general/general-settings.php:470
+msgid "If you enable this setting then all tickets will be visible to all users and they can reply to each others tickets."
+msgstr "이 세팅을 하면 다른 모든 사용자들이 이 티켓을 볼 수 있으며 서로 답변할 수 있음"
+
+#: includes/admin/ticket-list/default-filters.php:158
+msgid "On page load"
+msgstr "On page 로드"
+
+#: includes/admin/ticket-list/default-filters.php:157
+msgid "Ticket List Filter"
+msgstr "티켓 리스트 필터"
+
+#: includes/admin/installation/wpsp_install.php:97
+msgid "Next"
+msgstr "다음"
+
+#: includes/admin/installation/wpsp_install.php:96
+msgid "Set Now"
+msgstr "지금 설치"
+
+#: template/js_data.php:42 includes/ajax/ticket-list/get_tickets.php:203
+msgid "Hide Filters"
+msgstr "필터 숨김"
+
+#: template/js_data.php:43 includes/ajax/ticket-list/get_tickets.php:206
+msgid "Show Filters"
+msgstr "필터 보기"
+
+#: template/header/sign-in.php:36
+msgid "Forgot your password?"
+msgstr "비번을 잊어버려셨나요?"
+
+#: template/header/sign-in.php:73
+msgid "Guest login"
+msgstr "방문자 로그인"
+
+#: template/header/sign-in.php:74
+msgid "No user account required. Create or access tickets created earlier by guest login."
+msgstr "사용자 계정 필요없음.  새로운 티켓을 작성하시거나 방문자 로그인으로 이전에 만든 티켓 접속. "
+
+#: template/tickets/agent_setting.php:25
+msgid "Signature"
+msgstr "서명"
+
+#: template/tickets/agent_setting.php:33
+msgid "Save Settings"
+msgstr "세팅 저장"
+
+#: template/tickets/dashboard.php:103
+msgid "Ticket Statistics"
+msgstr "티켓 통계"
+
+#: template/tickets/logged-in.php:50
+msgid "Agent Setting"
+msgstr "담당자 세팅"
+
+#: template/tickets/tickets.php:8 template/tickets/tickets.php:10
+#: template/tickets/tickets.php:12
+msgid "<h4>Sorry, you do not have permission to view this page</h4>"
+msgstr "<h4>미안합니다, 이 페이지를 볼 권한이 없습니다</h4>"
+
+#: template/tickets/ticket_list/list.php:33
+msgid "Default"
+msgstr "디폴트"
+
+#: template/tickets/ticket_list/filter.php:132
+msgid "Public"
+msgstr "공공의"
+
+#: template/tickets/ticket_list/filter.php:131
+msgid "Private"
+msgstr "개인의"
+
+#: template/tickets/ticket_list/filter.php:126
+msgid "Filter Name"
+msgstr "필터 이름"
+
+#: template/tickets/ticket_list/filter.php:125
+msgid "Save Current Filter"
+msgstr "현재 필터 저장"
+
+#: template/tickets/ticket_list/filter.php:106
+msgid "To"
+msgstr "받는사람"
+
+#: template/tickets/ticket_list/filter.php:103
+msgid "From"
+msgstr "보낸사람"
+
+#: template/tickets/ticket_list/filter.php:76
+#: template/tickets/ticket_list/list.php:13
+msgid "Search..."
+msgstr "검색..."
+
+#: template/tickets/ticket_list/filter.php:30
+#: template/tickets/ticket_list/list.php:27
+msgid "Saved Filters"
+msgstr "저장된 필터"
+
+#: template/tickets/ticket_list/filter.php:28
+msgid "Apply Filters"
+msgstr "필터 적용"
+
+#: template/tickets/ticket-list.php:80
+msgid "Sorry, you do not have permission to view this ticket. <a href=\"%s\" class=\"alert-link\">Click here</a> for ticket list."
+msgstr "미안합니다, 이 티켓을 볼 권한이 없습니다.  티켓 리스트를 보기 위해 <a href=\"%s\" class=\"alert-link\">여기에 클리크</a>"
+
+#: template/tickets/ticket-list.php:79
+msgid "Unauthorized access!"
+msgstr "접속 권한이 없음"
+
+#: template/tickets/open-ticket/sidebar.php:405
+msgid "Are you sure to add this note?"
+msgstr "이 노트를 추가 하시겠습니까?"
+
+#: template/tickets/open-ticket/sidebar.php:378
+msgid "Are you sure to post this reply?"
+msgstr "이 답장을 포스트 하시겠습니까?"
+
+#: template/tickets/open-ticket/sidebar.php:374
+#: template/tickets/open-ticket/sidebar.php:401
+msgid "Please Confirm"
+msgstr "확인해 주세요"
+
+#: template/tickets/open-ticket/sidebar.php:247
+msgid "Ticket Fields"
+msgstr "티켓 필드"
+
+#: template/tickets/open-ticket/sidebar.php:189
+msgid "Agent Only Fields"
+msgstr "담당자만의 필드"
+
+#: template/tickets/open-ticket/sidebar.php:142
+msgid "Assigned Agents"
+msgstr "담당자(지정)"
+
+#: template/tickets/open-ticket/sidebar.php:30
+msgid "Ticket Status"
+msgstr "티켓 상태"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:293
+msgid "Visible to support staff only!"
+msgstr "지원 직원들민 볼 수 있음!"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:293
+msgid "Private Note:"
+msgstr "프라이빗 노트"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:201
+#: template/tickets/open-ticket/class-threads-formatting.php:305
+msgid "Attachments"
+msgstr "첨부파일"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:181
+#: template/tickets/open-ticket/class-threads-formatting.php:283
+msgid "Delete this thread"
+msgstr "이 항목줄기 삭제"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:175
+#: template/tickets/open-ticket/class-threads-formatting.php:277
+msgid "Edit this thread"
+msgstr "이 항목줄기 수정"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:100
+msgid "Submit Note"
+msgstr "노트 제출"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:78
+msgid "Submit Reply"
+msgstr "답변 제출"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:74
+msgid "BCC (Comma separated list)"
+msgstr "숨은참조 (BCC)"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:46
+msgid "Add Private Note"
+msgstr "프라이빗 노트 추가"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:41
+msgid "Post Reply"
+msgstr "답변 포스트"
+
+#: template/tickets/open-ticket/class-fields-formatting.php:98
+msgid "Click Here"
+msgstr "여기에 클릭"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:220
+#: template/tickets/open-ticket/class-threads-formatting.php:324
+#: template/tickets/open-ticket/class-fields-formatting.php:76
+msgid "Download"
+msgstr "다운로드"
+
+#: template/tickets/open-ticket/body.php:12
+msgid "Back to tickets"
+msgstr "티켓으로 복귀"
+
+#: template/tickets/logged-in.php:25 includes/admin/class-wpsp-admin.php:227
+msgid "Dashboard"
+msgstr "대시보드"
+
+#: template/tickets/dashboard.php:121
+msgid "Total"
+msgstr "합계"
+
+#: template/tickets/create-ticket.php:369
+msgid "View Ticket"
+msgstr "티켓 보기"
+
+#: template/tickets/create-ticket.php:144
+msgid "No Description"
+msgstr "설명 없음"
+
+#: template/tickets/create-ticket.php:143
+msgid "No Subject"
+msgstr "주제 없음"
+
+#: template/tickets/create-ticket.php:117
+msgid "Reset Form"
+msgstr "폼 리셋트"
+
+#: template/tickets/create-ticket.php:113
+msgid "Submit Ticket"
+msgstr "티켓 제출"
+
+#: template/tickets/create-ticket.php:59
+msgid "Create Ticket As"
+msgstr "티켓 작성자"
+
+#: template/tickets/create-ticket.php:41 template/tickets/create-ticket.php:371
+#: template/tickets/logged-in.php:21
+msgid "Create New Ticket"
+msgstr "새 티켓 작성"
+
+#: template/tickets/class-ticket-form.php:136
+#: template/tickets/class-ticket-form.php:152
+#: template/tickets/open-ticket/class-threads-formatting.php:535
+#: template/tickets/open-ticket/class-threads-formatting.php:551
+msgid "Uploading..."
+msgstr "업로딩..."
+
+#: template/tickets/class-ticket-form.php:131
+#: template/tickets/open-ticket/class-threads-formatting.php:530
+msgid "Only '.jpeg','.jpg', '.png', '.gif', '.bmp' formats are allowed."
+msgstr "'.jpeg','.jpg','png','.gif','.bmp'  종류의 포맷만 가능함."
+
+#: template/js_data.php:41
+msgid "MB"
+msgstr "MB"
+
+#: template/js_data.php:41
+msgid "File Size limit exceeded! Allowed limit:"
+msgstr " 파이 사이즈 한계 초과!  허용 한계:"
+
+#: template/js_data.php:39
+msgid "Name or Email not given!"
+msgstr "이름 혹은 이메일 없음!"
+
+#: template/js_data.php:38
+msgid "Please choose registered user!"
+msgstr "등록된 사용자를 선택하세요!"
+
+#: template/js_data.php:37
+msgid "Note can not be empty!"
+msgstr "빈 노트는 불가합니다! "
+
+#: template/js_data.php:36
+msgid "Reply can not be empty!"
+msgstr "빈 답변은 불가합니다!"
+
+#: template/js_data.php:35
+msgid "View Less ..."
+msgstr "적게 보기..."
+
+#: template/js_data.php:34
+msgid "View More ..."
+msgstr "더 보기..."
+
+#: template/js_data.php:32
+msgid "WARNING: Anyone having your email address can access your guest tickets. Please avoid sharing any sensitive data."
+msgstr "경고:  본인의 이메일은 아는 타인이 방문자 티켓을 볼 수 있습니다.  민감한 데이터 공유를 조심하세요. "
+
+#: template/js_data.php:27
+msgid "You do not have permission to delete public filter!"
+msgstr "퍼블릭 필터 삭제 권한이 없음"
+
+#: template/js_data.php:26
+msgid "Default filter can not be deleted!"
+msgstr "디폴트 필터는 삭제 불가함!"
+
+#: template/js_data.php:25
+msgid "Please enter filter name!"
+msgstr "필터 이름을 입력하세요!"
+
+#: template/js_data.php:24 includes/admin/class-wpsp-admin.php:151
+#: includes/ajax/get_restore_ticket.php:28
+#: includes/ajax/get_permanent_delete_ticket.php:28
+msgid "Are you sure?"
+msgstr "확실합니까?"
+
+#: template/js_data.php:23
+msgid "Incorrect URL!"
+msgstr "잘못된 URL!"
+
+#: template/js_data.php:22
+msgid "Incorrect Email Address!"
+msgstr "잘못된 이메일 주소!"
+
+#: template/js_data.php:21
+msgid "Required field should not be empty!"
+msgstr "필수 필드는 비어 있을 수 없음!"
+
+#: template/js_data.php:20
+msgid "'.exe', '.php' files are not allowed!"
+msgstr "'.exe','.php' 파일들은 불가합니다!"
+
+#: template/js_data.php:14
+msgid "Please wait..."
+msgstr "잠시만..."
+
+#: template/header/user_info.php:40
+msgid "Login"
+msgstr "로그인"
+
+#: template/header/user_info.php:30
+msgid "Sign out"
+msgstr "로그아웃"
+
+#: template/header/sign-in.php:83
+msgid "Your Email"
+msgstr "이메일"
+
+#: template/header/sign-in.php:80
+msgid "Your Name"
+msgstr "이름"
+
+#: template/header/sign-in.php:63
+msgid "OR"
+msgstr "혹은"
+
+#: template/header/sign-in.php:43 template/header/sign-in.php:88
+msgid "Sign in"
+msgstr "로그인"
+
+#: template/header/sign-in.php:33
+msgid "Remember me"
+msgstr "사용자 정보 기억"
+
+#: template/header/sign-in.php:28 template/header/sign-in.php:29
+msgid "Password"
+msgstr "비밀번호"
+
+#: template/header/sign-in.php:25 template/header/sign-in.php:26
+msgid "Username or email"
+msgstr "사용자 아이디 혹은 이메일"
+
+#: template/header/sign-in.php:21
+msgid "Please sign in"
+msgstr "로그인 하세요"
+
+#: template/header/user_info.php:39 template/header/header.php:85
+#: includes/admin/general/general-advanced-settings.php:45
+msgid "Sign Up"
+msgstr "가입"
+
+#: template/header/header.php:80
+#: includes/admin/general/general-advanced-settings.php:21
+msgid "Sign In"
+msgstr "로그인"
+
+#: template/tickets/logged-in.php:76 template/tickets/logged-in.php:98
+#: template/header/header.php:68
+#: includes/admin/general/general-advanced-settings.php:33
+msgid "Sign Out"
+msgstr "로그아웃"
+
+#: template/header/header.php:30
+msgid "Back to website"
+msgstr "웹사이트로 복귀"
+
+#: includes/functions/replace_template_tags.php:121
+msgid "On %1$s, %2$s wrote:"
+msgstr "%1$s에 대해, %2$s가 씀::"
+
+#: includes/functions/replace_template_tags.php:23
+#: includes/functions/replace_template_tags.php:102
+msgid "Attachments:"
+msgstr "첨부파일:"
+
+#: includes/class-wpsp-functions.php:987 template/tickets/dashboard.php:71
+msgid "Tickets"
+msgstr "티켓"
+
+#: includes/class-wpsp-functions.php:952
+msgid "Agent Created"
+msgstr "담당자가 생성됨"
+
+#: includes/class-wpsp-functions.php:951
+msgid "Date Updated"
+msgstr "최신 날짜"
+
+#: includes/class-wpsp-functions.php:950
+msgid "Date Created"
+msgstr "날짜가 생성됨"
+
+#: includes/class-wpsp-functions.php:948
+msgid "Assigned Agent"
+msgstr "담당자(지정)"
+
+#: includes/class-wpsp-functions.php:945
+#: template/tickets/open-ticket/sidebar.php:64
+msgid "Raised By"
+msgstr "등록자"
+
+#: includes/class-wpsp-functions.php:942
+msgid "ID"
+msgstr "ID"
+
+#: includes/class-wpsp-functions.php:923
+msgid "Description"
+msgstr "내용설명"
+
+#: includes/class-wpsp-functions.php:922 includes/class-wpsp-functions.php:944
+#: includes/class-wpsp-functions.php:1332
+msgid "Subject"
+msgstr "주제"
+
+#: includes/class-wpsp-functions.php:888
+msgid "Delete Custom Field"
+msgstr "사용자 지정 필드 삭제"
+
+#: includes/class-wpsp-functions.php:887
+msgid "Edit Custom Field"
+msgstr "사용자 지정 필드 수정"
+
+#: includes/class-wpsp-functions.php:853
+msgid "URL"
+msgstr "웹주소 (URL)"
+
+#: includes/class-wpsp-functions.php:852
+msgid "Attachment"
+msgstr "첨부파일"
+
+#: includes/class-wpsp-functions.php:851
+msgid "Date"
+msgstr "날짜"
+
+#: includes/class-wpsp-functions.php:850
+msgid "Textarea"
+msgstr "텍스트 영역"
+
+#: includes/class-wpsp-functions.php:849
+msgid "Radio Button"
+msgstr "라디오 버튼"
+
+#: includes/class-wpsp-functions.php:848
+msgid "Checkbox"
+msgstr "체크 박스"
+
+#: includes/class-wpsp-functions.php:847
+msgid "Drop-Down"
+msgstr "드롭 다운"
+
+#: includes/class-wpsp-functions.php:846
+msgid "Text Field"
+msgstr "텍스트 필드"
+
+#: includes/class-wpsp-functions.php:835
+msgid "Delete Priority"
+msgstr "우선순위 삭제"
+
+#: includes/class-wpsp-functions.php:830
+msgid "Edit Priority"
+msgstr "우선순위 수정"
+
+#: includes/class-wpsp-functions.php:818
+msgid "Delete Status"
+msgstr "상태 삭제"
+
+#: includes/class-wpsp-functions.php:813
+msgid "Edit Status"
+msgstr "상태 수정"
+
+#: includes/class-wpsp-functions.php:753
+msgid "Delete Category"
+msgstr "카테고리 삭제"
+
+#: includes/class-wpsp-functions.php:748
+msgid "Edit Category"
+msgstr "카테고리 수정"
+
+#: includes/ajax/user-login/signin.php:43
+#: includes/ajax/user-login/guest_signin.php:40
+msgid "Success!"
+msgstr "성공!"
+
+#: includes/ajax/user-login/guest_signin.php:27
+msgid "This email address already registered as user. Please sign in above!"
+msgstr "이 이메일은 이미 사용자 등록이 되었습니다.  위에 로그인 하세요!"
+
+#: includes/ajax/ticket-list/get_tickets.php:377
+msgid "<strong>%d</strong> of <strong>%d</strong> Pages"
+msgstr "<strong>%d</strong> 의 <strong>%d</strong> 페이지"
+
+#: includes/ajax/ticket-list/get_tickets.php:330
+msgid "No Tickets found!"
+msgstr "티켓이 없음!"
+
+#: includes/ajax/ticket-list/get_tickets.php:239
+msgid "<strong>%d</strong> Tickets"
+msgstr "<strong>%d</strong> 티켓"
+
+#: includes/ajax/ticket-list/get_tickets.php:237
+msgid "<strong>%d</strong>-<strong>%d</strong> of <strong>%d</strong> Tickets"
+msgstr "<strong>%d</strong>-<strong>%d</strong> 의 <strong>%d</strong> 티켓"
+
+#: template/tickets/ticket_list/list.php:59
+#: includes/ajax/ticket-list/get_tickets.php:225
+msgid "Delete"
+msgstr "삭제"
+
+#: includes/ajax/ticket-list/get_tickets.php:218
+msgid "Assign Agent"
+msgstr "담당자 지정"
+
+#: includes/ajax/ticket-list/get_tickets.php:211
+msgid "Change Status"
+msgstr "상태 변경"
+
+#: includes/ajax/ticket-list/get_tickets.php:17
+msgid "Filter not found!"
+msgstr "파일 없음!"
+
+#: template/tickets/dashboard.php:128
+#: includes/functions/replace_template_tags.php:73
+#: template/tickets/open-ticket/class-threads-formatting.php:356
+#: template/tickets/open-ticket/sidebar.php:171
+#: includes/ajax/ticket-list/class-ticket-list-formating.php:163
+msgid "None"
+msgstr "없음"
+
+#: template/tickets/open-ticket/sidebar.php:303
+#: includes/ajax/ticket-individual/get_ticket_fields.php:56
+#: includes/ajax/ticket-individual/set_ticket_fields.php:143
+msgid "No Ticket fields"
+msgstr "티켓 필드 없음"
+
+#: includes/ajax/ticket-individual/get_ticket_fields.php:21
+msgid "Change Ticket Fields"
+msgstr "티켓 필드 변경"
+
+#: includes/ajax/ticket-individual/get_edit_thread.php:26
+msgid "Edit Thread"
+msgstr "트레드 수정"
+
+#: includes/ajax/ticket-individual/get_edit_subject.php:20
+msgid "Edit Subject"
+msgstr "주제 수정"
+
+#: includes/ajax/ticket-individual/get_delete_ticket.php:29
+msgid "Are you sure to delete this ticket?"
+msgstr "이 티켓을 삭제 하시겠습니까?"
+
+#: template/tickets/open-ticket/body.php:24
+#: includes/ajax/ticket-individual/get_delete_ticket.php:20
+msgid "Delete Ticket"
+msgstr "티켓 삭제"
+
+#: includes/ajax/ticket-individual/get_delete_thread.php:30
+msgid "Are you sure to delete this thread?"
+msgstr "이 트레드를 삭제 하시겠습니까?"
+
+#: includes/ajax/ticket-individual/get_delete_thread.php:22
+msgid "Delete Thread"
+msgstr "트레드 삭제"
+
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:31
+msgid "Are you sure to delete these tickets?"
+msgstr "이 티켓들을 삭제 하시겠습니까?"
+
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:22
+msgid "Delete Tickets"
+msgstr "티켓들 삭제"
+
+#: includes/ajax/get_restore_ticket.php:59
+#: includes/ajax/get_permanent_delete_ticket.php:59
+#: template/tickets/open-ticket/sidebar.php:383
+#: template/tickets/open-ticket/sidebar.php:410
+#: includes/ajax/ticket-individual/get_close_ticket.php:60
+#: includes/ajax/ticket-individual/get_delete_thread.php:62
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:62
+#: includes/ajax/ticket-individual/get_delete_ticket.php:60
+msgid "Confirm"
+msgstr "확인"
+
+#: includes/ajax/ticket-individual/get_close_ticket.php:29
+msgid "Are you sure to close ticket?"
+msgstr "티켓을 닫으시겠습니까?"
+
+#: template/tickets/open-ticket/body.php:18
+#: includes/ajax/ticket-individual/get_close_ticket.php:21
+msgid "Close Ticket"
+msgstr "티켓을 닫음"
+
+#: template/tickets/open-ticket/body.php:31
+#: includes/ajax/ticket-individual/get_clone_ticket.php:18
+msgid "Clone Ticket"
+msgstr "티켓 복사"
+
+#: template/tickets/create-ticket.php:74
+#: includes/ajax/ticket-individual/get_change_raised_by.php:44
+msgid "Guest Email"
+msgstr "방문자 이메일"
+
+#: template/tickets/create-ticket.php:70
+#: includes/ajax/ticket-individual/get_change_raised_by.php:40
+msgid "Guest Name"
+msgstr "방문자 이름"
+
+#: template/tickets/create-ticket.php:67
+#: includes/ajax/ticket-individual/get_change_raised_by.php:37
+msgid "Search user ..."
+msgstr "사용자 검색..."
+
+#: template/tickets/create-ticket.php:66
+#: includes/ajax/ticket-individual/get_change_raised_by.php:36
+msgid "Choose User"
+msgstr "사용자 선택"
+
+#: template/tickets/create-ticket.php:62
+#: includes/ajax/ticket-individual/get_change_raised_by.php:32
+msgid "Guest"
+msgstr "방문자"
+
+#: template/tickets/create-ticket.php:61
+#: includes/ajax/ticket-individual/get_change_raised_by.php:31
+msgid "Registered User"
+msgstr "등록된 사용자"
+
+#: includes/class-wpsp-functions.php:946
+#: includes/ajax/ticket-individual/get_change_raised_by.php:29
+msgid "User Type"
+msgstr "사용자 분류"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:20
+msgid "Change Raised By"
+msgstr "변경 등록자"
+
+#: includes/class-wpsp-functions.php:925 includes/class-wpsp-functions.php:949
+#: includes/class-wpsp-functions.php:1344
+#: template/tickets/open-ticket/sidebar.php:51
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:61
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:56
+msgid "Priority"
+msgstr "우선순위"
+
+#: includes/class-wpsp-functions.php:924 includes/class-wpsp-functions.php:947
+#: includes/class-wpsp-functions.php:1340
+#: template/tickets/open-ticket/sidebar.php:47
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:45
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:42
+msgid "Category"
+msgstr "카테고리"
+
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:20
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:19
+msgid "Change Ticket Status"
+msgstr "티켓 상태 변경"
+
+#: includes/ajax/ticket-individual/get_assign_agent.php:30
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:27
+msgid "Search agent ..."
+msgstr "담당자 검색..."
+
+#: includes/ajax/ticket-individual/get_assign_agent.php:21
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:18
+msgid "Change Assigned Agent"
+msgstr "지정된 담당자 변경"
+
+#: template/tickets/open-ticket/sidebar.php:233
+#: includes/ajax/ticket-individual/get_agent_fields.php:48
+#: includes/ajax/ticket-individual/set_agent_fields.php:136
+msgid "No Agent Only fields"
+msgstr "담당자만 해당하는 필드 없음"
+
+#: includes/ajax/ticket-individual/get_agent_fields.php:21
+msgid "Change Agent Fields"
+msgstr "담당자 필드 변경"
+
+#: template/js_data.php:19 template/tickets/class-ticket-form.php:88
+#: template/tickets/class-ticket-form.php:413
+#: template/tickets/open-ticket/class-threads-formatting.php:488
+#: includes/ajax/ticket-individual/class-ticket-fields-format.php:226
+msgid "Attach Files"
+msgstr "파일 첨부"
+
+#: includes/ajax/ticket-form/upload_file.php:73
+msgid "done"
+msgstr "완료"
+
+#: includes/ajax/ticket-form/upload_file.php:40
+msgid "Error: file size exceeded allowed limit!"
+msgstr "오류: 파일 크기가 한도 초과!"
+
+#: includes/ajax/ticket-form/upload_file.php:29
+#: includes/ajax/ticket-form/upload_file.php:34
+msgid "Error: file format not supported!"
+msgstr "오류: 지원 않되는 파일 포맷!"
+
+#: includes/ajax/save_table_order.php:55
+msgid "Error saving order!"
+msgstr "오더 저장시 오류!"
+
+#: includes/ajax/save_table_order.php:53
+msgid "Order saved successfully!"
+msgstr "오더 성공적으로 저장됨!"
+
+#: includes/ajax/get_delete_status.php:29
+msgid "Are you sure to delete this status?"
+msgstr "이 상태를 삭제 하시겠습니까?"
+
+#: includes/ajax/get_delete_priority.php:29
+msgid "Are you sure to delete this priority?"
+msgstr "이 우선순위를 삭제 하시겠습니까?"
+
+#: includes/ajax/get_delete_custom_menu.php:28
+#: includes/ajax/get_delete_support_menu.php:28
+msgid "Are you sure to delete this menu?"
+msgstr "이 메뉴를 삭제 하시겠습니까?"
+
+#: includes/ajax/get_delete_custom_field.php:33
+msgid "Please note, this will delete all data associated with this custom field and can not be undone!"
+msgstr "참조하세요, 이 행동은 이 사용자 지정 필드 관련 모든 정보를 삭제하며 복원할 수 없습니다!"
+
+#: includes/ajax/get_delete_custom_field.php:29
+msgid "Are you sure to delete this custom field?"
+msgstr "이 사용자 지정 필드를 삭제 하시겠습니까?"
+
+#: includes/ajax/get_delete_category.php:29
+msgid "Are you sure to delete this category?"
+msgstr "이 카테고리를 삭제 하시겠습니까?"
+
+#: includes/ajax/get_delete_agent.php:29
+msgid "Are you sure to delete this agent?"
+msgstr "이 담당자를 삭제 하시겠습니까?"
+
+#: includes/ajax/get_edit_status.php:60 includes/ajax/get_add_status.php:54
+msgid "Please enter status name!"
+msgstr "상태 이름을 입력하세요!"
+
+#: includes/ajax/get_edit_status.php:29 includes/ajax/get_add_status.php:24
+msgid "Status Name"
+msgstr "상태 이름"
+
+#: includes/ajax/get_edit_priority.php:67 includes/ajax/get_edit_status.php:67
+#: includes/ajax/get_add_status.php:61 includes/ajax/get_add_priority.php:61
+msgid "Please choose color!"
+msgstr "색깔을 선택하세요!"
+
+#: includes/ajax/get_edit_priority.php:60 includes/ajax/get_add_priority.php:54
+msgid "Please enter priority name!"
+msgstr "우선순위 이름을 입력하세요!"
+
+#: includes/ajax/get_edit_priority.php:34 includes/ajax/get_edit_status.php:34
+#: includes/ajax/get_add_status.php:29 includes/ajax/get_add_priority.php:29
+msgid "Choose Color"
+msgstr "색깔 선택"
+
+#: includes/ajax/get_edit_priority.php:29 includes/ajax/get_add_priority.php:24
+msgid "Priority Name"
+msgstr "우선순위 이름"
+
+#: includes/ajax/get_add_custom_field.php:138
+#: includes/ajax/get_edit_custom_field.php:150
+msgid "Please insert Field Options!"
+msgstr "필드 옵션을 입력하세요!"
+
+#: includes/ajax/get_add_custom_field.php:131
+#: includes/ajax/get_edit_custom_field.php:143
+msgid "Please choose Field Type!"
+msgstr "필드 종류를 입력하세요!"
+
+#: includes/ajax/get_add_custom_field.php:124
+#: includes/ajax/get_edit_custom_field.php:136
+msgid "Please enter Field Label!"
+msgstr "필드 라벨을 입력하세요!"
+
+#: includes/ajax/get_add_custom_field.php:77
+#: includes/ajax/get_edit_custom_field.php:88
+msgid "If category is set, custom field will only visible when one of the selected category is choosen in create ticket form. If you want to show this all the time, please leave this empty. Use Ctrl+Click for select OR unselect value."
+msgstr "만약 카테고리가 설정 되었다면, 사용자 지정 필드은 이 카테고리가 선택 되었을때만 볼 수 있습니다.  이 필드들을 항상 나타내기 위해 이 필드를 비어 두십시오.  선택 혹은 선택해제을 위해 Ctrl+Click 사용. "
+
+#: includes/ajax/get_add_custom_field.php:69
+#: includes/ajax/get_edit_custom_field.php:74
+msgid "Assign Categories (optional)"
+msgstr "카테고리 지정 (옵션)"
+
+#: includes/ajax/get_add_custom_field.php:65
+#: includes/ajax/get_edit_custom_field.php:70
+msgid "Required field to ticket form. If set Yes, user must have to fill or submit value for this field"
+msgstr "티켓폼에 필수적인 필드.  예 선택시, 이 필드에 값을 입력하셔야 합니다."
+
+#: includes/ajax/get_add_custom_field.php:56
+#: includes/ajax/get_edit_custom_field.php:61
+msgid "Agent Only fields not available for ticket form. These can be edited by agents for their internal use."
+msgstr "담당자만 해당 필드는 티켓폼에는 없음.  이 필드들을 에이전들이 개인적 사용을 위해 수정할 수 있음."
+
+#: includes/ajax/get_add_custom_field.php:45
+#: includes/ajax/get_edit_custom_field.php:50
+msgid "Enter Field Options"
+msgstr "필드 옵션을 입력"
+
+#: includes/ajax/get_add_custom_field.php:31
+#: includes/ajax/get_edit_custom_field.php:35
+msgid "Choose Field Type"
+msgstr "필드 종류 선택"
+
+#: includes/ajax/get_add_custom_field.php:26
+#: includes/ajax/get_edit_custom_field.php:30
+msgid "Field Label"
+msgstr "필드 라벨"
+
+#: includes/ajax/get_edit_category.php:135
+#: includes/ajax/get_add_category.php:114
+msgid "Please enter category name!"
+msgstr "카테고리 이름을 입력하세요!"
+
+#: includes/ajax/get_edit_category.php:36 includes/ajax/get_add_category.php:31
+msgid "Search Supervisors..."
+msgstr "관리자 검색..."
+
+#: includes/ajax/get_edit_category.php:34 includes/ajax/get_add_category.php:29
+msgid "Supervisor (Optional)"
+msgstr "관리자 (옵션)"
+
+#: includes/ajax/get_edit_category.php:29 includes/ajax/get_add_category.php:24
+msgid "Category Name"
+msgstr "카테고리 이름"
+
+#: includes/ajax/get_add_agent.php:81
+msgid "Please select an Agent!"
+msgstr "담당자를 선택하세요!"
+
+#: includes/ajax/get_edit_category.php:65
+#: includes/ajax/get_delete_custom_menu.php:41
+#: includes/ajax/get_delete_support_menu.php:41
+#: includes/ajax/get_add_category.php:45 includes/ajax/get_delete_agent.php:42
+#: includes/ajax/get_delete_priority.php:42
+#: includes/ajax/get_add_custom_field.php:86
+#: includes/ajax/get_edit_priority.php:45 includes/ajax/get_edit_status.php:45
+#: includes/ajax/get_add_status.php:39 includes/ajax/get_delete_status.php:42
+#: includes/ajax/get_add_agent.php:51 includes/ajax/get_edit_agent.php:42
+#: includes/ajax/get_delete_custom_field.php:43
+#: includes/ajax/get_edit_custom_field.php:98
+#: includes/ajax/get_delete_category.php:42
+#: includes/ajax/get_add_priority.php:39
+#: template/tickets/ticket_list/filter.php:137
+msgid "Submit"
+msgstr "제출"
+
+#: includes/ajax/get_add_agent.php:31
+msgid "Search Agents..."
+msgstr "담당자 검색..."
+
+#: includes/ajax/get_add_agent.php:26
+msgid "Select Agent"
+msgstr "담당자 선택"
+
+#: includes/ajax/autocomplete/wp_user.php:32
+msgid "No user found!"
+msgstr "사용자 없음!"
+
+#: includes/ajax/autocomplete/ticket_filter.php:126
+msgid "No results found!"
+msgstr "결과물 없음!"
+
+#: includes/admin/ticket-list/ticket-list.php:15
+msgid "Default Filters"
+msgstr "디폴트 필터"
+
+#: includes/admin/ticket-list/ticket-list.php:11
+msgid "List Settings"
+msgstr "세팅 목록"
+
+#: includes/admin/ticket-list/list-settings.php:30
+msgid "Agent Filter"
+msgstr "담당자 필터"
+
+#: includes/admin/ticket-list/list-settings.php:29
+msgid "Customer Filter"
+msgstr "사용자 필터"
+
+#: includes/admin/ticket-list/list-settings.php:17
+msgid "Ticket List Settings"
+msgstr "티켓 목록 세팅"
+
+#: includes/admin/ticket-list/default-filters.php:147
+msgid "Number of Tickets shown per page for agent view."
+msgstr "담당자가 보기 위한 한 페이지당 티켓 숫자"
+
+#: includes/admin/ticket-list/default-filters.php:129
+msgid "Tickets are loaded on selected order for agent view by default. If agent apply manual filter, this setting will not take effect."
+msgstr "담당자가 보기 위해 자동으로 선택된 오더에 대한 티켓을 보여줌.  만약 수동적으로 필터를 적용시 이 효과는 적용 않됨."
+
+#: includes/admin/ticket-list/default-filters.php:106
+msgid "Selected statuses will be hidden if no filter is active for agent view. If agent use status filter manually on ticket list, this setting will not take effect and tickets will be filtered as per customer selection."
+msgstr "필터 선택 부제시 선택된 상태는 담당자가  볼 수 없음.  만약 담당자가 수동적으로 필터 적용시, 필터된 티켓 정보를 볼 수 있음."
+
+#: includes/admin/ticket-list/list-settings.php:28
+#: includes/admin/ticket-list/default-filters.php:89
+msgid "Agent View"
+msgstr "담당자 뷰"
+
+#: includes/admin/ticket-list/default-filters.php:83
+msgid "Number of Tickets shown per page for customer view."
+msgstr "사용자 보기에서 페이지당 보이는 티켓 숫자"
+
+#: includes/admin/ticket-list/default-filters.php:80
+#: includes/admin/ticket-list/default-filters.php:144
+msgid "500"
+msgstr "500"
+
+#: includes/admin/ticket-list/default-filters.php:79
+#: includes/admin/ticket-list/default-filters.php:143
+msgid "100"
+msgstr "100"
+
+#: includes/admin/ticket-list/default-filters.php:78
+#: includes/admin/ticket-list/default-filters.php:142
+msgid "50"
+msgstr "50"
+
+#: includes/admin/ticket-list/default-filters.php:77
+#: includes/admin/ticket-list/default-filters.php:141
+msgid "40"
+msgstr "40"
+
+#: includes/admin/ticket-list/default-filters.php:76
+#: includes/admin/ticket-list/default-filters.php:140
+msgid "30"
+msgstr "30"
+
+#: includes/admin/ticket-list/default-filters.php:75
+#: includes/admin/ticket-list/default-filters.php:139
+msgid "20"
+msgstr "20"
+
+#: includes/admin/ticket-list/default-filters.php:74
+#: includes/admin/ticket-list/default-filters.php:138
+msgid "10"
+msgstr "10"
+
+#: includes/admin/ticket-list/default-filters.php:71
+#: includes/admin/ticket-list/default-filters.php:135
+msgid "Number of Tickets"
+msgstr "티켓 수"
+
+#: includes/admin/ticket-list/default-filters.php:65
+msgid "Tickets are loaded on selected order for customer view by default. If customer apply manual filter, this setting will not take effect."
+msgstr "디폴트로 선택된 오더에 대한 티켓을 사용자 뷰에서 볼 수 있음..  만약 사용자가 필터를 수동적으로 적용하면 이 세팅의 효과는 없음."
+
+#: includes/admin/ticket-list/default-filters.php:48
+#: includes/admin/ticket-list/default-filters.php:112
+msgid "Order By"
+msgstr "나열 순위"
+
+#: includes/admin/ticket-list/default-filters.php:42
+msgid "Selected statuses will be hidden if no filter is active for customer view. If customer use status filter manually on ticket list, this setting will not take effect and tickets will be filtered as per customer selection."
+msgstr "만약 고객 뷰에서 활성화된 필터가 없다면 선택된 상태는 볼 수 없음.  만약 고객이 티켓 리스트에서 상태 필터를 수동으로 적용한다면, 이 세팅은 효과가 없으며, 티켓들은 고객의 선택에 따라 필터 될 것 입니다."
+
+#: includes/admin/ticket-list/default-filters.php:30
+#: includes/admin/ticket-list/default-filters.php:94
+msgid "Hide Selected Statuses"
+msgstr "선택된 상태를 숨김"
+
+#: includes/admin/ticket-list/list-settings.php:27
+#: includes/admin/ticket-list/default-filters.php:25
+msgid "Customer View"
+msgstr "사용자 뷰"
+
+#: includes/admin/ticket-form/ticket-form.php:11
+msgid "Manage Form"
+msgstr "관리 양식"
+
+#: includes/admin/ticket-list/list-settings.php:139
+#: includes/admin/ticket-list/open-ticket-widget.php:82
+#: includes/admin/ticket-form/form-management.php:96
+msgid "Please Wait ..."
+msgstr "기다리세요..."
+
+#: includes/admin/general/general-advanced-settings.php:26
+#: includes/admin/general/general-advanced-settings.php:38
+#: includes/admin/general/general-advanced-settings.php:50
+#: includes/admin/general/general-settings.php:457
+#: includes/admin/general/general-settings.php:467
+#: includes/admin/ticket-list/default-filters.php:172
+#: includes/admin/ticket-form/form-management.php:47
+msgid "Disable"
+msgstr "비활성화"
+
+#: includes/admin/general/general-advanced-settings.php:25
+#: includes/admin/general/general-advanced-settings.php:37
+#: includes/admin/general/general-advanced-settings.php:49
+#: includes/admin/general/general-settings.php:456
+#: includes/admin/general/general-settings.php:466
+#: includes/admin/ticket-list/default-filters.php:166
+#: includes/admin/ticket-form/form-management.php:46
+msgid "Enable"
+msgstr "활성화"
+
+#: includes/admin/ticket-form/form-management.php:28
+msgid "Full Width"
+msgstr "전체 폭"
+
+#: includes/class-wpsp-functions.php:943 includes/class-wpsp-functions.php:1336
+#: template/tickets/open-ticket/sidebar.php:43
+#: includes/admin/ticket-form/form-management.php:27
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:29
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:28
+msgid "Status"
+msgstr "상태"
+
+#: includes/admin/ticket-form/form-management.php:17
+msgid "Create New Ticket Form"
+msgstr "새로운 티켓 양식 생성"
+
+#: includes/admin/ticket-form/custom-fields.php:55
+msgid "No Custom Fields found!"
+msgstr "고객 지정 필드를 찾을 수 없음!"
+
+#: includes/admin/ticket-form/custom-fields.php:30
+msgid "Assigned Categories"
+msgstr "카테고리 지정"
+
+#: includes/ajax/get_add_custom_field.php:60
+#: includes/ajax/get_edit_custom_field.php:65
+#: includes/admin/ticket-form/custom-fields.php:29
+msgid "Required"
+msgstr "필수"
+
+#: includes/ajax/get_add_custom_field.php:51
+#: includes/ajax/get_edit_custom_field.php:56
+#: includes/admin/ticket-form/custom-fields.php:28
+msgid "Agent Only"
+msgstr "담당자만"
+
+#: includes/admin/ticket-form/custom-fields.php:27
+msgid "Type"
+msgstr "종류"
+
+#: includes/admin/ticket-form/custom-fields.php:19
+msgid "Add New Custom Field"
+msgstr "새로운 고객 지정 필드 추가"
+
+#: includes/admin/ticket-form/ticket-form.php:15
+#: includes/admin/ticket-form/custom-fields.php:18
+msgid "Custom Fields"
+msgstr "고객 지정 필드"
+
+#: includes/admin/general/thank_you.php:48
+msgid "URL of the ticket."
+msgstr "티켓의 URL."
+
+#: includes/admin/general/thank_you.php:47
+msgid "Name of user doing current activity."
+msgstr "현재 활동을 하고 있는 사용자 이름."
+
+#: includes/admin/general/thank_you.php:46
+msgid "History of communication in ticket."
+msgstr "티켓의 커뮤니케이션 일지"
+
+#: includes/admin/general/thank_you.php:45
+msgid "Last reply description."
+msgstr "최신 답변 내용"
+
+#: includes/admin/general/thank_you.php:44
+msgid "Email of user posted last reply."
+msgstr "최신 답변을 작성한 사용자의 이메일."
+
+#: includes/admin/general/thank_you.php:43
+msgid "Name of user posted last reply."
+msgstr "최신 작성한 사용자의 이름"
+
+#: includes/admin/general/thank_you.php:42
+msgid "Name(s) of agent assigned to ticket."
+msgstr "티켓에 지정된 담당자의 이름."
+
+#: includes/admin/general/thank_you.php:41
+msgid "Name of the agent who have created ticket on behalf of user. Empty if ticket created by user himself."
+msgstr "사용자를 대신하여 티켓을 작성한 담당자의 이름.  사용자가 직접 작성시 필드는 비어 있음."
+
+#: includes/admin/general/thank_you.php:40
+msgid "Ticket create time"
+msgstr "티켓 작성 시간"
+
+#: includes/admin/general/thank_you.php:39
+msgid "Email of ticket creator"
+msgstr "티켓 작성자 이메일"
+
+#: includes/admin/general/thank_you.php:38
+msgid "Name of ticket creator"
+msgstr "티켓 작성자 이름"
+
+#: includes/admin/general/thank_you.php:37
+msgid "Ticket Priority"
+msgstr "티켓 우선순위"
+
+#: includes/admin/general/thank_you.php:36
+msgid "Ticket Category"
+msgstr "티켓 카타고리"
+
+#: includes/admin/general/thank_you.php:35
+msgid "Ticket status"
+msgstr "티켓 상태"
+
+#: includes/admin/general/thank_you.php:34
+msgid "Ticket description given while creating ticket"
+msgstr "티켓 작성시 서술된 티켓 내용"
+
+#: includes/admin/general/thank_you.php:33
+msgid "Ticket Subject"
+msgstr "티켓 주제"
+
+#: includes/admin/general/thank_you.php:17
+msgid "Thank You Page after create ticket"
+msgstr "티켓 작성후 \"감사합니다\" 페이지"
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:15
+#: includes/admin/general/support-page-menu/menu_list_update.php:25
+msgid "Add New Support Page Menu"
+msgstr "새로운 지원 페이지 메뉴 추가"
+
+#: includes/admin/general/support-page-menu/menu_list.php:69
+msgid "Delete Support Menu"
+msgstr "지원 메뉴 삭제"
+
+#: includes/admin/general/statuses.php:19
+msgid "Add New Status"
+msgstr "새로운 상태 추가"
+
+#: includes/admin/general/priorities.php:28
+#: includes/admin/general/statuses.php:28
+msgid "Color"
+msgstr "색깔"
+
+#: includes/admin/general/priorities.php:19
+msgid "Add New Priority"
+msgstr "새로운 우선순위 추가"
+
+#: includes/admin/general/general.php:43
+msgid "Support Page Menu"
+msgstr "지원 페이지 메뉴"
+
+#: includes/admin/general/general.php:39
+msgid "Thank you page"
+msgstr "감사합니다 페이지"
+
+#: includes/admin/general/priorities.php:18
+#: includes/admin/general/general.php:23
+msgid "Priorities"
+msgstr "우선순위"
+
+#: includes/admin/general/statuses.php:18 includes/admin/general/general.php:19
+msgid "Statuses"
+msgstr "상태"
+
+#: includes/admin/general/general-settings.php:424
+msgid "If you set SRN, [Ticket #123456] will become [Ticket SRN123456] whereever applicable. Please don't leave blank."
+msgstr "만약 SRN을 정하시면 [티켓#123456]는 [티켓 SRN123456]으로 변경됩니다.  빈공간으로 두지마세요."
+
+#: includes/admin/general/general-settings.php:420
+msgid "Ticket ID Prefix"
+msgstr "티켓 ID의 접두사"
+
+#: includes/admin/general/general-settings.php:379
+msgid "Allow Support Staff to read all ticket"
+msgstr "지원 스태프들이 모든 티켓을 불 수 있게 허락"
+
+#: includes/admin/general/general-settings.php:369
+msgid "Allow Guest Ticket"
+msgstr "방문자 티켓 허락"
+
+#: includes/admin/general/general-settings.php:362
+msgid "Attachment Max Size(MB)"
+msgstr "첨부파일 사이즈 제안(MB)"
+
+#: includes/admin/general/general-settings.php:356
+msgid "This format will be applicable for custom date fields for Support Plus"
+msgstr "이 포맷은 Support Plus의 사용자 지정 데이터 필드에 적용됩니다"
+
+#: includes/admin/general/general-settings.php:351
+msgid "Custom Date Format"
+msgstr "사용자 지정 날짜 포맷"
+
+#: includes/admin/general/general-settings.php:345
+msgid "This format will be applicable for default date fields for Support Plus"
+msgstr "이 포맷은 Support Plus의 사용자 지정 날짜 필드에 적용됩니다"
+
+#: includes/admin/general/general-settings.php:340
+msgid "System Date Format"
+msgstr "시스템 날짜 포맷"
+
+#: includes/admin/general/general-settings.php:334
+msgid "This format will be applicable for input date fields (datepicker) for WP Support Plus"
+msgstr "이 포맷은 WP Support Plus의 날짜 필드 (datepicker) 입력에 적용됩니다"
+
+#: includes/admin/general/general-settings.php:310
+msgid "Calender Date Format"
+msgstr "달력 날짜 포맷"
+
+#: includes/admin/general/general-settings.php:304
+msgid "Bottom"
+msgstr "바닥"
+
+#: includes/admin/general/general-settings.php:303
+msgid "Top"
+msgstr "맨 위"
+
+#: includes/admin/general/general-settings.php:300
+msgid "Reply Form Position"
+msgstr "답장 양식의 위치"
+
+#: includes/admin/general/general-settings.php:295
+msgid "As name suggest, this setting will change ticket status to selected when support agent reply to ticket. Current Status will not change status of ticket in this case."
+msgstr "지원 에이전트으로 인한 티켓의 답변이 있을 경우, 이 세팅은 티켓 상태를 선택됨으로 변경합니다.  이 경우 티켓의 현 상태는 변경되지 않습니다."
+
+#: includes/admin/general/general-settings.php:279
+msgid "Ticket Status after Agent Reply"
+msgstr "담당자 답변후 티케 상태"
+
+#: includes/admin/general/general-settings.php:273
+msgid "This is applicable for Ticket id being created for new ticket."
+msgstr "이것은 새로운 티켓의 티켓 ID에 해당됩니다."
+
+#: includes/admin/general/general-settings.php:271
+msgid "Random"
+msgstr "무작위의"
+
+#: includes/admin/general/general-settings.php:265
+msgid "Sequential"
+msgstr "순차적"
+
+#: includes/admin/general/general-settings.php:257
+#: includes/admin/general/thank_you.php:32
+msgid "Ticket ID"
+msgstr "티켓 ID"
+
+#: includes/admin/general/general-settings.php:251
+msgid "If enabled, it will show Close Ticket button to open ticket view for customer. This button will change ticket status to selected status."
+msgstr "활성화시 사용자가 티켓 뷰를 보기 위해 \"티켓 닫음\" 버튼을 보여줍니다.  이 버튼은 티켓 상태을 선택됨 상태로 변경합니다."
+
+#: includes/admin/general/general-settings.php:232
+msgid "Allow Customer to Close Ticket"
+msgstr "사용자가 티켓을 닫을 수 있도록 허락"
+
+#: includes/admin/general/general-settings.php:226
+msgid "As name suggest, this setting will change ticket status to selected when ticket creator reply to ticket. Current Status will not change status of ticket in this case."
+msgstr "티켓 작성자가 티켓에 답변을 제공할 경우, 이 세팅은 티켓 상태를 선택됨으로 변경합니다. 이 경우 티켓의 현 상태는 변경되지 않습니다."
+
+#: includes/admin/general/general-settings.php:214
+#: includes/admin/general/general-settings.php:285
+msgid "Status List"
+msgstr "상태 리스트"
+
+#: includes/admin/general/general-settings.php:212
+#: includes/admin/general/general-settings.php:283
+msgid "Current Status"
+msgstr "현 상태"
+
+#: includes/admin/general/general-settings.php:207
+msgid "Ticket Status after Customer Reply"
+msgstr "고개 답변후 티켓 상태"
+
+#: includes/admin/general/general-settings.php:201
+msgid "This priority will be default priority for new ticket."
+msgstr "이 우선순위는 새 티켓의 티폴트 우선순위입니다."
+
+#: includes/admin/general/general-settings.php:185
+msgid "Default Ticket Priority"
+msgstr "디폴트 티켓 우선순위"
+
+#: includes/admin/general/general-settings.php:179
+msgid "This status will be default status for new ticket."
+msgstr "이 상태는 새 티켓의 디폴트 상태입니다."
+
+#: includes/admin/general/general-settings.php:163
+msgid "Default Ticket Status"
+msgstr "디폴트 티켓 상태"
+
+#: includes/admin/general/general-settings.php:157
+msgid "This category will be default category for new ticket. If category is not present in ticket form or ticket created via email piping, this category will be used as new ticket category."
+msgstr "이 카테고리는 새 티켓의 디폴트 카테고리 입니다.   만약 티켓 양식 혹은 이메일 전송으로 부터의 티켓에 부재시, 이 카테고리가 사용될 것 입니다."
+
+#: includes/admin/general/general-settings.php:141
+msgid "Default Category"
+msgstr "디폴트 카테고리"
+
+#: includes/admin/general/general-settings.php:129
+msgid "Open support page in new window?"
+msgstr "새로운 창에서 지원 페이지를 열까요?"
+
+#: includes/admin/general/general-settings.php:35
+msgid "Support Page"
+msgstr "지원 페이지"
+
+#: includes/admin/general/general-settings.php:26
+msgid "Choose Logo"
+msgstr "로고 선택"
+
+#: includes/admin/general/footer-text.php:17
+#: includes/admin/general/general.php:35
+msgid "Footer Text"
+msgstr "바닥 글"
+
+#: wp-support-plus.php:72 wp-support-plus.php:79
+#: includes/class-wpsp-ajax.php:141 includes/class-wpsp-ajax.php:159
+#: includes/class-wpsp-ajax.php:213 template/tickets/create-ticket.php:158
+#: template/tickets/create-ticket.php:165
+#: includes/ajax/set_add_custom_field.php:10
+#: includes/ajax/search_users_for_add_agent.php:10
+#: includes/ajax/set_delete_status.php:13
+#: includes/ajax/set_edit_category.php:17 includes/ajax/set_add_priority.php:10
+#: includes/ajax/set_add_status.php:10 includes/ajax/get_edit_category.php:13
+#: includes/ajax/get_delete_custom_menu.php:13
+#: includes/ajax/get_delete_support_menu.php:13
+#: includes/ajax/set_delete_support_menu.php:13
+#: includes/ajax/set_restore_ticket.php:12
+#: includes/ajax/get_add_category.php:10 includes/ajax/set_add_category.php:10
+#: includes/ajax/get_delete_agent.php:13
+#: includes/ajax/get_delete_priority.php:13
+#: includes/ajax/get_add_custom_field.php:10
+#: includes/ajax/set_edit_priority.php:15
+#: includes/ajax/get_edit_priority.php:13 includes/ajax/set_delete_agent.php:13
+#: includes/ajax/get_edit_status.php:13 includes/ajax/save_ticket_widget.php:13
+#: includes/ajax/set_edit_agent.php:14 includes/ajax/get_add_status.php:10
+#: includes/ajax/set_delete_custom_field.php:13
+#: includes/ajax/set_delete_category.php:13
+#: includes/ajax/get_delete_status.php:13 includes/ajax/get_add_agent.php:10
+#: includes/ajax/set_permanent_delete_ticket.php:12
+#: includes/ajax/get_restore_ticket.php:16
+#: includes/ajax/get_permanent_delete_ticket.php:16
+#: includes/ajax/get_edit_agent.php:13
+#: includes/ajax/get_delete_custom_field.php:13
+#: includes/ajax/get_edit_custom_field.php:13
+#: includes/ajax/save_table_order.php:16
+#: includes/ajax/set_delete_priority.php:13
+#: includes/ajax/save_list_settings.php:22
+#: includes/ajax/save_form_management.php:19
+#: includes/ajax/set_edit_custom_field.php:13
+#: includes/ajax/set_delete_custom_menu.php:13 includes/ajax/upgrade.php:11
+#: includes/ajax/set_edit_status.php:15 includes/ajax/set_add_agent.php:10
+#: includes/ajax/get_delete_category.php:13
+#: includes/ajax/get_add_priority.php:10
+#: template/tickets/ticket-operations/reply_ticket.php:21
+#: template/tickets/ticket-operations/add_ticket_note.php:20
+#: includes/ajax/ticket-list/apply_ticket_filter.php:12
+#: includes/ajax/ticket-list/apply_ticket_filter.php:20
+#: includes/ajax/ticket-list/apply_ticket_filter.php:28
+#: includes/ajax/ticket-list/delete_ticket_filter.php:12
+#: includes/ajax/ticket-list/delete_ticket_filter.php:20
+#: includes/ajax/ticket-list/delete_ticket_filter.php:25
+#: includes/ajax/ticket-list/delete_ticket_filter.php:32
+#: includes/ajax/ticket-list/save_ticket_filter.php:12
+#: includes/ajax/ticket-form/create_tkt_cng_cat.php:10
+#: includes/ajax/ticket-form/upload_file.php:9
+#: includes/ajax/ticket-form/upload_image.php:8
+#: includes/ajax/ticket-individual/get_ticket_fields.php:16
+#: includes/ajax/ticket-individual/get_edit_thread.php:19
+#: includes/ajax/ticket-individual/get_assign_agent.php:16
+#: includes/ajax/ticket-individual/get_user_biography.php:15
+#: includes/ajax/ticket-individual/get_close_ticket.php:18
+#: includes/ajax/ticket-individual/set_bulk_assign_agent.php:20
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:15
+#: includes/ajax/ticket-individual/set_delete_ticket.php:19
+#: includes/ajax/ticket-individual/get_agent_fields.php:16
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:15
+#: includes/ajax/ticket-individual/get_delete_thread.php:19
+#: includes/ajax/ticket-individual/set_close_ticket.php:17
+#: includes/ajax/ticket-individual/set_bulk_change_status.php:19
+#: includes/ajax/ticket-individual/get_edit_subject.php:15
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:19
+#: includes/ajax/ticket-individual/set_ticket_fields.php:17
+#: includes/ajax/ticket-individual/get_ticket_created.php:16
+#: includes/ajax/ticket-individual/get_delete_ticket.php:16
+#: includes/ajax/ticket-individual/set_agent_fields.php:17
+#: includes/ajax/ticket-individual/set_edit_subject.php:18
+#: includes/ajax/ticket-individual/get_clone_ticket.php:13
+#: includes/ajax/ticket-individual/set_assign_agent.php:18
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:15
+#: includes/ajax/ticket-individual/set_edit_thread.php:19
+#: includes/ajax/ticket-individual/set_delete_thread.php:18
+#: includes/ajax/ticket-individual/set_change_ticket_status.php:17
+#: includes/ajax/ticket-individual/set_clone_ticket.php:18
+#: includes/ajax/ticket-individual/get_change_raised_by.php:15
+#: includes/ajax/ticket-individual/set_change_raised_by.php:17
+#: includes/ajax/ticket-individual/set_delete_bulk_ticket.php:20
+#: includes/ajax/user-login/signin.php:12
+#: includes/ajax/user-login/signin.php:48
+#: includes/ajax/user-login/guest_signin.php:12
+#: includes/ajax/user-login/guest_signin.php:45
+#: includes/ajax/autocomplete/ticket_filter.php:12
+#: includes/ajax/autocomplete/index.php:10
+#: includes/admin/general/support-page-menu/menu_list_update.php:12
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:11
+msgid "Cheating huh?"
+msgstr "음... 속이시나요?"
+
+#: includes/ajax/get_edit_category.php:66
+#: includes/ajax/get_delete_custom_menu.php:42
+#: includes/ajax/get_delete_support_menu.php:42
+#: includes/ajax/get_add_category.php:46 includes/ajax/get_delete_agent.php:43
+#: includes/ajax/get_delete_priority.php:43
+#: includes/ajax/get_add_custom_field.php:87
+#: includes/ajax/get_edit_priority.php:46 includes/ajax/get_edit_status.php:46
+#: includes/ajax/get_add_status.php:40 includes/ajax/get_delete_status.php:43
+#: includes/ajax/get_add_agent.php:52 includes/ajax/get_restore_ticket.php:58
+#: includes/ajax/get_permanent_delete_ticket.php:58
+#: includes/ajax/get_edit_agent.php:43
+#: includes/ajax/get_delete_custom_field.php:44
+#: includes/ajax/get_edit_custom_field.php:99
+#: includes/ajax/get_delete_category.php:43
+#: includes/ajax/get_add_priority.php:40
+#: template/tickets/open-ticket/class-threads-formatting.php:81
+#: template/tickets/open-ticket/class-threads-formatting.php:103
+#: template/tickets/open-ticket/sidebar.php:382
+#: template/tickets/open-ticket/sidebar.php:409
+#: includes/ajax/ticket-individual/get_ticket_fields.php:97
+#: includes/ajax/ticket-individual/get_edit_thread.php:90
+#: includes/ajax/ticket-individual/get_assign_agent.php:140
+#: includes/ajax/ticket-individual/get_close_ticket.php:59
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:94
+#: includes/ajax/ticket-individual/get_agent_fields.php:89
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:86
+#: includes/ajax/ticket-individual/get_delete_thread.php:61
+#: includes/ajax/ticket-individual/get_edit_subject.php:61
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:61
+#: includes/ajax/ticket-individual/get_delete_ticket.php:59
+#: includes/ajax/ticket-individual/get_clone_ticket.php:59
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:116
+#: includes/ajax/ticket-individual/get_change_raised_by.php:142
+#: includes/admin/general/support-page-menu/menu_list_add.php:49
+#: includes/admin/general/support-page-menu/menu_list_update.php:60
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:57
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:48
+msgid "Cancel"
+msgstr "취소"
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:36
+#: includes/admin/general/support-page-menu/menu_list_update.php:46
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:43
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:35
+msgid "Menu URL"
+msgstr "메뉴 URL"
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:26
+#: includes/admin/general/support-page-menu/menu_list_update.php:36
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:34
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:26
+msgid "Menu Icon"
+msgstr "메뉴 아이콘"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:23
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:15
+msgid "Add New Menu Slider"
+msgstr "신 메뉴 슬라이더 추가"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:99
+msgid "Delete Custom Menu"
+msgstr "사용자 지정 메뉴 삭제"
+
+#: includes/admin/general/thank_you.php:18
+#: includes/admin/general/support-page-menu/menu_list.php:34
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:72
+msgid "Title"
+msgstr "주제"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:55
+msgid "Custom Menu Slider"
+msgstr "상용자 지정 메뉴 슬라이더"
+
+#: includes/admin/general/general-settings.php:29
+#: includes/admin/general/support-page-menu/menu_list_add.php:29
+#: includes/admin/general/support-page-menu/menu_list_update.php:39
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:46
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:37
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:29
+msgid "Upload Logo"
+msgstr "로고 업로드"
+
+#: includes/admin/general/support-page-menu/menu_list.php:33
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:42
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:71
+msgid "Icon"
+msgstr "아이콘"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:36
+msgid "If enabled, it will show Support Button on front-end website. When visitor click this button, it will open Support Page selected above in new tab."
+msgstr "활성화시, 웹사이트의 프런트 엔드에 지원 버튼을 보여줌.  방문자가 이 버튼을 클릭시, 위의 탭에서 선택된 지원 페이지을 보여줌."
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:26
+msgid "Show Support Button"
+msgstr "지원 버튼 보기"
+
+#: includes/admin/general/general.php:27
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:21
+msgid "Support Button"
+msgstr "지원 버튼"
+
+#: includes/admin/general/custom-css.php:23
+#: includes/admin/general/general.php:31
+msgid "Custom CSS"
+msgstr "사용자 지정 CSS"
+
+#: includes/admin/general/categories.php:64
+#: includes/admin/general/priorities.php:59
+#: includes/admin/general/statuses.php:59
+msgid "Save Order"
+msgstr "오더 저장"
+
+#: includes/admin/general/categories.php:29
+#: includes/admin/general/priorities.php:29
+#: includes/admin/general/statuses.php:29
+#: includes/admin/general/general-settings.php:70
+#: includes/admin/ticket-form/custom-fields.php:31
+#: includes/admin/general/support-page-menu/menu_list.php:35
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:73
+msgid "Action"
+msgstr "실행"
+
+#: includes/admin/general/categories.php:28
+msgid "Supervisor(s)"
+msgstr "관리자 (팀장)"
+
+#: includes/admin/general/categories.php:26
+#: includes/admin/general/priorities.php:26
+#: includes/admin/general/statuses.php:26
+#: includes/admin/ticket-list/list-settings.php:25
+#: includes/admin/ticket-list/open-ticket-widget.php:25
+#: includes/admin/ticket-form/form-management.php:25
+#: includes/admin/general/support-page-menu/menu_list.php:32
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:70
+msgid "Order"
+msgstr "오더"
+
+#: includes/admin/general/categories.php:19
+msgid "Add New Category"
+msgstr "신 카테고리 추가"
+
+#: includes/admin/general/categories.php:18
+#: includes/admin/general/general.php:15
+msgid "Categories"
+msgstr "카테고리"
+
+#: includes/admin/dashbord/general.php:24
+msgid "Statuses to Show"
+msgstr "볼수 있는 상태"
+
+#: includes/admin/class-wpsp-admin.php:259
+msgid "Dismiss this notice"
+msgstr "이 통지는 묵살"
+
+#: includes/admin/class-wpsp-admin.php:259
+msgid "Settings updated"
+msgstr "세팅이 수정됨"
+
+#: includes/admin/class-wpsp-admin.php:235
+msgid "Add-Ons"
+msgstr "추가 기능"
+
+#: template/tickets/create-ticket.php:370 template/tickets/logged-in.php:17
+#: includes/admin/class-wpsp-admin.php:219
+#: includes/admin/ticket-list/default-filters.php:152
+#: includes/admin/customize/customize.php:15
+msgid "Ticket List"
+msgstr "티켓 리스트"
+
+#: includes/admin/class-wpsp-admin.php:215
+msgid "Ticket Form"
+msgstr "티켓 양식"
+
+#: includes/admin/class-wpsp-admin.php:211
+#: includes/admin/general/custom-css.php:19
+#: includes/admin/customize/customize.php:11
+#: includes/admin/dashbord/dashbord.php:11
+msgid "General"
+msgstr "일반적"
+
+#: includes/admin/class-wpsp-admin.php:179
+msgid "WP Support Plus Settings"
+msgstr "WP Support Plus 세팅"
+
+#: includes/admin/agents/ticket-agents.php:39
+msgid "Search"
+msgstr "검색"
+
+#: template/tickets/ticket_list/filter.php:31
+#: includes/admin/agents/ticket-agents.php:38
+#: includes/ajax/ticket-list/get_tickets.php:201
+msgid "Reset Filter"
+msgstr "리셋 필터"
+
+#: template/tickets/ticket_list/list.php:55
+#: includes/admin/agents/ticket-agents.php:37
+msgid "Apply"
+msgstr "적용"
+
+#: includes/admin/agents/ticket-agents.php:32
+msgid "All"
+msgstr "모두"
+
+#: includes/admin/general/categories.php:19
+#: includes/admin/general/priorities.php:19
+#: includes/admin/general/statuses.php:19
+#: includes/admin/ticket-form/custom-fields.php:19
+#: includes/admin/agents/ticket-agents.php:18
+#: includes/admin/general/support-page-menu/menu_list.php:26
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:64
+msgid "Add New"
+msgstr "추가"
+
+#: includes/admin/agents/ticket-agents.php:18
+msgid "Add New Agent"
+msgstr "신 담당자 추가"
+
+#: includes/admin/class-wpsp-admin.php:223
+#: includes/admin/agents/ticket-agents.php:17
+msgid "Agents"
+msgstr "담당자"
+
+#: includes/admin/agents/general-settings.php:83
+msgid "If set yes, supervisor will able to change raised by of tickets of assigned categories."
+msgstr "Yes로 설정시, 관리자(팀장)가 지정된 카테고리의 티켓의 등록자를 변경할 수 있음."
+
+#: includes/admin/agents/general-settings.php:72
+msgid "If set yes, supervisor will able to delete tickets of assigned categories"
+msgstr "Yes로 설정시, 관리자(팀장)가 지정된 카테고리의 티켓을 삭제 할 수 있음."
+
+#: includes/admin/agents/general-settings.php:56
+msgid "If set yes, an agent will able to change raised by of ticket assigned to him."
+msgstr "Yes로 설정시, 담당자가 본인에게 지정된 티켓의 등록자를 변경 할 수 있음."
+
+#: includes/admin/agents/general-settings.php:50
+#: includes/admin/agents/general-settings.php:77
+msgid "Allow Change Raised By"
+msgstr "등록자 변경을 허용"
+
+#: includes/admin/agents/general-settings.php:45
+msgid "If set yes, an agent will able to delete ticket assigned to him."
+msgstr "Yes로 설정시, 담당자가 본인에게 지정된 티켓을 삭제 할 수 있음."
+
+#: includes/admin/agents/general-settings.php:39
+#: includes/admin/agents/general-settings.php:66
+msgid "Allow Delete Ticket"
+msgstr "티켓 삭제를 허용"
+
+#: includes/admin/agents/general-settings.php:34
+msgid "If set yes, an agent will able to assign ticket assigned to him to some other agent who is assigned to ticket category."
+msgstr "Yes로 설정시, 담당자가 본인에게 지정된 티켓을 다른 에이전트로 변경할 수 있음."
+
+#: includes/ajax/get_add_custom_field.php:54
+#: includes/ajax/get_add_custom_field.php:62
+#: includes/ajax/get_edit_custom_field.php:59
+#: includes/ajax/get_edit_custom_field.php:67
+#: includes/admin/general/general-settings.php:78
+#: includes/admin/general/general-settings.php:87
+#: includes/admin/general/general-settings.php:96
+#: includes/admin/general/general-settings.php:105
+#: includes/admin/general/general-settings.php:121
+#: includes/admin/general/general-settings.php:134
+#: includes/admin/general/general-settings.php:373
+#: includes/admin/general/general-settings.php:383
+#: includes/admin/ticket-list/list-settings.php:54
+#: includes/admin/ticket-list/list-settings.php:60
+#: includes/admin/ticket-list/list-settings.php:76
+#: includes/admin/ticket-list/list-settings.php:82
+#: includes/admin/ticket-list/list-settings.php:96
+#: includes/admin/ticket-form/custom-fields.php:44
+#: includes/admin/ticket-form/custom-fields.php:45
+#: includes/admin/ticket-form/form-management.php:53
+#: includes/admin/agents/general-settings.php:32
+#: includes/admin/agents/general-settings.php:43
+#: includes/admin/agents/general-settings.php:54
+#: includes/admin/agents/general-settings.php:70
+#: includes/admin/agents/general-settings.php:81
+msgid "No"
+msgstr "아니오"
+
+#: includes/ajax/get_add_custom_field.php:53
+#: includes/ajax/get_add_custom_field.php:63
+#: includes/ajax/get_edit_custom_field.php:58
+#: includes/ajax/get_edit_custom_field.php:68
+#: includes/admin/general/general-settings.php:79
+#: includes/admin/general/general-settings.php:88
+#: includes/admin/general/general-settings.php:97
+#: includes/admin/general/general-settings.php:106
+#: includes/admin/general/general-settings.php:120
+#: includes/admin/general/general-settings.php:133
+#: includes/admin/general/general-settings.php:372
+#: includes/admin/general/general-settings.php:382
+#: includes/admin/ticket-list/list-settings.php:53
+#: includes/admin/ticket-list/list-settings.php:59
+#: includes/admin/ticket-list/list-settings.php:75
+#: includes/admin/ticket-list/list-settings.php:81
+#: includes/admin/ticket-list/list-settings.php:95
+#: includes/admin/ticket-form/custom-fields.php:44
+#: includes/admin/ticket-form/custom-fields.php:45
+#: includes/admin/ticket-form/form-management.php:52
+#: includes/admin/agents/general-settings.php:31
+#: includes/admin/agents/general-settings.php:42
+#: includes/admin/agents/general-settings.php:53
+#: includes/admin/agents/general-settings.php:69
+#: includes/admin/agents/general-settings.php:80
+msgid "Yes"
+msgstr "예"
+
+#: includes/admin/agents/general-settings.php:28
+msgid "Allow Assign Ticket"
+msgstr "티켓 지정을 허용"
+
+#: includes/admin/agents/class_agent_table.php:66
+msgid "Delete Agent"
+msgstr "담당자 삭제"
+
+#: includes/ajax/get_add_agent.php:41 includes/ajax/get_edit_agent.php:33
+#: includes/admin/general/general-settings.php:102
+#: includes/admin/agents/class_agent_table.php:45
+#: includes/admin/agents/ticket-agents.php:35
+#: includes/admin/dashbord/general.php:65
+msgid "Administrator"
+msgstr "행정인 (어드민)"
+
+#: includes/ajax/get_add_agent.php:40 includes/ajax/get_edit_agent.php:32
+#: includes/admin/general/general-settings.php:93
+#: includes/admin/general/general-settings.php:408
+#: includes/admin/agents/class_agent_table.php:43
+#: includes/admin/agents/general-settings.php:61
+#: includes/admin/agents/ticket-agents.php:34
+#: includes/admin/dashbord/general.php:59
+msgid "Supervisor"
+msgstr "관리자 (팀장)"
+
+#: template/tickets/dashboard.php:111 includes/ajax/get_add_agent.php:24
+#: includes/ajax/get_add_agent.php:39 includes/ajax/get_edit_agent.php:31
+#: includes/admin/general/general-settings.php:84
+#: includes/admin/general/general-settings.php:402
+#: includes/admin/agents/class_agent_table.php:41
+#: includes/admin/agents/general-settings.php:23
+#: includes/admin/agents/ticket-agents.php:33
+#: includes/admin/dashbord/general.php:53
+msgid "Agent"
+msgstr "담당자"
+
+#: includes/ajax/get_add_agent.php:37 includes/ajax/get_edit_agent.php:29
+#: includes/admin/general/general-settings.php:69
+#: includes/admin/agents/class_agent_table.php:17
+#: includes/admin/agents/ticket-agents.php:30
+msgid "Role"
+msgstr "역할"
+
+#: includes/class-wpsp-functions.php:854 template/header/sign-in.php:82
+#: includes/admin/agents/class_agent_table.php:16
+msgid "Email"
+msgstr "이메일"
+
+#: template/header/sign-in.php:79 includes/admin/general/categories.php:27
+#: includes/admin/general/priorities.php:27
+#: includes/admin/general/statuses.php:27
+#: includes/admin/ticket-list/list-settings.php:26
+#: includes/admin/ticket-form/custom-fields.php:26
+#: includes/admin/ticket-form/form-management.php:26
+#: includes/admin/agents/class_agent_table.php:15
+#: includes/admin/general/support-page-menu/menu_list_add.php:19
+#: includes/admin/general/support-page-menu/menu_list_update.php:29
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:27
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:19
+msgid "Name"
+msgstr "이름"
+
+#: includes/admin/agents/class_agent_table.php:14
+msgid "Username"
+msgstr "사용자ID"
+
+#: includes/admin/agents/agents.php:15
+msgid "Agents & Supervisors"
+msgstr "담당자 & 관리자"
+
+#: includes/admin/general/general-settings.php:21
+#: includes/admin/general/general.php:11 includes/admin/agents/agents.php:11
+msgid "General Settings"
+msgstr "일반 세팅"
+
+#: includes/admin/general/custom-css.php:39
+#: includes/admin/general/footer-text.php:36
+#: includes/admin/general/general-advanced-settings.php:59
+#: includes/admin/general/general-settings.php:479
+#: includes/admin/general/thank_you.php:73
+#: includes/admin/ticket-list/list-settings.php:112
+#: includes/admin/ticket-list/open-ticket-widget.php:56
+#: includes/admin/ticket-list/advanced-settings.php:40
+#: includes/admin/ticket-list/default-filters.php:180
+#: includes/admin/customize/ticket_list.php:57
+#: includes/admin/customize/general.php:65
+#: includes/admin/ticket-form/form-management.php:69
+#: includes/admin/addons/wpsp_license_settings.php:26
+#: includes/admin/agents/general-settings.php:93
+#: includes/admin/dashbord/general.php:74
+#: includes/ajax/ticket-individual/get_ticket_fields.php:98
+#: includes/ajax/ticket-individual/get_edit_thread.php:91
+#: includes/ajax/ticket-individual/get_assign_agent.php:141
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:95
+#: includes/ajax/ticket-individual/get_agent_fields.php:90
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:87
+#: includes/ajax/ticket-individual/get_edit_subject.php:62
+#: includes/ajax/ticket-individual/get_clone_ticket.php:60
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:117
+#: includes/ajax/ticket-individual/get_change_raised_by.php:143
+#: includes/admin/general/support-page-menu/menu_list.php:84
+#: includes/admin/general/support-page-menu/menu_list_add.php:48
+#: includes/admin/general/support-page-menu/menu_list_update.php:59
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:114
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:56
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:47
+msgid "Save Changes"
+msgstr "변경 저장"
+
+#: includes/admin/addons/addons.php:10
+msgid "Licenses"
+msgstr "라이센스"

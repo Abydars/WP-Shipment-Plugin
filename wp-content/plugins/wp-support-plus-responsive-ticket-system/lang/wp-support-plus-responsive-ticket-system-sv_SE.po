@@ -1,0 +1,2097 @@
+# Translation of WP Support Plus Responsive Ticket System in Swedish
+# This file is distributed under the same license as the WP Support Plus Responsive Ticket System package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-07-20 10:59+0530\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Language: sv_SE\n"
+"Project-Id-Version: WP Support Plus Responsive Ticket System\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+
+#: includes/class-wpsp-functions.php:941
+msgid "Trashed Tickets"
+msgstr ""
+
+#: template/tickets/open-ticket/class-threads-formatting.php:420
+msgid "%1$s changed category to %2$s"
+msgstr "%1$s ändrade kategori till %2$s"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:394
+msgid "%1$s changed status to %2$s"
+msgstr "%1$s ändrade status till %2$s"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:368
+msgid "%1$s changed assigned agent to %2$s"
+msgstr "%1$s ändrade tilldelad agent till %2$s"
+
+#: template/tickets/ticket_list/filter.php:72
+msgid "ON"
+msgstr ""
+
+#: template/tickets/ticket_list/filter.php:71
+msgid "OFF"
+msgstr ""
+
+#: includes/ajax/get_permanent_delete_ticket.php:19
+msgid "Permanent Delete Ticket"
+msgstr ""
+
+#: includes/ajax/get_restore_ticket.php:19
+msgid "Restore Ticket"
+msgstr ""
+
+#: template/tickets/create-ticket.php:97
+msgid "Don't Notify Owner"
+msgstr "Meddela inte ägare"
+
+#: includes/admin/general/general-settings.php:52
+msgid "Click here to go to support page"
+msgstr ""
+
+#: template/tickets/open-ticket/sidebar.php:117
+msgid "Biographical Information"
+msgstr ""
+
+#: template/tickets/open-ticket/sidebar.php:107
+msgid "User location by IP address"
+msgstr "Användarplats genom IP-adress"
+
+#: template/tickets/open-ticket/sidebar.php:97
+msgid "All Tickets of this user"
+msgstr ""
+
+#: template/tickets/open-ticket/body.php:43
+msgid "Delete Permanently"
+msgstr ""
+
+#: template/tickets/open-ticket/body.php:37
+msgid "Restore"
+msgstr ""
+
+#: template/tickets/open-ticket/class-threads-formatting.php:471
+msgid "%1$s changed raised by to %2$s"
+msgstr "%1$s ändrade lyft av till %2$s"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:446
+msgid "%1$s changed priority to %2$s"
+msgstr "%1$s ändrade prioritet till %2$s"
+
+#: includes/admin/general/general-settings.php:435
+msgid "Disable Default Login"
+msgstr "Inaktivera standardinloggning"
+
+#: includes/admin/general/general.php:47
+#: includes/admin/ticket-list/advanced-settings.php:21
+#: includes/admin/ticket-list/ticket-list.php:23
+msgid "Advanced Settings"
+msgstr "Avancerade inställningar"
+
+#: includes/admin/general/thank_you.php:63
+msgid "Redirect to below link after submit(above message wont display)"
+msgstr "Omdirigera till nedanstående länk efter inskick (ovanstående meddelande kommer inte att visas)"
+
+#: includes/admin/general/thank_you.php:57
+msgid "Redirect link"
+msgstr "Omdirigeringslänk"
+
+#: includes/admin/ticket-list/advanced-settings.php:26
+msgid "Subject Character Length"
+msgstr "Teckenlängd för ämne"
+
+#: includes/admin/ticket-list/open-ticket-widget.php:26
+msgid "Widgets Name"
+msgstr ""
+
+#: includes/admin/ticket-list/list-settings.php:31
+msgid "Customer Tickets"
+msgstr ""
+
+#: includes/admin/ticket-list/advanced-settings.php:32
+msgid "Raised By Character Length"
+msgstr ""
+
+#: includes/ajax/ticket-individual/get_user_biography.php:22
+msgid "Biographical Info"
+msgstr ""
+
+#: includes/admin/dashbord/general.php:40
+msgid "Dashborad to Hide"
+msgstr "Adminpanel att dölja"
+
+#. Author URI of the plugin
+msgid "https://www.wpsupportplus.com/"
+msgstr "https://www.wpsupportplus.com/"
+
+#. Author of the plugin
+msgid "Pradeep Makone"
+msgstr "Pradeep Makone"
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/wp-support-plus-responsive-ticket-system"
+msgstr "https://wordpress.org/plugins/wp-support-plus-responsive-ticket-system"
+
+#. Description of the plugin
+msgid "Exceptional customer support solution for WordPress!"
+msgstr "Enastående lösning för kundsupport i WordPress!"
+
+#. Name of the plugin
+msgid "WP Support Plus"
+msgstr "WP Support Plus"
+
+#: includes/ajax/ticket-individual/get_ticket_created.php:56
+msgid "All Tickets"
+msgstr ""
+
+#: includes/admin/customize/general.php:55
+msgid "Buttons"
+msgstr "Knappar"
+
+#: includes/admin/customize/general.php:48
+msgid "Footer"
+msgstr "Sidfot"
+
+#: includes/admin/customize/general.php:41
+msgid "Body"
+msgstr "Innehåll"
+
+#: includes/admin/customize/general.php:34
+msgid "Secondary Menu"
+msgstr "Sekundär meny"
+
+#: includes/admin/customize/general.php:27
+msgid "Header"
+msgstr "Sidhuvud"
+
+#: includes/admin/customize/general.php:22
+msgid "General CSS"
+msgstr "Generell CSS"
+
+#: includes/admin/class-wpsp-admin.php:231
+msgid "Customize"
+msgstr "Anpassa"
+
+#: includes/admin/class-wpsp-admin.php:150
+msgid "Please enter required field."
+msgstr "Ange obligatoriska fält."
+
+#: includes/admin/customize/ticket_list.php:27
+msgid "Filter Sidebar"
+msgstr "Filter i sidopanel"
+
+#: includes/admin/customize/ticket_list.php:22
+msgid "Ticket List CSS"
+msgstr "Ärendelistas CSS"
+
+#: includes/admin/customize/ticket_list.php:58
+#: includes/admin/customize/general.php:66
+msgid "Reset default"
+msgstr "Återställ standard"
+
+#: includes/admin/customize/ticket_list.php:48
+msgid "Ticket Log"
+msgstr "Ärendelogg"
+
+#: includes/admin/ticket-list/open-ticket-widget.php:17
+#: includes/admin/ticket-list/ticket-list.php:19
+#: includes/admin/customize/ticket_list.php:41
+msgid "Open Ticket Widgets"
+msgstr "Widget för öppna ärenden"
+
+#: includes/admin/customize/ticket_list.php:34
+msgid "Ticket List Table"
+msgstr "Tabell för ärendelista"
+
+#: includes/admin/general/custom-css.php:29
+#: includes/admin/general/general-settings.php:64
+msgid "Theme Integration"
+msgstr "Temaintegration"
+
+#: includes/admin/general/custom-css.php:30
+msgid "Applicable only in theme integration view"
+msgstr "Endast tillämpbart i vyn temaintegration"
+
+#: includes/admin/general/general-settings.php:55
+msgid "This page will be used as helpdesk page on front-end. All users ( customer, agent, supervisor, administrator ) will able to access helpdesk on same page depending on their role. It does not require to have any shortcode, just go to your pages and create new page without description."
+msgstr ""
+
+#: includes/admin/general/general-settings.php:116
+msgid "Load Bootstrap"
+msgstr "Ladda Bootstrap"
+
+#: includes/admin/general/general-settings.php:75
+#: includes/admin/general/general-settings.php:396
+#: includes/admin/dashbord/general.php:47
+msgid "Customer"
+msgstr "Kund"
+
+#: includes/admin/general/general-settings.php:389
+msgid "Restrict to view advance support page"
+msgstr "Begränsa åtkomst till avancerad supportsida"
+
+#: includes/admin/general/general-settings.php:123
+msgid "Applicable on theme integration page only."
+msgstr "Gäller endast på sidan för temaintegration."
+
+#: includes/admin/general/general-settings.php:429
+msgid "Default Login"
+msgstr "Standardinloggning"
+
+#: includes/admin/general/general-settings.php:413
+msgid "Ticket Label"
+msgstr "Ärendeetikett"
+
+#: includes/admin/general/general-settings.php:442
+msgid "Default Support Plus Login Module"
+msgstr "Standard Support Plus inloggningsmodul"
+
+#: includes/admin/general/general-settings.php:448
+msgid "WP Login Link"
+msgstr "WP inloggningslänk"
+
+#: includes/admin/general/general-settings.php:453
+msgid "Allow Powered by"
+msgstr "Tillåt ”Drivs med”"
+
+#: includes/admin/general/general-settings.php:463
+msgid "Public Ticket Mode"
+msgstr "Publikt ärendeläge"
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:30
+#: includes/admin/general/support-page-menu/menu_list_update.php:40
+msgid "Clear Logo"
+msgstr "Ta bort logga"
+
+#: includes/admin/general/general-settings.php:470
+msgid "If you enable this setting then all tickets will be visible to all users and they can reply to each others tickets."
+msgstr "Om du aktiverar denna inställning så kommer alla ärenden bli synliga för alla användare och de kan svara på varandras ärenden."
+
+#: includes/admin/ticket-list/default-filters.php:158
+msgid "On page load"
+msgstr "Vid sidladdning"
+
+#: includes/admin/ticket-list/default-filters.php:157
+msgid "Ticket List Filter"
+msgstr "Filter för ärendelista"
+
+#: includes/admin/installation/wpsp_install.php:97
+msgid "Next"
+msgstr "Nästa"
+
+#: includes/admin/installation/wpsp_install.php:96
+msgid "Set Now"
+msgstr "Ange nu"
+
+#: template/js_data.php:42 includes/ajax/ticket-list/get_tickets.php:203
+msgid "Hide Filters"
+msgstr "Dölj filter"
+
+#: template/js_data.php:43 includes/ajax/ticket-list/get_tickets.php:206
+msgid "Show Filters"
+msgstr "Visa filter"
+
+#: template/header/sign-in.php:36
+msgid "Forgot your password?"
+msgstr "Glömt ditt lösenord?"
+
+#: template/header/sign-in.php:73
+msgid "Guest login"
+msgstr "Gästinloggning"
+
+#: template/header/sign-in.php:74
+msgid "No user account required. Create or access tickets created earlier by guest login."
+msgstr "Inget användarkonto krävs. Skapa eller få tillgång till ärenden du skapat genom gästinloggning."
+
+#: template/tickets/agent_setting.php:25
+msgid "Signature"
+msgstr "Signatur"
+
+#: template/tickets/agent_setting.php:33
+msgid "Save Settings"
+msgstr "Spara inställningar"
+
+#: template/tickets/dashboard.php:103
+msgid "Ticket Statistics"
+msgstr "Ärendestatistik"
+
+#: template/tickets/logged-in.php:50
+msgid "Agent Setting"
+msgstr "Agentinställningar"
+
+#: template/tickets/tickets.php:8 template/tickets/tickets.php:10
+#: template/tickets/tickets.php:12
+msgid "<h4>Sorry, you do not have permission to view this page</h4>"
+msgstr "<h4>Du saknar behörighet att visa denna sida</h4>"
+
+#: template/tickets/ticket_list/list.php:33
+msgid "Default"
+msgstr "Standard"
+
+#: template/tickets/ticket_list/filter.php:132
+msgid "Public"
+msgstr "Offentlig"
+
+#: template/tickets/ticket_list/filter.php:131
+msgid "Private"
+msgstr "Privat"
+
+#: template/tickets/ticket_list/filter.php:126
+msgid "Filter Name"
+msgstr "Filternamn"
+
+#: template/tickets/ticket_list/filter.php:125
+msgid "Save Current Filter"
+msgstr "Spara nuvarande filter"
+
+#: template/tickets/ticket_list/filter.php:106
+msgid "To"
+msgstr "Till"
+
+#: template/tickets/ticket_list/filter.php:103
+msgid "From"
+msgstr "Från"
+
+#: template/tickets/ticket_list/filter.php:76
+#: template/tickets/ticket_list/list.php:13
+msgid "Search..."
+msgstr "Sök..."
+
+#: template/tickets/ticket_list/filter.php:30
+#: template/tickets/ticket_list/list.php:27
+msgid "Saved Filters"
+msgstr "Sparade filter"
+
+#: template/tickets/ticket_list/filter.php:28
+msgid "Apply Filters"
+msgstr "Verkställ filter"
+
+#: template/tickets/ticket-list.php:80
+msgid "Sorry, you do not have permission to view this ticket. <a href=\"%s\" class=\"alert-link\">Click here</a> for ticket list."
+msgstr "Du har inte behörighet att se denna ticket. <a href=\"%s\" class=\"alert-link\">Visa lista med tickets</a>."
+
+#: template/tickets/ticket-list.php:79
+msgid "Unauthorized access!"
+msgstr "Behörighet saknas!"
+
+#: template/tickets/open-ticket/sidebar.php:405
+msgid "Are you sure to add this note?"
+msgstr "Är du säker på att du vill lägga till denna anteckning?"
+
+#: template/tickets/open-ticket/sidebar.php:378
+msgid "Are you sure to post this reply?"
+msgstr "Är du säker på att du vill skicka detta svar?"
+
+#: template/tickets/open-ticket/sidebar.php:374
+#: template/tickets/open-ticket/sidebar.php:401
+msgid "Please Confirm"
+msgstr "Vänligen bekräfta"
+
+#: template/tickets/open-ticket/sidebar.php:247
+msgid "Ticket Fields"
+msgstr "Ärendefält"
+
+#: template/tickets/open-ticket/sidebar.php:189
+msgid "Agent Only Fields"
+msgstr "Enbart agents fält"
+
+#: template/tickets/open-ticket/sidebar.php:142
+msgid "Assigned Agents"
+msgstr "Tilldelade agenter"
+
+#: template/tickets/open-ticket/sidebar.php:30
+msgid "Ticket Status"
+msgstr "Status på ärende"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:293
+msgid "Visible to support staff only!"
+msgstr "Synligt enbart för supportpersonal!"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:293
+msgid "Private Note:"
+msgstr "Privat anteckning:"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:201
+#: template/tickets/open-ticket/class-threads-formatting.php:305
+msgid "Attachments"
+msgstr "Bilagor"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:181
+#: template/tickets/open-ticket/class-threads-formatting.php:283
+msgid "Delete this thread"
+msgstr "Ta bort denna tråd"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:175
+#: template/tickets/open-ticket/class-threads-formatting.php:277
+msgid "Edit this thread"
+msgstr "Ändra denna tråd"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:100
+msgid "Submit Note"
+msgstr "Skicka anteckning"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:78
+msgid "Submit Reply"
+msgstr "Skicka svar"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:74
+msgid "BCC (Comma separated list)"
+msgstr "BCC (kommaseparerad lista)"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:46
+msgid "Add Private Note"
+msgstr "Lägg till privat anteckning"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:41
+msgid "Post Reply"
+msgstr "Skicka svar"
+
+#: template/tickets/open-ticket/class-fields-formatting.php:98
+msgid "Click Here"
+msgstr "Klicka här"
+
+#: template/tickets/open-ticket/class-threads-formatting.php:220
+#: template/tickets/open-ticket/class-threads-formatting.php:324
+#: template/tickets/open-ticket/class-fields-formatting.php:76
+msgid "Download"
+msgstr "Ladda ner"
+
+#: template/tickets/open-ticket/body.php:12
+msgid "Back to tickets"
+msgstr ""
+
+#: template/tickets/logged-in.php:25 includes/admin/class-wpsp-admin.php:227
+msgid "Dashboard"
+msgstr "Kontrollpanel"
+
+#: template/tickets/dashboard.php:121
+msgid "Total"
+msgstr "Totalt"
+
+#: template/tickets/create-ticket.php:369
+msgid "View Ticket"
+msgstr "Visa ärende"
+
+#: template/tickets/create-ticket.php:144
+msgid "No Description"
+msgstr "Ingen beskrivning"
+
+#: template/tickets/create-ticket.php:143
+msgid "No Subject"
+msgstr "Inget ämne"
+
+#: template/tickets/create-ticket.php:117
+msgid "Reset Form"
+msgstr "Återställ formulär"
+
+#: template/tickets/create-ticket.php:113
+msgid "Submit Ticket"
+msgstr "Skicka ärende"
+
+#: template/tickets/create-ticket.php:59
+msgid "Create Ticket As"
+msgstr "Skapa ärende som"
+
+#: template/tickets/create-ticket.php:41 template/tickets/create-ticket.php:371
+#: template/tickets/logged-in.php:21
+msgid "Create New Ticket"
+msgstr "Skapa nytt ärende"
+
+#: template/tickets/class-ticket-form.php:136
+#: template/tickets/class-ticket-form.php:152
+#: template/tickets/open-ticket/class-threads-formatting.php:535
+#: template/tickets/open-ticket/class-threads-formatting.php:551
+msgid "Uploading..."
+msgstr "Laddar upp ..."
+
+#: template/tickets/class-ticket-form.php:131
+#: template/tickets/open-ticket/class-threads-formatting.php:530
+msgid "Only '.jpeg','.jpg', '.png', '.gif', '.bmp' formats are allowed."
+msgstr "Endast formaten jpeg/jpg, png, gif och .bmp är tillåtna."
+
+#: template/js_data.php:41
+msgid "MB"
+msgstr "MB"
+
+#: template/js_data.php:41
+msgid "File Size limit exceeded! Allowed limit:"
+msgstr "Filstorlek överskrider tillåten gräns. Tillåten gräns:"
+
+#: template/js_data.php:39
+msgid "Name or Email not given!"
+msgstr "Namn eller e-post inte angiven!"
+
+#: template/js_data.php:38
+msgid "Please choose registered user!"
+msgstr "Välj en registrerad användare!"
+
+#: template/js_data.php:37
+msgid "Note can not be empty!"
+msgstr "Anteckning kan inte vara tom!"
+
+#: template/js_data.php:36
+msgid "Reply can not be empty!"
+msgstr "Fältet kan inte lämnas tomt!"
+
+#: template/js_data.php:35
+msgid "View Less ..."
+msgstr "Visa mindre ..."
+
+#: template/js_data.php:34
+msgid "View More ..."
+msgstr "Visa mer ..."
+
+#: template/js_data.php:32
+msgid "WARNING: Anyone having your email address can access your guest tickets. Please avoid sharing any sensitive data."
+msgstr "VARNING: Vem som helst som känner till din e-postadress kan nå dina ärenden. Dela därför ingen känslig information!"
+
+#: template/js_data.php:27
+msgid "You do not have permission to delete public filter!"
+msgstr "Du saknar behörighet att radera publika filter!"
+
+#: template/js_data.php:26
+msgid "Default filter can not be deleted!"
+msgstr "Standardfilter kan inte tas bort!"
+
+#: template/js_data.php:25
+msgid "Please enter filter name!"
+msgstr "Ange filternamn!"
+
+#: template/js_data.php:24 includes/admin/class-wpsp-admin.php:151
+#: includes/ajax/get_restore_ticket.php:28
+#: includes/ajax/get_permanent_delete_ticket.php:28
+msgid "Are you sure?"
+msgstr "Är du säker?"
+
+#: template/js_data.php:23
+msgid "Incorrect URL!"
+msgstr "Felaktig URL!"
+
+#: template/js_data.php:22
+msgid "Incorrect Email Address!"
+msgstr "Ogiltig e-postadress!"
+
+#: template/js_data.php:21
+msgid "Required field should not be empty!"
+msgstr "Obligatoriska fält kan inte lämnas tomt!"
+
+#: template/js_data.php:20
+msgid "'.exe', '.php' files are not allowed!"
+msgstr "exe- och php-filer är inte tillåtna!"
+
+#: template/js_data.php:14
+msgid "Please wait..."
+msgstr "Vänligen vänta ..."
+
+#: template/header/user_info.php:40
+msgid "Login"
+msgstr "Logga in"
+
+#: template/header/user_info.php:30
+msgid "Sign out"
+msgstr "Logga ut"
+
+#: template/header/sign-in.php:83
+msgid "Your Email"
+msgstr "Din e-post"
+
+#: template/header/sign-in.php:80
+msgid "Your Name"
+msgstr "Ditt namn"
+
+#: template/header/sign-in.php:63
+msgid "OR"
+msgstr "ELLER"
+
+#: template/header/sign-in.php:43 template/header/sign-in.php:88
+msgid "Sign in"
+msgstr "Logga in"
+
+#: template/header/sign-in.php:33
+msgid "Remember me"
+msgstr "Kom ihåg mig"
+
+#: template/header/sign-in.php:28 template/header/sign-in.php:29
+msgid "Password"
+msgstr "Lösenord"
+
+#: template/header/sign-in.php:25 template/header/sign-in.php:26
+msgid "Username or email"
+msgstr "Användarnamn eller e-post"
+
+#: template/header/sign-in.php:21
+msgid "Please sign in"
+msgstr "Vänligen logga in"
+
+#: template/header/user_info.php:39 template/header/header.php:85
+#: includes/admin/general/general-advanced-settings.php:45
+msgid "Sign Up"
+msgstr "Registrera dig"
+
+#: template/header/header.php:80
+#: includes/admin/general/general-advanced-settings.php:21
+msgid "Sign In"
+msgstr "Logga in"
+
+#: template/tickets/logged-in.php:76 template/tickets/logged-in.php:98
+#: template/header/header.php:68
+#: includes/admin/general/general-advanced-settings.php:33
+msgid "Sign Out"
+msgstr "Logga ut"
+
+#: template/header/header.php:30
+msgid "Back to website"
+msgstr "Tillbaka till webbplatsen"
+
+#: includes/functions/replace_template_tags.php:121
+msgid "On %1$s, %2$s wrote:"
+msgstr "Den %1$s skrev %2$s:"
+
+#: includes/functions/replace_template_tags.php:23
+#: includes/functions/replace_template_tags.php:102
+msgid "Attachments:"
+msgstr "Bilagor:"
+
+#: includes/class-wpsp-functions.php:987 template/tickets/dashboard.php:71
+msgid "Tickets"
+msgstr "Ärenden"
+
+#: includes/class-wpsp-functions.php:952
+msgid "Agent Created"
+msgstr "Agent skapad"
+
+#: includes/class-wpsp-functions.php:951
+msgid "Date Updated"
+msgstr "Datum uppdaterad"
+
+#: includes/class-wpsp-functions.php:950
+msgid "Date Created"
+msgstr "Datum skapad"
+
+#: includes/class-wpsp-functions.php:948
+msgid "Assigned Agent"
+msgstr "Tilldelad agent"
+
+#: includes/class-wpsp-functions.php:945
+#: template/tickets/open-ticket/sidebar.php:64
+msgid "Raised By"
+msgstr "Skapad av"
+
+#: includes/class-wpsp-functions.php:942
+msgid "ID"
+msgstr "ID"
+
+#: includes/class-wpsp-functions.php:923
+msgid "Description"
+msgstr "Beskrivning"
+
+#: includes/class-wpsp-functions.php:922 includes/class-wpsp-functions.php:944
+#: includes/class-wpsp-functions.php:1332
+msgid "Subject"
+msgstr "Ämne"
+
+#: includes/class-wpsp-functions.php:888
+msgid "Delete Custom Field"
+msgstr "Ta bort anpassat fält"
+
+#: includes/class-wpsp-functions.php:887
+msgid "Edit Custom Field"
+msgstr "Ändra anpassat fält"
+
+#: includes/class-wpsp-functions.php:853
+msgid "URL"
+msgstr "URL"
+
+#: includes/class-wpsp-functions.php:852
+msgid "Attachment"
+msgstr "Bilaga"
+
+#: includes/class-wpsp-functions.php:851
+msgid "Date"
+msgstr "Datum"
+
+#: includes/class-wpsp-functions.php:850
+msgid "Textarea"
+msgstr "Textfält"
+
+#: includes/class-wpsp-functions.php:849
+msgid "Radio Button"
+msgstr "Radioknapp"
+
+#: includes/class-wpsp-functions.php:848
+msgid "Checkbox"
+msgstr "Kryssruta"
+
+#: includes/class-wpsp-functions.php:847
+msgid "Drop-Down"
+msgstr "Drop-down"
+
+#: includes/class-wpsp-functions.php:846
+msgid "Text Field"
+msgstr "Textfält"
+
+#: includes/class-wpsp-functions.php:835
+msgid "Delete Priority"
+msgstr "Ta bort prioritet"
+
+#: includes/class-wpsp-functions.php:830
+msgid "Edit Priority"
+msgstr "Ändra prioritet"
+
+#: includes/class-wpsp-functions.php:818
+msgid "Delete Status"
+msgstr "Ta bort status"
+
+#: includes/class-wpsp-functions.php:813
+msgid "Edit Status"
+msgstr "Ändra status"
+
+#: includes/class-wpsp-functions.php:753
+msgid "Delete Category"
+msgstr "Ta bort kategori"
+
+#: includes/class-wpsp-functions.php:748
+msgid "Edit Category"
+msgstr "Ändra kategori"
+
+#: includes/ajax/user-login/signin.php:43
+#: includes/ajax/user-login/guest_signin.php:40
+msgid "Success!"
+msgstr "Genomfört utan problem!"
+
+#: includes/ajax/user-login/guest_signin.php:27
+msgid "This email address already registered as user. Please sign in above!"
+msgstr "Denna e-postadress finns redan som registrerad användare. Logga in ovan!"
+
+#: includes/ajax/ticket-list/get_tickets.php:377
+msgid "<strong>%d</strong> of <strong>%d</strong> Pages"
+msgstr "<strong>%d</strong> av <strong>%d</strong> sidor"
+
+#: includes/ajax/ticket-list/get_tickets.php:330
+msgid "No Tickets found!"
+msgstr "Inga ärenden funna!"
+
+#: includes/ajax/ticket-list/get_tickets.php:239
+msgid "<strong>%d</strong> Tickets"
+msgstr "<strong>%d</strong> ärenden"
+
+#: includes/ajax/ticket-list/get_tickets.php:237
+msgid "<strong>%d</strong>-<strong>%d</strong> of <strong>%d</strong> Tickets"
+msgstr "<strong>%d</strong>-<strong>%d</strong> av <strong>%d</strong> ärenden"
+
+#: template/tickets/ticket_list/list.php:59
+#: includes/ajax/ticket-list/get_tickets.php:225
+msgid "Delete"
+msgstr "Ta bort"
+
+#: includes/ajax/ticket-list/get_tickets.php:218
+msgid "Assign Agent"
+msgstr "Tilldela agent"
+
+#: includes/ajax/ticket-list/get_tickets.php:211
+msgid "Change Status"
+msgstr "Byt status"
+
+#: includes/ajax/ticket-list/get_tickets.php:17
+msgid "Filter not found!"
+msgstr "Filter inte funnet!"
+
+#: template/tickets/dashboard.php:128
+#: includes/functions/replace_template_tags.php:73
+#: template/tickets/open-ticket/class-threads-formatting.php:356
+#: template/tickets/open-ticket/sidebar.php:171
+#: includes/ajax/ticket-list/class-ticket-list-formating.php:163
+msgid "None"
+msgstr "Ingen"
+
+#: template/tickets/open-ticket/sidebar.php:303
+#: includes/ajax/ticket-individual/get_ticket_fields.php:56
+#: includes/ajax/ticket-individual/set_ticket_fields.php:143
+msgid "No Ticket fields"
+msgstr "Inga ärendefält"
+
+#: includes/ajax/ticket-individual/get_ticket_fields.php:21
+msgid "Change Ticket Fields"
+msgstr "Ändra ärendefält"
+
+#: includes/ajax/ticket-individual/get_edit_thread.php:26
+msgid "Edit Thread"
+msgstr "Ändra tråd"
+
+#: includes/ajax/ticket-individual/get_edit_subject.php:20
+msgid "Edit Subject"
+msgstr "Ändra ämne"
+
+#: includes/ajax/ticket-individual/get_delete_ticket.php:29
+msgid "Are you sure to delete this ticket?"
+msgstr "Är du säker på att du vill ta bort detta ärende?"
+
+#: template/tickets/open-ticket/body.php:24
+#: includes/ajax/ticket-individual/get_delete_ticket.php:20
+msgid "Delete Ticket"
+msgstr "Ta bort ärende"
+
+#: includes/ajax/ticket-individual/get_delete_thread.php:30
+msgid "Are you sure to delete this thread?"
+msgstr "Är du säker på att du vill ta bort denna tråd?"
+
+#: includes/ajax/ticket-individual/get_delete_thread.php:22
+msgid "Delete Thread"
+msgstr "Ta bort tråd"
+
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:31
+msgid "Are you sure to delete these tickets?"
+msgstr "Är du säker på att du vill ta bort dessa ärenden?"
+
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:22
+msgid "Delete Tickets"
+msgstr "Ta bort ärenden"
+
+#: includes/ajax/get_restore_ticket.php:59
+#: includes/ajax/get_permanent_delete_ticket.php:59
+#: template/tickets/open-ticket/sidebar.php:383
+#: template/tickets/open-ticket/sidebar.php:410
+#: includes/ajax/ticket-individual/get_close_ticket.php:60
+#: includes/ajax/ticket-individual/get_delete_thread.php:62
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:62
+#: includes/ajax/ticket-individual/get_delete_ticket.php:60
+msgid "Confirm"
+msgstr "Bekräfta"
+
+#: includes/ajax/ticket-individual/get_close_ticket.php:29
+msgid "Are you sure to close ticket?"
+msgstr "Är du säker på att du vill stänga ärendet?"
+
+#: template/tickets/open-ticket/body.php:18
+#: includes/ajax/ticket-individual/get_close_ticket.php:21
+msgid "Close Ticket"
+msgstr "Stäng ärende"
+
+#: template/tickets/open-ticket/body.php:31
+#: includes/ajax/ticket-individual/get_clone_ticket.php:18
+msgid "Clone Ticket"
+msgstr "Klona ärende"
+
+#: template/tickets/create-ticket.php:74
+#: includes/ajax/ticket-individual/get_change_raised_by.php:44
+msgid "Guest Email"
+msgstr "Gästs e-postadress"
+
+#: template/tickets/create-ticket.php:70
+#: includes/ajax/ticket-individual/get_change_raised_by.php:40
+msgid "Guest Name"
+msgstr "Gästs namn"
+
+#: template/tickets/create-ticket.php:67
+#: includes/ajax/ticket-individual/get_change_raised_by.php:37
+msgid "Search user ..."
+msgstr "Sök användare ..."
+
+#: template/tickets/create-ticket.php:66
+#: includes/ajax/ticket-individual/get_change_raised_by.php:36
+msgid "Choose User"
+msgstr "Välj användare"
+
+#: template/tickets/create-ticket.php:62
+#: includes/ajax/ticket-individual/get_change_raised_by.php:32
+msgid "Guest"
+msgstr "Gäst"
+
+#: template/tickets/create-ticket.php:61
+#: includes/ajax/ticket-individual/get_change_raised_by.php:31
+msgid "Registered User"
+msgstr "Registrerad användare"
+
+#: includes/class-wpsp-functions.php:946
+#: includes/ajax/ticket-individual/get_change_raised_by.php:29
+msgid "User Type"
+msgstr "Användartyp"
+
+#: includes/ajax/ticket-individual/get_change_raised_by.php:20
+msgid "Change Raised By"
+msgstr "Ändring startad av"
+
+#: includes/class-wpsp-functions.php:925 includes/class-wpsp-functions.php:949
+#: includes/class-wpsp-functions.php:1344
+#: template/tickets/open-ticket/sidebar.php:51
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:61
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:56
+msgid "Priority"
+msgstr "Prioritet"
+
+#: includes/class-wpsp-functions.php:924 includes/class-wpsp-functions.php:947
+#: includes/class-wpsp-functions.php:1340
+#: template/tickets/open-ticket/sidebar.php:47
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:45
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:42
+msgid "Category"
+msgstr "Kategori"
+
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:20
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:19
+msgid "Change Ticket Status"
+msgstr "Ändra ärendestatus"
+
+#: includes/ajax/ticket-individual/get_assign_agent.php:30
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:27
+msgid "Search agent ..."
+msgstr "Sök agent ..."
+
+#: includes/ajax/ticket-individual/get_assign_agent.php:21
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:18
+msgid "Change Assigned Agent"
+msgstr "Ändra tilldelad agent"
+
+#: template/tickets/open-ticket/sidebar.php:233
+#: includes/ajax/ticket-individual/get_agent_fields.php:48
+#: includes/ajax/ticket-individual/set_agent_fields.php:136
+msgid "No Agent Only fields"
+msgstr "Inga fält enbart för agenter"
+
+#: includes/ajax/ticket-individual/get_agent_fields.php:21
+msgid "Change Agent Fields"
+msgstr "Ändra agentfält"
+
+#: template/js_data.php:19 template/tickets/class-ticket-form.php:88
+#: template/tickets/class-ticket-form.php:413
+#: template/tickets/open-ticket/class-threads-formatting.php:488
+#: includes/ajax/ticket-individual/class-ticket-fields-format.php:226
+msgid "Attach Files"
+msgstr "Bifoga filer"
+
+#: includes/ajax/ticket-form/upload_file.php:73
+msgid "done"
+msgstr "färdig"
+
+#: includes/ajax/ticket-form/upload_file.php:40
+msgid "Error: file size exceeded allowed limit!"
+msgstr "Fel: filstorleken överskrider tillåten storlek."
+
+#: includes/ajax/ticket-form/upload_file.php:29
+#: includes/ajax/ticket-form/upload_file.php:34
+msgid "Error: file format not supported!"
+msgstr "Fel: filformatet stöds inte."
+
+#: includes/ajax/save_table_order.php:55
+msgid "Error saving order!"
+msgstr "Ett fel uppstod när order skulle sparas!"
+
+#: includes/ajax/save_table_order.php:53
+msgid "Order saved successfully!"
+msgstr "Order har sparats utan problem!"
+
+#: includes/ajax/get_delete_status.php:29
+msgid "Are you sure to delete this status?"
+msgstr "Är du säker på att du vill ta bort denna status?"
+
+#: includes/ajax/get_delete_priority.php:29
+msgid "Are you sure to delete this priority?"
+msgstr "Är du säker på att du vill ta bort denna prioritet?"
+
+#: includes/ajax/get_delete_custom_menu.php:28
+#: includes/ajax/get_delete_support_menu.php:28
+msgid "Are you sure to delete this menu?"
+msgstr "Är du säker på att du vill ta bort denna meny?"
+
+#: includes/ajax/get_delete_custom_field.php:33
+msgid "Please note, this will delete all data associated with this custom field and can not be undone!"
+msgstr "Observera att detta tar bort all data relaterat med detta anpassade fält, och det kan inte göras ogjort!"
+
+#: includes/ajax/get_delete_custom_field.php:29
+msgid "Are you sure to delete this custom field?"
+msgstr "Är du säker på att du vill ta bort det anpassade fältet?"
+
+#: includes/ajax/get_delete_category.php:29
+msgid "Are you sure to delete this category?"
+msgstr "Är du säker på att du vill ta bort denna kategori?"
+
+#: includes/ajax/get_delete_agent.php:29
+msgid "Are you sure to delete this agent?"
+msgstr "Är du säker på att du vill ta bort denna agent?"
+
+#: includes/ajax/get_edit_status.php:60 includes/ajax/get_add_status.php:54
+msgid "Please enter status name!"
+msgstr "Ange statusens namn."
+
+#: includes/ajax/get_edit_status.php:29 includes/ajax/get_add_status.php:24
+msgid "Status Name"
+msgstr "Statusnamn"
+
+#: includes/ajax/get_edit_priority.php:67 includes/ajax/get_edit_status.php:67
+#: includes/ajax/get_add_status.php:61 includes/ajax/get_add_priority.php:61
+msgid "Please choose color!"
+msgstr "Välj en färg."
+
+#: includes/ajax/get_edit_priority.php:60 includes/ajax/get_add_priority.php:54
+msgid "Please enter priority name!"
+msgstr "Ange prioritetens namn."
+
+#: includes/ajax/get_edit_priority.php:34 includes/ajax/get_edit_status.php:34
+#: includes/ajax/get_add_status.php:29 includes/ajax/get_add_priority.php:29
+msgid "Choose Color"
+msgstr "Välj en färg."
+
+#: includes/ajax/get_edit_priority.php:29 includes/ajax/get_add_priority.php:24
+msgid "Priority Name"
+msgstr "Prioritetens namn"
+
+#: includes/ajax/get_add_custom_field.php:138
+#: includes/ajax/get_edit_custom_field.php:150
+msgid "Please insert Field Options!"
+msgstr "Ange fältalternativ!"
+
+#: includes/ajax/get_add_custom_field.php:131
+#: includes/ajax/get_edit_custom_field.php:143
+msgid "Please choose Field Type!"
+msgstr "Välj en fälttyp."
+
+#: includes/ajax/get_add_custom_field.php:124
+#: includes/ajax/get_edit_custom_field.php:136
+msgid "Please enter Field Label!"
+msgstr "Ange fältetikett!"
+
+#: includes/ajax/get_add_custom_field.php:77
+#: includes/ajax/get_edit_custom_field.php:88
+msgid "If category is set, custom field will only visible when one of the selected category is choosen in create ticket form. If you want to show this all the time, please leave this empty. Use Ctrl+Click for select OR unselect value."
+msgstr "Det anpassade fältet visas bara när en av de valda kategorierna väljs då ett ärende skapas. Om du alltid vill visa detta fält, lämna detta värde tomt. Använd Ctrl+Klick för att välja ELLER välja bort ett värde."
+
+#: includes/ajax/get_add_custom_field.php:69
+#: includes/ajax/get_edit_custom_field.php:74
+msgid "Assign Categories (optional)"
+msgstr "Tilldela kategorier (valfritt)"
+
+#: includes/ajax/get_add_custom_field.php:65
+#: includes/ajax/get_edit_custom_field.php:70
+msgid "Required field to ticket form. If set Yes, user must have to fill or submit value for this field"
+msgstr "Obligatoriskt fält i ärendeformuläret. Om Ja, måste användare fylla i eller välja ett värde för detta fält."
+
+#: includes/ajax/get_add_custom_field.php:56
+#: includes/ajax/get_edit_custom_field.php:61
+msgid "Agent Only fields not available for ticket form. These can be edited by agents for their internal use."
+msgstr "Fält som enbart är för agenter visas inte i ärendeformuläret. Dessa kan bara ändras av agenter för internt bruk."
+
+#: includes/ajax/get_add_custom_field.php:45
+#: includes/ajax/get_edit_custom_field.php:50
+msgid "Enter Field Options"
+msgstr "Ange fältalternativ"
+
+#: includes/ajax/get_add_custom_field.php:31
+#: includes/ajax/get_edit_custom_field.php:35
+msgid "Choose Field Type"
+msgstr "Välj fälttyp"
+
+#: includes/ajax/get_add_custom_field.php:26
+#: includes/ajax/get_edit_custom_field.php:30
+msgid "Field Label"
+msgstr "Fältetikett"
+
+#: includes/ajax/get_edit_category.php:135
+#: includes/ajax/get_add_category.php:114
+msgid "Please enter category name!"
+msgstr "Ange kategorinamn!"
+
+#: includes/ajax/get_edit_category.php:36 includes/ajax/get_add_category.php:31
+msgid "Search Supervisors..."
+msgstr "Sök teamledare ..."
+
+#: includes/ajax/get_edit_category.php:34 includes/ajax/get_add_category.php:29
+msgid "Supervisor (Optional)"
+msgstr "Teamledare (valfritt)"
+
+#: includes/ajax/get_edit_category.php:29 includes/ajax/get_add_category.php:24
+msgid "Category Name"
+msgstr "Kategorinamn"
+
+#: includes/ajax/get_add_agent.php:81
+msgid "Please select an Agent!"
+msgstr "Välj en agent!"
+
+#: includes/ajax/get_edit_category.php:65
+#: includes/ajax/get_delete_custom_menu.php:41
+#: includes/ajax/get_delete_support_menu.php:41
+#: includes/ajax/get_add_category.php:45 includes/ajax/get_delete_agent.php:42
+#: includes/ajax/get_delete_priority.php:42
+#: includes/ajax/get_add_custom_field.php:86
+#: includes/ajax/get_edit_priority.php:45 includes/ajax/get_edit_status.php:45
+#: includes/ajax/get_add_status.php:39 includes/ajax/get_delete_status.php:42
+#: includes/ajax/get_add_agent.php:51 includes/ajax/get_edit_agent.php:42
+#: includes/ajax/get_delete_custom_field.php:43
+#: includes/ajax/get_edit_custom_field.php:98
+#: includes/ajax/get_delete_category.php:42
+#: includes/ajax/get_add_priority.php:39
+#: template/tickets/ticket_list/filter.php:137
+msgid "Submit"
+msgstr "Skicka"
+
+#: includes/ajax/get_add_agent.php:31
+msgid "Search Agents..."
+msgstr "Sök agenter ..."
+
+#: includes/ajax/get_add_agent.php:26
+msgid "Select Agent"
+msgstr "Välj agent"
+
+#: includes/ajax/autocomplete/wp_user.php:32
+msgid "No user found!"
+msgstr "Ingen användare funnen!"
+
+#: includes/ajax/autocomplete/ticket_filter.php:126
+msgid "No results found!"
+msgstr "Inga resultat funna!"
+
+#: includes/admin/ticket-list/ticket-list.php:15
+msgid "Default Filters"
+msgstr "Standardfilter"
+
+#: includes/admin/ticket-list/ticket-list.php:11
+msgid "List Settings"
+msgstr "Inställningar för lista"
+
+#: includes/admin/ticket-list/list-settings.php:30
+msgid "Agent Filter"
+msgstr "Filter för agent"
+
+#: includes/admin/ticket-list/list-settings.php:29
+msgid "Customer Filter"
+msgstr "Anpassat filter"
+
+#: includes/admin/ticket-list/list-settings.php:17
+msgid "Ticket List Settings"
+msgstr "Inställningar för ärendelista"
+
+#: includes/admin/ticket-list/default-filters.php:147
+msgid "Number of Tickets shown per page for agent view."
+msgstr "Antal ärenden att visa per sida i agentvy."
+
+#: includes/admin/ticket-list/default-filters.php:129
+msgid "Tickets are loaded on selected order for agent view by default. If agent apply manual filter, this setting will not take effect."
+msgstr "Ärenden laddas i vald ordning i agentvy per automatik. Om en agent lägger på ett manuellt filter kommer denna inställning inte verkställas."
+
+#: includes/admin/ticket-list/default-filters.php:106
+msgid "Selected statuses will be hidden if no filter is active for agent view. If agent use status filter manually on ticket list, this setting will not take effect and tickets will be filtered as per customer selection."
+msgstr "Valda statusar döljs om inget filter är aktivt i agentvyn. Om en agent använder statusfilter manuellt i ärendelistan kommer denna inställning inte verkställas och ärenden filtreras efter kundval."
+
+#: includes/admin/ticket-list/list-settings.php:28
+#: includes/admin/ticket-list/default-filters.php:89
+msgid "Agent View"
+msgstr "Agentvy"
+
+#: includes/admin/ticket-list/default-filters.php:83
+msgid "Number of Tickets shown per page for customer view."
+msgstr "Antal ärenden att visa per sida i kundvy."
+
+#: includes/admin/ticket-list/default-filters.php:80
+#: includes/admin/ticket-list/default-filters.php:144
+msgid "500"
+msgstr "500"
+
+#: includes/admin/ticket-list/default-filters.php:79
+#: includes/admin/ticket-list/default-filters.php:143
+msgid "100"
+msgstr "100"
+
+#: includes/admin/ticket-list/default-filters.php:78
+#: includes/admin/ticket-list/default-filters.php:142
+msgid "50"
+msgstr "50"
+
+#: includes/admin/ticket-list/default-filters.php:77
+#: includes/admin/ticket-list/default-filters.php:141
+msgid "40"
+msgstr "40"
+
+#: includes/admin/ticket-list/default-filters.php:76
+#: includes/admin/ticket-list/default-filters.php:140
+msgid "30"
+msgstr "30"
+
+#: includes/admin/ticket-list/default-filters.php:75
+#: includes/admin/ticket-list/default-filters.php:139
+msgid "20"
+msgstr "20"
+
+#: includes/admin/ticket-list/default-filters.php:74
+#: includes/admin/ticket-list/default-filters.php:138
+msgid "10"
+msgstr "10"
+
+#: includes/admin/ticket-list/default-filters.php:71
+#: includes/admin/ticket-list/default-filters.php:135
+msgid "Number of Tickets"
+msgstr "Antal ärenden"
+
+#: includes/admin/ticket-list/default-filters.php:65
+msgid "Tickets are loaded on selected order for customer view by default. If customer apply manual filter, this setting will not take effect."
+msgstr "Ärenden laddas i vald ordning i kundvy per automatik. Om kunden lägger på ett manuellt filter kommer denna inställning inte verkställas."
+
+#: includes/admin/ticket-list/default-filters.php:48
+#: includes/admin/ticket-list/default-filters.php:112
+msgid "Order By"
+msgstr "Sortera på"
+
+#: includes/admin/ticket-list/default-filters.php:42
+msgid "Selected statuses will be hidden if no filter is active for customer view. If customer use status filter manually on ticket list, this setting will not take effect and tickets will be filtered as per customer selection."
+msgstr "Valda statusar döljs om inget filter är aktivt i kundvyn. Om kunden använder statusfilter manuellt i ärendelistan kommer denna inställning inte verkställas och tickets filtreras efter kundval."
+
+#: includes/admin/ticket-list/default-filters.php:30
+#: includes/admin/ticket-list/default-filters.php:94
+msgid "Hide Selected Statuses"
+msgstr "Dölj valda statusar"
+
+#: includes/admin/ticket-list/list-settings.php:27
+#: includes/admin/ticket-list/default-filters.php:25
+msgid "Customer View"
+msgstr "Kundvy"
+
+#: includes/admin/ticket-form/ticket-form.php:11
+msgid "Manage Form"
+msgstr "Hantera formulär"
+
+#: includes/admin/ticket-list/list-settings.php:139
+#: includes/admin/ticket-list/open-ticket-widget.php:82
+#: includes/admin/ticket-form/form-management.php:96
+msgid "Please Wait ..."
+msgstr "Vänligen vänta ..."
+
+#: includes/admin/general/general-advanced-settings.php:26
+#: includes/admin/general/general-advanced-settings.php:38
+#: includes/admin/general/general-advanced-settings.php:50
+#: includes/admin/general/general-settings.php:457
+#: includes/admin/general/general-settings.php:467
+#: includes/admin/ticket-list/default-filters.php:172
+#: includes/admin/ticket-form/form-management.php:47
+msgid "Disable"
+msgstr "Inaktivera"
+
+#: includes/admin/general/general-advanced-settings.php:25
+#: includes/admin/general/general-advanced-settings.php:37
+#: includes/admin/general/general-advanced-settings.php:49
+#: includes/admin/general/general-settings.php:456
+#: includes/admin/general/general-settings.php:466
+#: includes/admin/ticket-list/default-filters.php:166
+#: includes/admin/ticket-form/form-management.php:46
+msgid "Enable"
+msgstr "Aktivera"
+
+#: includes/admin/ticket-form/form-management.php:28
+msgid "Full Width"
+msgstr "Fullbredd"
+
+#: includes/class-wpsp-functions.php:943 includes/class-wpsp-functions.php:1336
+#: template/tickets/open-ticket/sidebar.php:43
+#: includes/admin/ticket-form/form-management.php:27
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:29
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:28
+msgid "Status"
+msgstr "Status"
+
+#: includes/admin/ticket-form/form-management.php:17
+msgid "Create New Ticket Form"
+msgstr "Skapa ny ärendeformulär"
+
+#: includes/admin/ticket-form/custom-fields.php:55
+msgid "No Custom Fields found!"
+msgstr "Inga anpassade fält funna!"
+
+#: includes/admin/ticket-form/custom-fields.php:30
+msgid "Assigned Categories"
+msgstr "Tilldelad kategorier"
+
+#: includes/ajax/get_add_custom_field.php:60
+#: includes/ajax/get_edit_custom_field.php:65
+#: includes/admin/ticket-form/custom-fields.php:29
+msgid "Required"
+msgstr "Erfordras"
+
+#: includes/ajax/get_add_custom_field.php:51
+#: includes/ajax/get_edit_custom_field.php:56
+#: includes/admin/ticket-form/custom-fields.php:28
+msgid "Agent Only"
+msgstr "Endast agent"
+
+#: includes/admin/ticket-form/custom-fields.php:27
+msgid "Type"
+msgstr "Typ"
+
+#: includes/admin/ticket-form/custom-fields.php:19
+msgid "Add New Custom Field"
+msgstr "Lägg till nytt anpassat fält"
+
+#: includes/admin/ticket-form/ticket-form.php:15
+#: includes/admin/ticket-form/custom-fields.php:18
+msgid "Custom Fields"
+msgstr "Anpassade fält"
+
+#: includes/admin/general/thank_you.php:48
+msgid "URL of the ticket."
+msgstr "URL till ärende."
+
+#: includes/admin/general/thank_you.php:47
+msgid "Name of user doing current activity."
+msgstr "Namn på användare som gör pågående aktivitet."
+
+#: includes/admin/general/thank_you.php:46
+msgid "History of communication in ticket."
+msgstr "Kommunikationshistorik i ärende."
+
+#: includes/admin/general/thank_you.php:45
+msgid "Last reply description."
+msgstr "Beskrivning av senaste svar."
+
+#: includes/admin/general/thank_you.php:44
+msgid "Email of user posted last reply."
+msgstr "E-post till användare som skickade senaste svar."
+
+#: includes/admin/general/thank_you.php:43
+msgid "Name of user posted last reply."
+msgstr "Namn på användare som skickade senaste svar."
+
+#: includes/admin/general/thank_you.php:42
+msgid "Name(s) of agent assigned to ticket."
+msgstr "Namn på agent(er) som är tilldelad(e) ärendet."
+
+#: includes/admin/general/thank_you.php:41
+msgid "Name of the agent who have created ticket on behalf of user. Empty if ticket created by user himself."
+msgstr "Namn på agenten skapade denna ticket för en användares räkning. Tomt om ticket skapades av användaren själv."
+
+#: includes/admin/general/thank_you.php:40
+msgid "Ticket create time"
+msgstr "Ärende skapad"
+
+#: includes/admin/general/thank_you.php:39
+msgid "Email of ticket creator"
+msgstr "E-post till ärendeskapare"
+
+#: includes/admin/general/thank_you.php:38
+msgid "Name of ticket creator"
+msgstr "Namn på ärendeskapare"
+
+#: includes/admin/general/thank_you.php:37
+msgid "Ticket Priority"
+msgstr "Ärendeprioritet"
+
+#: includes/admin/general/thank_you.php:36
+msgid "Ticket Category"
+msgstr "Ärendekategori"
+
+#: includes/admin/general/thank_you.php:35
+msgid "Ticket status"
+msgstr "Status på ärende"
+
+#: includes/admin/general/thank_you.php:34
+msgid "Ticket description given while creating ticket"
+msgstr "Beskrivning av ärende vid skapande"
+
+#: includes/admin/general/thank_you.php:33
+msgid "Ticket Subject"
+msgstr "Ärendeämne"
+
+#: includes/admin/general/thank_you.php:17
+msgid "Thank You Page after create ticket"
+msgstr "Tack-sida efter skapande av ärende"
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:15
+#: includes/admin/general/support-page-menu/menu_list_update.php:25
+msgid "Add New Support Page Menu"
+msgstr "Lägg till ny kundtjänst-meny"
+
+#: includes/admin/general/support-page-menu/menu_list.php:69
+msgid "Delete Support Menu"
+msgstr "Ta bort kundtjänst-meny"
+
+#: includes/admin/general/statuses.php:19
+msgid "Add New Status"
+msgstr "Lägg till ny status"
+
+#: includes/admin/general/priorities.php:28
+#: includes/admin/general/statuses.php:28
+msgid "Color"
+msgstr "Färg"
+
+#: includes/admin/general/priorities.php:19
+msgid "Add New Priority"
+msgstr "Lägg till ny prioritet"
+
+#: includes/admin/general/general.php:43
+msgid "Support Page Menu"
+msgstr "Kundtjänst-meny"
+
+#: includes/admin/general/general.php:39
+msgid "Thank you page"
+msgstr "Tack-sida"
+
+#: includes/admin/general/priorities.php:18
+#: includes/admin/general/general.php:23
+msgid "Priorities"
+msgstr "Prioriteter"
+
+#: includes/admin/general/statuses.php:18 includes/admin/general/general.php:19
+msgid "Statuses"
+msgstr "Statusar"
+
+#: includes/admin/general/general-settings.php:424
+msgid "If you set SRN, [Ticket #123456] will become [Ticket SRN123456] whereever applicable. Please don't leave blank."
+msgstr "Om du anger SRN, [Ärende #123456] kommer då bli [Ärende SRN123456]. Det rekommenderas inte att lämna detta tomt!"
+
+#: includes/admin/general/general-settings.php:420
+msgid "Ticket ID Prefix"
+msgstr "Ärende ID-prefix"
+
+#: includes/admin/general/general-settings.php:379
+msgid "Allow Support Staff to read all ticket"
+msgstr "Tillåt supportpersonal att läsa alla ärenden"
+
+#: includes/admin/general/general-settings.php:369
+msgid "Allow Guest Ticket"
+msgstr "Tillåt gäst-ärende"
+
+#: includes/admin/general/general-settings.php:362
+msgid "Attachment Max Size(MB)"
+msgstr "Maxstorlek för bilagor (MB)"
+
+#: includes/admin/general/general-settings.php:356
+msgid "This format will be applicable for custom date fields for Support Plus"
+msgstr "Detta format är tillämpbart för anpassade datumfält i Support Plus"
+
+#: includes/admin/general/general-settings.php:351
+msgid "Custom Date Format"
+msgstr "Anpassat datumformat"
+
+#: includes/admin/general/general-settings.php:345
+msgid "This format will be applicable for default date fields for Support Plus"
+msgstr "Detta format är tillämpbart för standard datumfält i Support Plus"
+
+#: includes/admin/general/general-settings.php:340
+msgid "System Date Format"
+msgstr "Systemets datumformat"
+
+#: includes/admin/general/general-settings.php:334
+msgid "This format will be applicable for input date fields (datepicker) for WP Support Plus"
+msgstr "Detta format är tillämpbart för inmatning av datumfält (datumväljare) för WP Support Plus"
+
+#: includes/admin/general/general-settings.php:310
+msgid "Calender Date Format"
+msgstr "Format för kalenderdatum"
+
+#: includes/admin/general/general-settings.php:304
+msgid "Bottom"
+msgstr "Botten"
+
+#: includes/admin/general/general-settings.php:303
+msgid "Top"
+msgstr "Toppen"
+
+#: includes/admin/general/general-settings.php:300
+msgid "Reply Form Position"
+msgstr "Svarformulärs position"
+
+#: includes/admin/general/general-settings.php:295
+msgid "As name suggest, this setting will change ticket status to selected when support agent reply to ticket. Current Status will not change status of ticket in this case."
+msgstr "Som namnet antyder ändrar denna inställning ärendestatus till den valda när en supportagent svarar på ticketen. Nuvarande status ändrar inte status på ärende i detta fall."
+
+#: includes/admin/general/general-settings.php:279
+msgid "Ticket Status after Agent Reply"
+msgstr "Ärendestatus efter agents svar"
+
+#: includes/admin/general/general-settings.php:273
+msgid "This is applicable for Ticket id being created for new ticket."
+msgstr "Detta avser ticket-id när ny ticket skapas."
+
+#: includes/admin/general/general-settings.php:271
+msgid "Random"
+msgstr "Slumpmässig"
+
+#: includes/admin/general/general-settings.php:265
+msgid "Sequential"
+msgstr "Följdriktning"
+
+#: includes/admin/general/general-settings.php:257
+#: includes/admin/general/thank_you.php:32
+msgid "Ticket ID"
+msgstr "Ärende ID"
+
+#: includes/admin/general/general-settings.php:251
+msgid "If enabled, it will show Close Ticket button to open ticket view for customer. This button will change ticket status to selected status."
+msgstr "Om aktiverad visas knappen Stäng ärende i kundvyn. Denna knapp ändrar ärendestatus till vald status."
+
+#: includes/admin/general/general-settings.php:232
+msgid "Allow Customer to Close Ticket"
+msgstr "Tillåt kund att stänga ärende"
+
+#: includes/admin/general/general-settings.php:226
+msgid "As name suggest, this setting will change ticket status to selected when ticket creator reply to ticket. Current Status will not change status of ticket in this case."
+msgstr "Som namnet antyder ändrar denna inställning ticketstatus till vald status när den som skapade ärendet svarar. Nuvarande status ändrar inte status på ticket i detta fall."
+
+#: includes/admin/general/general-settings.php:214
+#: includes/admin/general/general-settings.php:285
+msgid "Status List"
+msgstr "Statuslista"
+
+#: includes/admin/general/general-settings.php:212
+#: includes/admin/general/general-settings.php:283
+msgid "Current Status"
+msgstr "Nuvarande status"
+
+#: includes/admin/general/general-settings.php:207
+msgid "Ticket Status after Customer Reply"
+msgstr "Ärendestatus efter kunds svar"
+
+#: includes/admin/general/general-settings.php:201
+msgid "This priority will be default priority for new ticket."
+msgstr "Denna prioritet blir standardprioritet för nytt ärende."
+
+#: includes/admin/general/general-settings.php:185
+msgid "Default Ticket Priority"
+msgstr "Standardprioritet för ärende"
+
+#: includes/admin/general/general-settings.php:179
+msgid "This status will be default status for new ticket."
+msgstr "Denna status blir standardstatus för nya ärenden."
+
+#: includes/admin/general/general-settings.php:163
+msgid "Default Ticket Status"
+msgstr "Standardstatus för ärende"
+
+#: includes/admin/general/general-settings.php:157
+msgid "This category will be default category for new ticket. If category is not present in ticket form or ticket created via email piping, this category will be used as new ticket category."
+msgstr "Denna kategori blir standardkategori för nya ärenden. Om en kategori inte väljs i ärendeformuläret, eller ärende skapas via e-post, kommer denna kategori att användas som standardkategori."
+
+#: includes/admin/general/general-settings.php:141
+msgid "Default Category"
+msgstr "Standardkategori"
+
+#: includes/admin/general/general-settings.php:129
+msgid "Open support page in new window?"
+msgstr "Öppna kundtjänst i nytt fönster?"
+
+#: includes/admin/general/general-settings.php:35
+msgid "Support Page"
+msgstr "Kundtjänst"
+
+#: includes/admin/general/general-settings.php:26
+msgid "Choose Logo"
+msgstr "Välj logotyp"
+
+#: includes/admin/general/footer-text.php:17
+#: includes/admin/general/general.php:35
+msgid "Footer Text"
+msgstr "Text i sidfot"
+
+#: wp-support-plus.php:72 wp-support-plus.php:79
+#: includes/class-wpsp-ajax.php:141 includes/class-wpsp-ajax.php:159
+#: includes/class-wpsp-ajax.php:213 template/tickets/create-ticket.php:158
+#: template/tickets/create-ticket.php:165
+#: includes/ajax/set_add_custom_field.php:10
+#: includes/ajax/search_users_for_add_agent.php:10
+#: includes/ajax/set_delete_status.php:13
+#: includes/ajax/set_edit_category.php:17 includes/ajax/set_add_priority.php:10
+#: includes/ajax/set_add_status.php:10 includes/ajax/get_edit_category.php:13
+#: includes/ajax/get_delete_custom_menu.php:13
+#: includes/ajax/get_delete_support_menu.php:13
+#: includes/ajax/set_delete_support_menu.php:13
+#: includes/ajax/set_restore_ticket.php:12
+#: includes/ajax/get_add_category.php:10 includes/ajax/set_add_category.php:10
+#: includes/ajax/get_delete_agent.php:13
+#: includes/ajax/get_delete_priority.php:13
+#: includes/ajax/get_add_custom_field.php:10
+#: includes/ajax/set_edit_priority.php:15
+#: includes/ajax/get_edit_priority.php:13 includes/ajax/set_delete_agent.php:13
+#: includes/ajax/get_edit_status.php:13 includes/ajax/save_ticket_widget.php:13
+#: includes/ajax/set_edit_agent.php:14 includes/ajax/get_add_status.php:10
+#: includes/ajax/set_delete_custom_field.php:13
+#: includes/ajax/set_delete_category.php:13
+#: includes/ajax/get_delete_status.php:13 includes/ajax/get_add_agent.php:10
+#: includes/ajax/set_permanent_delete_ticket.php:12
+#: includes/ajax/get_restore_ticket.php:16
+#: includes/ajax/get_permanent_delete_ticket.php:16
+#: includes/ajax/get_edit_agent.php:13
+#: includes/ajax/get_delete_custom_field.php:13
+#: includes/ajax/get_edit_custom_field.php:13
+#: includes/ajax/save_table_order.php:16
+#: includes/ajax/set_delete_priority.php:13
+#: includes/ajax/save_list_settings.php:22
+#: includes/ajax/save_form_management.php:19
+#: includes/ajax/set_edit_custom_field.php:13
+#: includes/ajax/set_delete_custom_menu.php:13 includes/ajax/upgrade.php:11
+#: includes/ajax/set_edit_status.php:15 includes/ajax/set_add_agent.php:10
+#: includes/ajax/get_delete_category.php:13
+#: includes/ajax/get_add_priority.php:10
+#: template/tickets/ticket-operations/reply_ticket.php:21
+#: template/tickets/ticket-operations/add_ticket_note.php:20
+#: includes/ajax/ticket-list/apply_ticket_filter.php:12
+#: includes/ajax/ticket-list/apply_ticket_filter.php:20
+#: includes/ajax/ticket-list/apply_ticket_filter.php:28
+#: includes/ajax/ticket-list/delete_ticket_filter.php:12
+#: includes/ajax/ticket-list/delete_ticket_filter.php:20
+#: includes/ajax/ticket-list/delete_ticket_filter.php:25
+#: includes/ajax/ticket-list/delete_ticket_filter.php:32
+#: includes/ajax/ticket-list/save_ticket_filter.php:12
+#: includes/ajax/ticket-form/create_tkt_cng_cat.php:10
+#: includes/ajax/ticket-form/upload_file.php:9
+#: includes/ajax/ticket-form/upload_image.php:8
+#: includes/ajax/ticket-individual/get_ticket_fields.php:16
+#: includes/ajax/ticket-individual/get_edit_thread.php:19
+#: includes/ajax/ticket-individual/get_assign_agent.php:16
+#: includes/ajax/ticket-individual/get_user_biography.php:15
+#: includes/ajax/ticket-individual/get_close_ticket.php:18
+#: includes/ajax/ticket-individual/set_bulk_assign_agent.php:20
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:15
+#: includes/ajax/ticket-individual/set_delete_ticket.php:19
+#: includes/ajax/ticket-individual/get_agent_fields.php:16
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:15
+#: includes/ajax/ticket-individual/get_delete_thread.php:19
+#: includes/ajax/ticket-individual/set_close_ticket.php:17
+#: includes/ajax/ticket-individual/set_bulk_change_status.php:19
+#: includes/ajax/ticket-individual/get_edit_subject.php:15
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:19
+#: includes/ajax/ticket-individual/set_ticket_fields.php:17
+#: includes/ajax/ticket-individual/get_ticket_created.php:16
+#: includes/ajax/ticket-individual/get_delete_ticket.php:16
+#: includes/ajax/ticket-individual/set_agent_fields.php:17
+#: includes/ajax/ticket-individual/set_edit_subject.php:18
+#: includes/ajax/ticket-individual/get_clone_ticket.php:13
+#: includes/ajax/ticket-individual/set_assign_agent.php:18
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:15
+#: includes/ajax/ticket-individual/set_edit_thread.php:19
+#: includes/ajax/ticket-individual/set_delete_thread.php:18
+#: includes/ajax/ticket-individual/set_change_ticket_status.php:17
+#: includes/ajax/ticket-individual/set_clone_ticket.php:18
+#: includes/ajax/ticket-individual/get_change_raised_by.php:15
+#: includes/ajax/ticket-individual/set_change_raised_by.php:17
+#: includes/ajax/ticket-individual/set_delete_bulk_ticket.php:20
+#: includes/ajax/user-login/signin.php:12
+#: includes/ajax/user-login/signin.php:48
+#: includes/ajax/user-login/guest_signin.php:12
+#: includes/ajax/user-login/guest_signin.php:45
+#: includes/ajax/autocomplete/ticket_filter.php:12
+#: includes/ajax/autocomplete/index.php:10
+#: includes/admin/general/support-page-menu/menu_list_update.php:12
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:11
+msgid "Cheating huh?"
+msgstr "Fuskar du, eh?"
+
+#: includes/ajax/get_edit_category.php:66
+#: includes/ajax/get_delete_custom_menu.php:42
+#: includes/ajax/get_delete_support_menu.php:42
+#: includes/ajax/get_add_category.php:46 includes/ajax/get_delete_agent.php:43
+#: includes/ajax/get_delete_priority.php:43
+#: includes/ajax/get_add_custom_field.php:87
+#: includes/ajax/get_edit_priority.php:46 includes/ajax/get_edit_status.php:46
+#: includes/ajax/get_add_status.php:40 includes/ajax/get_delete_status.php:43
+#: includes/ajax/get_add_agent.php:52 includes/ajax/get_restore_ticket.php:58
+#: includes/ajax/get_permanent_delete_ticket.php:58
+#: includes/ajax/get_edit_agent.php:43
+#: includes/ajax/get_delete_custom_field.php:44
+#: includes/ajax/get_edit_custom_field.php:99
+#: includes/ajax/get_delete_category.php:43
+#: includes/ajax/get_add_priority.php:40
+#: template/tickets/open-ticket/class-threads-formatting.php:81
+#: template/tickets/open-ticket/class-threads-formatting.php:103
+#: template/tickets/open-ticket/sidebar.php:382
+#: template/tickets/open-ticket/sidebar.php:409
+#: includes/ajax/ticket-individual/get_ticket_fields.php:97
+#: includes/ajax/ticket-individual/get_edit_thread.php:90
+#: includes/ajax/ticket-individual/get_assign_agent.php:140
+#: includes/ajax/ticket-individual/get_close_ticket.php:59
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:94
+#: includes/ajax/ticket-individual/get_agent_fields.php:89
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:86
+#: includes/ajax/ticket-individual/get_delete_thread.php:61
+#: includes/ajax/ticket-individual/get_edit_subject.php:61
+#: includes/ajax/ticket-individual/get_delete_bulk_ticket.php:61
+#: includes/ajax/ticket-individual/get_delete_ticket.php:59
+#: includes/ajax/ticket-individual/get_clone_ticket.php:59
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:116
+#: includes/ajax/ticket-individual/get_change_raised_by.php:142
+#: includes/admin/general/support-page-menu/menu_list_add.php:49
+#: includes/admin/general/support-page-menu/menu_list_update.php:60
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:57
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:48
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:36
+#: includes/admin/general/support-page-menu/menu_list_update.php:46
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:43
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:35
+msgid "Menu URL"
+msgstr "Meny-URL"
+
+#: includes/admin/general/support-page-menu/menu_list_add.php:26
+#: includes/admin/general/support-page-menu/menu_list_update.php:36
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:34
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:26
+msgid "Menu Icon"
+msgstr "Menyikon"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:23
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:15
+msgid "Add New Menu Slider"
+msgstr "Lägg till ny menyslider"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:99
+msgid "Delete Custom Menu"
+msgstr "Ta bort anpassad meny"
+
+#: includes/admin/general/thank_you.php:18
+#: includes/admin/general/support-page-menu/menu_list.php:34
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:72
+msgid "Title"
+msgstr "Titel"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:55
+msgid "Custom Menu Slider"
+msgstr "Anpassad menyslider"
+
+#: includes/admin/general/general-settings.php:29
+#: includes/admin/general/support-page-menu/menu_list_add.php:29
+#: includes/admin/general/support-page-menu/menu_list_update.php:39
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:46
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:37
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:29
+msgid "Upload Logo"
+msgstr "Ladda upp logotyp"
+
+#: includes/admin/general/support-page-menu/menu_list.php:33
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:42
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:71
+msgid "Icon"
+msgstr "Ikon"
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:36
+msgid "If enabled, it will show Support Button on front-end website. When visitor click this button, it will open Support Page selected above in new tab."
+msgstr "Om aktiverad visas supportknappen på webbplatsens frontend. När en besökare klickar på knappen öppnas kundtjänstsidan i en ny flik."
+
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:26
+msgid "Show Support Button"
+msgstr "Visa supportknapp"
+
+#: includes/admin/general/general.php:27
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:21
+msgid "Support Button"
+msgstr "Support-knapp"
+
+#: includes/admin/general/custom-css.php:23
+#: includes/admin/general/general.php:31
+msgid "Custom CSS"
+msgstr "Anpassad CSS"
+
+#: includes/admin/general/categories.php:64
+#: includes/admin/general/priorities.php:59
+#: includes/admin/general/statuses.php:59
+msgid "Save Order"
+msgstr "Spara order"
+
+#: includes/admin/general/categories.php:29
+#: includes/admin/general/priorities.php:29
+#: includes/admin/general/statuses.php:29
+#: includes/admin/general/general-settings.php:70
+#: includes/admin/ticket-form/custom-fields.php:31
+#: includes/admin/general/support-page-menu/menu_list.php:35
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:73
+msgid "Action"
+msgstr "Händelse"
+
+#: includes/admin/general/categories.php:28
+msgid "Supervisor(s)"
+msgstr "Teamledare"
+
+#: includes/admin/general/categories.php:26
+#: includes/admin/general/priorities.php:26
+#: includes/admin/general/statuses.php:26
+#: includes/admin/ticket-list/list-settings.php:25
+#: includes/admin/ticket-list/open-ticket-widget.php:25
+#: includes/admin/ticket-form/form-management.php:25
+#: includes/admin/general/support-page-menu/menu_list.php:32
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:70
+msgid "Order"
+msgstr "Beställ"
+
+#: includes/admin/general/categories.php:19
+msgid "Add New Category"
+msgstr "Lägg till ny kategori"
+
+#: includes/admin/general/categories.php:18
+#: includes/admin/general/general.php:15
+msgid "Categories"
+msgstr "Kategorier"
+
+#: includes/admin/dashbord/general.php:24
+msgid "Statuses to Show"
+msgstr "Statusar att visa"
+
+#: includes/admin/class-wpsp-admin.php:259
+msgid "Dismiss this notice"
+msgstr "Avfärda notis"
+
+#: includes/admin/class-wpsp-admin.php:259
+msgid "Settings updated"
+msgstr "Inställningar uppdaterade"
+
+#: includes/admin/class-wpsp-admin.php:235
+msgid "Add-Ons"
+msgstr "Tillägg"
+
+#: template/tickets/create-ticket.php:370 template/tickets/logged-in.php:17
+#: includes/admin/class-wpsp-admin.php:219
+#: includes/admin/ticket-list/default-filters.php:152
+#: includes/admin/customize/customize.php:15
+msgid "Ticket List"
+msgstr "Ärendelista"
+
+#: includes/admin/class-wpsp-admin.php:215
+msgid "Ticket Form"
+msgstr "Ärendeformulär"
+
+#: includes/admin/class-wpsp-admin.php:211
+#: includes/admin/general/custom-css.php:19
+#: includes/admin/customize/customize.php:11
+#: includes/admin/dashbord/dashbord.php:11
+msgid "General"
+msgstr "Generellt"
+
+#: includes/admin/class-wpsp-admin.php:179
+msgid "WP Support Plus Settings"
+msgstr "WP Support Plus Inställningar"
+
+#: includes/admin/agents/ticket-agents.php:39
+msgid "Search"
+msgstr "Sök"
+
+#: template/tickets/ticket_list/filter.php:31
+#: includes/admin/agents/ticket-agents.php:38
+#: includes/ajax/ticket-list/get_tickets.php:201
+msgid "Reset Filter"
+msgstr "Återställ filter"
+
+#: template/tickets/ticket_list/list.php:55
+#: includes/admin/agents/ticket-agents.php:37
+msgid "Apply"
+msgstr "Verkställ"
+
+#: includes/admin/agents/ticket-agents.php:32
+msgid "All"
+msgstr "Alla"
+
+#: includes/admin/general/categories.php:19
+#: includes/admin/general/priorities.php:19
+#: includes/admin/general/statuses.php:19
+#: includes/admin/ticket-form/custom-fields.php:19
+#: includes/admin/agents/ticket-agents.php:18
+#: includes/admin/general/support-page-menu/menu_list.php:26
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:64
+msgid "Add New"
+msgstr "Lägg till ny"
+
+#: includes/admin/agents/ticket-agents.php:18
+msgid "Add New Agent"
+msgstr "Lägg till ny agent"
+
+#: includes/admin/class-wpsp-admin.php:223
+#: includes/admin/agents/ticket-agents.php:17
+msgid "Agents"
+msgstr "Agenter"
+
+#: includes/admin/agents/general-settings.php:83
+msgid "If set yes, supervisor will able to change raised by of tickets of assigned categories."
+msgstr "Om satt till ja kan en teamledare ändra \"lyfts av\" på ärenden tilldelade kategorier."
+
+#: includes/admin/agents/general-settings.php:72
+msgid "If set yes, supervisor will able to delete tickets of assigned categories"
+msgstr "Om satt till ja kan en teamledare ta bort ärenden tilldelade kategorier."
+
+#: includes/admin/agents/general-settings.php:56
+msgid "If set yes, an agent will able to change raised by of ticket assigned to him."
+msgstr "Om satt till ja kan en agent ändra \"lyfts av\" på ett ärende tilldelat honom."
+
+#: includes/admin/agents/general-settings.php:50
+#: includes/admin/agents/general-settings.php:77
+msgid "Allow Change Raised By"
+msgstr "Tillåt ändring i lyfts av"
+
+#: includes/admin/agents/general-settings.php:45
+msgid "If set yes, an agent will able to delete ticket assigned to him."
+msgstr "Om satt till ja kan en agent ta bort ett ärende som tilldelats honom."
+
+#: includes/admin/agents/general-settings.php:39
+#: includes/admin/agents/general-settings.php:66
+msgid "Allow Delete Ticket"
+msgstr "Tillåt att ärenden tas bort"
+
+#: includes/admin/agents/general-settings.php:34
+msgid "If set yes, an agent will able to assign ticket assigned to him to some other agent who is assigned to ticket category."
+msgstr "Om satt till ja kan en agent, som fått ett ärende tilldelat sig, tilldela ärendet till en annan agent i ärendekategorin."
+
+#: includes/ajax/get_add_custom_field.php:54
+#: includes/ajax/get_add_custom_field.php:62
+#: includes/ajax/get_edit_custom_field.php:59
+#: includes/ajax/get_edit_custom_field.php:67
+#: includes/admin/general/general-settings.php:78
+#: includes/admin/general/general-settings.php:87
+#: includes/admin/general/general-settings.php:96
+#: includes/admin/general/general-settings.php:105
+#: includes/admin/general/general-settings.php:121
+#: includes/admin/general/general-settings.php:134
+#: includes/admin/general/general-settings.php:373
+#: includes/admin/general/general-settings.php:383
+#: includes/admin/ticket-list/list-settings.php:54
+#: includes/admin/ticket-list/list-settings.php:60
+#: includes/admin/ticket-list/list-settings.php:76
+#: includes/admin/ticket-list/list-settings.php:82
+#: includes/admin/ticket-list/list-settings.php:96
+#: includes/admin/ticket-form/custom-fields.php:44
+#: includes/admin/ticket-form/custom-fields.php:45
+#: includes/admin/ticket-form/form-management.php:53
+#: includes/admin/agents/general-settings.php:32
+#: includes/admin/agents/general-settings.php:43
+#: includes/admin/agents/general-settings.php:54
+#: includes/admin/agents/general-settings.php:70
+#: includes/admin/agents/general-settings.php:81
+msgid "No"
+msgstr "Nej"
+
+#: includes/ajax/get_add_custom_field.php:53
+#: includes/ajax/get_add_custom_field.php:63
+#: includes/ajax/get_edit_custom_field.php:58
+#: includes/ajax/get_edit_custom_field.php:68
+#: includes/admin/general/general-settings.php:79
+#: includes/admin/general/general-settings.php:88
+#: includes/admin/general/general-settings.php:97
+#: includes/admin/general/general-settings.php:106
+#: includes/admin/general/general-settings.php:120
+#: includes/admin/general/general-settings.php:133
+#: includes/admin/general/general-settings.php:372
+#: includes/admin/general/general-settings.php:382
+#: includes/admin/ticket-list/list-settings.php:53
+#: includes/admin/ticket-list/list-settings.php:59
+#: includes/admin/ticket-list/list-settings.php:75
+#: includes/admin/ticket-list/list-settings.php:81
+#: includes/admin/ticket-list/list-settings.php:95
+#: includes/admin/ticket-form/custom-fields.php:44
+#: includes/admin/ticket-form/custom-fields.php:45
+#: includes/admin/ticket-form/form-management.php:52
+#: includes/admin/agents/general-settings.php:31
+#: includes/admin/agents/general-settings.php:42
+#: includes/admin/agents/general-settings.php:53
+#: includes/admin/agents/general-settings.php:69
+#: includes/admin/agents/general-settings.php:80
+msgid "Yes"
+msgstr "Ja"
+
+#: includes/admin/agents/general-settings.php:28
+msgid "Allow Assign Ticket"
+msgstr "Tillåt tilldelande av ärende"
+
+#: includes/admin/agents/class_agent_table.php:66
+msgid "Delete Agent"
+msgstr "Ta bort agent"
+
+#: includes/ajax/get_add_agent.php:41 includes/ajax/get_edit_agent.php:33
+#: includes/admin/general/general-settings.php:102
+#: includes/admin/agents/class_agent_table.php:45
+#: includes/admin/agents/ticket-agents.php:35
+#: includes/admin/dashbord/general.php:65
+msgid "Administrator"
+msgstr "Administratör"
+
+#: includes/ajax/get_add_agent.php:40 includes/ajax/get_edit_agent.php:32
+#: includes/admin/general/general-settings.php:93
+#: includes/admin/general/general-settings.php:408
+#: includes/admin/agents/class_agent_table.php:43
+#: includes/admin/agents/general-settings.php:61
+#: includes/admin/agents/ticket-agents.php:34
+#: includes/admin/dashbord/general.php:59
+msgid "Supervisor"
+msgstr "Teamledare"
+
+#: template/tickets/dashboard.php:111 includes/ajax/get_add_agent.php:24
+#: includes/ajax/get_add_agent.php:39 includes/ajax/get_edit_agent.php:31
+#: includes/admin/general/general-settings.php:84
+#: includes/admin/general/general-settings.php:402
+#: includes/admin/agents/class_agent_table.php:41
+#: includes/admin/agents/general-settings.php:23
+#: includes/admin/agents/ticket-agents.php:33
+#: includes/admin/dashbord/general.php:53
+msgid "Agent"
+msgstr "Agent"
+
+#: includes/ajax/get_add_agent.php:37 includes/ajax/get_edit_agent.php:29
+#: includes/admin/general/general-settings.php:69
+#: includes/admin/agents/class_agent_table.php:17
+#: includes/admin/agents/ticket-agents.php:30
+msgid "Role"
+msgstr "Roll"
+
+#: includes/class-wpsp-functions.php:854 template/header/sign-in.php:82
+#: includes/admin/agents/class_agent_table.php:16
+msgid "Email"
+msgstr "E-post"
+
+#: template/header/sign-in.php:79 includes/admin/general/categories.php:27
+#: includes/admin/general/priorities.php:27
+#: includes/admin/general/statuses.php:27
+#: includes/admin/ticket-list/list-settings.php:26
+#: includes/admin/ticket-form/custom-fields.php:26
+#: includes/admin/ticket-form/form-management.php:26
+#: includes/admin/agents/class_agent_table.php:15
+#: includes/admin/general/support-page-menu/menu_list_add.php:19
+#: includes/admin/general/support-page-menu/menu_list_update.php:29
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:27
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:19
+msgid "Name"
+msgstr "Namn"
+
+#: includes/admin/agents/class_agent_table.php:14
+msgid "Username"
+msgstr "Användarnamn"
+
+#: includes/admin/agents/agents.php:15
+msgid "Agents & Supervisors"
+msgstr "Agenter och teamledare"
+
+#: includes/admin/general/general-settings.php:21
+#: includes/admin/general/general.php:11 includes/admin/agents/agents.php:11
+msgid "General Settings"
+msgstr "Generella inställningar"
+
+#: includes/admin/general/custom-css.php:39
+#: includes/admin/general/footer-text.php:36
+#: includes/admin/general/general-advanced-settings.php:59
+#: includes/admin/general/general-settings.php:479
+#: includes/admin/general/thank_you.php:73
+#: includes/admin/ticket-list/list-settings.php:112
+#: includes/admin/ticket-list/open-ticket-widget.php:56
+#: includes/admin/ticket-list/advanced-settings.php:40
+#: includes/admin/ticket-list/default-filters.php:180
+#: includes/admin/customize/ticket_list.php:57
+#: includes/admin/customize/general.php:65
+#: includes/admin/ticket-form/form-management.php:69
+#: includes/admin/addons/wpsp_license_settings.php:26
+#: includes/admin/agents/general-settings.php:93
+#: includes/admin/dashbord/general.php:74
+#: includes/ajax/ticket-individual/get_ticket_fields.php:98
+#: includes/ajax/ticket-individual/get_edit_thread.php:91
+#: includes/ajax/ticket-individual/get_assign_agent.php:141
+#: includes/ajax/ticket-individual/get_change_ticket_status.php:95
+#: includes/ajax/ticket-individual/get_agent_fields.php:90
+#: includes/ajax/ticket-individual/get_bulk_change_status.php:87
+#: includes/ajax/ticket-individual/get_edit_subject.php:62
+#: includes/ajax/ticket-individual/get_clone_ticket.php:60
+#: includes/ajax/ticket-individual/get_bulk_assign_agent.php:117
+#: includes/ajax/ticket-individual/get_change_raised_by.php:143
+#: includes/admin/general/support-page-menu/menu_list.php:84
+#: includes/admin/general/support-page-menu/menu_list_add.php:48
+#: includes/admin/general/support-page-menu/menu_list_update.php:59
+#: includes/admin/general/custom-menu/support_btn_custom_menu.php:114
+#: includes/admin/general/custom-menu/support_btn_custom_menu_update.php:56
+#: includes/admin/general/custom-menu/support_btn_custom_menu_add.php:47
+msgid "Save Changes"
+msgstr "Spara ändringar"
+
+#: includes/admin/addons/addons.php:10
+msgid "Licenses"
+msgstr "Licenser"
