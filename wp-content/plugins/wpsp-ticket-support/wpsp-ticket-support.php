@@ -24,6 +24,24 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
 			add_action( 'wp_ajax_nopriv_create_pickups', array( $this, 'create_pickups' ) );
 			add_action( 'admin_bar_menu', array( $this, 'add_toolbar_items' ), 100 );
 			add_action( 'admin_menu', array( $this, 'admin_menu' ), 5 );
+			add_action( 'wp_footer', array( $this, 'refresh_support_tickets' ) );
+		}
+
+		function refresh_support_tickets()
+		{
+			?>
+            <script>
+                jQuery(function ($) {
+                    setInterval(function () {
+                        var is_active = $('.navbar-nav #ticket-list').hasClass('active');
+
+                        if (is_active) {
+                            window.location.href = window.location.href;
+                        }
+                    }, 60 * 1000);
+                });
+            </script>
+			<?php
 		}
 
 		function admin_menu()
@@ -90,17 +108,17 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
 					);
 
 					$params = array(
-						"subject"            => $subject,
-						"description"        => $desc,
-						"category"           => "1",
-						"priority"           => "High",
-						"user_id"            => $shipment->customer_id,
-						"agent_created"      => $shipment->creator_id,
-						"create_ticket_as"   => 1,
-						"guest_name"         => "",
-						"guest_email"        => "",
-						"action"             => "wpsp_submit_ticket",
-						"nonce"              => wp_create_nonce( 'wpsp_nonce' ),
+						"subject"          => $subject,
+						"description"      => $desc,
+						"category"         => "1",
+						"priority"         => "High",
+						"user_id"          => $shipment->customer_id,
+						"agent_created"    => $shipment->creator_id,
+						"create_ticket_as" => 1,
+						"guest_name"       => "",
+						"guest_email"      => "",
+						"action"           => "wpsp_submit_ticket",
+						"nonce"            => wp_create_nonce( 'wpsp_nonce' ),
 					);
 
 					$this->request( $params );

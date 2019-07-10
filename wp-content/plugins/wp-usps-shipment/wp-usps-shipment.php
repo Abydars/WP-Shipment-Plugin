@@ -13,6 +13,7 @@ define( 'WPSP_USPS_USER_ID', '572SHIP46470' );
 //includes
 include 'includes/class-shipment-xml-array.php';
 include 'includes/class-shipment-array-xml.php';
+include 'includes/user-meta.php';
 
 class WPSP_USPS
 {
@@ -34,6 +35,14 @@ class WPSP_USPS
 		add_action( 'wpsp_void_label_usps', [ $this, 'wpsp_void_label_usps' ], 10, 2 );
 		add_action( 'wpsp_service_rates_usps', [ $this, 'wpsp_service_rates_usps' ], 10, 3 );
 		add_action( 'wpsp_service_pickup_rates_usps', [ $this, 'wpsp_service_pickup_rates_usps' ], 10, 3 );
+
+		//User Extras
+		$wpsp_user_meta = new WPSP_USPS_UserMeta();
+
+		add_action( 'show_user_profile', array( $wpsp_user_meta, 'extra_user_profile_fields' ) );
+		add_action( 'edit_user_profile', array( $wpsp_user_meta, 'extra_user_profile_fields' ) );
+		add_action( 'edit_user_profile_update', array( $wpsp_user_meta, 'save_extra_user_profile_fields' ) );
+		add_action( 'personal_options_update', array( $wpsp_user_meta, 'save_extra_user_profile_fields' ) );
 	}
 
 	function wpsp_service_pickup_rates_usps( $data, &$error, &$pickup_rates )
@@ -73,6 +82,7 @@ class WPSP_USPS
 		$services     = apply_filters( 'wpsp_shipment_usps_levels', [] );
 		$package_type = $data->package_type;
 		$level        = $data->shipping_method;
+		$user_id      = $data->customer;
 
 		if ( empty( $package_type ) ) {
 			$package_type = $this->get_default_package_type();
@@ -123,7 +133,7 @@ class WPSP_USPS
 			$xml = ShipmentArrayToXml::convert( $d, [
 				'rootElementName' => 'RateV4Request',
 				'_attributes'     => [
-					'USERID' => WPSP_USPS_USER_ID,
+					'USERID' => $this->get_customer_id( $user_id ),
 				],
 			], true, 'UTF-8' );
 
@@ -247,6 +257,7 @@ class WPSP_USPS
 	{
 		$error    = false;
 		$shipment = WPSP_Shipment::get_shipment( $shipment_id );
+		$user_id  = $shipment->creator_id;
 
 		try {
 			$d = [
@@ -256,7 +267,7 @@ class WPSP_USPS
 			$xml = ShipmentArrayToXml::convert( $d, [
 				'rootElementName' => 'eVSCancelRequest',
 				'_attributes'     => [
-					'USERID' => WPSP_USPS_USER_ID,
+					'USERID' => $this->get_customer_id( $user_id ),
 				],
 			], true, 'UTF-8' );
 
@@ -290,6 +301,7 @@ class WPSP_USPS
 		$to_address   = WPSP_Address::get_address( $data->to );
 		$from_zip     = $from_address['zip_code'];
 		$to_zip       = $to_address['zip_code'];
+		$user_id      = $data->customer;
 
 		$d        = [
 			'Revision' => 2,
@@ -320,7 +332,7 @@ class WPSP_USPS
 		$xml = ShipmentArrayToXml::convert( $d, [
 			'rootElementName' => 'RateV4Request',
 			'_attributes'     => [
-				'USERID' => WPSP_USPS_USER_ID,
+				'USERID' => $this->get_customer_id( $user_id ),
 			],
 		], true, 'UTF-8' );
 
@@ -385,6 +397,7 @@ class WPSP_USPS
 			$to_address   = WPSP_Address::get_address( $data->to );
 			$from_zip     = $from_address['zip_code'];
 			$packages     = $data->packages;
+			$user_id      = $data->customer;
 
 			list( $from_zip4, $from_zip5 ) = $this->zip4_5( $from_zip );
 
@@ -436,7 +449,7 @@ class WPSP_USPS
 				$xml = ShipmentArrayToXml::convert( $d, [
 					'rootElementName' => 'eVSRequest',
 					'_attributes'     => [
-						'USERID' => WPSP_USPS_USER_ID,
+						'USERID' => $this->get_customer_id( $user_id ),
 					],
 				], true, 'UTF-8' );
 
@@ -483,6 +496,7 @@ class WPSP_USPS
 	function wpsp_verify_address_usps( $data, &$error, &$is_residential )
 	{
 		list( $from_zip4, $from_zip5 ) = $this->zip4_5( $data->zip_code );
+		$user_id = $data->customer;
 
 		$is_residential = false;
 		$d              = [
@@ -503,7 +517,7 @@ class WPSP_USPS
 		$xml = ShipmentArrayToXml::convert( $d, [
 			'rootElementName' => 'AddressValidateRequest',
 			'_attributes'     => [
-				'USERID' => WPSP_USPS_USER_ID,
+				'USERID' => $this->get_customer_id( $user_id ),
 			],
 		], true, 'UTF-8' );
 
@@ -602,6 +616,17 @@ class WPSP_USPS
 		];
 
 		return $types;
+	}
+
+	function get_customer_id( $user_id )
+	{
+		$customer_id = WPSP_USPS_UserMeta::get_field( $user_id, 'usps_customer_id' );
+
+		if ( empty( $customer_id ) ) {
+			$customer_id = WPSP_USPS_USER_ID;
+		}
+
+		return $customer_id;
 	}
 }
 
