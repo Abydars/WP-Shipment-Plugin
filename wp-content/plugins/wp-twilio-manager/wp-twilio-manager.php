@@ -188,7 +188,7 @@ if ( ! class_exists( 'WPTM_Twilio' ) ) {
 	}
 }
 
-if ( class_exists( 'WPSP' ) ) {
+if ( defined( 'WPSP_LANG' ) ) {
 	$loader = new WPTM_Twilio();
 
 	register_activation_hook( __FILE__, array( $loader, 'activation' ) );

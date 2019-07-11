@@ -208,6 +208,7 @@ class WPSP
 					rates longtext DEFAULT '',
 					markupRate float(25) DEFAULT 0,
 					labelRate float(25) DEFAULT 0,
+					packages longtext DEFAULT NULL,
 					PRIMARY KEY  (id)" );
 		$this->create_table( 'packages', "id mediumint(9) NOT NULL AUTO_INCREMENT,
 					shipment_id mediumint(9) NOT NULL,
@@ -279,5 +280,12 @@ class WPSP
 	public static function is_test()
 	{
 		return self::get_option( 'wpsp_test_mode' ) === 'yes';
+	}
+
+	public static function get_settings( $carrier )
+	{
+		$settings = apply_filters( "wpsp_{$carrier}_settings", [] );
+
+		return $settings;
 	}
 }

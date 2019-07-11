@@ -179,7 +179,8 @@ class WPSP_ShipmentActions
 							"shipmentNo"     => "",
 							"rates"          => $rates,
 							"markupRate"     => $markup,
-							"labelRate"      => $label_rates
+							"labelRate"      => $label_rates,
+							"packages"       => json_encode( $post_data->packages )
 						);
 
 						$columns = array_keys( $row );

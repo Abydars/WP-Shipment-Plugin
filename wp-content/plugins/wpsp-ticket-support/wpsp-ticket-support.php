@@ -326,4 +326,6 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
 	}
 }
 
-new WPTS_TicketSupport();
+if ( defined( 'WPSP_LANG' ) ) {
+	new WPTS_TicketSupport();
+}

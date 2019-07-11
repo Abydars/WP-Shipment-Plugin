@@ -285,4 +285,6 @@ if ( ! class_exists( 'WPSP_ChargeCustomer' ) ) {
 	}
 }
 
-new WPSP_ChargeCustomer();
+if ( defined( 'WPSP_LANG' ) ) {
+	new WPSP_ChargeCustomer();
+}

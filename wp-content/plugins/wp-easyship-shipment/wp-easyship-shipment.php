@@ -18,6 +18,7 @@ class WPSP_Ezeeship
 		add_filter( 'wpsp_shipment_fedex_levels', [ $this, 'wpsp_shipment_fedex_levels' ] );
 		add_filter( 'wpsp_shipment_ups_package_types', [ $this, 'wpsp_shipment_ups_package_types' ] );
 		add_filter( 'wpsp_shipment_fedex_package_types', [ $this, 'wpsp_shipment_fedex_package_types' ] );
+		add_filter( 'wpsp_fedex_settings', [ $this, 'wpsp_fedex_settings' ], 10, 2 );
 
 		// Actions
 		add_action( 'wpsp_verify_address_ups', [ $this, 'wpsp_verify_address_any' ], 10, 3 );
@@ -40,6 +41,18 @@ class WPSP_Ezeeship
 
 		add_action( 'wpsp_void_label_ups', [ $this, 'wpsp_void_label_any' ], 10, 2 );
 		add_action( 'wpsp_void_label_fedex', [ $this, 'wpsp_void_label_any' ], 10, 2 );
+	}
+
+	function wpsp_fedex_settings( $settings )
+	{
+		$settings[] = [
+			'id'      => 'paid_number_of_packages_per_week',
+			'label'   => 'Paid number of packages per week (for each from address)',
+			'type'    => 'number',
+			'default' => 3
+		];
+
+		return $settings;
 	}
 
 	function wpsp_create_label_any( &$error, &$encoded_images, $shipment_data )
@@ -292,7 +305,12 @@ class WPSP_Ezeeship
 		if ( $data->schedule === 'yes' ) {
 			$ups_pickup_rates = WPSP::get_option( 'wpsp_ups_pickup_rates', 0 );
 			$ups_pickup_rates = floatval( $ups_pickup_rates );
-			$pickup_rates     = $ups_pickup_rates;
+			$pickup_date      = date( 'Y-m-d H:i:s', strtotime( $data->pickup_date ) );
+			$today_shipments  = count( $this->get_today_pickup_shipments_by_address( 'ups', $data->from, $pickup_date ) );
+
+			if ( $today_shipments <= 0 ) {
+				$pickup_rates = $ups_pickup_rates;
+			}
 		}
 	}
 
@@ -302,9 +320,27 @@ class WPSP_Ezeeship
 		$pickup_rates = 0;
 
 		if ( $data->schedule === 'yes' ) {
-			$fedex_pickup_rates = WPSP::get_option( 'wpsp_fedex_pickup_rates', 0 );
-			$fedex_pickup_rates = floatval( $fedex_pickup_rates );
-			$pickup_rates       = ( $fedex_pickup_rates * count( $data->packages ) );
+			$fedex_pickup_rates   = WPSP::get_option( 'wpsp_fedex_pickup_rates', 0 );
+			$per_week             = WPSP::get_option( 'wpsp_fedex_paid_number_of_packages_per_week', 0 );
+			$pickup_date          = date( 'Y-m-d H:i:s', strtotime( $data->pickup_date ) );
+			$week_shipments       = $this->get_week_pickup_shipments_by_address( 'fedex', $data->from, $pickup_date );
+			$week_shipments_count = 0;
+
+			foreach ( $week_shipments as $s ) {
+				$packages             = json_decode( $s->packages, true );
+				$week_shipments_count += count( $packages );
+			}
+
+			if ( $week_shipments_count < $per_week ) {
+				$fedex_pickup_rates = floatval( $fedex_pickup_rates );
+				$pickup_packages    = count( $data->packages );
+
+				while ( ( $pickup_packages + $week_shipments_count ) > $per_week ) {
+					$pickup_packages --;
+				}
+
+				$pickup_rates = $fedex_pickup_rates * $pickup_packages;
+			}
 		}
 	}
 
@@ -422,6 +458,66 @@ class WPSP_Ezeeship
 		];
 
 		return $services;
+	}
+
+	private function get_week_pickup_shipments_by_address( $carrier, $address_id, $pickup_date )
+	{
+		list( $start_date, $end_date ) = $this->week_start_end( $pickup_date );
+		$where = [
+			"fromAddress_id = '{$address_id}'",
+			"server = '{$carrier}'",
+			"pickup_date BETWEEN '{$start_date}' AND '{$end_date}'"
+		];
+
+		return WPSP_Shipment::get_shipments_where( $where );
+	}
+
+	private function get_today_pickup_shipments_by_address( $carrier, $address_id, $pickup_date )
+	{
+		list( $start_date, $end_date ) = $this->start_end_date( $pickup_date );
+		$where = [
+			"fromAddress_id = '{$address_id}'",
+			"server = '{$carrier}'",
+			"pickup_date BETWEEN '{$start_date}' AND '{$end_date}'"
+		];
+
+		return WPSP_Shipment::get_shipments_where( $where );
+	}
+
+	private function start_end_date( $now_date )
+	{
+		$start_date = date( 'Y-m-d', strtotime( $now_date ) ) . ' 00:00:00';
+		$end_date   = date( 'Y-m-d', strtotime( $now_date ) ) . ' 23:59:00';
+
+		return [ $start_date, $end_date ];
+	}
+
+	private function week_start_end( $now_date = false )
+	{
+		if ( $now_date === false ) {
+			$now_date = date( 'Y-m-d H:i:s' );
+		}
+
+		$start_time = '00:00:00';
+		$end_time   = '23:59:00';
+
+		$now       = strtotime( $now_date );
+		$start     = date( "Y-m-d", strtotime( "last sunday", $now ) ) . ' ' . $start_time;
+		$end       = date( "Y-m-d", strtotime( "next sunday", $now ) ) . ' ' . $end_time;
+		$is_sunday = strtolower( date( 'D', $now ) ) == 'sun';
+
+		if ( $is_sunday ) {
+			$time_now = strtotime( date( 'Y-m-d H:i:s', $now ) );
+			$s_time   = strtotime( date( 'Y-m-d', $now ) . ' ' . $start_time );
+
+			if ( $time_now >= $s_time ) {
+				$start = date( "Y-m-d", $now ) . ' ' . $start_time;
+			} else {
+				$end = date( "Y-m-d", $now ) . ' ' . $end_time;
+			}
+		}
+
+		return [ $start, $end ];
 	}
 }
 

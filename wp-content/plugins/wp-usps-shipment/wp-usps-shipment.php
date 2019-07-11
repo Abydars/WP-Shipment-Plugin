@@ -630,6 +630,6 @@ class WPSP_USPS
 	}
 }
 
-if ( class_exists( 'WPSP' ) ) {
+if ( defined( 'WPSP_LANG' ) ) {
 	new WPSP_USPS();
 }

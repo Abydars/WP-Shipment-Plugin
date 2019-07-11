@@ -30,6 +30,19 @@ class WPSP_Shipment
 		return $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}shipments ORDER BY id {$order_by}" );
 	}
 
+	static function get_shipments_where( $where = [] )
+	{
+		global $wpdb;
+
+		$query = "SELECT * FROM {$wpdb->prefix}shipments WHERE 1=1";
+
+		foreach ( $where as $v ) {
+			$query .= ' AND ' . $v;
+		}
+
+		return $wpdb->get_results( $query );
+	}
+
 	static function update_shipment( $id, $data )
 	{
 		global $wpdb;

@@ -121,7 +121,7 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 						) );
 
 						if ( class_exists( 'WPSP' ) ) {
-						    // TODO: Maintain Order History
+							// TODO: Maintain Order History
 
 							$newbalance = $this->getUserFunds( $customer_id );
 
@@ -289,7 +289,7 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 
 }
 
-if ( class_exists( 'WPSP' ) ) {
+if ( defined( 'WPSP_LANG' ) ) {
 	$loader = new WPSP_LoadFunds();
 
 	register_activation_hook( __FILE__, array( $loader, 'activation' ) );

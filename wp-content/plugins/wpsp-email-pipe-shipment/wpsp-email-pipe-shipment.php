@@ -171,6 +171,6 @@ if ( ! class_exists( 'WPSP_EmailPipe' ) ) {
 	}
 }
 
-if ( class_exists( 'WPSP' ) ) {
+if ( defined( 'WPSP_LANG' ) ) {
 	new WPSP_EmailPipe();
 }
