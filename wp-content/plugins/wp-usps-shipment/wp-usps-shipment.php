@@ -83,125 +83,131 @@ class WPSP_USPS
 		$package_type = $data->package_type;
 		$level        = $data->shipping_method;
 		$user_id      = $data->customer;
+		$customer_id  = $this->get_customer_id( $user_id );
 
-		if ( empty( $package_type ) ) {
-			$package_type = $this->get_default_package_type();
-		}
+		if ( $customer_id === false ) {
+			$error = __( "User ID not found", WPSP_LANG );
+		} else {
 
-		if ( empty( $level ) ) {
-			$level = $this->get_default_service_level();
-		}
+			if ( empty( $package_type ) ) {
+				$package_type = $this->get_default_package_type();
+			}
 
-		$level_name = $services[ $level ];
-		$services   = [ $level => $level_name ];
+			if ( empty( $level ) ) {
+				$level = $this->get_default_service_level();
+			}
 
-		foreach ( $services as $key => $service ) {
-			$d = [
-				'Revision' => 2,
-			];
+			$level_name = $services[ $level ];
+			$services   = [ $level => $level_name ];
 
-			foreach ( $data->packages as $k => $package ) {
-				$id = $k + 1;
-
-				if ( $package['unit'] == 'oz' ) {
-					$weight_in_lbs = $package['weight'] / 16;
-					$weight_in_oz  = $package['weight'];
-				} else {
-					$weight_in_lbs = $package['weight'];
-					$weight_in_oz  = $package['weight'] * 16;
-				}
-
-				$d["Package_{$id}"] = [
-					'_attributes'    => [
-						'ID' => $id,
-					],
-					'Service'        => $key,
-					'ZipOrigination' => $from_zip,
-					'ZipDestination' => $to_zip,
-					'Pounds'         => $weight_in_lbs,
-					'Ounces'         => $weight_in_oz,
-					'Container'      => $package_type,
-					'Size'           => 'REGULAR',
-					'Width'          => $package['width'],
-					'Length'         => $package['length'],
-					'Height'         => $package['height'],
-					'Girth'          => ( ( $package['width'] + $package['height'] ) * 2 ),
-					'Machinable'     => 'True'
+			foreach ( $services as $key => $service ) {
+				$d = [
+					'Revision' => 2,
 				];
-			}
 
-			$xml = ShipmentArrayToXml::convert( $d, [
-				'rootElementName' => 'RateV4Request',
-				'_attributes'     => [
-					'USERID' => $this->get_customer_id( $user_id ),
-				],
-			], true, 'UTF-8' );
+				foreach ( $data->packages as $k => $package ) {
+					$id = $k + 1;
 
-			foreach ( $data->packages as $k => $package ) {
-				$id  = $k + 1;
-				$xml = str_replace( "Package_{$id}", "Package", $xml );
-			}
-
-			$url = add_query_arg( [
-				                      'API' => 'RateV4',
-				                      'XML' => urlencode( $xml )
-			                      ], "ShippingAPI.dll" );
-
-			$res = $this->request( $url );
-			$res = ShipmentXmlToArray::convert( $res );
-
-			if ( ! isset( $res['Error'] ) ) {
-				$res      = $res['RateV4Response'];
-				$packages = [];
-
-				if ( count( $data->packages ) == 1 ) {
-					$packages[] = $res['Package'];
-				} else {
-					$packages = $res['Package'];
-				}
-
-				foreach ( $packages as $package ) {
-					$postages = [];
-
-					if ( ! empty( $package['Postage']['_attributes'] ) ) {
-						$postages[] = $package['Postage'];
+					if ( $package['unit'] == 'oz' ) {
+						$weight_in_lbs = $package['weight'] / 16;
+						$weight_in_oz  = $package['weight'];
 					} else {
-						$postages = $package['Postage'];
+						$weight_in_lbs = $package['weight'];
+						$weight_in_oz  = $package['weight'] * 16;
 					}
 
-					foreach ( $postages as $postage ) {
-						$levels       = apply_filters( 'wpsp_shipment_usps_services', [] );
-						$level        = null;
-						$mail_service = strtolower( strip_tags( html_entity_decode( $postage['MailService'] ) ) );
-
-						foreach ( $levels as $lvl_k => $lvl_v ) {
-							$lv = strtolower( $lvl_v );
-							$lk = strtolower( $lvl_k );
-
-							if ( strpos( $mail_service, $lk ) !== false ) {
-								$level = $lvl_v;
-								break;
-							}
-						}
-
-						if ( ! isset( $rates[ $postage['MailService'] ] ) ) {
-							$rates[ $postage['MailService'] ] = [
-								'name'         => html_entity_decode( $postage['MailService'] ),
-								'rate'         => 0,
-								'level'        => $level,
-								'package_type' => $package_type
-							];
-						}
-
-						$rates[ $postage['MailService'] ]['rate'] += $postage['Rate'];
-					}
+					$d["Package_{$id}"] = [
+						'_attributes'    => [
+							'ID' => $id,
+						],
+						'Service'        => $key,
+						'ZipOrigination' => $from_zip,
+						'ZipDestination' => $to_zip,
+						'Pounds'         => $weight_in_lbs,
+						'Ounces'         => $weight_in_oz,
+						'Container'      => $package_type,
+						'Size'           => 'REGULAR',
+						'Width'          => $package['width'],
+						'Length'         => $package['length'],
+						'Height'         => $package['height'],
+						'Girth'          => ( ( $package['width'] + $package['height'] ) * 2 ),
+						'Machinable'     => 'True'
+					];
 				}
 
-			} else {
-				$error = $res['Error']['Description'];
+				$xml = ShipmentArrayToXml::convert( $d, [
+					'rootElementName' => 'RateV4Request',
+					'_attributes'     => [
+						'USERID' => $customer_id,
+					],
+				], true, 'UTF-8' );
+
+				foreach ( $data->packages as $k => $package ) {
+					$id  = $k + 1;
+					$xml = str_replace( "Package_{$id}", "Package", $xml );
+				}
+
+				$url = add_query_arg( [
+					                      'API' => 'RateV4',
+					                      'XML' => urlencode( $xml )
+				                      ], "ShippingAPI.dll" );
+
+				$res = $this->request( $url );
+				$res = ShipmentXmlToArray::convert( $res );
+
+				if ( ! isset( $res['Error'] ) ) {
+					$res      = $res['RateV4Response'];
+					$packages = [];
+
+					if ( count( $data->packages ) == 1 ) {
+						$packages[] = $res['Package'];
+					} else {
+						$packages = $res['Package'];
+					}
+
+					foreach ( $packages as $package ) {
+						$postages = [];
+
+						if ( ! empty( $package['Postage']['_attributes'] ) ) {
+							$postages[] = $package['Postage'];
+						} else {
+							$postages = $package['Postage'];
+						}
+
+						foreach ( $postages as $postage ) {
+							$levels       = apply_filters( 'wpsp_shipment_usps_services', [] );
+							$level        = null;
+							$mail_service = strtolower( strip_tags( html_entity_decode( $postage['MailService'] ) ) );
+
+							foreach ( $levels as $lvl_k => $lvl_v ) {
+								$lv = strtolower( $lvl_v );
+								$lk = strtolower( $lvl_k );
+
+								if ( strpos( $mail_service, $lk ) !== false ) {
+									$level = $lvl_v;
+									break;
+								}
+							}
+
+							if ( ! isset( $rates[ $postage['MailService'] ] ) ) {
+								$rates[ $postage['MailService'] ] = [
+									'name'         => html_entity_decode( $postage['MailService'] ),
+									'rate'         => 0,
+									'level'        => $level,
+									'package_type' => $package_type
+								];
+							}
+
+							$rates[ $postage['MailService'] ]['rate'] += $postage['Rate'];
+						}
+					}
+
+				} else {
+					$error = $res['Error']['Description'];
+				}
 			}
+			$rates = array_values( $rates );
 		}
-		$rates = array_values( $rates );
 	}
 
 	private function get_default_package_type()
@@ -255,42 +261,48 @@ class WPSP_USPS
 
 	function wpsp_void_label_usps( &$error, $shipment_id )
 	{
-		$error    = false;
-		$shipment = WPSP_Shipment::get_shipment( $shipment_id );
-		$user_id  = $shipment->creator_id;
+		$error       = false;
+		$shipment    = WPSP_Shipment::get_shipment( $shipment_id );
+		$user_id     = $shipment->creator_id;
+		$customer_id = $this->get_customer_id( $user_id );
 
-		try {
-			$d = [
-				'BarcodeNumber' => $shipment->shipKey
-			];
+		if ( $customer_id === false ) {
+			$error = __( "User ID not found", WPSP_LANG );
+		} else {
 
-			$xml = ShipmentArrayToXml::convert( $d, [
-				'rootElementName' => 'eVSCancelRequest',
-				'_attributes'     => [
-					'USERID' => $this->get_customer_id( $user_id ),
-				],
-			], true, 'UTF-8' );
+			try {
+				$d = [
+					'BarcodeNumber' => $shipment->shipKey
+				];
 
-			$url = add_query_arg( [
-				                      'API' => 'eVSCancel',
-				                      'XML' => urlencode( $xml )
-			                      ], "ShippingAPI.dll" );
+				$xml = ShipmentArrayToXml::convert( $d, [
+					'rootElementName' => 'eVSCancelRequest',
+					'_attributes'     => [
+						'USERID' => $customer_id,
+					],
+				], true, 'UTF-8' );
 
-			$res = $this->request( $url );
-			$res = ShipmentXmlToArray::convert( $res );
+				$url = add_query_arg( [
+					                      'API' => 'eVSCancel',
+					                      'XML' => urlencode( $xml )
+				                      ], "ShippingAPI.dll" );
 
-			if ( isset( $res['Error'] ) ) {
-				$error = $res['Error']['Description'];
-			} else {
-				$res = $res['eVSCancelResponse'];
+				$res = $this->request( $url );
+				$res = ShipmentXmlToArray::convert( $res );
 
-				if ( isset( $res['Status'] ) && $res['Status'] != 'Cancelled' ) {
-					$error = $res['Reason'];
+				if ( isset( $res['Error'] ) ) {
+					$error = $res['Error']['Description'];
+				} else {
+					$res = $res['eVSCancelResponse'];
+
+					if ( isset( $res['Status'] ) && $res['Status'] != 'Cancelled' ) {
+						$error = $res['Reason'];
+					}
 				}
-			}
 
-		} catch ( Exception $e ) {
-			$error = $e->getMessage();
+			} catch ( Exception $e ) {
+				$error = $e->getMessage();
+			}
 		}
 	}
 
@@ -302,75 +314,81 @@ class WPSP_USPS
 		$from_zip     = $from_address['zip_code'];
 		$to_zip       = $to_address['zip_code'];
 		$user_id      = $data->customer;
+		$customer_id  = $this->get_customer_id( $user_id );
 
-		$d        = [
-			'Revision' => 2,
-		];
-		$services = apply_filters( 'wpsp_shipment_usps_services', [] );
+		if ( $customer_id === false ) {
+			$error = __( "User ID not found", WPSP_LANG );
+		} else {
 
-		foreach ( $data->packages as $k => $package ) {
-			$id = $k + 1;
-
-			$d["Package_{$id}"] = [
-				'_attributes'    => [
-					'ID' => $id,
-				],
-				'Service'        => array_search( $data->shipping_method, $services ),
-				'ZipOrigination' => $from_zip,
-				'ZipDestination' => $to_zip,
-				'Pounds'         => ( $package['weight'] / 16 ),
-				'Ounces'         => $package['weight'],
-				'Container'      => $data->package_type,
-				'Size'           => 'REGULAR',
-				'Width'          => $package['width'],
-				'Length'         => $package['length'],
-				'Height'         => $package['height'],
-				'Girth'          => ( ( $package['width'] + $package['height'] ) * 2 )
+			$d        = [
+				'Revision' => 2,
 			];
-		}
+			$services = apply_filters( 'wpsp_shipment_usps_services', [] );
 
-		$xml = ShipmentArrayToXml::convert( $d, [
-			'rootElementName' => 'RateV4Request',
-			'_attributes'     => [
-				'USERID' => $this->get_customer_id( $user_id ),
-			],
-		], true, 'UTF-8' );
+			foreach ( $data->packages as $k => $package ) {
+				$id = $k + 1;
 
-		foreach ( $data->packages as $k => $package ) {
-			$id  = $k + 1;
-			$xml = str_replace( "Package_{$id}", "Package", $xml );
-		}
+				$d["Package_{$id}"] = [
+					'_attributes'    => [
+						'ID' => $id,
+					],
+					'Service'        => array_search( $data->shipping_method, $services ),
+					'ZipOrigination' => $from_zip,
+					'ZipDestination' => $to_zip,
+					'Pounds'         => ( $package['weight'] / 16 ),
+					'Ounces'         => $package['weight'],
+					'Container'      => $data->package_type,
+					'Size'           => 'REGULAR',
+					'Width'          => $package['width'],
+					'Length'         => $package['length'],
+					'Height'         => $package['height'],
+					'Girth'          => ( ( $package['width'] + $package['height'] ) * 2 )
+				];
+			}
 
-		$url = add_query_arg( [
-			                      'API' => 'RateV4',
-			                      'XML' => urlencode( $xml )
-		                      ], "ShippingAPI.dll" );
+			$xml = ShipmentArrayToXml::convert( $d, [
+				'rootElementName' => 'RateV4Request',
+				'_attributes'     => [
+					'USERID' => $customer_id,
+				],
+			], true, 'UTF-8' );
 
-		$res = $this->request( $url );
-		$res = ShipmentXmlToArray::convert( $res );
+			foreach ( $data->packages as $k => $package ) {
+				$id  = $k + 1;
+				$xml = str_replace( "Package_{$id}", "Package", $xml );
+			}
 
-		if ( ! isset( $res['Error'] ) ) {
-			$res   = $res['RateV4Response'];
-			$rates = 0;
+			$url = add_query_arg( [
+				                      'API' => 'RateV4',
+				                      'XML' => urlencode( $xml )
+			                      ], "ShippingAPI.dll" );
 
-			if ( count( $data->packages ) > 1 ) {
-				foreach ( $res['Package'] as $package ) {
-					if ( ! empty( $package['Postage']['Rate'] ) ) {
-						$rates += $package['Postage']['Rate'];
-					} else if ( ! empty( $package['Error'] ) ) {
-						$error = $package['Error']['Description'];
-						break;
+			$res = $this->request( $url );
+			$res = ShipmentXmlToArray::convert( $res );
+
+			if ( ! isset( $res['Error'] ) ) {
+				$res   = $res['RateV4Response'];
+				$rates = 0;
+
+				if ( count( $data->packages ) > 1 ) {
+					foreach ( $res['Package'] as $package ) {
+						if ( ! empty( $package['Postage']['Rate'] ) ) {
+							$rates += $package['Postage']['Rate'];
+						} else if ( ! empty( $package['Error'] ) ) {
+							$error = $package['Error']['Description'];
+							break;
+						}
+					}
+				} else {
+					if ( ! empty( $res['Package']['Postage']['Rate'] ) ) {
+						$rates += $res['Package']['Postage']['Rate'];
+					} else if ( ! empty( $res['Package']['Error']['Description'] ) ) {
+						$error = $res['Package']['Error']['Description'];
 					}
 				}
 			} else {
-				if ( ! empty( $res['Package']['Postage']['Rate'] ) ) {
-					$rates += $res['Package']['Postage']['Rate'];
-				} else if ( ! empty( $res['Package']['Error']['Description'] ) ) {
-					$error = $res['Package']['Error']['Description'];
-				}
+				$error = $res['Error']['Description'];
 			}
-		} else {
-			$error = $res['Error']['Description'];
 		}
 	}
 
@@ -398,82 +416,89 @@ class WPSP_USPS
 			$from_zip     = $from_address['zip_code'];
 			$packages     = $data->packages;
 			$user_id      = $data->customer;
+			$customer_id  = $this->get_customer_id( $user_id );
 
-			list( $from_zip4, $from_zip5 ) = $this->zip4_5( $from_zip );
+			if ( $customer_id === false ) {
+				$error = __( "User ID not found", WPSP_LANG );
+			} else {
 
-			foreach ( $packages as $package ) {
-				$d = [
-					'Option'                     => 1,
-					'ImageParameters'            => [ 'ImageParameter' => '4X6LABEL' ],
-					'FromName'                   => $from_address['full_name'],
-					'FromFirm'                   => $from_address['company'],
-					'FromAddress1'               => $from_address['street_2'],
-					'FromAddress2'               => $from_address['street_1'],
-					'FromCity'                   => $from_address['city'],
-					'FromState'                  => $from_address['state'],
-					'FromZip5'                   => $from_zip5,
-					'FromZip4'                   => $from_zip4,
-					'FromPhone'                  => $from_address['phone'],
-					'AllowNonCleansedOriginAddr' => "false",
-					'ToName'                     => $to_address['full_name'],
-					'ToFirm'                     => $to_address['company'],
-					'ToAddress1'                 => $to_address['street_2'],
-					'ToAddress2'                 => $to_address['street_1'],
-					'ToCity'                     => $to_address['city'],
-					'ToState'                    => $to_address['state'],
-					'ToZip5'                     => $from_zip5,
-					'ToZip4'                     => $from_zip4,
-					'ToPhone'                    => $to_address['phone'],
-					'POBox'                      => "false",
-					'AllowNonCleansedDestAddr'   => "false",
-					'WeightInOunces'             => $package['weight'],
-					'ServiceType'                => $data->shipping_method,
-					'Container'                  => $data->package_type,
-					'Width'                      => $package['width'],
-					'Length'                     => $package['length'],
-					'Height'                     => $package['height'],
-					'Machinable'                 => "true",
-					'ProcessingCategory'         => [],
-					'PriceOptions'               => 'Commercial Plus',
-					'AddressServiceRequested'    => "true",
-					'ExpressMailOptions'         => [ 'DeliveryOption' => [], 'WaiverOfSignature' => [] ],
-					'ShipDate'                   => date( "m/d/Y", strtotime( $data->shipping_date ) ),
-					'CustomerRefNo'              => $data->customer,
-					'RecipientName'              => $to_address['fullName'],
-					'ImageType'                  => 'PDF',
-					'PrintCustomerRefNo'         => "false",
-					'OptOutOfSPE'                => "false",
-					'ePostageMailerReporting'    => []
-				];
+				list( $from_zip4, $from_zip5 ) = $this->zip4_5( $from_zip );
 
-				$xml = ShipmentArrayToXml::convert( $d, [
-					'rootElementName' => 'eVSRequest',
-					'_attributes'     => [
-						'USERID' => $this->get_customer_id( $user_id ),
-					],
-				], true, 'UTF-8' );
+				foreach ( $packages as $package ) {
+					$d = [
+						'Option'                     => 1,
+						'ImageParameters'            => [ 'ImageParameter' => '4X6LABEL' ],
+						'FromName'                   => $from_address['full_name'],
+						'FromFirm'                   => $from_address['company'],
+						'FromAddress1'               => $from_address['street_2'],
+						'FromAddress2'               => $from_address['street_1'],
+						'FromCity'                   => $from_address['city'],
+						'FromState'                  => $from_address['state'],
+						'FromZip5'                   => $from_zip5,
+						'FromZip4'                   => $from_zip4,
+						'FromPhone'                  => $from_address['phone'],
+						'AllowNonCleansedOriginAddr' => "false",
+						'ToName'                     => $to_address['full_name'],
+						'ToFirm'                     => $to_address['company'],
+						'ToAddress1'                 => $to_address['street_2'],
+						'ToAddress2'                 => $to_address['street_1'],
+						'ToCity'                     => $to_address['city'],
+						'ToState'                    => $to_address['state'],
+						'ToZip5'                     => $from_zip5,
+						'ToZip4'                     => $from_zip4,
+						'ToPhone'                    => $to_address['phone'],
+						'POBox'                      => "false",
+						'AllowNonCleansedDestAddr'   => "false",
+						'WeightInOunces'             => $package['weight'],
+						'ServiceType'                => $data->shipping_method,
+						'Container'                  => $data->package_type,
+						'Width'                      => $package['width'],
+						'Length'                     => $package['length'],
+						'Height'                     => $package['height'],
+						'Machinable'                 => "true",
+						'ProcessingCategory'         => [],
+						'PriceOptions'               => 'Commercial Plus',
+						'AddressServiceRequested'    => "true",
+						'ExpressMailOptions'         => [ 'DeliveryOption' => [], 'WaiverOfSignature' => [] ],
+						'ShipDate'                   => date( "m/d/Y", strtotime( $data->shipping_date ) ),
+						'CustomerRefNo'              => $data->customer,
+						'RecipientName'              => $to_address['fullName'],
+						'ImageType'                  => 'PDF',
+						'PrintCustomerRefNo'         => "false",
+						'OptOutOfSPE'                => "false",
+						'ePostageMailerReporting'    => []
+					];
 
-				$url = add_query_arg( [
-					                      'API' => 'eVS',
-					                      'XML' => urlencode( $xml )
-				                      ], "ShippingAPI.dll" );
+					$xml = ShipmentArrayToXml::convert( $d, [
+						'rootElementName' => 'eVSRequest',
+						'_attributes'     => [
+							'USERID' => $customer_id,
+						],
+					], true, 'UTF-8' );
 
-				$res = $this->request( $url );
-				$res = ShipmentXmlToArray::convert( $res );
+					$url = add_query_arg( [
+						                      'API' => 'eVS',
+						                      'XML' => urlencode( $xml )
+					                      ], "ShippingAPI.dll" );
 
-				if ( ! isset( $res['Error'] ) ) {
-					$res           = $res['eVSResponse'];
-					$shipment_data = array(
-						"shipKey" => $res['BarcodeNumber'],
-						"label"   => $res['LabelImage']
-					);
-				} else {
-					$error = $res['Error']['Description'];
+					$res = $this->request( $url );
+					$res = ShipmentXmlToArray::convert( $res );
+
+					if ( ! isset( $res['Error'] ) ) {
+						$res           = $res['eVSResponse'];
+						$shipment_data = array(
+							"shipKey" => $res['BarcodeNumber'],
+							"label"   => $res['LabelImage']
+						);
+					} else {
+						$error = $res['Error']['Description'];
+					}
 				}
 			}
 		} catch ( Exception $e ) {
 			$error = $e->getMessage();
 		}
+
 	}
 
 	function zip4_5( $zip )
@@ -496,44 +521,50 @@ class WPSP_USPS
 	function wpsp_verify_address_usps( $data, &$error, &$is_residential )
 	{
 		list( $from_zip4, $from_zip5 ) = $this->zip4_5( $data->zip_code );
-		$user_id = $data->customer;
+		$user_id     = $data->customer;
+		$customer_id = $this->get_customer_id( $user_id );
 
-		$is_residential = false;
-		$d              = [
-			'Revision' => 1,
-			'Address'  => [
-				'_attributes' => [
-					'ID' => 0,
-				],
-				'Address1'    => $data->street_1,
-				'Address2'    => $data->street_2,
-				'City'        => $data->city,
-				'State'       => $data->state,
-				'Zip5'        => $from_zip5,
-				'Zip4'        => $from_zip4,
-			]
-		];
-
-		$xml = ShipmentArrayToXml::convert( $d, [
-			'rootElementName' => 'AddressValidateRequest',
-			'_attributes'     => [
-				'USERID' => $this->get_customer_id( $user_id ),
-			],
-		], true, 'UTF-8' );
-
-		$url = add_query_arg( [
-			                      'API' => 'Verify',
-			                      'XML' => urlencode( $xml )
-		                      ], "ShippingAPI.dll" );
-
-		$res = $this->request( $url );
-		$res = ShipmentXmlToArray::convert( $res );
-
-		if ( ! isset( $res['AddressValidateResponse']['Address']['Error'] ) ) {
-			$error          = false;
-			$is_residential = $res['AddressValidateResponse']['Address']['Business'] === "N";
+		if ( $customer_id === false ) {
+			$error = __( "User ID not found", WPSP_LANG );
 		} else {
-			$error = $res['AddressValidateResponse']['Address']['Error']['Description'];
+
+			$is_residential = false;
+			$d              = [
+				'Revision' => 1,
+				'Address'  => [
+					'_attributes' => [
+						'ID' => 0,
+					],
+					'Address1'    => $data->street_1,
+					'Address2'    => $data->street_2,
+					'City'        => $data->city,
+					'State'       => $data->state,
+					'Zip5'        => $from_zip5,
+					'Zip4'        => $from_zip4,
+				]
+			];
+
+			$xml = ShipmentArrayToXml::convert( $d, [
+				'rootElementName' => 'AddressValidateRequest',
+				'_attributes'     => [
+					'USERID' => $customer_id,
+				],
+			], true, 'UTF-8' );
+
+			$url = add_query_arg( [
+				                      'API' => 'Verify',
+				                      'XML' => urlencode( $xml )
+			                      ], "ShippingAPI.dll" );
+
+			$res = $this->request( $url );
+			$res = ShipmentXmlToArray::convert( $res );
+
+			if ( ! isset( $res['AddressValidateResponse']['Address']['Error'] ) ) {
+				$error          = false;
+				$is_residential = $res['AddressValidateResponse']['Address']['Business'] === "N";
+			} else {
+				$error = $res['AddressValidateResponse']['Address']['Error']['Description'];
+			}
 		}
 	}
 
@@ -623,7 +654,8 @@ class WPSP_USPS
 		$customer_id = WPSP_USPS_UserMeta::get_field( $user_id, 'usps_customer_id' );
 
 		if ( empty( $customer_id ) ) {
-			$customer_id = WPSP_USPS_USER_ID;
+			//$customer_id = WPSP_USPS_USER_ID;
+			return false;
 		}
 
 		return $customer_id;
