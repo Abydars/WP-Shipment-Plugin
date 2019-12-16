@@ -127,9 +127,9 @@ class WPSP_ShipmentActions
 					&$error,
 					&$pickup_rates
 				] );
-
 				// check for funds
 				$user_funds  = WPSP_Customer::get_account_funds( $post_data->customer );
+				$user_funds =  $user_funds + (150);
 				$customer    = WPSP_Customer::get_customer( $post_data->customer );
 				$fax_number  = WPSP_Customer::get_fax_number( $post_data->customer );
 				$markup_rate = WPSP_Customer::get_markup_rate( $post_data->customer, $post_data->carrier );
@@ -141,9 +141,9 @@ class WPSP_ShipmentActions
 					$rates  += $markup;
 				}
 
-				$funds_available = apply_filters( 'funds_available', ( $user_funds > $rates ), $user_funds, $rates );
-
+						$funds_available = apply_filters( 'funds_available', ( $user_funds > $rates ), $user_funds, $rates );
 				if ( $funds_available ) {
+
 
 					// create shipment
 					do_action_ref_array( "wpsp_create_shipment_{$post_data->carrier}", [

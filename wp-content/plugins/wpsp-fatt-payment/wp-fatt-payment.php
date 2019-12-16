@@ -32,7 +32,7 @@ if ( ! class_exists( 'WPSP_FattCustomer' ) ) {
 			add_action( 'admin_head', array( $this, 'ajax_form_request' ) );
 			add_action( 'wp_ajax_save_payment_method', array( $this, 'save_payment_method' ) );
 			add_action( 'wp_ajax_nopriv_save_payment_method', array( $this, 'save_payment_method' ) );
-			add_filter( 'funds_available', array( $this, 'funds_available' ), 10, 2 );
+			add_filter( 'funds_available', array( $this, 'funds_available' ), 10, 3 );
 		}
 
 		function funds_available( $available, $funds, $rates )
