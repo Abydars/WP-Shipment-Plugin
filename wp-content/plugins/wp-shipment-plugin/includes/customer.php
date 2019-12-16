@@ -24,7 +24,7 @@ class WPSP_Customer
 			$value = 0;
 		}
 
-		return floatval( $value );
+		return apply_filters( 'get_user_funds', floatval( $value ) );
 	}
 
 	static function deduct_funds( $id, $amount )

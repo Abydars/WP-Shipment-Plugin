@@ -1,0 +1,88 @@
+*** Storefront Designer Changelog ***
+
+2016.08.25 - version 1.8.4
+ * Fix - Header layout when using the "inline" option.
+
+2016.05.12 - version 1.8.3
+ * Fix - Typo in header layout settings.
+
+2016.05.11 - version 1.8.2
+ * Fix - Button scale option no longer breaks menu toggle button layout on handheld orientation.
+ * Fix - Logo alignment when using the centrally aligned header option and WordPress 4.5's logo feature.
+
+2016.04.13 - version 1.8.1
+ * Fix - Header width when using max-width layout option and sticky header.
+
+2016.03.21 - version 1.8.0
+ * New - Storefront 2.0.0 compatibility.
+
+2016.01.25 - version 1.7.3
+* Tweak - Removed deprecated function usage.
+
+2015.12.02 - version 1.7.2
+* Fix - Sticky navigation issues with some child themes.
+
+2015.09.18 - version 1.7.1
+* Tweak - Use `Storefront_Custom_Radio_Image_Control` for the layout selector.
+
+2015.08.13 - version 1.7.0
+* New - The secondary navigation will now be displayed in the 'inline' header layout, if a menu has been assigned to that location.
+* Tweak - HTML no longer encoded in footer copyright text option.
+* Tweak - The sticky navigation control will no longer appear when incompatible header options have been selected.
+
+2015.07.07 - version 1.6.1
+* Fix - Sticky Header option in IE11.
+
+2015.05.15 - version 1.6.0
+* New - Additional typographical scale settings and improved input.
+* New - Additional button radii settings and improved input.
+* New - Additional button size settings and improved input.
+* Fix - Header width when using max width layout and sticky header options.
+* Tweak - Option layout tidy up.
+* Tweak - Hide the content background color setting when not using the content frame layout option.
+
+2015.04.23 - version 1.5.1
+* Fix - Sticky navigation background color.
+
+2015.02.12 - version 1.5.0
+* Fix - Sticky navigation styling when WooCommerce isn't activated.
+* Fix - Header margin when using sticky header option.
+* Fix - Navigation width when WooCommerce isn't activated.
+* Tweak - Improved some layout controls
+* Tweak - Improved how styles are added
+
+2015.02.11 - version 1.4.2
+* Fix - Compatibility between Storefront Parallax Hero and Max Width layout setting.
+
+2015.02.04 - version 1.4.1
+* Fix - Header layout selector in Firefox.
+
+2015.01.22 - version 1.4.0
+* New - Sticky navigation setting.
+* Tweak - Hide the 'More' section in the Customizer.
+
+2015.01.15 - version 1.3.1
+* Fix - Breadcrumb position when using sticky header.
+
+2015.01.07 - version 1.3.0
+* New - Button size setting.
+* Fix - Only apply sticky header script on desktop orientation.
+* Fix - Logo alignment in 'central' header layout.
+* Fix - Typographical scale option.
+* Dev - Adopted new Storefront grid system.
+
+2014.12.09 - version 1.2.0
+* New - Improved header layout picker.
+* New - Added 'Inline' header layout option.
+* New - Added button shadow setting.
+
+2014.11.25 - version 1.1.1
+* Fix - Now works with child themes.
+
+2014.11.24 - version 1.1.0
+* New - Copyright text option.
+* Tweak - Set defaults.
+* Localisation - Included .pot file.
+
+2014.09.09 - version 1.0.0
+* Initial release

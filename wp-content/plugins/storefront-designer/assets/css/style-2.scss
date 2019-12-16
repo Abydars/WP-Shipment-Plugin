@@ -1,0 +1,128 @@
+/**
+ * Styles applied to Storefront 2 specifically
+ */
+
+@import 'susy';
+@import 'bourbon';
+@import '../../../../themes/storefront/assets/sass/utils/variables';
+
+.sd-button-size-smallest {
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
+	.button,
+	.added_to_cart,
+	.widget-area .widget a.button,
+	.site-header-cart .widget_shopping_cart a.button {
+		padding: .327em .618em;
+	}
+
+	button.menu-toggle {
+		padding: .618em .857em .618em 2.618em;
+	}
+}
+
+.sd-button-size-smaller {
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
+	.button,
+	.added_to_cart,
+	.widget-area .widget a.button,
+	.site-header-cart .widget_shopping_cart a.button {
+		padding: .53em .857em;
+	}
+
+	button.menu-toggle {
+		padding: .618em .857em .618em 2.618em;
+	}
+}
+
+.sd-button-size-larger {
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
+	.button,
+	.added_to_cart,
+	.widget-area .widget a.button,
+	.site-header-cart .widget_shopping_cart a.button {
+		padding: .857em 1.618em;
+	}
+
+	button.menu-toggle {
+		padding: .618em .857em .618em 2.618em;
+	}
+}
+
+.sd-button-size-largest {
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
+	.button,
+	.added_to_cart,
+	.widget-area .widget a.button,
+	.site-header-cart .widget_shopping_cart a.button {
+		padding: 1em 2em;
+	}
+
+	button.menu-toggle {
+		padding: .618em .857em .618em 2.618em;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.sd-header-inline,
+	.sd-header-inline.woocommerce-active {
+		.site-header {
+			.inline-header-nav-wrap {
+				clear: none;
+				@include span(last 9 of 12);
+
+				.storefront-primary-navigation {
+					margin: 0;
+					padding: 0;
+					@include span( 6 of 9 );
+					background: transparent !important;
+				}
+
+				.site-header-cart {
+					@include span( last 3 of 9 );
+				}
+			}
+		}
+
+		&.sp-header-no-cart,
+		&.swc-header-no-cart {
+			.site-header {
+				.inline-header-nav-wrap {
+					.storefront-primary-navigation {
+						@include span( last 9 of 9 );
+					}
+				}
+			}
+		}
+	}
+
+	.sd-fixed-width {
+		&.sd-header-compact,
+		&.sd-header-expanded {
+			.storefront-primary-navigation {
+				margin-left: -4.4em;
+				margin-right: -4.4em;
+				padding-left: 4.4em;
+				padding-right: 4.4em;
+			}
+
+			.smm-mega-menu {
+				margin-left: -1.8em;
+				margin-right: -1.8em;
+				padding-left: 4.4em;
+				padding-right: 4.4em;
+			}
+		}
+	}
+}

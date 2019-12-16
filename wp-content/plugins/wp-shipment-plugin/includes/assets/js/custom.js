@@ -1,8 +1,21 @@
 jQuery(function ($) {
 
-    $('#listShipments').DataTable({
-        "order": [[1, "desc"]]
-    });
+    $('#listShipments').DataTable( {
+        order: [[0, "desc"]],
+        dom: 'Bfrtip',
+        buttons: [
+            {
+                extend: 'csv',
+                text: 'Export CSV',
+                exportOptions: {
+                    columns: ':visible :not(.js-not-exportable)'
+                }
+            }
+
+        ]
+        // order: [[0, "desc"]]
+    } );
+
     $('.wpsp-datatable').DataTable();
 
     setTimeout(function () {
@@ -382,50 +395,60 @@ jQuery(function ($) {
 
         for (var key in all_rates) {
             var rate = all_rates[key];
-            var rates = rate['rates'];
             var name = rate['name'];
-            var pickup_rates = rate['pickup_rates'];
 
-            var $h2 = $('<h2>');
-            $h2.html(name);
-
-            if (pickup_rates > 0) {
-                //$h2.append('<small>Pickup rates will be applied - $' + pickup_rates.toFixed(2) + '</small>');
-            }
-
-            if (rates.length > 0) {
-                var $rates_tbl = $('<table/>');
-                var $rates_th = $('<thead><tr><th>Level</th><th>Rate</th><th>Action</th></tr></thead>');
-
-                $rates_tbl.append($rates_th);
-
-                for (var i in rates) {
-                    var level_rate = rates[i];
-
-                    var $tr = $('<tr/>');
-                    var $level_td = $('<td/>');
-                    var $total_rate_td = $('<td/>');
-                    var $action_td = $('<td/>');
-                    var $select_btn = $('<button/>');
-
-                    $select_btn.attr('data-carrier', key);
-                    $select_btn.attr('data-level', level_rate.level);
-                    $select_btn.attr('data-package-type', level_rate.package_type);
-                    $select_btn.text('Select');
-
-                    $level_td.html(level_rate.name);
-                    $total_rate_td.text('$' + level_rate.total);
-                    $action_td.append($select_btn);
-
-                    $tr.append($level_td)
-                        .append($total_rate_td)
-                        .append($action_td);
-
-                    $rates_tbl.append($tr);
-                }
+            if (rate.error != undefined) {
+                var $h2 = $('<h2>');
+                $h2.html(name);
+                $h2.append('<small>' + rate.error + '</small>');
 
                 $div.append($h2);
-                $div.append($rates_tbl);
+            } else {
+
+                var rates = rate['rates'];
+                var pickup_rates = rate['pickup_rates'];
+
+                var $h2 = $('<h2>');
+                $h2.html(name);
+
+                if (pickup_rates > 0) {
+                    //$h2.append('<small>Pickup rates will be applied - $' + pickup_rates.toFixed(2) + '</small>');
+                }
+
+                if (rates.length > 0) {
+                    var $rates_tbl = $('<table/>');
+                    var $rates_th = $('<thead><tr><th>Level</th><th>Rate</th><th>Action</th></tr></thead>');
+
+                    $rates_tbl.append($rates_th);
+
+                    for (var i in rates) {
+                        var level_rate = rates[i];
+
+                        var $tr = $('<tr/>');
+                        var $level_td = $('<td/>');
+                        var $total_rate_td = $('<td/>');
+                        var $action_td = $('<td/>');
+                        var $select_btn = $('<button/>');
+
+                        $select_btn.attr('data-carrier', key);
+                        $select_btn.attr('data-level', level_rate.level);
+                        $select_btn.attr('data-package-type', level_rate.package_type);
+                        $select_btn.text('Select');
+
+                        $level_td.html(level_rate.name);
+                        $total_rate_td.text('$' + level_rate.total);
+                        $action_td.append($select_btn);
+
+                        $tr.append($level_td)
+                            .append($total_rate_td)
+                            .append($action_td);
+
+                        $rates_tbl.append($tr);
+                    }
+
+                    $div.append($h2);
+                    $div.append($rates_tbl);
+                }
             }
         }
     }

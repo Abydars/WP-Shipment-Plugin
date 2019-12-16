@@ -141,7 +141,9 @@ class WPSP_ShipmentActions
 					$rates  += $markup;
 				}
 
-				if ( $user_funds > $rates ) {
+				$funds_available = apply_filters( 'funds_available', ( $user_funds > $rates ), $user_funds, $rates );
+
+				if ( $funds_available ) {
 
 					// create shipment
 					do_action_ref_array( "wpsp_create_shipment_{$post_data->carrier}", [
@@ -180,7 +182,8 @@ class WPSP_ShipmentActions
 							"rates"          => $rates,
 							"markupRate"     => $markup,
 							"labelRate"      => $label_rates,
-							"packages"       => json_encode( $post_data->packages )
+							"packages"       => json_encode( $post_data->packages ),
+							"tracking"       => ""
 						);
 
 						$columns = array_keys( $row );
@@ -188,6 +191,10 @@ class WPSP_ShipmentActions
 						$row     = array_filter( $row, function ( $key ) use ( $columns ) {
 							return in_array( $key, $columns );
 						}, ARRAY_FILTER_USE_KEY );
+
+						if ( ! empty( $row['tracking'] ) ) {
+							$row['tracking'] = json_encode( $row['tracking'] );
+						}
 
 						$inserted = $wpdb->insert( $wpdb->prefix . 'shipments', $row );
 
@@ -295,6 +302,8 @@ class WPSP_ShipmentActions
 								];
 								$response['message'] = __( 'Shipment created successfully', WPSP_LANG );
 								$response['nonce']   = wp_create_nonce( 'wpsp_save_label' );
+
+								do_action( 'wpsp_after_shipment_creation', $shipment_id );
 							}
 
 						} else {
@@ -469,6 +478,11 @@ class WPSP_ShipmentActions
 						}
 					}
 				}
+			} else {
+				$all_rates[ $carrier ] = [
+					'name'  => $carriers[ $carrier ],
+					'error' => $error
+				];
 			}
 		}
 

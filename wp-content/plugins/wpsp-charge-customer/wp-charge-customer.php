@@ -86,8 +86,8 @@ if ( ! class_exists( 'WPSP_ChargeCustomer' ) ) {
 					$res = $this->forte->createCustomer( $data );
 
 					if ( ! empty( $res['customer_token'] ) ) {
-						$customer_token = $res['customer_token'];
-						$url            = admin_url( 'admin.php?page=wpcc-customers' );
+						$customer_token    = $res['customer_token'];
+						$url               = admin_url( 'admin.php?page=wpcc-customers' );
 
 						update_user_meta( $post_data['customer'], 'forte_token', $customer_token );
 						update_user_meta( $post_data['customer'], 'forte_token_last_updated', date( 'Y-m-d H:i:s' ) );
@@ -197,6 +197,12 @@ if ( ! class_exists( 'WPSP_ChargeCustomer' ) ) {
 					WPCC_Customer::log( $customer->ID, $log_text );
 
 					// TODO: Maintain Order History
+					$wpdb->insert( "{$wpdb->prefix}funds_history", [
+						'customer_id' => $customer->ID,
+						'amount'      => $amount,
+						'date'        => date( 'Y-m-d H:i:s' ),
+						'notes'       => "Auto funds loaded"
+					] );
 
 					$filename     = apply_filters( 'wpsp_file_dir', "charge-customer-{$customer->ID}.pdf" );
 					$file_url     = apply_filters( 'wpsp_file_url', "charge-customer-{$customer->ID}.pdf" );

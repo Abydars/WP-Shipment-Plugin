@@ -46,9 +46,17 @@ class WPSP
 	{
 		wp_enqueue_style( 'wpsp_styles', WPSP_PLUGINS_URL . '/includes/assets/css/custom.css' );
 		wp_enqueue_style( 'wpsp_font_awesome', WPSP_PLUGINS_URL . '/includes/assets/fontawesome/css/all.css' );
-		wp_enqueue_style( 'wpsp_data-table-styles', 'https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css' );
+		wp_enqueue_style( 'wpsp_data-table-styles', 'https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css' );
+		wp_enqueue_style( 'wpsp_data-table-button-styles', 'https://cdn.datatables.net/buttons/1.4.0/css/buttons.dataTables.min.css' );
 		wp_enqueue_style( 'wpsp_chosen', WPSP_PLUGINS_URL . '/includes/assets/chosen/chosen.min.css' );
-		wp_enqueue_script( 'wpsp_data-table-script', 'https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js', [ 'jquery' ], rand( 0, 100 ) );
+		wp_enqueue_script( 'wpsp_data-table-script', 'https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js', [ 'jquery' ], rand( 0, 100 ) );
+		wp_enqueue_script( 'wpsp_data-table-button-script', 'https://cdn.datatables.net/buttons/1.4.0/js/dataTables.buttons.min.js', [ 'jquery' ], rand( 0, 100 ) );
+		wp_enqueue_script( 'wpsp_data-table-html5-script', 'https://cdn.datatables.net/buttons/1.4.0/js/buttons.html5.min.js', [ 'jquery' ], rand( 0, 100 ) );
+		wp_enqueue_script( 'wpsp_data-table-jszip-script', 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js', [ 'jquery' ], rand( 0, 100 ) );
+		wp_enqueue_script( 'wpsp_data-table-button-flash-script', 'https://cdn.datatables.net/buttons/1.4.0/js/buttons.flash.min.js', [ 'jquery' ], rand( 0, 100 ) );
+		wp_enqueue_script( 'wpsp_data-table-button-print-script', 'https://cdn.datatables.net/buttons/1.4.0/js/buttons.print.min.js', [ 'jquery' ], rand( 0, 100 ) );
+		wp_enqueue_script( 'wpsp_data-table-pdf-maker-script', 'https://cdn.rawgit.com/bpampuch/pdfmake/0.1.27/build/pdfmake.min.js', [ 'jquery' ], rand( 0, 100 ) );
+		wp_enqueue_script( 'wpsp_data-table-pdf-maker-fonts-script', 'https://cdn.rawgit.com/bpampuch/pdfmake/0.1.27/build/vfs_fonts.js', [ 'jquery' ], rand( 0, 100 ) );
 		wp_enqueue_script( 'wpsp_scripts', WPSP_PLUGINS_URL . '/includes/assets/js/custom.js', [ 'jquery' ], rand( 0, 100 ) );
 		wp_enqueue_script( 'jquery-ui-autocomplete' );
 		wp_enqueue_script( 'wpsp_chosen', WPSP_PLUGINS_URL . '/includes/assets/chosen/chosen.jquery.min.js', [ 'jquery' ], rand( 0, 100 ) );
@@ -97,7 +105,29 @@ class WPSP
 
 			include( 'templates/shipment-details.php' );
 		} else {
-			$shipments = WPSP_Shipment::get_shipments( 'desc' );
+			$where = [];
+
+			if ( ! empty( $_POST['ticket_id'] ) ) {
+				$where[] = "ticket_id = '{$_POST['ticket_id']}'";
+			}
+
+			if ( ! empty( $_POST['date_from'] ) && ! empty( $_POST['date_to'] ) ) {
+				$date_from = date( 'Y-m-d', strtotime( $_POST['date_from'] ) );
+				$date_to   = date( 'Y-m-d', strtotime( $_POST['date_to'] ) );
+				$where[]   = "DATE(creation_date) between '{$date_from}' AND '{$date_to}'";
+			} else if ( ! empty( $_POST['date_from'] ) ) {
+				$date_from = date( 'Y-m-d', strtotime( $_POST['date_from'] ) );
+				$where[]   = "DATE(creation_date) = '{$date_from}'";
+			} else if ( ! empty( $_POST['date_to'] ) ) {
+				$date_to = date( 'Y-m-d', strtotime( $_POST['date_to'] ) );
+				$where[] = "DATE(creation_date) = '{$date_to}'";
+			}
+
+			if ( empty( $where ) ) {
+				$shipments = WPSP_Shipment::get_shipments( 'desc' );
+			} else {
+				$shipments = WPSP_Shipment::get_shipments_where( $where );
+			}
 
 			include( 'templates/list_shipment.php' );
 		}
@@ -192,7 +222,7 @@ class WPSP
 					order_id int (9) DEFAULT 0,
 					ticket_id varchar(255) DEFAULT '',
 					creation_date varchar(25) NOT NULL,
-					shipKey varchar(100) DEFAULT '' NOT NULL,
+					shipKey varchar(255) DEFAULT '' NOT NULL,
 					status varchar(100) DEFAULT '' NOT NULL,
 					toAddress_id int (9) NOT NULL,
 					fromAddress_id int (9) NOT NULL,
@@ -209,6 +239,7 @@ class WPSP
 					markupRate float(25) DEFAULT 0,
 					labelRate float(25) DEFAULT 0,
 					packages longtext DEFAULT NULL,
+					tracking longtext DEFAULT NULL,
 					PRIMARY KEY  (id)" );
 		$this->create_table( 'packages', "id mediumint(9) NOT NULL AUTO_INCREMENT,
 					shipment_id mediumint(9) NOT NULL,

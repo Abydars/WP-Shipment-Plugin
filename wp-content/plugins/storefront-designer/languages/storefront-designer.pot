@@ -1,0 +1,156 @@
+# Copyright (C) 2015 Storefront Designer
+# This file is distributed under the same license as the Storefront Designer package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Storefront Designer 1.7.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/storefront-designer\n"
+"POT-Creation-Date: 2015-09-18 13:21:50+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: storefront-designer.php:139 storefront-designer.php:148
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: storefront-designer.php:167
+msgid ""
+"%sThanks for installing the Storefront Designer extension. To get started, "
+"visit the %sCustomizer%s.%s %sOpen the Customizer%s"
+msgstr ""
+
+#: storefront-designer.php:296
+msgid "Header Layout"
+msgstr ""
+
+#: storefront-designer.php:330
+msgid "Footer text"
+msgstr ""
+
+#: storefront-designer.php:331
+msgid "Tweak the copyright text in the footer."
+msgstr ""
+
+#: storefront-designer.php:354
+msgid "Display credit link"
+msgstr ""
+
+#: storefront-designer.php:355
+msgid "Toggle the Storefront/WooThemes credit link in the footer."
+msgstr ""
+
+#: storefront-designer.php:370
+msgid "Sticky header"
+msgstr ""
+
+#: storefront-designer.php:371
+msgid "Stick the site header to the top of the browser window."
+msgstr ""
+
+#: storefront-designer.php:386
+msgid "Sticky navigation"
+msgstr ""
+
+#: storefront-designer.php:387
+msgid "Stick the navigation to the top of the browser window when you scroll."
+msgstr ""
+
+#: storefront-designer.php:406
+msgid "Site width"
+msgstr ""
+
+#: storefront-designer.php:407
+msgid "Define the width of your site content"
+msgstr ""
+
+#: storefront-designer.php:434
+msgid "Content frame"
+msgstr ""
+
+#: storefront-designer.php:435
+msgid "Wraps the site content in a frame, offsetting it from the background."
+msgstr ""
+
+#: storefront-designer.php:452
+msgid "Content background color"
+msgstr ""
+
+#: storefront-designer.php:453
+msgid ""
+"Applied to the content background when utilising the content frame option"
+msgstr ""
+
+#: storefront-designer.php:468
+msgid "Background style"
+msgstr ""
+
+#: storefront-designer.php:469
+msgid "Choose a background style for your buttons"
+msgstr ""
+
+#: storefront-designer.php:498
+msgid "2D"
+msgstr ""
+
+#: storefront-designer.php:499
+msgid "Toggles the default \"3D\" button affect."
+msgstr ""
+
+#: storefront-designer.php:514
+msgid "Button shadows"
+msgstr ""
+
+#: storefront-designer.php:515
+msgid "Toggles the button text and box shadows"
+msgstr ""
+
+#: storefront-designer.php:543
+msgid "Button radius"
+msgstr ""
+
+#: storefront-designer.php:544
+msgid "Apply rounded corners to buttons"
+msgstr ""
+
+#: storefront-designer.php:565
+msgid "Button size"
+msgstr ""
+
+#: storefront-designer.php:566
+msgid "Increase / decrease the button size"
+msgstr ""
+
+#: storefront-designer.php:590
+msgid "Typographical scheme"
+msgstr ""
+
+#: storefront-designer.php:615
+msgid "Typographical scale"
+msgstr ""
+
+#: storefront-designer.php:616
+msgid "Adjust the overall font size and scale of your web site."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Storefront Designer"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://woothemes.com/products/storefront-designer/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Adds a bunch of additional design options to the Storefront theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WooThemes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://woothemes.com/"
+msgstr ""

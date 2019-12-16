@@ -70,7 +70,7 @@
                     <th>Labels</th>
                     <td>
 						<?php foreach ( $labels as $k => $label ) { ?>
-                            <a target="_blank" href="<?= $label ?>"><?= basename($label) ?></a>
+                            <a target="_blank" href="<?= $label ?>"><?= basename( $label ) ?></a>
 						<?php } ?>
                     </td>
                 </tr>
@@ -114,6 +114,26 @@
                     </tbody>
                 </table>
             </div>
+			<?php if ( ! empty( $details->tracking ) ) :
+				$trackings = json_decode( $details->tracking, true );
+				if ( ! empty( $trackings ) ) :
+					?>
+                    <div>
+                        <h1>Tracking Numbers</h1>
+                        <table>
+                            <tbody>
+							<?php foreach ( $trackings as $k => $tracking ) : ?>
+                                <tr>
+                                    <td>
+                                        <a target="_blank" href="<?= empty( $tracking['url'] ) ? '#' : $tracking['url'] ?>"><?= $tracking['id'] ?></a>
+                                    </td>
+                                </tr>
+							<?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+				<?php endif; ?>
+			<?php endif; ?>
         </div>
     </div>
 </div>

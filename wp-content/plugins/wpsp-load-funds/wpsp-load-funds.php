@@ -8,13 +8,12 @@ Author: Hztech
 Author URI: http://www.hztech.biz
 */
 
-define( 'WPSP_LOAD_FUNDS_VER', '0.0.1' );
+define( 'WPSP_MANAGE_FUNDS_VER', '0.0.2' );
 
-if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
+if ( ! class_exists( 'WPSP_ManageFunds' ) ) {
 
-	class WPSP_LoadFunds
+	class WPSP_ManageFunds
 	{
-
 		private $notices;
 
 		public function __construct()
@@ -23,6 +22,48 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 
 			add_action( 'admin_menu', array( $this, 'render_admin_menu' ), 1000 );
 			add_action( 'admin_init', array( $this, 'render_admin_init' ) );
+			add_action( 'wpsp_after_shipment_creation', array( $this, 'after_shipment_creation' ) );
+			//add_shortcode( 'funds-history', array( $this, 'render_funds_history' ) );
+			add_action( 'wpum_account_page_content', array( $this, 'render_funds_history' ) );
+			add_filter( 'wpum_get_account_page_tabs', array( $this, 'add_funds_history_page' ) );
+		}
+
+		public function add_funds_history_page( $tabs )
+		{
+			$tabs['funds-history'] = [
+				'name'     => esc_html__( 'Funds History', 'wp-user-manager' ),
+				'priority' => 100
+			];
+
+			return $tabs;
+		}
+
+		public function render_funds_history()
+		{
+			global $wpdb, $post;
+
+			if ( strrpos( $_SERVER['REQUEST_URI'], 'funds-history' ) !== false ) {
+				$table_name    = $wpdb->prefix . 'funds_history';
+				$customer_id   = get_current_user_id();
+				$account_funds = WPSP_Customer::get_account_funds( $customer_id );
+				$results       = $wpdb->get_results( "SELECT * FROM {$table_name} WHERE customer_id = {$customer_id} ORDER BY id DESC" );
+
+				include dirname( __FILE__ ) . '/templates/history.php';
+			}
+		}
+
+		public function after_shipment_creation( $shipment_id )
+		{
+			global $wpdb;
+
+			$shipment = WPSP_Shipment::get_shipment( $shipment_id );
+
+			$wpdb->insert( "{$wpdb->prefix}funds_history", [
+				'customer_id' => $shipment->customer_id,
+				'amount'      => - ( $shipment->rates ),
+				'date'        => date( 'Y-m-d H:i:s' ),
+				'notes'       => "Label created #{$shipment_id}"
+			] );
 		}
 
 		public function render_admin_menu()
@@ -63,32 +104,34 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 			$table_name = $wpdb->prefix . 'funds_history';
 			$results    = $wpdb->get_results( "SELECT * FROM {$table_name} ORDER BY id DESC" );
 			?>
-            <div id="wrap">
-                <h1 class="wpsp-page-title">Account Funds History</h1>
-                <table class="wpsp-datatable">
-                    <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Customer</th>
-                        <th>Date</th>
-                        <th>Check Number</th>
-                        <th>Amount</th>
-                    </tr>
-                    </thead>
-                    <tbody>
+			<div id="wrap">
+				<h1 class="wpsp-page-title">Account Funds History</h1>
+				<table class="wpsp-datatable">
+					<thead>
+					<tr>
+						<th>ID</th>
+						<th>Customer</th>
+						<th>Notes</th>
+						<th>Date</th>
+						<th>Check Number</th>
+						<th>Amount</th>
+					</tr>
+					</thead>
+					<tbody>
 					<?php foreach ( $results as $result ) {
 						$customer = get_user_by( 'id', $result->customer_id ); ?>
-                        <tr>
-                            <td><?php echo $result->id; ?></td>
-                            <td><?php echo $customer->display_name; ?></td>
-                            <td><?php echo $result->date; ?></td>
-                            <td><?php echo $result->check_number; ?></td>
-                            <td>$<?php echo $result->amount; ?></td>
-                        </tr>
+						<tr>
+							<td><?php echo $result->id; ?></td>
+							<td><?php echo $customer->display_name; ?></td>
+							<td><?php echo $result->notes; ?></td>
+							<td><?php echo $result->date; ?></td>
+							<td><?php echo $result->check_number; ?></td>
+							<td>$<?php echo $result->amount; ?></td>
+						</tr>
 					<?php } ?>
-                    </tbody>
-                </table>
-            </div>
+					</tbody>
+				</table>
+			</div>
 			<?php
 		}
 
@@ -117,7 +160,8 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 							'customer_id'  => $customer_id,
 							'amount'       => $amount,
 							'date'         => $date,
-							'check_number' => $check_number
+							'check_number' => $check_number,
+							'notes'        => "Funds loaded against check number {$check_number}"
 						) );
 
 						if ( class_exists( 'WPSP' ) ) {
@@ -140,7 +184,9 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 
 									try {
 										$twilio = new WPTM_FaxManager();
-										$twilio->sendFax( '+' . $fax_to, $url );
+										if ( ! empty( $fax_to ) ) {
+											$twilio->sendFax( '+' . $fax_to, $url );
+										}
 
 										if ( file_exists( $path ) ) {
 											unlink( $path );
@@ -181,76 +227,73 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 
 		public function render_load_funds_form()
 		{
-			$customers = get_users( array(
-				                        "role" => "customer"
-			                        ) );
+			$customers = get_users();
 			?>
-            <div id="wpsp">
-                <h1 class="wpsp-page-title">Load Account Funds</h1>
-                <form method="POST" style="max-width: 800px;" enctype="multipart/form-data">
+			<div id="wpsp">
+				<h1 class="wpsp-page-title">Load Account Funds</h1>
+				<form method="POST" style="max-width: 800px;" enctype="multipart/form-data">
 					<?php do_action( 'load_funds_errors' ); ?>
 					<?php do_action( 'load_funds_success' ); ?>
-                    <div class="wpsp-form-group">
-                        <label>Customer</label>
-                        <select name="customer_id" class="form-control" required>
+					<div class="wpsp-form-group">
+						<label>Customer</label>
+						<select name="customer_id" class="form-control" required>
 							<?php foreach ( $customers as $customer ) { ?>
-                                <option value="<?php echo $customer->ID; ?>"><?php echo $customer->display_name; ?></option>
+								<option
+									value="<?php echo $customer->ID; ?>"><?php echo $customer->display_name; ?></option>
 							<?php } ?>
-                        </select>
-                    </div>
-                    <div class="wpsp-form-group">
-                        <label>Check Number</label>
-                        <input type="text" name="check_number" class="form-control" required/>
-                    </div>
-                    <div class="wpsp-form-group">
-                        <label>Amount</label>
-                        <input type="number" name="amount" class="form-control" placeholder="$" step="any" required/>
-                    </div>
-                    <div class="wpsp-form-group">
-                        <label>Date</label>
-                        <input id="funds-datepicker" type="date" name="date" class="form-control datepicker" required/>
-                    </div>
-                    <div class="wpsp-form-group">
+						</select>
+					</div>
+					<div class="wpsp-form-group">
+						<label>Check Number</label>
+						<input type="text" name="check_number" class="form-control" required/>
+					</div>
+					<div class="wpsp-form-group">
+						<label>Amount</label>
+						<input type="number" name="amount" class="form-control" placeholder="$" step="any" required/>
+					</div>
+					<div class="wpsp-form-group">
+						<label>Date</label>
+						<input id="funds-datepicker" type="date" name="date" class="form-control datepicker" required/>
+					</div>
+					<div class="wpsp-form-group">
 						<?php wp_nonce_field( 'wpsp-load-funds' ); ?>
-                        <button type="submit">Load</button>
-                    </div>
-                </form>
-            </div>
-            <script>
-                document.getElementById("funds-datepicker").value = "<?= date( "Y-m-d" ) ?>";
-            </script>
+						<button type="submit">Load</button>
+					</div>
+				</form>
+			</div>
+			<script>
+				document.getElementById("funds-datepicker").value = "<?= date( "Y-m-d" ) ?>";
+			</script>
 			<?php
 		}
 
 		public function render_load_funds_list()
 		{
-			$customers = get_users( array(
-				                        "role" => "customer"
-			                        ) );
+			$customers = get_users();
 			?>
-            <div id="wpsp">
-                <h1 class="wpsp-page-title">Account Funds <a
-                            href="<?= admin_url( 'admin.php?page=wpsp-load-funds-load' ) ?>">Load Funds</a></h1>
-                <table class="wpsp-datatable">
-                    <thead>
-                    <tr>
-                        <th>Customer</th>
-                        <th>Funds</th>
-                    </tr>
-                    </thead>
-                    <tbody>
+			<div id="wpsp">
+				<h1 class="wpsp-page-title">Account Funds <a
+						href="<?= admin_url( 'admin.php?page=wpsp-load-funds-load' ) ?>">Load Funds</a></h1>
+				<table class="wpsp-datatable">
+					<thead>
+					<tr>
+						<th>Customer</th>
+						<th>Funds</th>
+					</tr>
+					</thead>
+					<tbody>
 					<?php foreach ( $customers as $customer ) : ?>
-                        <tr>
-                            <td><?= $customer->display_name ?></td>
-                            <td>$<?= number_format( WPSP_Customer::get_account_funds( $customer->ID ), 2 ) ?></td>
-                        </tr>
+						<tr>
+							<td><?= $customer->display_name ?></td>
+							<td>$<?= number_format( WPSP_Customer::get_account_funds( $customer->ID ), 2 ) ?></td>
+						</tr>
 					<?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
-            <script>
-                document.getElementById("funds-datepicker").value = "<?= date( "Y-m-d" ) ?>";
-            </script>
+					</tbody>
+				</table>
+			</div>
+			<script>
+				document.getElementById("funds-datepicker").value = "<?= date( "Y-m-d" ) ?>";
+			</script>
 			<?php
 		}
 
@@ -266,10 +309,11 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 		{
 			$installed_ver = get_option( "load-account-funds" );
 
-			if ( $installed_ver != WPSP_LOAD_FUNDS_VER ) {
+			if ( $installed_ver != WPSP_MANAGE_FUNDS_VER ) {
 				$this->createTable( 'funds_history', "id mediumint(9) NOT NULL AUTO_INCREMENT,
 					customer_id int (9) NOT NULL,
 					check_number varchar(100) DEFAULT '',
+					notes varchar(255) DEFAULT '',
 					amount float DEFAULT 0,
 					`date` varchar(255) DEFAULT '',
 					PRIMARY KEY  (id)" );
@@ -290,7 +334,7 @@ if ( ! class_exists( 'WPSP_LoadFunds' ) ) {
 }
 
 if ( defined( 'WPSP_LANG' ) ) {
-	$loader = new WPSP_LoadFunds();
+	$loader = new WPSP_ManageFunds();
 
 	register_activation_hook( __FILE__, array( $loader, 'activation' ) );
 }

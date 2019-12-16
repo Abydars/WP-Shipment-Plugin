@@ -1,0 +1,115 @@
+From abidr.w@gmail.com Thu Dec 05 10:44:04 2019
+Received: from mail-io1-f53.google.com ([209.85.166.53]:33853)
+	by c44670.sgvps.net with esmtps  tls TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	(Exim 4.90devstart-1178-b07e68e5-XX)
+	(envelope-from <abidr.w@gmail.com>)
+	id 1icuEW-000801-21
+	for emailrequest@ship4lesslabels.com; Thu, 05 Dec 2019 10:44:04 -0600
+Received: by mail-io1-f53.google.com with SMTP id z193so4313666iof.1
+        for <emailrequest@ship4lesslabels.com>; Thu, 05 Dec 2019 08:43:43 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=DUfJJF+aqHCLj4hqV/a8HK6LluZ/eL0oPYJGZw//ugI=;
+        b=fmCrEPcrCGvzYC0tfT15l7sHFiXEUCItEJn5GeBCGOF6Nq6TpUI2/eErBQQgYOpNYu
+         XEWZKop8aGEH9O/F7UWWwR+tg8qiovFK0mxk0FKGUAWGxxbE8sV9K7t1qljAlFBIt1V8
+         qdOPqJ0hM1mmkiRxUCPgu7snhqlmp/at/MWR4yuw335xaG0b+9KfU/JBj4MLWZv2eblu
+         jw8M257uEibZ6F8VJQUX7GFuOTgjqcXCr3m+pEQ8ZZFSmZpg+ukM0nLEPyph+X18mX0T
+         G1+nKw3Sf8z8LKJ0uWrSpDQIeNYN/TRPRjqXSXV20zk4J9B5iy8PCFLoDZvGPEpFQx5p
+         ss9g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=DUfJJF+aqHCLj4hqV/a8HK6LluZ/eL0oPYJGZw//ugI=;
+        b=sovhexcmlSMUTMRl317bSomoflgoMFadh/1W4R7L5aH9VvOnuVpdeSgM3JkERp4ulZ
+         BV+ni4ZZbOpYV7FEwz/ukvsJvGqA8IVKGpXS+cL8+g6ZefLc9lMvd/wpUyxBTYf9/oI6
+         t/2D+uD+ryKKsM+T8HOVgELkwWXyvoatADKrTt9YSMivLgxtC+mNJPMMK+6DNGMy9zOT
+         tZ7u23wEKan31MbPmdMnmWvcup1bJtdar5rSG4V72Ls3gtVUURmHn9a9WsOOz1YWiHkd
+         kyHIk6RiYdxu3FPOfHpcaOZqzXfoZ8iGIq27ErLoijyyLmxjAclUnf51qwy6FI63sYkt
+         73Xw==
+X-Gm-Message-State: APjAAAXF+8JXzueHnKtP6zK9NuK89l8UlnP2TwNkGxo9IYovlHirSUta
+	qg9OqndwX1o30kUOzPz8k7kA6S5+8VGDcXHcH6x5xvFuBc6xlA==
+X-Google-Smtp-Source: APXvYqwdwBi3d3v1Qiy9KzaqVPzALHge4mVoMHFLOxO0mhxJqA1C8giTdikMACTYql0EQKYwG5NPlhDbbnR1nudteQM=
+X-Received: by 2002:a02:272d:: with SMTP id g45mr9319563jaa.130.1575564200981;
+ Thu, 05 Dec 2019 08:43:20 -0800 (PST)
+MIME-Version: 1.0
+References: <CANYhTmyE8ay6cRHf0p10DvmrRA+8aLvQ8yfEH6htsCoAK=Vd9g@mail.gmail.com>
+ <CANYhTmz+0f0O9Y5k0H8tGzAD5r=2cBAt6maDTm+WyXp6QB-QsA@mail.gmail.com>
+In-Reply-To: <CANYhTmz+0f0O9Y5k0H8tGzAD5r=2cBAt6maDTm+WyXp6QB-QsA@mail.gmail.com>
+From: Abid Raza <abidr.w@gmail.com>
+Date: Thu, 5 Dec 2019 21:43:09 +0500
+Message-ID: <CANYhTmxOi0ueWvKTosHft6NQRxoL-7=CRQn6TX0mN2d2kSnU-w@mail.gmail.com>
+Subject: Fwd:
+To: emailrequest@ship4lesslabels.com
+Content-Type: multipart/alternative; boundary="000000000000853b7a0598f7a003"
+
+--000000000000853b7a0598f7a003
+Content-Type: text/plain; charset="UTF-8"
+
+--wpsp--
+
+from: 4005 WHITE OAK RD
+
+to: A2-PA-294
+
+level: priority express
+
+package: variable
+
+weight: 15
+
+length: 15
+
+width: 5
+
+height: 5
+
+date: 2019-12-10
+
+--wpsp--
+
+--000000000000853b7a0598f7a003
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><p style=3D"color:rgb(0,0,0);font-variant-numeric:normal;f=
+ont-variant-east-asian:normal;font-stretch:normal;font-size:12px;line-heigh=
+t:normal;font-family:&quot;Helvetica Neue&quot;;margin:0px">--wpsp--</p><p =
+style=3D"color:rgb(0,0,0);font-variant-numeric:normal;font-variant-east-asi=
+an:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family=
+:&quot;Helvetica Neue&quot;;margin:0px">from:=C2=A0<span style=3D"color:rgb=
+(68,68,68);font-family:-apple-system,system-ui,&quot;Segoe UI&quot;,Roboto,=
+Oxygen-Sans,Ubuntu,Cantarell,&quot;Helvetica Neue&quot;,sans-serif;font-siz=
+e:13px">4005 WHITE OAK RD</span></p><p style=3D"color:rgb(0,0,0);font-varia=
+nt-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;font-s=
+ize:12px;line-height:normal;font-family:&quot;Helvetica Neue&quot;;margin:0=
+px">to:=C2=A0<span style=3D"color:rgb(68,68,68);font-family:-apple-system,s=
+ystem-ui,&quot;Segoe UI&quot;,Roboto,Oxygen-Sans,Ubuntu,Cantarell,&quot;Hel=
+vetica Neue&quot;,sans-serif;font-size:13px">A2-PA-294</span></p><p style=
+=3D"color:rgb(0,0,0);font-variant-numeric:normal;font-variant-east-asian:no=
+rmal;font-stretch:normal;font-size:12px;line-height:normal;font-family:&quo=
+t;Helvetica Neue&quot;;margin:0px">level: priority express</p><p style=3D"c=
+olor:rgb(0,0,0);font-variant-numeric:normal;font-variant-east-asian:normal;=
+font-stretch:normal;font-size:12px;line-height:normal;font-family:&quot;Hel=
+vetica Neue&quot;;margin:0px">package: variable</p><p style=3D"color:rgb(0,=
+0,0);font-variant-numeric:normal;font-variant-east-asian:normal;font-stretc=
+h:normal;font-size:12px;line-height:normal;font-family:&quot;Helvetica Neue=
+&quot;;margin:0px">weight: 15</p><p style=3D"color:rgb(0,0,0);font-variant-=
+numeric:normal;font-variant-east-asian:normal;font-stretch:normal;font-size=
+:12px;line-height:normal;font-family:&quot;Helvetica Neue&quot;;margin:0px"=
+>length: 15</p><p style=3D"color:rgb(0,0,0);font-variant-numeric:normal;fon=
+t-variant-east-asian:normal;font-stretch:normal;font-size:12px;line-height:=
+normal;font-family:&quot;Helvetica Neue&quot;;margin:0px">width: 5</p><p st=
+yle=3D"color:rgb(0,0,0);font-variant-numeric:normal;font-variant-east-asian=
+:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family:&=
+quot;Helvetica Neue&quot;;margin:0px">height: 5</p><p style=3D"color:rgb(0,=
+0,0);font-variant-numeric:normal;font-variant-east-asian:normal;font-stretc=
+h:normal;font-size:12px;line-height:normal;font-family:&quot;Helvetica Neue=
+&quot;;margin:0px">date: 2019-12-10</p><p style=3D"color:rgb(0,0,0);font-va=
+riant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;fon=
+t-size:12px;line-height:normal;font-family:&quot;Helvetica Neue&quot;;margi=
+n:0px">--wpsp--</p></div>
+
+--000000000000853b7a0598f7a003--
+

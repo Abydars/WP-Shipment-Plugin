@@ -25,23 +25,163 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
 			add_action( 'admin_bar_menu', array( $this, 'add_toolbar_items' ), 100 );
 			add_action( 'admin_menu', array( $this, 'admin_menu' ), 5 );
 			add_action( 'wp_footer', array( $this, 'refresh_support_tickets' ) );
+			add_action( 'wp_footer', array( $this, 'add_attachment_button' ) );
+			add_action( 'wp_ajax_get_file_url', array( $this, 'render_get_file_url' ) );
+		}
+
+		function render_get_file_url()
+		{
+			if ( isset( $_REQUEST['link'] ) ) {
+				global $wpdb;
+
+				$url   = $_REQUEST['link'];
+				$parts = parse_url( $url );
+				parse_str( $parts['query'], $query );
+				$attachment_id = $query['wpsp_attachment'];
+
+				$attach_id = intval( sanitize_text_field( $attachment_id ) );
+
+				if ( $attach_id ) {
+
+					$attachment = $wpdb->get_row( "select * from {$wpdb->prefix}wpsp_attachments where id=" . $attach_id );
+					$upload_dir = wp_upload_dir();
+
+					$filepath     = $attachment->filepath;
+					$filepath     = explode( '/', $filepath );
+					$file_name    = $filepath[ count( $filepath ) - 1 ];
+					$filepath     = $upload_dir['basedir'] . '/wpsp/' . $file_name;
+					$content_type = $attachment->filetype;
+
+					//header('Content-Description: File Transfer');
+					//header('Cache-Control: public');
+					header( 'Content-Type: ' . $content_type );
+					//header("Content-Transfer-Encoding: binary");
+					//header('Content-Disposition: attachment; filename='. $attachment->filename);
+					header( 'Content-Length: ' . filesize( $filepath ) );
+
+					flush();
+
+					readfile( $filepath );
+				}
+			}
+			die;
+		}
+
+		function add_attachment_button()
+		{
+			if ( is_page( 10 ) ) {
+				?>
+                <style>
+                    header#masthead,
+                    footer#colophon,
+                    #wpadminbar {
+                        display: none !important;
+                    }
+                </style>
+			<?php } ?>
+            <script>
+                jQuery(function ($) {
+                    var i;
+                    i = setInterval(function () {
+                        //if($(".attachment_link").length > 0)
+                        //clearInterval(i);
+
+                        $(".wpsp_ticket_thread_attachment a").each(function () {
+                            $a = $("<a />");
+
+                            $a.text("Show");
+                            $a.addClass("show_attachment btn btn-info");
+                            $a.css("margin-left", 20);
+
+                            $a.attr("data-href", $(this).attr("href"));
+                            $a.attr("href", "#");
+
+                            $a.click(function (e) {
+                                e.preventDefault();
+
+                                $btn = $(this);
+
+                                if (!$btn.parents('table').next().is("iframe")) {
+                                    $btn.text("Please wait...");
+                                    $btn.attr("disabled", "disabled");
+
+                                    var url = '<?php echo admin_url( "admin-ajax.php" ); ?>?action=get_file_url&link=' + $btn.attr("data-href");
+                                    $iframe = $("<iframe />");
+
+                                    $iframe.css("display", "none");
+                                    $iframe.css("width", "100%");
+                                    $iframe.css("height", 700);
+                                    $iframe.css("margin-top", 10);
+                                    $iframe.attr("src", url);
+
+                                    $btn.parents('table').parent().append($iframe);
+                                    $iframe.slideDown();
+
+                                    $btn.text("Hide");
+                                    $btn.removeAttr("disabled");
+
+                                    /*
+                                    $.ajax({
+                                        url: '<?php echo admin_url( "admin-ajax.php" ); ?>',
+                                        data: {
+                                            action: "get_file_url",
+                                            link: $btn.attr("data-href")
+                                        },
+                                        dataType: "JSON",
+                                        success: function (response) {
+                                            if (response.status == true) {
+
+                                            } else {
+                                                $btn.text("Show");
+                                                $btn.removeAttr("disabled");
+                                            }
+                                        },
+                                        error: function (e) {
+                                            $btn.text("Show");
+                                            $btn.removeAttr("disabled");
+                                        }
+                                    });
+                                    */
+                                } else if (!$btn.parents('table').next().is(":visible")) {
+                                    $iframe = $btn.parents('table').next();
+                                    $iframe.slideDown();
+
+                                    $btn.text("Hide");
+                                } else {
+                                    $iframe = $btn.parents('table').next();
+                                    $iframe.slideUp();
+
+                                    $btn.text("Show");
+                                }
+                            });
+
+                            if ($(this).parent().find("a.show_attachment").length <= 0)
+                                $a.insertAfter($(this));
+
+                        });
+                    }, 1000);
+                });
+            </script>
+			<?php
 		}
 
 		function refresh_support_tickets()
 		{
-			?>
-            <script>
-                jQuery(function ($) {
-                    setInterval(function () {
-                        var is_active = $('.navbar-nav #ticket-list').hasClass('active');
+			if ( ! isset( $_GET['id'] ) ) {
+				?>
+                <script>
+                    jQuery(function ($) {
+                        setInterval(function () {
+                            var is_active = $('.navbar-nav #ticket-list').hasClass('active');
 
-                        if (is_active) {
-                            window.location.href = window.location.href;
-                        }
-                    }, 60 * 1000);
-                });
-            </script>
-			<?php
+                            if (is_active) {
+                                window.location.href = window.location.href;
+                            }
+                        }, 60 * 1000);
+                    });
+                </script>
+				<?php
+			}
 		}
 
 		function admin_menu()
@@ -194,10 +334,14 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
 		{
 			if ( isset( $_GET['fxrequest'] ) ) {
 
+				file_put_contents( dirname( __FILE__ ) . '/fax.txt', date( 'Y-m-d H:i:s' ) . ' - ' . json_encode( $_REQUEST ) . PHP_EOL, FILE_APPEND );
+
 				if ( isset( $_REQUEST['FaxSid'] ) ) {
 					$faxsid      = $_REQUEST['FaxSid'];
 					$from        = $_REQUEST['From'];
 					$to          = $_REQUEST['To'];
+					$from        = preg_replace( '/[^0-9]/', '', $from );
+					$to          = preg_replace( '/[^0-9]/', '', $to );
 					$is_standard = $to == WPTM_TWILIO_STANDARD_NUMBER;
 
 					$users     = get_users();
@@ -205,17 +349,19 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
 
 					foreach ( $users as $user ) {
 						$fax = WPSP_Customer::get_fax_number( $user->ID );
-						$fax = '+' . $fax;
 
 						if ( ! empty( $fax ) && $fax == $from ) {
 							$from_user = $user;
 							break;
 						}
 					}
+					file_put_contents( dirname( __FILE__ ) . '/fax.txt', "Got user: {$from_user->ID}" . PHP_EOL, FILE_APPEND );
 
 					if ( class_exists( 'WPTM_FaxManager' ) ) {
 						$twilio    = new WPTM_FaxManager();
 						$attach_id = $twilio->getFax( $faxsid );
+
+						file_put_contents( dirname( __FILE__ ) . '/fax.txt', "Attach id: {$attach_id}" . PHP_EOL, FILE_APPEND );
 
 						if ( $attach_id ) {
 
@@ -229,6 +375,8 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
 									$create_new_ticket = false;
 								}
 							}
+
+							file_put_contents( dirname( __FILE__ ) . '/fax.txt', "Creating new ticket" . PHP_EOL, FILE_APPEND );
 
 							$from_id = ( ( $from_user && isset( $from_user->ID ) ) ? $from_user->ID : '' );
 
@@ -272,6 +420,7 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
 								$ticket_oprations->reply_ticket();
 
 								$res = ob_get_clean();
+								file_put_contents( dirname( __FILE__ ) . '/fax.txt', "Res: {$res}" . PHP_EOL, FILE_APPEND );
 							}
 						}
 					}

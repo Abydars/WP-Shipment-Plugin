@@ -1,0 +1,5 @@
+{
+  "plugin_slug": "wp-user-manager",
+  "deployment_folder": "release/2.1.8",
+  "deploy_assets": false
+}

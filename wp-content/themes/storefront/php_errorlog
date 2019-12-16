@@ -1,0 +1,4 @@
+[28-Nov-2019 14:37:18 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/pinnac88/ship4lesslabels/live/wp-content/themes/storefront/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/pinnac88/ship4lesslabels/live/wp-content/themes/storefront/index.php on line 14

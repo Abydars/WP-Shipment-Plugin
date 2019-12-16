@@ -39,6 +39,7 @@ class WPSP_USPS
 		//User Extras
 		$wpsp_user_meta = new WPSP_USPS_UserMeta();
 
+		add_action( 'admin_init', array( $wpsp_user_meta, 'handle_admin_errors' ) );
 		add_action( 'show_user_profile', array( $wpsp_user_meta, 'extra_user_profile_fields' ) );
 		add_action( 'edit_user_profile', array( $wpsp_user_meta, 'extra_user_profile_fields' ) );
 		add_action( 'edit_user_profile_update', array( $wpsp_user_meta, 'save_extra_user_profile_fields' ) );
@@ -397,12 +398,16 @@ class WPSP_USPS
 		$error = __( 'Label not found', WPSP_LANG );
 
 		if ( ! empty( $shipment_data['label'] ) ) {
-			$pdf_file_name = "{$shipment_data['shipKey']}.pdf";
-			$filepath      = apply_filters( 'wpsp_file_dir', $pdf_file_name );
+			$ship_keys = unserialize( base64_decode( $shipment_data['shipKey'] ) );
 
-			file_put_contents( $filepath, base64_decode( $shipment_data['label'] ) );
+			foreach ( $shipment_data['label'] as $k => $label ) {
+				$pdf_file_name = "{$ship_keys[$k]}.pdf";
+				$filepath      = apply_filters( 'wpsp_file_dir', $pdf_file_name );
 
-			$encoded_images[] = $filepath;
+				file_put_contents( $filepath, base64_decode( $label ) );
+
+				$encoded_images[] = $filepath;
+			}
 		}
 		$error = false;
 	}
@@ -423,6 +428,7 @@ class WPSP_USPS
 			} else {
 
 				list( $from_zip4, $from_zip5 ) = $this->zip4_5( $from_zip );
+				$trackings = $labels = $ship_keys = [];
 
 				foreach ( $packages as $package ) {
 					$d = [
@@ -485,15 +491,23 @@ class WPSP_USPS
 					$res = ShipmentXmlToArray::convert( $res );
 
 					if ( ! isset( $res['Error'] ) ) {
-						$res           = $res['eVSResponse'];
-						$shipment_data = array(
-							"shipKey" => $res['BarcodeNumber'],
-							"label"   => $res['LabelImage']
-						);
+						$res         = $res['eVSResponse'];
+						$trackings[] = [
+							'id'  => $res['BarcodeNumber'],
+							'url' => ""
+						];
+						$labels[]    = $res['LabelImage'];
+						$ship_keys[] = $res['BarcodeNumber'];
 					} else {
 						$error = $res['Error']['Description'];
 					}
 				}
+
+				$shipment_data = array(
+					"shipKey"  => base64_encode( serialize( $ship_keys ) ),
+					"label"    => $labels,
+					"tracking" => $trackings
+				);
 			}
 		} catch ( Exception $e ) {
 			$error = $e->getMessage();
@@ -522,7 +536,7 @@ class WPSP_USPS
 	{
 		list( $from_zip4, $from_zip5 ) = $this->zip4_5( $data->zip_code );
 		$user_id     = $data->customer;
-		$customer_id = $this->get_customer_id( $user_id );
+		$customer_id = WPSP_USPS_USER_ID;
 
 		if ( $customer_id === false ) {
 			$error = __( "User ID not found", WPSP_LANG );

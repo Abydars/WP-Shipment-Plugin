@@ -60,12 +60,14 @@ class WPSP_Ezeeship
 		$error = __( 'Label not found', WPSP_LANG );
 
 		if ( ! empty( $shipment_data['label'] ) ) {
-			$pdf_file_name = "{$shipment_data['shipKey']}.pdf";
-			$filepath      = apply_filters( 'wpsp_file_dir', $pdf_file_name );
+			foreach ( $shipment_data['label'] as $label ) {
+				$pdf_file_name = "{$shipment_data['shipKey']}.pdf";
+				$filepath      = apply_filters( 'wpsp_file_dir', $pdf_file_name );
 
-			file_put_contents( $filepath, file_get_contents( $shipment_data['label'] ) );
+				file_put_contents( $filepath, file_get_contents( $label ) );
 
-			$encoded_images[] = $filepath;
+				$encoded_images[] = $filepath;
+			}
 		}
 		$error = false;
 	}
@@ -124,9 +126,19 @@ class WPSP_Ezeeship
 			$res = json_decode( $res );
 
 			if ( $res->result == 'OK' ) {
+				$trackings = [];
+
+				foreach ( $res->data->trackingNumber as $k => $tracking ) {
+					$trackings[] = [
+						'id'  => $tracking,
+						'url' => $res->data->trackingUrl[ $k ]
+					];
+				}
+
 				$shipment_data = array(
-					"shipKey" => $res->data->objectId,
-					"label"   => $res->data->pdfUrl,
+					"shipKey"  => $res->data->objectId,
+					"label"    => [ $res->data->pdfUrl ],
+					"tracking" => $trackings
 				);
 			} else {
 				$error = $res->message;
@@ -183,7 +195,7 @@ class WPSP_Ezeeship
 		}
 	}
 
-	function wpsp_service_rates_any( $data, &$error, &$rates )
+	function wpsp_service_rates_any( $data, &$error, &$rates, $is_residential = null )
 	{
 		$rates        = [];
 		$error        = false;
@@ -200,7 +212,11 @@ class WPSP_Ezeeship
 		}
 
 		if ( empty( $level ) ) {
-			$level = $this->get_default_service_level( $data->carrier, ( $to_address['is_residential'] === 1 ) );
+			if ( $is_residential === null ) {
+				$is_residential = ( $to_address['is_residential'] === 1 && $from_address['is_residential'] === 1 );
+			}
+
+			$level = $this->get_default_service_level( $data->carrier, $is_residential );
 		}
 
 		$level_name = $services[ $level ];
@@ -261,6 +277,7 @@ class WPSP_Ezeeship
 				$rates   = array_values( $rates );
 			} else {
 				$error = $res->message;
+				$this->wpsp_service_rates_any( $data, $error, $rates, false );
 			}
 		}
 	}

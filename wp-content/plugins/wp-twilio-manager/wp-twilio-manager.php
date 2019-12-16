@@ -125,7 +125,7 @@ if ( ! class_exists( 'WPTM_Twilio' ) ) {
 				$twilio = new WPTM_FaxManager();
 
 				echo '<pre>';
-				var_dump( $twilio->getFaxDetails( $_GET['faxsid'] ) );
+				var_dump( $twilio->getFax( $_GET['faxsid'] ) );
 				exit;
 			}
 

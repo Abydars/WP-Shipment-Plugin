@@ -1,0 +1,88 @@
+/**
+ * Styles applied to Storefront 2 specifically
+ */
+.sd-button-size-smallest button,
+.sd-button-size-smallest input[type="button"],
+.sd-button-size-smallest input[type="reset"],
+.sd-button-size-smallest input[type="submit"],
+.sd-button-size-smallest .button,
+.sd-button-size-smallest .added_to_cart,
+.sd-button-size-smallest .widget-area .widget a.button,
+.sd-button-size-smallest .site-header-cart .widget_shopping_cart a.button {
+  padding: .327em .618em; }
+.sd-button-size-smallest button.menu-toggle {
+  padding: .618em .857em .618em 2.618em; }
+
+.sd-button-size-smaller button,
+.sd-button-size-smaller input[type="button"],
+.sd-button-size-smaller input[type="reset"],
+.sd-button-size-smaller input[type="submit"],
+.sd-button-size-smaller .button,
+.sd-button-size-smaller .added_to_cart,
+.sd-button-size-smaller .widget-area .widget a.button,
+.sd-button-size-smaller .site-header-cart .widget_shopping_cart a.button {
+  padding: .53em .857em; }
+.sd-button-size-smaller button.menu-toggle {
+  padding: .618em .857em .618em 2.618em; }
+
+.sd-button-size-larger button,
+.sd-button-size-larger input[type="button"],
+.sd-button-size-larger input[type="reset"],
+.sd-button-size-larger input[type="submit"],
+.sd-button-size-larger .button,
+.sd-button-size-larger .added_to_cart,
+.sd-button-size-larger .widget-area .widget a.button,
+.sd-button-size-larger .site-header-cart .widget_shopping_cart a.button {
+  padding: .857em 1.618em; }
+.sd-button-size-larger button.menu-toggle {
+  padding: .618em .857em .618em 2.618em; }
+
+.sd-button-size-largest button,
+.sd-button-size-largest input[type="button"],
+.sd-button-size-largest input[type="reset"],
+.sd-button-size-largest input[type="submit"],
+.sd-button-size-largest .button,
+.sd-button-size-largest .added_to_cart,
+.sd-button-size-largest .widget-area .widget a.button,
+.sd-button-size-largest .site-header-cart .widget_shopping_cart a.button {
+  padding: 1em 2em; }
+.sd-button-size-largest button.menu-toggle {
+  padding: .618em .857em .618em 2.618em; }
+
+@media screen and (min-width: 768px) {
+  .sd-header-inline .site-header .inline-header-nav-wrap,
+  .sd-header-inline.woocommerce-active .site-header .inline-header-nav-wrap {
+    clear: none;
+    width: 73.91304%;
+    float: right;
+    margin-right: 0; }
+    .sd-header-inline .site-header .inline-header-nav-wrap .storefront-primary-navigation,
+    .sd-header-inline.woocommerce-active .site-header .inline-header-nav-wrap .storefront-primary-navigation {
+      margin: 0;
+      padding: 0;
+      width: 64.70588%;
+      float: left;
+      margin-right: 5.88235%;
+      background: transparent !important; }
+    .sd-header-inline .site-header .inline-header-nav-wrap .site-header-cart,
+    .sd-header-inline.woocommerce-active .site-header .inline-header-nav-wrap .site-header-cart {
+      width: 29.41176%;
+      float: right;
+      margin-right: 0; }
+  .sd-header-inline.sp-header-no-cart .site-header .inline-header-nav-wrap .storefront-primary-navigation, .sd-header-inline.swc-header-no-cart .site-header .inline-header-nav-wrap .storefront-primary-navigation,
+  .sd-header-inline.woocommerce-active.sp-header-no-cart .site-header .inline-header-nav-wrap .storefront-primary-navigation,
+  .sd-header-inline.woocommerce-active.swc-header-no-cart .site-header .inline-header-nav-wrap .storefront-primary-navigation {
+    width: 100%;
+    float: right;
+    margin-right: 0; }
+
+  .sd-fixed-width.sd-header-compact .storefront-primary-navigation, .sd-fixed-width.sd-header-expanded .storefront-primary-navigation {
+    margin-left: -4.4em;
+    margin-right: -4.4em;
+    padding-left: 4.4em;
+    padding-right: 4.4em; }
+  .sd-fixed-width.sd-header-compact .smm-mega-menu, .sd-fixed-width.sd-header-expanded .smm-mega-menu {
+    margin-left: -1.8em;
+    margin-right: -1.8em;
+    padding-left: 4.4em;
+    padding-right: 4.4em; } }
