@@ -16,6 +16,8 @@ class WPSP_Customer
 		return $value;
 	}
 
+
+
 	static function get_account_funds( $id )
 	{
 		$value = get_user_meta( $id, 'account_funds', true );

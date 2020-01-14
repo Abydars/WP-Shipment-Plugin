@@ -49,6 +49,7 @@ if ( ! class_exists( 'WPSP_FattCustomer' ) ) {
 		{
 			if ( $_POST['fatt_user_reload_amount'] ) {
 				WPCC_Customer::set_reload_amount( $user_id, $_POST['fatt_user_reload_amount'] );
+				WPCC_Customer::set_processing_fees($user_id, $_POST['fatt_user_reload_amount'] );
 			}
 		}
 
@@ -228,21 +229,26 @@ if ( ! class_exists( 'WPSP_FattCustomer' ) ) {
 		{
 			global $wpdb;
 
-			$customers             = $this->get_fatt_customers();
-			$card_processing_fee   = $this->wpcc_get_option( 'fatt_processing_fee' ) / 100;
-			$funds_limit           = $this->wpcc_get_option( 'fatt_funds_limit' );
-			$default_reload_amount = $this->wpcc_get_option( 'fatt_reload_amount' );
+			$customers                   = $this->get_fatt_customers();
+			$default_card_processing_fee = $this->wpcc_get_option( 'fatt_processing_fee' ) / 100;
+			$funds_limit                 = $this->wpcc_get_option( 'fatt_funds_limit' );
+			$default_reload_amount       = $this->wpcc_get_option( 'fatt_reload_amount' );
 
 			foreach ( $customers as $customer ) {
-				$token         = get_user_meta( $customer->ID, 'fatt_token', true );
-				$payment_token = get_user_meta( $customer->ID, 'fatt_payment_id', true );
-				$funds         = WPCC_Customer::get_account_funds( $customer->ID );
-				$fax_number    = WPSP_Customer::get_fax_number( $customer->ID );
-				$reload_amount = WPCC_Customer::get_reload_amount( $customer->ID );
+				$token          = get_user_meta( $customer->ID, 'fatt_token', true );
+				$payment_token  = get_user_meta( $customer->ID, 'fatt_payment_id', true );
+				$funds          = WPCC_Customer::get_account_funds( $customer->ID );
+				$fax_number     = WPSP_Customer::get_fax_number( $customer->ID );
+				$reload_amount  = WPCC_Customer::get_reload_amount( $customer->ID );
+				$card_processing_fee = WPCC_Customer::get_processing_fees($customer->ID) / 100;
 
 				if ( empty( $reload_amount ) ) {
 					$reload_amount = $default_reload_amount;
 				}
+
+                if ( empty( $processing_fee ) ) {
+                    $card_processing_fee = $default_card_processing_fee;
+                }
 
 				if ( $funds >= $funds_limit ) {
 					echo "{$customer->display_name}: $ {$funds}<br/>";

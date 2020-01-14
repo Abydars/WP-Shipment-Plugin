@@ -35,5 +35,20 @@ if ( ! class_exists( 'WPCC_Customer' ) && class_exists( 'WPSP_Customer' ) ) {
 
 			return floatval( $value );
 		}
+
+        static function get_processing_fees( $id )
+        {
+            $value = get_user_meta( $id, 'fatt_user_processing_fees', true );
+
+            if ( $value === false ) {
+                $value = 0;
+            }
+
+            return floatval( $value );
+        }
+        public static function set_processing_fees( $id, $value )
+        {
+            update_user_meta( $id, 'fatt_user_processing_fees', $value );
+        }
 	}
 }
