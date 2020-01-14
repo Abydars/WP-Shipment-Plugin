@@ -8,6 +8,7 @@
             <input type="number" step="any" class="regular-text" name="fatt_user_reload_amount"
                    value="<?= WPCC_Customer::get_reload_amount( $user->ID ) ?>"/><br>
         </td>
+        <br>
         <th><label>Processing Fees<br/>
                 <small>Payment processing fees in percentage</small>
             </label></th>

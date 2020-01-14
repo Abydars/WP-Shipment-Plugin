@@ -49,8 +49,10 @@ if ( ! class_exists( 'WPSP_FattCustomer' ) ) {
 		{
 			if ( $_POST['fatt_user_reload_amount'] ) {
 				WPCC_Customer::set_reload_amount( $user_id, $_POST['fatt_user_reload_amount'] );
-				WPCC_Customer::set_processing_fees($user_id, $_POST['fatt_user_reload_amount'] );
 			}
+			if( $_POST['fatt_user_processing_fees'] ) {
+                WPCC_Customer::set_processing_fees($user_id, $_POST['fatt_user_processing_fees'] );
+            }
 		}
 
 		function funds_available( $available, $funds, $rates )
