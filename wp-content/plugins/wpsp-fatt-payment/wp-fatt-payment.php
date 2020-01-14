@@ -34,16 +34,34 @@ if ( ! class_exists( 'WPSP_FattCustomer' ) ) {
 			add_action( 'wp_ajax_nopriv_save_payment_method', array( $this, 'save_payment_method' ) );
 			add_filter( 'funds_available', array( $this, 'funds_available' ), 10, 3 );
 
-
-			add_action( 'admin_init', array( $this, 'handle_admin_errors' ) );
 			add_action( 'show_user_profile', array( $this, 'extra_user_profile_fields' ) );
 			add_action( 'edit_user_profile', array( $this, 'extra_user_profile_fields' ) );
 			add_action( 'edit_user_profile_update', array( $this, 'save_extra_user_profile_fields' ) );
 			add_action( 'personal_options_update', array( $this, 'save_extra_user_profile_fields' ) );
 		}
 
+		function extra_user_profile_fields( $user )
+		{
+			include 'templates/user-fields.php';
+		}
+
+		function save_extra_user_profile_fields( $user_id )
+		{
+			if ( $_POST['fatt_user_reload_amount'] ) {
+				WPCC_Customer::set_reload_amount( $user_id, $_POST['fatt_user_reload_amount'] );
+			}
+		}
+
 		function funds_available( $available, $funds, $rates )
 		{
+			$threshold = $this->wpcc_get_option( 'fatt_balance_threshold' );
+
+			if ( ! empty( $threshold ) ) {
+				if ( ( $funds - $rates ) > $threshold ) {
+					$available = true;
+				}
+			}
+
 			return $available;
 		}
 
@@ -209,17 +227,22 @@ if ( ! class_exists( 'WPSP_FattCustomer' ) ) {
 		public function charge_customer()
 		{
 			global $wpdb;
-			$card_processing_fee = $this->wpcc_get_option( 'fatt_processing_fee' ) / 100;
-			$funds_limit         = $this->wpcc_get_option( 'fatt_fund_limit' );
 
-			$customers = $this->get_fatt_customers();
+			$customers             = $this->get_fatt_customers();
+			$card_processing_fee   = $this->wpcc_get_option( 'fatt_processing_fee' ) / 100;
+			$funds_limit           = $this->wpcc_get_option( 'fatt_funds_limit' );
+			$default_reload_amount = $this->wpcc_get_option( 'fatt_reload_amount' );
 
 			foreach ( $customers as $customer ) {
-				$reload_amount = ( WPCC_Customer::get_reload( $customer->ID ) !== '' || WPCC_Customer::get_reload( $customer->ID) > 0 ) ? WPCC_Customer::get_reload( $customer->ID) : $this->wpcc_get_option( 'fatt_reload_amount' );
 				$token         = get_user_meta( $customer->ID, 'fatt_token', true );
 				$payment_token = get_user_meta( $customer->ID, 'fatt_payment_id', true );
 				$funds         = WPCC_Customer::get_account_funds( $customer->ID );
 				$fax_number    = WPSP_Customer::get_fax_number( $customer->ID );
+				$reload_amount = WPCC_Customer::get_reload_amount( $customer->ID );
+
+				if ( empty( $reload_amount ) ) {
+					$reload_amount = $default_reload_amount;
+				}
 
 				if ( $funds >= $funds_limit ) {
 					echo "{$customer->display_name}: $ {$funds}<br/>";
@@ -326,9 +349,10 @@ if ( ! class_exists( 'WPSP_FattCustomer' ) ) {
 		public static function wpcc_get_option( $key )
 		{
 			$defaults = [
-				'fatt_reload_amount'  => 100,
-				'fatt_processing_fee' => 3,
-				'fatt_funds_limit'    => - 150
+				'fatt_reload_amount'     => 100,
+				'fatt_processing_fee'    => 3,
+				'fatt_funds_limit'       => - 150,
+				'fatt_balance_threshold' => - 150
 			];
 			$value    = get_option( $key );
 
@@ -338,32 +362,6 @@ if ( ! class_exists( 'WPSP_FattCustomer' ) ) {
 
 			return $value;
 		}
-
-		function handle_admin_errors()
-		{
-			if ( isset( $_GET['e'] ) ) {
-				add_action( 'admin_notices', function () {
-					$class   = 'notice notice-error';
-					$message = __( urldecode( $_GET['e'] ), 'sample-text-domain' );
-
-					printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
-				} );
-			}
-		}
-
-		function extra_user_profile_fields( $user )
-		{
-			include 'templates/user-fields.php';
-		}
-
-		function save_extra_user_profile_fields( $user_id )
-		{
-			if ( $_POST['fatt_user_reload_amount'] ) {
-				WPCC_Customer::set_reload( $user_id, $_POST['fatt_user_reload_amount'] );
-			}
-
-		}
-
 	}
 }
 

@@ -707,7 +707,7 @@
 
             }
 
-            if (extraDetails != undefined) {
+            if (extraDetails !== undefined) {
 
                 fattjs
                     .showCardForm()
@@ -726,7 +726,7 @@
                     console.log(message);
                     // activate pay button
                     var payButton = document.querySelector('#paybutton');
-                    payButton.disabled = true;
+                    //payButton.disabled = true;
                 });
 
                 fattjs.on('card_form_complete', function (message) {
@@ -776,6 +776,8 @@
                             $("#submit_payment_detials").text('Submit');
                         });
                 }, 2000);
+            } else {
+                alert('More data required');
             }
 
             return false;

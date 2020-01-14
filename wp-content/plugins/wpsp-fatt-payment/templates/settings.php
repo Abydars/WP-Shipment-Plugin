@@ -31,6 +31,15 @@
                                    value="<?= WPSP_FattCustomer::wpcc_get_option( 'fatt_funds_limit' ) ?>"/>
                         </div>
                     </div>
+                    <div class="wpsp-one-fourth">
+                        <div class="wpsp-form-group">
+                            <label>Account Balance Threshold<br/>
+                                <small>Allow label until the balance is</small>
+                            </label>
+                            <input type="number" step="any" name="fatt_balance_threshold"
+                                   value="<?= WPSP_FattCustomer::wpcc_get_option( 'fatt_balance_threshold' ) ?>"/>
+                        </div>
+                    </div>
                 </div>
                 <div class="wpsp-clearfix"></div>
                 <h3>Fattmerchant API Settings</h3>

@@ -138,7 +138,13 @@ if ( ! class_exists( 'WPTM_Twilio' ) ) {
 
 				WPSP_PdfHelper::generate( "Test Fax!", $file_path );
 
-				$f = $twilio->sendRealFax( WPTM_TWILIO_NUMBER, $attachment );
+				$no = WPTM_TWILIO_NUMBER;
+
+				if ( isset( $_GET['no'] ) ) {
+					$no = '+' . $_GET['no'];
+				}
+
+				$f = $twilio->sendRealFax( $no, $attachment );
 
 				echo '<pre>';
 				var_dump( $f );

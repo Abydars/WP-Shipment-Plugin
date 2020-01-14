@@ -262,47 +262,63 @@ class WPSP_USPS
 
 	function wpsp_void_label_usps( &$error, $shipment_id )
 	{
-		$error       = false;
-		$shipment    = WPSP_Shipment::get_shipment( $shipment_id );
-		$user_id     = $shipment->creator_id;
-		$customer_id = $this->get_customer_id( $user_id );
+		$current_time  = current_time( 'timestamp' );
+		$error         = false;
+		$shipment      = WPSP_Shipment::get_shipment( $shipment_id );
+		$creation_date = strtotime( $shipment->creation_date . ' 12:00:00' );
+		$user_id       = $shipment->creator_id;
+		$customer_id   = $this->get_customer_id( $user_id );
 
 		if ( $customer_id === false ) {
 			$error = __( "User ID not found", WPSP_LANG );
 		} else {
+			$barcodes = unserialize( base64_decode( $shipment->shipKey ) );
 
-			try {
-				$d = [
-					'BarcodeNumber' => $shipment->shipKey
-				];
+			if ( $current_time > $creation_date ) {
+				if ( class_exists( 'WPTS_TicketSupport' ) ) {
+					$desc = "Shipment #{$shipment_id} - ";
+					$desc .= "Void labels on USPS with Barcode Numbers: " . implode( ', ', $barcodes );
 
-				$xml = ShipmentArrayToXml::convert( $d, [
-					'rootElementName' => 'eVSCancelRequest',
-					'_attributes'     => [
-						'USERID' => $customer_id,
-					],
-				], true, 'UTF-8' );
+					WPTS_TicketSupport::create_ticket( "Void Shipment #{$shipment_id}", $desc, $shipment->customer_id, $shipment->creator_id );
 
-				$url = add_query_arg( [
-					                      'API' => 'eVSCancel',
-					                      'XML' => urlencode( $xml )
-				                      ], "ShippingAPI.dll" );
+					$error = false;
+				}
+			} else {
+				foreach ( $barcodes as $barcode ) {
+					try {
+						$d = [
+							'BarcodeNumber' => $barcode
+						];
 
-				$res = $this->request( $url );
-				$res = ShipmentXmlToArray::convert( $res );
+						$xml = ShipmentArrayToXml::convert( $d, [
+							'rootElementName' => 'eVSCancelRequest',
+							'_attributes'     => [
+								'USERID' => $customer_id,
+							],
+						], true, 'UTF-8' );
 
-				if ( isset( $res['Error'] ) ) {
-					$error = $res['Error']['Description'];
-				} else {
-					$res = $res['eVSCancelResponse'];
+						$url = add_query_arg( [
+							                      'API' => 'eVSCancel',
+							                      'XML' => urlencode( $xml )
+						                      ], "ShippingAPI.dll" );
 
-					if ( isset( $res['Status'] ) && $res['Status'] != 'Cancelled' ) {
-						$error = $res['Reason'];
+						$res = $this->request( $url );
+						$res = ShipmentXmlToArray::convert( $res );
+
+						if ( isset( $res['Error'] ) ) {
+							$error = $res['Error']['Description'];
+						} else {
+							$res = $res['eVSCancelResponse'];
+
+							if ( isset( $res['Status'] ) && $res['Status'] != 'Cancelled' ) {
+								$error = $res['Reason'];
+							}
+						}
+
+					} catch ( Exception $e ) {
+						$error = $e->getMessage();
 					}
 				}
-
-			} catch ( Exception $e ) {
-				$error = $e->getMessage();
 			}
 		}
 	}

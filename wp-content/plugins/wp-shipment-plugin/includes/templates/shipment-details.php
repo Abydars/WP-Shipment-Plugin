@@ -11,7 +11,12 @@
 			<?= apply_filters( 'wpsp_success', '' ) ?>
 
             <div class="shipment_detail_actions">
-				<?php if ( strtolower( $details->status ) === 'pending' ) { ?>
+				<?php
+				$can_void = true;
+				$twelvepm = strtotime( $details->creation_date . ' 12:00:00' );
+				$time_now = strtotime( date( 'Y-m-d H:i:s' ) );
+
+				if ( strtolower( $details->status ) === 'pending' ) { ?>
                     <button data-shipment-id="<?= $shipment_id ?>" data-refund="0" class="void-label">Void Label
                     </button>
                     <button data-shipment-id="<?= $shipment_id ?>" data-refund="1" class="void-label">Void Label and
@@ -125,7 +130,8 @@
 							<?php foreach ( $trackings as $k => $tracking ) : ?>
                                 <tr>
                                     <td>
-                                        <a target="_blank" href="<?= empty( $tracking['url'] ) ? '#' : $tracking['url'] ?>"><?= $tracking['id'] ?></a>
+                                        <a target="_blank"
+                                           href="<?= empty( $tracking['url'] ) ? '#' : $tracking['url'] ?>"><?= $tracking['id'] ?></a>
                                     </td>
                                 </tr>
 							<?php endforeach; ?>

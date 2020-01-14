@@ -24,16 +24,16 @@ if ( ! class_exists( 'WPCC_Customer' ) && class_exists( 'WPSP_Customer' ) ) {
 			return $logs;
 		}
 
-		public static function set_reload( $id, $value )
+		public static function set_reload_amount( $id, $value )
 		{
 			update_user_meta( $id, 'fatt_user_reload_amount', $value );
 		}
 
-		public static function get_reload( $id )
+		public static function get_reload_amount( $id )
 		{
 			$value = get_user_meta( $id, 'fatt_user_reload_amount', true );
 
-			return $value;
+			return floatval( $value );
 		}
 	}
 }

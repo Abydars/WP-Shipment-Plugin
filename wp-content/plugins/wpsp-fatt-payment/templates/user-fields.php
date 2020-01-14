@@ -6,7 +6,7 @@
             </label></th>
         <td>
             <input type="number" step="any" class="regular-text" name="fatt_user_reload_amount"
-                   value="<?= WPCC_Customer::get_reload( $user->ID ) ?>"/><br>
+                   value="<?= WPCC_Customer::get_reload_amount( $user->ID ) ?>"/><br>
         </td>
     </tr>
 </table>

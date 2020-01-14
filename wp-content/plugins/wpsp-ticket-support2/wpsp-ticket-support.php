@@ -32,53 +32,21 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
 		function render_get_file_url()
 		{
 			if ( isset( $_REQUEST['link'] ) ) {
-				global $wpdb;
-
 				$url   = $_REQUEST['link'];
 				$parts = parse_url( $url );
 				parse_str( $parts['query'], $query );
-				$attachment_id = $query['wpsp_attachment'];
 
-				$attach_id = intval( sanitize_text_field( $attachment_id ) );
-
-				if ( $attach_id ) {
-
-					$attachment = $wpdb->get_row( "select * from {$wpdb->prefix}wpsp_attachments where id=" . $attach_id );
-					$upload_dir = wp_upload_dir();
-
-					$filepath     = $attachment->filepath;
-					$filepath     = explode( '/', $filepath );
-					$file_name    = $filepath[ count( $filepath ) - 1 ];
-					$filepath     = $upload_dir['basedir'] . '/wpsp/' . $file_name;
-					$content_type = $attachment->filetype;
-
-					//header('Content-Description: File Transfer');
-					//header('Cache-Control: public');
-					header( 'Content-Type: ' . $content_type );
-					//header("Content-Transfer-Encoding: binary");
-					//header('Content-Disposition: attachment; filename='. $attachment->filename);
-					header( 'Content-Length: ' . filesize( $filepath ) );
-
-					flush();
-
-					readfile( $filepath );
-				}
+				echo json_encode( [
+					                  'status' => true,
+					                  'url'    => wp_get_attachment_url( $query['wpsp_attachment'] )
+				                  ] );
 			}
 			die;
 		}
 
 		function add_attachment_button()
 		{
-			if ( is_page( 10 ) ) {
-				?>
-                <style>
-                    header#masthead,
-                    footer#colophon,
-                    #wpadminbar {
-                        display: none !important;
-                    }
-                </style>
-			<?php } ?>
+			?>
             <script>
                 jQuery(function ($) {
                     var i;
@@ -105,22 +73,6 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
                                     $btn.text("Please wait...");
                                     $btn.attr("disabled", "disabled");
 
-                                    var url = '<?php echo admin_url( "admin-ajax.php" ); ?>?action=get_file_url&link=' + $btn.attr("data-href");
-                                    $iframe = $("<iframe />");
-
-                                    $iframe.css("display", "none");
-                                    $iframe.css("width", "100%");
-                                    $iframe.css("height", 700);
-                                    $iframe.css("margin-top", 10);
-                                    $iframe.attr("src", url);
-
-                                    $btn.parents('table').parent().append($iframe);
-                                    $iframe.slideDown();
-
-                                    $btn.text("Hide");
-                                    $btn.removeAttr("disabled");
-
-                                    /*
                                     $.ajax({
                                         url: '<?php echo admin_url( "admin-ajax.php" ); ?>',
                                         data: {
@@ -130,7 +82,19 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
                                         dataType: "JSON",
                                         success: function (response) {
                                             if (response.status == true) {
+                                                $iframe = $("<iframe />");
 
+                                                $iframe.css("display", "none");
+                                                $iframe.css("width", "100%");
+                                                $iframe.css("height", 700);
+                                                $iframe.css("margin-top", 10);
+                                                $iframe.attr("src", response.url);
+
+                                                $btn.parents('table').parent().append($iframe);
+                                                $iframe.slideDown();
+
+                                                $btn.text("Hide");
+                                                $btn.removeAttr("disabled");
                                             } else {
                                                 $btn.text("Show");
                                                 $btn.removeAttr("disabled");
@@ -141,7 +105,6 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
                                             $btn.removeAttr("disabled");
                                         }
                                     });
-                                    */
                                 } else if (!$btn.parents('table').next().is(":visible")) {
                                     $iframe = $btn.parents('table').next();
                                     $iframe.slideDown();
@@ -167,21 +130,19 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
 
 		function refresh_support_tickets()
 		{
-			if ( ! isset( $_GET['id'] ) ) {
-				?>
-                <script>
-                    jQuery(function ($) {
-                        setInterval(function () {
-                            var is_active = $('.navbar-nav #ticket-list').hasClass('active');
+			?>
+            <script>
+                jQuery(function ($) {
+                    setInterval(function () {
+                        var is_active = $('.navbar-nav #ticket-list').hasClass('active');
 
-                            if (is_active) {
-                                window.location.href = window.location.href;
-                            }
-                        }, 60 * 1000);
-                    });
-                </script>
-				<?php
-			}
+                        if (is_active) {
+                            window.location.href = window.location.href;
+                        }
+                    }, 60 * 1000);
+                });
+            </script>
+			<?php
 		}
 
 		function admin_menu()
@@ -438,7 +399,7 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
 			}
 		}
 
-		public static function request( $params, $post = true, $url = false )
+		public function request( $params, $post = true, $url = false )
 		{
 			$ch = curl_init();
 
@@ -462,32 +423,6 @@ if ( ! class_exists( 'WPTS_TicketSupport' ) ) {
 			curl_close( $ch );
 
 			return $output;
-		}
-
-		public static function create_ticket( $subject, $desc, $customer_id, $creator_id )
-		{
-			global $wpdb;
-
-			$params = array(
-				"subject"          => $subject,
-				"description"      => $desc,
-				"category"         => "1",
-				"priority"         => "High",
-				"user_id"          => $customer_id,
-				"agent_created"    => $creator_id,
-				"create_ticket_as" => 1,
-				"guest_name"       => "",
-				"guest_email"      => "",
-				"action"           => "wpsp_submit_ticket",
-				"nonce"            => wp_create_nonce( 'wpsp_nonce' ),
-			);
-
-			self::request( $params );
-
-			$ticket_id = $wpdb->get_var( "SELECT id from {$wpdb->prefix}wpsp_ticket WHERE subject = '{$subject}' ORDER BY id DESC" );
-			$ticket_id = intval( $ticket_id );
-
-			return $ticket_id;
 		}
 
 		public function get_last_ticket( $customer_id, $date )
